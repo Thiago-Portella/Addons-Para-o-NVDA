@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the 'zEmoticonos' package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: رموز البرنامج\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2021-12-02 12:29+0100\n"
+"PO-Revision-Date: 2022-02-14 08:13+0200\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: wafiqtaher <wafiqtaher@gmail.com>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.12\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. add-on Name/identifier, internal for NVDA
+#: buildVars.py:19 addon\globalPlugins\zEmoticonos\__init__.py:37
+msgid "zEmoticonos"
+msgstr "z الرموز"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: buildVars.py:23
+msgid "zEmoticonos para NVDA"
+msgstr "z الرموز التعبيرية ل NVDA"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:26
+msgid "Muestra todos los emoticonos y símbolos que aguanta NVDA"
+msgstr "يعرض جميع المشاعر والرموز التي يدعمها NVDA"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:37
+msgid "Muestra la ventana de zEmoticonos"
+msgstr "يعرض نافذة z الرموز الانفعالية"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:45
+msgid ""
+"Ya hay una instancia de zEmoticonos abierta.\n"
+"\n"
+"No es posible tener dos instancias a la vez."
+msgstr ""
+"\\يوجد بالفعل نافذة لـ zEmoticonos مفتوحة. \n"
+"\n"
+"لا يمكن الحصول على حالتين في نفس الوقت."
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:51
+msgid "No se pudo cargar el archivo de datos."
+msgstr "تعذر تحميل ملف البيانات."
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:72
+msgid "zEmoticonos - {}emoticonos y símbolos"
+msgstr "z رموز المشاعر - {} المشاعر والرموز"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:80
+msgid "&Buscar:"
+msgstr "&للبحث:"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:86
+msgid "&Lista emoticonos y símbolos:"
+msgstr "&قائمة الرموز التعبيرات"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:92
+msgid "&Editor de texto:"
+msgstr "&محرر النص:"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:97
+msgid "&Cerrar"
+msgstr "&اغلاق"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:138
+#: addon\globalPlugins\zEmoticonos\__init__.py:150
+msgid "No se encontraron resultados"
+msgstr "لم يتم العثور على نتيجة"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:166
+msgid "Se encontró más de un emoticono."
+msgstr "تم العثور على أكثر من رمز تعبيري واحد."
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:177
+#: addon\globalPlugins\zEmoticonos\__init__.py:223
+msgid "Se ha copiado al portapapeles"
+msgstr "تم نسخه إلى الحافظة"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:179
+#: addon\globalPlugins\zEmoticonos\__init__.py:225
+msgid "No se a podido copiar al portapapeles"
+msgstr "لا يمكن نسخها إلى الحافظة"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:211
+msgid "Sin caracteres"
+msgstr "بدون احرف"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:213
+msgid "{} caracteres"
+msgstr "{} أحرف"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:216
+msgid "No hay nada para copiar al portapapeles"
+msgstr "لا يوجد شيء لنسخه إلى الحافظة"
+
+#: addon\globalPlugins\zEmoticonos\__init__.py:228
+msgid "No hay nada para copiar al foco"
+msgstr "لا يوجد شيء لنسخهتحت  التركيز"

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Unmute Windows audio 1.5.7</title>
+</head>
+<body>
+<h1>NVDA Unmute</h1>
+<ul>
+<li>Autor: Oleksandr Gryshchenko</li>
+<li>Wersja: 1.5</li>
+<li>Pobierz <a href="https://github.com/grisov/Unmute/releases/download/v1.5/unmute-1.5.nvda-addon">wersja stabilna</a></li>
+<li>Pobierz <a href="https://github.com/grisov/Unmute/releases/download/v1.5/unmute-1.5.nvda-addon">wersja rozwojowa</a></li>
+</ul>
+<p>Ten dodatek sprawdza stan systemu audio Windows podczas uruchamiania NVDA. Jeśli okaże się, że dźwięk jest wyciszony - dodatek na siłę go włącza.
+W tym samym czasie poziom głośności jest sprawdzany oddzielnie dla procesu NVDA.
+Dodatek sprawdza również stan syntezatora mowy. W przypadku problemów z jego inicjalizacją podejmowane są próby uruchomienia syntezatora, co jest określone w ustawieniach NVDA.
+Istnieje dodatkowa możliwość sprawdzenia, na którym urządzeniu audio jest odtwarzany dźwięk NVDA. Jeśli to urządzenie różni się od urządzenia domyślnego, wyjście automatycznie przełącza się na urządzenie audio zainstalowane w systemie jako główne.</p>
+<p>Uwaga: Jeśli dźwięk uruchamiania dodatku jest odtwarzany zawsze, nawet jeśli głośność NVDA jest na odpowiednim poziomie. Oznacza to, że aplikacja przełącza wyjście audio na główne urządzenie audio przy każdym uruchomieniu NVDA.
+Zwykle ma to miejsce, gdy urządzenie wyjściowe audio w ustawieniach NVDA różni się od domyślnego urządzenia wyjściowego lub "Mapowania dźwięku Microsoft".
+To zachowanie można łatwo zmienić na jeden z następujących sposobów:
+1. Po ponownym uruchomieniu NVDA, po prostu zapisz aktualną konfigurację za pomocą NVDA+Ctrl+C. Domyślne urządzenie audio zostanie zapisane w ustawieniach NVDA i przełączanie nie nastąpi przy każdym uruchomieniu NVDA.
+2. Jeśli nie chcesz zmieniać konfiguracji NVDA - po prostu wyłącz funkcję przełączania urządzeń audio w panelu ustawień Unmute.</p>
+<h2>Okno dialogowe ustawień dodatku</h2>
+<p>W oknie dialogowym ustawień dodatku dostępne są następujące opcje:</p>
+<ol>
+<li>
+<p>Pierwszy suwak w oknie dialogowym ustawień dodatków pozwala określić poziom głośności systemu Windows, który zostanie ustawiony po uruchomieniu NVDA, jeśli dźwięk był wcześniej wyciszony lub był za cichy.</p>
+</li>
+<li>
+<p>Minimalny poziom głośności systemu Windows, przy którym zostanie zastosowana procedura zwiększania głośności. Ten suwak umożliwia dostosowanie poziomu czułości dodatku.
+Jeśli poziom głośności spadnie poniżej wartości podanej w tym miejscu, głośność zostanie zwiększona przy następnym uruchomieniu NVDA.
+W przeciwnym wypadku, jeśli poziom głośności pozostanie wyższy niż wartość określona w tym miejscu, to po ponownym uruchomieniu NVDA jego poziom się nie zmieni.
+I oczywiście, jeśli dźwięk był wcześniej wyłączony, po ponownym uruchomieniu dodatek i tak go włączy.</p>
+</li>
+<li>
+<p>Poniższe pole wyboru umożliwia włączenie ponownej inicjalizacji sterownika syntezatora mowy.
+Ta procedura rozpocznie się tylko wtedy, gdy zostanie podczas uruchamiania NVDA wykryte, że sterownik syntezatora mowy nie został zainicjowany.</p>
+</li>
+<li>
+<p>W tym polu możesz określić liczbę prób ponownej inicjalizacji sterownika syntezatora mowy. Próby są wykonywane cyklicznie w odstępie 1 sekundy. Wartość 0 oznacza, że ​​próby będą wykonywane w nieskończoność, aż do pomyślnego zakończenia procedury.</p>
+</li>
+<li>
+<p>Opcja "Przełącz na domyślne urządzenie wyjściowe audio" umożliwia sprawdzenie przy uruchomieniu, na którym urządzeniu audio emitowany jest dźwięk NVDA. A jeśli to urządzenie różni się od urządzenia domyślnego, wyjście automatycznie przełącza się na urządzenie audio zainstalowane w systemie jako główne.</p>
+</li>
+<li>
+<p>Następne pole wyboru włącza lub wyłącza odtwarzanie dźwięku startowego, gdy operacja zakończy się pomyślnie.</p>
+</li>
+</ol>
+<h2>Lista zmian</h2>
+<h3>Wersja 1.5</h3>
+<ul>
+<li>Dodano funkcję "Przełącz na domyślne wyjściowe urządzenie audio".</li>
+</ul>
+<h3>Wersja 1.4</h3>
+<ul>
+<li>dodano metodę zwiększania głośności startowej oddzielnie dla procesu NVDA;</li>
+<li>zmieniono powiadomienie dźwiękowe o udanej operacji (podziękowania dla Manolo);</li>
+<li>wszystkie funkcje ręcznej regulacji głośności zostały przeniesione do dodatku NVDA Volume Adjustment.</li>
+</ul>
+<h3>Wersja 1.3</h3>
+<ul>
+<li>dodano możliwość sterowania głośnością głównego urządzenia audio i osobno dla każdego uruchomionego programu;</li>
+<li>zaktualizowano tłumaczenie na język wietnamski (podziękowania dla Dang Manh Cuong);</li>
+<li>dodano tłumaczenie na język turecki (podziękowania dla Cagri Dogan);</li>
+<li>dodano tłumaczenie na język włoski (podziękowania dla Christianlm);</li>
+<li>dodano tłumaczenie na język chiński uproszczony (podziękowania dla Cary Rowen);</li>
+<li>dodano tłumaczenie na język polski (podziękowania dla Stefan Banita);</li>
+<li>zaktualizowano tłumaczenie na język ukraiński;</li>
+<li>zaktualizowano plik ReadMe.</li>
+</ul>
+<h3>Wersja 1.2</h3>
+<ul>
+<li>przełączono na używanie <strong>Core Audio Windows API</strong> zamiast <strong>Windows Sound Manager</strong>;</li>
+<li>dodano odtwarzanie dźwięku startowego, gdy dźwięk zostanie pomyślnie włączony przez dodatek.</li>
+</ul>
+<h3>Wersja 1.1</h3>
+<ul>
+<li>dodano okno dialogowe ustawień dodatku;</li>
+<li>zaktualizowano tłumaczenie na język ukraiński.</li>
+</ul>
+<h3>Wersja 1.0.1</h3>
+<ul>
+<li>Wykonuje wielokrotne próby włączenia sterownika syntezatora w przypadku niepowodzenia jego inicjalizacji;</li>
+<li>Dodano tłumaczenie na język wietnamski przez Dang Manh Cuong;</li>
+<li>Dodano tłumaczenie na język ukraiński.</li>
+</ul>
+<h3>Wersja 1.0. Zaimplementowano funkcje</h3>
+<p>Dodatek korzysta z zewnętrznego modułu Windows Sound Manager.</p>
+<h2>Zmiany w NVDA Unmute</h2>
+<p>Możesz sklonować to repozytorium, aby wprowadzić zmiany w NVDA Unmute.</p>
+<h3>Zewnętrzne zależności</h3>
+<p>Można je zainstalować za pomocą pip:
+- markdown
+- scons
+- python-gettext</p>
+<h3>Aby spakować dodatek do dystrybucji:</h3>
+<ol>
+<li>Otwórz wiersz poleceń, przejdź do katalogu głównego tego repozytorium</li>
+<li>Uruchom polecenie <strong>scons</strong>. Utworzony dodatek, jeśli nie było błędów, jest umieszczony w bieżącym katalogu.</li>
+</ol>
+</body>
+</html>

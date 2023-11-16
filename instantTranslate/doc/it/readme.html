@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>instantTranslate</h1>
+<ul>
+<li>Autori: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  e altri collaboratori per NVDA.</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">versione stabile</a></li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">versione in sviluppo</a></li>
+</ul>
+<p>This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.</p>
+<h2>Configurazione delle lingue</h2>
+<p>Per configurare la lingua di origine, di destinazione e, nel caso, di scambio, andare in: menu di NVDA &gt;&gt; Preferenze &gt;&gt; Impostazioni di Instant Translate.</p>
+<p>Ci sono due caselle combinate chiamate "Lingua di origine" e "Lingua di
+destinazione", e una casella di controllo per decidere se copiare la
+traduzione negli appunti.</p>
+<p>Inoltre, se avete selezionato l'opzione "automatica" (la prima scelta) dalla
+casella combinata "Lingua di origine", ci saranno anche una casella di
+controllo chiamata "Lingua di scambio" e un'altra sullo scambio automatico.</p>
+<p>Il significato delle prime due caselle combinate e di quella di controllo
+per la copia è chiaro, ma qualche parola sul resto è necessaria. Ricordatevi
+sempre che le seguenti spiegazioni assumono che la lingua di origine sia
+impostata su automatica.</p>
+<p>La casella combinata "Lingua di scambio" è utile quando si scambiano la
+lingua di origine e di destinazione via script (vedere sotto); infatti, una
+lingua di destinazione impostata sull'opzione "automatica" non ha senso,
+perciò l'add-on la imposta col valore della casella combinata suddetta.</p>
+<p>Immaginate questa situazione: siete soliti tradurre in italiano (la vostra
+lingua principale), ma a volte (scrivendo un documento, ad esempio) avete
+bisogno di tradurre in inglese (la vostra seconda lingua, supponiamo);
+potete impostare la "Lingua di scambio" su inglese, così tradurrete da
+italiano a inglese senza accedere direttamente alle impostazioni
+dell'add-on. Ovviamente questa funzionalità ha una maggiore o minore utilità
+a seconda delle vostre necessità più frequenti.</p>
+<p>Ora, la casella di controllo per l'auto-scambio: questa appare se e solo se
+si imposta l'opzione "automatica" nella casella combinata "Lingua di
+origine", ed è direttamente collegata alla casella combinata "Lingua di
+scambio". Se si attiva, allora l'add-on prova a commutare automaticamente
+dalla configurazione d'origine e destinazione a una configurazione dove la
+lingua di destinazione diventa quella d'origine, e la lingua selezionata in
+"Lingua di scambio" è la nuova lingua di destinazione; estremamente utile se
+la lingua d'origine del testo che si vuole tradurre è la lingua di
+destinazione.</p>
+<p>Un semplice esempio: tenete di nuovo a mente la situazione immaginata in
+precedenza; se traducete un testo in una lingua diversa dall'italiano, non
+ci sono problemi: ottenete la corretta traduzione in italiano. Ma se avete
+bisogno di tradurre un testo dall'italiano, normalmente otterrete una
+traduzione in italiano identica al testo originale, il che è abbastanza
+inutile. Grazie alla funzione di auto-scambio, invece, assumendo vogliate
+sapere come suona un testo in inglese, il componente aggiuntivo commuta
+automaticamente la lingua di destinazione a inglese, così da restituire una
+traduzione valida.</p>
+<p>Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).</p>
+<p>At least, in the speech settings parameters dialog (NVDA Menu &gt;&gt; Preferences &gt;&gt; Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.</p>
+<h2>Utilizzo</h2>
+<p>You can use this add-on in three ways:</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.</li>
+<li>Potete anche tradurre testo dagli appunti.</li>
+<li>Press the dedicated shortcut key to translate the last spoken text.</li>
+</ol>
+<h2>Combinazioni di tasti</h2>
+<p>Tutti i comandi seguenti devono essere premuti dopo il tasto modificatore
+"NVDA+Shift+t":</p>
+<ul>
+<li>T: traduce il testo selezionato,</li>
+<li>Shift+t: traduce il testo dagli appunti,</li>
+<li>S: scambia la lingua di origine e di destinazione,</li>
+<li>A: annuncia l'attuale configurazione,</li>
+<li>C: copia l'ultimo risultato negli appunti,</li>
+<li>I: identifica la lingua del testo selezionato,</li>
+<li>L: translate the last spoken text,</li>
+<li>O: open translation settings dialog</li>
+<li>H: announces all available layered commands.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>Changes for 4.4.2</h2>
+<ul>
+<li>Restore language detection and auto-swapping (Thanks to Cyrille for fix)</li>
+<li>updated languages for translation (thanks to Cyrille)</li>
+</ul>
+<h2>Changes for 4.4</h2>
+<ul>
+<li>Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)</li>
+</ul>
+<h2>Changes for 4.3</h2>
+<ul>
+<li>nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.</li>
+<li>found a way to use google as a translation service again.</li>
+</ul>
+<h2>Changes for 4.2</h2>
+<ul>
+<li>Restored working state with newer versions of nvda.</li>
+<li>Restored automatic language detection.</li>
+</ul>
+<h2>Novità nella versione 4.1</h2>
+<ul>
+<li>Instant Translate funziona di nuovo, ora con il servizio fornito da Yandex
+  invece di Google.</li>
+</ul>
+<h2>Novità nella versione 4.0</h2>
+<ul>
+<li>Le traduzioni vengono effettuate automaticamente dopo lo scambio lingue.</li>
+<li>Risolto un bug sulla cache.</li>
+</ul>
+<h2>Novità nella versione 3.0</h2>
+<ul>
+<li>Cambiato l'uso delle combinazioni di tasti; ora si può premere il tasto
+  Instant Translate "NVDA+Shift+t", e poi lettere singole per eseguire una
+  azione (vedere tutti i comandi nella sezione "Combinazioni di tasti").</li>
+<li>Implementato lo scambio lingue.</li>
+<li>Cambiato il formato di configurazione; ora è possibile cambiare le
+  impostazioni di Instant Translate se ci si trova in un pannello in sola
+  lettura, ma ricordarsi che questo funzionerà prima del primo riavvio di
+  NVDA.</li>
+<li>Rimossi i limiti sulla quantità di testo che si poteva tradurre.</li>
+<li>Aggiunto il tasto rapido t alla voce impostazioni del menu di Instant
+  Translate</li>
+<li>L'opzione auto è ora in prima posizione nella casella combinata lingua
+  d'origine, e assente in quella di destinazione.</li>
+<li>Aggiunta una casella di controllo per configurare la copia dei risultati
+  di traduzione.</li>
+<li>Salvataggio del file di configurazione nella cartella radice delle
+  impostazioni.</li>
+<li>Lingue di origine e destinazione sincronizzate con quelle messe a
+  disposizione attualmente da Google Translate (22 Apr 2015).</li>
+</ul>
+<h2>Novità nella versione 2.1</h2>
+<ul>
+<li>Ora l'add-on può tradurre il testo dagli appunti quando si preme
+  NVDA+shift+y.</li>
+</ul>
+<h2>Novità nella versione 2.0</h2>
+<ul>
+<li>Aggiunta un'interfaccia grafica di configurazione da dove poter
+  selezionare la lingua di origine e la lingua di destinazione.</li>
+<li>Aggiunto il menu dell'add-on sotto al menu preferenze.</li>
+<li>Le impostazioni ora vengono salvate in un file separato di configurazione.</li>
+<li>I risultati di traduzione ora vengono copiati automaticamente negli
+  appunti per manipolazioni future.</li>
+</ul>
+<h2>Novità nella versione 1.0</h2>
+<ul>
+<li>Versione Iniziale.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

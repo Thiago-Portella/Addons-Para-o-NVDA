@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>IntelliJ Improved 1.3.2</title>
+</head>
+<body>
+<h1>IntelliJ_NVDA_Addon</h1>
+<p>Addon for NVDA that adds support for using IntelliJ.
+Current features are:</p>
+<ul>
+<li>when caret moves to different line, the line at the new position is read out</li>
+<li>when selection changes it is read out</li>
+<li>when the status bar text has changed, NVDA beeps and speaks it<ul>
+<li>this includes reading the error description if the caret landed on one</li>
+<li>configurable in settings</li>
+</ul>
+</li>
+<li>command to read status bar (NVDA + I)</li>
+</ul>
+<h2>How to install</h2>
+<ol>
+<li>Download latest release or build by running scons</li>
+<li>install like a normal addon by opening the generated addon file with NVDA (should open with NVDA by default)</li>
+</ol>
+<h2>Tips for using IntelliJ</h2>
+<h3>Checking errors/warnings</h3>
+<h4>When focused inside a file editor:</h4>
+<ul>
+<li>F2/ shift + F2 : go to next/previous error or warning</li>
+</ul>
+<h4>When editor cursor is on error/warning:</h4>
+<ul>
+<li>NVDA  + I: Quickly read error description displayed in status bar</li>
+<li>ctrl + F1: open message box with more detailed error description</li>
+<li>alt + enter: open list of quick actions</li>
+</ul>
+<h3>Navigating</h3>
+<ul>
+<li>ctrl + tab/ ctrl + shift + tab: switch between editors and views</li>
+<li>alt + number: move to coresponding numbered view</li>
+<li>F12: go to last non-editor view
+inside editor:</li>
+<li>alt + up arrow/ alt + down arrow: jump to previous/next class, field, or method declaration</li>
+<li>ctrl + {/ ctrl + }: GO TO PREVIOUS/NEXT MATCHING BRACE</li>
+<li>ctrl + B: go to declaration</li>
+<li>ctrl + shift + B: go to type declaration</li>
+<li>ctrl + G: go to line</li>
+<li>ctrl + N: go to class</li>
+<li>shift, shift: "finad anything" dialogue</li>
+</ul>
+<h3>VCS</h3>
+<ul>
+<li>ctrl + K: make commit</li>
+<li>ctrl + shift + K: push</li>
+<li>ctrl + alt + Z: revert</li>
+</ul>
+<h3>Misc.</h3>
+<ul>
+<li>ctrl + shift + A: search for action</li>
+<li>ctrl + alt + L: format code</li>
+<li>alt + F7: find usages</li>
+<li>alt + shift + F9: open run dialogue (note: if editor caret is on unit test, this will also autogenerate a run configuration for running that specific test case)</li>
+</ul>
+<h2>Changelog</h2>
+<h3>Version 1.3.2</h3>
+<ul>
+<li>compatible with NVDA version 2023.1 and beyond</li>
+</ul>
+<h3>Version 1.3.1</h3>
+<ul>
+<li>fixed the status bar sometimes being read while not in IntelliJ</li>
+</ul>
+<h3>Version 1.3.0</h3>
+<ul>
+<li>added feature for automatically reading errors and other status bar changes (thanks to Thiago @thgcode for the contribution!)</li>
+<li>reading status bar with NVDA + I is much faster</li>
+<li>compatible with NVDA 2022+</li>
+</ul>
+</body>
+</html>

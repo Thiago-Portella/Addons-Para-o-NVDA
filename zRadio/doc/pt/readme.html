@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>zRadio para NVDA 0.6</title>
+</head>
+<body>
+<p>﻿# Manual do ZRadio para o NVDA</p>
+<h2>Observações importantes do autor</h2>
+<p>Este add-on surge da vontade e do desejo de experimentar o NVDA.</p>
+<p>zRadio é um plugin muito pesado, cerca de 120 MB depois de instalado.</p>
+<p>Esta situação só acontece se continuares a usar versões antigas, pois, com a versão 0.4, houve modificações significativas. Para maiores detalhes, consulta, mais em baixo, a secção de modificações.</p>
+<p>É recomendável usar zRadio em computadores não comerciais e computadores com hardware aceitável.</p>
+<p>Em alguns computadores com poucos recursos, o extra/complemento  pode tornar o NVDA mais lento, por isso é recomendado desinstalar o plug-in. Esta situação só é válida para outras versões, que não esta.</p>
+<p>O autor não se responsabiliza pelo uso do plugin ou por problemas que daí possam surgir.</p>
+<p>O autor informa ainda que as estações de rádio do complemento são todas online pelo que o responsável pelos links é a página que disponibiliza os referidos links, além disso, não se responsabiliza por avarias ou avarias da responsabilidade da parte correspondente à emissão das rádios .</p>
+<p>Este add-on foi desenvolvido num computador de alto desempenho para que não haja lentidão, esta parte pode ser reescrita nas observações que me foram fornecidas pelas diferentes mídias.</p>
+<p>Algumas notas no caso de o add-on ser desinstalado.</p>
+<p>O plugin salva apenas 3 arquivos no diretório zRadio, que encontramos no diretório de configuração do NVDA, que são os seguintes:</p>
+<ul>
+<li>
+<p>Options.dat</p>
+</li>
+<li>
+<p>opt_radio.dat</p>
+</li>
+<li>
+<p>fav_radios.dat</p>
+</li>
+</ul>
+<p>Isto aplicam-se para as versões anteriores à presente. nesta versão, são instalados os seguintes ficheiros:</p>
+<ul>
+<li>
+<p>cache.dat</p>
+</li>
+<li>
+<p>radio_cache.dat</p>
+</li>
+</ul>
+<p>A partir de agora, o extra/complemento passará a guardar cinco ficheiros, na pasta de configurações do utilizador.</p>
+<p>Para aqueles programadores que sabem muito, não me repreendam pela forma do meu código e por não colocar comentários e fazer tudo que um programador não precisa fazer se quiser que fique arrumado.</p>
+<p>A minha forma de programar está na minha cabeça e eu não saberia explicar que tenho todo o código na minha cabeça e que surge de repente, e tento seguir orientações que sempre quebro porque não sou produtivo na minha escrita.</p>
+<p>Mas, como disse e em minha defesa, isso é o resultado do tédio e da vontade de experimentar o NVDA.</p>
+<h2>interface do zRadio</h2>
+<p>Para abrir o add-on teremos que ir ao menu do NVDA / Ferramentas e lá encontraremos o o zRadio.</p>
+<p>Também podemos atribuir-lhe uma tecla de atalho, para abrir o add-on, que não está definida, acedendo ao menu do NVDA / configurações / definir comandos, e procurar zRadio, associando-lhe um atalho: "Mostrar janela principal do zRadio".</p>
+<p>Uma vez aberta a interface, ela consiste numa lista em árvore que possui 3 categorias, começando de cima para baixo, primeiro, encontramos o ecrã "Geral", o segundo corresponde aos Favoritos e o terceiro é um Motor de busca. Quando estamos na lista da árvore, podemos nos mover através dela com as setas para cima e para baixo. Resumo rapidamente as 3 categorias:</p>
+<ul>
+<li>
+<p>Geral, em que teremos as estações que predefinimos na área de pesquisa. isso será explicado mais tarde.</p>
+</li>
+<li>
+<p>Favoritos, onde teremos as estações que mais ouvimos e que adicionámos anteriormente.</p>
+</li>
+<li>
+<p>Motor de busca, nesta categoria podemos fazer uma pesquisa geral de rádios, por países, por idioma ou por etiqueta.</p>
+</li>
+</ul>
+<p>Quando o foco está na categoria seleccionada, para a ativar, pressionamos a tecla TAB, e cairemos em um campo de pesquisa, seja para pesquisar uma estação ou para seleccionar uma categoria numa caixa de combinação se estivermos na categoria Pesquisar por países.</p>
+<p>Depois de escrever o que deseja encontrar, pressione o botão Pesquisar. Também pode pressionar a tecla Enter depois de inserir uma pesquisa nesse campo. Portanto, esta ação seria a mesma que se tivéssemos pressionado o botão Pesquisar.</p>
+<p>Depois de efectuada a pesquisa, se tabularmos, encontraremos a lista de estações. Quando já estivermos na lista podemos percorrê-la com as setas e, uma vez no nome da estação, basta pressionar a tecla de aplicativos ou shift + f10 para mostrar as opções disponíveis para a rádio.</p>
+<p>Se tabularmos novamente e não tivermos nada a tocar, cairemos numa barra de volume que, por padrão, está em 50% na primeira vez; se estivermos a tocar algo, cairemos nos botões que controlam a reprodução.</p>
+<p>No controlo de volume, podemos usar as setas para a esquerda ou direita e para cima e para baixo para aumentar e diminuir o volume. </p>
+<p>Resumo rápido dos botões:</p>
+<ul>
+<li>
+<p>Parar, o que interromperá toda a reprodução.</p>
+</li>
+<li>
+<p>Recarregar, para recarregar a estação que estava a tocar. Isso será útil no caso de perda do buffer e não desejarmos procurar a estação novamente.</p>
+</li>
+<li>
+<p>Silenciar, este botão mudará seu nome quando o usarmos para Ativar o som e vice-versa durante a reprodução.</p>
+</li>
+</ul>
+<p>Se tabularmos novamente, cairemos em uma barra de botões na qual agora é apenas para sair, mas logo terá mais opções.</p>
+<h2>Ecrã Geral</h2>
+<p>Neste ecrã, a primeira coisa em que cairemos é um campo de busca onde podemos colocar o que queremos pesquisar. Digamos que esse campo seja indiferente se colocarmos letras maiúsculas ou minúsculas e que ele retornará o resultado que contém os termos que escrevemos.</p>
+<p>Por exemplo, se colocarmos "wave", ele retornará todas as estações que contenham essa palavra, cuidado se colocarmos apenas a letra "o", retornará todas as estações que contiverem a letra "o", isso pode causar um atraso na busca de resultados, se estivermos numa lista muito grande de estações e houver muitas que contenham a letra "o".</p>
+<p>Se tabularmos, teremos o botão "Pesquisar", que, ao ser pressionado, iniciará a pesquisa; o referido botão mudará o seu nome para "Limpar". Para voltar à lista de estações, teremos que pressionar o botão "Limpar".</p>
+<p>Observação:  Também pode pressionar a tecla Enter depois de inserir uma pesquisa nesse campo. Portanto, esta ação seria a mesma que se tivéssemos pressionado o botão Pesquisar.</p>
+<p>Se voltarmos a tabular, teremos uma Lista de estações ou o resultado da pesquisa, dependendo do que fizemos na caixa de pesquisa.</p>
+<h2>Ecrã de favoritos</h2>
+<p>Neste ecrã, podemos adicionar as estações que queremos ter à mão, rapidamente, ou seja, podemos adicionar todas as que quisermos mesmo duplicando os nomes.</p>
+<p>A área de trabalho é exatamente igual à tela Geral, portanto não a descreverei novamente.</p>
+<p>Comento que, quer pela lista de estações quer pela de resultados da pesquisa podemos nos mover rapidamente pressionando uma letra, o que nos levará à primeira estação que tem aquela letra no início do seu nome.</p>
+<h2>Ecrã do Pesquisador</h2>
+<p>Este ecrã difere dos anteriores porque a primeira coisa que encontraremos é uma caixa de combinação que contém diferentes categorias onde pesquisar.</p>
+<p>Na primeira categoria, "Pesquisa geral de rádios", podemos pesquisar todo o catálogo de rádios.</p>
+<p>Também podemos pesquisar por país, idioma ou etiqueta. No caso de uma pesquisa por etiqueta:</p>
+<p>Se procurarmos por "Rock",  obteremos todos os rótulos com essa classificação.</p>
+<p>Em qualquer uma das categorias anteriores podemos pesquisar, mas apenas na categoria "Geral" podemos reproduzir directamente dessa categoria, bem como adicionar aos favoritos e copiar o URL da estação.</p>
+<p>Nas demais categorias, podemos apenas adicionar o que escolhermos ao ecrã "Geral" e explorá-lo aí.</p>
+<h2>Relacionado a teclas, gestos e menus contextuais</h2>
+<p>Em cada lista de resultados, seja de estações ou de pesquisa, podemos activar um menu contextual para interagir com o que selecionamos.</p>
+<p>Iniciaremos este menu com a tecla de aplicativos ou com Shift + F10, nos computadores que não possuem a tecla de aplicativos.</p>
+<p>No ecrã Geral, podemos interagir com o seguinte na lista de estações ou a partir de uma pesquisa:</p>
+<ul>
+<li>
+<p>Reproduzir, vamos tocar a estação.</p>
+</li>
+<li>
+<p>Adicionar aos favoritos, adicionaremos a estação ao ecrã "Favoritos".</p>
+</li>
+<li>
+<p>Copiar URL, iremos copiar o URL da estação para a área de transferência e podemos abri-lo num navegador da web ou compartilhá-lo.</p>
+</li>
+</ul>
+<p>No ecrã Favoritos, podemos interagir com o seguinte:</p>
+<p>Lista de estações:</p>
+<ul>
+<li>
+<p>reproduzir, vamos tocar a estação seleccionada.</p>
+</li>
+<li>
+<p>Remover dos favoritos, removeremos a estação dos favoritos.</p>
+</li>
+<li>
+<p>Copiar URL, iremos copiar o URL da estação para a área de transferência.</p>
+</li>
+</ul>
+<p>Listar uma pesquisa:</p>
+<ul>
+<li>
+<p>reproduzir, vamos tocar a estação.</p>
+</li>
+<li>
+<p>Copiar URL, iremos copiar o URL da estação para a área de transferência.</p>
+</li>
+</ul>
+<p>No ecrã do pesquisador, podemos interagir com o seguinte:</p>
+<p>Depois de pesquisar usando a categoria Pesquisa geral de rádio:</p>
+<p>Na lista de resultados de uma pesquisa geral:</p>
+<ul>
+<li>
+<p>Reproduzir</p>
+</li>
+<li>
+<p>Adicionar aos favoritos</p>
+</li>
+<li>
+<p>Copiar URL</p>
+</li>
+</ul>
+<p>Tudo isto foi já explicado anteriormente.</p>
+<p>Nas categorias Pesquisa por países, Pesquisa por idioma e Pesquisa por etiqueta, só podemos usar o seguinte na lista de estações e na lista de uma pesquisa:</p>
+<ul>
+<li>Definido por padrão como Geral, se escolhermos esta opção, no ecrã Geral teremos as estações que correspondem ao que escolhemos.</li>
+</ul>
+<p>Se olharmos para estas 3 categorias, elas apresentam  um número que corresponde a quantas estações têm essa selecção.</p>
+<p>Digamos que, às vezes, se escolhemos um, por exemplo, que tem 9 estações e quando vamos para o ecrã Geral são carregadas apenas 8 é porque o link que falta não está certo.</p>
+<h3>Teclas rápidas:</h3>
+<p>Na verdade, cada botão tem a sua própria tecla de atalho, portanto, como já expliquei anteriormente, não vou colocar a explicação de novo, o nosso NVDA nos dará os atalhos quando os encontrarmos.</p>
+<p>Mas se houver uma combinação que não aparece e é apenas para quando a janela do zRadio está focada e aberta.</p>
+<ul>
+<li>Alt + V, esta combinação de teclas leva-nos rapidamente à barra de volume para que possamos interagir com ela com as teclas de seta.</li>
+</ul>
+<p>Digamos também que podemos sair da janela zRadio com o botão sair, com Alt + F4 ou com Escape.</p>
+<h3>definir comandos</h3>
+<p>No menu NVDA / configurações / definir comandos / zRadio, podemos atribuir um comando, ou seja, combinações de teclas para os seguintes comandos,  para poder interagir com o zRadio, de qualquer lugar, inclusive na  janela do zRadio.</p>
+<p>Lembre-se de que a combinação de teclas não esteja já atribuída a outra função ou não se sobrepõe a nenhum dos aplicativos que usamos.</p>
+<p>Por padrão, o zRadio vem sem atribuição de tecla de atalho, deixando que o utilizador escolha esta configuração.</p>
+<p>estas teclas funcionarão com a janela do zRadio aberta ou fechada.</p>
+<p>O zRadio fornece as seguintes possibilidades para o utilizador definir um comando:</p>
+<ul>
+<li>
+<p>Diminuir o volume</p>
+</li>
+<li>
+<p>Parar a reprodução</p>
+</li>
+<li>
+<p>Mostrar a janela principal do zRadio</p>
+</li>
+<li>
+<p>Silenciar e remover o silêncio</p>
+</li>
+<li>
+<p>Recarregar a reprodução</p>
+</li>
+<li>
+<p>Saber qual a estação em reprodução</p>
+</li>
+<li>
+<p>Aumentar o volume</p>
+</li>
+</ul>
+<h2>Tradutores e colaboradores:</h2>
+<ul>
+<li>Francês: Rémy Ruiz</li>
+<li>Português: Ângelo Miguel Abrantes</li>
+<li>Inglês: slanovani</li>
+<li>italiano: Simone Dal Maso</li>
+<li>Árabe:Wafiq Taher</li>
+</ul>
+<h1>registo de alterações.</h1>
+<h2>Versão 0.4a.</h2>
+<ul>
+<li>Adicionada tradução italiano, Árabe</li>
+</ul>
+<h2>Versão 0.4.</h2>
+<ul>
+<li>Otimizado o código reduzindo o seu tamanho para menos de metade.</li>
+</ul>
+<p>O código foi otimizado para que a instalação seja 60% menor. Isto afecta o desempenho no carregamento do NVDA.</p>
+<ul>
+<li>Adicionado um pequeno cache que ajuda a acelerar a inicialização do plugin.</li>
+</ul>
+<p>Por vezes, numa minoria de inicializações, o NVDA pode demorar um pouco para inicializar, este é o problema da comunicação do plugin com o servidor.</p>
+<p>Antes, na versão 0.3, sempre demorava muito para inicializar o NVDA, com o cache que coloquei no plugin isso agora acontece muito raramente.</p>
+<p>O ficheiro cache.dat actualiza-se de cada vez que se reinicia o NVDA, até atingir a quinta vez. Nessa altura, o ficheiro radios.dat também é actualizado. Estes ficheiros são guardados na pasta do utilizador, numa subpasta com o nome do addon.</p>
+<ul>
+<li>
+<p>Os dicionários dos países foram traduzidos para que, ao selecionarmos o francês ou o português, sejam mostrados correctamente.</p>
+</li>
+<li>
+<p>Adicionada tradução em português.</p>
+</li>
+</ul>
+<h2>Versão 0.3.</h2>
+<ul>
+<li>Adicionada a capacidade de classificar estações nos favoritos.</li>
+</ul>
+<p>Esta nova opção é apenas para Favoritos e podemos mover a estação que está em foco para cima ou para baixo com Alt + Seta para cima ou Seta para baixo.</p>
+<p>Ao chegar ao topo e ao final da lista, um som será reproduzido para nos informar que estamos no início ou no final da lista.</p>
+<p>O som é diferente para identificar bem onde estamos.</p>
+<ul>
+<li>Adicionada a capacidade de adicionar, editar e excluir estações em Favoritos.</li>
+</ul>
+<p>Quando estivermos na categoria Favoritos, um novo botão chamado "Ação" será mostrado com a tecla de atalho Alt + a.</p>
+<p>Este botão só aparecerá quando estivermos na categoria Favoritos.</p>
+<p>Podemos chamar o botão de qualquer parte da interface e ele conduz-nos a um menu que será exibido com as seguintes opções:</p>
+<ul>
+<li>
+<p>Nova estação: Vai abrir um diálogo para adicionar uma estação pessoal.</p>
+</li>
+<li>
+<p>Editar estação: Edite a estação que está em foco em Favoritos.</p>
+</li>
+<li>
+<p>Remover dos favoritos: Exclua a estação que está em foco. Isso não é reversível.</p>
+</li>
+</ul>
+<p>A caixa de diálogo para Nova estação e Editar estação é a mesma para ambas as opções.</p>
+<p>Esta caixa consiste em dois campos de edição, para o nome da estação e para a URL da estação.</p>
+<p>Esses campos são obrigatórios e não podem ser deixados em branco.</p>
+<p>Na lista de Favoritos pode haver estações com o mesmo nome, mas é recomendável ter os nomes diferenciados para nosso melhor entendimento.</p>
+<p>Também temos dois botões, Aceitar e Cancelar.</p>
+<p>Se aceitarmos, as alterações serão guardadas, dependendo do que estivermos a fazer, seja Nova estação ou Editar estação.</p>
+<p>Se cancelarmos, todos os dados serão perdidos e nada será guardado.</p>
+<p>Também podemos fechar a caixa de diálogo pressionando Alt + F4 ou Escape nessas duas ações, o que tivermos alterado será perdido.</p>
+<ul>
+<li>Adicionada a possibilidade de estações rápidas.</li>
+</ul>
+<p>Esta nova opção permitirá começar a tocar uma estação rapidamente.</p>
+<p>A partir de  agora, podemos ter 5 estações rápidas, essas estações serão as que colocarmos em Favoritos nas primeiras 5 posições.</p>
+<p>Para esta nova opção, foram adicionados 5 novos comandos, que teremos que configurar, acedendo ao menu NVDA / configurações / definir comandos  / zRadio.</p>
+<p>Os novos comandos são chamados de tocar estação rapidamente e seguidos por uma numeração de 1 a 5.</p>
+<p>Pois bem, cada comando que configurarmos corresponderá à posição da estação que tivermos em favoritos.</p>
+<h2>Versão 0.2.</h2>
+<ul>
+<li>
+<p>Adicionado idioma francês.</p>
+</li>
+<li>
+<p>Estabilizada Documentação.</p>
+</li>
+<li>
+<p>Corrigido atraso no Search Engine / pesquisar por etiqueta.</p>
+</li>
+</ul>
+<p>Agora a interface não travará mais. Esta área foi reestruturada, retirando os resultados padrão e aparecendo apenas quando pesquisada.</p>
+<ul>
+<li>
+<p>Adicionada a capacidade de pressionar Enter nos campos de pesquisa.</p>
+</li>
+<li>
+<p>Bugs de código corrigidos.</p>
+</li>
+</ul>
+<h2>Versão 0.1.</h2>
+<ul>
+<li>Versão inicial.</li>
+</ul>
+</body>
+</html>

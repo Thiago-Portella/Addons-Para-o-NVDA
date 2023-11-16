@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Thunderbird+ 4.9</title>
+</head>
+<body>
+<h1>Thunderbird+</h1>
+<ul>
+<li>Yazar: Pierre-Louis Renaud (Thunderbird 78 - 102) &amp; Cyrille Bougot (TB 102), Daniel Poiraud (TB 68 - 91), Yannick (TB 45 - 60);</li>
+<li>URL: <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_tr.html#navpanels">Kullanım kılavuzu</a> ;
+  <a href="https://www.rptools.org/NVDA-Thunderbird/changes.php?lg=tr">RPTools.org'daki değişikliklerin geçmişi</a> ;
+  <a href="https://www.rptools.org/NVDA-Thunderbird/toContact.html">İletişim Fransızca ve İngilizce</a>;</li>
+<li><a href="https://www.nvaccess.org/addonStore/legacy?file=thunderbirdPlus">Kararlı sürümü indirin</a></li>
+<li><a href="https://www.rptools.org/?p=8610">RPTools.org'daki en son sürümü</a></li>
+<li>NVDA uyumluluğu: 2019.3 ve üzeri;</li>
+<li>Thunderbird uyumluluğu: 102.x sürümleri;</li>
+<li><a href="https://www.rptools.org/?p=8610">RPTools.org'daki değişikliklerin geçmişi</a></li>
+<li><a href="https://github.com/RPTools-org/ThunderbirdPlus/">gitHub'daki kaynak kodu</a></li>
+</ul>
+<p>Not 1: Bu Eklenti, Mozilla Apps Enhancements Eklentisiyle uyumlu değildir. İkincisi kuruluysa, ThunderbirdPlus'ı kurmadan önce onu devre dışı bırakmalı veya kaldırmalısınız;</p>
+<p>Not 2: Bu belge Fransızcadan Türkçeye Google Translate tarafından çevrilmiştir. İnsan tarafından tercüme edilmiş bir versiyon yakında gelecek.</p>
+<h2>Tanım</h2>
+<p>Bu eklenti, Mozilla Thunderbird posta istemcisini NVDA ile kullanmanın kolaylığını ve verimliliğini büyük ölçüde artırır.</p>
+<p>İyileştirmeler aşağıdaki yönlerle ilgilidir:</p>
+<h3>İşitme konforu</h3>
+<ul>
+<li>"Falanca istendi alındı" uyarıları bir seçenek aracılığıyla devre dışı bırakılabilir;</li>
+<li>"Bu bir taslaktır" ve "Thunderbird bu mesajın sahte olduğunu düşünüyor" uyarıları dikkate alınmaz;</li>
+<li>Seçenekler, posta listelerinin adlarının duyurulmasını devre dışı bırakmayı, "RE" ifadelerini kaldırmayı veya gruplandırmayı ve sayıları ve diğer garip özel karakterleri kaldırarak muhabirlerin adlarını saflaştırmayı mümkün kılar;</li>
+</ul>
+<h3>Ana pencerede gezinme</h3>
+<ul>
+<li>Bir sonraki panele geçiş TAB tuşu kullanılarak yapılırken, escape tuşu bir önceki panele dönmenizi sağlar. Bu, F6 ve Shift+F6'dan daha rahattır.</li>
+<li>Control+Tab ve Control+a sayısı ile sekme seçme bu örnekteki gibi seslendirilir: Sekme 1/4, Gelen posta;</li>
+<li>Bir klavye kısayolu, kolayca etkinleştirmek için bir menüdeki sekmeleri listelemenizi sağlar;</li>
+<li>Sekme çubuğunun bağlamsal menüsünü görüntülemek için bir klavye kısayolu kullanılır;</li>
+</ul>
+<h3>Klasör ağacı</h3>
+<ul>
+<li>alt+aşağı ok ve Alt+yukarı ok, okunmamış mesajların bulunduğu klasörler arasında gezinir;</li>
+<li>Bir harf veya rakam yazıldığında, adı yazılan karakterle başlayan bir sonraki klasör seçilir. Shift tuşu ile hareket aşağıdan yukarıya doğrudur. Ayrıca klasörün ait olduğu hesabın adı duyurulur;</li>
+<li>Okunmamış mesajların bulunduğu bir klasördeki Space tuşu, mesaj listesindeki ilk okunmamış mesajı seçer;</li>
+<li>İki hesap iletişim kutusu ve ilişkili klasörleri, bunların anahtar kelimeye göre filtrelenmesine veya yalnızca okunmamış mesajların bulunduğu klasörlerin görüntülenmesine izin verir;</li>
+</ul>
+<h3>Mesaj listesi</h3>
+<ul>
+<li>Sütunların seçimi ve mesaj listesindeki düzenlemeleri basit bir iletişim kutusu aracılığıyla erişilebilir hale getirilir;</li>
+<li>Mesaj listesinin sütunlarına danışma: kısayollar, alfasayısal klavyede bir sayıya basarak gönderenin adını, konuyu veya mesajın tarihini tekrar dinlemenize, hecelemenize veya kolayca kopyalamanıza olanak tanır: örneğin, 1 veya &amp; göndereni duyurur, 2 basış adı heceler ve 3 basış panoya kopyalar;</li>
+<li>F8 ile görüntülenen başlıklar bölmesinin başlıklarına danışma: Alt+bir sayı ile, 1 basış gönderici veya alıcıların adreslerini içeren bir başlığı söyler, 2 basış kopyalanmalarını sağlayan bir iletişim kutusu açar, 3 basış bağlamsal açar başlıkla ilişkilendirilmiş yerel Thunderbird menüsü;</li>
+<li>Boşluk, Alt+aşağı ok veya F4 ile mesaj metninin temiz hızlı önizlemesi: mesaj alıntılarındaki büyük blok başlıkları "Gönderenin adı yazdı" ifadesiyle değiştirilir. NVDA, uzun bağlantı adresi yerine "tıklanabilir bağlantı"yı da duyurur.</li>
+<li>Alıntıların kronolojik sırayla, aşağıdan yukarıya, Shift+Boşluk, Alt+yukarı ok veya Shift+F4 ile hızlı görünümü;</li>
+<li>Alt+sonraki sayfa kısayolunu veya alfanümerik klavyede 1 sayısını kullanarak eklere kolay erişim;</li>
+</ul>
+<!-- Çevirmenler: etiketler = etiketler -->
+<h3>Hızlı filtre çubuğu ve öncelikli etiket yönetimi</h3>
+<ul>
+<li>Dikey okları kullanarak Filtre seçenekleri arasında gezinmek mümkündür. Enter tuşu, bir seçeneği işaretlemenizi veya işaretini kaldırmanızı sağlar;</li>
+<li>etiket ekleme veya kaldırma, alfanümerik klavyede Shift+a sayı tuşlarına basılarak yapılır. Örneğin, bir mesaja "Yapılacaklar" etiketini eklemek için 4'e basın. Ardından, artık erişilebilen hızlı filtre çubuğu aracılığıyla mesajların listesini etiketlere göre filtreleyebilirsiniz;</li>
+</ul>
+<h3>Mesaj oluştur penceresi</h3>
+<p>Alt+1, Göndereni, Alt+2 alıcıyı, Alt+3 ekleri vb. duyurur. İki basış, odağı bu alanlardan birine yerleştirir;</p>
+<h3>Yazım denetimi iletişim kutusu:</h3>
+<ul>
+<li>yanlış yazılan kelime, önerilen kelimeden önce heceli veya hecesiz olarak duyurulur. NVDA+Tab veya Alt+yukarı ok kısayolları, yanlış yazılan ve değiştirilen sözcükleri duyurur: 1 tıklama sözcükleri normal hızda heceler, 2 dokunma sözcükleri hızlı heceler, 3 dokunma yanlış yazılmış sözcüğü başka bir düzenleme alanında analiz edilmek üzere panoya kopyalar;</li>
+<li>enter tuşunun çeşitli kombinasyonları Değiştir, Tümünü değiştir, Yoksay, Tümünü yoksay veya Sözcüğü sözlüğe ekle düğmelerini etkinleştirir, bu iletişim kutusunun daha rahat olması için eklenmiştir;</li>
+</ul>
+<h3>Otomatik güncelleme</h3>
+<p>ThunderbirdPlus, devre dışı bırakma/yeniden etkinleştirme ve erteleme seçenekleriyle bağımsız bir otomatik güncelleme sistemine sahiptir;</p>
+<h3>Chichi ile ikili operasyon</h3>
+<p>ThunderbirdPlus, doğrudan Thunderbird'e yüklenen bir eklenti olan Chichi ile sorunsuz çalışacak şekilde tasarlanmıştır.</p>
+<p>Bu <a href="https://www.rptools.org//Outils-DV/thunderbird-chichi-en.html">Chichi'nin sayfası</a> hakkında bilgi edinin;</p>
+<h3>Diller Hakkında</h3>
+<p>ThunderbirdPlus, NVDA ve Thunderbird için kullandığınız dile çevrilmemişse bazı özellikler düzgün çalışmaz.</p>
+<ul>
+<li>uyarılar ele geçirilmeyecektir. Bunlar taslak uyarılar, iade makbuzu talebi, hileli mesaj, güncelleme vb. ;</li>
+<li>Thunderbird için eklenti arama işlevinin iyileştirilmesi çalışmaz;</li>
+</ul>
+<p>Bugün itibariyle, eklenti aşağıdaki dillerde mevcuttur:</p>
+<p><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_tr.html">Orijinal Fransızca sürüm</a>: geliştirici tarafından;</p>
+<p>Kıdem sırasına göre çeviriler:</p>
+<ul>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_pt_PT.html">Portekizce</a>: TifloTecnia.com'dan Rui Fontes ve NVDA Portekiz ekip üyesi;</li>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_es.html">İspanyolca</a>: Rémy Ruiz tarafından;</li>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_en.html">İngilizce</a>: Bachir Benanou tarafından;</li>
+</ul>
+<p>Çevirmenlere teşekkürler.</p>
+<h2>Mesaj sekmesi panelleri arasında gezinme (Tab, Escape)</h2>
+<p>Bu, şu panelleri içeren sekmedir: klasör ağacı, mesaj listesi ve başlık bölmesi ve mesaj ön izleme (F8 tuşuyla görüntülenir veya gizlenir).</p>
+<ul>
+<li>SEKME: sonraki panele gidin. Bu kısayol, bazı kişiler için F6'dan daha ergonomik olacaktır;</li>
+<li>Kaçış: önceki panele geri dönün. Shift+F6'ya eşdeğer;</li>
+</ul>
+<p>Algılanan :</p>
+<p>Mesaj listesinden metne geçiş yaparken başlıklar alanı atlanıyor. Bu başlık alanına ulaşmak için, alfasayısal klavyede hızlı bir şekilde Alt+a rakamına üç kez basın, ardından başlık içerik menüsünden çıkmak için Escape tuşlarına basın. Bu Alt+sayı kısayolları, başlıklar alanına gitme ihtiyacını azaltır. Daha fazla ayrıntı için aşağıdaki "Üstbilgileri görüntüleme" bölümüne bakın.</p>
+<p><a name="threadTree"></p>
+<h2>Mesaj listesi, önizleme bölmesi ve ayrı okuma penceresi</h2>
+<p>Aşağıdaki kısayollardan bazıları bu üç bağlamda ortaktır, diğerleri ise belirli bir bağlamla ilgilidir.</p>
+<p><a name="ek"></p>
+<h3>Eklere erişim (Alt+Page Down)</h3>
+<ul>
+<li>Alt+sonraki sayfa veya Alt+p: ön izleme paneli görüntüleniyorsa (F8 aracılığıyla), seçilen mesajın eklerinin listesini açar;</li>
+<li>Alt+9 veya 1 veya 2 sayısı: yalnızca mesaj listesinden, bir basış ek sayısını belirtir, iki basış ek listesini açar;<a name="readPreview"></li>
+</ul>
+<h3>Mesajların hızlı ve temiz okunması</h3>
+<ul>
+<li>Bir mesajı hızlı bir şekilde okumak için komutlar üç bağlamda mevcuttur: mesajlar listesinden, bir sekmede veya ayrı bir pencerede açık bir mesajdan;</li>
+<li>Artık hepsi Framalistes'ten gelen mesajlarla uyumludur;</li>
+<li>Hızlı okuma kısayol tuşlarının çoğu, mesaj ağırlıklı bir okuma oturumu sırasında el hareketini en aza indirecek şekilde yoğunlaştırılmıştır;</li>
+<li>Bir kısayolun ana tuşuna bir kez basmak, mesajın düzenli bir şekilde okunmasını başlatır, yani alıntıların başlıkları büyük ölçüde kısaltılmıştır.</li>
+<li>Çift basış, mesajın orijinal biçiminde okunmasını başlatır. "Filtrelenmemiş okuma" terimi eşanlamlıdır;</li>
+</ul>
+<p><a name="readFromList"></p>
+<h4>Listedeki mesajları listeden ayrılmadan hızlıca okuyun (Boşluk, F4 veya Alt+aşağı ok)</h4>
+<p>Bu özellikten faydalanmak için öncelikle F8 tuşu ile mesaj okuma bölmesini açmalısınız. Bu tuşa basarak, bu bölmenin var olup olmadığını duyacaksınız;</p>
+<p>Ardından mesaj listesine gidin ve aşağıdaki tuşları kullanın:</p>
+<ul>
+<li>Boşluk, Alt+Aşağı ok veya F4: listeden çıkmadan mesajın gövdesini okuyun. Bir mesajı okuduktan sonra, bir sonraki mesajı dinlemek için aşağı ok ve ardından Boşluk veya Alt+aşağı ok veya F4 tuşlarına basın;</li>
+<li>Çift dokunuşta, Chichi aktifse mesaj bağlantılarının listesini görüntüler. Bir RSS yayını makalesi seçilirse, web tarayıcısında açılır;</li>
+<li>Shift+boşluk, Alt+Yukarı ok veya Shift+f4: aynı, ancak alıntıları kronolojik sırayla okuyor (aşağıdan yukarıya);</li>
+</ul>
+<p>Ve mesaj listesinde bulunan komutları tamamlamak için buraya alıntı yapalım:</p>
+<ul>
+<li>n harfi veya Alt+Sağ ok: klasörler arasında bile bir sonraki okunmamış mesajı seçer;</li>
+<li>Alt+Sonraki sayfa veya mesaj listesinden Alt+p: metinde sekmeye gerek kalmadan doğrudan ekler alanına ulaşmanızı sağlar;</li>
+</ul>
+<p><a name="readFromWinTab"></p>
+<h3>Bir mesajı ayrı bir pencerede veya mesaj sekmesinde hızlıca okuyun (F4 veya Alt+Aşağı Ok)</h3>
+<p>Bir mesajı yeni bir pencerede açarken, mesajın gövdesi varsayılan olarak otomatik olarak okunur. Ancak, aşağıdaki kısayollar mesajı istediğiniz zaman tekrar dinlemenizi sağlar.</p>
+<ul>
+<li>F4 veya Alt+aşağı ok: mesajın gövdesinin hızlı okunması;</li>
+<li>Shift+F4 veya Alt+yukarı ok: aynı, ancak tersi;</li>
+</ul>
+<p>Notlar :</p>
+<ul>
+<li>Bir hatırlatma olarak, bu kısayollara iki kez basıldığında orijinal mesajın okunması başlar;</li>
+<li>Otomatik oynatma, özellikle hesap IMAP olarak ayarlanmışsa, bazı bilgisayarlarda NVDA'yı engelleyebilir. Bu sorunu çözmek için Alt+d kısayolu, pencerenin açılması ile otomatik oynatmanın başlaması arasındaki gecikmeyi uzatmanıza izin veren bir giriş kutusu açar;<br>
+Bu gecikmeyi ayarlamak sorunu çözmezse, <a href="keyequiv_tr.html#aboveTab">Shift+Quotes</a> / Ana pencere seçenekleri / ayrı okuma penceresi aracılığıyla bu otomatik okumayı devre dışı bırakabilirsiniz: neden olursa mesajı otomatik olarak okuma NVDA çöküyor;</li>
+<li>Derli toplu okumadan en iyi şekilde yararlanmak ve aynı zamanda sizi gizliliğinize saygı duymayan uzak içerikten korumak için mesajların gövdesini basit HTML'de görüntüleyin. Bunu yapmak için Görünüm menüsünü açın, Mesaj gövdesine gidin ve alt menüde basit HTML seçeneğini doğrulayın.</li>
+</ul>
+<p>Sütunların ve başlıkların danışması:</p>
+<p>Burada sütunlar ve başlıklar arasında bir ayrım yapılmalıdır: Aşağıda "sütun" sözcüğü mesaj tablosundaki bir satırın bir hücresinin değerini belirtmek için kullanılmıştır. "Başlık" kelimesi mesajın kendisini ifade eder. Başlıklar, hem mesaj ön izleme bölmesinde hem de sekmede veya açık bir mesajın ayrı penceresinde görüntülenebilir;</p>
+<p><a name="readCols"></p>
+<h3>Sütunlara danışma: alfasayısal klavyeden bir sayı</h3>
+<p>Bu tuşlar sadece mesaj listesinin sütunlarını etkiler. Shift tuşuna basmadan alfasayısal klavyede bir sayıya basın:
+* Tek bir basış: karşılık gelen sütunun adını ve değerini söyler;
+* Bir sayıya iki kez basıldığında: karşılık gelen sütunun değerini heceler;
+* Üç hızlı basış: sütun değerini panoya kopyalar. Çeşitli gönderenlerin ve alıcıların adreslerini kopyalamak için aşağıda görülen başlıkların danışmalarını kullanın;</p>
+<p><a name="readHeaders"></p>
+<h3>Başlıklara danışma: alfasayısal klavyeden Alt+bir sayı</h3>
+<p>Bu kısayollar, önizleme paneli görüntüleniyorsa (F8 aracılığıyla) ana pencereden ve açık bir mesajın sekmesinden veya ayrı penceresinden kullanılabilir. Duruma göre bir basış başlığı söyler ve iki basış bağlamsal bir menü görüntüler;</p>
+<ul>
+<li>Alt+1: gönderenin adını ve e-posta adresini duyurur.İki kez basıldığında bu değerleri düzenlemek için bir kutu açılır. Bunları düzenleyebilir ve ardından panoya kopyalamak için Enter tuşuna basabilirsiniz. 3 basış: başlığın açılır menüsünü açar;</li>
+<li>Alt+2: Varsa posta listesinin adıyla konu;</li>
+<li>Alt+3: mesajın tarihi;</li>
+<li>Alt+4 için: mesajın ana alıcıları, Birden fazla alıcı varsa, 3 basışları odağı ilk alıcıya konumlandırır, ardından sekmesi bir sonraki alıcıya geçmenizi sağlar, her alıcıdaki uygulamalar bağlamsal menüyü görüntüler;</li>
+<li>Alt+5: kopyadaki alıcılar;</li>
+<li>Alt+6: gizli kopya alıcıları;</li>
+<li>Alt+7: "yanıtla" adresi;</li>
+<li>Alt+8: kullanıcı, eğer tam başlıklar Görünüm / başlıklar / tam başlıklar menüsü aracılığıyla etkinleştirildiyse;</li>
+<li>Alt+9: 1 basış eklerin sayısını duyurur, 2 basış eklerin listesini açar;</li>
+<li>Alt+0:mesaja yerleştirilen öncelikli etiketlerin listesi;</li>
+<li>Alt+ <a href="keyequiv_tr.html#bs2">Eksi</a> veya Alt+end: durum çubuğunun kısaltılmış bir versiyonunu söyler: okunmamış mesaj sayısı, toplam mesaj sayısı ve hızlı filtre ifadesi;</li>
+<li>Alt+ <a href="keyequiv_tr.html#bs1">Equal</a>: sekmelerin içerik menüsünü açar;</li>
+<li>Control + <a href="keyequiv_tr.html#bs1">Equal</a>: Seçilen sekmeyi seçmenize izin veren bir menüdeki açık sekmelerin listesini görüntüler;</li>
+</ul>
+<p><a name="etiketler"></p>
+<h3>Öncelik etiketleri ekleme ve kaldırma: Shift+alfanümerik tuş takımından bir sayı</h3>
+<p>Bu özellik, örneğin bir mesajı önemli veya yapılacak olarak işaretlemenizi sağlar. Ardından, hızlı filtre çubuğu yalnızca bir veya daha fazla etiketi olan iletileri görüntüler. Örneğin, mesaj listesinde yalnızca önemli mesajları görüntüleyin;</p>
+<p>İletiye önceden yerleştirilmiş etiketleri kontrol etmek için alfasayısal klavyede Alt+0 tuşlarına basın.</p>
+<p>Etiket eklemek veya kaldırmak için Shift+1'den 9'a kadar bir sayıya basın;</p>
+<p><a name="qfb"></p>
+<h3>Hızlı filtre çubuğu (f harfi veya Control+Shift+K)</h3>
+<ul>
+<li>F harfi veya Control+Shift+K: geçerli klasördeki hızlı mesaj filtre çubuğunu görüntüler;</li>
+<li>Anahtar kelimeye göre filtreleme: bir anahtar kelime girin ve oklarla filtrelenmiş listeye göz atmak için Sekme tuşuna basın;</li>
+<li>
+<p>Anahtar kelime giriş alanındaki aşağı ok, aşağıdaki seçenekler listesine erişmenizi sağlar:</p>
+<ul>
+<li>1: Klasörleri değiştirirken filtreleri koruyun c</li>
+<li>2: Yalnızca okunmamış mesajları göster l</li>
+<li>3: Yalnızca yıldızlı mesajları göster</li>
+<li>4: Yalnızca adres defterimdeki kişilerden gelen mesajları görüntüle d</li>
+<li>5: Yalnızca yıldız etiketli gönderileri göster</li>
+<li>6: Yalnızca ekleri olan mesajları göster j</li>
+<li>vesaire.</li>
+</ul>
+</li>
+<li>
+<p>Bu kriterlerden birini veya birkaçını etkinleştirmek veya devre dışı bırakmak için enter tuşuna basın;</p>
+</li>
+<li>Alt+end veya Alt+ <a href="keyequiv_tr.html#bs1">Equal</a>: etkin filtrelerin bir özetini ve filtrelenen mesajların sayısını duymanızı sağlar. Bu kısayolların her ikisi de yalnızca hızlı filtre çubuğundan değil, ileti listesinden de çalışır;</li>
+</ul>
+<p><br>
+- hızlı bir filtre etkinken, ait olduğu liste veya sekme odaklandığında bir WAV ses dosyası oynatılır. Ses bir nefes gibidir;<br>
+filter.wav dosyası şu klasörde bulunur:<br>
+"%appdata%\NVDA\TB+ses" <br>
+Dosyanızın adı filter.wav olduğu sürece beğeninize göre bir ses yerleştirebilirsiniz. Bu değişiklikten sonra NVDA'yı yeniden başlatın;v</p>
+<p><a name="tagFilter"></p>
+<h4>Etikete Göre Filtreleme</h4>
+<p>odak, hızlı filtreler çubuğunun düzenleme alanındayken:</p>
+<ul>
+<li>"Etiketler" ifadesini duyana kadar aşağı oka basın, ardından bu seçeneği işaretlemek için Enter'a basın;</li>
+<li>Ardından, etiketlere göre filtreleme modlarının açılır listesine ulaşmak için Sekme tuşuna basın.Örneğin, "yapılacak"ı seçerseniz, mesaj tablosunda yalnızca "yapılacak" olarak etiketlenen mesajlar listelenir;</li>
+</ul>
+<p><a name="colLayout"></p>
+<h3>Sütun düzeni (Alt+c)</h3>
+<p>Alt+c kısayolu, mesaj listesindeki sütunların sırasını değiştirmenize ve sütun eklemenize veya kaldırmanıza olanak tanıyan bir iletişim kutusu görüntüler.</p>
+<p>Kullanmak için önce kendinizi mesajlar listesine veya klasörlerin ağaç yapısına yerleştirin, ardından Alt+c tuşlarına basın;</p>
+<p>Sütun düzeni iletişim kutusu görünür. Sütun listesinin yanı sıra "Yardım", "sütunlar" ve "Kapat" düğmelerinden oluşur.</p>
+<p>"Sütunlar..." düğmesi yerel Thunderbird "Görüntülenecek sütunları seçin" menüsünü görüntüler</p>
+<p>Sütun listesindeyken, aşağıdaki klavye kısayolları kullanılabilir:</p>
+<ul>
+<li>Sol ok: "Görüntülenecek sütunları seçin" adlı onay kutusu menüsünü görüntüler. Bu kısayol, "Sütunlar..." düğmesine karşılık gelir;</li>
+<li>Boşluk: seçilen sütunu taşımak için Boşluk tuşuna basın, ardından başka bir sütuna gidin ve sütunu oraya yerleştirmek için tekrar Boşluk tuşuna basın. Bu işlem kes ve yapıştır işlemine benzer;</li>
+</ul>
+<p>Ayrıca şu doğrudan hareket kısayollarına sahipsiniz:</p>
+<ul>
+<li>Kontrol + yukarı ok veya aşağı ok: seçili sütunu bir konum yukarı veya aşağı hareket ettirin;</li>
+<li>Control + Home veya End: seçilen sütunu listede yukarı veya aşağı taşır;</li>
+<li>Control + Önceki sayfa veya Sonraki sayfa: seçilen sütunu üç konum yükseltir veya alçaltır;</li>
+</ul>
+<p>Bu hareketleri gerçekleştirmek için, sütunlar aslında fare ile sürükleyip bırakarak taşınır. Her 10 işaretçi hareketinde bir milisaniyelik bir bip sesi oluşur;</p>
+<p>"Görüntülenecek sütunları seçin" menüsü mevcut olduğunda, aşağıdaki yeni klavye kısayollarına sahipsiniz:</p>
+<ul>
+<li>Sağ ok: sütun düzeni iletişim kutusunu görüntüler;</li>
+<li>Boşluk: menüde seçilen sütunu kontrol eder veya işaretini kaldırır. Enter tuşu yine aynı davranışı üretir;</li>
+</ul>
+<p>Bu nedenle, sol ve sağ oklarla, sütunları seçmek için menü ile bunların düzenlenmesi için iletişim kutusu arasında geçiş yapmak çok kolaydır;</p>
+<p><a name="smartReply"></p>
+<h3>SmartReply: Control+r tuşlarına basarak tüm posta listelerini yanıtlayın</h3>
+<p>Google Grupları gibi bir posta listesine yanıt vermek için Control+Shift+l tuşlarına basmayı unutanlardansanız, bu özellik sizi bir iletiyi gönderene farkında olmadan özel olarak yanıt vermekten kurtaracaktır.</p>
+<p>yine de Control+r tuşlarına şu şekilde basabilirsiniz:</p>
+<ul>
+<li>tek tuş vuruşu: listeye cevap vermek için;</li>
+<li>çift dokunma: mesajı gönderene özel olarak yanıt vermek için;</li>
+<li>Listeden gelmeyen bir mesajın göndericisine tek tuşla cevap verebilme;</li>
+</ul>
+<p>Notlar :</p>
+<p>Bu kısayollara tek veya çift dokunma arasındaki fark, GoogleGroups'ta çalışır.Çerçeveciler ve Serbest Listeler.</p>
+<p>Bu üç listeden birine tek bir dokunuşla, düzenleme penceresi açılmadan önce "listeye" ifadesini duyacaksınız.</p>
+<p>gönderenin cevabınızı özel olarak almaması için bir listeyi yanıtlarken "Tümünü yanıtla" komutunun kullanılmaması da tavsiye edilir;</p>
+<p>Son olarak, Control+r'nin olağan davranışını bulmak istiyorsanız:</p>
+<ul>
+<li>Seçenekler menüsünü görüntülemek için <a href="keyequiv_tr.html#aboveTab">Shift+Quotes</a> tuşlarına basın;</li>
+<li>"Chichi ve Thunderbird+ alt menüsü için Devre Dışı Bırakma" öğesini seçin;</li>
+<li>"Mesaj listesi: SmartReply yok" seçeneğinin işaretini kaldırmak için Enter'a basın;</li>
+</ul>
+<h3>Seslendirilen a, j, m kısayolları</h3>
+<ul>
+<li>a: Seçilen mesajı sesli olarak arşivler. Bu işlemi geri almak için Control+z tuşlarına basın;</li>
+<li>j: bu mesajı seslendirme ile spam olarak işaretle;</li>
+<li>Shift+j: Seslendirme ile bu mesajı kabul edilebilir olarak işaretleyin;</li>
+<li>m: seçili mesajları okunmadı olarak işaretler. Shift+m ​​​​okundu olarak işaretler;</li>
+</ul>
+<p><a name="klasörAğacı"></p>
+<h2>Klasör Ağacı</h2>
+<p><a name="okunmamış Klasörler"></p>
+<h3>Okunmamış mesajlar içeren klasörler arasında hızlı gezinme (Alt+Aşağı Ok, Alt+Yukarı Ok)</h3>
+<p>Klasör ağacındayken şu tuşlara basabilirsiniz:</p>
+<ul>
+<li>Alt+aşağı ok: okunmamış mesajların olduğu bir sonraki klasöre gitmek için;</li>
+<li>Alt+yukarı ok: okunmamış mesajların bulunduğu bir önceki klasöre gitmek için;</li>
+<li>Space, Chichi yüklü değil: seçilen klasör okunmamış mesajlar içeriyorsa, listedeki ilk okunmamış mesajı seçer;</li>
+<li>Space, Chichi kurulu: klasörde okunmamış mesaj yoksa, Chichi'nin okunmamış klasörlerin listesini göstermesi dışında aynıdır.<br>
+Bu listedeki okunmamış bir klasörde enter tuşuna basmak, mesaj listesindeki o klasördeki ilk okunmamış mesajı etkinleştirir; <br>
+Bu, hangi klasörden okumaya başlamak istediğinize karar vermeden önce hangi klasörlerin mesaj aldığını hızlı bir şekilde görmenizi sağlar;<br></li>
+</ul>
+<p>Bu bağlamda, şu iki diyaloğa da bakın:</p>
+<ul>
+<li>Filtrelenmiş Hesap ve Klasör Listeleri İletişim Kutusu (F12)</li>
+<li>Ana ağaçtaki klasörlerin 4 türe göre listesi (F7, NVDA+F7 veya Shift+F12)</li>
+</ul>
+<p>Not: Çok sayıda klasörle Chichi, bu iki iletişim kutusunun aksine anlıktır;</p>
+<p><a name="klasörDlg"></p>
+<h3>Filtrelenmiş Hesap ve Klasör Listeleri İletişim Kutusu (F12)</h3>
+<p>Bu iletişim kutusu, hesapları ve bunlarla ilişkili klasörleri iki ayrı listede görüntüler. Bunları bir anahtar kelimeye göre filtreleyebilir veya klasör listesini okunmamış mesajları olanlarla sınırlayabilirsiniz.</p>
+<p>Varsayılan görüntüleme modunu yapılandırma:</p>
+<p>Çoğu zaman yalnızca okunmamış mesajları içeren klasörleri görüntülemeyi planlıyorsanız, önce klasör ağacına veya mesaj listesine gidin, ardından <a href="keyequiv_tr.html#aboveTab">Shift+Quotes</a> ve ana pencerenin seçenekler alt menüsünde şu başlıklı öğeyi doğrulayın: Yalnızca okunmamış mesajları olan klasörleri göster.</p>
+<p>Temel diyalog kullanımı:</p>
+<ul>
+<li>İletişim kutusunu görüntülemek için ana pencereden F12'ye basın.</li>
+<li>Klasörlerin varsayılan görüntüsünü okunmamış mesajlarla yapılandırdıysanız, bunlar şu listede görüntülenecektir: Hesap klasörleri;</li>
+<li>Aksi takdirde, tüm hesaplardaki tüm klasörler bu listeye dahil edilecektir;</li>
+<li>Bir klasör adının ilk harfine basarak bu listede gezinebilirsiniz;</li>
+<li>Ağaç yapısında gösterilmeyen klasörlerin burada da listelenmeyeceğini unutmayın. Bu, örneğin klasörler, hesaplar ve klasörler ağacındaki daraltılmış bir hesaba ait olduğunda olur;</li>
+<li>Bu noktada ilgilendiğiniz klasörü bulduysanız, ağaç yapısında seçmek için üzerinde Enter tuşuna basın. Klasör üzerinde tek bir sol tıklama simülasyonu yapmak için Alt+g tuşlarına veya tek bir sağ tıklama simülasyonu için Alt+d tuşlarına da basabilirsiniz;</li>
+</ul>
+<p>Ekran modlarını değiştir:</p>
+<ul>
+<li>İstediğiniz zaman hangi görüntüleme modunda olduğunuzu hatırlatmak için "Geri al" tuşuna basın. Bilgileri duyduktan sonra, klasörler listesine dönmek için bu düğmeye tekrar basın;</li>
+<li>Ekranı "yalnızca okunmamış klasörlerle" modundan "tüm klasörler" moduna veya tam tersine geçirmek için F12'ye basın;</li>
+<li>"Tüm klasörler" modunda, hesaplar soldaki listede ve seçilen hesabın klasörleri sağdaki listede görüntülenir. Bir listeden diğerine geçmek için sol ve sağ okları kullanın;</li>
+<li>"Tüm hesaplar" adlı bir sanal hesap seçilir ve odak, tüm hesapların tüm klasörlerini içeren klasörler listesine yerleştirilir. Bu listedeki her klasör için ait olduğu hesabın adı belirtilir;</li>
+</ul>
+<p>Anahtar kelime filtrelemeyi kullanma:</p>
+<ul>
+<li>Önceden, yukarıda açıklandığı gibi "Tüm klasörler" moduna geçmek büyük olasılıkla fayda sağlayacaktır;</li>
+<li>Aşağıda "Önceki sayfa" ve "Sonraki sayfa" tuşlarını dönüşümlü olarak kullanabilirsiniz;</li>
+<li>Bir listeden, filtre ifadesinin düzenleme alanına geri dönmek için "Önceki sayfa" tuşuna basın;</li>
+<li>Bir ifade girin ve ardından filtrelemeyi yürütmek için "Sonraki Sayfa" tuşuyla doğrulayın;</li>
+<li>Sonuçlar, klasörler listesinde görüntülenir. Klasör bulunamadıysa şunu duyarsınız: Sonuç bulunamadı. Bunu beklemiyorsanız, tüm klasörlerin görüntüleme moduna geçmeyi unutmuş olabilirsiniz;
+-Son olarak, klasör ağacında istediğiniz klasörü seçmek için enter tuşuna basın. Yukarıda bahsedildiği gibi, Alt+g veya Alt+d tuşlarına basarak klasör üzerinde sol veya sağ tıklama simülasyonu yapabilirsiniz;#### Belirli klasörler, okunmamış klasörler listesinden hariç tutuluyor</li>
+</ul>
+<p>Yukarıda bahsedildiği gibi, nadiren erişilen veya hiç erişilmeyen klasörleri okunmamış mesaj içeren klasörler listesinden çıkarabilirsiniz.</p>
+<p>Tek yapmanız gereken, adının sonuna bir çizgi ekleyerek hariç tutulacak bir klasörü yeniden adlandırmaktır.</p>
+<p>Burada, yeniden adlandırılan bu klasör bir mesaj filtresinin parçasıysa, Thunderbird'ün bu değişikliği hesaba katmak için bu filtreyi otomatik olarak değiştireceğini belirtmek gerekir.</p>
+<p><a name="klasör Listesi"></p>
+<h3>Ana ağaçtaki klasörlerin 4 türe göre listesi (F7, NVDA+F7 veya Shift+F12)</h3>
+<p>Klasör ağacında veya mesaj listesindeyken, bu komut aşağıdaki dört düzeni benimseyen klasörlerin listesini içeren bir iletişim kutusu görüntüler:</p>
+<ul>
+<li>Yalnızca okunmamış iletilerde (düz liste), Alt+n;</li>
+<li>Tüm klasörler (düz liste), Alt+t;</li>
+<li>Yalnızca okunmamış iletilerde (dolu ağaç), Alt+o;</li>
+<li>Tüm klasörler (tam ağaç), Alt+u;</li>
+</ul>
+<p>Okunmamış mesajları olan klasörler için Taslaklar, Çöp Kutusu ve kısa çizgiyle biten adlara sahip klasörler listeden çıkarılır;</p>
+<p>Bu türlerden birini etkinleştirmek için ilgili klavye kısayoluna veya Shift+Tab tuşlarına ve ardından ok tuşlarına basarak modu değiştirebilirsiniz.</p>
+<p>Seçilen tip, bu iletişim kutusunun bir sonraki görüntülenmesinde hafızaya alınacak ve etkinleştirilecektir;</p>
+<p>Listeyi anahtar kelimeye göre de filtreleyebilirsiniz. Giriş alanına ulaşmak için Tab veya boş Alt+e tuşlarına basın.</p>
+<p>Düz bir listede veya ağaç yapısında gezinme, yukarı ve aşağı okların yanı sıra bir klasör adının baş harfiyle yapılır;</p>
+<p>Ana ağaçta seçilen klasörü etkinleştirmek için üzerinde Enter tuşuna basmanız yeterlidir.</p>
+<p>İpucu: Okunmamış mesajların bulunduğu bir klasörde Enter tuşuna bastıysanız, mesaj tablosundaki ilk okunmamış mesajı seçmek için Boşluk tuşuna basın;
+<br>
+Algılanan :</p>
+<p>Bu iletişim kutusunu açan kısayol tuşları kaldırılabilir ve NVDA'nın Hareket Ayarları iletişim kutusundan başka bir kısayol eklenebilir. Aşağıdaki gibi ilerleyin:</p>
+<ul>
+<li>Önce Thunderbird penceresini ön plana yerleştirin;</li>
+<li>NVDA menüsünü açın ve "Tercihler"i seçin;</li>
+<li>Alt menüde, şunları doğrulayın: Komut hareketleri";</li>
+<li>İletişim kutusunda, şunu duyana kadar t harfine basın: Thunderbird;</li>
+<li>Bu dalı genişletmek için sağ oka basın;</li>
+<li>Şu öğeye ilerleyin: "Thunderbird'ün ana ağaç yapısındaki klasörlerin listesini birkaç türe göre görüntüleyin. 4'te 2 azaltılmış 1. düzey", ardından bu düzeyi genişletmek için sağ oka basın;</li>
+<li>Sekerek "Ekle" düğmesine gidin, onaylayın ve ardından yeni iletişim kutusunda bir kontrol hareketine basın;</li>
+<li>Seçiminizi doğrulamak için Enter tuşuna basın;</li>
+<li>Komutlar listesine geri dönün, yeni komut hareketinizin varlığını kontrol edin;* Diyaloğu Tamam düğmesiyle kapatın.</li>
+</ul>
+<p><a name="uyarılar"></p>
+<h2>Uyarılar erişilebilir hale getirildi</h2>
+<p>Müdahalenizi gerektiren uyarılar için düğmelere erişilebilir ve ok tuşları kullanılarak bunlar arasında gezinilebilir:</p>
+<ul>
+<li>Thunderbird için modüllerin kurulumu: "Yükle" düğmesi seçilidir ve kuruluma devam etmek için üzerinde Enter tuşuna basmanız yeterlidir;</li>
+<li>Yeni Thunderbird güncellemesi: bu uyarıya da erişilebilir;</li>
+<li>Mesajın alındığına dair bir onay talebi: bu, ana pencere için <a href="keyequiv_tr.html#aboveTab">Shift+Quotes</a> / seçenekler menüsündeki bir seçenek aracılığıyla göz ardı edilebilir ;;</li>
+<li>Mesajlarda uzak içeriğin görüntülenmesini engelleme: "Seçenekler" düğmesi seçilir ve mesaja aşağıdaki cümle eklenir: İpucu: Görünüm menüsünü açın, Mesaj gövdesine gidin ve alt menüde basit HTML'yi doğrulayın . Önerilen ayarlar uygulandığında, bu uyarı artık görüntülenmez;</li>
+</ul>
+<p>Mesaj listesine göz atmayı engelleyen uyarılar için:</p>
+<ul>
+<li>Uyarı Bu bir taslaktır: bu gereksiz uyarı silinmiştir;</li>
+<li>Thunderbird bu mesajın sahte olduğunu düşünüyor: bu duyuru insan sesine yakın bir frekansta (200 Hertz) iki kısa tonla değiştirildi. Mesajı kabul edilebilir veya istenmeyen yapmak için <a href="keyequiv_tr.html#aboveTab">Alıntılar</a> tuşuna basın ve "Uyarı" alt menüsünden istediğiniz eylemi seçin;</li>
+</ul>
+<p><a name="sekmeler"></p>
+<h2>Sekme Klavye Kısayolları</h2>
+<p>Yeni komutlarla birlikte, sekmeler bu örnekte olduğu gibi duyurulur: Sekme 1/4, Gelen Posta.</p>
+<ul>
+<li>Control+Tab ve Control+Shift+Sekme: sonraki veya önceki sekmeye gider;</li>
+<li>Control+a sayı: sekme çubuğunda sıra numarasına karşılık gelen sekmeyi seçer. Açık sekme sayısından daha büyük bir sayıya basarsanız sonuncuya yerleştirilirsiniz;</li>
+<li>Control + <a href="keyequiv_tr.html#bs1">Equal</a>: bir menüdeki açık sekmelerin listesini görüntüler. Bir sekme adına gitmek için enter tuşuna basın;</li>
+<li>Alt + <a href="keyequiv_tr.html#bs1">Equal</a>: sekme çubuğunun içerik menüsünü görüntüler. Özellikle şu komutları içerir: Etkin sekmeyi kapat ve Diğer sekmelerimi kapat;</li>
+<li>Control+w, Control+backspace veya Control+F4: etkin sekmeyi kapatın;</li>
+<li>Control+j: sabit sürücünüze kaydedilen ekleri ve indirmeleri gruplandıran "Kayıtlı dosyalar" sekmesini açar;</li>
+</ul>
+<p><a name="tabAddons"></p>
+<h2>Eklentiler sekmesi</h2>
+<p>Eklenti, Thunderbird için eklentileri bulmayı ve kurmayı kolaylaştırır.</p>
+<ul>
+<li>"Eklentiler" sekmesinde bir modül adı girin ve ardından Enter tuşuna basın;</li>
+<li>Eklenti, arama sonuçları sekmesinin açılmasını bekleyecek ve ardından bulunan ilk eklentiyi seçmeye çalışacaktır;</li>
+<li>daha somut olarak,<a href="#stwInstall">Inbox modülü kurulumuyla Başlayın</a> örneğini okuyabilirsiniz;</li>
+</ul>
+<!-- Çeviriciler: yazma penceresi = Yazma penceresi -->
+<p><a name="writeWnd"></p>
+<h2>Oluştur penceresi</h2>
+<p>Düzenleme penceresi açıldığında, aşağıdaki klavye kısayolları mevcut olmasına rağmen özel bir şey fark edilmez:</p>
+<ul>
+<li>Escape: düzenleme penceresini kapatır;</li>
+<li>Adresleme bölgelerine danışma: Alt + bir sayıya basmak başlığı duyurur, iki kez basmak ilgili giriş bölgesine odaklanır:<br>
+Alt+1: Gönderen: e-posta adresleriniz listesinde görünen e-posta adreslerinizden biri;<br>
+Alt+2: için:<br>
+Alt+3: ek adları. İki basış, eklerin listesine odaklanır;<br>
+diğer rakamlar, şu gibi isteğe bağlı üstbilgilere erişim sağlar: kopyala, gizli kopyala ve yanıtla;</li>
+<li><a href="keyequiv_tr.html#aboveTab">Alıntılar</a> mesaj metninde: aşağıdaki bağlamsal menüyü görüntüler: - Posta araç çubuğu, ardından alt menüde: Gönder, Yazım Denetimi, Ekle, Güvenlik, Kaydet.<br>
+Alt menüde metin biçimlendirme: (Stilleri) Paragraf, Madde işaretli listeyi uygula veya kaldır, Numaralı listeyi uygula veya kaldır, Yazı Tipleri, Girintiler, bağlantı, resim, bağlantı, yatay çizgi veya tablo ekle.</li>
+</ul>
+<p><br>
+Not: Bu menü, <a href="keyequiv_tr.txt">Shift+ Quotes</a> tuşuna bir veya iki kez hızlıca basarak elde edilen oluşturma penceresi için seçenekler menüsündeki ayara bağlı olarak <a href="keyequiv_tr.html#aboveTab">Quotes</a> tuşuna bir veya iki tuş vuruşuyla elde edilir. html#aboveTab);</p>
+<p><a name="spellDlg"></p>
+<h3>Yazım denetimi iletişim kutusu: F7</h3>
+<p>El hareketini kısıtlayan kısayol tuşları eklendi. Odak, değiştirilen sözcük düzenleme alanındayken, aşağıdaki kısayol tuşlarına basabilirsiniz:</p>
+<ul>
+<li>Enter: "Değiştir" düğmesini etkinleştirir;</li>
+<li>Shift+Enter: "Tümünü değiştir" düğmesini etkinleştirir;</li>
+<li>Control+Enter: "Yoksay" düğmesini etkinleştirir;</li>
+<li>Shift+Control+Enter: "Tümünü yoksay" düğmesini etkinleştirir;</li>
+<li>Alt+Enter: "Sözcükleri sözlüğe ekle" düğmesini etkinleştirir;</li>
+</ul>
+<p>Enter tuşunun bu kombinasyonlarını hatırlamak için Kontrol, "Yoksay" eylemine atıfta bulunur ve Shift'in varlığı "tüm oluşumları" belirtir.</p>
+<p>Ayrıca, Alt+yukarı ok kısayolu şu sözcükleri heceler:</p>
+<ul>
+<li>1 basış sözcükleri normal hızda heceler;</li>
+<li>2 basış hızlı bir şekilde kelimeleri heceler;</li>
+<li>3 basış, yanlış yazılmış kelimeyi başka bir düzenleme alanında analiz edilmek üzere panoya kopyalar;</li>
+</ul>
+<p><a name="virtspell"></p>
+<h2>Yazarken geliştirilmiş yazım denetimi modu</h2>
+<!-- Translators : this section was translated  from French into Turkish on version 4.7.1, may 08, 2023 -->
+
+<p>Not : Bu bölüm Google tarafından Fransızcadan Türkçeye çevrilmiştir. Hatalar mümkündür;</p>
+<p>Yazım denetimi iletişim kutusuna eklenen yazımlara rağmen, metindeki hatanın bağlamını duymak için bazen iletişim kutusunu kapatmak gerekebilir. Bu yapıldığında, bu iletişim kutusu doğrulamayı en baştan yeniden başlatır ve daha önce gönüllü olarak göz ardı ettiğimiz sözcüklerde tekrar durur.</p>
+<p>Yazarken yazım denetimi yapmak bu rahatsızlıkları ortadan kaldırır ancak "Yazım hatası" duyurularıyla yazarın dikkatini dağıtabilir.</p>
+<p>Yazarken yazım hatalarından rahatsız olmamak için, bu kontrol modu üç klavye kısayolu eklenerek geliştirilmiştir:</p>
+<p>Bunları etkinleştirmeden önce, şu tuşlara basarak navigasyon moduna geçmek gerekir: NVDA+boşluk;</p>
+<ul>
+<li>w ve -shift+w sırasıyla sonraki ve önceki hataya gitmek için;</li>
+<li>Hata listesini görüntülemek için NVDA+F7. Metinde bir hataya atlamak için enter tuşuna basmanız yeterlidir;</li>
+</ul>
+<p>Bu çalışma modu, NVDA'nın yazım hatalarını duyurmasını devre dışı bırakmanıza olanak tanır;</p>
+<p>Yazarken bu geliştirilmiş doğrulama modunu kullanmadan önce küçük bir yapılandırma yapmak gerekir.</p>
+<h3>Ön yapılandırma</h3>
+<p>1: Thunderbird'de, tercihleri ​​yazarken yazım denetimini etkinleştirin:</p>
+<ul>
+<li>Ana pencerede Seçenekler menüsünü açın, Tercihler'e gidin ve onaylayın;</li>
+<li>Tercihler sekmesinde, seçenekler arama alanına ulaşmak için sekmeye "ortho" kelimesini girin ve ardından Tab'a basın;</li>
+<li>Sonuçlarda tablo haline getirin ve ardından "Yazarken doğrulamayı etkinleştir" başlıklı kutuyu işaretleyin;</li>
+<li>Son olarak -ctrl+w veya -ctrl+Backspace ile Tercihler sekmesini kapatın;</li>
+</ul>
+<p>2: NVDA'da yazım yanlışlarının bildirilmesini devre dışı bırakın
+Bu ayar isteğe bağlıdır. Bir yazım hatasıyla ilgili bir duyuru duymayı tercih ederseniz, bu duyuruyu telaffuz sözlüğünüzdeki "Yazım hatası" ifadesini "graf" ile değiştirerek de kısaltabilirsiniz, örneğin;</p>
+<p>Bu reklamı devre dışı bırakmak için:</p>
+<ul>
+<li>NVDA menüsünü açın, Tercihler, ardından aşağıdakileri doğrulayın: Parametreler;</li>
+<li>Ayarlar iletişim kutusunda "Belge biçimlendirme" kategorisine gidin;</li>
+<li>Şunu duyana kadar sekmeye gidin: "Yazım hataları", ardından bu seçeneğin işaretini kaldırmak için boşluk tuşuna basın;</li>
+<li>Tamam düğmesini onaylayarak iletişim kutusunu kapatın;</li>
+</ul>
+<h3>w, -shift+w ve NVDA+F7 kısayol tuşlarını kullanma</h3>
+<ul>
+<li>Bu kısayol tuşlarını kullanmadan önce, NVDA+boşluk tuşlarına basarak tarama modunu etkinleştirmelisiniz;</li>
+<li>Daha sonra bir sonraki hataya gitmek için w harfine veya önceki hataya gitmek için -shift+w'ye veya listeden düzeltilecek kelimeyi seçmek için NVDA+F7'ye basın;</li>
+<li>Metinde hatalı kelime seçildiğinde,Değiştirme önerilerinin içerik menüsünü görüntülemek için Uygulamalar tuşuna basabilirsiniz;</li>
+<li>Hatalı kelimeyi içeren cümleyi düzeltmeye geçmeden önce kolayca dinleyebilir;</li>
+<li>Bir kelimeyi manuel olarak düzeltmek için önce form moduna dönmek üzere NVDA+boşluk tuşlarına basın;</li>
+</ul>
+<p><a name="menüler"></p>
+<h2>ThunderbirdPlus Seçenekleri ve Komutları Menüleri</h2>
+<p><a name="optMenu"></p>
+<h3>Seçenekler Menüsü(<a href="keyequiv_tr.html#aboveTab">Shift+Tırnaklar</a>)</h3>
+<p>Ana pencere için seçenekler:</p>
+<ul>
+<li>Birden fazla 'RE' sözünü bir araya getirin: örneğin, Re: Re: Re: 3Re:'ye dönüştürülecek;* Konu sütunundaki 'RE' ibarelerini silin:</li>
+<li>'RE' ifadelerindeki 2 noktayı silin:</li>
+<li>Mesaj listesindeki kişilerin isimlerini temizleyin: Muhatapların isimlerini dinlemeyi daha az yorucu hale getirmek için sayıları ve belirli özel karakterleri kaldırın;</li>
+<li>Sütunlar arasına noktalama işaretleri ekleyin: mesaj listesinin bir satırını duyururken aralarındaki küçük bir duraklamayı işaretlemek için belirli sütunların arasına virgül eklenir;</li>
+<li>Çalma Listesi Adlarını Gizle: Her çalma listesi için farklı bir klasör kullanırken daha kolay dinleme için parantez içindeki liste adlarının duyurusunu kaldırır. Aksi takdirde, bir posta listesinin adı, bir iletinin konusunda birden çok kez geçiyorsa yalnızca bir kez söylenir;</li>
+<li>Mesajların konusunda gizlenecek kelimeleri düzenle: mesajların konusunda duyurulmayacak kelimeleri eklemenizi veya silmenizi sağlayan bir giriş kutusu açar. Örneğin, <strong><em> Spam </em></strong>'in Spam olarak bildirilmesi için * ekleyin;</li>
+<li>'İstenmeyen durum' sütununda görüntüleniyorsa 'istenmeyen' olarak duyurun: mesaj tablosunda "istenmeyen durum" sütunu varsa, bu seçenek "İstenmeyen" durumunun duyurulmasına izin verir veya vermez;</li>
+<li>Okunmamış bir klasördeki boşluk, mesaj listesinin başından itibaren ilk okunmamış mesajı arar: Varsayılan olarak, bu seçenekle ilgili komut dosyası, mesaj listesindeki bir sonraki okunmamış mesajı seçmek için "n" komutunu gönderir. Thunderbird mutlaka listedeki ilk okunmamış mesajı seçmez. Bu seçeneği işaretlediğinizde eklenti, bazı PC'lerde duyulabilen bir sapma yaparak klasördeki ilk okunmamış mesajı seçecektir;</li>
+<li>Klasör ağacında ilk gezinmeyi kullanmayın: "Klasör tuşunda hızlı gezinme" eklentisini kullanıyorsanız bu seçenek kullanışlıdır;</li>
+<li>Dolaylı baş harflere göre tarama: klasör ağacında bir harf veya rakama basar basmaz bir klasör adı giriş kutusu görüntüler. Bu seçenek devre dışıysa, z harfine basarak bu arama kutusunu görüntüleyebilirsiniz;</li>
+<li>Onay isteklerini yoksay: bu seçenek etkinleştirilirse, mesaj listesinden bir mesaj seçildiğinde onay talebi bölmesi susturulur;</li>
+<li>Shift+F6'yı escape ile taklit etmeyin: ana pencerede paneller arasında gezinirken escape tuşunun kullanımını devre dışı bırakır;</li>
+<li>'Ağaç Klasörler' iletişim kutusunda yalnızca okunmamış klasörleri göster a: F12 tuşu aracılığıyla bu iletişim kutusunu her görüntülediğinizde yalnızca okunmamış iletileri olan klasörlerin görüntülenmesini sağlar;</li>
+<li>ayrı okuma penceresi: NVDA'nın çökmesine neden olursa mesajı otomatik olarak okuma: Varsayılan olarak,mesaj listesinden Enter tuşuna basarak bir mesajı açtığınızda, yeni pencere açıldığında mesajın incelikli bir okuması başlar. Bazı bilgisayarlarda ve e-posta hesabı IMAP olarak ayarlandığında NVDA çökebilir. Bu seçenek işaretlendiğinde, engellemeyi önlemek için bu otomatik oynatma devre dışı bırakılır.<br>
+Bu pencereyi açarken bir donma yaşarsanız, otomatik oynatma başlamadan önceki gecikmeyi uzatabilirsiniz. Bunu yapmak için başka bir değer girmek üzere Alt+d tuşlarına basın. Bu engellemeyi kaldıramıyorsanız, bu seçeneği işaretleyin;</li>
+</ul>
+<p><br>
+Oluştur penceresi seçenekleri:</p>
+<ul>
+<li>Yazım denetimi: yanlış yazılmış sözcük ve önerilen sözcük: bu seçenek, yazım denetimi iletişim kutusundaki duyuruları değiştirir;</li>
+<li>Yazarken gelişmiş Yazım Denetimini etkinleştirin: bu seçenekle ilgili komut henüz NVDA sürüm 2022.1'de çalışmıyor;</li>
+<li>Esc tuşu yazılmakta olan mesajı kapatır; işaretli l</li>
+<li>Bağlamsal menüyü görüntülemek için tek tuş vuruşu, <a href="keyequiv_tr.html#aboveTab">Alıntılar</a> veya <a href="keyequiv_tr.html#aboveTab">Shift+Quotes</a> veya bunların yerine geçenleri yazmak için çift tuş vuruşu: bu seçenek bağlamsal menüyü <a href="keyequiv_tr.html#aboveTab">Quotes</a> tuşuna basarak <a href="keyequiv_tr.html#aboveTab">Quotes</a> ve <a href="keyequiv_tr.html#aboveTab">Shift+Quotes</a> karakterlerini nadiren yazarsanız daha pratik olacaktır;</li>
+</ul>
+<p><br>
+Güncelleme seçenekleri:</p>
+<p>Bu seçenek, Thunderbird+ otomatik güncellemelerini devre dışı bırakmanıza veya yeniden etkinleştirmenize olanak tanır;</p>
+<p><br>
+Chichi ve Thunderbird+ için devre dışı bırakmalar:</p>
+<p>Bu seçeneklerin ana amacı, yinelenen özelliklerden kaçınarak Thunderbird+ ve Chichi arasında iyi bir birlikteliğe izin vermektir. Ancak bunları tercihlerinize uyacak şekilde sorunsuz kullanabilirsiniz;</p>
+<p>Aşağıdaki "klasörler" terimi, klasör ağacını ifade eder;</p>
+<ul>
+<li>Klasörler: Boşluk, listedeki bir sonraki okunmamış mesajı seçmez ve okunmamış klasörler listesini göstermez d: Chichi'nin henüz bağımsız bir eşdeğeri yoktur;</li>
+<li>Klasörler: baş harflerle gezinme yok d: bu seçeneği etkinleştirerek, Chichi kullanılacaktır. Yalnızca yukarıdan aşağıya çalışır ve etkinleştirilen klasörün ait olduğu hesabın adını söylemez;</li>
+<li>Mesaj listesi: Boşluk önizleme bölmesi mesajını okumaz l: bu seçeneği işaretlerseniz, Chichi önizleme bölmesi mesajını konuşur. Thunderbird+'dan farklı olarak, bu oynatma sterilize edilmeyecektir. Öte yandan, F4 ve Alt+aşağı ok, Thunderbird+'ın düzenli okumasına hitap etmeye devam edecek;</li>
+<li>Mesajları listele: SmartReply yok:Control+r ile bir posta listesine tek dokunuşla veya göndereni Control+r ile çift dokunuşla yanıtlamaya izin veren özelliği devre dışı bırakır,</li>
+<li>Mesajları listele: hızlı filtre çubuğunu yönetme: aşağı ok ile filtre seçeneklerine erişimi kaldırır;</li>
+<li>ana pencere: Sekme sonraki bölmeye taşınmaz: bu seçenek, klasör ağacı, mesaj listesi ve başlıklar ve mesaj bölmesi arasında gezinme ile ilgilidir;</li>
+<li>Ana pencere: escape tuşunun varsayılan davranışını geri yükleyin. Bu, özellikle yukarıda belirtilen bölümler arasındaki gezinme ile ilgilidir;</li>
+<li>Thunderbird'ü Control+w veya Control+F4 ile kapatmaya izin ver: bu seçeneği işaretleyerek, bu iki kısayol açık yalnızca bir sekme kaldığında Thunderbird'ü kapatır. Bu davranış bazı insanlar için utanç vericidir;</li>
+</ul>
+<p><br>
+Yedekleme ve geri yükleme seçenekleri:</p>
+<ul>
+<li>Geçerli yapılandırmayı yedekle: eklentinin .ini dosyasını bir .inibak dosyasına kopyalar;</li>
+<li>Kaydedilen yapılandırmayı geri yükleyin r: .inibak dosyasını .INI dosyasına kopyalayın ve parametreleri yeniden yükleyin;</li>
+<li>Yapılandırmayı sıfırla: eklentinin varsayılan ayarlarını yeniden yükler. Önceden, henüz yoksa bir yedek alın;</li>
+</ul>
+<p><a name="cmdMenü"></p>
+<h3>Komutlar Menüsü (Alıntılar)</h3>
+<ul>
+<li>Mesaj listesi sütunlarını seçin ve düzenleyin: "Görüntülenecek sütunları seçin" adlı Thunderbird onay kutusu menüsünü görüntüler. Bir sütun adından, sütun düzeni iletişim kutusunu açmak için sağ oka basın;</li>
+<li>Desteğe yazın: Fransızca veya İngilizce. Bu komut, eklenti desteğine önceden adreslenmiş bir yazma penceresi açar. Bu, yalnızca Thunderbird'ün varsayılan e-posta istemciniz olarak doğru şekilde ayarlanması durumunda çalışır;</li>
+</ul>
+<p><a name="başlangıç"></p>
+<h2>Geliştirilmiş Thunderbird başlatma</h2>
+<p>Doğal olarak, Thunderbird'ün son kapanışından sonra, son aktif sekmede ve hiçbir şeyi etkinleştirmeden başlar, bu oldukça tatsız.</p>
+<p>Rahat bir başlangıç ​​yapmak için doğrudan Thunderbird'e yüklenen iki eklenti vardır:</p>
+<ul>
+<li>Yannick tarafından geliştirilen Chichi: Bu modül tavsiye edilir çünkü diğer pek çok erişilebilirlik özelliği sunar ve ThunderbirdPlus onunla etkileşime girecek şekilde tasarlanmıştır;</li>
+<li>Gelen kutusuyla başlayın: Chichi kullanmıyorsanız, bu modül iyi bir iş çıkarır;</li>
+</ul>
+<p><a name="bok"></p>
+<h3>Chichi ile</h3>
+<p>Chichi'yi kullanmak için, <a href="https://www.rptools.org//Outils-DV/thunderbird-chichi-en.html">Chichi sayfasının</a> İndirme ve Yükleme bölümünü ve Başlangıç ​​Klasörünü Ayarla bölümünü okuyun;</p>
+<p><a name="stwi"></p>
+<h3>ile Gelen kutusuyla başla</h3>
+<p>Ekim 2022 itibarıyla Thunderbird 102 için bu eklentinin en son sürümü 2.5.2 idi.</p>
+<p>Özellikler :</p>
+<ul>
+<li>Tesis :Thunderbird'ün "Eklentiler" sekmesinde adını arayarak;</li>
+<li>Başlangıç ​​klasörü: her zaman aynı, modül ayarlarında seçilen hesabın gelen posta klasörü veya birleştirilmiş klasör;</li>
+<li>Otomatik odaklama: modül seçeneklerindeki ayara bağlı olarak, mesaj listesindeki son mesaja veya ağaç yapısındaki "Gelen posta" klasörüne. Bu ikinci seçenek varsayılan olarak seçilidir;</li>
+<li>Ayarlamalar: daha az kolay erişim. Eklentiler sekmesine gitmeli, yüklü eklentiler listesinde "Gelen kutusuyla başlat"ı seçin ve ardından yeni bir "Ayarlar Gelen kutusuyla başla" sekmesini açan "Eklentiler seçenekleri" düğmesine basarak enter tuşuna basmalısınız.
+<br>Bir açılır liste, Thunderbird başladığında gelen posta klasörünün seçileceği e-posta hesabını seçmenizi sağlar,
+<br>Üç radyo düğmesi, mesaj listesindeki son mesaj veya ilk okunmamış mesaj veya ağaç yapısındaki klasör arasındaki odağı seçmenize olanak tanır;</li>
+</ul>
+<p><a name="stwInstall"></p>
+<p>Tesis :</p>
+<ul>
+<li>Thunderbird'de "Araçlar" menüsünü açın ve ardından şunları doğrulayın: Eklentiler ve temalar;</li>
+<li>Modül Yöneticisi sayfasında kendinizi arama alanına yerleştirin. Navigasyon modunda, hızlı bir şekilde ulaşmak için e harfine basabilirsiniz;</li>
+<li>yaz: Inbox ile başlayın ve Enter'a basın;</li>
+<li>Thunderbird+4'ünüz varsa, sonuçlar sekmesinde aradığınız modülü seçmesi için biraz bekleyin;</li>
+<li>Aksi takdirde, örneğin "Inbox ile başla::Ara::Thunderbird için Modüller" sekmesini manuel olarak seçin. daha sonra aradığınız modülün adının bulunduğu 3. seviye başlığa ulaşana kadar 3 veya tırnak tuşuna basın;</li>
+<li>Aşağı ok ile "Thunderbird'e Ekle" bağlantısına ilerleyin ve ardından Enter tuşuna basın;</li>
+<li>Prosedürü takip edin ve ardından Thunderbird'ü yeniden başlatın;</li>
+<li>Her şey yolunda giderse, Thunderbird ana sekmeyi açar ve mesaj listesine odaklanır;</li>
+</ul>
+<p>Gelen Kutusuyla Başlat seçeneklerini ayarlayın:</p>
+<ul>
+<li>"Ek Modül Yöneticisi" sekmesine dönün;</li>
+<li>Gerekirse, navigasyon moduna geçmek için arama alanından çıkın;</li>
+<li>"Yüklü modüller listesinde Inbox ile başla;</li>
+<li>Ardından düğmeyi doğrulayın: Modül seçenekleri. Bu, şu başlıklı yeni bir sekme açar: Gelen Kutusuyla Başla, Ayarlar;</li>
+<li>İşte varsayılan olarak görüntülenenler:</li>
+</ul>
+<!-- Çevirmenler: İngilizce için, diğer çevirmenlere ne yapmaları gerektiğini göstermek için "Fransızca tercüme" bölümünü yorumlayın -->
+<p>İngilizce :</p>
+<p>Inbox ile Başlayın - Ayarlar</p>
+<p>Lütfen Thunderbird başladıktan sonra gelen kutusunun görüntüleneceği hesabı seçin.</p>
+<p>açılır liste :\&lt;ilk e-posta hesabınız&gt;</p>
+<p>Seçin ve şuna odaklanın:</p>
+<p>işaretlenmemiş tıklanabilir radyo düğmesi: en son* mesaj.</p>
+<p>Klasör ağacındaki gelen kutusu klasörü tıklanabilir radyo düğmesi işaretsiz.
+boş
+işaretli radyo düğmesi: ilk okunmamış mesaj.</p>
+<ul>
+<li>"Son" tanımı: Gelen kutusuna atılan son mesaj (tarihten bağımsız)
+mesajın).</li>
+</ul>
+<p>Gelen kutusu mesaj içermiyorsa, klasör ağacındaki gelen kutusu klasörü seçilecek ve
+odaklanmış.</p>
+<p>Fransızca Tercüme:</p>
+<p>Gelen Kutusu - Ayarlar ile başlayın;</p>
+<p>Thunderbird başladığında Gelen Posta klasörü görüntülenecek olan hesabı seçin;</p>
+<p>açılır liste: \&lt;ilk e-posta hesabınız&gt;</p>
+<p>Seç ve odaklan:</p>
+<p>işaretlenmemiş tıklanabilir radyo düğmesi: Listedeki son mesaj;</p>
+<p>radyo düğmesi işaretlenmemiş tıklanabilir Klasör ağacındaki Gelen Posta klasörü;</p>
+<p>işaretli radyo düğmesi: Listedeki ilk okunmamış mesaj;</p>
+<p>Gelen Posta klasörü mesaj içermiyorsa, bu klasör klasör ağacında odak alır;</p>
+<p>Ayarlarınızı yaptıktan sonra Thunderbird'ü yeniden başlatın.</p>
+<p>AltGr+<a href="keyequiv_tr.html#aboveTab">Alıntılar</a> özellikli yerleşik Thunderbird başlatıcısı:</p>
+<p>Kolaylık ve hız için AltGr+<a href="keyequiv_tr.html#aboveTab">Quotes</a> tuşlarına basarak Thunderbird'ü başlatabilirsiniz.</p>
+<p>Bu kısayol tuşu, NVDA'nın AltGr ile sınırlı olan Windows kısayol tuşlarına göre daha fazla değiştirici tuş seçme özgürlüğü sunan Komut Hareketi Yöneticisi aracılığıyla yapılandırılabilir;</p>
+<p>Başka bir kontrol hareketi eklemek için şu adımları izleyin:</p>
+<ul>
+<li>Önce Thunderbird penceresini ön plana yerleştirin;</li>
+<li>NVDA menüsünü açın ve "Tercihler"i seçin;</li>
+<li>Alt menüde Enter tuşuna basın: Kontrol hareketleri";</li>
+<li>İletişim kutusunda, şunu duyana kadar t harfine basın: "Thunderbird, Başlatıcı";</li>
+<li>Bu dalı genişletmek için sağ oka basın;</li>
+<li>Şu öğeye ilerleyin: "Thunderbird'ü Başlat", ardından bu seviyeyi genişletmek için sağ oka basın;</li>
+<li>Sekerek "Ekle" düğmesine gidin, onaylayın ve ardından yeni iletişim kutusunda bir kontrol hareketine basın;</li>
+<li>Seçiminizi doğrulamak için Enter tuşuna basın;</li>
+<li>Komutlar listesine geri dönün, yeni komut hareketinizin varlığını kontrol edin;</li>
+<li>Diyaloğu Tamam düğmesiyle kapatın.</li>
+</ul>
+<p>Notlar :</p>
+<ul>
+<li>Thunderbird başlatıcısı, yalnızca Thunderbird.exe yolları tahmin edilebilir olan yüklü Thunderbird sürümü için tasarlanmıştır.</li>
+<li>64 bit Windows yapılandırmasında, sisteminizde hem 64 bit hem de 32 bit sürümler yüklüyse, eklenti Thunderbird'ün 32 bit sürümünü başlatmaz;</li>
+</ul>
+</body>
+</html>

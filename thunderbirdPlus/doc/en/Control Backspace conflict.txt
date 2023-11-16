@@ -1,0 +1,20 @@
+In Thunderbird+, the shortcut control+backspace is assigned to close tabs and certain windows.
+This causes a hotkey conflict when composing a message.
+
+To restore the deletion of the word preceding the cursor in a message being written, this assignment must be deleted.
+
+To do this, follow these steps:
+* Place yourself in the main window of Thunderbird;
+* Press NVDA+n to open NVDA menu;
+* Press the letter: p, to place in the Preferences submenu;
+* Then press the letter: N, to open the  Input gestures dialog;
+* In the tree structure, select the branch: Thunderbird+ and open it with the right arrow;
+* Press the letter: S, to select the branch: Send Control+F4 to the current window, and open it;
+* Select lower branch: control+backspace;
+* and finally, press Tab until you hear "Delete, button" then press Enter;
+* It is important to close this dialog with the OK button to save your changes.
+
+Noticed :
+After these first manipulations, it may happen that it does not work as expected.
+For some unknown reason, NVDA inserts the Control+Backspace gesture again.
+In this case, repeat the procedure described above, this will solve this problem.

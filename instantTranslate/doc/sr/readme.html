@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sr" lang="sr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>instantTranslate</h1>
+<ul>
+<li>Autori: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  i drugi NVDA saradnici.</li>
+<li>Preuzmi<a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">stabilnu verziju</a></li>
+<li>Preuzmi<a href="https://addons.nvda-project.org/files/get.php?file=it-dev">razvojnu verziju</a></li>
+</ul>
+<p>This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.</p>
+<h2>Podešavanje jezika</h2>
+<p>Da podesite izvorni, jezik za prevođenje i za zamenu, uđite u: NVDA meni&gt;&gt; podešavanja&gt;&gt; Instant Translate podešavanja.</p>
+<p>Tu ćete pronaći dva izborna okvira sa nazivima"Izvorni jezik" i"Jezik za
+prevođenje", kao i izborno polje koje odlučuje da li prevod treba kopirati u
+privremenu memoriju.</p>
+<p>Takođe, ako ste izabrali automatsku opciju(prvi izbor) iz"izvorni jezik"
+izbornog polja, takođe ćete pronaći izborni okvir "jezik za zamenu" i
+izborno polje o automatskoj zameni.</p>
+<p>Značenja prva dva okvira i izbornog polja za kopiranje su jasna, ali
+objašnjenje za ostatak je potrebno. Zapamtite da ovo objašnjenje zahteva da
+je izvorni jezik podešen na automatski.</p>
+<p>"Jezik za zamenu" je koristan kada menjate uz pomoć skripte(pogledajte
+ispod) izvorni i jezik za prevođenje; Zapravo, Jezik za prevođenje podešen
+na automatski nema smisla, tako da ga dodatak podešava na opciju koja je
+podešena u ovom izbornom okviru.</p>
+<p>Tako da, zamislite ovu situaciju: Obično prevodite na Engleski(vaš jezik),
+ali ponekad(na primer, kada pišete dokument) morate prevoditi na
+Italijanski(vaš drugi jezik, ); Možete podesiti"jezik za zamenu" na
+Italijanski, kako biste mogli da prevodite sa Engleskog na Italijanski bez
+pristupa dijalogu za podešavanje dodatka. Naravno ova funkcija može biti
+više ili manje bitna u zavisnosti od vašeg korišćenja.</p>
+<p>Sada, izborno polje za automatsku zamenu: Pojavljuje se ako i samo ako
+podesite opciju"izvorni jezik" na automatski, i povezana je sa opcijom"Jezik
+za zamenu". Ako je aktivirate, dodatak automatski pokušava da jezik koji
+otkrije učini jezikom na koji prevodite, i jezik koji je izabran u
+opciji"jezik za zamenu" je novi jezik za prevođenje; Veoma korisno ako je
+jezik teksta koji prevodite jezik za prevođenje.</p>
+<p>Jednostavan primer: Ponovo zamislite prethodnu situaciju; Ako prevodite
+tekst na jezik koji nije Engleski, nema problema, dobijate tačan prevod na
+Engleskom. Ali ako morate da prevodite tekst sa Engleskog, obično dobijate
+prevod koji je isti kao i originalan tekst, i ovo je
+beskorisno. Zahvaljujući opciji automatske zamene, međutim, ukoliko želite
+da znate kako vaš tekst zvuči na Italijanskom, dodatak automatski prebacuje
+jezik za prevođenje na Italijanski, pa daje ispravan prevod.</p>
+<p>Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).</p>
+<p>At least, in the speech settings parameters dialog (NVDA Menu &gt;&gt; Preferences &gt;&gt; Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.</p>
+<h2>Korišćenje</h2>
+<p>You can use this add-on in three ways:</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.</li>
+<li>Takođe možete prevesti tekst iz privremene memorije.</li>
+<li>Press the dedicated shortcut key to translate the last spoken text.</li>
+</ol>
+<h2>Prečice</h2>
+<p>Sve komande u nastavku se moraju pritisnuti nakon modifikatorskog
+tastera"NVDA+Šift+t":</p>
+<ul>
+<li>T: Prevedi izabran tekst,</li>
+<li>Šift+T: Prevedi tekst privremene memorije,</li>
+<li>S: Zameni izvorni jezik i jezik za prevođenje,</li>
+<li>A: Izgovori trenutna podešavanja,</li>
+<li>C: Kopiraj poslednji rezultat u privremenu memoriju</li>
+<li>I: Prepoznaj jezik izabranog teksta</li>
+<li>L: translate the last spoken text,</li>
+<li>O: open translation settings dialog</li>
+<li>H: announces all available layered commands.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>Changes for 4.4.2</h2>
+<ul>
+<li>Restore language detection and auto-swapping (Thanks to Cyrille for fix)</li>
+<li>updated languages for translation (thanks to Cyrille)</li>
+</ul>
+<h2>Changes for 4.4</h2>
+<ul>
+<li>Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)</li>
+</ul>
+<h2>Changes for 4.3</h2>
+<ul>
+<li>nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.</li>
+<li>found a way to use google as a translation service again.</li>
+</ul>
+<h2>Changes for 4.2</h2>
+<ul>
+<li>Restored working state with newer versions of nvda.</li>
+<li>Restored automatic language detection.</li>
+</ul>
+<h2>Promene u 4.1</h2>
+<ul>
+<li>Instant translate radi ponovo, sada koristi Yandex translate umesto Google
+  prevodioca kao servis</li>
+</ul>
+<h2>Promene u 4.0</h2>
+<ul>
+<li>Prevod se automatski izvršava nakon promene</li>
+<li>Popravljena greška sa kešom</li>
+</ul>
+<h2>Promene u 3.0</h2>
+<ul>
+<li>Promenjen način na koji se prečice koriste, sada možete pritisnuti instant
+  translate modifikatorski taster"NVDA+Šift+t", a zatim slova za određene
+  radnje(pogledajte sve komandeu delu"prečice").</li>
+<li>Dodata zamena jezika</li>
+<li>Promenjen format podešavanja, sada se mogu menjati u sistemu samo za
+  čitanje, ali ovo će raditi pre prvog ponovnog pokretanja programa NVDA</li>
+<li>Uklonjen limit teksta koji može da se prevede</li>
+<li>Dodata prečica t za stavku instant translate podešavanja</li>
+<li>Automatska opcija je sada prva opcija, i nije dostupna u jeziku za
+  prevođenje</li>
+<li>Dodato izborno polje za podešavanje kopiranja prevoda</li>
+<li>Čuvanje datoteke sa podešavanjima u config folderu</li>
+<li>Izvorni i jezik za prevođenje nude isto što i Google prevodioc(22 Apr
+  2015).</li>
+</ul>
+<h2>Promene u 2.1</h2>
+<ul>
+<li>Sada dodatak može da prevodi tekst privremene memorije kada pritisnete
+  nvda+šift+y.</li>
+</ul>
+<h2>Promene u 2.0</h2>
+<ul>
+<li>Dodat interfejs podešavanja gde možete menjati izvorni i jezik za
+  prevođenje.</li>
+<li>Dodata stavka menija za podešavanja dodatka</li>
+<li>Podešavanja su sada u posebnoj datoteci</li>
+<li>Rezultati prevoda se sada kopiraju automatski</li>
+</ul>
+<h2>Promene u 1.0</h2>
+<ul>
+<li>Prva verzija</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Weather_Plus</title>
+</head>
+<body>
+<h1>Weather Plus</h1>
+<ul>
+<li>Autor: Adriano Barbieri</li>
+<li>NVDA compatibility: 2017.3 to beyond</li>
+<li>Pobierz: <a href="https://addons.nvda-project.org/files/get.php?file=wetp">Wersja stabilna</a></li>
+</ul>
+<h1>O Weather Plus:</h1>
+<ul>
+<li>Ten dodatek dodaje lokalną temperaturę i prognozę pogody do 24 godzin i do
+  dodatkowych 2 dni and hourlyforecast dla NVDA</li>
+<li>prawa autorskie (C) <a href="mailto:adrianobarb@yahoo.it">Adriano Barbieri</a></li>
+<li>Wydano pod licencją GNU GPL (General Public License v2)</li>
+</ul>
+<h1>Weather Plus działa przy użyciu i obecności następujących serwisów:</h1>
+<ul>
+<li><a href="https://www.weatherapi.com/">https://www.weatherapi.com/</a></li>
+<li><a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+<li><a href="http://veloroutes.org/elevation/">http://veloroutes.org/elevation/</a></li>
+<li><a href="https://www.nvda.it/">https://www.nvda.it/</a></li>
+</ul>
+<h1>Użycie:</h1>
+<ul>
+<li>naciśnij NVDA + w dla aktualnej temperatury i warunków pogodowych.</li>
+<li>Naciśnij NVDA + shift + W dla 24-godzinnej pogody i prognozy do 2 dni.</li>
+<li>Press NVDA+shift+W twice to get hourlyforecast of temperature and atmospheric conditions.</li>
+<li>naciśnij NVDA + shift + ctrl + w, aby ustawić tymczasowe miasto.</li>
+<li>naciśnij NVDA + shift + control + alt + w, aby otworzyć ustawienia Weather
+  plus.</li>
+<li>naciśnij NVDA + alt + w, aby się dowiedzieć, kiedy ostatnio był
+  zaktualizowany biuletyn pogodowy.</li>
+<li>Naciśnij control + shift + w aby przełączać się między skałami mierzenia
+  temperatury.</li>
+</ul>
+<h1>Aby ustawić weather plus:</h1>
+<p>Proszę przeczytać rożdział: Weather Plus pierwsze ustawienia.</p>
+<hr />
+<h1>Weather plus pierwsze ustawienia</h1>
+<p>Powinno się ustawić dodatek przed jego pierwszym użyciem!</p>
+<p>idź do:</p>
+<p>meni rozwijane ustawienia</p>
+<p>Ustawienia weather plus rozwijane</p>
+<p>Pokazuje elementy konfiguracji.</p>
+<h1>Naciśnij element dla:</h1>
+<ul>
+<li>Ustaw i zarządzaj swoimi miastami...<ul>
+<li>Wyświetla i umożliwia ustawianie aktualnego miasta z listy.</li>
+</ul>
+</li>
+<li>Dokumentacja<ul>
+<li>Otwiera meni pomocy dla aktualnego języka.</li>
+</ul>
+</li>
+<li>sprawdź aktualizację...<ul>
+<li>Oznajmia o dostępności nowje wersji.</li>
+</ul>
+</li>
+</ul>
+<p>Naciśnij element:</p>
+<h1>Ustaw i zarządzaj swoimi miastami...</h1>
+<p>Wyświetla listę miasta, a także umożliwia ustawianie go z niej.</p>
+<p>Następujący komunikat pokazywany jest tylko przy pierwszym uruchomieniu!</p>
+<p>Predefiniowane ustawienia</p>
+<p>Nic</p>
+<p>F1: pomóż mi znaleźć miasto, F2: gdzie się znajduję, F3: lista i pole
+edycji, F4: czas trwania pogody, F5: kontrola głośności.</p>
+<p>Wpisz nazwę miasta lub wybierz jeden z listy, jeżeli jest dostępny.</p>
+<p>Uwaga: kombinacja klawiszy f5 jest dostępna, gdy efekty dźwiękowe są
+aktywne.</p>
+<p>Po naciśnięciu przycisku ustaw i zarządzaj swoimi miastami następujące
+przyciski są dostępne:</p>
+<h1>Testuj</h1>
+<p>Test the validity of the city and find the data of it.</p>
+<h1>Dodaj</h1>
+<p>Dodaje aktualne miasto do listy.</p>
+<p>Ten przycisk jest dostępny gdy miasto przeszedło test, lub jest ono
+dostępne.</p>
+<h1>Szczegółu</h1>
+<p>Pokazuje informację o aktualnym mieście.</p>
+<p>Ten przycisk jest dostępny gdy miasto przeszedło test, lub jest ono
+dostępne.</p>
+<h1>Zdefiniuj</h1>
+<p>Umożliwia zdefiniowanie obszaru, aby dostosować dźwięki pogodowe do
+rzeczywistości.</p>
+<p>Ten przycisk jest dostępny, gdy dźwiękowe efekty są zainstalowane i
+aktywowane, przy czym miasto musi być wybrane.</p>
+<h1>Ustaw miasto jako domyślne</h1>
+<p>Ustawia miasto jako domyślne, ędzie używane przy każdym ponownym
+uruchomieniu.</p>
+<p>Ten przycisk jest aktywny, gdy zaznaczone jest miasto i nie jest ono
+domyślne, lub ono przeszło test.</p>
+<h1>Usuń</h1>
+<p>Usuwa aktualne miasto z listy.</p>
+<p>Ten przycisk jest aktywowany jeśli jest zaznaczone miasto, które uprzednio
+istniało na liście.</p>
+<h1>Zmień nazwę</h1>
+<p>Zmienia nazwę aktualnego miasta..</p>
+<p>Ten przycisk jest aktywowany jeśli jest zaznaczone miasto, które uprzednio
+istniało na liście.</p>
+<h1>Zaimportuj nowe miasta...</h1>
+<p>Pozwala dołączać do listy nowe miasta zaimportowane z innej listy o
+rozszerzeniu *.zipcodes; Miasto do zaimportowania można wybrać zaznaczając
+odpowiadające mu pole wyboru.</p>
+<h1>Eksportuj miasta</h1>
+<p>Zapisuje listę miast w określonej lokalizacji.</p>
+<p>Przycisk ten jest aktywny, jeśli na liście znajduje się przynajmniej jedno
+miasto.</p>
+<h1>hourly forecast setting...</h1>
+<p>This button allows you to choose the contents of the hourly forecast report.</p>
+<h1>Skala pomiaru temperatury:</h1>
+<p>Użyj przycisku opcji aby wybrać:</p>
+<ul>
+<li>Celsjusz (domyślnie)</li>
+<li>Farenhajt</li>
+<li>Kelwin</li>
+</ul>
+<h1>Pokazuj stopnie jako:</h1>
+<p>Użyj przycisku opcji aby wybrać:</p>
+<ul>
+<li>Celsjusz <code>-</code> Farenhajt <code>-</code> Kelwin (domyślnie)</li>
+<li>C <code>-</code> F <code>-</code> K</li>
+<li>Nieokreślone</li>
+</ul>
+<p>Lista rozwijana:</p>
+<h1>Prognoza pogody do 3 dni</h1>
+<p>Wybierz od 1 do 3 (domyślnie na 1 dni)</p>
+<p>Przełącz pole wyboru aby:</p>
+<h1>Combo box API response language</h1>
+<p>English, en; you can choose the language of the weather conditions text.</p>
+<h1>Skopiuj prognozę i biuletyn pogodowy do schowka wraz ze szczegółami miasta.</h1>
+<p>Domyślnie odznaczone.</p>
+<h1>Włącz efekty dźwiękowe (tylko dla aktualnych warunków pogodowych)</h1>
+<p>To pole wyboru pozwala też zarządzać instalowaniem efektów dźwiękowych;</p>
+<p>Gdy efekty dźwiękowe są zainstalowane a pole wyboru zaznaczone, uaktywniają
+się ustawienia głośności i klawisz F5.</p>
+<p>Pojawia się także dodatkowe pole wyboru:</p>
+<ul>
+<li>Używaj tylko efektów pogodowych.</li>
+</ul>
+<p>Można zmienić głośność ogólną, lub głośność ostatnio usłyszanego dźwięku, a
+także odfiltrować inne dźwięki z otoczenia.</p>
+<p>Domyślnie odznaczone.</p>
+<h1>Używaj tylko efektów pogodowych.</h1>
+<p>Dostępne gdy efekty dźwiękowe są włączone;</p>
+<p>Po zaznaczeniu umożliwia słuchanie wyłącznie efektów pogodowych, takich jak
+deszcz, wiatr, grzmoty itd. Inne dźwięki otoczenia zostają odfiltrowane.</p>
+<p>Domyślnie odznaczone.</p>
+<h1>Włącz odczytywanie godzin w formacie 24-godzinnym.</h1>
+<p>Gdy odznaczone, czas odczytywany jest w formacie 12-godzinnym, np. 12 AM <code>-</code>
+12 PM.</p>
+<p>Domyślnie zaznaczone.</p>
+<h1>Włącz przyciski pomocy w oknie ustawień.</h1>
+<p>Domyślnie zaznaczone.</p>
+<h1>Odczytuj informacje o wietrze.</h1>
+<p>Domyślnie odznaczone.</p>
+<p>Gdy włączone, można uaktywnić również:</p>
+<ul>
+<li>Dodaj kierunek wiatru;</li>
+</ul>
+<p>Określa skąd wieje wiatr.</p>
+<p>Domyślnie zaznaczone.</p>
+<ul>
+<li>Dodaj prędkość wiatru;</li>
+</ul>
+<p>Podaje prędkość wiatru w kilometrach, lub milach na godzinę.</p>
+<p>Domyślnie zaznaczone.</p>
+<ul>
+<li>Dodaj prędkość wiatru w metrach na sekundę;</li>
+</ul>
+<p>Domyślnie zaznaczone.</p>
+<pre><code>* Add wind gust speed of the wind; checkbox checked (by default)
+</code></pre>
+<ul>
+<li>Dodaj temperaturę odczuwalną;</li>
+</ul>
+<p>Domyślnie zaznaczone.</p>
+<h1>Odczytuj informacje atmosferyczne.</h1>
+<p>Domyślnie odznaczone.</p>
+<p>Gdy włączone, można uaktywnić również:</p>
+<ul>
+<li>Dodaj wskaźnik wilgotności powietrza;</li>
+</ul>
+<p>Podaje wilgotność powietrza w procentach.</p>
+<p>Domyślnie zaznaczone.</p>
+<ul>
+<li>Dodaj stopień widzialności;</li>
+</ul>
+<p>Podaje widoczną odległość w kilometrach, lub milach.</p>
+<p>Domyślnie zaznaczone.</p>
+<ul>
+<li>Dodaj wartość ciśnienia atmosferycznego;</li>
+</ul>
+<p>Podaje ciśnienie atmosferyczne w milibarach, lub calach słupa rtęci.</p>
+<p>Gdy jest włączone, można zaznaczyć dodatkowe pole wyboru, które umożliwia
+podawanie ciśnienia w milimetrach słupa rtęci.</p>
+<p>Domyślnie zaznaczone.</p>
+<ul>
+<li>Add cloudines value; check box checked (by default)</li>
+<li>Add precipitation value; check box checked (by default)</li>
+<li>Add ultraviolet radiation value; check box checked (by default)</li>
+</ul>
+<h1>Odczytuj informacje astronomiczne.</h1>
+<p>indicates the time of sunrise and sunset and the time of moonrise and moonset.</p>
+<p>Domyślnie odznaczone.</p>
+<h1>Użyj przecinka do oddzielania wartości dziesiętnych.</h1>
+<p>Gdy jest zaznaczone, wartości dziesiętne oddzielane są przecinkiem, w
+przeciwnym razie kropką.</p>
+<p>Domyślnie odznaczone</p>
+<h1>Wyświetla dane wyjściowe w oknie</h1>
+<p>Gdy jest zaznaczone, wyświetla prognozę w oknie.</p>
+<p>Domyślnie odznaczone</p>
+<h1>Sprawdź aktualizacje</h1>
+<p>Po uaktywnieniu tej opcji dodatek powiadamia o dostępnych aktualizacjach</p>
+<p>Domyślnie zaznaczone.</p>
+<h1>Naciśnij przycisk OK aby potwierdzić akcję, lub przycisk Anuluj aby ją anulować.</h1>
+<p>Jeśli po zmodyfikowaniu listy miast naciśniesz "Anuluj", dodatek przypomni
+Ci o zmianach na liście i umożliwi jej zapisanie.</p>
+<h1>Uwaga: Twoje ustawienia zostaną zapisane w pliku o nazwie:</h1>
+<ul>
+<li>"Weather.ini": ustawienia uruchamiania Weather Plus.</li>
+<li>"Weather.volumes": Dostosuj poziom głośności dźwięku niezależnie od
+  głośności ogólnej.</li>
+<li>"Weather.zipcodes": Lista miast wraz z kodami pocztowymi i definicjami.</li>
+<li>"Weather.default": Your default city.</li>
+<li>"Weather_searchkey": Słowo kluczowe zapisane.</li>
+</ul>
+<hr />
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

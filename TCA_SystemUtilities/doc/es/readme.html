@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>TCA SystemUtilities 06b5</title>
+</head>
+<body>
+<h2>TCA SystemUtilities.</h2>
+<p>Pequeño complemento que nos permite ejecutar rápidamente algunas acciones de Windows mediante atajo de teclado. 
+Es capaz de realizar una reparación del sistema con SFC. Puede copiar al portapapeles información del sistema, entrar a la BIOS y mucho más. 
+También podremos abrir el sitio oficial para conseguir complementos para NVDA de una forma directa, eliminar configuraciones y complementos en pantallas seguras.</p>
+<ul>
+<li>Autor: Peter Reina <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#101;&#116;&#101;&#114;&#114;&#99;&#56;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#101;&#116;&#101;&#114;&#114;&#99;&#56;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Compatibilidad: NVDA 2018 a 2022.3</li>
+</ul>
+<h2>Funciones del sistema:</h2>
+<ul>
+<li>
+<p>Apagado del sistema: Apaga Windows 
+ además, emite el clásico sonido de cierre de Windows. Nos avisa que el sistema se va a apagar mediante un mensaje.
+ Nos ofrece la posibilidad de cerrar o anular el apagado durante 3 segundos.</p>
+</li>
+<li>
+<p>Reinicio del sistema: Reinicia Windows 
+ además, emite el clásico sonido de cierre de Windows. Nos avisa que el sistema se va a reiniciar mediante un mensaje.
+ Nos ofrece la posibilidad de cerrar o anular el reinicio durante 3 segundos.</p>
+</li>
+<li>
+<p>Anular (apagado o reinicio): Nos permite anular cualquiera de las 2 opciones anteriores (apagado o reinicio) 
+Además, nos avisa con un mensaje que se está anulando el apagado/reinicio.
+ ! ¡Nota! solo contamos con 3 segundos para realizar esta acción.</p>
+</li>
+<li>
+<p>Hibernar: Nos permite poner en modo hibernación al sistema, cómodamente desde NVDA.</p>
+</li>
+<li>
+<p>Reiniciar y entrar en Modo seguro con funciones de red: Esta funcionalidad muy complicada a veces de poner, desde TCA SystemUtilities es cosa de niños. 
+Muy fácilmente nos permite ingresar a Windows con funciones limitadas sin cargar servicios o programas innecesarios, desde allí podemos hacer limpiezas más exhaustivas, eliminar programas no deseados, malware y mucho más. 
+! ¡Nota importante! 
+En este modo, en sistemas anteriores a Windows 10, es posible que no esté activado el servicio de audio, por ende, no podemos disponer de la síntesis de voz del lector de pantalla. 
+Una vez activada esta función deberemos luego deshabilitarla, lo podemos hacer desde el mismo menú de TCA SystemUtilities, en el apartado: "Apagado del sistema".</p>
+</li>
+<li>
+<p>Reiniciar en Modo normal: nos permite deshabilitar El modo seguro si lo hemos activado, devuelve el inicio de Windows a sus valores normales (cargan todos los servicios y programas que tengamos en el inicio). </p>
+</li>
+<li>
+<p>Suspender: Permite suspender El sistema, cómodamente desde NVDA. </p>
+</li>
+<li>
+<p>Entrar en la BIOS-UEFI: Podremos cómodamente desde Windows y con NVDA indicarle al PC que ingrese a la BIOS-UEFI en el próximo reinicio. 
+Sin necesidad de pulsar, o saber la tecla, directamente y de forma sencilla. 
+(¡Nota importante!) en la BIOS-UEFI no hay servicio de audio, por ende, no podremos utilizar un lector de pantalla en su interfaz). Una vez deseemos regresara nuestro sistema, podemos pulsar la combinación de teclas: CTRL+ALT+Supr.</p>
+</li>
+<li>
+<p>Abrir CMD en la ruta actual: Con un simple atajo de teclado podremos abrir el símbolo del sistema en Windows (CMD), y tomará la ruta de cualquier carpeta donde se encuentre el foco.</p>
+</li>
+<li>
+<p>Abrir el CMD como administrador: Con un sencillo atajo de teclado abriremos el símbolo del sistema de Windows, con todos los privilegios de administrador (Solo en sistemas anteriores a Windows 10, toma la ruta de la carpeta donde se encuentre el foco, en los demás se abrirá en System32).</p>
+</li>
+<li>
+<p>Borrar el portapapeles y su historial: Cómoda funcionalidad que vacía todo lo que tengamos en el portapapeles, en Windows 10 y 11, también limpia todo lo que tengamos en el historial si lo tenemos activado. </p>
+</li>
+<li>
+<p>Reiniciar Explorador: Nos reinicia cómodamente desde NVDA el Explorador de Windows. 
+Podemos hacerlo mediante algún atajo que le asignemos, o desde el menú de TCA SystemUtilities.</p>
+</li>
+<li>
+<p>Cerrar todas las aplicaciones: Fuerza a cerrarse todos los procesos activos que no sean parte de Windows (¡Nota! todos los procesos serán forzados a cerrarse, así que no se podrán guardar ni documentos, ni proyectos, e incluso el NVDA será cerrado ).</p>
+</li>
+<li>
+<p>Cerrar tareas que no responden: TCA SystemUtilities intentará cerrar los procesos que no responden. </p>
+</li>
+<li>
+<p>Saber arquitectura del sistema: Nos dirá cuál es la arquitectura de Windows (32 o 64 Bits). </p>
+</li>
+<li>
+<p>Ocultar carpetas: Nos permite ponerle el atributo de ocultas a la carpeta donde nos encontremos, es decir no se mostrará dicha carpeta (debemos entrar en la misma para que surta efecto).</p>
+</li>
+<li>
+<p>Mostrar carpetas ocultas: Esta función nos permite hacer visibles todas las carpetas y archivos que estén ocultos (vale en pendrives USB, discos externos y más), muy útil a la hora de enchufar cualquier dispositivo externo. Debemos entrar en la carpeta y pulsar el atajo de teclado.</p>
+</li>
+</ul>
+<h2>Funciones de reparación del sistema.</h2>
+<ul>
+<li>
+<p>Hacer un análisis del sistema con SFC: Nos permite Realizar un análisis / reparación del sistema de archivos de Windows SFC /SCANNOW.</p>
+</li>
+<li>
+<p>Desactivar almacenamiento reservado: Devuelve los casi 10 Gb que Windows secuestra de nuestro disco duro para actualizaciones ( no es necesario tener activado esto para que funcionen las actualizaciones).</p>
+</li>
+<li>
+<p>Activar almacenamiento reservado: Si aún deseas activar esta función de Windows y forzar a tu disco duro a dejar reservados casi 10Gb, con esta acción lo activarás.</p>
+</li>
+<li>
+<p>Limpiar caché DNS: borra de forma rápida y directa toda la caché DNS de Windows (puede mejorar problemas con la navegación por internet). (</p>
+</li>
+<li>
+<p>Limpiar configuración guardada en pantallas seguras: Elimina todos los complementos y configuraciones que hayamos copiado para ejecutarse en las pantallas seguras, dejando a NVDA como viene de forma nativa. </p>
+</li>
+<li>
+<p>Limpiar disco: Nos permite lanzar el limpiador de Discos de Windows, pero con opciones mucho más avanzadas. Nos limpiará todos y cada uno de los discos y dispositivos de almacenamiento que tengamos conectados al sistema. 
+La primera vez que lo ejecutemos, nos sacará una ventana de diálogo, para crear un perfil de limpieza, podremos marcar todas las casillas que deseemos para limpiar de forma más exhaustiva. es conveniente que pulsemos el botón: "Crear perfil" esto solo es necesario hacerlo una vez. Disponemos de una casilla de verificación que podemos marcar si no queremos que salga más este diálogo. </p>
+</li>
+<li>
+<p>Reparar sistema con Dism: Realiza un análisis profundo e intenta reparar problemas en Windows.</p>
+</li>
+</ul>
+<h2>Funciones directas del portapapeles:</h2>
+<ul>
+<li>
+<p>Copiar al portapapeles el listado de carpetas o archivos de la ruta actual: 
+Nos copia directamente al portapapeles la lista de elementos de la ruta donde nos encontremos, así podremos pegarla en cualquier sitio editable.</p>
+</li>
+<li>
+<p>Copiar al portapapeles la información sobre las tarjetas de sonido: Nos permite copiar de forma directa al portapapeles la información sobre todos los dispositivos de sonido que tengamos en el sistema.
+así podremos pegarla en cualquier sitio editable. </p>
+</li>
+<li>
+<p>Copiar información de todo el sistema al portapapeles: Nos permite copiar de forma directa, todo un resumen de nuestro sistema. 
+así podremos pegarla en cualquier sitio editable. </p>
+</li>
+<li>
+<p>Copiar la ruta: Nos copiará al portapapeles la ruta de la carpeta donde estemos. 
+ así podremos pegarla en cualquier sitio editable. </p>
+</li>
+</ul>
+<h2>Opciones de Seguridad de Windows (Windows Defender).</h2>
+<ul>
+<li>
+<p>Analizar arranque del sistema: Realiza de forma directa un análisis de virus y malware de los archivos pertenecientes al sector de arranque de Windows (Boot sector).</p>
+</li>
+<li>
+<p>Análisis completo: Lanza de forma directa, un análisis de virus de todo el sistema. </p>
+</li>
+<li>
+<p>análisis rápido: Lanza de forma directa, un análisis de virus y malware rápido (de las partes esenciales del sistema). </p>
+</li>
+<li>
+<p>Escanear archivos comprimidos: Activa de forma directa, que el antivirus de Windows pueda escanear archivos comprimidos (rar, zip, ace, tar, etc.).</p>
+</li>
+<li>
+<p>No escanear archivos comprimidos: Desactiva de forma directa, que el antivirus de Windows pueda escanear archivos comprimidos (rar, zip, ace, tar, etc.).</p>
+</li>
+<li>Listado de archivos en cuarentena al portapapeles: Copia al portapapeles, un listado y la información de todos los archivos que el antivirus de Windows haya puesto encuarentena </li>
+</ul>
+<h2>Opciones multimedia.</h2>
+<ul>
+<li>
+<p>Activar Webcam: Nos permite cómodamente desde NVDA activar la webcam si la tenemos (dejarla lista para usarse).</p>
+</li>
+<li>
+<p>Desactivar Webcam: Nos permite cómodamente desde NVDA desactivar la webcam si la tenemos (deshabilitarla, ningún programa podrá utilizarla).</p>
+</li>
+<li>
+<p>Mezclador de volumen: Nos permite abrir cómodamente desde NVDA el mezclador de volumen de Windows. 
+Lo podemos hacer desde el menú TCA SystemUtilities, en el apartado: "Voz y multimedia", o le podemos establecer algún atajo de teclado.</p>
+</li>
+<li>
+<p>Abrir opciones de voz: Nos abre rápidamente las Opciones o Propiedades de texto a voz. Aquí podemos elegir nuestra voz TTS instalada en el sistema por defecto. </p>
+</li>
+<li>
+<p>Abrir Opciones de Sonido: Nos permite abrir de forma directa las opciones de Sonido del Panel de Control (Sonido, Reproducción, Grabación, Comunicaciones). </p>
+</li>
+</ul>
+<h2>Abrir rápidamente algunas funciones del sistema:</h2>
+<ul>
+<li>
+<p>Abrir Optimizar las unidades: Nos permite abrir de forma directa ésta interesante funcionalidad de Windows, para mejorar el rendimiento de nuestros discos duros. </p>
+</li>
+<li>
+<p>Abrir mapa de caracteres: Abre de forma directa ésta interesante funcionalidad de Windows. Que nos permite elegir y conocer cualquiera de los signos, números y letras existentes en el sistema. 
+Muy útil para saber signos raros o difíciles de sacar con el teclado.</p>
+</li>
+<li>
+<p>Abrir Asistente guardar contraseñas de usuarios: Abre el asistente de esta muy útil pero poco conocida utilidad de Windows.
+Que nos permite guardar las credenciales (nombres, contraseñas y más), de las cuentas de usuario que tengamos en el sistema. </p>
+</li>
+<li>Abrir Asistente transferir archivos por BlueTooth: Nos permite lanzar directamente este asistente para recibir o enviar archivos mediante nuestros dispositivos BlueTooth. </li>
+<li>Abrir Opciones de carpeta: Abre directamente esta funcionalidad muy utilizada, para gestionar el explorador de Windows, las vistas de las carpetas, la visualización de las extensiones de archivos y más. </li>
+<li>Abrir Carpeta Roaming: Abre de forma directa la carpeta Appdata&gt;Roaming (Aquí encontramos la carpeta de configuración del NVDA, y de muchos otros programas).).</li>
+<li>
+<p>Abrir Administrador de discos: Nos permite abrir directamente ésta interesante funcionalidad para gestionar los discos, particiones y otros dispositivos de almacenamiento, instalados en nuestro PC.</p>
+</li>
+<li>
+<p>Abrir el asistente para guardar la contraseña del sistema: 
+Nos abrirá este útil Asistente poco conocido que nos permite hacer un respaldo de la contraseña de Windows, para poder recuperarla desde un dispositivo externo.</p>
+</li>
+<li>
+<p>abrir Monitor de Recursos: podremos abrir de forma directa esta potente herramienta de Windows, poco conocida. Es como un administrador de tareas mejorado, podemos gestionar todos los servicios, aplicaciones y procesos que estén corriendo en nuestro sistema.
+Aparte podremos saber cuánta memoria, disco, red y más consumen.</p>
+</li>
+<li>
+<p>Abrir el administrador de dispositivos: Nos permite abrir esta útil funcionalidad de Windows para gestionar el hardware y los controladores del equipo.</p>
+</li>
+<li>
+<p>Saber la versión de Windows: Nos abrirá la información con la versión del sistema operativo. </p>
+</li>
+<li>Abrir el sitio oficial de complementos: Se abrirá con nuestro navegador predeterminado, el sitio oficial para poder obtener los complementos para NVDA.</li>
+</ul>
+<h2>¿Nota importante!</h2>
+<p>Todos y cada uno de los atajos de teclado, se pueden asignar gusto personal, desde el diálogo de: Preferencias &gt; Gestos de entrada de NVDA.</p>
+<h2>Cambios en la versión 06:</h2>
+<ul>
+<li>Nueva función interna para tomar la ruta del sistema (path), ahora son 2, en caso que falle una, TCA SystemUtilities intentará usar la otra.
+(Una de las funciones ha sido desarrollada por: Héctor Benítez).</li>
+<li>Nueva función: Cerrar todos los procesos activos.</li>
+<li>Cerrar tareas que no están respondiendo en Windows.</li>
+<li>Corregido, el menú de TCA SystemUtilities ya no se repetirá si se recargan los complementos.
+(Cortesía de Héctor Benítez).</li>
+<li>Corregido: ya no existen atajos de teclados predefinidos.</li>
+</ul>
+<h2>Cambios en la versión 05.</h2>
+<ul>
+<li>Nueva función para limpiar complementos y configuraciones en pantallas seguras.</li>
+<li>Nueva función borrar el portapapeles incluyendo el historial en Windows.</li>
+<li>Nueva función abrir el CMD en la ruta actual.</li>
+<li>Nueva función abrir el CMD con privilegios de administrador.</li>
+<li>Nueva función: Desactivar el almacenamiento reservado en Windows.</li>
+<li>Nueva función: activar el almacenamiento reservado en Windows.</li>
+<li>Corregida y optimizada función para obtener el objeto, con esto mejoran varias funciones como: copiar la ruta al portapapeles, copiar listado de archivos al portapapeles, ocultar o mostrar archivos y carpetas.</li>
+</ul>
+<h2>Cambios en la versión: 04.</h2>
+<ul>
+<li>Nueva función para entrar en la BIOS-UEFI del sistema (en el apartado : "Apagado del sistema").</li>
+<li>Se cambió el menú: "Sonido y voz", a: "Voz y multimedia".</li>
+<li>2 Nuevas funciones en el apartado: "Voz y multimedia" (Activar/desactivar la webcam).</li>
+<li>Nueva función: "Limpiar caché DNS" (en el apartado Reparación y optimización").</li>
+<li>Restructuración de la documentación del complemento.</li>
+<li>Traducido al italiano.</li>
+<li>
+<p>Compatible con NVDA 2022.</p>
+</li>
+<li>
+<p>Corrección de seguridad (sys.path.remove())</p>
+</li>
+</ul>
+<h2>Cambios en la versión 03:</h2>
+<ul>
+<li>En esta versión TCA SystemUtilities es ya totalmente compatible con el nuevo sistema: Windows 11.</li>
+<li>Nuevo Menú: Seguridad de Windows 
+con varias opciones referentes al antivirus de Windows.</li>
+<li>Otra opción en el menú: Apagado del sistema, la opción: "suspender el sistema".</li>
+<li>En esta versión el complemento está traducido a los idiomas: árabe, portugués (Portugal, portugués Brasil), y rumano.</li>
+</ul>
+<h2>Cambios en la versión: 02.</h2>
+<ul>
+<li>En esta versión el complemento cuenta con un cómodo Menú desde donde podemos ejecutar la mayoría de sus funcionalidades (no todas). 
+El mismo se encuentra en el Menú: "Herramientas" de NVDA, y tiene el nombre del complemento: "TCA SystemUtilities".</li>
+<li>Se retiraron en esta versión todos los atajos prestablecidos, con lo que ahora deberéis asignar los atajos a cualquiera de las funciones, desde el menú: "Gestos de entrada" de NVDA.</li>
+<li>Mas funciones en los apartados: Apagado del sistema, Explorador de Windows, Sonido y voz, Reparación del sistema.</li>
+<li>Optimización de todo el código del complemento.</li>
+</ul>
+<hr />
+<p>Código del proyecto en GitHub: 
+<a href="https://github.com/peterrc87/TCA-SystemUtilities-NVDA-Complemento">https://github.com/peterrc87/TCA-SystemUtilities-NVDA-Complemento</a></p>
+</body>
+</html>

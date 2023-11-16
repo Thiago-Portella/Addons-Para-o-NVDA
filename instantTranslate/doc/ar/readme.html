@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>instantTranslate</h1>
+<h1>instantTranslate</h1>
+<ul>
+<li>مطورو الإضافة: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto
+  Buffolino وآخرون.</li>
+<li>تحميل <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">الإصدار النهائي</a></li>
+<li>تحميل <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">الإصدار التجريبي</a></li>
+</ul>
+<p>This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.</p>
+<h2>إعداد اللغات</h2>
+<p>لإعداد لغة المصدر, ولغة الهدف, أو في حالة التبديل بين لغة المصدر ولغة الهدف, اذهب إلى: قائمة NVDA الرئيسية&gt;&gt; التفضيلات&gt;&gt; إعدادات instant translate.</p>
+<p>يوجد بالإضافة اثنان من صناديق الخيارات الأول يسمى "لغة المصدر" والثاني يسمى
+"لغة الهدف", ومربع تحديد لتقرير ما إذا كان يجب على الإضافة نسخ الترجمة
+للحافظة.</p>
+<p>فضلا عن ذلك, إذا قمت باختيار الخيار التلقائي (أول اختيار) من صندوق الخيارات
+الأول المسمى ب"لغة المصدر", فإنه يوجد أيضا صندوق خيارات آخر يسمى "لغة
+التبديل" ومربع تحديد عن التبديل التلقائي بين اللغات.</p>
+<p>إن معنى كل من صندوق الخيارات الأول والثاني ومربع التحديد الخاص بنسخ الترجمة
+للحافظة واضح, لكن من الضروري شرح باقي صناديق الخيارات ومربعات التحديد
+الأخرى. تذكر دائما أن الشرح المكتوب أدناه يعتبر بأن لغة المصدر قد تم ضبطها
+لتكون هي الخيار التلقائي.</p>
+<p>يعتبر صندوق الخيارات "لغة التبديل" مفيد عندما تبدل بين لغتي المصدر والهدف
+عبر مفتاح اختصار (انظر أدناه)، في الحقيقة, إن ضبط لغة الهدف لتكون الخيار
+التلقائي ليس له معنى, لذا فإن الإضافة تقوم بضبط قيمتها لتكون نفس قيمة اللغة
+الموجودة بصندوق الخيارات الأول وهو لغة المصدر.</p>
+<p>هب أنك تترجم عادة إلى اللغة الإنجليزية (لغتك الرئيسية),لكنك في بعض الأحيان
+(على سبيل المثال, عند كتابة مستند) تحتاج للترجمة إلى الإيطالية (لغتك
+الثانية), فرضا)، فإنه يمكنك ضبط صندوق الخيارات "لغة التبديل" للإيطالية, لذا
+فإنك ستترجم من الإنجليزية للإيطالية دون الحاجة إلى الذهاب لإعدادات
+الإضافة. من الواضح إن هذه الخاصية "لغة التبديل" تقل أهميتها أو تعظم وفقا
+لحاجاتك الدائمة.</p>
+<p>الآن, أصبح مربع تحديد لغة التبديل يظهر إذا وفقط إذا قمت باختيار الخيار
+التلقائي من صندوق الخيارات "لغة المصدر", وأصبح يتصل مباشرة بصندوق الخيارات
+"لغة التبديل". إذا قمت بتحديد المربع, فستقوم الإضافة تلقائيا بالتبديل من
+إعدادات لغة المصدر ولغة الهدف لإعداد آخر تكون فيه لغة الهدف هي لغة المصدر
+واللغة المختارة في صندوق خيارات "لغة التبديل" هي لغة الهدف الجديدة، يفيد جدا
+عندما تكون لغة المصدر للنص الذي تريد ترجمته هي لغة الهدف.</p>
+<p>مثال بسيط: بالنظر للمثال المشروحسابقا, إذا كنت تترجم نص بلغة أخرى غير
+الإنجليزية, فليست هناك مشكلة, حيث ستحصل على الترجمة الصحيحة بالإنجليزية. لكن
+إذا أردت ترجمة نص من اللغة الإنجليزية, فإنه من الطبيعي أن تحصل على ترجمة
+للإنجليزية مطابقة للنص الأصلي, وهذا ليس له جدوى. فشكرا لوظيفة لغة التبديل,
+ومع ذلك, هب أنك تريد أن تعرف كيف كيف يبدو النص بالإيطالية, ففي هذه الحالة
+ستقوم الإضافة آليا بتبديل لغة الهدف للإيطالية, لذا فستحصل على ترجمة صحيحة
+ذات معنى.</p>
+<p>Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).</p>
+<p>At least, in the speech settings parameters dialog (NVDA Menu &gt;&gt; Preferences &gt;&gt; Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.</p>
+<h2>الاستخدام</h2>
+<p>You can use this add-on in three ways:</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.</li>
+<li>كما يمكنك ترجمة النص المخزن بالحافظة.</li>
+<li>Press the dedicated shortcut key to translate the last spoken text.</li>
+</ol>
+<h2>مفاتيح الاختصار</h2>
+<p>يجب ضغط كافة الاختصارات التالية بعد ضغط مفتاح الإضافة "NVDA+Shift+t":</p>
+<ul>
+<li>T: ترجمة النص المظلل,</li>
+<li>Shift+t: ترجمة النص من الحافظة,</li>
+<li>S: تبديل بين لغتي المصدر والهدف,</li>
+<li>a: الإعلان عن الإعداد الحالي,</li>
+<li>S: نسخ آخر نتيجة للحافظة,</li>
+<li>I: التعرف على لغة النص المظلل,</li>
+<li>L: translate the last spoken text,</li>
+<li>O: open translation settings dialog</li>
+<li>H: announces all available layered commands.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>Changes for 4.4.2</h2>
+<ul>
+<li>Restore language detection and auto-swapping (Thanks to Cyrille for fix)</li>
+<li>updated languages for translation (thanks to Cyrille)</li>
+</ul>
+<h2>Changes for 4.4</h2>
+<ul>
+<li>Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)</li>
+</ul>
+<h2>Changes for 4.3</h2>
+<ul>
+<li>nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.</li>
+<li>found a way to use google as a translation service again.</li>
+</ul>
+<h2>Changes for 4.2</h2>
+<ul>
+<li>Restored working state with newer versions of nvda.</li>
+<li>Restored automatic language detection.</li>
+</ul>
+<h2>Changes for 4.1</h2>
+<ul>
+<li>InstantTranslate is working again, now with Yandex translator service
+  instead of Google.</li>
+</ul>
+<h2>Changes for 4.0</h2>
+<ul>
+<li>Translation is automatically performed after swapping.</li>
+<li>Cache bug fixed.</li>
+</ul>
+<h2>مستجدات الإصدار 3.0</h2>
+<ul>
+<li>تغيير كيفية استخدام مفاتيح الاختصار, الآن يمكنك ضغط مفتاح الإضافة
+  "NVDA+Shift+t", ثم الضغط على الأحرف المنفردها لأداء المهام المطلوبة (انظر
+  إلى كافة أوامر الإضافة بقسم "مفاتيح الاختصار").</li>
+<li>تنفيذ التبديل بين اللغات</li>
+<li>تغيير تنسيق الإعدادات, الآن يمكننا تغيير إعدادات Instante translate إذا
+  كنا في بيئة أو حقل للقراءة فقط ولكن عليك أن تتذكر أن تقوم بغلق وإعادة
+  تشغيل NVDA أولا. </li>
+<li>إزالة التقييد على حجم النص المراد ترجمته</li>
+<li>إضافة حرف الوصول السريع T إلى قائمة إعدادات instant translate</li>
+<li>الاختيار التلقائي أصبح موجودا الآن في الموضع الأول في صندوق خيار لغات
+  المصدر ولم يعد موجودا في صندوق خيار لغات الهدف.</li>
+<li>إضافة مربع تحديد لإعداد نسخ نتائج الترجمة.</li>
+<li>تخزين ملف الإعدادات داخل مجلد الإعدادات.</li>
+<li>تتزامن لغات المصدر والهدف مع ما تعرضه خدمة الترجمة من قوقل حاليا (22 إبريل
+  2015).</li>
+</ul>
+<h2>مستجدات الإصدار 2.1</h2>
+<ul>
+<li>من الآن يمكن للإضافة ترجمة النص المخزن بحافظة الويندوز عن طريق الضغط على
+  nvda+shift+y.</li>
+</ul>
+<h2>مستجدات الإصدار 2.0</h2>
+<ul>
+<li>إضافة عنصر لواجهة المستخدم يمكن من خلاله تحديد لغة المصدر ولغة الهدف.</li>
+<li>إضافة عنصر قائمة للتحكم في إعدادات الإضافة بقائمة التفضيلات.</li>
+<li>من الآن سيتم كتابة الإعدادات في ملف منفصل.</li>
+<li>من الآن سيتم نسخ نتائج الترجمة إلى حافظة الويندوز للرجوع إليها وقت الحاجة.</li>
+</ul>
+<h2>مستجدات الإصدار 2.0</h2>
+<ul>
+<li>إصدار أولي</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

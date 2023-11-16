@@ -1,0 +1,2006 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Weather_Plus\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2021-10-14 17:08+0200\n"
+"PO-Revision-Date: 2021-10-15 07:38+0200\n"
+"Last-Translator: Rui Fontes <rui.fontes@tiflotecnia.com>\n"
+"Language-Team: Pavel Partyka <ppartyka@email.cz>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.13\n"
+"X-Poedit-Basepath: ../../../globalPlugins/Weather_Plus\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: __init__.py\n"
+"X-Poedit-SearchPath-1: buildVars.py\n"
+
+#: __init__.py:62
+msgid "Fahrenheit"
+msgstr "Fahrenheit"
+
+#: __init__.py:62
+msgid "Celsius"
+msgstr "Celsia"
+
+#: __init__.py:62
+msgid "Kelvin"
+msgstr "Kelvin"
+
+#: __init__.py:65
+msgid "unknown"
+msgstr "neznámé"
+
+#: __init__.py:66
+msgid "not available"
+msgstr "Není k dispozici."
+
+#: __init__.py:67
+msgid "Please wait..."
+msgstr "Prosím čekejte..."
+
+#: __init__.py:107
+msgid "Weather Plus &Settings"
+msgstr "&Nastavení doplňku počasí+"
+
+#: __init__.py:107
+msgid "Show configuration items."
+msgstr "Zobrazit položky nastavení"
+
+#: __init__.py:109
+msgid "Set and &manage your cities..."
+msgstr "Nastavit a &spravovat kódy měst..."
+
+#: __init__.py:109
+msgid "Displays or allows to set the current cities from a list"
+msgstr "Zobrazí nebo umožní nastavit kód aktuálního města ze seznamu"
+
+#: __init__.py:112
+msgid "Set a &temporary city..."
+msgstr "Nastavit &dočasné město"
+
+#: __init__.py:112
+msgid "Allows to set one temporary city from a list"
+msgstr "Umožňuje nastavit dočasné město ze seznamu."
+
+#: __init__.py:116
+msgid "&Documentation"
+msgstr "&Nápověda"
+
+#: __init__.py:116
+msgid "Opens the help file for the current language"
+msgstr "Otevře nápovědu pro aktuálně zvolený jazyk"
+
+#: __init__.py:120
+msgid "&Check for Upgrade..."
+msgstr "Zkontrolovat &novou verzi..."
+
+#: __init__.py:120
+msgid "Notify if there is an upgraded version available"
+msgstr "Upozorní na novou verzi"
+
+#: __init__.py:169
+msgid "nanometers"
+msgstr "nanometry"
+
+#: __init__.py:172
+msgid "miles per hour"
+msgstr "mil za hodinu"
+
+#: __init__.py:173
+msgid "miles"
+msgstr "mil"
+
+#: __init__.py:174
+msgid "inches"
+msgstr "palců"
+
+#: __init__.py:175
+msgid "inches of mercury"
+msgstr "palců rtuti"
+
+#: __init__.py:178
+msgid "kilometers per hour"
+msgstr "kilometrů za hodinu"
+
+#: __init__.py:179
+msgid "kilometers"
+msgstr "kilometrů"
+
+#: __init__.py:180
+msgid "millimeters"
+msgstr "milimetrů"
+
+#: __init__.py:181
+msgid "millibars"
+msgstr "milibarů"
+
+#: __init__.py:183
+msgid "millimeters of mercury"
+msgstr "milimetrů rtuti"
+
+#: __init__.py:211
+msgid "Settings"
+msgstr "Nastavení"
+
+#: __init__.py:211 __init__.py:2307
+msgid "Preset"
+msgstr "Předvolené město"
+
+#: __init__.py:211 __init__.py:3464 __init__.py:3799
+msgid "None"
+msgstr "Nic"
+
+#: __init__.py:213
+msgid "Enter a City or choose one from the list, if available."
+msgstr "Zadejte město nebo ho vyberte ze seznamu, pokud je k dispozici."
+
+#: __init__.py:391 __init__.py:1823 __init__.py:2969 __init__.py:3627
+msgid "The city"
+msgstr "město"
+
+#: __init__.py:392
+msgid "has not been preset."
+msgstr "není předvolené."
+
+#: __init__.py:393
+msgid "Will be used in temporary mode!"
+msgstr "Bude použito v dočasném režimu"
+
+#: __init__.py:396 __init__.py:424 __init__.py:486 __init__.py:1829
+#: __init__.py:2792 __init__.py:3007 __init__.py:3012 __init__.py:3080
+#: __init__.py:3255 __init__.py:3507 __init__.py:3636 __init__.py:3826
+#: __init__.py:3845 __init__.py:4730
+msgid "Notice!"
+msgstr "Upozornění!"
+
+#: __init__.py:426
+msgid "You have modified the list of your cities"
+msgstr "Upravil jste seznam vašich měst"
+
+#: __init__.py:426
+msgid "Do you want to save it?"
+msgstr "Chcete to uložit?"
+
+#: __init__.py:483
+msgid "The cities on your list are not compatible with the Weather API!"
+msgstr "Města v seznamu nejsou kompatibilní s Weather API!"
+
+#: __init__.py:484
+msgid ""
+"They have to be tested and validated, you can do it from the addon settings "
+"window."
+msgstr ""
+"Musí být testovány a ověřeny, můžete to udělat z okna nastavení addonu."
+
+#: __init__.py:498
+msgid "Setting up a temporary city"
+msgstr "Nastavit  město jako dočasné"
+
+#: __init__.py:502
+msgid "Cities List available:"
+msgstr "Seznam kódů dostupných měst:"
+
+#: __init__.py:534
+msgid "Documentation not available for the current language!"
+msgstr "Nápověda není pro tento jazyk dostupná"
+
+#: __init__.py:586
+msgid ""
+"Sorry, I can not receive data, problems with the download page, try again "
+"later please!"
+msgstr ""
+"Litujeme, nemůžu přijímat data, problémy se stránkou ke stažení, zkuste to "
+"prosím znovu později!"
+
+#: __init__.py:589 __init__.py:1685 __init__.py:2927 __init__.py:3240
+#: __init__.py:3282
+msgid ""
+"Sorry, I can not receive data, verify that your internet connection is "
+"active, or try again later!"
+msgstr ""
+"Litujeme, nemůžu příjímat data, ověřte funkčnost internetového připojení, "
+"nebo opakujte později!"
+
+#: __init__.py:601
+msgid "version"
+msgstr "verze"
+
+#: __init__.py:601
+msgid "is available."
+msgstr "je k dispozici."
+
+#: __init__.py:602
+msgid "Installed version"
+msgstr "Nainstalovaná verze"
+
+#: __init__.py:603
+msgid "Do you want to download and install it?"
+msgstr "Chcete ji nyní stáhnout a nainstalovat?"
+
+#: __init__.py:608
+msgid "Sorry, at the time an update is not available."
+msgstr "Aktualizace není v tento okamžik k dispozici."
+
+#: __init__.py:1084 __init__.py:2934 __init__.py:5414
+msgid "not found!"
+msgstr "Nenalezeno"
+
+#: __init__.py:1085
+msgid ""
+"You need to upgrade the sound effects by reactivating the appropriate option "
+"from the settings of"
+msgstr ""
+"Je třeba znovu aktivovat nastavení přiřazených zvuků v nastavení doplňku"
+
+#: __init__.py:1087
+msgid "But if these are already updated, then you need to update"
+msgstr "Pokud jsou však již aktualizovány, je třeba je aktualizovat"
+
+#: __init__.py:1261
+msgid "I can not load the settings!"
+msgstr "Nemůžu načíst nastavení!"
+
+#: __init__.py:1261
+msgid "Attention!"
+msgstr "Pozor!"
+
+#: __init__.py:1332
+msgid "I can not save the settings!"
+msgstr "Nemůžu uložit nastavení"
+
+#: __init__.py:1347
+msgid "invalid name"
+msgstr "Neplatné jméno"
+
+#: __init__.py:1422
+msgid "The cloudiness is"
+msgstr "Oblačnost je"
+
+#: __init__.py:1423
+msgid "The precipitation is"
+msgstr "Srážky jsou"
+
+#: __init__.py:1470
+msgid "the weather report is currently"
+msgstr "nyní je"
+
+#: __init__.py:1471 __init__.py:1511 __init__.py:1618 __init__.py:1645
+#: __init__.py:1957
+msgid "degrees"
+msgstr "stupňů"
+
+#: __init__.py:1478
+msgid "The wind direction is from"
+msgstr "Směr větru od"
+
+#: __init__.py:1484 __init__.py:1496
+msgid "with speed of"
+msgstr "v rychlosti"
+
+#: __init__.py:1489 __init__.py:1500
+msgid "The wind speed is"
+msgstr "Rychlost větru je"
+
+#: __init__.py:1508
+msgid "The wind gusts are of"
+msgstr "Nárazy větru jsou z"
+
+#: __init__.py:1511
+msgid "The perceived temperature is"
+msgstr "Pocitová teplota je"
+
+#: __init__.py:1518
+msgid "The humidity is"
+msgstr "Vlhkost je"
+
+#: __init__.py:1520
+msgid "The cloudiness is of"
+msgstr "Oblačnost je"
+
+#: __init__.py:1522
+msgid "The precipitation is of"
+msgstr "Srážky jsou"
+
+#: __init__.py:1527
+msgid "and the visibility is up to"
+msgstr "a viditelnost do"
+
+#: __init__.py:1536
+msgid "The visibility is up to"
+msgstr "Viditelnost je"
+
+#: __init__.py:1541
+msgid "and the precipitation is"
+msgstr "a srážky jsou"
+
+#: __init__.py:1558
+msgid "The pressure is"
+msgstr "Tlak je"
+
+#: __init__.py:1562
+msgid "The UV radiation is of"
+msgstr "UV záření je"
+
+#: __init__.py:1584
+msgid "The sun rises at"
+msgstr "Slunce vychází v"
+
+#: __init__.py:1585 __init__.py:1587
+msgid "and sets at"
+msgstr "a zapadá v"
+
+#: __init__.py:1586
+msgid "The moon rises at"
+msgstr "Měsíc vychází v"
+
+#: __init__.py:1588
+msgid "No moonrise"
+msgstr "bez východu měsíce"
+
+#: __init__.py:1589
+msgid "No moonset"
+msgstr "bez západu měsíce"
+
+#: __init__.py:1590
+msgid "No sunrise"
+msgstr "Bez východu slunce"
+
+#: __init__.py:1591
+msgid "No sunset"
+msgstr "bez západu slunce"
+
+#: __init__.py:1614
+msgid "the forecast for today is"
+msgstr "Předpověď na dnešek je:"
+
+#: __init__.py:1616 __init__.py:1643
+msgid "with a maximum temperature of"
+msgstr "maximálně"
+
+#: __init__.py:1617 __init__.py:1644
+msgid "and a minimum of"
+msgstr "a minimálně"
+
+#: __init__.py:1650
+msgid "In"
+msgstr "V"
+
+#: __init__.py:1650
+msgid "Unnamed"
+msgstr "Nepojmenováno"
+
+#: __init__.py:1660 __init__.py:1880 __init__.py:2077
+msgid "Sorry, the city is not set!"
+msgstr "Litujeme, město není nastaveno!"
+
+#: __init__.py:1709
+msgid "Sorry, it was not possible to load the most recent update!"
+msgstr "Nebylo možné načíst nejnovější aktualizaci počasí!"
+
+#: __init__.py:1710
+msgid "Please try again later."
+msgstr "Prosím, zkuste později."
+
+#: __init__.py:1753 __init__.py:1754
+msgid "meters per second"
+msgstr "metrů za vteřinu"
+
+#: __init__.py:1798 __init__.py:3913
+msgid "Sorry, the city set is not valid or contains incomplete data!"
+msgstr "Je nám líto, sada měst není platná anebo obsahuje neúplné údaje!"
+
+#: __init__.py:1806
+msgid "north"
+msgstr "severu"
+
+#: __init__.py:1806
+msgid "north northeast"
+msgstr "severu až severovýchodu"
+
+#: __init__.py:1806
+msgid "northeast"
+msgstr "severovýchodu"
+
+#: __init__.py:1806
+msgid "east northeast"
+msgstr "východu až severovýchodu"
+
+#: __init__.py:1806
+msgid "east"
+msgstr "východu"
+
+#: __init__.py:1806
+msgid "east southeast"
+msgstr "východu až jihovýchodu"
+
+#: __init__.py:1806
+msgid "southeast"
+msgstr "jihovýchodu"
+
+#: __init__.py:1806
+msgid "south southeast"
+msgstr "jihu až jihovýchodu"
+
+#: __init__.py:1807
+msgid "south"
+msgstr "jihu"
+
+#: __init__.py:1807
+msgid "south southwest"
+msgstr "jihu až jihozápadu"
+
+#: __init__.py:1807
+msgid "southwest"
+msgstr "jihozápadu"
+
+#: __init__.py:1807
+msgid "west southwest"
+msgstr "západu až jihozápadu"
+
+#: __init__.py:1807
+msgid "west"
+msgstr "západu"
+
+#: __init__.py:1807
+msgid "west northwest"
+msgstr "západu až severozápadu"
+
+#: __init__.py:1807
+msgid "northwest"
+msgstr "severozápadu"
+
+#: __init__.py:1807
+msgid "north northwest"
+msgstr "severu až severozápadu"
+
+#: __init__.py:1824
+msgid ""
+"Is not working properly, contains incomplete data or has been removed from "
+"the"
+msgstr "Nepracuje správně, obsahuje neúplné údaje nebo byl odstraněný"
+
+#: __init__.py:1826 __init__.py:2963 __init__.py:3913
+msgid "It could be a temporary problem and you may wait a while '..."
+msgstr "Může to být dočasný problém, chvíli počkejte!!!"
+
+#: __init__.py:1827
+msgid "Do you want to delete it from your list?"
+msgstr "Chcete to vymazat ze seznamu"
+
+#: __init__.py:1897
+msgid "Chance of rain"
+msgstr "Možnost deště"
+
+#: __init__.py:1898
+msgid "Chance of snow"
+msgstr "Možnost sněžení"
+
+#: __init__.py:1945
+msgid "Wind speed"
+msgstr "Rychlost větru"
+
+#: __init__.py:1946
+msgid "Direction"
+msgstr "Směr"
+
+#: __init__.py:1947
+msgid "Wind direction"
+msgstr "Směr větru"
+
+#: __init__.py:1948
+msgid "Wind gusts"
+msgstr "Nárazy větru"
+
+#: __init__.py:1949
+msgid "Cloudiness"
+msgstr "Oblačnost"
+
+#: __init__.py:1950
+msgid "Precipitation"
+msgstr "Srážky"
+
+#: __init__.py:1951
+msgid "Humidity"
+msgstr "Vlhkost"
+
+#: __init__.py:1952
+msgid "Visibility"
+msgstr "Viditeľnost"
+
+#: __init__.py:1971
+msgid "Hourly forecast for"
+msgstr "Hodinová předpověď pro"
+
+#: __init__.py:1996
+msgid "Provides the current temperature and weather conditions."
+msgstr "Poskytuje informace o aktuální teplotě a stavu počasí."
+
+#: __init__.py:2008
+#, python-format
+msgid ""
+"If pressed once, announce the weather forecast and current temperature for "
+"24 hours and the next %d days. If pressed twice announce the hourlyforecast "
+"temperature and weather conditions."
+msgstr ""
+"Jestliže zmáčknete jedenkrát, oznámí předpověď počasí a aktuální teplotu na "
+"24 hodin a dalších% d dní. Jestliže zmáčknete dvakrát, oznámí hodinovou "
+"předpověděnou teplotu a povětrnostní podmínky."
+
+#: __init__.py:2016
+msgid "Sorry, no list available!"
+msgstr "Žádný seznam není dostupný!"
+
+#: __init__.py:2052
+msgid "Allows you to set a temporary city."
+msgstr "Umožňuje nastavit dočasný kód města."
+
+#: __init__.py:2066
+msgid "Scale of temperature measurement set into"
+msgstr "Jednotky měření teploty nastaveny na"
+
+#: __init__.py:2068
+msgid "Allows you to set a temporary scale of temperature mesurement."
+msgstr "Umožňuje nastavit dočasné jednotky měření teploty."
+
+#: __init__.py:2129
+msgid "at"
+msgstr "v"
+
+#: __init__.py:2132
+msgid "Last update of the current weather report"
+msgstr "Poslední aktualizace současné zprávy o počasí"
+
+#: __init__.py:2134
+msgid "Announces the date of the last update of the weather report."
+msgstr "Ohlásí datum poslední aktualizace současné zprávy o počasí."
+
+#: __init__.py:2202
+msgid "Open the Weather Plus settings dialog."
+msgstr "Otevře dialog s nastavením doplňku počasí+."
+
+#: __init__.py:2246
+msgid ""
+"f1: help placing, f2: last TAB selection, f3: list and edit box, f4: control "
+"duration Weather Forecast, f5: volume controls."
+msgstr ""
+"f1: nápověda o umístění, f2: poslední výběr klávesy tab, f3: seznam a "
+"editační pole, f4: kontrola délky předpovědi počasí, f5: ovládání hlasitosti."
+
+#: __init__.py:2247
+msgid ""
+"f1: help placing, f2: last TAB selection, f3: list and edit box, f4: control "
+"duration Weather Forecast."
+msgstr ""
+"f1: nápověda o umístění, f2: poslední výběr klávesy tab, f3: seznam a "
+"editační pole, f4: kontrola délky předpovědi počasí."
+
+#: __init__.py:2303
+msgid "Test"
+msgstr "Testování"
+
+#: __init__.py:2304
+msgid "Details"
+msgstr "Podrobnosti o městu"
+
+#: __init__.py:2305
+msgid "Define"
+msgstr "definovat"
+
+#: __init__.py:2306
+msgid "Add"
+msgstr "Přidat"
+
+#: __init__.py:2308
+msgid "Remove"
+msgstr "Odebrat"
+
+#: __init__.py:2309
+msgid "Rename"
+msgstr "Přejmenovat"
+
+#: __init__.py:2335
+msgid "&Import new cities..."
+msgstr "&Importovat nové kódy měst a zemí..."
+
+#: __init__.py:2336
+msgid "&Export your cities..."
+msgstr "&Exportovat vlastní kódy měst a zemí..."
+
+#: __init__.py:2337
+msgid "&hourlyforecast setting..."
+msgstr "& nastavení hodinové předpovědi ..."
+
+#: __init__.py:2352
+msgid "Scale of temperature measurement:"
+msgstr "Jednotky měření teploty:"
+
+#: __init__.py:2360
+msgid "Degrees shown as:"
+msgstr "Zobrazit stupně jako:"
+
+#: __init__.py:2363
+msgid "C - F - K"
+msgstr "C - F"
+
+#: __init__.py:2364
+msgid "Unspecified"
+msgstr "Nespecifikováno"
+
+#: __init__.py:2372
+msgid "Weather Forecasts up to days:"
+msgstr "Předpověď na dnešek je:"
+
+#: __init__.py:2383
+msgid "API response language:"
+msgstr "API odpovídajícího jazyka:"
+
+#: __init__.py:2392
+msgid ""
+"&Copy the weather report and weather forecast, including city details to "
+"clipboard"
+msgstr ""
+"Vždy &kopírovat zprávu o počasí vč. předpovědi a podrobnosti o městu do "
+"schránky"
+
+#: __init__.py:2397
+msgid "Enable &audio effects (only for the current weather conditions)"
+msgstr ""
+"&Zapnout zvukové efekty (Pouze pro aktuální stav počasí, nikoli pro "
+"předpověď)"
+
+#: __init__.py:2400
+msgid "Use only &weather effects"
+msgstr "Používejte pouze efekty &počasí"
+
+#: __init__.py:2405
+msgid "General audio volume"
+msgstr "Nastavení zvuku pro všechny efekty"
+
+#: __init__.py:2406
+msgid "Current audio volume"
+msgstr "Nastavení zvuku pro aktuální efekt"
+
+#: __init__.py:2438
+msgid "Enable &help buttons in the settings window"
+msgstr "Za&pnout nápovědné popisky prvků v okně pro nastavení"
+
+#: __init__.py:2445
+msgid "Read &wind information"
+msgstr "Přečtěte si informace o &větru"
+
+#: __init__.py:2450 __init__.py:6025
+msgid "Add wind directi&on"
+msgstr "Při&dat směr větru"
+
+#: __init__.py:2454 __init__.py:6021
+msgid "Add wi&nd speed"
+msgstr "Přidat ry&chlost větru"
+
+#: __init__.py:2458
+msgid "Add speed in &meters per second of the wind"
+msgstr "Přidávat rychlost větru v &metrech za sekundu"
+
+#: __init__.py:2462 __init__.py:6029
+msgid "Add wind &gust speed"
+msgstr "Přidat rychlost a nárazy větru"
+
+#: __init__.py:2466
+msgid "Add perceived &temperature"
+msgstr "Přidat hodno&ty pocitové teploty"
+
+#: __init__.py:2471
+msgid "&Read atmospherical information"
+msgstr "&Přečtěte si atmosférické informace"
+
+#: __init__.py:2476 __init__.py:6037
+msgid "Add humidity va&lue"
+msgstr "Přidat hodnotu &vlhkosti"
+
+#: __init__.py:2480 __init__.py:6041
+msgid "Add &visibility value"
+msgstr "Přidat hodnotu vidite&lnosti"
+
+#: __init__.py:2484 __init__.py:6033
+msgid "Add cloudiness &value"
+msgstr "Přidat &hodnotu oblačnosti"
+
+#: __init__.py:2488 __init__.py:6045
+msgid "Add precipitation &value"
+msgstr "Přidat hodnotu srážek"
+
+#: __init__.py:2492 __init__.py:6049
+msgid "Add &ultraviolet radiation value"
+msgstr "Přidat hodnotu ultrafialového záření"
+
+#: __init__.py:2496
+msgid "Add atmospheric &pressure value"
+msgstr "Přidat &hodnoty atmosféry a tlaku"
+
+#: __init__.py:2500
+msgid "Indicates the atmospheric pressure in millimeters of mercur&y (mmHg)"
+msgstr "Indikuje atmos&férický tlak v milimetrech"
+
+#: __init__.py:2505
+msgid "Read a&stronomical information"
+msgstr "Přečtěte &si astronomické informace"
+
+#: __init__.py:2509
+msgid "Enable reading of the hours in &24-hour format"
+msgstr "Zapnout &ohlašování ve 24-hodinovém formátu"
+
+#: __init__.py:2514
+msgid "Use the comma to separate decimals, example (4,&15)"
+msgstr "Použít čárku pro rozdělení desetinných čísel, příklad (4,&15)"
+
+#: __init__.py:2518
+msgid "&Displays output in a window"
+msgstr "&Zobrazí výstup v okně"
+
+#: __init__.py:2522
+msgid "Check for &upgrade"
+msgstr "Zkontrolovat &novou verzi"
+
+#: __init__.py:2549
+msgid "Test the city validity  and find the data of it."
+msgstr "Otestujte platnost města a najděte jeho údaje."
+
+#: __init__.py:2550
+msgid "Add the current city into your list."
+msgstr "Přidejte aktuální město do svého seznamu."
+
+#: __init__.py:2551
+msgid "Displays information about the current city."
+msgstr "Zobrazuje informace o aktuálním městě."
+
+#: __init__.py:2552
+msgid "Allows you to define the area, in order to adapt the sound effects."
+msgstr "Umožňuje definovat oblasst pro přizpůsobení zvukových efektů."
+
+#: __init__.py:2553
+msgid ""
+"Presets the current city as the default, will be used every time you restart "
+"the plugin."
+msgstr ""
+"Přednastaví aktuální město jako výchozí, a bude vždy výchozí po restartu "
+"doplňku."
+
+#: __init__.py:2554
+msgid "Delete  the current city from your list."
+msgstr "Smažte aktuální město ze seznamu."
+
+#: __init__.py:2555
+msgid "Rename the current city."
+msgstr "Přejmenujte aktuální město"
+
+#: __init__.py:2556
+msgid ""
+"Permits to incorporate in your list new cities importing them from another "
+"list with the extension *.zipcodes; you can select the city you want to "
+"import, by turning on the check box associated."
+msgstr ""
+"Umožňuje zahrnout do svého seznamu nová města, která je importují z jiného "
+"seznamu s příponou * .zipcodes; Zapnutím zaškrtávacího políčka můžete vybrat "
+"město, které chcete importovat."
+
+#: __init__.py:2557
+msgid "Permits to save your list of cities in a specified path."
+msgstr "Umožňuje uložit seznam měst v určené cestě."
+
+#: __init__.py:2558
+msgid "Allows you to choose the contents of the hourly forecast report."
+msgstr "Umožní zvolit obsah hodinové předpovědi"
+
+#: __init__.py:2665
+msgid "You can enter or search for a city"
+msgstr "Můžete vložit město nebo se pokusit jej nalézt"
+
+#: __init__.py:2666
+msgid "By Latitude and Longitude: 48.8567,2.3508"
+msgstr "Podle zeměpisné šířky a délky: 48,8677,2,3508"
+
+#: __init__.py:2667
+msgid "By City name: Paris"
+msgstr "Podle názvu města: Paříž"
+
+#: __init__.py:2668
+msgid "By City name and country: Toronto,Canada"
+msgstr "Podle názvu města a krajiny: Toronto, Kanada"
+
+#: __init__.py:2669
+msgid "Or Toronto,CA"
+msgstr "Anebo Toronto,CA"
+
+#: __init__.py:2670
+msgid "By City name and region: Toronto,Ontario"
+msgstr "Podle názvu města a regiónu: Toronto, Ontario"
+
+#: __init__.py:2671
+msgid "By US zip: 10001"
+msgstr "Podle amerického zipu: 10001"
+
+#: __init__.py:2672
+msgid "By UK postcode: SW1"
+msgstr "Podle britského poštovního směrovacího čísla: SW1"
+
+#: __init__.py:2673
+msgid "By Canada postal code: G2J"
+msgstr "Podle kanadského poštovního směrovacího čísla: G2J"
+
+#: __init__.py:2674
+msgid "By metar:<metar code>: metar:EGLL"
+msgstr "Podle metar:<metar code>: metar:EGLL"
+
+#: __init__.py:2675
+msgid "By iata:<3 digit airport code>: iata:DXB"
+msgstr "Podle iata:<3 číselný kód letiště>: iata:DXB"
+
+#: __init__.py:2676
+msgid "By auto:ip IP lookup: auto:ip"
+msgstr "Podle auto:ip IP lookup: auto:ip"
+
+#: __init__.py:2677
+msgid "By IP address (IPv4 and IPv6 supported): 100.0.0.1"
+msgstr "Podle adresy IP (podporované protokoly IPv4 a IPv6): 100.0.0.1"
+
+#: __init__.py:2678
+msgid "if there will be cities with the same name, will be listed"
+msgstr "Městá se stejným názvem budou uvedené"
+
+#: __init__.py:2679
+msgid "By default, confirming a selection, is used the postal code"
+msgstr ""
+"V předvoleném nastavení se jako potvrzení výberou používá poštovní směrovací "
+"číslo"
+
+#: __init__.py:2680
+msgid ""
+"If the postal code is not valid, will be used a text string: city, state, "
+"region"
+msgstr ""
+"Jestliže PSČ není platné, použije se textový řetězec: město, stát, región"
+
+#: __init__.py:2681
+msgid "You can indicate how to proceed by prefixing the following commands"
+msgstr "Předvoľbou nasledujících příkazů můžete určit, jak postupovat"
+
+#: __init__.py:2682
+msgid ""
+"Direct (cities with the same name, will not listed), by typing D:City: D:"
+"Paris"
+msgstr ""
+"Přímé (města se stejným názvem, které nebudou uvedené), zadaním D: Město: D: "
+"Paříž"
+
+#: __init__.py:2683
+msgid "Geographic coordinates, by typing G:City: G:Venezia"
+msgstr "Geografické souřadnice, zadáním G: Město: G: Venezia"
+
+#: __init__.py:2684
+msgid "Text string, by typing T:City: T:Bologna"
+msgstr "Textový řetězec zadáním T: Město: T: Bologna"
+
+#: __init__.py:2685
+msgid "If the city is not found"
+msgstr "Pokud se nepodařilo město nalézt"
+
+#: __init__.py:2686
+msgid "Try to reverse the order in the search key"
+msgstr "Pokuste se obrátit pořadí vyhledávání"
+
+#: __init__.py:2687
+msgid "Try with or without the country of origin"
+msgstr "Zkuste s nebo bez země daného města"
+
+#: __init__.py:2688
+msgid "Try to merge the name with hyphens, or separate it with separator"
+msgstr "Skuste zadat nebo naopak vynechat název krajiny"
+
+#: __init__.py:2689
+msgid "Try deleting apostrophes"
+msgstr "Zkuste smazat znaménka apostrof"
+
+#: __init__.py:2690
+msgid "Try changing the vowels accented with normal vowels"
+msgstr "Zkuste změnit přízvučné souhlásky s normálními"
+
+#: __init__.py:2691
+msgid "Try to change in English some parts"
+msgstr "Zkuste některé části změnit v angličtině"
+
+#: __init__.py:2692
+msgid "Try with a closest location"
+msgstr "Zkuste nejbližší polohu"
+
+#: __init__.py:2695
+msgid "Help placing"
+msgstr "Nápověda s umístěním"
+
+#: __init__.py:2789
+msgid "No sound effect in memory!"
+msgstr "Žádný zvukový efekt v paměti!"
+
+#: __init__.py:2790
+msgid "I can't reproduce the sound."
+msgstr "Nemohu přehrát zvuk."
+
+#: __init__.py:2886
+msgid "Choose search key for"
+msgstr "Vyberte vyhledávací klíč pro"
+
+#: __init__.py:2906
+msgid "Unfortunately I could not recover enough data to find the city."
+msgstr "Bohužel se nepodařilo získat dostatek údajů pro vyhledání města."
+
+#: __init__.py:2907
+msgid "Do I try anyway?"
+msgstr "Mám to i tak skoušet?"
+
+#: __init__.py:2933
+msgid "not found! Press F1 for help on entering data."
+msgstr "Nenalezeno! Stiskněte F1 pro nápovědu o vložení dat."
+
+#: __init__.py:2961
+msgid "Is not working properly or has been removed from the database of"
+msgstr "Nepracuje správně, nebo byl odebrán z databáze"
+
+#: __init__.py:2965
+msgid "Is no longer valid!"
+msgstr "Již neplatné!"
+
+#: __init__.py:2998
+msgid "This option requires the installation of some audio effects"
+msgstr "Tato volba vyžaduje instalaci zvukových efektů"
+
+#: __init__.py:2999
+msgid "Do you want to install them?"
+msgstr "Chcete je nainstalovat?"
+
+#: __init__.py:3003
+msgid "The audio effects are installed!"
+msgstr "Zvukové efekty jsou nainstalované!"
+
+#: __init__.py:3004
+msgid "Would you like to update?"
+msgstr "Chcete je aktualizovat?"
+
+#: __init__.py:3005
+msgid "Or do you want to uninstall them?"
+msgstr "Nebo je chcete odinstalovat?"
+
+#: __init__.py:3012
+msgid "Are you sure you want to uninstall the sound effects?"
+msgstr "Opravdu chcete odinstalovat zvukové efekty?"
+
+#: __init__.py:3040
+msgid "Update in progress"
+msgstr "Probíhá aktualizace"
+
+#: __init__.py:3041
+msgid "Installation in progress"
+msgstr "Probíhá instalace"
+
+#: __init__.py:3068
+msgid "The installation of audio effects has been completed successfully!"
+msgstr "Instalace zvukových efektů proběhla úspěšně!"
+
+#: __init__.py:3069
+msgid "Adding folder:"
+msgstr "Přidávám složku:"
+
+#: __init__.py:3071
+msgid "The upgrade of audio effects has been completed successfully!"
+msgstr "Aktualizace zvukových efektů proběhla úspěšně!"
+
+#: __init__.py:3078
+msgid "These sound effects are subject to change by the author."
+msgstr "Tyto zvukové efekty podléhají autorovi, který je může změnit."
+
+#: __init__.py:3079
+msgid "Disable and re-enable this option in order to update or uninstall them."
+msgstr "Vypněte a zapněte tuto volbu pro jejich aktualizaci či stažení!"
+
+#: __init__.py:3140
+msgid "Verify that your internet connection is active, or try again later."
+msgstr "Ověřte funkčnost internetového připojení, a opakujte později."
+
+#: __init__.py:3141
+msgid "File corrupted or not available!"
+msgstr "Soubor je poškozený, nebo není dostupný"
+
+#: __init__.py:3143
+msgid "Sorry, I could not complete the installation of the sound effects!"
+msgstr "Litujeme, nemohla být dokončena instalace zvukových efektů!"
+
+#: __init__.py:3144
+msgid "Installation Error!"
+msgstr "Chyba při instalaci!"
+
+#: __init__.py:3250
+msgid ""
+"The details of this city are not in the database and so I added them to the "
+"list."
+msgstr "Podrobnosti o tomto městě nejsou v databáze, byly přidány do seznamu."
+
+#: __init__.py:3267
+msgid "Cannot identify your location, due to insufficient data."
+msgstr "Nedostatečná data! Nelze identifikovat složku, do které data náleží."
+
+#: __init__.py:3294
+msgid "Details of"
+msgstr "Podrobnosti"
+
+#: __init__.py:3304
+msgid "Place"
+msgstr "Místo"
+
+#: __init__.py:3305
+msgid "Current local time"
+msgstr "Aktuální lokální čas"
+
+#: __init__.py:3306
+msgid "Degrees latitude"
+msgstr "Stupně zeměpisné šířky"
+
+#: __init__.py:3307
+msgid "Degrees longitude"
+msgstr "Stupně zeměpisné délky"
+
+#: __init__.py:3308
+msgid "Elevation above sea level"
+msgstr "Kóta nadmořské výšky"
+
+#: __init__.py:3308
+msgid "meters"
+msgstr "Metrů"
+
+#: __init__.py:3333
+msgid "Define the area for"
+msgstr "Definujte oblast pro"
+
+#: __init__.py:3337
+msgid "Hinterland"
+msgstr "Vnitrozemské"
+
+#: __init__.py:3338
+msgid "Maritime area"
+msgstr "Přímořská oblast"
+
+#: __init__.py:3339
+msgid "Desert zone"
+msgstr "Pouštní pásmo"
+
+#: __init__.py:3340
+msgid "Arctic zone"
+msgstr "Arktické pásmo"
+
+#: __init__.py:3341
+msgid "Mountain zone"
+msgstr "Horské pásmo"
+
+#: __init__.py:3495
+msgid "Enter new name."
+msgstr "Zadejte nový název."
+
+#: __init__.py:3507
+msgid "it can't be used because it already exists!"
+msgstr "nelze ji použít, protože již existuje!"
+
+#: __init__.py:3627
+msgid "is correct"
+msgstr "Je správně"
+
+#: __init__.py:3628
+msgid "But the name"
+msgstr "Ale dané jméno"
+
+#: __init__.py:3630
+msgid "already exists"
+msgstr "již existuje"
+
+#: __init__.py:3631
+msgid "You have to change it!"
+msgstr "Je třeba to změnit!"
+
+#: __init__.py:3632
+msgid "The city proper is"
+msgstr "Správné město je"
+
+#: __init__.py:3634
+msgid "Want to use the suggested name?"
+msgstr "Chcete použít navrhované jméno?"
+
+#: __init__.py:3646
+msgid "Import cities"
+msgstr "Importovat kód města"
+
+#: __init__.py:3664
+msgid "Empty file or not in cities format compatible!"
+msgstr "Prázdný soubor nebo není v kompatibilním formátu s městy!"
+
+#: __init__.py:3670
+msgid "Do you want to replace your list with this?"
+msgstr "Chcete to vymazat ze seznamu"
+
+#: __init__.py:3671
+msgid "If you select yes, your list will be completely replaced."
+msgstr "Když zvolíte ano, váš seznam s městy bude kompletně nahrazen"
+
+#: __init__.py:3672
+msgid "If you select no, the new cities will be added to your list."
+msgstr ""
+"Když zvolíte ne, budou přidány pouze nová města a ty stávající zůstanou"
+
+#: __init__.py:3675
+msgid "Select import mode"
+msgstr "Vyberte režim importování"
+
+#: __init__.py:3686
+msgid "File contents"
+msgstr "Obsahy souboru"
+
+#: __init__.py:3687
+msgid "cities"
+msgstr "Seznam dostupných měst"
+
+#: __init__.py:3690
+msgid "Activate the check boxes of the cities you want to import."
+msgstr "Zaškrtněte políčka kódů měst, která chcete importovat."
+
+#: __init__.py:3711
+msgid "Importing cities in progress"
+msgstr "Probíhá importování kódů měst"
+
+#: __init__.py:3803
+msgid "Were added"
+msgstr "Byly přidány"
+
+#: __init__.py:3803
+msgid "new cities to the list"
+msgstr "Nové kódy měst do seznamu"
+
+#: __init__.py:3804
+msgid "Have been ignored because existing"
+msgstr "byly ignorovány kvůli stávajícím"
+
+#: __init__.py:3805
+msgid "Content of imported list"
+msgstr "Obsah importovaného seznamu"
+
+#: __init__.py:3806
+msgid "Containing incomplete data"
+msgstr "Obsahuje neúplné údaje"
+
+#: __init__.py:3807
+msgid "selected by the user"
+msgstr "Vybrané uživatelem"
+
+#: __init__.py:3808
+msgid "Import finished"
+msgstr "Importování bylo dokončeno."
+
+#: __init__.py:3820
+msgid "A copy of"
+msgstr "Kopie"
+
+#: __init__.py:3822
+msgid "It will be exported"
+msgstr "Bude exportované"
+
+#: __init__.py:3823
+msgid "But it does not yet contain the changes you just made the list!"
+msgstr "Ale stále neobsahuje změny, které byly provedeny v seznamu!"
+
+#: __init__.py:3824
+msgid "I proceed?"
+msgstr "Mám provést?"
+
+#: __init__.py:3830
+msgid "Export cities"
+msgstr "Exportovat kódy měst"
+
+#: __init__.py:3845
+msgid "You can not export the same file at the same path!"
+msgstr "Nemůžete exportovat stejný soubor do téhož umístění!"
+
+#: __init__.py:3863
+msgid "Hourlyforecast data report values."
+msgstr "Hodnoty přehledu údajů podle hodinových předpovědí."
+
+#: __init__.py:3863
+msgid "Disable the data you don't want to be processed:"
+msgstr "Zakažte údaje, které nechcete spracovat:"
+
+#: __init__.py:4648
+msgid "january"
+msgstr "leden"
+
+#: __init__.py:4649
+msgid "february"
+msgstr "únor"
+
+#: __init__.py:4650
+msgid "march"
+msgstr "březen"
+
+#: __init__.py:4651
+msgid "april"
+msgstr "duben"
+
+#: __init__.py:4652
+msgid "may"
+msgstr "květen"
+
+#: __init__.py:4653
+msgid "june"
+msgstr "červen"
+
+#: __init__.py:4654
+msgid "july"
+msgstr "červenec"
+
+#: __init__.py:4655
+msgid "august"
+msgstr "srpen"
+
+#: __init__.py:4656
+msgid "september"
+msgstr "září"
+
+#: __init__.py:4657
+msgid "october"
+msgstr "říjen"
+
+#: __init__.py:4658
+msgid "november"
+msgstr "listopad"
+
+#: __init__.py:4659
+msgid "december"
+msgstr "prosinec"
+
+#: __init__.py:4660
+msgid "Monday"
+msgstr "Pondělí"
+
+#: __init__.py:4661
+msgid "Tuesday"
+msgstr "Úterý"
+
+#: __init__.py:4662
+msgid "Wednesday"
+msgstr "Středa"
+
+#: __init__.py:4663
+msgid "Thursday"
+msgstr "Čtvrtek"
+
+#: __init__.py:4664
+msgid "Friday"
+msgstr "Pátek"
+
+#: __init__.py:4665
+msgid "Saturday"
+msgstr "Sobota"
+
+#: __init__.py:4666
+msgid "Sunday"
+msgstr "Neděle"
+
+#: __init__.py:4724
+#, python-format
+msgid "It was not possible find the acronym of \"%s\"!"
+msgstr "Nebylo možné najít skratku „% s“!"
+
+#: __init__.py:4725
+msgid "This may not allow you to get the city details."
+msgstr "To nemusí umožnit získat podrobnosti o městě."
+
+#: __init__.py:4726
+msgid ""
+"Please report this to the author so he can add this country in database."
+msgstr "Oznamte to prosím autorovi, aby tuto zemi mohl přidat do databáze."
+
+#: __init__.py:4727
+#, python-format
+msgid "Send an email to %s"
+msgstr "Odeslat e-mail na adresu %s"
+
+#: __init__.py:4728
+msgid "With  object the line below, thanks."
+msgstr "S objektem pod ní, díky."
+
+#: __init__.py:4796 __init__.py:4814
+msgid "Downloaded"
+msgstr "Staženo"
+
+#: __init__.py:4797
+msgid "of"
+msgstr "z"
+
+#: __init__.py:4834
+msgid "Find..."
+msgstr "Najít"
+
+#: __init__.py:4835
+msgid "Find next"
+msgstr "Najít další"
+
+#: __init__.py:4836
+msgid "Find previous"
+msgstr "Najít předchozí"
+
+#: __init__.py:5035
+msgid "Be an error has occurred."
+msgstr "Došlo k chybě."
+
+#: __init__.py:5036
+msgid "See the log for more information."
+msgstr "Další informace naleznete v protokolu."
+
+#: __init__.py:5037
+msgid "Error: failure writing file!"
+msgstr "Chyba při zápisu do souboru!"
+
+#: __init__.py:5208
+msgid "occurrences found"
+msgstr "nalezené výskyty"
+
+#: __init__.py:5208
+msgid "for"
+msgstr "pro"
+
+#: __init__.py:5211
+msgid "Choose a city."
+msgstr "Vyberte město."
+
+#: __init__.py:5213
+msgid "List of availables Cities"
+msgstr "Seznam dostupných měst"
+
+#: __init__.py:5245
+msgid "Do not show this message again!"
+msgstr "Už nezobrazuj tuto zprávu !"
+
+#: __init__.py:5255
+msgid "&Install..."
+msgstr "&Instalovat..."
+
+#: __init__.py:5255
+msgid "Upd&ate..."
+msgstr "Akt&ualizovat..."
+
+#: __init__.py:5257
+msgid "&Close"
+msgstr "Za&vřít"
+
+#: __init__.py:5258
+msgid "&Uninstall..."
+msgstr "&Odinstalovat"
+
+#: __init__.py:5360
+msgid "Type the search string"
+msgstr "Napište, co chcete najít"
+
+#: __init__.py:5360 __init__.py:5414
+msgid "Find"
+msgstr "Najít"
+
+#: __init__.py:5411
+msgid "next"
+msgstr "Další"
+
+#: __init__.py:5411
+msgid "previous"
+msgstr "Předchozí"
+
+#: __init__.py:5418
+msgid "No results next for"
+msgstr "Žádné další výsledky pro"
+
+#: __init__.py:5418
+msgid "No previous results for"
+msgstr "Žádné předchozí výsledky pro"
+
+#: __init__.py:5460
+msgid "&Select all"
+msgstr "&Vybrat vše"
+
+#: __init__.py:5462
+msgid "&Deselect all"
+msgstr "&Nevybrat nic"
+
+#: __init__.py:5502
+msgid "not checked"
+msgstr "nezaškrtnuté"
+
+#: __init__.py:5504
+msgid "checked"
+msgstr "zaškrtnuté"
+
+#: __init__.py:5508
+msgid "check box"
+msgstr "zaškrtávací políčko"
+
+#: __init__.py:5518
+msgid "check boxes checked"
+msgstr "zaškrtnutá políčka"
+
+#: __init__.py:5527
+msgid "check boxes not checked"
+msgstr "nezaškrtnutá políčka"
+
+#: __init__.py:5589
+msgid "Saving in progress"
+msgstr "Probíhá ukládání"
+
+#: __init__.py:5591
+msgid "Download canceled."
+msgstr "Stahování přerušeno."
+
+#: __init__.py:5646
+msgid "&Copy to clipboard"
+msgstr "&Zkopírovat do schránky"
+
+#: buildVars.py:27
+msgid ""
+"Adds local temperature and forecast 24 hours and prediction up to 2 days.\n"
+msgstr ""
+"Přidá místní teplotu a předpověď na 24 hodin a předpověď až na 2 dni. \n"
+"\n"
+
+#: buildVars.py:28
+msgid "NVDA+w for the current bulletin.\n"
+msgstr "NVDA+w Ohlasi aktualni zpravu o počasí.\n"
+
+#: buildVars.py:29
+msgid ""
+"NVDA+shift+w for the prediction in the current 24 hours and prediction up to "
+"2 days.\n"
+msgstr "NVDA+shift+w předpověď na aktuálních 24 hodin až na 2 dny. \\ n\n"
+
+#: buildVars.py:30
+msgid ""
+"NVDA+shift+w, pressed twice provides the hourlyforecast of the weather "
+"conditions.\n"
+msgstr ""
+"NVDA+shift+w, dvojité stisknutí poskytuje hodinovou předpověď povětrnostních "
+"podmínek. \\ n\n"
+
+#: buildVars.py:31
+msgid "NVDA+shift+control+w for quickly enter a temporary city.\n"
+msgstr "NVDA+shift+control+w pro rychle zadani docasneho mesta.\n"
+
+#: buildVars.py:32
+msgid "NVDA + shift + control + alt + w for open the Weather Plus settings.\n"
+msgstr "NVDA+shift+control+alt+w Otevře dialog s nastavením doplňku počasí+.\n"
+
+#: buildVars.py:33
+msgid ""
+"NVDA+alt+w announces the date of the last update of the weather report.\n"
+msgstr ""
+"NVDA+alt+w ohlasi datum posledni aktualizace soucasne zpravy o pocasi.\n"
+
+#: buildVars.py:34
+msgid "Shift+control+w alternates between Fahrenheit, Celsius and Kelvin.\n"
+msgstr "Shift+control+w prepne mezi stupni Fahrenheit, Celsia a Kelvin.\n"
+
+#: buildVars.py:35
+msgid ""
+"For other instructions, you can also press Add-on Help button in Add-ons "
+"manager."
+msgstr "Pro další informace otevřete nápovědu ve správci doplňku."
+
+#~ msgid "precipitation"
+#~ msgstr "dešťové srážky"
+
+#~ msgid "Enter a City, woeId or choose one from the list, if available."
+#~ msgstr ""
+#~ "Zadejte správný kód města, nebo jej vyberte ze seznamu, pokud je dostupný"
+
+#~ msgid "The woeID"
+#~ msgstr "Kód"
+
+#~ msgid "assigned to"
+#~ msgstr "Patří k"
+
+#~ msgid "The cities on your list are not compatible with the Yahoo API!"
+#~ msgstr "Města ve vašem seznamu nejsou kompatibilní s rozhraním Yahoo API!"
+
+#~ msgid "steady"
+#~ msgstr "ustálený"
+
+#~ msgid "rising"
+#~ msgstr "stoupající"
+
+#~ msgid "falling"
+#~ msgstr "klesající"
+
+#~ msgid "and the state of the barometric pressure is"
+#~ msgstr "a stav"
+
+#~ msgid "The state of the barometric pressure is"
+#~ msgstr "Stav barometrického tlaku je"
+
+#~ msgid "Sorry, the woeID is not set!"
+#~ msgstr "Kód města není nastaven!"
+
+#~ msgid "in the morning"
+#~ msgstr "Ráno"
+
+#~ msgid "in the evening"
+#~ msgstr "večer"
+
+#~ msgid " and "
+#~ msgstr " a "
+
+#~ msgid " to "
+#~ msgstr " do "
+
+#~ msgid "in the vicinity"
+#~ msgstr "V okolí"
+
+#~ msgid "tornado"
+#~ msgstr "tornádo"
+
+#~ msgid "tropical storm"
+#~ msgstr "tropická bouře"
+
+#~ msgid "hurricane"
+#~ msgstr "hurikán"
+
+#~ msgid "severe thunderstorms"
+#~ msgstr "Místy bouřky"
+
+#~ msgid "mixed rain and snow"
+#~ msgstr "Dešťová přeháňka a sněžení"
+
+#~ msgid "mixed rain and hail"
+#~ msgstr "Přeháňka a mrholení"
+
+#~ msgid "mixed rain and sleet"
+#~ msgstr "Slabý déšť a sněžení"
+
+#~ msgid "mixed snow and sleet"
+#~ msgstr "Slabé sněžení"
+
+#~ msgid "snow flurries"
+#~ msgstr "Přívaly sněhu"
+
+#~ msgid "smoke"
+#~ msgstr "kouř"
+
+#~ msgid "smoky"
+#~ msgstr "Kouř"
+
+#~ msgid "sunny intervals"
+#~ msgstr "občas slunečno"
+
+#~ msgid "sunny period"
+#~ msgstr "slunečné období"
+
+#~ msgid "light snow"
+#~ msgstr "slabé sněžení"
+
+#~ msgid "scattered snow showers"
+#~ msgstr "proměnlivé sněhové přeháňky"
+
+#~ msgid "snow showers"
+#~ msgstr "sněhové přeháňky"
+
+#~ msgid "snow shower"
+#~ msgstr "sněhová přeháňka"
+
+#~ msgid "snowstorm"
+#~ msgstr "Sněhová bouře"
+
+#~ msgid "snowdrift"
+#~ msgstr "poletující sníh"
+
+#~ msgid "drifting snow"
+#~ msgstr "poletující sníh"
+
+#~ msgid "wintry Mix"
+#~ msgstr "mrznoucí déšť"
+
+#~ msgid "ice to rain"
+#~ msgstr "déšť s ledem"
+
+#~ msgid "ice"
+#~ msgstr "ledovka"
+
+#~ msgid "blizzard"
+#~ msgstr "sněhová bouře"
+
+#~ msgid "blowing snow"
+#~ msgstr "Sněžení s prudkým větrem"
+
+#~ msgid "snow"
+#~ msgstr "sněžení"
+
+#~ msgid "light rain with thunder"
+#~ msgstr "slabý déšť s hřměním"
+
+#~ msgid "few showers"
+#~ msgstr "několik přeháněk"
+
+#~ msgid "heavy showers"
+#~ msgstr "silné přeháňky"
+
+#~ msgid "heavy thunderstorms"
+#~ msgstr "silné bouřky"
+
+#~ msgid "heavy thunderstorm"
+#~ msgstr "silná bouřka"
+
+#~ msgid "lightning"
+#~ msgstr "blýskání"
+
+#~ msgid "isolated clouds"
+#~ msgstr "ojedinělá mračna"
+
+#~ msgid "partly cloudy"
+#~ msgstr "částečně oblačno"
+
+#~ msgid "partly bright"
+#~ msgstr "částečně slunečno"
+
+#~ msgid "showers early"
+#~ msgstr "ranní přeháňky"
+
+#~ msgid "light rain"
+#~ msgstr "slabý déšť"
+
+#~ msgid "heavy rain"
+#~ msgstr "průtrž mračen"
+
+#~ msgid "isolated showers"
+#~ msgstr "ojedinělé přeháňky"
+
+#~ msgid "isolated thunderstorms"
+#~ msgstr "Místy bouřky"
+
+#~ msgid "isolated thundershowers"
+#~ msgstr "Ojedinělé přeháňky"
+
+#~ msgid "mostly cloudy"
+#~ msgstr "většinou oblačno"
+
+#~ msgid "mostly dry"
+#~ msgstr "většinou sucho"
+
+#~ msgid "mostly clear"
+#~ msgstr "většinou jasno"
+
+#~ msgid "clearing"
+#~ msgstr "vyjasnění"
+
+#~ msgid "no rain"
+#~ msgstr "žádný déšť"
+
+#~ msgid "sleet"
+#~ msgstr "déšť se sněhem"
+
+#~ msgid "blowing dust"
+#~ msgstr "poletující prach"
+
+#~ msgid "widespread dust"
+#~ msgstr "většinou prach"
+
+#~ msgid "low drifting sand"
+#~ msgstr "nízko poletující písek"
+
+#~ msgid "sandstorm"
+#~ msgstr "písečná bouře"
+
+#~ msgid "sand storm"
+#~ msgstr "písečná bouře"
+
+#~ msgid "dust"
+#~ msgstr "prach"
+
+#~ msgid "sand"
+#~ msgstr "písek"
+
+#~ msgid "thundery showers"
+#~ msgstr "přeháňky s hřměním"
+
+#~ msgid "thundershowers"
+#~ msgstr "přeháňky s hřměním"
+
+#~ msgid "scattered thunderstorms"
+#~ msgstr "místy bouřky"
+
+#~ msgid "scattered showers"
+#~ msgstr "proměnlivé přeháňky"
+
+#~ msgid "thunderstorms"
+#~ msgstr "bouřky"
+
+#~ msgid "thunderstorm"
+#~ msgstr "bouřka"
+
+#~ msgid "storm"
+#~ msgstr "bouřka"
+
+#~ msgid "hail"
+#~ msgstr "krupobití"
+
+#~ msgid "foggy"
+#~ msgstr "hustá mlha"
+
+#~ msgid "fog"
+#~ msgstr "hustá mlha"
+
+#~ msgid "haze"
+#~ msgstr "slabé mrholení"
+
+#~ msgid "mist"
+#~ msgstr "mrholení"
+
+#~ msgid "clear"
+#~ msgstr "jasno"
+
+#~ msgid "fair"
+#~ msgstr "pěkně"
+
+#~ msgid "fine"
+#~ msgstr "hezky"
+
+#~ msgid "overcast"
+#~ msgstr "zataženo"
+
+#~ msgid "light showers"
+#~ msgstr "slabé přeháňky"
+
+#~ msgid "light drizzle"
+#~ msgstr "slabé mrholení"
+
+#~ msgid "freezing rain"
+#~ msgstr "mrznoucí déšť"
+
+#~ msgid "frequent showers"
+#~ msgstr "časté přeháňky"
+
+#~ msgid "rain shower"
+#~ msgstr "dešťová přeháňka"
+
+#~ msgid "rain"
+#~ msgstr "déšť"
+
+#~ msgid "freezing drizzle"
+#~ msgstr "mrznoucí mrholení"
+
+#~ msgid "showers"
+#~ msgstr "přeháňky"
+
+#~ msgid "drizzle"
+#~ msgstr "mrholení"
+
+#~ msgid "dry"
+#~ msgstr "sucho"
+
+#~ msgid "mild"
+#~ msgstr "mírný"
+
+#~ msgid "clouds"
+#~ msgstr "mračna"
+
+#~ msgid "cloudy"
+#~ msgstr "oblačno"
+
+#~ msgid "mostly sunny"
+#~ msgstr "většinou slunečno"
+
+#~ msgid "sunny"
+#~ msgstr "slunečno"
+
+#~ msgid "sun"
+#~ msgstr "slunce"
+
+#~ msgid "bright"
+#~ msgstr "jasno"
+
+#~ msgid "thunder"
+#~ msgstr "hřmění"
+
+#~ msgid "shower"
+#~ msgstr "přeháňka"
+
+#~ msgid "breezy"
+#~ msgstr "větrno"
+
+#~ msgid "blustery"
+#~ msgstr "Bouřlivě"
+
+#~ msgid "windy"
+#~ msgstr "větrno"
+
+#~ msgid "wind"
+#~ msgstr "vítr"
+
+#~ msgid "flurries"
+#~ msgstr "přívaly sněhu"
+
+#~ msgid "late"
+#~ msgstr "později"
+
+#~ msgid "early"
+#~ msgstr "ranní"
+
+#~ msgid "isolated"
+#~ msgstr "ojedinělé"
+
+#~ msgid "shallow fog"
+#~ msgstr "slabá mlha"
+
+#~ msgid "heavy"
+#~ msgstr "silný"
+
+#~ msgid "cold"
+#~ msgstr "chladno"
+
+#~ msgid "hot"
+#~ msgstr "horko"
+
+#~ msgid "Sorry, the woeID set is not valid or contains incomplete data!"
+#~ msgstr "Kód města není platný nebo obsahuje neúplná data !"
+
+#~ msgid ""
+#~ "Is not working properly, contains incomplete data or has been removed "
+#~ "from the database of"
+#~ msgstr ""
+#~ "Nepracuje správně, obsahuje neúplné údaje  nebo byl odebrán z databáze"
+
+#~ msgid ""
+#~ "Provides the weather forecast and current temperature for 24 hours and "
+#~ "the next 9 days."
+#~ msgstr ""
+#~ "Poskytuje informace o předpovědi počasí a aktuální teplotě na 24 hodin, a "
+#~ "rovněž následujících 9 dní."
+
+#~ msgid "Add status of &barometric pressure"
+#~ msgstr "Přidat stav &barometrického tlaku"
+
+#~ msgid ""
+#~ "Testing the validity of city woeID entry and find the name of city "
+#~ "assigned, or viceversa."
+#~ msgstr ""
+#~ "Testování platnosti kódu do města a nalezení názvu přiřazeného města, "
+#~ "nebo naopak."
+
+#~ msgid "Displays information on the current city."
+#~ msgstr "Zobrazuje informace o aktuálně městu."
+
+#~ msgid ""
+#~ "You can also indicate how to proceed by prefixing the following commands"
+#~ msgstr "Můžete také určit, jak postupovat, předponou následujících příkazů"
+
+#~ msgid "Direct (the Recursive cities they will not appear), by typing D:City"
+#~ msgstr "Direct (Rekurzivní města, která se neobjeví), zadáním D: City"
+
+#~ msgid "Geographic coordinates, by typing G:City"
+#~ msgstr "Zeměpisné souřadnice zadáním G: Město"
+
+#~ msgid "Postal code, by typing P:City"
+#~ msgstr "Poštovní kód zadáním P: Město"
+
+#~ msgid "Text string, by typing T:City"
+#~ msgstr "Textový řetězec zadáním T: City"
+
+#~ msgid ""
+#~ "The city can be preceded by the region and / or state, separated by a "
+#~ "comma or space"
+#~ msgstr ""
+#~ "Městu může předcházet region a / nebo stát, oddělené čárkou nebo mezerou"
+
+#~ msgid "Australia, Queensland, Cona Creek"
+#~ msgstr "Austrálie, Queensland, Cona Creek"
+
+#~ msgid "By city woeID: 715399"
+#~ msgstr "Podle ID města: 715399"
+
+#~ msgid "By only city name: Ferrara"
+#~ msgstr "Jen podle názvu města: Ferrara"
+
+#~ msgid "By state or region and city name: Emilia Romagna Ferrara"
+#~ msgstr "Podle města či jména regionu"
+
+#~ msgid "By city name and country: Ferrara,it"
+#~ msgstr "Podle názvu města a země: Ferrara,it"
+
+#~ msgid "By postal code: 44100,it"
+#~ msgstr "Podle kódu města: 44100,it"
+
+#~ msgid "By geographic coordinates: latitude, longitude"
+#~ msgstr "Podle zeměpisných souřadnic: zeměpisná šířka, délka"
+
+#~ msgid "Try to merge the name with hyphens, or separate it with spaces"
+#~ msgstr "Zkuste sloučit název pomlčkami nebo rozdělit mezerami"
+
+#~ msgid ""
+#~ "The details of this city are not in the database and so I added them to "
+#~ "the list. Try again!"
+#~ msgstr ""
+#~ "Podrobnosti o tomto městě nejsou v databázi a tak jsem je přidal do "
+#~ "seznamu. Zkus to znovu!"
+
+#~ msgid "It was not possible find the acronym of %s!"
+#~ msgstr "Nebylo možné najít zkratku %s!"
+
+#~ msgid "This does not allow to get the city details."
+#~ msgstr "To neumožňuje získat podrobnosti o městě."
+
+#~ msgid "Empty file or not in cities woeID format compatible!"
+#~ msgstr "Prázdný soubor, nebo nekompatibilní formát kódu!"
+
+#~ msgid ""
+#~ "Adds local temperature and forecast 24 ours and prediction up to 9 days.\n"
+#~ msgstr ""
+#~ "Ohlasuje aktualni teplotu, predpoved pocasi od 24 do 9 dnu a umoznuje "
+#~ "vybrat mesto.\n"
+
+#~ msgid ""
+#~ "NVDA+shift+w for the prediction in the current 24 hours and prediction up "
+#~ "to 9 days.\n"
+#~ msgstr "NVDA+shift+w Ohlasi predpoved od 24 hod az do 9 dnu.\n"
+
+#~ msgid "Don't specify"
+#~ msgstr "Neurčovat"
+
+#~ msgid ""
+#~ "You have installed the Weather Plus add-on which is incompatible with "
+#~ "this one. The new name of this add-on is Weather_Plus with an underscore. "
+#~ "Click OK to update it."
+#~ msgstr ""
+#~ "Nainstalovali jste doplněk Weather Plus, který není kompatibilní s tímto "
+#~ "doplňkem. Nový název tohoto doplňku je Weather_Plus s podtržítkem. "
+#~ "Klepnutím na tlačítko OK jej aktualizujte."
+
+#~ msgid "Update confirmation"
+#~ msgstr "Potvrzení aktualizace"
+
+#~ msgid "Daylight saving time"
+#~ msgstr "Změna času"
+
+#~ msgid "ahead"
+#~ msgstr "Doba"
+
+#~ msgid "back"
+#~ msgstr "Zpět"
+
+#~ msgid "Starts on"
+#~ msgstr "Začíná v"
+
+#~ msgid "set your clock"
+#~ msgstr "čas se posune"
+
+#~ msgid "hour"
+#~ msgstr "hodin"
+
+#~ msgid "Ends on"
+#~ msgstr "Končí v"
+
+#~ msgid ""
+#~ "In&dicates the wait with a beep while you search for the latest bulletin"
+#~ msgstr "Pípání znázorňu&je vyhledávání nejnovější předpovědi"
+
+#~ msgid "The disc is full, or the file is write protected."
+#~ msgstr "Disk je plný, nebo je soubor chráněný proti zápisu."
+
+#~ msgid "Disable and re-enable this option to update them."
+#~ msgstr "Vypněte a zapněte tuto volbu pro jejich aktualizaci či stažení!"
+
+#~ msgid "Download complete."
+#~ msgstr "Stahování dokončeno."
+
+#~ msgid "An upgrade is available for"
+#~ msgstr "Aktualizace je dostupná pro"
+
+#~ msgid "Click on the Check for upgrades menu to download it."
+#~ msgstr "Klikněte v menu na Zkontrolovat aktualizaci pro její stažení."
+
+#~ msgid "Save file"
+#~ msgstr "Uložit soubor"

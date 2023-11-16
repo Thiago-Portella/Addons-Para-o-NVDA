@@ -1,0 +1,6 @@
+Instrucciones en español:
+1. Coloque sus librerías dentro de la carpeta raíz (ECILibraries).
+2. Comprima toda la carpeta en un archivo .zip. Recuerde que todos los archivos deben quedar en la raíz. Quiere decir que si abres el zip con un gestor de archivos, lo primero que tienes que ver son los ficheros y no una carpeta.
+Puedes ignorar este fichero si lo deseas, no es necesario para el buen funcionamiento del complemento.
+3. Cambie la extensión del archivo comprimido de .zip a .nvda-addon.
+4. Instale el complemento, automáticamente actualizará las rutas de la librería.

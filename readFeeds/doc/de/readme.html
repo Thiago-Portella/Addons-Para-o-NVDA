@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Read Feeds 26.0.0</title>
+</head>
+<body>
+<h1>RSS-Feeds lesen</h1>
+<ul>
+<li>Autoren: Noelia Ruiz Martínez, Mesar Hameed</li>
+</ul>
+<p>Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
+Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
+aktualisiert. Wenn wir weiter unten  von Feeds sprechen, dann meinen wir
+sowohl RSS- als auch  ATOM-Feeds.</p>
+<h2>Befehle</h2>
+<h3>Dialogfeld für RSS-Feeds lesen</h3>
+<p>Sie können das Dialogfeld von Read Feedsüber das NVDA-Menü, und dort
+Werkzeuge und dann Feeds aufrufen.</p>
+<p>Sie enthält die folgenden Steuerelemente:</p>
+<ul>
+<li>Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.</li>
+<li>Eine Liste der gespeicherten RSS-Feeds, die beim Öffnen des Dialogfelds
+  hervorgehoben werden.</li>
+<li>Liste der Artikel: Öffnet einen Dialog, der die Artikelliste aus Ihrem
+  aktuellen Feed anzeigt. Wählen Sie den Artikel, den Sie lesen möchten, und
+  drücken Sie die Eingabetaste oder die Schaltfläche Webseite des
+  ausgewählten Artikels öffnen, um die entsprechende Seite in Ihrem Browser
+  zu öffnen. Klicken Sie auf die Schaltfläche Info-Artikel, um einen Dialog
+  mit Titel und Link des ausgewählten Artikels zu öffnen; von diesem Dialog
+  aus können Sie diese Informationen in die Zwischenablage kopieren.</li>
+<li>Feed öffnen: Öffnet den ausgewählten Feed in der Standardanwendung.</li>
+<li>RSS-Feed als HTML öffnen: Öffnet den ausgewählten RSS-Feed im
+  Standard-Webbrowser. Sie können Veröffentlichungsdaten und Schaltflächen
+  ein- oder ausblenden, um Informationen zu Artikeln in die Zwischenablage
+  zu kopieren.</li>
+<li>Adresse des RSS-Feed kopieren: Öffnet ein Dialogfeld, in dem bestätigt
+  wird, ob die Feed-Adresse in die Zwischenablage kopiert werden soll.</li>
+<li>Neu: Öffnet einen Dialog mit einem Eingabefeld zur Eingabe der Adresse
+  eines neuen RSS-Feeds. Wenn die Adresse gültig ist und der Feed
+  gespeichert werden kann, erscheint sein Name, basierend auf dem
+  Feed-Titel, am Ende der Liste der RSS-Feeds.</li>
+<li>Umbenennen: Öffnet einen Dialog mit einem Eingabefeld zum Umbenennen des
+  ausgewählten Feeds.</li>
+<li>Löschen: Öffnet einen Dialog zum Löschen des ausgewählten Feeds.</li>
+<li>Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
+  so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
+  kann.</li>
+<li>RSS-Feeds aus OPML-Datei importieren: Öffnet einen Dialogfeld zum
+  Hinzufügen neuer RSS-Feeds aus einer OPML-Datei.</li>
+<li>RSS-Feeds in OPML-Datei speichern: Öffnet ein Dialogfeld zum Speichern der
+  im Dialogfeld für die RSS-Feeds verfügbaren Feeds in einer OPML-Datei.</li>
+<li>Einstellungen: Öffnet das Dialogfeld mit den Einstellungen der
+  erweiterung, der auch im NVDA-Menü "Einstellungen", "Einstellungen" und
+  "RSS-Feeds lesen" verfügbar ist.</li>
+<li>Schließen: Schließt den Dialog.</li>
+</ul>
+<h3>Hinweise</h3>
+<ul>
+<li>Das Bearbeitungsfeld Filtern nach kann nach der Schaltfläche Artikel
+  öffnen im NVDA-Menü, Einstellungen, Einstellungen, Feeds lesen oder durch
+  Klicken auf die Schaltfläche Einstellungen im Dialogfeld Feeds platziert
+  werden.</li>
+<li>Dieses Panel verfügt über eine Option zur Anzeige von Artikeldaten im
+  Dialogfeld für die Liste der Artikel.</li>
+</ul>
+<h3>Tastaturbefehle</h3>
+<ul>
+<li>STRG+Umschalt+NVDA+Leertaste: Sagt die aktuelle Adresse des Artikels
+  an. Zweimaliges Drücken öffnet die Webseite des Artikels.</li>
+<li>STRG+Umschalt+NVDA+8: Der ausgewählte RSS-Feed wird neu geladen und der
+  aktuellste Titel wird angesagt.</li>
+<li>Strg+Umschalt+NVDA+I: Sagt den aktuellen Feed-Titel und -Link an. Durch
+  zweimaliges Drücken wird der Titel und der zugehörige Link in die
+  Zwischenablage kopiert.</li>
+<li>STRG+Umschalt+NVDA+U: Sagt den Titel des vorherigen RSS-Feeds an.</li>
+<li>STRG+Umschalt+NVDA+O: Sagt den Titel des nächsten RSS-Feeds an.</li>
+</ul>
+<h2>Benachrichtigungen</h2>
+<ul>
+<li>Wenn der Titel oder die URL kopiert wurden.</li>
+<li>Wenn die Verbindung / das Neuladen eines RSS-Feeds fehlgeschlagen ist,
+  oder wenn die URL nicht mit einem gültigen Feed übereinstimmt.</li>
+<li>NVDA zeigt eine Fehlermeldung an, wenn ein neuer Feed nicht erstellt
+  werden konnte.</li>
+<li>Im Titel des Dialogs für die Artikellisten werden der Name des
+  ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.</li>
+</ul>
+<h2>Änderungen in 21.0</h2>
+<ul>
+<li>RSS-Feeds mit unbetitelten Artikeln können im Dialogfeld der Artikel
+  angezeigt und als HTML geöffnet werden.</li>
+</ul>
+<h2>Änderungen in 20.0</h2>
+<ul>
+<li>Der Universal Feed Parser wurde auf 5.0.1 aktualisiert und unterstützt nun
+  mehr RSS-Feeds.</li>
+</ul>
+<h2>Änderungen in 14.0</h2>
+<ul>
+<li>Es wurde ein Fehler behoben, der das Hinzufügen einiger Feeds unmöglich
+  machte.</li>
+</ul>
+<h2>Änderungen in 13.0</h2>
+<ul>
+<li>Diese Erweiterung ist nicht länger verwendbar mehr im geschützten Modus.</li>
+<li>RSS-Feeds werden über OPML-Dateien verwaltet.</li>
+<li>Auf Grund von Änderungen in der Verwaltung der RSS-Feeds gibt es
+  Änderungen in der Konfigurationsdatei, in der der Standard-Feed
+  eingestellt ist. Bitte verwenden Sie den Dialogfeld für die RSS-Feeds,
+  wenn Sie es wieder einstellen möchten.</li>
+<li>Die noch im alten Format gespeicherten Textdateien, werden automatisch in
+  das neue OPML-Format umgewandelt, sobald die neue Version der Erweiterung
+  zum ersten Mal gestartet wird.</li>
+<li>Die Funktion zum Kopieren und Wiederherstellen von RSS-Feeds wurde durch
+  die neuen Dateien im OPML-Format ersetzt.</li>
+<li>Inkompatible RSS-Feeds können vor dem Hinzufügen verarbeitet werden, um
+  sie mit der Erweiterung kompatibel zu machen.</li>
+<li>Im Einstellungsfenster für Read Feeds gibt es eine neue Option, mit der
+  das Datum des Artikels in der Liste der Artikel angezeigt werden kann.</li>
+</ul>
+<h2>Änderungen in 12.0</h2>
+<ul>
+<li>Es wurde ein Fehler behoben, der dazu führte, dass Verknüpfungen für
+  Elemente im NVDA-Menüs unter "Werkzeuge" nicht wie erwartet
+  funktionierten.</li>
+</ul>
+<h2>Änderungen in 11.0</h2>
+<ul>
+<li>Kompatibel mit NVDA 2021.1</li>
+</ul>
+<h2>Änderungen in 10.0</h2>
+<ul>
+<li>Es wurde eine Schaltfläche hinzugefügt, um den ausgewählten RSS-Feed als
+  HTML im Standard-Webbrowser zu öffnen.</li>
+<li>Wenn kein neuer RSS-Feed erstellt werden konnte, wird dies in einem
+  Fehlerdialog angezeigt.</li>
+<li>Verbesserte Reihenfolge und Präsentation einiger Artikel.</li>
+<li>Weitere Feeds werden möglicherweise unterstützt.</li>
+<li>Wenn das Dialogfeld "Feeds" geöffnet wird, wird die Liste der Feeds
+  anstelle des Bearbeitungsfelds "Suche" hervorgehoben.</li>
+<li>Sie können auswählen, ob das Suchfeld für die Suche hinter der Liste der
+  Feeds platziert werden soll. Dies ist nützlich, um die Liste auch dann zu
+  fokussieren, wenn Sie aus einem anderen Fenster wechseln, ohne das
+  Dialogfeld "Feeds" zu schließen.</li>
+<li>Es wurde eine Schaltfläche hinzugefügt, um die Adresse des RSS-Feed aus
+  dem Dialogfeld der Feeds in die Zwischenablage zu kopieren.</li>
+</ul>
+<h2>Änderungen für 9.0</h2>
+<ul>
+<li>Erfordert NVDA 2019.3 oder höher.</li>
+</ul>
+<h2>Änderungen in 8.0</h2>
+<ul>
+<li>Bei der Aktualisierung dieser Erweiterung werden die in der vorherigen
+  Version gespeicherten Feeds automatisch in die neue Version kopiert, es
+  sei denn, Sie möchten ausdrücklich, dass Feeds aus dem
+  Hauptkonfigurationsordner von NVDA importiert werden.</li>
+<li>Wenn Sie den Dialog zum Kopieren von Feeds verwenden und der ausgewählte
+  Ordner nicht "personalFeeds" heißt, wird ein Unterordner mit diesem Namen
+  erstellt, um das Löschen von Verzeichnissen mit wichtigen Daten wie
+  Dokumente oder Downloads zu verhindern.</li>
+</ul>
+<h2>Änderungen bis 7.0</h2>
+<ul>
+<li>Der RSS Feeds Dialog wird mit einen Schalter erweitert, um einen
+  Backup-Ordner zu öffnen, der die Sicherungsdateien der Feeds enthalten
+  kann.</li>
+<li>Wenn die Eingabe in der Filterfunktion keine Ergebnisse liefert, werden
+  die Liste der Feeds und andere Dialogelemente nicht mehr angezeigt. Somit
+  meldet NVDA nicht mehr "unbekannt" in der leeren Liste.</li>
+<li>Wenn die Liste der Artikel nicht angezeigt werden kann, beispielsweise
+  wegen Fehlern beim Rss Feed, wird NVDA einen Fehler auslösen. Dadurch
+  können Sie den RSS Feed Dialog nutzen, ohne NVDA neu starten zu müssen.</li>
+</ul>
+<h2>Änderungen bis 6.0</h2>
+<ul>
+<li>Wenn der Standardfeed aktualisiert wurde und er aufgrund von
+  Serverproblemen nicht mehr funktioniert, werden die vorherigen Artikel
+  nicht gelöscht und können mit den entsprechenden Tastenkombinationen
+  gelesen werden.</li>
+<li>Fehler behoben: Der Standardfeed kann noch zweimal aktualisiert werden.</li>
+</ul>
+<h2>Änderungen für 5.0</h2>
+<ul>
+<li>Der Dialog der Artikelliste wurde erweitert.</li>
+<li>Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).</li>
+<li>Bei Bedarf können Sie die <a href="https://www.nvaccess.org/addonStore/legacy?file=rf-o">letzte Version</a>, die mit NVDA 2017.3
+  kompatibel ist herunterladen.</li>
+</ul>
+<h2>Änderungen in 4.0</h2>
+<ul>
+<li>Schaltfläche zum Öffnen des ausgewählten Feeds über den Feed-Dialog
+  hinzugefügt.</li>
+</ul>
+<h2>Änderungen in 3.0</h2>
+<ul>
+<li>Die Dialoge zur Verwaltung von RSS-Feed-Dateien wurden entfernt. Jetzt ist
+  ihre Funktionalität im RSS-Feeds-Dialog enthalten.</li>
+<li>Die visuelle Darstellung der Dialoge wurde verbessert und entspricht dem
+  Erscheinungsbild der Dialoge in NVDA.</li>
+<li>Der Standard-Feed wird in der NVDA-Konfiguration gespeichert. Daher ist es
+  möglich, verschiedene Standard-Feeds in Konfigurationsprofilen
+  einzustellen.</li>
+<li>NVDA 2016.4 oder höher ist erforderlich.</li>
+</ul>
+<h2>Änderungen in 2.0</h2>
+<ul>
+<li>Hilfe zur Erweiterung ist über den Dialog "Erweiterungen verwalten"
+  verfügbar.</li>
+</ul>
+<h2>Änderungen in 1.0</h2>
+<ul>
+<li>Ehrstveröffentlichung.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

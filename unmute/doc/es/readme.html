@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Unmute Windows audio 1.5.7</title>
+</head>
+<body>
+<h1>NVDA Unmute</h1>
+<ul>
+<li>Autor: Oleksandr Gryshchenko</li>
+<li>Versión: 1.5</li>
+<li>Compatibilidad con NVDA: 2019.3 y posteriores</li>
+<li>Descargar <a href="https://addons.nvda-project.org/files/get.php?file=unmute">versión estable</a></li>
+</ul>
+<p>Este complemento comprueba el estado del sonido en Windows cuando NVDA se inicia y, si determina que el sonido está silenciado, el complemento fuerza su activación.</p>
+<p>Al mismo tiempo, se comprueba por separado el volumen del proceso de NVDA.</p>
+<p>El complemento también comprueba el estado del sintetizador de voz. Si hay problemas durante su inicialización, se hacen intentos para iniciarlo, tal y como se especifica en las opciones de NVDA.</p>
+<p>Hay una posibilidad adicional que comprueba el dispositivo de sonido por el que sale NVDA. Si este dispositivo es distinto del predeterminado, se alterna automáticamente la salida al dispositivo predeterminado instalado en el sistema.</p>
+<p>Nota: siempre se reproduce el sonido de inicio del complemento, incluso si el volumen está activado. Esto es porque el complemento conmuta la salida al dispositivo de sonido principal cada vez que NVDA se inicia.</p>
+<p>Esto sucede cuando el dispositivo de sonido de salida configurado en las opciones de NVDA difiere del dispositivo de salida predeterminado o del "Asignador de sonido Microsoft".</p>
+<p>Esto se puede resolver de una de las siguientes formas:</p>
+<ol>
+<li>Después de reiniciar NVDA, guarda la configuración actual pulsando NVDA+ctrl+c. Se guardará el dispositivo de sonido predeterminado en los ajustes de NVDA y la conmutación no se producirá cada vez que NVDA se inicie.</li>
+<li>Si no quieres cambiar la configuración de NVDA, simplemente desactiva la función de alternar dispositivos de sonido en el panel de opciones de Unmute.</li>
+</ol>
+<h2>Diálogo de opciones del complemento</h2>
+<p>Para abrir el panel de opciones del complemento, sigue estos pasos:</p>
+<ul>
+<li>Pulsa NVDA+n para abrir el menú NVDA.</li>
+<li>Después ve a "Preferencias" -&gt; "Opciones..." y busca en la lista de categorías "Unmute Windows Audio".</li>
+</ul>
+<p>Eso es todo, ahora puedes usar el tabulador para desplazarte por las opciones del complemento.</p>
+<p>Las siguientes opciones están disponibles en el diálogo de opciones del complemento:</p>
+<ol>
+<li>
+<p>El primer deslizador del diálogo de opciones del complemento te permite especificar el nivel de volumen de Windows que se configurará cuando inicies NVDA si el sonido estaba silenciado o el volumen estaba muy bajo.</p>
+</li>
+<li>
+<p>El nivel de volumen mínimo de Windows para que se aplique el procedimiento de incremento de volumen. Este deslizador te permite ajustar el nivel de sensibilidad del complemento.</p>
+<p>Si el volumen cae por debajo del valor indicado aquí, este aumentará la próxima vez que inicies NVDA.</p>
+<p>De lo contrario, si el volumen es mayor que el valor que se indique aquí, el nivel no cambiará al reiniciar NVDA.</p>
+<p>Y, por supuesto, si el sonido estaba apagado, se encenderá al reiniciar el complemento.</p>
+</li>
+<li>
+<p>La siguiente casilla de verificación permite habilitar la reinicialización del controlador de sintetizador de voz.</p>
+<p>Este procedimiento sólo se iniciará si se detecta que el controlador del sintetizador de voz no se ha iniciado tras arrancar NVDA.</p>
+</li>
+<li>
+<p>En el siguiente campo puedes indicar el número de intentos de reinicialización del sintetizador. Los intentos se realizan cíclicamente en intervalos de un segundo. Un valor de 0 significa que se realizarán intentos indefinidamente hasta que el procedimiento se complete con éxito.</p>
+</li>
+<li>
+<p>La opción "Cambiar al dispositivo de salida de audio por defecto" permite comprobar al iniciar el dispositivo de salida de sonido de NVDA. Si este dispositivo difiere del predeterminado, se alterna automáticamente la salida al dispositivo de sonido instalado en el sistema como principal.</p>
+</li>
+<li>
+<p>La siguiente casilla de verificación activa o desactiva la reproducción de un sonido de inicio cuando la operación tiene éxito.</p>
+</li>
+</ol>
+<h2>Componentes de terceros</h2>
+<p>El complemento utiliza los siguientes componentes de terceros:</p>
+<ul>
+<li>Para interactuar con la <strong>API de Windows Core Audio</strong> - <a href="https://github.com/AndreMiras/pycaw/">módulo PyCaw</a>, distribuido bajo la licencia MIT.</li>
+<li>Para obtener información sobre procesos en ejecución y usar en componente PyCaw - <a href="https://github.com/giampaolo/psutil">módulo psutil</a>, distribuido bajo la licencia BSD-3.</li>
+</ul>
+<h2>Registro de cambios</h2>
+<h3>Versión 1.5.5</h3>
+<ul>
+<li>se ha probado la compatibilidad del complemento con NVDA 2021.1;</li>
+<li>se ha actualizado el módulo de terceros psutil;</li>
+<li>se ha adaptado el complemento para soportar las versiones de Python 3.7 y 3.8;</li>
+<li>Añadidas anotaciones de MyPy al código fuente;</li>
+<li>añadida función "Cambiar al dispositivo de salida predeterminado";</li>
+<li>los parámetros del complemento siempre se alojan en el perfil de configuración base.</li>
+</ul>
+<h3>Versión 1.4</h3>
+<ul>
+<li>añadido un método para aumentar el volumen del proceso NVDA por separado al iniciar;</li>
+<li>cambiado el sonido de operación exitosa (gracias a Manolo);</li>
+<li>todas las funciones manuales para controlar el volumen se han transferido al complemento de ajuste de volumen para NVDA.</li>
+</ul>
+<h3>Versión 1.3</h3>
+<ul>
+<li>añadida la capacidad de controlar de forma separada el volumen principal y de cada programa;</li>
+<li>actualizada traducción al vietnamita (gracias a Dang Manh Cuong);</li>
+<li>añadida la traducción al turco (gracias a Cagri Dogan);</li>
+<li>Añadida la traducción al italiano (gracias a Christianlm);</li>
+<li>añadida la traducción al chino simplificado (gracias a Cary Rowen);</li>
+<li>Polish translation added (thanks to Stefan Banita);</li>
+<li>actualizada traducción al ucraniano;</li>
+<li>actualizada la documentación.</li>
+</ul>
+<h3>Versión 1.2</h3>
+<ul>
+<li>ahora se usa la API Windows Audio Core en vez del administrador de sonido de Windows;</li>
+<li>se añade la reproducción de un sonido de inicio cuando el complemento activa con éxito el audio.</li>
+</ul>
+<h3>Versión 1.1</h3>
+<ul>
+<li>añadido diálogo de opciones del complemento;</li>
+<li>actualizada traducción al ucraniano.</li>
+</ul>
+<h3>Versión 1.0.1</h3>
+<ul>
+<li>Realiza intentos repetidos para activar el controlador del sintetizador en caso de inicialización fallida;</li>
+<li>Añadida traducción al vietnamita por Dang Manh Cuong;</li>
+<li>Añadida traducción al ucraniano.</li>
+</ul>
+<h3>Versión 1.0. Características de la implementcaión</h3>
+<p>El complemento usa un módulo de terceros, Windows Sound Manager.</p>
+<h2>Alteración del código fuente del complemento</h2>
+<p>Puedes clonar este repositorio para alterar NVDA Unmute.</p>
+<h3>Dependencias de terceros</h3>
+<p>Se pueden instalar con Pip:</p>
+<ul>
+<li>markdown</li>
+<li>scons</li>
+<li>python-gettext</li>
+</ul>
+<h3>Para empaquetar el complemento</h3>
+<ol>
+<li>Abre una línea de órdenes, navega a la raíz de este repositorio</li>
+<li>Ejecuta la orden <strong>scons</strong>. El complemento creado, si no hay errores, se sitúa en el directorio actual.</li>
+</ol>
+</body>
+</html>

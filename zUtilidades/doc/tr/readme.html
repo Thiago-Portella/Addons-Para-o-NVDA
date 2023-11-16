@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDA için zAraçlar 0.2.8</title>
+</head>
+<body>
+<h1>zAraçlar Kılavuzu</h1>
+<ul>
+<li>Yazar: Héctor J. Benitez Corredera  </li>
+<li>NVDA uyumluluğu: 2019.3 2021.1</li>
+<li><a href="https://nvda.es/files/get.php?file=zUtilidades">Eklentiyi İndir:</a>  </li>
+<li><a href="https://github.com/hxebolax/zUtilidades-para-NVDA">Github Projesi:</a>  </li>
+</ul>
+<hr />
+<h2>İçindekiler<a id="Índice"></a></h2>
+<ul>
+<li><a href="#mark0">Başlarken</a></li>
+<li><a href="#mark1">Uygulama Başlatıcı Modülü</a></li>
+<li><a href="#mark2">Ana ekran</a></li>
+<li><a href="#mark3">Kategori listesi</a></li>
+<li><a href="#mark4">Eylem listesi</a></li>
+<li><a href="#mark5">Eylem Ekle</a></li>
+<li><a href="#mark6">eylemi düzenle</a></li>
+<li><a href="#mark7">Eylemi Silme</a></li>
+<li><a href="#mark8">Menü butonu</a></li>
+<li><a href="#mark9">Hızlı tuşlar</a></li>
+<li><a href="#mark10">Yazarın açıklamaları</a></li>
+<li><a href="#mark11">Çabuk Notlar modülü</a></li>
+<li><a href="#mark12">Her yerden hızlı bir not ekleyin</a></li>
+<li><a href="#mark13">Uygulama Başlatıcı ve Çabuk Notlar için Sanal Menüler</a></li>
+<li><a href="#mark14">Çevirmenler ve ortak çalışanlar</a></li>
+<li><a href="#mark15">Sürüm Geçmişi</a></li>
+<li><a href="#mark0.2.3">Sürüm 0.2.3</a></li>
+<li><a href="#mark0.2.2">Sürüm 0.2.2</a></li>
+<li><a href="#mark0.2.1">Sürüm 0.2.1</a></li>
+<li><a href="#mark0.2">Sürüm 0.2</a></li>
+<li><a href="#mark0.1.6">Sürüm 0.1.6</a></li>
+<li><a href="#mark0.1.5">Sürüm 0.1.5</a></li>
+<li><a href="#mark0.1">Sürüm 0.1</a></li>
+</ul>
+<hr />
+<h1>Başlarken<a id="mark0"></a></h1>
+<p>zAraçlar, NVDA için bir dizi küçük uygulama olarak tasarlanmıştır.  </p>
+<p>İlgi duyulabilecek uygulamaların eklenmesi için çalışmalar devam edecek. Böylece kolay arayüz ile erişilebilir olacaklardır.  </p>
+<p>zAraçlar eklentisinin NVDA Araçlar menüsünde bir menüsü olacaktır, bu menüde farklı modüller eklenecektir.  </p>
+<p>Bütün modüller, NVDA menüsü / Tercihler / Girdi hareketleri'ne giderek zAraçlar seçeneği içerisinde bulunur ve kısa yol eklenebilir.  </p>
+<p>Varsayılan olarak modüller herhangi bir Kısayol atanmadan gelir.  </p>
+<p>Bu nedenle, Araçlar / zAraçlar menüsüne giderek veya her modül için bir tuş kombinasyonu atayarak modülleri çalıştırabiliriz.  </p>
+<p>Eklenti, şu anda aşağıdaki modüllerden oluşmaktadır:  </p>
+<ul>
+<li>Uygulama başlatıcı.  </li>
+<li>Çabuk Notlar.  </li>
+</ul>
+<h1>Uygulama Başlatıcı Modülü<a id="mark1"></a></h1>
+<p>Bu modül, ister taşınabilir ister kurulu olsun, bilgisayarımızın herhangi bir yerinden bir uygulamayı hızlı bir şekilde başlatmamızı sağlayacaktır.  </p>
+<h2>Ana ekran<a id="mark2"></a></h2>
+<p>Ana ekran bir kategori listesi, bir Eylem listesi ve bir Menü düğmesinden oluşur.  </p>
+<p>Sekme tuşu ile aralarında dolaşabiliriz.  </p>
+<h3>Kategori listesi<a id="mark3"></a></h3>
+<p>Bu alanda kategori ekleyebilir, düzenleyebilir veya silebilir, uygulamalarımızı istediğimiz gibi kategoriler halinde sıralayabiliriz.  </p>
+<p>Ekle, Düzenle veya Sil seçeneklerine iki şekilde ulaşabiliriz.  </p>
+<p>Kategoriler alanında Uygulama veya Shift+F10 tuşlarına bastığımızda üç seçenekten birini seçebileceğimiz bir menü görüntülenecektir.  </p>
+<p>Hem ekleme hem de düzenleme diyalogları çok basittir, yeni kategorinin adını koyabileceğimiz veya seçtiğimiz kategoriyi düzenleyebileceğimiz tek bir metin alanına, Kabul Et ve İptal Et düğmelerine sahiptir.  </p>
+<p>Listeden bir kategori seçip silindiğinde, içerisinde bulunan bütün eylemlerin ve veritabanında bulunan programların geri alınamaz şekilde silineceğini unutmamalıyız. Hepsini yeniden tanımlamamız gerekir.  </p>
+<p>Bu seçeneklere Menü butonuna basarak veya Alt+M tuş kombinasyonunu kullanarak da ulaşabiliriz. Önceki 3 seçenekten birini seçebileceğimiz Kategoriler adlı bir alt menü ile diğer seçenekleri içeren bir menü görüntülenecektir.  </p>
+<p>Düzenle ve Sil seçeneğinin her zaman odaklanılan kategoride olacağını ve kategori olmaması durumunda ilgili seçenekleri kullanamayacağımızı unutmamalıyız.  </p>
+<p>Kategoriyi sıralamak üzere taşımak için Alt + Yukarı Ok ve Aşağı Ok tuş kombinasyonlarını da kullanabiliriz.  </p>
+<h3>Eylem listesi<a id="mark4"></a></h3>
+<p>Bu alan, seçtiğimiz kategoriye eklediğimiz Eylemlerin görüldüğü yerdir.  </p>
+<p>Eylem Ekle, Eylemi Düzenle veya Eylemi Sil olmak üzere üç seçenek bulunur.  </p>
+<p>Bu seçenekleri kategori listesinde olduğu gibi, Uygulama tuşu, Shift + F10 ile hızlıca açabilir veya Menü düğmesine (Alt + M) ile gidip Eylemler alt menüsüne erişebiliriz.  </p>
+<p>Bu Eylem listesinde, boşluk tuşuna basarak seçili olan uygulamayı başlatabiliriz.  </p>
+<p>listeyi sıralamak üzere taşımak için Alt + Yukarı Ok ve Aşağı Ok tuş kombinasyonlarını da kullanabiliriz.  </p>
+<p>Bu alanda dilediğimiz bir harfe basarak farklı girdiler arasında hızlıca gezinebiliriz, böylece veritabanında çok sayıda Eylem varsa çalıştırmak istediğimiz uygulamayı hızlıca bulabiliriz.  </p>
+<h4>Eylem ekle menüsü<a id="mark5"></a></h4>
+<p>Bu menüde aşağıdaki seçenekler arasından seçim yapabiliriz:  </p>
+<ul>
+<li>Uygulama ekle:  </li>
+</ul>
+<p>Bir uygulama eklersek, gerekli olan iki alan vardır ve bunlar uygulamanın adı ve uygulamamızın bulunduğu dizindir.  </p>
+<p>Şu anda eklenti, exe, bat ve com uzantılarına sahip uygulamaları desteklemektedir.  </p>
+<p>Zorunlu alanlar doldurulduktan sonra, uygulamanın ek parametreler gerektirmesi veya uygulamayı yönetici modunda çalıştırmak isteyip istemediğimizi seçebiliriz.  </p>
+<p>Bir uygulamayı yönetici modunda çalıştırmak istiyorsak, uygulamayı başlattığımızda ilgili izin istenecektir.  </p>
+<ul>
+<li>CMD komutu ekle.  </li>
+</ul>
+<p>Bu iletişim kutusunda konsol komutları ekleyebiliriz.  </p>
+<p>Komutu tanımlamak için ad  ve komutlar alanını doldurmak gereklidir.  </p>
+<p>Birkaç takdir, Windows PowerShell'de ustalaşırsak cmd komutlarını başlatmanın yanı sıra, PowerShell'i komut satırına koyarsak ve ardından istediğimizi izlersek, PowerShell komutlarını da çalıştıracağız.  </p>
+<p>Aynı şekilde, bunlar CMD komutlarıysa, Shift + 6 ile, bunu İspanyolca QWERTY klavye ile yaparak elde edilen (Bölü) sembolüyle ayrılması gereken birkaç satırı çalıştırabileceğimizi ekliyorum. İngilizce QWERTY klavye kullanıyorsanız, bu Shift+7 ile yapılacaktır.  </p>
+<p>Windows Gezgini'ni yeniden başlatmak için komut satırına bir örnek koydum, bir komut satırını diğerinden ayırmak için (Bölü) sembolünü kullandığımı göreceksiniz.  </p>
+<p><code>taskkill /f /im explorer.exe &amp; start explorer</code>  </p>
+<p>Ayrıca bu iletişim kutusunda, konsolun kapanmaması ve sonuçları görebilmemiz için bir duraklama koyabiliriz.  </p>
+<p>Yönetici olarak da çalıştırabiliriz.  </p>
+<ul>
+<li>Klasör erişimi ekle.  </li>
+</ul>
+<p>Bu iletişim kutusunda, klasöre erişimi tanımlamak için bir ad belirtmemiz ve bir klasör seçmemiz gerekecek.  </p>
+<p>Bu, sistem klasörlerimizi her yerden hızlı bir şekilde açmamızı sağlayacaktır.  </p>
+<ul>
+<li>Windows çalıştır kısayolları ekle.  </li>
+</ul>
+<p>Bu iletişim kutusunda başlatmak için bir kısayol seçebiliriz. Ayrıca yönetici olarak başlatmak isteyip istemediğimizi de seçebiliriz.  </p>
+<p>Kısayol adını ve yolunu tanımlayan alanlar gereklidir.  </p>
+<ul>
+<li>Yüklü uygulama ekle.  </li>
+</ul>
+<p>Bu iletişim kutusunda, bilgisayarımıza yüklenen tüm uygulamalar, kullanıcı tarafından eklenen veya Windows ile birlikte gelenler görüntülenecektir.  </p>
+<p>Ayrıca bu ekranda Windows mağazasından yüklenen uygulamaları seçebiliriz.  </p>
+<p>Uyarı bu, Windows 7 için geçerli değildir.  </p>
+<p>Bu iletişim kutusundan bir uygulama eklendiğinde, düzenlenemeyeceğini, düzenleme gerekiyorsa silip yeniden eklememiz gerektiğini unutmamalıyız.  </p>
+<p>Bu iletişim kutusundaki yönetici seçeneği tüm uygulamalar için çalışmayacaktır. Yalnızca yönetici ayrıcalıklarının yükseltilmesine izin verenler için çalışır.  </p>
+<p>Ayrıca, bu iletişim kutusunda, uygulamalar tarafından yüklenen erişimlerin de görüneceği konusunda uyarmalıyız. Bunları seçebiliriz ama bazıları hata vererek açılmasına izin vermeyebilir.  </p>
+<p>Ayrıca dikkatli olmanız gerektiğini de unutmayın. çünkü bu listede yönetmek için olabilecek uygulamalar olacak, ne için olduklarını bilmiyorsak onlara dokunmamak daha iyidir.  </p>
+<h4>eylemi düzenle<a id="mark6"></a></h4>
+<p>Düzenle iletişim kutusu, Eylem Ekle iletişim kutusuyla tamamen aynıdır, ancak seçtiğimiz girişi değiştirmemize izin verecektir.  </p>
+<p>Yüklü uygulama ekle seçeneği tarafından eklenenler dışındaki tüm öğeleri değiştirmemize izin verecek, diyaloglar eklenecek seçeneklerdekiyle aynı olacaktır.  </p>
+<h4>Eylemi Sil<a id="mark7"></a></h4>
+<p>Bir girdiyi silersek, bu eylemin geri alınamayacağını hesaba katmalıyız.  </p>
+<h3>Menü butonu<a id="mark8"></a></h3>
+<p>Bu düğmeye, Alt+M kombinasyonuna basılarak arabirimin herhangi bir yerinden erişilebilir.  </p>
+<p>Bu menüde Kategoriler, Eylemler, Yedekle veya geri yükle ve Seçenekler olmak üzere dört alt menü bulacağız, Ayrıca Çıkış seçeneği de bulunur.  </p>
+<p>Kategoriler ve Eylemler yukarıda açıklandığından, Yedekle ve Geri yükle ile Seçenekler'i açıklayacağız:  </p>
+<p>Pekala, Yedekle seçeneğini seçersek, veritabanı yedeğimizi nereye kaydedeceğimizi seçmemiz gereken bir Windows kaydetme penceresi açılacaktır.  </p>
+<p>Ddosya adı varsayılan olarak şöyle bir şeydir:</p>
+<p><code>Backup-03052021230645.zut-zl</code>  </p>
+<p>Uzantı varsayılan olarak ayarlanmıştır, adı modüle karşılık gelir ve oluşturulduğu tarihi içerir, böylece istediğimiz adı koyabiliriz.  </p>
+<p>Kaydedildikten sonra, veritabanımızın bozulması, yanlışlıkla silmemiz veya kaydettiğimiz bir sürüme geri dönmek istememiz durumunda onu geri yükleyebiliriz.  </p>
+<p>Peki, Geri Yükle seçeneğini seçiyoruz ve dosyaları açmak için klasik bir Windows penceresi açılacak.  </p>
+<p>Kaydettiğimiz *.zut-zl uzantılı kopyayı seçmeliyiz, dosyayı bulamazsanız uzantıyı değiştirmemeye dikkat edin.  </p>
+<p>Seçildiğinde, yedekleme geri yüklenecek, Tamam'a tıkladığımızda eklenti kapanacak ve bir sonraki açışımızda kopyamız geri yüklenecektir.  </p>
+<p>*.zut-zl dosyalarının gerçekten sıkıştırılmış dosyalar olduğunu unutmayın. ancak bunları değiştirirken dikkatli olun çünkü bunlar değiştirilirse imza eşleşmez ve bu onları geri yüklemenize izin vermez.  </p>
+<p>Demek istediğim, bu dosyaların, geri yükleme sırasında eşleşmezse başarısız olacağı ve her imzanın her dosya için farklı olduğu bir imzası var.  </p>
+<p>Seçenekler alt menüsünde artık yalnızca uygulama başlatıcısının varsayılan değerlerine dön seçeneği var.  </p>
+<p>Bu seçeneği seçersek, tüm veritabanı silinecek ve eklenti yeni kurulmuş gibi sıfırlanacaktır.  </p>
+<h2>Hızlı tuşlar<a id="mark9"></a></h2>
+<p>Hem kategori, hem de Uygulamalar alanlarında kısayol tuşlarını şöyle sıralayabiliriz:  </p>
+<ul>
+<li>Alt + Yukarı Ok veya Aşağı Ok: Kategori veya Eylem listesinde ögeler arasında gezinmeyi sağlar. Liste başına vbeya sonuna ulaşıldığı zaman bir sesle daha fazla gidilemeyeceği belirtilir.  </li>
+<li>Alt + K: Hızlıca Kategori listesine gider.  </li>
+<li>Alt + L: Uygulamaların bulunduğu Eylem listesine gider.  </li>
+<li>Alt + M: Menüyü açar.  </li>
+<li>Uygulama tuşu veya Shift + F10: Kategori veya eylem listesinde, seçeneklerin bulunduğu içerik menüsü görüntülenir.  </li>
+<li>Boşluk çubuğu: Eylem listesinde seçili olan uygulama etkinleştirilir.  </li>
+<li>Escape: Ana Uygulama Başlatıcı ekranı da dahil olmak üzere uygulamanın açabileceği tüm iletişim kutularını kapatır.  </li>
+</ul>
+<h2>Yazarın açıklamaları<a id="mark10"></a></h2>
+<p>Bir uygulamayı başlattığımızda Uygulama başlatıcı penceresi kapanır. Başka bir uygulama başlatabilmek için aynı pencereyi tekrar açmamız gerekir.  </p>
+<p>Ayrıca, kategorinin konumunu ve en son ziyaret edilen uygulamayı kaydedecek bir işlev de uygulandı, bu nedenle Uygulama Başlatıcı'yı açtığımızda, söz konusu kategorinin hem son kategorisi hem de son uygulaması her zaman seçili olarak gelecektir.  </p>
+<p>Odak kaydetme özelliği eklendiğinden, eklenti penceresini her açtığımızda son seçili odakta açılacaktır.  </p>
+<p>Örneğin: Menü düğmesi seçili durumdayken Uygulama başlatıcı penceresini kapatıp, tekrar açtığımızda aynı buton üzerine odaklanmış olduğunu görürüz.  </p>
+<p>Bu özellikler NVDA yeniden başlatılana kadar geçerlidir. Ekran okuyucuyu yeniden başlatıp Uygulama başlatıcıyı açtığımızda Kategoriler listesine odaklandığını görürüz.  </p>
+<p>Bu eklenti, Windows 10 ile kullanılmak üzere yapılmıştır, bu nedenle önceki sürümleri kullanıyorsanız ve herhangi bir sorun yaşarsanız lütfen bana bildirin, ancak bazı özellikler yalnızca Windows 10'da bulunduğundan kesinlikle hiçbir şey yapamam.  </p>
+<h1>Çabuk Notlar modülü<a id="mark11"></a></h1>
+<p>Bu modül, elimizin altında danışabileceğimiz, düzenleyebileceğimiz, silebileceğimiz küçük notlara sahip olmamıza yardımcı olacaktır.  </p>
+<p>Modül, Uygulama Başlatıcı ile aynı işleme sahiptir ancak aşağıda açıklanan bazı tuşlarda değişiklik gösterir.  </p>
+<p>Yedekleme yapabileceğimiz, geri yükleyebileceğimiz, eklentiyi varsayılan değerlere döndürebileceğimiz, kategorileri ve notları yönetebileceğimiz menüyü açıklamayacağım.  </p>
+<p>Ayrıca arayüzü de tamamen aynı olduğu için tekrar açıklamayacağım.  </p>
+<p>Çabuk bir şekilde Not ekleyebilir, Notun adını girebnilir ve sekme tuşuna basarak içeriğini de belirtebiliriz.  </p>
+<p>Notu düzenle iletişim kutusu da tamamen aynıdır, verilen ad değiştirilebilir ve içeriği de düzenlenebilir.  </p>
+<p>Bu modül, bazı ek tuş kombinasyonları kullanması bakımından uygulama başlatıcı modülünden şu farklılıkları gösterir:  </p>
+<ul>
+<li>F1: Bir notun üstündeyken F1'e basarsak notun içeriğini bize okuyacaktır.  </li>
+<li>F2: Seçili notu panoya kopyalar. Bu şekilde dilediğimiz yazma alanına içeriğini yapıştırabiliriz.  </li>
+<li>F3: Bu kombinasyon Çabuk notlar penceresini kapatır ve odaklandığımız notun içeriğini aktif olan bir yazma alanına yapıştırır, yani Not Defteri, bir e-posta alanı, Word vb.  </li>
+</ul>
+<p>Örnek: Not defteri uygulaması açıkken Çabuk notlar uygulamasını çalıştırıp, bir not seçip ve F3 tuşuna basarsak ilgili not kopyalanır. Çabuk notlar penceresi kapanır ve ilgili not içeriği not defteri içerisine yapıştırılır.  </p>
+<p>Ancak Masaüstü aktifken aynı işlemler gerçekleştirilirse hiçbir şey olmadığı görülür.  </p>
+<p>Ayrıca hem kategoriler alanında hem de not listesi alanında çalışmaya devam ediyor, bu alanları Alt+Oklarla yukarı aşağı sıralayarak seçtiklerimizi hareket ettirebiliyoruz.  </p>
+<p>Boşluk tuşuna basarsak, sadece seçili not içeriğini görebileceğimiz bir pencere açılacaktır.  </p>
+<p>Bu modül için de tanımlı bir kısayol bulunmadığından, Girdi hareketleri iletişim kutusundan dilediğimiz tuş bileşenlerini atayabiliriz.  </p>
+<p>Menü butonu ile açılan içeriğe Seçenekler adlı bir iletişim kutusu eklendi.  </p>
+<p>Şu anda yalnızca bir seçeneğiniz var:  </p>
+<ul>
+<li>Çabuk notlarda pencere başlığını yakalayın (her yerden)  </li>
+</ul>
+<p>Eğer bu seçenek seçili durumda olursa; Bir metin dosyası açık olduğunda Çabuk not ekle penceresini çağırıp yeni not eklersek, Ad alanına ilgili metnin başlığı otomatik olarak eklenecektir.  </p>
+<h1>Her yerden hızlı bir not ekleyin<a id="mark12"></a></h1>
+<p>Ayrıca Çabuk Notlar modülü, eklenti iletişim kutusunu açmadan herhangi bir yerden Çabuk not ekleme özelliğine sahiptir.  </p>
+<p>Girdi Hareketleri iletişim kutusunda, aşağıda bulacağımız tuş kombinasyonunu yapılandırabiliriz:  </p>
+<p>NVDA / Tercihler / Girdi Hareketleri / zAraçlar / Tek basışta seçili metinden yeni bir çabuk not ekler. Çift basışta, yeni bir çabuk not ekler.  </p>
+<p>Dilediğimiz tuş atamasını tamamladıktan sonra, herhangi bir yerde metin seçip ve tuş kombinasyonuna basmamız yeterli olacaktır.  </p>
+<p>İlk olarak notumuzu hangi kategoriye kaydetmek istediğimizi seçmemiz gereken bir pencere açılacak, sadece eklediğimiz kategoriler görünecektir.  </p>
+<p>Sekme tuşuna bastığımızda notun ad yazma alanına erişebilir ve tekrar sekme tuşuna bastığımızda ise kopyaladığımız metnin içerik alanında olduğunu görürüz.  </p>
+<p>Tamam tuşuna basarak notumuzu kaydedip, ilgili kategori içerisinde görebiliriz.  </p>
+<p>Belirlediğimiz kısayol tuşuna iki defa peş peşe basarsak: Eklenti bizden kategori seçmemizi, not adını girmemizi ve ardından da içeriğini belirlememizi ister. Bu şekilde yeni bir not oluşturmuş oluruz.  </p>
+<h1>Uygulama Başlatıcı ve Çabuk Notlar için Sanal Menüler<a id="mark13"></a></h1>
+<p>Bu menüler, zAraçlar'ı geliştirmek için geldi ve şimdi onu çok daha üretken ve daha hızlı hale getiriyor.  </p>
+<p>Uygulama başlatıcısına ve Çabuk notlara atadığımız kısayollarda artık çift basma ile çalışan özellikler var.  </p>
+<p>Bu kombinasyona bir kez basarsak grafik arayüz, iki kez basarsak sanal menü görünecektir.  </p>
+<p>Bu menüde kategoriler arasında sağ ve sol oklarla, varsa söz konusu kategorideki öğeler arasında yukarı ve aşağı oklarla hareket edebiliyoruz.  </p>
+<p>Uygulama başlatıcı menüsü ile Çabuk notlar menüsü arasında bazı farklılıklar var.  </p>
+<p>Uygulama başlatıcısının sanal menüsünde oklarla hareket ettiriyoruz ve enter ile seçtiğimiz öğeyi ilgili eylemi gerçekleştirerek yürütüyoruz.  </p>
+<p>Eğer bu bir cmd komutu ise, o zaman onu çalıştıracaktır, eğer hızlı bir erişim ise aynı ve grafiksel arayüz gibi.  </p>
+<p>Escape ile menüden hiçbir şey yapmadan çıkabiliriz.  </p>
+<p>Bu menüde, N harfi hariç dilediğimiz bir harfe basarak hızlıca ilgili kategoriye gidebiliriz.  </p>
+<p>Bastığımız harf ile başlayan bir kategori yoksa bir yardım mesajı seslendirilir.  </p>
+<p>Menü etkinken, biz menüden çıkana kadar diğer tüm NVDA tuş kombinasyonlarının çalışmayacağını belirtmeliyiz.  </p>
+<p>Çabuk Notlar menüsünde boşluk tuşu işe yaramaz ve uygulama başlatıcı ile farklılıkları ise:  </p>
+<p>Bir öğenin üstüne geldiğimizde F1'e basarsak notun içeriğini sözlü hale getirir, F2 ile notu panoya kopyalar ve F3 ile notun içeriğini odaklandığımız yazma alanına yapıştırır.  </p>
+<p>Bu menüde de klavye tuşları Escape ile çıktıktan sonra aktif olacaktır.  </p>
+<h2>Çevirmenler ve ortak çalışanlar:<a id="mark14"></a></h2>
+<ul>
+<li>Fransızca: Remy Ruiz  </li>
+<li>Portekizce: Ângelo Miguel Abrantes  </li>
+<li>İtalyanca: Alessio Lenzi</li>
+<li>Javi Domínguez: Bana menüyü nasıl programlayacağımı öğrettiğin için çok teşekkür ederim. Bunu benim gibi aptallara açıklamak yerine.</li>
+<li>Türkçe: Umut KORKMAZ</li>
+</ul>
+<h1>Sürüm Geçmişi:<a id="mark15"></a></h1>
+<h2>Sürüm 0.2.3.<a id="mark0.2.3"></a></h2>
+<p>Yeni bir Çabuk not ekle veya seçilen metinden Çabuk not ekle'de pencerelerin başlığını yakalama imkanı eklendi.  </p>
+<p>Bu seçenek, Çabuk Notlar modülünün menüsündeki seçenekler / Seçenekler bölümünde etkinleştirilebilir.  </p>
+<p>Bu andan itibaren kutu işaretlenirse, Yeni bir Çabuk not ekle veya seçilen Metinden Çabuk not ekle Kısayoluna basıldığında aktif pencerenin başlığı ad olarak alınır.  </p>
+<h2>Sürüm 0.2.2.<a id="mark0.2.2"></a></h2>
+<ul>
+<li>Hem uygulama başlatıcıda hem de Çabuk Notlar içerisinde kategoriler arasında taşıma özelliği eklendi.  </li>
+<li>Seçili metinden Çabuk not ekle tuşu için çift tıklama eklendi. Şimdi çift tıklama ile sıfırdan yeni bir Çabuk not oluşturmamıza imkan verecek.  </li>
+<li>Fransızca dokümantasyon güncellendi.  </li>
+<li>İtalyanca dil eklendi.  </li>
+</ul>
+<h2>Sürüm 0.2.1.<a id="mark0.2.1"></a></h2>
+<ul>
+<li>Bir metin yapıştırmaya çalışırken boş pano ile ilgili sorun düzeltildi.  </li>
+</ul>
+<h2>Sürüm 0.2.<a id="mark0.2"></a></h2>
+<ul>
+<li>Birçok dahili hata düzeltildi.  </li>
+<li>Uygulama Başlatıcı modülü stabilize edildi.  </li>
+<li>Yeni bir Çabuk Notlar modülü eklendi.  </li>
+<li>Her iki modül için sanal menüler eklendi.  </li>
+</ul>
+<h2>Sürüm 0.1.6.<a id="mark0.1.6"></a></h2>
+<ul>
+<li>Fransızca ve Portekizce dili eklendi (Portekiz / Brezilya).  </li>
+</ul>
+<h2>Sürüm 0.1.5.<a id="mark0.1.5"></a></h2>
+<ul>
+<li>Menüler yeniden yapılandırıldı.  </li>
+</ul>
+<p>Ekleme yeteneği eklendi:  </p>
+<ul>
+<li>CMD komutu ekle.  </li>
+<li>Klasör erişimi ekle  .</li>
+<li>Windows çalıştır kısayolları ekle.  </li>
+<li>Yüklü uygulama ekle.  </li>
+<li>Seçeneklerdeki Varsayılana sıfırlaUygulama başlatıcısı Menü düğmesine eklendi.  </li>
+<li>Veritabanındaki çeşitli hatalar düzeltildi.  </li>
+<li>Sabit dahili hatalar.  </li>
+<li>Eklenti tercüme edilmek üzere hazırlandı.  </li>
+</ul>
+<h2>Sürüm 0.1.<a id="mark0.1"></a></h2>
+<ul>
+<li>Uygulama Başlatıcı modülü eklendi.  </li>
+<li>İlk sürüm.</li>
+</ul>
+</body>
+</html>

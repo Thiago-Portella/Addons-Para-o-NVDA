@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Unmute Windows audio 1.5.7</title>
+</head>
+<body>
+<h1>NVDA Unmute</h1>
+<ul>
+<li>Author: Oleksandr Gryshchenko</li>
+<li>Version: 1.5</li>
+<li>NVDA compatibility: 2019.3 and beyond</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=unmute">stable version</a></li>
+</ul>
+<p>This add-on checks the status of the Windows audio system when NVDA starts. And, if it turns out that the sound is muted - the add-on forcibly turns it on.</p>
+<p>At the same time, the volume level is checked separately for the NVDA process.</p>
+<p>The add-on also checks the status of the speech synthesizer. If there are problems with its initialization, attempts are made to start the synthesizer, which is specified in the NVDA settings.</p>
+<p>There is an additional opportunity to check on which audio device the NVDA sound is output. And, if this device differs from the default device, the output automatically switches to the audio device installed in the system as the main one.</p>
+<p>Note: If the add-on startup sound always plays even if the NVDA volume is online. That is, the add-on switches the output to the main audio device each time you start NVDA.</p>
+<p>This occurs when the audio output device is in the NVDA settings is differ from the default output device or "Microsoft Sound Mapper".</p>
+<p>This can be easily solved in one of the following ways:</p>
+<ol>
+<li>After restarting NVDA, just save the current configuration using NVDA+Ctrl+C. The default audio device will be saved in the NVDA settings and switching will not occur each time when NVDA starts.</li>
+<li>If you don't want to change the NVDA configuration - just disable the function of switching audio devices in the Unmute settings panel.</li>
+</ol>
+<h2>Add-on settings dialog</h2>
+<p>To open the add-on settings panel, follow these steps:</p>
+<ul>
+<li>Press NVDA+N to open NVDA menu.</li>
+<li>Then go to "Preferences" -&gt; "Settings..." and in the categories list find and open "Unmute Windows Audio".</li>
+</ul>
+<p>That's it, you can now use the Tab key to move between add-on settings.</p>
+<p>The following options are available in the add-on settings dialog:</p>
+<ol>
+<li>
+<p>The first slider in the add-on settings dialog allows you to specify the volume level of Windows, which will be set when you start NVDA if the sound was previously muted or was too low.</p>
+</li>
+<li>
+<p>The minimum Windows volume level at which the volume up procedure will be applied. This slider allows you to adjust the sensitivity level of the add-on.</p>
+<p>If the volume level drops to less than the value specified here, the volume will be increased the next time you start NVDA.</p>
+<p>Otherwise, if the volume level remains higher than the value specified here, then when you restart NVDA, its level will not change.</p>
+<p>And, of course, if the sound was previously turned off, when restarts add-on will turn it on anyway.</p>
+</li>
+<li>
+<p>The following check box allows to enable re-initialization of the voice synthesizer driver.</p>
+<p>This procedure will only start if it is detected at NVDA startup that the voice synthesizer driver has not been initialized.</p>
+</li>
+<li>
+<p>In this field you can specify the number of attempts to re-initialize the voice synthesizer driver. Attempts are performed cyclically with an interval of 1 second. A value of 0 means that attempts will be performed indefinitely until the procedure is successfully completed.</p>
+</li>
+<li>
+<p>The "Switch to the default output audio device" option allows to check at startup the audio device on which NVDA sound is output. And, if this device differs from the default device, the output automatically switches to the audio device installed in the system as the main one.</p>
+</li>
+<li>
+<p>The next checkbox turns on or off playing the startup sound  when the operation is successful.</p>
+</li>
+</ol>
+<h2>Third Party components</h2>
+<p>The add-on uses the following third-party components:</p>
+<ul>
+<li>For interaction with the <strong>Windows Core Audio API</strong> - <a href="https://github.com/AndreMiras/pycaw/">PyCaw module</a> that is distributed under the MIT license.</li>
+<li>For getting the information about running processes and using the PyCaw component - <a href="https://github.com/giampaolo/psutil">psutil module</a> that is distributed under BSD-3 license.</li>
+</ul>
+<h2>Change log</h2>
+<h3>Version 1.5.7</h3>
+<ul>
+<li>the add-on has been tested for compatibility with NVDA 2023.1.</li>
+</ul>
+<h3>Version 1.5.6</h3>
+<ul>
+<li>the add-on has been tested for compatibility with NVDA 2022.1;</li>
+<li>updated third-party module <strong>psutil</strong>;</li>
+<li>the add-on is adapted to support Python versions 3.7 and 3.8;</li>
+<li>MyPy type annotations added to the add-on source code;</li>
+<li>added "Switch to the default output audio device" feature;</li>
+<li>the add-on parameters are always stored in the base configuration profile;</li>
+<li>added Spanish and Galician translations (thanks to Ivan Novegil Cancelas and Jose Manuel);</li>
+<li>updated translation into Vietnamese (thanks to Dang Manh Cuong).</li>
+</ul>
+<h3>Version 1.4</h3>
+<ul>
+<li>added a method to increase the startup volume separately for the NVDA process;</li>
+<li>changed the sound notification of a successful operation (thanks to Manolo);</li>
+<li>all manual volume control functions have been transferred to the NVDA Volume Adjustment add-on.</li>
+</ul>
+<h3>Version 1.3</h3>
+<ul>
+<li>added the ability to control the volume of the main audio device and separately for each running program;</li>
+<li>updated translation into Vietnamese (thanks to Dang Manh Cuong);</li>
+<li>added Turkish translation (thanks to Cagri Dogan);</li>
+<li>Italian translation added (thanks to Christianlm);</li>
+<li>added simplified Chinese translation (thanks to Cary Rowen);</li>
+<li>Polish translation added (thanks to Stefan Banita);</li>
+<li>updated Ukrainian translation;</li>
+<li>updated ReadMe.</li>
+</ul>
+<h3>Version 1.2</h3>
+<ul>
+<li>switched to using the <strong>Core Audio Windows API</strong> instead of <strong>Windows Sound Manager</strong>;</li>
+<li>added startup sound playback when audio is successfully turned on by add-on.</li>
+</ul>
+<h3>Version 1.1</h3>
+<ul>
+<li>added add-on settings dialog;</li>
+<li>updated Ukrainian translation.</li>
+</ul>
+<h3>Version 1.0.1</h3>
+<ul>
+<li>Performs repeated attempts to enabling the synth driver in case of its failed initialization;</li>
+<li>Vietnamese translation added by Dang Manh Cuong;</li>
+<li>Ukrainian translation added.</li>
+</ul>
+<h3>Version 1.0. Features of implementation</h3>
+<p>The add-on uses a third-party module Windows Sound Manager.</p>
+<h2>Altering of add-on source code</h2>
+<p>You may clone this repo to make alteration to NVDA Unmute.</p>
+<h3>Third Party dependencies</h3>
+<p>These can be installed with pip:</p>
+<ul>
+<li>markdown</li>
+<li>scons</li>
+<li>python-gettext</li>
+</ul>
+<h3>To package the add-on for distribution</h3>
+<ol>
+<li>Open a command line, change to the root of this repo</li>
+<li>Run the <strong>scons</strong> command. The created add-on, if there were no errors, is placed in the current directory.</li>
+</ol>
+</body>
+</html>

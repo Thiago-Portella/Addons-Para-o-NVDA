@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Accessible agenda 2023.10.17</title>
+</head>
+<body>
+<h1>Ajanda</h1>
+<h2>bilgiler</h2>
+<ul>
+<li>Yazarlar: Abel Passos, Ângelo Abrantes ve Rui Fontes</li>
+<li>Güncelleme: 17.10.2023</li>
+<li><a href="https://github.com/ruifontes/agenda-for-NVDA/releases/download/2023.10.17/agenda-2023.10.17.nvda-addon">Kararlı sürümü indirin</a></li>
+<li>Uyumluluk: NVDA sürüm 2019.3 ve sonrası</li>
+</ul>
+<p><br></p>
+<h2>Sunum</h2>
+<p>Bu eklenti, randevuları ve etkinlikleri alarmlı veya alarmsız yazmanıza olanak tanır.<br />
+İki farklı ajanda kullanabilirsiniz.<br />
+Bunlar arasında geçiş yapmak için NVDA menüsü, Tercihler, Ayarlar, ajanda bölümüne gidin ve açılan kutudan kullanmak istediğiniz ajandayı seçin.<br />
+İkinci satır boşsa, ikinci bir ajanda oluşturmak için \"Bir dizin seçin veya ekleyin\" düğmesini kullanın.<br />
+Bu düğmeyi bir yol seçiliyken kullanırsanız, ajanda yoksa, ajanda yeni yola taşınır. Olursa, yalnızca yol değiştirilir ve kullanılan yeni yol ile her iki ajanda da korunur.<br />
+NVDA her başlatıldığında, bu gün ve sonraki gün için randevular size hatırlatılacaktır. Bu hatırlatıcı, tüm randevuların listesini içeren bir pencere veya alarmı ayarlanmış randevular için diyalog ve sesli alarm içeren bir hatırlatıcı olabilir.<br />
+Bu seçenek, eklentinin ayarlarından yapılandırılabilir.</p>
+<p><br></p>
+<h2>Komut</h2>
+<p>Eklentiyi çağırma komutu NVDA+F4'tür.<br />
+Bunu, Girdi hareketleri iletişim kutusunda Ajanda başlığını genişleterek değiştirebilirsiniz.</p>
+<p><br></p>
+<h2>Nasıl çalışır:</h2>
+<ul>
+<li>NVDA ekran okuyucusunu açtığınızda, bu günün randevuları görüntülenecektir.</li>
+<li>Ana pencerede tarihin değiştirileceği alanlar, seçilen tarih için randevular ve daha sonra anlatılacak olan bazı program kontrol butonları bulunmaktadır.<br />
+Tarih alanları Yukarı/aşağı ok tuşlarıkullanılarak veya istenilen değer yazılarak değiştirilebilir. Tarih değiştirilirken günün randevuları otomatik olarak görüntülenecektir.</li>
+</ul>
+<p><br></p>
+<h3>Ana pencere için kısayol tuşları:</h3>
+<ul>
+<li>Alt + 1-9: Basılan değere bağlı olarak gün sayısını değiştirir;</li>
+<li>Alt+0: Geçerli tarihe döner;</li>
+<li>Alt+sol ok: Önceki güne gider;</li>
+<li>Alt+sağ ok: Sonraki güne gider;</li>
+<li>Alt+Yukarı Ok: Bir hafta sonrasına gider;</li>
+<li>Alt+Aşağı ok: Bir hafta öncesine gider;</li>
+<li>Alt+Sayfa yukarı: Bir ay sonrasına gider;</li>
+<li>Alt+Sayfa aşağı: Bir ay öncesine gider;</li>
+<li>Enter: Bir randevu seçilirse düzenleme penceresini açar. Eğer randevu yoksa, yenisini oluşturmak için ilgili pencereyi açar.;</li>
+<li>Sil: Seçilen kaydı siler. Kaldır düğmesiyle aynı işlev;</li>
+<li>Control+f: "Ara" penceresini açar. "Ara" düğmesiile aynı işlevi görür;</li>
+</ul>
+<p><br></p>
+<h3>Ana penceredeki düğmelerin işlevleri ve ilgili kısa yol tuşları:</h3>
+<ul>
+<li>Ekle (Alt+E): Seçilen tarihteki randevuları kaydetmek için bir pencere açar;</li>
+<li>Düzenle (Alt+D): Seçilen randevuyu düzenlemek için bir pencere açar;</li>
+<li>Kaldır (Alt+K): Seçilen randevuyu siler;</li>
+<li>Ara (Alt+A): Ajandada bilgi aramak için bir pencere açar;</li>
+<li>Çık (Alt+Ç): Pencereyi kapatır.</li>
+</ul>
+<p><br></p>
+<h3>Ekleme ve düzenleme işlevleri oldukça benzerdir ve bu nedenle anlatılacak pencere her iki işlevi de yerine getirir.</h3>
+<p>Temel fark, düzenleme yapabilmek için daha önce değiştirilecek bir randevu seçmiş olmanız gerektiğidir.<br />
+Ayrıca, Düzenle işlevinde, seçilen randevu verileri değişiklik için pencerede görüntülenir. Ekle penceresinde ise, seçilen tarih haricindeki bilgi alanları boş olarak gelir.  </p>
+<p><br></p>
+<h3>Ekle ve Düzenle pencere alanları:</h3>
+<ul>
+<li>gün/ay/yıl: Yukarı ile aşağı oklarla veya istenilen değer yazılarak değiştirilebilen tarih alanları</li>
+<li>saat/dakika: Aşağı ile yukarı ok tuşlarıyla veya istenilen değer yazılarak değiştirilebilen zaman alanları</li>
+<li>Açıklama: Randevu ile ilgili bilgilerin doldurulacağı alan;</li>
+<li>Alarmlar: Gerektiğinde işaretlenmesi gereken onay kutuları. Varsayılan olarak, randevu tarihi ve saatinden önce herhangi bir alarm seçildiğinde, tam saat alarmı otomatik olarak devreye girer.</li>
+<li>Tamam düğmesi (Alt+T): randevu bilgilerini takvime ekler</li>
+<li>İptal düğmesi (Alt+L): Girilen bilgileri kaydetmeden pencereyi kapatır.</li>
+<li>Ekle/Düzenle penceresinde, doldurulmuş bilgileri kaydetmek için Ctrl+Enter kısayolu bulunur. Bu, Tamam düğmesiyle aynı işlevi görür.</li>
+</ul>
+<p><br></p>
+<h3>Arama penceresi alanları:</h3>
+<ul>
+<li>Arama türü: aşağıdaki seçeneklerden birini seçmelisiniz:
+<br><ul>
+<li>Metne göre ara: aramak istediğiniz şeyi yazmanız için bir düzenleme alanı açılacaktır. Tüm ifadeyi yazmak gerekli değildir, arama kelimelerin bölümleriyle yapılabilir;</li>
+<li>Sonraki 7 gün: geçerli gün hariç, sonraki 7 gün için randevuları görüntüler;</li>
+<li>Sonraki 30 gün: geçerli gün hariç, sonraki 30 gün için randevuları görüntüler;</li>
+<li>Tarih aralığı: arama için başlangıç ​​ve bitiş tarihi alanlarını görüntüler;
+<br></li>
+</ul>
+</li>
+<li>Ara düğmesi (Alt+A): Belirtilen kriterlere göre aramayı başlatır ve varsa sonuçları listeler.</li>
+<li>Ekle düğmesi (Alt+E): Ana penceredekiyle aynı ekleme işlevi. Aradaki fark, bir randevu seçtiyseniz, ekleme penceresi seçilen randevunun tarihinde olacaktır. Herhangi bir randevu seçilmemişse, geçerli tarih penceresini görüntüler;</li>
+<li>Düzenle düğmesi (Alt+D): Ana pencerede ki ile aynı düzenleme işlevdir. Düzenleme yapabilmek için bir randevunun seçili olması gerekir.</li>
+<li>Kaldır düğmesi (Alt+K): Seçili randevuyu Siler;</li>
+<li>Tümünü kaldır (Alt+T): Görüntülenen tüm randevuları siler;</li>
+<li>İptal düğmesi (Alt+L): arama penceresini kapatır ve ana pencereye döner.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ne" lang="ne">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>तुरून्तै अनुवाद (instantTranslate)</h1>
+<ul>
+<li>Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  and other nvda contributors.</li>
+<li>Download <a href="http://addons.nvda-project.org/files/get.php?file=it-dev">version 3.0-dev</a></li>
+</ul>
+<p>यो थप-साधन चयनीत र क्लीपपाठिमा भएका पाठहरूलाई एउटा भाषाबाट अर्को भाषामा
+अनुवाद गर्न प्रयो गरिन्छ । यो गुगल अनुवाद सेवाको प्रयोग गरि गरिन्छ ।</p>
+<h2>भाषाहरूको अभियोजन</h2>
+<p>To configure source, target and in case swap language, from NVDA menu, go to
+Preferences, then go to Instant Translate Settings.  There are three combo
+boxes labeled "translate from", "translate into" and "Language for swapping"
+(if you selected auto option from source languages).</p>
+<p>If you selected the auto option from source languages, there is also a
+checkbox about the auto-swap: if you activate it, then the addon tries to
+commute automatically from your source and target configuration to a
+configuration where target becomes the source language, and language
+selected in "Language for swapping" combo is the new target language;
+extremely useful if the source language of the text you want translate is
+the target language.</p>
+<p>However, this is a temporary configuration, if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below.</p>
+<h2>यो थप साधन कसरी प्रयोग गर्ने?</h2>
+<p>यो थप-साधनको प्रयोग गर्ने दुई वटा तरीकाहरू छन् ।</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example). Then press Shift+NVDA+T to translate the selected text. Then
+   the translated string will be read, providing that the synthesizer you
+   are using supports the target language.</li>
+<li>Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
+   text in the clipboard to the target language.</li>
+</ol>
+<h2>Other useful commands</h2>
+<ul>
+<li>NVDA+shift+r: pressed once, announce current configuration; pressed twice,
+  swap source and target languages.</li>
+</ul>
+<h2>Changes for 3.0</h2>
+<ul>
+<li>Implemented swapping languages.</li>
+<li>Changed configuration format, now we can change instant translate settings
+  if we are in readonly pane, but remember that this will work before first
+  restart of nvda.</li>
+<li>Removed limit on amount of text that can be translated.</li>
+<li>तुरुन्तै अनुवादको अनुकूलता मेनुमा  द्रुत कुञ्जी t थपियो ।</li>
+<li>The auto option is now in first position in source combo, and absent in
+  target combo.</li>
+<li>अनुदीत नतिजा प्रतिलिपीका लागि चेक बाकस थपियो ।</li>
+<li>अभियोजन फाइल अनुकूलता थैलीको मार्गमा नै बचत गरिन्छ । </li>
+<li>नयाँ भाषाहरू: अर्गानिज, अरबी, ब्राजेलियन पुर्तगाली, क्रोएसियन, डच, जापानी,
+  नेपाली, पोल्याणडेली, फिनिस, फ्रान्सेली, ग्यालिसियन, जर्मनी, हङ्गेरियाली,
+  इटाली, कोरियाली, स्लोभाक, स्पेनी, तामिल, तुर्कि  स्लोभेनियन ।</li>
+</ul>
+<h2>२.१ मा गरीएका परिवर्तन हरू</h2>
+<ul>
+<li>अब यो थप-साधनले नेत्रवाणी +shift+y कुञ्जी दबाउँदा क्लीपपाटीका पाठहरूलाई
+  अनुवाद गर्ने छ ।</li>
+</ul>
+<h2>२.० मा गरीएका परिवर्तन हरू</h2>
+<ul>
+<li>श्रोत र लक्षित भाषा छान्नका लागी भनेर छुट्टै पाटीको व्यबस्था गरियो ।</li>
+<li>प्राथमिकता मेनु भित्र थप-साधन मेनु थपियो ।</li>
+<li>अनुकूलतालाई अब छूट्टै अभियोजन फाइलमा लेखिन्छ ।</li>
+<li>भविष्यमा हेरफेर गर्नका लागि  अनुदीत नतिजा स्वतः क्लिपपाटीमा उतारिन्छ ।</li>
+</ul>
+<h2>१.० मा गरीएका परिवर्तन हरू</h2>
+<ul>
+<li>सुरुको संस्करण</li>
+</ul>
+<p>[[!tag dev]]</p>
+</body>
+</html>

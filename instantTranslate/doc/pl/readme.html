@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>Błyskawiczny tłumacz tekstu / instantTranslate</h1>
+<ul>
+<li>Autorzy: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  i inni.</li>
+<li>Pobierz <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">wersja stabilna</a></li>
+<li>Pobierz <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">wersja rozwojowa</a></li>
+</ul>
+<p>Ten dodatek służy do tłumaczenia zaznaczonego i/lub schowka tekstu z jednego
+języka na drugi.  Odbywa się to za pomocą usługi Tłumacz Google.</p>
+<h2>Konfigurowanie języków</h2>
+<p>Aby skonfigurować język źródłowy, docelowy, oraz ewentualnie język zamiany, idź do: menu NVDA &gt;&gt; Ustawienia &gt;&gt; Ustawienia Instant Translate.</p>
+<p>Znajdują się tam dwie listy rozwijane, nazwane "Język źródłowy" and "Język
+docelowy", oraz pole wyboru określające czy tłumaczenie ma być kopiowane do
+schowka.</p>
+<p>Ponadto, jeśli wybrano opcję auto na liście "Język źródłowy",  będzie tam
+również lista "Język zamiany" oraz pole wyboru określające automatyczną
+zamianę.</p>
+<p>Znaczenie pierwszych list rozwijanych i pola wyboru kopiowania jest
+oczywiste, ale kilka słów  o pozostałych elementach jest
+konieczne. Pamiętaj, że poniższe wyjaśnienia zakładają, że język źródłowy
+jest ustawiony na auto.</p>
+<p>Lista "Język zamiany"  jest użyteczna, gdy zamieniasz za pomocą skryptu
+(więcej poniżej) język źródłowy i docelowy; język docelowy ustawiony na auto
+nie ma sensu, więc dodatek ustawia go na wartość powyższej listy.</p>
+<p>A zatem wyobraźmy sobie taką sytuację: zwykle tłumaczysz na angielski (twój
+podstawowy język), ale czasem (np. podczas tworzenia dokumentu) musisz
+przetłumaczyć coś na włoski (przypuśćmy, że jest to drugi język, którym się
+posługujesz); możesz ustawić "język zamiany" na Włoski, aby móc tłumaczyć z
+angielskiego na włoski bez zmiany ustawień dodatku. Ta funkcja ma różną
+użyteczność, zależnie od twoich potrzeb.</p>
+<p>Obecnie pole wyboru automatycznej zamiany pojawia się wtedy i tylko wtedy,
+gdy "język źródłowy"  jest ustawiony na auto, jest także bezpośrednio
+związane z listą "język zamiany". Jeśli aktywowane, dodatek próbuje
+automatycznie przełączać z ustawienia języka źródłowego i docelowego, na
+konfigurację w której język docelowy staje się źródłowy, a język wybrany na
+liście "język zamiany" staje się nowym językiem docelowym; szczególnie
+przydatne, gdy język źródłowy tekstu, który chcesz tłumaczyć jest językiem
+docelowym.</p>
+<p>Prosty przykład: rozważmy sytuację omawianą poprzednio; jeśli tłumaczysz
+tekst w języku innym niż angielski, nie stanowi to problemu, otrzymujesz
+prawidłowe tłumaczenie po angielsku. Jeśli jednak chcesz przetłumaczyć tekst
+z angielskiego, zwykle otrzymasz tłumaczenie angielskie identyczne z
+oryginałem, co jest bezużyteczne. Dzięki funkcji automatycznej zamiany,
+zakładając, że chcesz wiedzieć jak twój tekst będzie brzmieć po Włosku,
+dodatek automatycznie ustawia język docelowy na Włoski i zwraca prawidłowe
+tłumaczenie.</p>
+<p>W każdym razie jest to konfiguracja tymczasowa; Jeśli ta opcja nie ma wpływu
+(jest eksperymentalna), spróbuj ręcznie dojeżdżać do stabilnej konfiguracji,
+używając gestu do zamiany opisanego poniżej. Jest to eksperymentalne,
+ponieważ w niektórych sytuacjach (zazwyczaj z krótkimi tekstami) Google nie
+rozpoznaje poprawnie prawdziwego języka źródłowego i musisz ręcznie zamienić
+języki za pomocą skryptu, aby wymusić język źródłowy jako poprzedni język
+docelowy (angielski w naszym przykładzie).</p>
+<p>Przynajmniej w oknie dialogowym parametrów ustawień mowy (Menu NVDA &gt;&gt; Preferencje &gt;&gt; Mowa) możesz zaznaczyć opcję "Automatyczne przełączanie języka (jeśli jest obsługiwane)". W ten sposób, jeśli używasz syntezatora wielojęzycznego, tłumaczenie zostanie ogłoszone przy użyciu głosu języka docelowego syntezatora.</p>
+<h2>Użycie</h2>
+<p>Możesz użyć tego dodatku na trzy sposoby:</p>
+<ol>
+<li>Zaznacz tekst za pomocą poleceń zaznaczania (na przykład Shift za pomocą
+   strzałek) i naciśnij powiązany, aby przetłumaczyć. wynik tłumaczenia
+   zostanie odczytany za pomocą syntezatora, którego używasz.</li>
+<li>Możesz również przetłumaczyć tekst ze schowka.</li>
+<li>Naciśnij dedykowany skrótu, aby przetłumaczyć ostatni tekst mówiony.</li>
+</ol>
+<h2>Skróty</h2>
+<p>Wszystkie poniższe polecenia muszą być wywołane po klawiszu modyfikatora
+"NVDA+Shift+t":</p>
+<ul>
+<li>T: Tłumaczenie zaznaczonego tekstu,</li>
+<li>Shift+t: tłumaczenie tekstu ze Schowka,</li>
+<li>S: zamiana języków źródłowych i docelowych,</li>
+<li>Odp .: ogłosić bieżącą konfigurację,</li>
+<li>C: skopiuj ostatni wynik do schowka,</li>
+<li>I: identyfikuje język zaznaczonego tekstu,</li>
+<li>L: przetłumaczyć ostatni tekst mówiony,</li>
+<li>O: otwórz okno dialogowe ustawień tłumaczenia</li>
+<li>H: ogłasza wszystkie dostępne polecenia warstwowe.</li>
+</ul>
+<h2>Zmiany w wersji 4.4.3</h2>
+<ul>
+<li>Dodano możliwość zastępowania podkreśleń spacjami, może zapewnić lepsze
+  wyniki tłumaczenia w zależności od kontekstu (dzięki Beka Gozalishvili)</li>
+<li>Dodano kompatybilność z NVDA 2022.1</li>
+</ul>
+<h2>Zmiany w wersji 4.4.2</h2>
+<ul>
+<li>Przywróć wykrywanie języka i automatyczne zamienianie (podziękowania dla
+  Cyrille'a za poprawkę)</li>
+<li>zaktualizowane języki do tłumaczenia (podziękowania dla Cyrille)</li>
+</ul>
+<h2>Zmiany dla wersji 4.4</h2>
+<ul>
+<li>Natychmiastowe tłumaczenie jest teraz kompatybilne z NVDA 2019.3 (wersje
+  NVDA w języku Python 3)</li>
+</ul>
+<h2>Zmiany w wersji 4.3</h2>
+<ul>
+<li>Poprawka kompatybilności nvda Teraz natychmiastowy tłumacz będzie
+  kompatybilny z najnowszymi kompilacjami nvda.</li>
+<li>znalazł sposób na ponowne wykorzystanie Google jako usługi tłumaczeniowej.</li>
+</ul>
+<h2>Zmiany w wersji 4.2</h2>
+<ul>
+<li>Przywrócono stan roboczy z nowszymi wersjami nvda.</li>
+<li>Przywrócono automatyczne wykrywanie języka.</li>
+</ul>
+<h2>Zmiany dla wersji 4.1</h2>
+<ul>
+<li>Wtyczka Instant translate działa poprawnie, ale teraz zamiast Google
+  translate, używa yandexa.</li>
+</ul>
+<h2>Zmiany dla wersji 4.0</h2>
+<ul>
+<li>Tłumaczenie jest wykonywane automatycznie po zamianie.</li>
+<li>Poprawiony błąd z cache.</li>
+</ul>
+<h2>Zmiany dla wersji 3.0</h2>
+<ul>
+<li>Zmieniono sposób użycia klawiszy skrótu, obecnie możesz nacisnąć klawisz
+  modyfikatora instantTranslate "NVDA+Shift+t",  a następnie pojedynczą
+  literę dla wykonania określonej akcji {wszystkie polecenia w sekcji
+  "Klawisze skrótu"}.</li>
+<li>Zaimplementowana zamiana języków.</li>
+<li>Zmieniony format konfiguracji, teraz możemy zmieniać ustawienia dodatku w
+  panelu tylko do odczytu, ale proszę pamiętać, że będzie to działać przed
+  pierwszym restartem nvda.</li>
+<li>Usunięty limit ilości tekstu, która może zostać przetłumaczona.</li>
+<li>Dodano skrót t do pozycji menu Ustawienia błyskawicznego tłumaczenia</li>
+<li>Opcja Auto jest na pierwszej pozycji listy języka źródłowego, a nie ma jej
+  na liście języka docelowego.</li>
+<li>Dodane pole wyboru ustawiające kopiowanie do schowka wyniku tłumaczenia.</li>
+<li>Przechowuj plik konfiguracyjny w katalogu głównym folderu ustawień.</li>
+<li>Języki źródłowe i docelowe zsynchronizowane z listą obsługiwanych przez
+  Google Translate (22 Kwi 2015).</li>
+</ul>
+<h2>Zmiany dla wersji 2.1</h2>
+<ul>
+<li>Skrót klawiszowy NVDA+shift+y tłumaczy tekst w schowku.</li>
+</ul>
+<h2>Zmiany dla wersji 2.0</h2>
+<ul>
+<li>Dodano konfigurator gui, w którym można wybrać język źródłowy i docelowy.</li>
+<li>Dodano element menu dodatku znajdujący się w menu preferencji.</li>
+<li>Ustawienia są teraz zapisane w osobnym pliku konfiguracyjnym.</li>
+<li>Wyniki tłumaczenia są teraz automatycznie kopiowane do schowka w celu
+  przyszłych manipulacji.</li>
+</ul>
+<h2>Zmiany dla wersji 1.0</h2>
+<ul>
+<li>Wstępne wydanie.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

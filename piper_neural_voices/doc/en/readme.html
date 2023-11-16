@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Piper Neural Voices 1.0-beta</title>
+</head>
+<body>
+<h1>Piper neural voices for NVDA</h1>
+<p>This add-on implements a speech synthesizer driver for NVDA using <a href="https://github.com/rhasspy/piper">Piper</a>.</p>
+<p><a href="https://github.com/rhasspy/piper">Piper</a> is a fast, local neural text to speech system that sounds great and is optimized for low-end devices such as the Raspberry Pi.</p>
+<p>You can listen to voice samples here: <a href="https://rhasspy.github.io/piper-samples/">Piper voice samples</a>.</p>
+<h1>Installation</h1>
+<h2>Installing the add-on</h2>
+<p>You can find the add-on package under the assets section of the <a href="https://github.com/mush42/piper-nvda/releases/latest">release page</a></p>
+<h2>Adding voices</h2>
+<p>The add-on is just  a driver, it comes with no voices by default. You need to download and install the voices you want manually.</p>
+<p>Upon installing the add-on and restarting NVDA, the add-on will ask you to download and install at least one voice. And it will give you the option to open the voices download web page.</p>
+<p>You can also open the voices download web page from within <code>Piper</code> category in NVDA settings.</p>
+<p>Each voice is available as a <code>.tar.gz</code> file, which is an archive format similar to <code>.zip</code> and <code>.rar</code> archives. The archive contains the voice model and the voice configurations.</p>
+<p>Note that we recommend choosing the <code>low</code> or <code>x-low</code> quality voices for your target language(s), because they generally provide better performance.</p>
+<p>After downloading a voice, go to NVDA settings, and choose <code>Piper</code> category, and then click the button labled <code>Install from file</code>. Choose the file you downloaded, wait for the voice to install, and restart NVDA to refresh the voices list.</p>
+<h2>A note on voice quality</h2>
+<p>The currently available voices are trained using freely available TTS datasets, which are generally of low quality (mostly public domain audio books or research quality recordings).</p>
+<p>Additionally, these datasets are not comprehensive, hence some voices may exhibit incorrect or weird pronunciation. Both issues could be resolved by using better datasets for training.</p>
+<p>Luckily, the <code>Piper</code> developer and some developers from the blind and vision-impaired community are working on training better voices.</p>
+<h1>A note on add-on's performance</h1>
+<p>The current release is a technical preview. Soon enough the add-on will be rewritten in <code>Rust</code>, a programming language that provides better performance than <code>Python</code>.</p>
+<h1>License</h1>
+<p>Copyright(c) 2023, Musharraf Omer. This software is licensed under The GNU GENERAL PUBLIC LICENSE Version 2 (GPL v2).</p>
+</body>
+</html>

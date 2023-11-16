@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the searchWith package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: searchWith 1.8\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-10-29 19:20+0000\n"
+"PO-Revision-Date: 2023-07-09 21:16+0300\n"
+"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
+"Language-Team: \n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.1\n"
+
+#. Translators: Search with menu title.
+msgid "Search With Menu"
+msgstr "Meniul Search With"
+
+#. Translators: Message displayed if error happens in getting url.
+#, python-brace-format
+msgid "Not able to get {item} url"
+msgstr "Nu se poate obține adresa URL a {item}"
+
+#. Translators: Title of message box
+#. Translators: Title of message box.
+msgid "Error Message"
+msgstr "Mesaj de eroare"
+
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr "Nu există text pe planșetă"
+
+#. Translators: Message displayed if there is no last spoken text.
+msgid "No last spoken text"
+msgstr "Nu există un ultim text pronunțat"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"Afișează fereastra de dialog a Search with pentru a putea fi introdusă o "
+"interogare de căutare. Dacă textul este selectat, afișează un meniu virtual "
+"apăsată o dată, iar dacă este apăsată de două ori, caută direct pe Google."
+
+#. Translators: Category of addon in input gestures.
+#. Translators: title of the panel
+#. Translators: Title of dialog
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Search With"
+msgstr "Search With"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Afișează meniul virtual al Search with pentru textul de pe planșetă, iar "
+"dacă este apăsată de două ori, caută direct pe Google."
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"Afișează meniul virtual al Search with pentru ultimul text pronunțat, iar "
+"dacă este apăsată de două ori, caută direct pe Google."
+
+#. Translators: Label of group related to menu.
+msgid "Menu"
+msgstr "Meniu"
+
+#. Translators: List of available items to add to menu.
+msgid "Available items to add"
+msgstr "Elemente disponibile de adăugat"
+
+#. Translators: Label of add button.
+msgid "Add to menu"
+msgstr "Adăugați la meniu"
+
+#. Translators: Search with menu items.
+msgid "Search with menu"
+msgstr "Meniul Search with"
+
+#. Translators: Label of remove button.
+msgid "Remove"
+msgstr "Ștergeți"
+
+#. Translators: Label of move up button.
+msgid "Move item up"
+msgstr "Deplasați elementul în sus"
+
+#. Translators: Label of move down button.
+msgid "Move item down"
+msgstr "Deplasați elementul în jos"
+
+#. Translators: Label of set menu to default button.
+msgid "Set menu to default"
+msgstr "Setați meniul la implicit"
+
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "În căutarea Google"
+
+#. Translators: Option in cumbo box to choose browser setting
+msgid "Browser language and setting"
+msgstr "Navigator de limbă și setări"
+
+#. Translators: Option in cumbo box to choose NVDA language
+msgid "NVDA language"
+msgstr "Limba NVDA"
+
+#. Translators: Option in cumbo box to choose windows language
+msgid "Windows language"
+msgstr "Limba Windows"
+
+#. Translators: Label of static text
+msgid "Use:"
+msgstr "Se utilizează:"
+
+#. Translators: In search with dialog group
+msgid "In search with dialog"
+msgstr "În fereastra de dialog a search with"
+
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "Lăsați Necompletat"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "Folosiți textul de pe planșetă"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "Utilizați ultimul text pronunțat"
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "Opțiuni pentru interogarea de căutare:"
+
+#. Translators: Label of options to choose target language for translation engines.
+msgid "Translation engines"
+msgstr "Motoare de traducere"
+
+#. Translators: Label of combo box for google translate.
+msgid "Target language for google translate:"
+msgstr "Limba țintă pentru Google Translate:"
+
+#. Translators: Label of combo box for deepL translate.
+msgid "Target language for deepL translate:"
+msgstr "Limba țintă pentru deepL translate:"
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr "Pentru utilizatorii avansați"
+
+#. Translators: Label of checkbox preserve data folder.
+msgid "Preserve data folder upon installing a new version"
+msgstr "Păstrați dosarul de date la instalarea unei versiuni noi"
+
+#. Translators: Message informing that an item was added
+msgid "Information: Item added"
+msgstr "Informație: Element adăugat"
+
+#. Translators: Message informing that an item was removed.
+msgid "Information: item removed"
+msgstr "Informație: Element șters"
+
+#. Translators: Message informing that an item was moved up.
+msgid "Information: item moved up"
+msgstr "Informație: Element deplasat în sus"
+
+#. Translators: Message informing that an item was moved down.
+msgid "Information: item moved down"
+msgstr "Informație: Element deplasat în jos"
+
+#. Translators: Message informing that menu was set to default.
+msgid "Information: Menu set to default"
+msgstr "Informație: Meniu setat la implicit"
+
+#. Translators: Label of static text
+msgid "Search with google"
+msgstr "Căutare cu Google"
+
+#. Translators: Label of text control to enter query.
+msgid "Enter a search query"
+msgstr "Introdu o interogare de căutare"
+
+#. Translators: Label of Other engines button
+msgid "Other Engines"
+msgstr "Alte motoare"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon helps you to search text, via various search engines.\n"
+"Let no text selected, and press the gesture of the addon\n"
+"A dialog will be displayed, with an edit box to enter a search query\n"
+"To search with Google press enter, or tab to search with other engins.\n"
+"Or\n"
+"select some text and press once, a menu will be displayed with various "
+"search engines to choose from.\n"
+"And while text is selected, you can press the gesture twice to search with "
+"Google directly.\n"
+"The Default gesture for the addon is: NVDA+ Windows+ S."
+msgstr ""
+"Acest supliment vă ajută să căutați text prin intermediul diverselor motoare "
+"de căutare.\n"
+"Nu lăsați niciun text selectat și apăsați combinația de taste (gestul) "
+"suplimentului\n"
+"Va fi afișată o fereastră de dialog ce va conține o casetă de editare în "
+"care să introduceți o interogare de căutare\n"
+"Apăsați tasta enter pentru a căuta cu Google sau tasta tab pentru a utiliza "
+"alte motoare de căutare.\n"
+"Sau\n"
+"Selectați un text, apăsați o dată și se va deschide un meniu cu o gamă "
+"variată de motoare de căutare din care să alegeți.\n"
+"Cât timp este selectat text, puteți apăsa cscurtătura de taste de două ori "
+"pentru a căuta direct cu Google.\n"
+"Gestul implicit al suplimentului este: NVDA+ Windows+ S."

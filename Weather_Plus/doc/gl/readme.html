@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Weather_Plus</title>
+</head>
+<body>
+<h1>Weather Plus</h1>
+<ul>
+<li>Autor: Adriano Barbieri</li>
+<li>Compatibilidade con NVDA: 2017.3 en diante</li>
+<li>Descargar <a href="https://addons.nvda-project.org/files/get.php?file=wetp">versión estable</a></li>
+</ul>
+<h1>ACERCA DE WEATHER PLUS:</h1>
+<ul>
+<li>Este complemento engade a temperatura local e o pronóstico do tempo actual a 24 horas e ata 2 días adicionais e a previsión por horas para NVDA.</li>
+<li>Copyright (C) <a href="mailto:adrianobarb@yahoo.it">Adriano Barbieri</a></li>
+<li>Liberado baixo a licenza GNU GPL (General Public License) v2</li>
+<li>Weather Plus funciona a través da presenza e funcionamento dos seguintes
+  servizos:</li>
+<li><a href="https://www.weatherapi.com/">https://www.weatherapi.com/</a></li>
+<li><a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+<li><a href="http://veloroutes.org/elevation/">http://veloroutes.org/elevation/</a></li>
+<li><a href="https://www.nvda.it/">https://www.nvda.it/</a></li>
+</ul>
+<h1>USO:</h1>
+<ul>
+<li>Preme NVDA+w para obter a información sobre temperatura e condicións
+  climáticas.</li>
+<li>Preme NVDA+shift+W para obter a predición a 24h e ata 2 días.</li>
+<li>Preme NVDA+shift+W dúas veces para obter a previsión por horas da temperatura e condicións atmosféricas.</li>
+<li>Preme NVDA+ shift+ control+w para establecer unha cidade temporal.</li>
+<li>Premae NVDA+shift+control+alt+w para abrir o diálogo de configuración do
+  Weather Plus.</li>
+<li>Preme NVDA+alt+w para obter a data e hora, na que se actualizou a
+  información do tempo.</li>
+<li>Preme control+shift+w para alternar entre as escalas de temperatura
+  Fahrenheit, Celsius e Kelvin.</li>
+</ul>
+<h1>Primeira configuración de Weather Plus:</h1>
+<ul>
+<li>Debes configurar Weather Plus antes do seu primeiro uso! Vai ao submenú Preferencias, submenú Opcións de Weather Plus e escolle unha das opcións seguintes:</li>
+<li>Establecer e administrar as súas cidades... - Mostra ou permite establecer as cidades actuais dende unha lista</li>
+<li>Documentación - Abre o arquivo de axuda para a lingua actual.</li>
+<li>Verificar actualizacións... - Notifica se hai unha versión actualizada dispoñible.</li>
+</ul>
+<p>Para engadir unha nova cidade: preme o elemento seguinte:</p>
+<ul>
+<li>Establecer e administrar as súas cidades... - Mostra ou permite establecer
+  a cidade actual dende unha lista.</li>
+<li>A seguinte mensaxe só se amosa a primeira vez! Preaxuste Ningún f1: axuda,
+  f2: selección da última lapela, f3: lista e caixa de edición, f4:
+  controlar duración do pronóstico meteorolóxico, f5: controis de volume.</li>
+<li>Na caixa de edición, introduce unha cidade ou selecciona unha da
+  lista, se está dispoñible. Nota: A tecla F5 está dispoñible se os efectos
+  de son están activados.</li>
+<li>Despois de premer enter sobre o elemento "Establecer e administrar as súas
+  cidades...", acharás a continuación outros botóns como segue:</li>
+<li>Probar - proba a validez da cidade e busca os seus datos.</li>
+<li>Engadir - engade a cidade actual á túa lista. Este botón pódese activar se
+  seleccionas unha cidade dende a lista, e ésta pasou a comprobación.</li>
+<li>Detalles - amosa información sobre a cidade actual. Este botón pódese
+  activar se seleccionas unha cidade dende a lista, e esta pasou a
+  comprobación.</li>
+<li>Definir - Permíteche definir a área, para adaptar os efectos de son. Este
+  botón pódese activar se os efectos de audio están instalados e activos, e
+  se seleccionas unha cidade da lista.</li>
+<li>Prestablecer - Configura unha cidade como predeterminada, que será usada
+  cada vez que reinicies esta extensión. Este botón está activado se
+  seleccionas unha cidade previamente insertada na lista e non
+  preseleccionada, ou se pasou a proba.</li>
+<li>Eliminar - Elimina a cidade actual da túa lista. Este botón pódese activar
+  se seleccionas unha cidade previamente insertada na lista.</li>
+<li>Renomear - Renomear a cidade actual. Este botón pódese activar se
+  seleccionou unha cidade previamente insertada na lista.</li>
+<li>Importar cidades... - Este botón permite a incorporación á túa lista de
+  novas cidades importándoas dende un arquivo con extensión *.zipcodes;
+  podes seleccionar a cidade que desexas importar, activando a caixa de
+  verificación asociada coa mesma.</li>
+<li>Exportar as súas cidades... - Permíteche garcar as cidades no arquivo
+  especificado coa extensión *.zipcodes. Este botón está activo se engadiu e
+  gardou alomenos unha cidade á lista.</li>
+<li>opción de previsión por horas... - Este botón permíteche escoller o contido do informe da previsión por horas.</li>
+<li>Escala de temperatura: Utiliza o botón de opción para seleccionar entre
+  Celsius (por defecto), Fahrenheit e Kelvin.</li>
+<li>Graos mostrados coma: Utiliza o botón de opción para seleccionar entre:
+  Celsius <code>-</code> Fahrenheit <code>-</code> Kelvin (por defecto) C <code>-</code> F <code>-</code> K ou sen
+  especificar.</li>
+<li>Caixa combinada: Previsión meteorolóxica ata días: 1; Podes escoller de 1
+  a 3 (1 días por defecto)</li>
+<li>Caixa combinada: idioma de resposta da API: inglés, en; podes escoller o idioma do texto coas condicións do tempo.</li>
+<li>Para realizar as seguintes accións, modifique as seguintes caixas de
+  verificación:</li>
+<li>Copia o reporte do clima e o pronóstico do tempo, incluíndo os detalles da
+  cidade ao portapapeis; caixa de verificación non marcada (por defecto)</li>
+<li>Habilitar Efectos de son (só para as condicións actuais do clima); Esta
+  caixa de verificación tamén che permite xestionar a instalación dos
+  efectos de son; Se os efectos de son están instalados e a caixa de
+  verificación activada, dispoñibilizaranse a tecla f5 e o control de
+  volume.</li>
+<li>Tamén estará dispoñible unha caixa de verificación adicional: Utilizar só
+  efectos do tempo.</li>
+<li>Pode cambiar o volume xeral ou o do último son escoitado e filtrar outros
+  sons no seu entorno. A caixa de verificación non está marcada por defecto.</li>
+<li>Utilizar só efectos do tempo; Esta opción está dispoñible se os efectos de
+  son están habilitados; Se se habilita, permite escoitar só efectos de
+  tempo como choiva, vento, raio, etc., filtrando todos os
+  ambientais. (desmarcada por defecto)</li>
+<li>Habilitar a lectura das horas en formato de 24 horas. - Se non está
+  marcado, anuncia en formato de 12h, por exemplo, 12AM/12PM. A caixa de
+  verificación está marcada (por defecto)</li>
+<li>Habilitar botóns de axuda na ventá de configuración; caixa de verificación
+  marcada (por defecto)</li>
+<li>Ler informacion do vento; caixa de verificación non marcada (por
+  defecto). Se esta caixa de verificación está activada, tamén poderás
+  activar as seguintes:</li>
+<li>Engadir dirección do vento; Indica de onde provén o vento. Caixa de
+  verificación marcada (por defecto)</li>
+<li>Engadir velocidad do vento; indicates engade a velocidade do vento en
+  quilómetros ou millas por hora. Caixa de verificación marcada (por
+  defecto)</li>
+<li>Engadir velocidade do vento en metros por segundo; caixa de verificación
+  marcada (por defecto)</li>
+<li>Engadir velocidade da racha de vento; caixa de verificación marcada (por defecto)</li>
+<li>Engadir sensación térmica; caixa de verificación verificada (por defecto)</li>
+<li>Ler información atmosférica; caixa de verificación non marcada (por
+  defecto). Se está habilitada, tamén podes marcar as seguintes caixas de
+  verificación:</li>
+<li>Engadir valor da humidade; Indica a humidade en por cento. Caixa de
+  verificación marcada (por defecto)</li>
+<li>Engadir valor de visibilidade; Indicar en quilómetros ou millas a
+  distancia visible. Caixa de verificación marcada (por defecto).</li>
+<li>Engadir valor de presión atmosférica; indica o valor da presión
+  atmosférica en milibares ou polgadas de mercurio. Se está marcada,
+  habilita unha caixa de verificación adicional que permite indicar a
+  presión en milímetros de mercurio. Caixa de verificación marcada (por
+  defecto)</li>
+<li>Engadir valor de nubosidade; caixa de verificación marcada (por defecto)</li>
+<li>Engadir valor de precipitación; caixa de verificación marcada (por defecto)</li>
+<li>Engadir valor de radiación ultravioleta; caixa de verificación marcada (por defecto)</li>
+<li>Ler información astronómica; indica as horas de saída e posta do sol e da lúa. Caixa de verificación non marcada (por defecto)</li>
+<li>Usar a coma como separador de decimais; Se está habilitado, utiliza a coma
+  coma separador decimal, doutro xeito utilízase o punto. Caixa de
+  verificación non marcada (por defecto).</li>
+<li>Mostra a saída nunha xanela; Se está habilitado, mostra a previsión nunha xanela.
+  Caixa de verificación non marcada (por defecto).</li>
+<li>Verificar actualizacións; Se está activa, notifica cando estea dispoñible
+  unha actualización para o complemento. Caixa de verificación marcada (por
+  defecto)</li>
+<li>Prema o botón de Aceptar para confirmar a acción, Cancelar para cancelala.</li>
+<li>Se modificaches a lista de cidades, premendo "Cancelar" serás advertido e
+  aínda poderás gardala:</li>
+<li>"Weather.ini": configuración de inicio do Weather Plus.</li>
+<li>"Weather.volumes": niveis de volume de audio personalizado, calqueira que
+  sexa o volume xeral do sistema.</li>
+<li>"Weather.zipcodes": lista de cidades cos seus códigos postais e
+  definicións.</li>
+<li>"Weather.default": A túa cidade por defecto.</li>
+<li>"Weather_searchkey": tecla de busca gardada.</li>
+</ul>
+<hr />
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

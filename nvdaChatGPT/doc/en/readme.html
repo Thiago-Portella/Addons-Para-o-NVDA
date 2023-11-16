@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>askChatGPT 0.6</title>
+</head>
+<body>
+<h1>nvda-chatGPT</h1>
+<h3>About</h3>
+<p>This add-on provides an access to chatGPT. through key bindings, so you can ask meanings of any words, or ask anyquestions.<br />
+Especially useful for asking difficult words that you don't know, or asking simple programming questions.<br />
+You need api key (it is free), but I think it's worth time.<br />
+You can read readme in, <a href="https://github.com/mo29cg/nvda-chatGPT/blob/main/README.ja.md">Japanese</a>.</p>
+<h3>Download</h3>
+<p><a href="https://github.com/mo29cg/nvda-chatGPT/releases/latest/download/nvdaChatGPT.nvda-addon">nvda-chatGPT</a></p>
+<h3>Setup (YOU NEED TO DO THIS)</h3>
+<p>You need chatGPT api key to use this add-on, You get free credits, but it expires in several monthes.<br />
+So, after it expires, you need to pay your actual money to keep using this add-on, it should be less than $5 a month for normal usage.<br />
+Below is how to get api key and set up.</p>
+<ol>
+<li>go to https://platform.openai.com/account/api-keys</li>
+<li>login (make an account, if you don't have one)</li>
+<li>press the button "Create new secret key‍"</li>
+<li>go to nvda - preference - settings - askChatGPT, and put the api key.</li>
+</ol>
+<h3>Key bindings</h3>
+<ul>
+<li>
+<p>NVDA+shift+W Ask the meaning of selected word, or open a dialog, if none is selected.</p>
+</li>
+<li>
+<p>NVDA+shift+L Open a dialog to ask a question.</p>
+</li>
+</ul>
+<p>Press ctrl + enter to send a request in the dialog.
+You can get responses in 3 ~ 30 seconds, depends on difficulty of the questions.<br />
+You can browse your conversation in the list above text box, pressing enter will open a dialog of a selected message.</p>
+<h3>For people this add-on is not working</h3>
+<p>Assuming you correctly put your api key, most likely your chatGPT account is too old, so your free credits you got when you created your account expired.<br />
+Now, you need to set up your payment method.<br />
+Go to <a href="https://platform.openai.com/account/billing/overview">here</a></p>
+<h3>I need your supports!</h3>
+<p>Due to my visual impairment, my capability for jobs is pretty limited.<br />
+I'd really appreciate donations if anyone find my add-on useful.<br />
+Here is the link: <a href="https://paypal.me/satoshi26">paypal.me</a></p>
+<h3>contributor</h3>
+<ul>
+<li>
+<p>wrapper to access chatGPT <a href="https://github.com/acheong08/ChatGPT">revChatGPT</a></p>
+</li>
+<li>
+<p>Figured out how to correctly import modules <a href="https://github.com/sarnex">@sarnex</a></p>
+</li>
+</ul>
+</body>
+</html>

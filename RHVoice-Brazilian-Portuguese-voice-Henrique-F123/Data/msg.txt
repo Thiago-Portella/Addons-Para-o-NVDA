@@ -1,0 +1,3 @@
+old_license=A confirmação da licença é necessária. Se houver conexão com a internet, a confirmação será obtida em breve
+no_license=Não há licença para esta voz neste dispositivo. Se houver conexão com a internet, será feita em breve a verificação de uma nova licença.
+in_progress=Uma verificação de licença está em andamento.

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Weather_Plus</title>
+</head>
+<body>
+<h1>Vremenska prognoza plus (Weather Plus)</h1>
+<ul>
+<li>Autor: Adriano Barbieri</li>
+<li>NVDA compatibility: 2017.3 to beyond</li>
+<li>Preuzmi <a href="https://addons.nvda-project.org/files/get.php?file=wetp">stabilnu verziju</a></li>
+</ul>
+<h1>INFORMACIJE O VREMENSKOJ PROGNOZI PLUS:</h1>
+<ul>
+<li>Ovaj dodatak dodaje lokalnu temperaturu i prognozu za sljedećih 24 sata do
+  2 dodatnih dana and hourlyforecast.</li>
+<li>Autorska prava (C) <a href="mailto:adrianobarb@yahoo.it">Adriano Barbieri</a></li>
+<li>Izdano pod GNU GPL (Opća javna licenca) v2</li>
+<li>Vremenska prognoza plus radi putem upotrebe i prisutnosti sljedećih
+  usluga:</li>
+<li><a href="https://www.weatherapi.com/">https://www.weatherapi.com/</a></li>
+<li><a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+<li><a href="http://veloroutes.org/elevation/">http://veloroutes.org/elevation/</a></li>
+<li><a href="https://www.nvda.it/">https://www.nvda.it/</a></li>
+</ul>
+<h1>PRIMJENA:</h1>
+<ul>
+<li>Pritisni NVDA+w za trenutačnu temperaturu i vremenske uvjete.</li>
+<li>Pritisni NVDA+šift+W za 24-satnu prognozu i za prognozu do 2 dana.</li>
+<li>Press NVDA+shift+W twice to get hourlyforecast of temperature and atmospheric conditions.</li>
+<li>Pritisni NVDA+šift+kontrol+w za postavljanje privremenog grada.</li>
+<li>Pritisni NVDA+šift+kontrol+alt+w za otvaranje dijaloškog okvira s
+  postavkama za Vremensku prognozu plus.</li>
+<li>Pritisni NVDA+alt+w za datum i vrijeme aktualiziranja izvještaja o
+  vremenu.</li>
+<li>Pritisni kontrol+šift+w za mijenjanje između temperaturnih ljestvica u
+  Fahrenheitovim stupnjevima, u Celzijevim stupnjevima i u kelvinima.</li>
+</ul>
+<h1>Postavke za Vremensku prognozu plus:</h1>
+<ul>
+<li>Moraš postaviti dodatak „Vremenska prognoza plus” prije prve upotrebe! Idi u podizbornik „Postavke”, podizbornik postavki „Vremenske prognoze plus” i odaberi jednu od sljedećih opcija:</li>
+<li>Postavi i upravljaj gradovima … – Prikazuje ili dopušta postavljanje trenutačnog grada s popisa.</li>
+<li>Dokumentacija – Otvara datoteku pomoći za trenutačni jezik.</li>
+<li>Provjeri nadogradnje … – Obavijest o novijoj verziji.</li>
+</ul>
+<p>Za dodavanje novog grada: pritisni sljedeću stavku:</p>
+<ul>
+<li>Postavi i upravljaj gradovima … – Prikazuje ili dozvoljava postavljanje
+  trenutačnog grada s popisa.</li>
+<li>Sljedeće poruke se prikazuju samo za prvi put! Unaprijed određene postavke
+  Ništa F1: pomoć za određivanje mjesta, F2: zadnji odabir pomoću
+  tabulatora, F3: popisni okvir i okvir za uređivanje, F4: odredi trajanje
+  Vremenske prognoze, F5: kontrole za glasnoću.</li>
+<li>U okviru za uređivanje upiši grad oznaku ili odaberi grad s popisa,
+  ako postoji. Napomena: Tipka F5 je dostupna, ako su zvučni efekti
+  aktivirani.</li>
+<li>Nakon pritiskanja stavke „Postavi i upravljaj gradovima …”, naći ćeš
+  sljedeće gumbe:</li>
+<li>Provjeri – Test the validity of the city and find the data of it.</li>
+<li>Dodaj – Dodaje trenutačni grad u popis. Ovaj se gumb može aktivirati, ako
+  u popisu odabereš grad, kad je upisani grad prošao test.</li>
+<li>Detalji – Prikazuje informacije o trenutačnom gradu. Ovaj se gumb
+  aktivira, ako u popisu odabereš grad ili ako je grad prošao test.</li>
+<li>Odredi – Dozvoljava odrediti područje, kako bi se prilagodili zvučni
+  efekti. Ovaj se gumb može aktivirati, ako su zvučni efekti instalirani i
+  aktivirani i ako iz popisa odabereš grad.</li>
+<li>Preodredi – Predodređuje grad kao standardni, koristit će se svaki put,
+  kad se dodatak ponovo pokrene. Ovaj se gumb aktivira, ako u popisu
+  odabereš prethodno umetnuti grad, a nije predodređen ili ako je prošao
+  test.</li>
+<li>Ukloni – Uklanja trenutačni grad s popisa. Ovaj se gumb može aktivirati,
+  ako u popisu odabereš prethodno umetnuti grad.</li>
+<li>Preimenuj – Preimenuj trenutačni grad. Ovaj se gumb može aktivirati, ako u
+  popisu odabereš prethodno umetnuti grad.</li>
+<li>Uvezi nove gradove … – Ovaj gumb dozvoljava uvoz novih gradova iz drugog
+  popisa gradova s nastavkom *.zipcodes. Možeš odabrati grad koji želiš
+  uvesti, označavanjem odgovarajućeg potvrdnog okvira.</li>
+<li>Izvezi gradove … – Dozvoljava spremanje gradova u određenu datoteku s
+  nastavkom *.zipcodes. Ovaj se gumb aktivira, ako se u popis doda i spremi
+  barem jedan grad.</li>
+<li>hourly forecast setting... - This button allows you to choose the contents of the hourly forecast report.</li>
+<li>Temperaturna ljestvica: Koristi odabirni gumb za biranje između Celzijevih
+  stupnjeva (standardno), Fahrenheitovih stupnjeva i kelvina.</li>
+<li>Stupnjevi prikazani kao: Koristi odabirni gumb za biranje između: Celzija
+  <code>-</code> Fahrenheita <code>-</code> Kelvina (standardno) C <code>-</code> F <code>-</code> K ili neodređeno.</li>
+<li>Odabirni okvir: Vremenska prognoza do dana: 3; odaberi između 1 do 10
+  (standardno je postavljeno na 3 dana)</li>
+<li>Za izvršavanje sljedećih radnji uključi ili isključi sljedeće potvrdne
+  okvire:</li>
+<li>Kopiraj izvještaj o vremenu i vremensku prognozu, uključujući podatke o
+  gradu u međuspremnik; potvrdni okvir standardno nije označen.</li>
+<li>Aktiviraj zvučne efekte (samo za trenutačne vremenske uvjete). Ovaj
+  potvrdni okvir također omogućuje upravljanje instalacijom zvučnih
+  efekata. Ako su zvučni efekti instalirani i ako je potvrdni okvir
+  aktiviran, tipka F5 i postavka glasnoće postaju dostupni.</li>
+<li>Također će biti dostupan dodatni potvrdni okvir: Koristi samo vremenske
+  efekte.</li>
+<li>Moguće je promijeniti ukupnu glasnoću ili promijeniti zadnje korišteni
+  zvučni efekt, kao i izdvojiti ostale zvukove vlastitog okruženja. Potvrdni
+  okvir standardno nije označen.</li>
+<li>Koristi samo vremenske efekte – Ova je opcija dostupna, ako su zvučni
+  efekti aktivirani. Ako je opcija aktivirana, omogućuje preslušavanje samo
+  vremenskih efekata poput kiše, vjetra, grmljavine itd., isključujući pri
+  tome sve okolišne efekte. (standardno nije označeno)</li>
+<li>Aktiviraj čitanje sata u 24-satnom formatu – Ako potvrdni okvir nije
+  označen, najavljuje sate u 12-satnom formatu, npr. 12 AM <code>-</code> 12
+  PM. Potvrdni okvir je standardno označen.</li>
+<li>Aktiviraj gumbe pomoći u prozoru postavki; otvrdni okvir je standardno
+  označen.</li>
+<li>Pročitaj informacije o vjetru; potvrdni okvir standardno nije označen. Ako
+  je označen, možeš aktivirati i sljedeće potvrdne okvire:</li>
+<li>Dodaj smjer vjetra; ukazuje na smjer iz kojeg vjetar dolazi. Potvrdni
+  okvir je standardno označen.</li>
+<li>Dodaj brzinu vjetra; ukazuje na brzinu u kilometrima na sat ili u miljama
+  na sat. Potvrdni okvir je standardno označen.</li>
+<li>Dodaj brzinu vjetra u metrima po sekundi; potvrdni okvir je standardno
+  označen.</li>
+<li>Add wind gust speed of the wind; checkbox checked (by default)</li>
+<li>Dodaj osjetnu temperaturu; potvrdni okvir je standardno označen.</li>
+<li>Pročitaj informacije o atmosferi; potvrdni okvir standardno nije
+  označen. Ako je označen, možeš aktivirati i sljedeće potvrdne okvire:</li>
+<li>Dodaj vrijednost za vlagu; ukazuje na vlagu u postocima. Potvrdni okvir je
+  standardno označen.</li>
+<li>Dodaj vrijednost za vidljivost; ukazuje na vidljivost u kilometrima ili
+  miljama. Potvrdni okvir je standardno označen.</li>
+<li>Dodaj vrijednost za atmosferski tlak; ukazuje ne atmosferski tlak u
+  milimetrima ili inčima žive. Ako je označeno, uključuje dodatni potvrdni
+  okvir za označavanje tlaka u milimetrima žive. Potvrdni okvir je
+  standardno označen.</li>
+<li>Add cloudines value; check box checked (by default)   </li>
+<li>Add precipitation value; check box checked (by default)</li>
+<li>Add ultraviolet radiation value; check box checked (by default)</li>
+<li>Pročitaj informacije o astronomiji; indicates the time of sunrise and sunset and the time of moonrise and moonset. Checkbox not checked (by default)</li>
+<li>Koristi decimalni zarez; ako je uključeno, koristit će se decimalni zarez
+  umjesto točke. Potvrdni okvir standardno nije označen.</li>
+<li>Prikazuje izlaz u prozoru; ako je uključeno, ovo prikazuje prognozu u prozoru.
+  Potvrdni okvir standardno nije označen.</li>
+<li>Provjeri nadogradnje; ako je aktivirano, upozorava o novoj verziji
+  dodatka. Potvrdni okvir je standardno označen.</li>
+<li>Potvrdi pritiskom gumba „U redu” ili prekini pritiskom gumba „Odustani”.</li>
+<li>Ako promijeniš popis gradova, pritiskom gumba „Odustani”, dodatak te o
+  tome obavještava, te ćeš popis još uvijek moći spremiti. Napomena: tvoje
+  će se postavke spremiti u datoteku s imenom:</li>
+<li>„Weather.ini”: postavke za pokretanje Vremenske prognoze plus.</li>
+<li>„Weather.volumes”: prilagođene razine glasnoće, neovisno o ukupnoj
+  glasnoći.</li>
+<li>„Weather.zipcodes”: popis gradova s poštanskim brojevima i definicijama.</li>
+<li>"Weather.default": Your default city.</li>
+<li>„Weather_searchkey”: tipka za pretraživanje spremljena.</li>
+</ul>
+<hr />
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

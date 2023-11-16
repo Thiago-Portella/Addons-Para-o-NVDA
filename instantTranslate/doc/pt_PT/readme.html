@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-PT" lang="pt-PT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>tradutorInstantâneo</h1>
+<ul>
+<li>Autores: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  e outros colaboradores do NVDA.</li>
+<li>Baixar <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">versão estável</a></li>
+<li>Baixar <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">versão de desenvolvimento</a></li>
+</ul>
+<p>Este extra é utilizado para traduzir texto seleccionado e/ou da área de
+transferência de uma língua para outra.  Isto é feito utilizando o tradutor
+do google.</p>
+<h2>Configurar idiomas</h2>
+<p>Para configurar os idiomas de origem, de destino e, em alguns casos, de alternância, vá para: Menu do NVDA &gt;&gt; Preferências &gt;&gt; configurações &lt;&lt; tradutor instantânio.</p>
+<p>Nas configurações, pode encontrar duas caixas de combinação denominadas
+"Idioma de origem" e "Idioma de destino", e uma caixa de selecção para
+indicar se deve ser copiada a tradução para a área de transferência.</p>
+<p>Além disso, caso tenha seleccionado a opção "auto" (como escolha na caixa de
+combinação "Idioma de origem", haverá também uma caixa de combinação chamada
+"Idioma para alternância" e uma caixa de selecção para alternância
+automática.</p>
+<p>O significado das duas primeiras caixas e da caixa de selecção de "copiar
+para a área de transferência" é claro, mas tornam-se necessárias algumas
+palavras sobre o restante. Lembre-se, sempre, que a explicação abaixo
+pressupõe que o idioma de origem está configurado para a opção "auto".</p>
+<p>A caixa de combinação "Idioma para alternância" é útil, quando faz a troca,
+por script (ver abaixo) dos idiomas de origem e de destino; com efeito, um
+idioma de destino configurado na opção "auto" não faz sentido, portanto o
+extra configura-o para o valor da caixa de combinação de alternância.</p>
+<p>Assim, imagine a seguinte situação: geralmente, traduz para Inglês (que é o
+seu idioma principal), mas às vezes (por exemplo quando escreve um
+documento) necessita traduzi-lo para Italiano (digamos que seria o seu
+segundo idioma); você pode colocar a caixa de combinação "Idioma para
+alternância" para Italiano, de modo que traduzirá de Inglês para Italiano,
+sem aceder directamente as configurações do extra. Obviamente, essa função
+será mais ou menos útil, conforme as suas necessidades deste artifício.</p>
+<p>Nesse caso, surge a caixa de seleção "alternância automática": ela aparece
+somente se se seleciona a opção "auto", na caixa de combinação "Idioma de
+origem" e está directamente conectada à caixa de combinação "Idioma de
+alternância". Caso a active, o extra tenta comutar automaticamente da atual
+configuração de origem e destino para uma configuração na qual o idioma de
+destino se torna o de origem e o idioma escolhido na caixa de combinação
+"Idioma  de alternância" é o novo idioma de destino; isto é útil se o idioma
+de origem do texto que quer traduzir é o idioma de destino.</p>
+<p>Um exemplo simples: Parta da situação imaginada antes; se traduz um texto
+num idioma diferente do Inglês, não há problemas, pois obtém a tradução
+correcta em Inglês. Agora se precisar de traduzir um texto do Inglês,
+normalmente obtém uma tradução para Inglês idêntica ao texto original e isso
+é inútil. Graças a opção de "alternância automática", porém, supondo que
+você queira saber como o texto fica em Italiano, o extra comuta
+automaticamente o idioma de destino para Italiano e portanto devolve uma
+tradução válida.</p>
+<p>De qualquer modo, esta é uma configuração temporária; se esta opção não
+tiver efeito (é experimental), tente comutar manualmente para uma
+configuração estável, usando o comando de troca descrito abaixo. É
+experimental porque em algumas situações (com textos curtos, tipicamente), o
+Google não reconhece correctamente a verdadeira língua de origem, e é
+necessário trocar as línguas manualmente através de script, de modo a forçar
+a língua de origem a ser a língua de destino anterior (inglês no nosso
+exemplo).</p>
+<p>Pelo menos, no diálogo de parâmetros de definições de voz (Menu NVDA &gt;&gt; Preferências &gt;&gt; vozes), pode querer verificar a opção "Mudança automática de idioma (quando suportado)". Desta forma, se estiver a utilizar um sintetizador multilingue, a tradução será anunciada utilizando a voz do idioma de destino do sintetizador.</p>
+<h2>Como Usar</h2>
+<p>Pode usar este extra de três formas:</p>
+<ol>
+<li>Seleccione algum texto utilizando os comandos de selecção (shift com
+   teclas de seta, por exemplo) e prima a tecla associada para traduzir. o
+   resultado da tradução será lido com o sintetizador que está a utilizar.</li>
+<li>Também pode traduzir o texto da área de transferência.</li>
+<li>Pressione a tecla de atalho dedicada para traduzir o último texto falado.</li>
+</ol>
+<h2>Teclas de atalho:</h2>
+<p>Estes comandos só são válidos após ter sido pressionada a tecla modificadora
+"NVDA+Shift+t":</p>
+<ul>
+<li>T: Traduz o texto seleccionado,</li>
+<li>Shift+t: Traduz o texto da área de transferência,</li>
+<li>S: Alterna os idiomas de origem e destino,</li>
+<li>A: indica a configuração atual,</li>
+<li>C: Copia o último resultado para a área de transferência,</li>
+<li>I: identifica o idioma do texto seleccionado,</li>
+<li>L: traduz o último texto falado,</li>
+<li>O: abrir o diálogo de configurações de tradução</li>
+<li>H: anuncia todos os comandos em camada disponíveis.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>Alterações para 4.4.2</h2>
+<ul>
+<li>Restauração da detecção linguística e auto-swapping (Graças ao Cyrille
+  para correcção)</li>
+<li>línguas actualizadas para tradução (graças ao Cyrille)</li>
+</ul>
+<h2>Alterações para 4.4</h2>
+<ul>
+<li>A tradução instantânea é agora compatível com a NVDA 2019.3 (versões
+  Python 3 do NVDA)</li>
+</ul>
+<h2>Alterações para 4.3</h2>
+<ul>
+<li>Resolvido o problema de compatibilidade: Agora a tradução instantânea será
+  compatível com as últimas compilações do nvda.</li>
+<li>encontrou-se  uma forma de utilizar novamente o google como um serviço de
+  tradução.</li>
+</ul>
+<h2>Alterações para 4.2</h2>
+<ul>
+<li>Estado de funcionamento restaurado com versões mais recentes do nvda.</li>
+<li>Restauração da detecção automática do idioma.</li>
+</ul>
+<h2>Mudanças para a 4.1</h2>
+<ul>
+<li>O Tradutor Instantâneo está novamente a funcionar, agora com o serviço
+  Yandex translator em vez do Google.</li>
+</ul>
+<h2>Mudanças para a 4.0</h2>
+<ul>
+<li>A tradução é executada automaticamente após a alternância.</li>
+<li>Problema de cache corrigido.</li>
+</ul>
+<h2>Mudanças para a 3.0</h2>
+<ul>
+<li>Foi modificado o modo como as teclas de atalho são usadas, agora pode
+  pressionar a tecla modificadora do InstantTranslate "NVDA+Shift+t" e então
+  uma tecla única para executar uma acção (veja todos os comandos na secção
+  "atalhos").</li>
+<li>Implementado "idiomas de alternância".</li>
+<li>Foi modificado o formato das configurações; agora podem alterar-se as
+  opções do Tradutor Instantâneo estando no painel somente leitura, mas
+  lembre que as mesmas terão efeito antes da primeira reinicialização do
+  NVDA.</li>
+<li>Foi removido o limite da quantidade de texto que se pode traduzir.</li>
+<li>Adicionada a tecla de atalho "t" para o item de menu do Tradutor
+  Instantâneo</li>
+<li>A opção "automático", agora, encontra-se em primeiro lugar na caixa de
+  combinação origem e desapareceu da caixa de combinação destino.</li>
+<li>Adicionada uma caixa de selecção para configurar a cópia dos resultados de
+  traduções.</li>
+<li>Passou a armazenar o ficheiro de configuração na raíz da pasta de opções.</li>
+<li>Idiomas de origem e destino sincronizados com o que o Google Translate
+  expõe atualmente (22 de abril de 2015).</li>
+</ul>
+<h2>Mudanças para a 2.1</h2>
+<ul>
+<li>Agora, o extra pode traduzir o texto da área de transferência, ao
+  pressionar NVDA+SHIFT+y.</li>
+</ul>
+<h2>Mudanças para a 2.0</h2>
+<ul>
+<li>Adicionado configurador gráfico onde se podem escolher os idiomas de
+  origem e de destino.</li>
+<li>Adicionado item de menu do extra, no menu Preferências.</li>
+<li>As configurações agora são registadas num ficheiro de configuração
+  separado.</li>
+<li>Agora, os resultados das traduções são colocados automaticamente na área
+  de transferência para futuras manipulações.</li>
+</ul>
+<h2>Mudanças para a 1.0</h2>
+<ul>
+<li>Versão inicial.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

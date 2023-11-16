@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Weather_Plus</title>
+</head>
+<body>
+<h1>Počasie Plus</h1>
+<ul>
+<li>Autor: Adriano Barbieri</li>
+<li>NVDA kompatibilita: 2017.3 a vyššie</li>
+<li>Stiahnuť: <a href="https://addons.nvda-project.org/files/get.php?file=wetp">Stabilnú verziu</a></li>
+</ul>
+<h1>O doplnku</h1>
+<ul>
+<li>Poskytuje informácie o aktuálnom počasí a predpoveď počasia až na 2 dni
+  dopredu a hodinové predpovede.</li>
+<li>Copyright (C) <a href="mailto:adrianobarb@yahoo.it">Adriano Barbieri</a></li>
+<li>Vydané pod licenciou GNU GPL (General Public License) verzia 2</li>
+<li>Doplnok využíva tieto služby:</li>
+<li><a href="https://www.weatherapi.com/">https://www.weatherapi.com/</a></li>
+<li><a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+<li><a href="http://veloroutes.org/elevation/">http://veloroutes.org/elevation/</a></li>
+<li><a href="https://www.nvda.it/">https://www.nvda.it/</a></li>
+</ul>
+<h1>POUŽITIE:</h1>
+<ul>
+<li>nvda+W: Oznámi informáciu o aktuálnom počasí.</li>
+<li>NVDA+shift+W: Oznámi predpoveď počasia až na 2 dni dopredu.</li>
+<li>NVDA+shift+W Stlačte dvakrát, aby ste dostali hodinovú predpoveď teploty a atmosférických podmienok.</li>
+<li>NVDA + shift + ctrl + w: Umožňuje nastaviť dočasné mesto.</li>
+<li>NVDA + shift + ctrl + alt + w: Otvorí nastavenia doplnku.</li>
+<li>NVDA + alt + w: Oznámi dátum a čas poslednej aktualizácie informácií o
+  počasí.</li>
+<li>ctrl+ shift + w: prepína medzi oznamovaním teploty v stupňoch Celsia alebo
+  Farenheita.</li>
+</ul>
+<h1>Nastavenia:</h1>
+<ul>
+<li>Skôr, než začnete doplnok používať, je potrebné nastaviť parametre. V menu Možnosti aktivujte podmenu počasie a tam vyberte jednu z možností:</li>
+<li>Spravovať mestá: Umožní nastaviť mesto, pre ktoré sa budú zobrazovať informácie o počasí.</li>
+<li>Nápoveda: Zobrazí dokument s pomocníkom v aktuálnom jazyku.</li>
+<li>Skontrolovať aktualizácie: Skontroluje a umožní nainštalovať novú verziu doplnku.</li>
+</ul>
+<p>Nové mesto na sledovanie pridáte nasledovne:</p>
+<ul>
+<li>Aktivujte položku Spravovať mestá.</li>
+<li>Zobrazí sa táto správa: Predvolené mesto nie je. f1: Pomocník, f2: Oznámy
+  aktuálne vybratú záložku, f3: presunie kurzor na editačné pole alebo
+  zoznam, f4: Nastaví dĺžku predpovede počasia, F5: Nastavenie úrovne
+  hlasitosti.</li>
+<li>Do textového poľa zadajte mesto alebo vyberte mesto zo
+  zoznamu. Poznámka: Kláves F5 funguje len ak sú aktivované zvukové efekty.</li>
+<li>Po aktivovaní položky spravovať mestá sú dostupné tieto možnosti:</li>
+<li>Otestovať: Otestujte platnosť mesta a nájdite jeho údaje.</li>
+<li>Pridať: pridá aktuálne mesto do zoznamu. Toto tlačidlo sa dá aktivovať, ak
+  je vybraté mesto zo zoznamu, a ak ste zadané mesto otestovali.</li>
+<li>Podrobnosti: zobrazuje informácie o aktuálnom meste. Toto tlačidlo sa dá
+  aktivovať, ak je zo zoznamu vybraté mesto alebo ak ste ho už otestovali.</li>
+<li>Nastavenie zvukových efektov: Umožňuje definovať oblasť s cieľom
+  prispôsobiť zvukové efekty. Toto tlačidlo sa dá aktivovať, ak sú zvukové
+  efekty nainštalované a aktivované a ak je zo zoznamu vybraté mesto.</li>
+<li>Predvolené mesto: Ak nastavíte mesto ako predvolené, použije sa pri každom
+  reštarte doplnku. Toto tlačidlo sa dá aktivovať, keď vyberiete mesto,
+  ktoré bolo predtým vložené do zoznamu a nie je zatiaľ predvolené alebo ak
+  prešlo testovaním.</li>
+<li>Odstrániť: Odstráni aktuálne mesto zo zoznamu. Toto tlačidlo sa dá
+  aktivovať, ak vyberiete mesto, ktoré bolo predtým vložené do zoznamu.</li>
+<li>Premenovať: Premenuje aktuálne mesto. Toto tlačidlo sa dá aktivovať, ak
+  vyberiete mesto, ktoré bolo predtým vložené do zoznamu.</li>
+<li>Importovať: Toto tlačidlo umožňuje importovať mestá z iného zoznamu miest
+  s príponou * .zipcodes. Počas importu môžete začiarknuť mestá, ktoré
+  chcete importovať.</li>
+<li>Exportovať: Umožňuje vám uložiť mestá do súboru s príponou *
+  .zipcodes. Exportovať môžete len vtedy, ak je v zozname aspoň jedno mesto.</li>
+<li>nastavenie hodinovej predpovede... - Toto tlačidlo umožňuje zvoliť obsah správy hodinovej predpovede.</li>
+<li>Jednotky merania teploty: Pomocou prepínača vyberte medzi stupňami Celzia
+  (predvolené), Fahrenheita alebo Kelvina.</li>
+<li>Zobraziť stupne ako: Pomocou prepínača vyberte medzi Celzia <code>-</code>
+  Fahrenheita <code>-</code> Kelvina (predvolené) C<code>-</code> F <code>-</code> K alebo neurčovať.</li>
+<li>Dĺžka predpovede: Nastavte počet dní predpovede počasia. Maximálne 3.</li>
+<li>Zoznamový rámik: API zodpovedajúci jazyk:: English, en; môžete zvoliť jazyk textu predpovede.</li>
+<li>Dostupné sú aj tieto začiarkávacie polia:</li>
+<li>kopírovať predpoveď počasia, aktuálne počasie a informácie o meste do
+  schránky - predvolene vypnuté</li>
+<li>Predpoveď oznamovať aj Zvukom: Po začiarknutí môžete spravovať zvukové
+  efekty. Ak sú nainštalované zvukové efekty a pole je začiarknuté, môžete
+  upravovať hlasitosť zvukov klávesom F5.</li>
+<li>Pribudne tiež začiarkávacie políčko Neprehrávať zvuky Prostredia.</li>
+<li>Môžete zmeniť celkovú úroveň hlasitosti, prípadne upraviť hlasitosť pre
+  jednotlivé udalosti. Predvolene nie je začiarknuté.</li>
+<li>Neprehrávať zvuky Prostredia: Táto možnosť je k dispozícii, ak sú zvukové
+  efekty povolené. Po začiarknutí sa budú prehrávať len zvuky počasia (dážď,
+  búrka, vietor) a nie zvuky prostredia. Predvolene je vypnuté.</li>
+<li>Používať 24-hodinový formát: Ak je odčiarknuté, oznamuje čas v
+  12-hodinovom formáte, napríklad 12 AM <code>-</code> 12 PM. Predvolene je zapnuté.</li>
+<li>Povoliť texty Pomocníka v oknách s nastaveniami: Predvolene je zapnuté.</li>
+<li>Oznamovať poveternostné podmienky: Predvolene je vypnuté. Po zapnutí budú
+  dostupné tieto možnosti:</li>
+<li>Oznamovať smer vetra: bude oznamovať pri počasí aj smer vetra. Predvolene
+  zapnuté.</li>
+<li>Oznamovať rýchlosť vetra: Bude oznamovať rýchlosť vetra v mýľach alebo
+  kilometroch za hodinu. Predvolene zapnuté.</li>
+<li>Oznamovať rýchlosť vetra v metroch za sekundu: Predvolene zapnuté.</li>
+<li>Oznamovať pocitovú teplotu: Predvolene zapnuté.</li>
+<li>Pridať rýchlosť  nárazov vetra: Predvolene zapnuté</li>
+<li>Oznamovať atmosferické informácie: Predvolene je vypnuté. Po zapnutí budú
+  dostupné tieto možnosti:</li>
+<li>Oznamovať vlhkosť: Oznamuje vlhkosť vzduchu v percentách. Predvolene
+  zapnuté.</li>
+<li>Oznamovať Viditeľnosť: Oznamuje viditeľnosť v míľach alebo
+  kilometroch. Predvolene zapnuté.</li>
+<li>Oznamovať hodnotu Atmosferického tlaku: Oznamuje stav tlaku v milibaroch
+  alebo palcoch ortuti. Predvolene je zapnuté. Po začiarknutí je tiež možné
+  začiarknuť oznamovanie tlaku v milimetroch ortuti.</li>
+<li>Pridať hodnotu oblačnosti: Predvolene zapnuté</li>
+<li>Pridať hodnotu zrážok: Predvolene zapnuté</li>
+<li>Pridať hodnotu ultrafialového žiarenia: Predvolene zapnuté</li>
+<li>Oznamovať astronomické informácie: oznamuje čas východu a západu slnka a čas východu a západu mesiaca. Predvolene vypnuté</li>
+<li>Desatinné čísla oddeľovať čiarkou: Ak je začiarknuté, použije na oddelenie
+  celých a desatinných čísel desatinnú čiarku (,). Predvolene je vypnuté a
+  používa sa bodka (.)</li>
+<li>Zobrazí výstup v okne; ak je aktivovaná, zobrazí sa predpoveď v okne. Začiarkavacie políčko nie je začiarknuté (predvolene)</li>
+<li>Skontrolovať aktualizácie: Skontroluje dostupnosť novej verzie doplnku.</li>
+<li>Nastavenia uložíte tlačidlom OK a zrušíte tlačidlom Zrušiť.</li>
+<li>Ak ste upravili zoznam s mestami a aktivujete tlačidlo Zrušiť, doplnok vás
+  upozorní, že ste zabudli uložiť zmeny. Nastavenia sa ukladajú do súborov:</li>
+<li>"Weather.ini": prvotné nastavenia doplnku.</li>
+<li>"Weather.volumes": Nastavenia hlasitosti pre jednotlivé udalosti.</li>
+<li>"Weather.zipcodes": zoznam miest.</li>
+<li>"Weather.default": Vaše predvolené mesto.</li>
+<li>"Weather_searchkey": Uložené vyhľadávané reťazce.</li>
+</ul>
+<hr />
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

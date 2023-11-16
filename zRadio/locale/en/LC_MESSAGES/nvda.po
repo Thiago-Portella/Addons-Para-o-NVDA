@@ -1,0 +1,395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zRadio for NVDA\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2021-12-10 13:15+0400\n"
+"Last-Translator: Dragan Ratkovich\n"
+"Language-Team: Dragan Ratkovich\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:44
+msgid "&zRadio para NVDA"
+msgstr "&zRadio for NVDA"
+
+#: __init__.py:58
+msgid ""
+"zRadio necesita internet para ser ejecutado.\n"
+"Asegurese de que tiene todo correcto."
+msgstr ""
+"zRadio needs internet to work.\n"
+"Make sure you have everything set up correctly."
+
+#: __init__.py:62 __init__.py:149 __init__.py:552 __init__.py:562
+#: __init__.py:583 __init__.py:619 __init__.py:640 __init__.py:674
+#: __init__.py:693 __init__.py:723 __init__.py:754 __init__.py:785
+#: __init__.py:1241 __init__.py:1284 __init__.py:1367 __init__.py:1527
+#: __init__.py:1537
+msgid "Error"
+msgstr "Error"
+
+#: __init__.py:76
+msgid "Muestra la ventana principal de zRadio"
+msgstr "Displays the zRadio main window"
+
+#: __init__.py:81
+msgid "Bajar volumen"
+msgstr "Decrease volume"
+
+#: __init__.py:86
+msgid "No se puede bajar más el volumen ya se encuentra al 0%"
+msgstr "You cannot turn the volume down further, it is already by 0%"
+
+#: __init__.py:96
+msgid "Subir volumen"
+msgstr "Increase volume"
+
+#: __init__.py:101
+msgid "No se puede subir más el volumen ya se encuentra al 100%"
+msgstr "You can no longer increase the volume, it is already 100%"
+
+#: __init__.py:111
+msgid "Detener reproducción"
+msgstr "Stop playback"
+
+#: __init__.py:116
+msgid "No hay nada reproduciéndose"
+msgstr "Nothing is playing"
+
+#: __init__.py:129
+msgid "Recargar reproducción"
+msgstr "Reload playback"
+
+#: __init__.py:134
+msgid "No hay nada para recargar"
+msgstr "No playback to reload"
+
+#: __init__.py:140 __init__.py:245 __init__.py:1232 __init__.py:1275
+#: __init__.py:1358
+msgid ""
+"No se pudo cargar la emisora.\n"
+"\n"
+"Asegúrese de que tiene conexión a internet.\n"
+"\n"
+"Otros motivos pueden ser que la emisora tenga problemas en estos momentos.\n"
+"\n"
+"Inténtelo más tarde."
+msgstr ""
+"The station could not be loaded.\n"
+"\n"
+"Make sure you have an internet connection.\n"
+"\n"
+"Other reasons may be that the station is having problems at the moment.\n"
+"\n"
+"Please try again later."
+
+#: __init__.py:166
+msgid "Poner y quitar silencio"
+msgstr "Mute and unmute station"
+
+#: __init__.py:171
+msgid "No hay nada para silenciar"
+msgstr "There is nothing to mute"
+
+#: __init__.py:184
+msgid "Saber emisora en reproducción"
+msgstr "Know station being played"
+
+#: __init__.py:191
+#, python-format
+msgid "Emisora en memoria: %s"
+msgstr "Station in memory: %s"
+
+#: __init__.py:202 __init__.py:546 __init__.py:961 __init__.py:1415
+#: variables.py:129
+msgid "Sin emisoras."
+msgstr "No stations."
+
+#: __init__.py:286
+msgid "No tiene ninguna emisora en Favoritos en la posición 1"
+msgstr "You do not have any station in Favorites in position 1"
+
+#: __init__.py:289
+msgid "No tiene ninguna emisora en Favoritos en la posición 2"
+msgstr "You do not have any station in Favorites in position 2"
+
+#: __init__.py:292
+msgid "No tiene ninguna emisora en Favoritos en la posición 3"
+msgstr "You do not have any station in Favorites in position 3"
+
+#: __init__.py:295
+msgid "No tiene ninguna emisora en Favoritos en la posición 4"
+msgstr "You do not have any station in Favorites in position 4"
+
+#: __init__.py:298
+msgid "No tiene ninguna emisora en Favoritos en la posición 5"
+msgstr "You do not have any station in Favorites in position 5"
+
+#: __init__.py:301
+msgid "Reproducir emisora rápidamente 1"
+msgstr "Play favorite radio station quickly from position 1"
+
+#: __init__.py:306
+msgid "Reproducir emisora rápidamente 2"
+msgstr "Play favorite radio station quickly from position 2"
+
+#: __init__.py:311
+msgid "Reproducir emisora rápidamente 3"
+msgstr "Play favorite radio station quickly from position 3"
+
+#: __init__.py:316
+msgid "Reproducir emisora rápidamente 4"
+msgstr "Play favorite radio station quickly from position 4"
+
+#: __init__.py:321
+msgid "Reproducir emisora rápidamente 5"
+msgstr "Play favorite radio station quickly from position 5"
+
+#: __init__.py:333
+msgid "zRadio para NVDA"
+msgstr "zRadio for NVDA"
+
+#: __init__.py:391 __init__.py:1403
+msgid "Quitar &Silencio"
+msgstr "Unmute"
+
+#: __init__.py:410 __init__.py:426 __init__.py:443 __init__.py:456
+#: __init__.py:466 __init__.py:480 __init__.py:492 __init__.py:505
+#: __init__.py:516 __init__.py:529 __init__.py:544 __init__.py:585
+#: __init__.py:600 __init__.py:612 __init__.py:642 __init__.py:656
+#: __init__.py:667 __init__.py:695 __init__.py:725 __init__.py:756
+#: __init__.py:787 __init__.py:801 __init__.py:810 __init__.py:820
+#: __init__.py:831 __init__.py:868 __init__.py:876 __init__.py:895
+#: __init__.py:903 __init__.py:976 __init__.py:1013 __init__.py:1024
+#: __init__.py:1046 __init__.py:1094 __init__.py:1120 __init__.py:1161
+#: __init__.py:1182 __init__.py:1203 xgui.py:95 xgui.py:125 xgui.py:160
+msgid "&Buscar"
+msgstr "s&earch"
+
+#: __init__.py:421 __init__.py:872 __init__.py:899 __init__.py:911
+#: __init__.py:972 __init__.py:1080 __init__.py:1425
+msgid "No hay favoritos."
+msgstr "There are no favorites."
+
+#: __init__.py:445 __init__.py:454
+msgid "Búsqueda general:"
+msgstr "General search:"
+
+#: __init__.py:449 __init__.py:460 __init__.py:522 __init__.py:533
+#: __init__.py:700 __init__.py:792 __init__.py:806 __init__.py:836 xgui.py:163
+msgid "Esperando una búsqueda."
+msgstr "Waiting for a search."
+
+#: __init__.py:468 __init__.py:478
+msgid "Buscar pais:"
+msgstr "Search by country:"
+
+#: __init__.py:474 __init__.py:487 __init__.py:499 __init__.py:511
+#: __init__.py:714 __init__.py:731 __init__.py:745 __init__.py:762
+#: __init__.py:776 __init__.py:816 __init__.py:826
+msgid "{} número de emisoras: {}"
+msgstr "{} number of stations: {}"
+
+#: __init__.py:494 __init__.py:503
+msgid "Buscar idioma:"
+msgstr "Search by language:"
+
+#: __init__.py:518 __init__.py:527
+msgid "Buscar etiqueta:"
+msgstr "Search by tag:"
+
+#: __init__.py:549
+msgid "No hay emisoras para buscar."
+msgstr "There are no stations to search."
+
+#: __init__.py:559 __init__.py:616 __init__.py:671
+msgid ""
+"El campo de búsqueda esta vacío, escriba algo antes para poder realizar la "
+"búsqueda."
+msgstr ""
+"The search field is empty, write something before to be able to perform the "
+"search."
+
+#: __init__.py:579 __init__.py:636 __init__.py:689 __init__.py:719
+#: __init__.py:750 __init__.py:781
+msgid ""
+"No se encontraron resultados.\n"
+"Haga una búsqueda más específica."
+msgstr ""
+"No results found.\n"
+"Do a more specific search."
+
+#: __init__.py:590 __init__.py:647 __init__.py:679 __init__.py:708
+#: __init__.py:739 __init__.py:770
+msgid "&Limpiar"
+msgstr "@Clear"
+
+#: __init__.py:843
+msgid "&Nueva emisora"
+msgstr "&New station"
+
+#: __init__.py:846
+msgid "&Editar emisora"
+msgstr "E&dit station"
+
+#: __init__.py:849
+msgid "&Quitar de favoritos"
+msgstr "Remove from &favorites"
+
+#: __init__.py:860
+msgid "Añadir nueva emisora"
+msgstr "Add new station"
+
+#: __init__.py:887
+msgid "Editar emisora"
+msgstr "Edit station"
+
+#: __init__.py:919 __init__.py:935 __init__.py:946
+msgid "Reproducir"
+msgstr "Play"
+
+#: __init__.py:922
+msgid "Agregar a favoritos"
+msgstr "Add to Favorites"
+
+#: __init__.py:925 __init__.py:941 __init__.py:949
+msgid "Copiar URL"
+msgstr "Copy URL"
+
+#: __init__.py:930
+msgid "Poner por defecto en General"
+msgstr "Set default to General"
+
+#: __init__.py:938
+msgid "Quitar de favoritos"
+msgstr "Remove from favorites"
+
+#: __init__.py:1054 __init__.py:1066 __init__.py:1101 __init__.py:1111
+#: __init__.py:1126 __init__.py:1136 __init__.py:1149
+msgid "Información"
+msgstr "Information"
+
+#: __init__.py:1056 __init__.py:1068
+msgid "Se agrego la emisora {} a favoritos."
+msgstr "Station {} was added to favorites."
+
+#: __init__.py:1103 __init__.py:1113 __init__.py:1128 __init__.py:1138
+#: __init__.py:1151
+msgid ""
+"Se a copiado la URL de la emisora {} al portapapeles. Ya puede compartirla."
+msgstr ""
+"The station URL {} has been copied to the clipboard. You can now share it."
+
+#: __init__.py:1256 __init__.py:1297 __init__.py:1333 __init__.py:1374
+#: __init__.py:1388 __init__.py:1400 __init__.py:1408 xgui.py:49
+msgid "&Silenciar"
+msgstr "&Mute"
+
+#: __init__.py:1523
+msgid ""
+"No puede dejar el campo Nombre de la emisora en blanco.\n"
+"Asegúrese de introducir un nombre correcto."
+msgstr ""
+"You cannot leave the Station Name field blank.\n"
+"Make sure to enter a correct name."
+
+#: __init__.py:1533
+msgid ""
+"No puede dejar el campo de la URL de la emisora en blanco.\n"
+"Asegúrese de introducir una dirección correcta."
+msgstr ""
+"You cannot leave the station URL field blank.\n"
+"Make sure you enter a correct address."
+
+#: variables.py:103
+msgid "Búsqueda general de radios"
+msgstr "General radio search"
+
+#: variables.py:105
+msgid "Búsqueda por países"
+msgstr "Search by countrie"
+
+#: variables.py:107
+msgid "Búsqueda por idioma"
+msgstr "Search by language"
+
+#: variables.py:109
+msgid "Búsqueda por etiqueta"
+msgstr "Search by tag"
+
+#: xgui.py:35
+msgid "General"
+msgstr "General"
+
+#: xgui.py:37
+msgid "Favoritos"
+msgstr "Favorites"
+
+#: xgui.py:39
+msgid "Buscador"
+msgstr "Search"
+
+#: xgui.py:43
+msgid "&Detener"
+msgstr "&Stop"
+
+#: xgui.py:46
+msgid "&Recargar"
+msgstr "&Reload"
+
+#: xgui.py:55
+msgid "&Acción"
+msgstr "&Action"
+
+#: xgui.py:62
+msgid "Salir Alt + F4"
+msgstr "Close Alt + F4"
+
+#: xgui.py:92
+msgid "Busqueda emisoras:"
+msgstr "Station search:"
+
+#: xgui.py:97
+msgid "Listado de emisoras:"
+msgstr "List of stations:"
+
+#: xgui.py:122
+msgid "Busqueda emisoras favoritas:"
+msgstr "Search for favorite stations:"
+
+#: xgui.py:127
+msgid "Listado de emisoras favoritas:"
+msgstr "List of favorite stations:"
+
+#: xgui.py:152
+msgid "Seleccione una categoría:"
+msgstr "Select a category:"
+
+#: xgui.py:157
+msgid "Búsqueda general de radios:"
+msgstr "General radio search:"
+
+#: xgui.py:165
+msgid "Resultado:"
+msgstr "Results:"
+
+#: xgui.py:194
+msgid "Nombre de la emisora:"
+msgstr "Station name:"
+
+#: xgui.py:198
+msgid "Dirección URL de la emisora:"
+msgstr "Station URL:"
+
+#: xgui.py:202 xgui.py:235
+msgid "&Aceptar"
+msgstr "&OK"
+
+#: xgui.py:204
+msgid "&Cancelar"
+msgstr "Cance&l"

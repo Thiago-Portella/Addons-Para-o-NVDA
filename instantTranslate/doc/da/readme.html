@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="da">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>Ekspres-oversættelse</h1>
+<ul>
+<li>Forfattere: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto
+  Buffolino og andre NVDA -bidragydere.</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">stabil version</a></li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">udviklingsversion</a></li>
+</ul>
+<p>Denne tilføjelse bruges til at oversætte markeret og/eller
+udklipsholdertekst fra et sprog til et andet. Dette gøres ved hjælp af
+Google Translate -tjenesten.</p>
+<h2>Konfiguration af sprog</h2>
+<p>For at konfigurere kilde, mål og ombytningssprog, skal du gå til: NVDA -menu/Opsætning/Indstillinger for Ekspres-oversættelse.</p>
+<p>Der er to combo bokse, "Kildesprog" og "Målsprog" og en check box der
+bestemmer, om oversættelsen skal kopieres til udklipsholderen.</p>
+<p>Hvis du har valgt automatisk indstilling (førstevalget) fra boksen
+"Kildesprog", er der også en komboboks kaldet "Sprog til ombytning" og en
+check box til at aktivere automatisk ombytning.</p>
+<p>Betydningen af to første bokse og afkrydsningsfelt for kopiering er nemme at
+forstå udfra ordlyden, men nogle ord om resten er nødvendige. Husk altid, at
+forklaringerne herunder tager udgangspunkt i det kildesprog, der er
+indstillet for den automatiske oversættelse.</p>
+<p>Komboboksen "Sprog til ombytning" er nyttig, når du skifter kilde- og
+målsprog via script (se nedenfor). Faktisk har et målsprog, der er
+indstillet på autoindstillingen ingen mening, så tilføjelsen indstiller
+værdien af komboboksen ovenfor.</p>
+<p>Så forestil dig denne situation: Du oversætter normalt til engelsk (dit
+hovedsprog), men nogle gange (f.eks. Når du skriver et dokument) skal du
+oversætte til italiensk (dit andet sprog). Du kan indstille boksen "Sprog
+til ombytning" til italiensk, så tilføjelsen oversætter fra engelsk til
+italiensk uden at det er nødvendigt at gå ind i tilføjelsesindstillingerne.</p>
+<p>Nu kommer vi til check boksen "Automatisk ombytning". Denne mulighed vises,
+hvis du indstiller autoindstillingen i boksen "Kildesprog" og er direkte
+forbundet med "Sprog til ombytning". Hvis du aktiverer dette, forsøger
+tilføjelsen automatisk at benytte dine indstillinger for kilde- og målsprog
+til en konfiguration, hvor målsproget bliver kildesprog, og det sprog, der
+er valgt i boksen "Sprog til ombytning", er det nye målsprog. Dette er
+ekstremt nyttigt, hvis kildesproget for den tekst, du vil oversætte, er
+målsproget.</p>
+<p>Endnu et simpelt eksempel: husk på den tidligere forestillede
+situation. Hvis du oversætter en tekst til et andet sprog end engelsk, er
+der ikke noget problem. Du får den korrekte oversættelse til engelsk. Men
+hvis du har brug for at oversætte en tekst fra engelsk, får du normalt en
+oversættelse på engelsk identisk med originalteksten, og dette er jo ret
+ubrugeligt. Takket være funktionen for automatisk ombytning, ændre
+tilføjelsen automatisk målsproget til italiensk, så du får en gyldig og
+brugbar oversættelse.</p>
+<p>Dette er en midlertidig konfiguration. Hvis denne mulighed ikke har nogen
+effekt (den er eksperimentel), skal du prøve at ændre manuelt til en stabil
+konfiguration ved hjælp af kommandoen for ombytning beskrevet nedenfor. Det
+er eksperimentelt, fordi Google i nogle situationer (typisk med korte
+tekster) ikke genkender det rigtige kildesprog korrekt, og du skal skifte
+sprog manuelt via script, for at tvinge kildesproget til at være det
+tidligere målsprog (engelsk i vores eksempel).</p>
+<p>I dialogen med parametre for taleindstillinger (NVDA -menu /Opsætning/Indstillinger/Tale) kan du ændre indstillingen "Automatisk skift af sprog". På denne måde, vil oversættelsen blive annonceret på det pågældende sprog, hvis du benytter en flersproget talesyntese.</p>
+<h2>Brug</h2>
+<p>Du kan bruge denne tilføjelse på tre måder:</p>
+<ol>
+<li>Vælg noget tekst ved hjælp af markeringskommandoer (f.eks. Skift med
+   piletasterne), og tryk på den tilhørende tast for at
+   oversætte. Oversættelsesresultatet læses med den talesyntese, du bruger.</li>
+<li>Du kan også oversætte tekst fra udklipsholderen.</li>
+<li>Tryk på den tilknyttede genvejstast for at oversætte den sidst udtalte
+   tekst.</li>
+</ol>
+<h2>Tastaturkommandoer</h2>
+<p>Alle følgende kommandoer skal trykkes efter kommandoen NVDA+Shift+t er
+trykket:</p>
+<ul>
+<li>T: Oversæt den valgte tekst</li>
+<li>Shift+t: Oversæt tekst fra udklipsholderen</li>
+<li>S: Byt kilde- og målsprog</li>
+<li>A: Annoncér den aktuelle konfiguration</li>
+<li>C: Kopier det sidste resultat til udklipsholderen</li>
+<li>I: Genkendt sproget for den valgte tekst</li>
+<li>L: Oversæt den sidste udtalte tekst</li>
+<li>O: Åbn dialogen med oversættelsesindstillinger</li>
+<li>H: annoncerer alle tilgængelige lagdelte kommandoer.</li>
+</ul>
+<h2>Ændringer for 4.4.3</h2>
+<ul>
+<li>Tilføjet muligheden for at erstatte understregninger med mellemrum, kan
+  give bedre oversættelsesresultater afhængigt af kontekst (takket være Beka
+  Gozalishvili)</li>
+<li>Tilføjet kompatibilitet til NVDA 2022.1</li>
+</ul>
+<h2>Ændringer for 4.4.2</h2>
+<ul>
+<li>Gendannet sprogregistrering og automatisk ombytning af sprog(Tak til
+  Cyrille for rettelsen)</li>
+<li>Opdaterede oversættelser for tilføjelsen(tak til Cyrille)</li>
+</ul>
+<h2>Ændringer i 4.4</h2>
+<ul>
+<li>Ekspres-oversættelse er nu kompatibel med NVDA 2019.3 (Python 3 -versioner
+  af NVDA)</li>
+</ul>
+<h2>Ændringer til 4.3</h2>
+<ul>
+<li>Rettelse for NVDA-kompatibilitet</li>
+<li>Fandt en måde at bruge google som oversættelsestjeneste igen.</li>
+</ul>
+<h2>Ændringer til 4.2</h2>
+<ul>
+<li>Gendannet fungerbar tilstand med nyere versioner af NVDA.</li>
+<li>Gendannet automatisk sprogregistrering.</li>
+</ul>
+<h2>Ændringer for 4.1</h2>
+<ul>
+<li>Ekspres-oversættelse fungerer igen, nu med Yandex oversættelsestjeneste i
+  stedet for Google.</li>
+</ul>
+<h2>Ændringer i4.0</h2>
+<ul>
+<li>Oversættelse udføres automatisk efter ombytning.</li>
+<li>Cache-fejl rettet.</li>
+</ul>
+<h2>Ændringer i 3.0</h2>
+<ul>
+<li>Ændret måde, hvorpå genveje bruges. Nu kan du trykke på NVDA+Shift+t for
+  at aktivere lagdelte kommandoer for Ekspres-oversættelse, og derefter en
+  enkelt bogstavstast for at udføre en handling (se alle kommandoer i
+  afsnittet "Tastaturkommandoer").</li>
+<li>Implementerede ombytning af sprog.</li>
+<li>Ændret konfigurationsformat, nu kan vi ændre øjeblikkelige
+  oversættelsesindstillinger, hvis vi er i skrivebeskyttet rude, men husk,
+  at dette ikke vil fungere før en genstart af NVDA.</li>
+<li>Fjernet grænsen for mængden af tekst, der kan oversættes.</li>
+<li>Tilføjet genvejen t til menupunktet Ekspres-oversættelse indstillinger</li>
+<li>Indstillingen for automatisk sprog er nu første mulighed i den combo boks,
+  der bestemmer kildesproget. Indstillingen er ikke længere i boksen for
+  målsprog.</li>
+<li>Tilføjet en check box til kopiering af oversættelsesresultater i
+  indstillingerne.</li>
+<li>Gem konfigurationsfilen i roden af indstillingsmappen.</li>
+<li>Kilde- og målsprog synkroniseret med, hvad Google Translate i øjeblikket
+  viser (22. april 2015).</li>
+</ul>
+<h2>Ændringer i 2.1</h2>
+<ul>
+<li>Nu kan tilføjelsen oversætte tekst fra udklipsholderen, når der trykkes på
+  NVDA+shift+y.</li>
+</ul>
+<h2>Ændringer i 2.0</h2>
+<ul>
+<li>Tilføjet gui -konfigurator, hvor du kan vælge kilde- og målsprog.</li>
+<li>Tilføjet tilføjelsesmenupunkt i Opsætning fra NVDA-menuen</li>
+<li>Indstillinger skrives nu til separat konfigurationsfil.</li>
+<li>Oversættelsesresultater kopieres nu automatisk til udklipsholderen.</li>
+</ul>
+<h2>Ændringer i 1.0</h2>
+<ul>
+<li>Første version.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

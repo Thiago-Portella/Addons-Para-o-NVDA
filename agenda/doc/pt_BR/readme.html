@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Accessible agenda 2023.10.17</title>
+</head>
+<body>
+<h1>Agenda acessível</h1>
+<h2>Informações</h2>
+<ul>
+<li>Autores: Abel Passos, Ângelo Abrantes  e Rui Fontes</li>
+<li>atualizado em: 17.10.2023</li>
+<li>Baixar a <a href="https://github.com/ruifontes/agenda-for-NVDA/releases/download/2023.10.17/agenda-2023.10.17.nvda-addon">versão estável</a></li>
+<li>Compatibilidade: NVDA versão 2019.3 e posteriores</li>
+</ul>
+<h2>Apresentação</h2>
+<p>Este addon permite anotar  compromissos e atividades, periódicos ou não, com ou sem alarmes.
+É possível utilizar duas agendas diferentes.
+Para alternar entre elas, vá ao menu do NVDA, Preferências, Configurações, seção Agenda e escolha, na caixa combinada, a agenda que quer usar.
+Se a segunda linha estiver vazia, use o botão "Selecionar ou adicionar uma pasta" para criar uma segunda agenda.
+Se utilizar este botão com um caminho selecionado, a agenda será movida para o novo caminho, se nele não existir nenhuma. Se existir, será apenas mudado o caminho, as duas agendas serão preservadas, passando a ser utilizada a do novo caminho.
+Ao iniciar  o NVDA, serão exibidos os compromissos para os próximos dias. Este lembrete pode ser uma janela com a lista de todos os compromissos ou um lembrete com um diálogo e um alarme sonoro para os compromissos com alarme definido.
+Esta opção pode ser configurada nas definições do adon.
+Agora, também na categoria do complemento das configurações do NVDA, já pode seleccionar os sons a utilizar e escolher entre o calendário gregoriano e o iraniano.</p>
+<h2>Comando para abrir a agenda</h2>
+<p>O comando para chamar o addon  é NVDA+F4.
+É possível alterá-lo no diálogo "Definir comandos", na seção Agenda.</p>
+<h2>Como funciona:</h2>
+<ul>
+<li>Ao iniciar  o nvda , serão mostrados os compromissos do dia atual e do dia seguinte, casoesteja configurado para tal.</li>
+<li>Na jannela principal, existem os campos para se alterar a data, os compromissos da data selecionada e alguns botões de controle do programa que serão descritos adiante.
+Os campos da data podem ser alterados usando as setas verticais ou digitando o valor pretendido. Ao alterar-se a data, os compromissos do dia serão automaticamente mostrados.</li>
+</ul>
+<h3>Teclas de atalho da janela principal:</h3>
+<ul>
+<li>Alt + 1-9: Avança a quantidade de dias correspondentes ao valor pressionado;</li>
+<li>Alt+0: Retorna à data atual;</li>
+<li>Alt+seta esquerda: Retrocede um dia na data;</li>
+<li>Alt+seta direita: Avança um dia na data;</li>
+<li>Alt+Seta acima: Avança uma semana;</li>
+<li>Alt+Seta abaixo: Retrocede uma semana;</li>
+<li>Alt+PageUp: Avança um mês;</li>
+<li>Alt+PageDown: Retrocede um mês;</li>
+<li>Enter: Se estiver selecionado um compromisso, abre a janela de edição. Caso contrário, abre a janela para criar um novo compromisso;</li>
+<li>Delete: apaga o registro selecionado. Mesma função do botão Remover;</li>
+<li>Ctrl+F: abre a janela de pesquisa. Mesma função do botão Pesquisar.</li>
+</ul>
+<h3>Funções dos botões da janela principal e suas respectivas teclas de atalho:</h3>
+<ul>
+<li>Adicionar (Alt+A): abre uma janela para registrar compromissos na data selecionada;</li>
+<li>Editar (Alt+E): abre uma janela para editar o compromisso selecionado;</li>
+<li>Remover (Alt+R): apaga o compromisso selecionado;</li>
+<li>Pesquisar (Alt+P ou Ctrl+F): abre uma janela para pesquisa de informações na agenda;</li>
+<li>sair (Alt+S): Fecha a janela.</li>
+</ul>
+<h3>As funções de adicionar e editar são bastante semelhantes e, por este motivo, a janela que será descrita serve para ambas as funcionalidades.</h3>
+<p>A principal diferença é que, para editar, necessita ter selecionado, previamente, um compromisso a ser alterado.
+Além disto, na função Editar, os dados do compromisso selecionado são apresentados na janela para modificação. Na opção Adicionar, a janela abre com a data selecionada e com os demais campos em branco. </p>
+<h3>Campos da janela Adicionar e Editar:</h3>
+<ul>
+<li>dia/mês/ano: campos da data que podem ser alterados com as setas verticais ou digitando o valor pretendido; </li>
+<li>hora/minutos: campos da hora  que podem ser alterados com as setas verticais ou digitando o valor pretendido; </li>
+<li>Descrição: campo para preenchimento das informações sobre o compromisso ;</li>
+<li>Botão Repetir (Alt+R): configurar a periodicidade do evento</li>
+<li>Botão Alarmes (Alt+A): ajustar os alarmes para o evento.</li>
+<li>Botão OK (Alt+O): registra na agenda as informações do compromisso; </li>
+<li>Botão Cancelar (Alt+C): descarta informações preenchidas nesta janela. </li>
+<li>A janela Adicionar/Editar possui a tecla de atalho Ctrl+Enter para guardar as informações preenchidas. Equivalente à função do botão OK. </li>
+</ul>
+<h3>Campos da janela "Configurar periodicidade"</h3>
+<p>Ao se pressionar o botão "Repetir" dentro da janela de adicionar ou editar, aparecerá uma janela para configurar a periodicidade do evento. Campos desta janela:
+* Escolha a periodicidade do evento: uma lista de opções para ajustar a frequência que o evento deve ser repetido. O usuário pode escolher entre as seguintes opções: Nenhuma, Todos os dias, Toda semana, A cada 15 dias, Todo mês, A cada 2 meses, A cada 3 meses, A cada 4 meses, A cada 6 meses ou Todos os anos. </p>
+<blockquote>
+<p>Nenhuma: indica que o evento não se repetirá;
+Se a opção escolhida for "Nenhuma", indica que o evento não se repetirá.
+* Marque para definir o encerramento da periodicidade: marcando esta opção, serão abertas opções para determinar quando a frequência do evento deve ser encerrada.
+* Quantidade de repetições: assinale quantas vezes o evento deve se repetir. Ao ajustar a quantidade, a data de término é automaticamente ajustada.
+* Data final: campos para ajustar a data na qual o evento se encerrará. Ao ajustar a data final, o campo  "Quantidade de repetições" será automaticamente ajustado.</p>
+</blockquote>
+<h4>Observações:</h4>
+<ol>
+<li>O ajuste da periodicidade terá como referência a data configurada na janela adicionar/editar.</li>
+<li>Ao ajustar a periodicidade de um evento, sua repetição acontecerá sempre após sua data inicial.</li>
+<li>Os eventos mensais serão ajustados automaticamente para o último dia válido do mês corrente, caso a data inicial selecionada para o evento possua um valor no dia que seja superior. 
+Exemplo: supondo que no dia 31 de  janeiro eu tenha criado um evento mensal. O dia 31 não existe no mês de fevereiro. Neste caso, o evento se ajustará automaticamente para o dia 28 ou 29, caso seja ano bissexto. Nos meses cujo valor  máximo do dia seja 30, como o mês de abril, o dia será automaticamente ajustado para o dia 30.</li>
+<li>Se estiver editando um evento periódico e ajustar sua periodicidade para "Nenhuma", a repetição do evento deixará de existir, mas o evento original continuará existindo.</li>
+</ol>
+<h3>Campos da janela "Configurar alarme"</h3>
+<p>Nesta janela o usuário poderá assinalar com que antecedência um alarme para o evento deve ser tocado. As opções de alarme possíveis são: Ajustar o alarme para o dia anterior, Ajustar o alarme para uma hora antes, Ajustar o alarme para meia hora antes, Ajustar o alarme para 15 minutos antes ou Ajustar o alarme para a hora exata.</p>
+<h3>Campos da janela de pesquisa.</h3>
+<ul>
+<li>Tipo de pesquisa: deve selecionar entre as seguintes opções:<ul>
+<li>pesquisa por texto: será aberto um campo de edição para digitar o que deseja procurar. Não é necessário digitar a expressão completa, a pesquisa pode ser feita com partes de palavras;</li>
+<li>Próximos 7 dias: mostra os compromissos para os próximos 7 dias, não incluindo o dia atual;</li>
+<li>Próximos 30 dias: mostra os compromissos para os próximos 30 dias, não incluindo o dia atual;</li>
+<li>Intervalo de datas: mostra os campos de data inicial e final para pesquisar;</li>
+</ul>
+</li>
+<li>Botão Pesquisar (Alt+P): executa a pesquisa selecionada e retorna as informações encontradas;</li>
+<li>Botão Adicionar (Alt+A): A mesma função adicionar da janela principal. A diferença é que, se selecionou um compromisso, a janela para adicionar estará na data do compromisso selecionado. Se nenhum registro for selecionado, mostra a janela na data atual;</li>
+<li>Botão Editar (Alt+E): A mesma função editar da janela principal. Necessita que algum compromisso esteja selecionado;</li>
+<li>Remover (Alt+R): apaga o compromisso selecionado;</li>
+<li>Remover tudo (Alt+T): apaga todos os compromissos apresentados;</li>
+<li>Botão Cancelar  (Alt+C): fecha a janela de pesquisa e retorna à janela principal.</li>
+</ul>
+<h4>Observações:</h4>
+<ol>
+<li>Caso exista uma data de um evento periódico no período selecionado, sua periodicidade será mostrada. 
+Exemplo: se um evento ocorrer diariamente, aparecerá antes da descrição do evento os dizeres "Todos os dias", indicando a frequência na qual o evento deve ocorrer.</li>
+<li>Na pesquisa por texto, caso algum evento periódico seja mostrado, será a data  de origem do evento e não as suas datas posteriores.
+Exemplo: se eu iniciei um evento com periodicidade diária na data de 3 de janeiro de 2022, se for feita uma pesquisa por texto e este evento for encontrado, as datas posteriores, como os dias 4, 5, 6 de janeiro, etc, não serão mostradas.
+Este comportamento se deve ao fato de este tipo de pesquisa não ter uma data limite, tornando o cálculo de datas posteriores tendendo ao infinito.</li>
+<li>Se for selecionado um evento dentre os encontrados por uma pesquisa que não seja por texto,  desejando editar ou remover este registro, o usuário será avisado se se tratar de um evento periódico. Caso o evento seja deste tipo, o usuário poderá editar ou remover apenas os registros que deram origem ao evento mostrado.
+Exemplo: supondo que eu tenha criado um evento diário na data de 8 de fevereiro de 2022 e tenha feito uma pesquisa para os próximos 7 dias, este evento aparecerá todos os dias, resultando em 7 eventos, a partir da data atual. Se um destes eventos for selecionado para edição ou exclusão, aparecerá um aviso para o usuário indicando que esta ação deverá ser executada na data que originou o evento e toda alteração feita repercutirá em todas suas datas posteriores.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDA için zRadio 0.6</title>
+</head>
+<body>
+<h1>NVDA için zRadio Kılavuzu:</h1>
+<h2>Yazarın önemli notları:</h2>
+<p>Bu eklenti can sıkıntısından ve NVDA ile deneme yapma arzusundan geliyor.  </p>
+<p>zRadio, yüklendikten sonra yaklaşık 120 MB olan çok ağır bir eklentidir.  </p>
+<p>Bu, zRadio eklentisinin 0.1, 0.2 ve 0.3 sürümlerini kullanmaya devam ediyorsanız geçerlidir, ancak zRadio kullanıcılarını, boyutunu küçülttüğü ve zRadio eklentisinin performansını geliştirdiği için yeni sürüm 0.4'ü indirmeye davet ediyoruz. Daha fazla ayrıntı için lütfen aşağıdaki sürüm 0.4 için "Değişiklik günlüğü" bölümüne bakın.  </p>
+<p>zRadio'nun iş için olmayan ve kabul edilebilir donanıma sahip bilgisayarlarda kullanılması önerilir.  </p>
+<p>Düşük kaynağa sahip bazı bilgisayarlarda NVDA'yı yavaşlatabilir, bu nedenle eklentinin kaldırılması önerilir.  </p>
+<p>Bu, zRadio eklentisinin 0.1, 0.2 ve 0.3 sürümlerini kullanmaya devam ediyorsanız geçerlidir, ancak zRadio kullanıcılarını, boyutunu küçülttüğü ve zRadio eklentisinin performansını geliştirdiği için yeni sürüm 0.4'ü indirmeye davet ediyoruz. Daha fazla ayrıntı için lütfen aşağıdaki sürüm 0.4 için "Değişiklik günlüğü" bölümüne bakın.  </p>
+<p>Dediğim gibi, bu bir deneme ve olması gerektiği gibi, eklentiyi yükleyen kişi, eklentinin neden olabileceği yavaşlamadan ve söz konusu eklentiyi kullanmasından sorumludur.  </p>
+<p>Eklentinin kullanımından veya oluşabilecek sorunlardan yazar sorumlu değildir.  </p>
+<p>Yazar, Eklenti radyolarının hepsinin Çevrimiçi olduğunu, bu nedenle bağlantılardan sorumlu kişinin söz konusu bağlantıları sağlayan sayfa olduğunu, ayrıca radyo istasyonlarının emisyonuna karşılık gelen kısımdan kaynaklanan arıza veya arızalardan sorumlu olmadığını bildirir.  </p>
+<p>Bu eklenti, yüksek performanslı bir bilgisayarda geliştirilmiştir, böylece yavaşlamadan muzdarip olmaz, bu kısım farklı medya tarafından bana verilen gözlemler üzerine yeniden yazılabilir.  </p>
+<p>Eklentinin kaldırılması durumunda birkaç not:  </p>
+<p>Eklenti, NVDA yapılandırma dizininde bulduğumuz zRadio dizinine yalnızca 3 dosya kaydeder ve bunlar şunlardır:  </p>
+<ul>
+<li>Opciones.dat  </li>
+<li>opt_radio.dat  </li>
+<li>fav_radios.dat  </li>
+</ul>
+<p>Bu, zRadio kullanıcılarını yeni 0.4 sürümünü indirmeye davet etmemize rağmen, zRadio eklentisinin 0.1, 0.2 ve 0.3 sürümlerini kullanmaya devam ediyorsanız geçerlidir. Bu yeni sürümü yüklemek, şu ad verilen iki yeni dosyayı yükleyecektir:  </p>
+<ul>
+<li>cache.dat  </li>
+<li>radio_cache.dat  </li>
+</ul>
+<p>Şimdi eklenti, zRadio eklentisinin bu yeni 0.4 sürümü kullanılırsa, NVDA yapılandırma dizininde bulduğumuz zRadio dizinine yalnızca 5 dosya kaydedecektir.  </p>
+<p>Daha fazla ayrıntı için lütfen aşağıdaki sürüm 0.4 için "Değişiklik günlüğü" bölümüne bakın.  </p>
+<p>0.5 sürümünde cache.dat ve radio_cache.dat dosyaları cache.sqlite ile değiştirilir.  </p>
+<p>Çok şey bilen programcılar için, bu kadar kaba ve çok köhne bir kod için ve yorum yapmadığım ve düzenli olmak istiyorsa bir programcının yapması gerekmeyen her şeyi yaptığım için beni azarlamayın.  </p>
+<p>Programlama şeklim kafamda ve tüm kodun kafamda olduğunu ve aniden ortaya çıktığını nasıl açıklayacağımı bilemezdim ve yazımda verimli olmadığım için her zaman kırdığım yönergeleri takip etmeye çalışıyorum. .  </p>
+<p>Ama dediğim gibi ve savunmamda bu, can sıkıntısının ve NVDA ile deney yapma isteğinin bir sonucu.  </p>
+<h2>ZRadio arayüzü</h2>
+<p>Eklentiyi açmak için NVDA / Araçlar menüsüne gitmemiz ve zRadio seçeneğini bularak onaylamamız gerekir.  </p>
+<p>Ayrıca NVDA / Tercihler / Girdi hareketleri menüsüne gidip "zRadio ana penceresini göster" komutuyla ilişkili zRadio'yu arayarak eklentiyi açmak için tanımlı olmayan bir giriş hareketi atayabiliriz.  </p>
+<p>Arayüz açıldığında yukarıdan aşağıya doğru 3 kategoriden oluşan bir ağaç listesinden oluşuyor, önce Genel ekranını, ikinci Favoriler ve üçüncü Arama motorunu buluyoruz. Ağaç listesindeyken yukarı ve aşağı oklar ile geçiş yapabiliriz. 3 kategoriyi hızlıca özetliyorum:  </p>
+<ul>
+<li>Genel, arama alanından önceden tanımladığımız istasyonlara sahip olacağız. Bu daha sonra açıklanacaktır.</li>
+<li>Favoriler, en çok dinlediğimiz ve daha önce bulduğumuz istasyonları ekleyebileceğimiz yer.  </li>
+<li>Arama motoru, bu kategoride radyolar için ülkelere, dile veya etikete göre genel bir arama yapabiliriz.  </li>
+</ul>
+<p>Peki, odak seçili kategorideyken, onu etkinleştirmek için SEKME tuşuna basın ve bir istasyon aramak için veya Arama kategorisindeysek açılan kutuda bir kategori seçmek için bir arama alanına düşeceğiz.  </p>
+<p>Bulmak istediğinizi yazdıktan sonra Ara düğmesine basın. Bu alana bir arama girdikten sonra da Enter tuşuna basabilirsiniz. Bu nedenle, bu eylem, Ara düğmesine basmış olmamızla aynı olacaktır.  </p>
+<p>Tab yaparsak, istasyonların listesini bulacağız. Listedeyken radyo için mevcut seçenekleri göstermek için istasyon adının üzerine bir kez oklarla ve uygulamalar tuşuna veya shift + f10 tuşlarına basarak listede gezinebiliriz.  </p>
+<p>Yeniden sıralarsak ve çalan hiçbir şey yoksa, varsayılan olarak ilk seferde %50 olan bir ses düzeyi çubuğuna düşeriz, bir istasyon oynatılıyorsa oynatmayı kontrol eden düğmelere düşeriz.  </p>
+<p>Ses kontrolünde ses seviyesini artırmak ve azaltmak için hem sol veya sağ hem de yukarı ve aşağı okları kullanabiliriz. Düğmeleri hızlıca özetleme adımı:  </p>
+<ul>
+<li>Durdur, oynatmayı durduracak.  </li>
+<li>Çalmakta olan istasyonu yeniden yüklemek için Yeniden Yükle. Bu, ara belleğin kaybolması ve istasyonu tekrar aramak istemememiz durumunda kullanışlıdır.  </li>
+<li>Sesikapat, bu düğme, oynatma sırasında Sesi kapatabilmemizi sağlar. Basıldığında sesi aç olarak değişir.  </li>
+</ul>
+<p>Tekrar sekme tuşuna basarsak şimdi sadece çıkış adlı bir düğme bulunan çubuğa düşeceğiz, ancak yakında daha fazla seçeneğe sahip olacak.  </p>
+<h2>Genel Ekran</h2>
+<p>Bu ekranda ilk gireceğimiz şey, aramak istediklerimizi koyabileceğimiz bir arama alanıdır. Bu alandan büyük veya küçük harf koymamızın kayıtsız olduğunu ve yazdıklarımızı içeren sonucu döndüreceğini söyleyin.  </p>
+<p>Eğer bir kelime yazarsak yazdığımız kelimeyi içeren bütün istasyonları bulur. Bir harf yazarsak, o harf ile başlayan bütün istasyonları bulur.  </p>
+<p>Taba basarsak , Ara düğmesine erişeceğiz. Bu düğmeye basarsak arama başlayacak ve bu düğmenin adı Temizle olarak değişecektir. İstasyon listesine geri dönmek için temizle düğmesine basmalıyız.  </p>
+<p>Not: Bu alana bir arama kriteri girdikten sonra Enter tuşuna da basabilirsiniz. Bu nedenle, bu eylem, Ara düğmesine basmış olmamızla aynı olacaktır.  </p>
+<p>Yeniden tab tuşuna basarsak arama kutusunda ne yaptığımıza bağlı olarak bir istasyon listesi veya arama sonucu elde ederiz.  </p>
+<h2>Favoriler ekranı</h2>
+<p>Bu ekranda elimizde olmasını istediğimiz istasyonları hızlıca ekleyebiliyoruz, istediklerimizin hepsini isimlerini çoğaltarak bile ekleyebileceğimizi söylüyoruz.  </p>
+<p>Çalışma alanı, Genel ekranıyla tamamen aynıdır, bu yüzden tekrar anlatmayacağım.  </p>
+<p>Hem istasyonlar hem de arama sonuçları listesinde, bir harfe basarak bizi adının başında o harfe sahip ilk istasyona götürecek olan hızlı bir şekilde hareket edebileceğimizi yorumlayın.  </p>
+<p>Yeni 0.3 sürümünün zRadio arayüzüne aşağıdaki gibi yeni özellikler ekledim:  </p>
+<ul>
+<li>İstasyonları favorilere göre sıralayın.  </li>
+<li>Favorilere istasyon ekleyin, düzenleyin ve silin.  </li>
+<li>Artık, NVDA Girdi Hareketleri iletişim kutusundan "İstasyon hızlı bir şekilde çal ve ardından 1'den 5'e kadar numaralandırma" adlı her bir komutla ilişkili bir girdi hareketi kullanarak 5 hızlı istasyonu özel olarak başlatabilir ve zRadio'yu arayabilirsiniz.  </li>
+</ul>
+<p>Yeni özelliklerin kullanımıyla ilgili ayrıntılar için lütfen aşağıdaki sürüm 0.3 için "Değişiklik Günlüğü" bölümüne bakın.  </p>
+<h2>Arama ekranı</h2>
+<p>Bu ekran öncekilerden farklıdır, çünkü bulacağımız ilk şey, nerede aranacağına dair farklı kategoriler içeren bir birleşik giriş kutusudur.  </p>
+<p>İlk kategori olan Genel radyo aramasında, tüm radyo kataloğunu arayabiliriz.  </p>
+<p>Ayrıca ülkeye, dile veya etikete göre de arama yapabiliriz. Etikete göre arama yapılması durumunda:  </p>
+<p>Rock'ı ararsak, bize bu sınıflandırmaya sahip tüm etiketleri verecektir.  </p>
+<p>Önceki kategorilerin herhangi birinde arama yapabiliriz, ancak yalnızca Genel kategorisinde doğrudan o kategoriden oynayabilir ve favorilere ekleyebilir ve istasyonun URL'sini kopyalayabiliriz.  </p>
+<p>Diğer kategorilerde ise sadece Genel ekranına seçtiklerimizi ekleyebilir ve bahsi geçen Genel ekranında keşfedebiliriz.  </p>
+<h2>Tuşlar, hareketler ve bağlamsal menülerle ilgili:</h2>
+<p>İster istasyon ister arama olsun, her sonuç listesinde, seçtiklerimizle etkileşime geçmek için bağlamsal bir menü başlatabiliriz.  </p>
+<p>Bu menüyü ya uygulama tuşu ile ya da uygulama tuşu olmayan bilgisayarlarda Shift + F10 ile başlatacağız.  </p>
+<p>Genel ekranında, istasyonlar listesinden veya bir aramadan aşağıdakilerle etkileşim kurabiliriz:  </p>
+<ul>
+<li>Oynat, istasyonu oynatır.  </li>
+<li>Favorilere ekle, istasyonu Favoriler ekranına ekler.  </li>
+<li>URL'yi kopyala, istasyonun URL'sini panoya kopyalar, bir web tarayıcısında açabilir veya paylaşabiliriz.  </li>
+</ul>
+<p>Favoriler ekranında aşağıdakilerle etkileşim kurabiliriz:  </p>
+<p>İstasyon listesi:  </p>
+<ul>
+<li>Oynat, seçilen istasyonu oynatır.  </li>
+<li>Favorilerden kaldır, favori istasyonu siler.  </li>
+<li>URL'yi kopyala, istasyonun URL'sini panoya kopyalar.  </li>
+</ul>
+<p>Bir arama listeleme:  </p>
+<ul>
+<li>Oynat, istasyonu oynatır.  </li>
+<li>URL'yi kopyala, istasyonun URL'sini panoya kopyalar.  </li>
+</ul>
+<p>Ara ekranında aşağıdakilerle etkileşim kurabiliriz:  </p>
+<p>Genel Radyo Arama kategorisini kullanarak aramanızı yaptıktan sonra:  </p>
+<p>Genel bir aramanın sonuç listesinde:  </p>
+<ul>
+<li>Oynat  </li>
+<li>Favorilere ekle  </li>
+<li>Url'yi kopyala  </li>
+</ul>
+<p>Zaten daha önce açıklanmıştır.  </p>
+<p>Ülkeye göre ara, Dile göre ara ve Etikete göre ara kategorilerinde, hem istasyon listesinde hem de arama listesinde yalnızca aşağıdakileri kullanabiliriz:  </p>
+<ul>
+<li>Varsayılan olarak Genel'e ayarlayın, Genel ekranında bunu seçersek, seçtiğimize karşılık gelen istasyonlara sahip olacağız.  </li>
+</ul>
+<p>Bu 3 kategoriye bakarsak, bu seçeneğe sahip kaç istasyona karşılık gelen bir numaraya sahiptirler.  </p>
+<p>Diyelim ki bazen örneğin 9 istasyonlu bir tanesini seçsek ve General ekranına gittiğimizde sadece 8 tane yükleniyor çünkü eksik link doğru değil.  </p>
+<p>Aynı şekilde, bir istasyona odaklanabildiğimiz ekranlarda, boşluk tuşuna basarsak, yeniden üretmeye başlayabiliriz.  </p>
+<h3>Hızlı tuşlar:</h3>
+<p>Aslında her düğmenin kendi kısayol tuşu vardır, bu yüzden daha önce açıkladığım için onları koymayacağım, içine düştüğümüzde NVDA'mız bize kısayolları verecektir.  </p>
+<p>Ancak, görünmeyen bir kombinasyon varsa ve bu yalnızca zRadio penceresinin odaklanıp açık olduğu durumlar içindir.  </p>
+<ul>
+<li>Alt + V, bu tuş kombinasyonu bizi hızlı bir şekilde ses çubuğuna götürecek, böylece yön tuşlarıyla etkileşime geçebilelim.  </li>
+</ul>
+<p>Ayrıca zRadio penceresinden çıkış butonu, Alt + F4 veya Escape ile çıkabileceğimizi söyleyelim.  </p>
+<h3>Girdi hareketleri</h3>
+<p>NVDA / Tercihler / Girdi hareketleri / zRadio menüsünde, zRadio kullanıcı penceresi de dahil olmak üzere herhangi bir yerden etkileşim kurabilmek için aşağıdaki komutlara bir girdi hareketi, yani tuş kombinasyonları atayabiliriz.  </p>
+<p>Tuş kombinasyonunun başka bir işleve atanmadığından veya kullanılan uygulamaların herhangibiriyle çakışmadığından emin olun.  </p>
+<p>Varsayılan olarak zRadio herhangi bir tuş atamadan gelir ve bu yapılandırmayı kullanıcıya bırakır.  </p>
+<p>Ayrıca, bu tuşların hem zRadio ile çalışacağını, hem de pencereyi açıp kapattığını bilelim.  </p>
+<p>zRadio, kullanıcının bir girdi hareketi eklemesi için aşağıdaki komutları sağlar:  </p>
+<ul>
+<li>Sesi azalt  </li>
+<li>Oynatmayı durdur  </li>
+<li>zRadio Ana penceresini görüntüler  </li>
+<li>Sesi Aç ve Kapat  </li>
+<li>Oynatmayı Yeniden Yükle  </li>
+<li>Oynatılan istasyon için bilgi  </li>
+<li>Sesi Arttır  </li>
+</ul>
+<h2>Çevirmenler ve ortak çalışanlar:</h2>
+<ul>
+<li>Fransızca: Rémy Ruiz  </li>
+<li>Portekizce: Angelo Miguel Abrantes  </li>
+<li>İngilizce: slanovani  </li>
+<li>İtalyanca: Simone Dal Maso  </li>
+<li>Arapça: Wafiq Taher  </li>
+<li>Danimarka: Daniel Gartmann.  </li>
+<li>Turkçe: Umut KORKMAZ  </li>
+</ul>
+<h1>Sürüm Geçmişi:</h1>
+<h2>Sürüm 0.5.4:</h2>
+<ul>
+<li>Dilleri algılarken oluşan hata düzeltildi.  </li>
+<li>NVDA 2022.1.0 sürümü için hazırlanmıştır.  </li>
+</ul>
+<h2>Sürüm 0.5.3:</h2>
+<ul>
+<li>Yeni diller eklendi.  </li>
+</ul>
+<h2>Sürüm 0.5.2.</h2>
+<ul>
+<li>NVDA'yı başlatırken yavaş yükleme düzeltildi.  </li>
+</ul>
+<p>zRadio'nun neden olduğu NVDA önyükleme gecikmeleri düzeltildi. Şimdi NVDA önyüklemesi hemen gerçekleşecek.  </p>
+<ul>
+<li>Mors projesi için destek eklendi.  </li>
+</ul>
+<p>NVDA'nın yeni sürümleri için destek eklendi, tam olarak yeni Alpha'larla kullanılmak üzere ve eklenti NVDA çıktığında hazır2021.1.  </p>
+<p>Şimdilik eklenti, 2019.3 sürümünden itibaren uyumlu olmaya devam edecek.  </p>
+<h2>Sürüm 0.5.1.</h2>
+<ul>
+<li>Boşluk çubuğuna basarak bir istasyonu oynatma yeteneği eklendi.  </li>
+</ul>
+<p>Bu yeni olasılık, Genel, Sık Kullanılanlar ve Genel radyo arama kategorisindeki Arama'da istasyonların bulunabileceği üç ekranda olacaktır.  </p>
+<p>Bu 3 bölümden herhangi birinde odak bir istasyondayken boşluk tuşuna basarsak odağı Durdur düğmesine çevirerek oynatma başlayacaktır.  </p>
+<ul>
+<li>Eklentiyi ilk kez yükleyen yeni kullanıcılar için ciddi bir hata düzeltildi.  </li>
+</ul>
+<h2>Sürüm 0.5.</h2>
+<ul>
+<li>Yeni önbellek yönetimi eklendi.  </li>
+</ul>
+<p>Artık yükü hafifletmek için oluşturulan önbellek yerine kütüphanenin önceden tanımlanmış önbelleği kullanılıyor.  </p>
+<p>Önceden tanımlanmış önbelleği kullanarak eklentinin yüklenmesi çok daha hızlıdır. Bazen sunucuya bağlantı nedeniyle bizi yavaşlatabilir, ancak şimdi eklentinin %95'inin NVDA'mızı geciktirmeden başka bir eklentiymiş gibi yüklenmesi gerekiyor.  </p>
+<h2>Sürüm 0.4a.</h2>
+<ul>
+<li>İtalyanca ve Arapça dilleri eklendi  </li>
+</ul>
+<h2>Sürüm 0.4.</h2>
+<ul>
+<li>Kod, boyutunu yarıdan fazla azaltarak optimize edildi.  </li>
+</ul>
+<p>Kod, kurulum artık %60 daha küçük olacak şekilde optimize edilmiştir. Bu, hangi performansın daha iyi olduğunu etkiler.  </p>
+<ul>
+<li>Eklentinin başlatılmasını hızlandırmaya yardımcı olan küçük bir önbellek eklendi.  </li>
+</ul>
+<p>Bazen bir azınlık botu, NVDA ekran okuyucusunun başlaması biraz zaman alabilir, bu eklentinin sunucu ile iletişim sorunudur.  </p>
+<p>0.3 sürümünden önce, eklentiye koyduğum önbellekle, şimdi çok nadiren gerçekleşen önbellekle başlamak her zaman uzun zaman aldı.  </p>
+<p>Pekala cache.dat dosyası, NVDA'yı her yeniden başlattığımızda güncellenir, çünkü taşıması gereken başlatma sayısını ve 5'e ulaştığı zaman sayacını içerir.a la sexta vez el archivo radio_cache.dat da güncellenecektir.  </p>
+<p>cache.dat ve radio_cache.dat dosyaları, NVDA konfigürasyon dizininde bulunan zRadio dizininde depolanır.  </p>
+<ul>
+<li>Ülke sözlükleri, "NVDA Seçenekleri" iletişim kutusunun "Genel" kategorisi altında "Kullanıcı için varsayılan" NVDA dilini seçtiğimizde, "Fransızca, fr", "Portekizce ( Portekiz, Brezilya), Şu anda zRadio eklentisi tarafından desteklenen üç dil olan pt_PT / pt_BR "veya" İngilizce en ", İspanyolca diline ek olarak ülkelere göre arama yapıldığında ülke adları doğru bir şekilde görüntülenmektedir.  </li>
+</ul>
+<p>Varsayılan olarak zRadio, "İspanyolca, es" dilini kullanacak şekilde yapılandırılmıştır, ancak "Kullanıcı için varsayılan" seçeneğini seçtiyseniz ve diliniz henüz çevrilmediyse, eklentinin arayüzüne her zaman İspanyolca olarak sahip olursunuz.  </p>
+<ul>
+<li>Portekizce (Portekiz / Brezilya) ve İngilizce'ye çeviri eklendi.  </li>
+</ul>
+<h2>Sürüm 0.3.</h2>
+<ul>
+<li>Favorilerdeki istasyonları sıralama özelliği eklendi.  </li>
+</ul>
+<p>Bu yeni seçenek sadece Favoriler içindir ve odağın bulunduğu istasyonu Alt + Yukarı veya Aşağı Ok ile yukarı veya aşağı hareket ettirebiliriz.  </p>
+<p>Listenin hem başına hem de sonuna ulaşıldığında, listenin başında veya sonunda olduğumuz konusunda bizi uyarmak için bir ses çalınacaktır.  </p>
+<p>Ses, nerede olduğumuzu iyi tanımlamak için farklıdır.  </p>
+<ul>
+<li>Favorilere istasyon ekleme, düzenleme ve silme özelliği eklendi.  </li>
+</ul>
+<p>Favoriler kategorisine geldiğimizde Alt + E kısayol tuşu ile Eylem adlı yeni bir buton görüntülenecektir.  </p>
+<p>Bu düğme yalnızca Favoriler kategorisinde olduğumuzda görünecektir.  </p>
+<p>Arayüzün herhangi bir yerinden butonu çağırabiliriz ve aşağıdaki seçeneklerle görüntülenecek bir menüden oluşur:  </p>
+<ul>
+<li>Yeni istasyon: Kişisel bir istasyonu tanıtmak için bir diyalog açar.  </li>
+<li>İstasyonu düzenle: Odak Favoriler'de olan istasyonu düzenler.  </li>
+<li>Favorilerden kaldır: Odaklanan istasyonu siler. Bu geri döndürülemez.  </li>
+</ul>
+<p>Hem Yeni istasyon hem de İstasyonu düzenle iletişim kutusu her iki seçenek için de aynıdır.  </p>
+<p>Bu kutu, istasyonun adı ve istasyonun URL'si için iki düzenleme alanından oluşur.  </p>
+<p>Bu alanlar zorunludur ve boş bırakılamaz.  </p>
+<p>Favoriler listesinde aynı ada sahip istasyonlar olabilir, ancak daha iyi anlamamız için isimlerin farklılaştırılması önerilir.  </p>
+<p>Ayrıca Tamam ve İptal olmak üzere iki düğmemiz var.  </p>
+<p>Tamam ttuşuna basarsak yaptığımız şeye bağlı olarak değişiklikler kaydedilecektir ya Yeni istasyon ya da İstasyonu düzenle penceresinde.  </p>
+<p>İptal edersek tüm veriler kaybolur ve hiçbir şey kaydedilmez.  </p>
+<p>Bu iki eylemde Alt + F4 veya Escape tuşlarına basarak da diyaloğu kapatabiliriz, yaptıklarımız kaybolacaktır.  </p>
+<ul>
+<li>Hızlı istasyon imkanı eklendi.  </li>
+</ul>
+<p>Bu yeni seçenek, bir istasyonu hızlı bir şekilde çalmaya başlamamızı sağlayacak.  </p>
+<p>Şimdi 5 hızlı istasyonumuz olabilir, bu istasyonlar Favorilere ilk 5 sıraya yerleştirdiğimiz istasyonlar olacak.  </p>
+<p>Bu yeni seçenek için NVDA menüsü / Tercihler / Girdi hareketleri ... / zRadio'ya giderek yapılandırmamız gereken 5 yeni Giriş hareketi eklendi.  </p>
+<p>Yeni hareketlere hızlı istasyonu oynat denir ve ardından 1'den 5'e kadar bir numaralandırma gelir.  </p>
+<p>Pekala, yapılandırdığımız her hareket, favorilerimizde bulunan istasyona karşılık gelecektir.  </p>
+<p>Hızlı istasyon 1'i hızlı bir şekilde yapılandırırsak ve Favoriler'de Test Radyomuz var, zRadio penceresi açık veya pencere kapalıyken herhangi bir yere bastığımızda, bu sıraya atadığımız tuş kombinasyonu o istasyonu çalmaya başlayacak.  </p>
+<p>Bu, her favori için bir giriş hareketi atadığımız sürece Favorilerin ilk 5 istasyonu için geçerlidir. Bu seçenek, daha önce belgelenen istasyonları sipariş edebilme seçeneği ile birlikte, hızlı erişim ile tercih edilen 5 istasyona sahip olabilmek için tamamlanmaktadır.</p>
+<h2>Sürüm 0.2.</h2>
+<ul>
+<li>Fransızca dil eklendi.  </li>
+<li>Sabit belgeler.  </li>
+<li>Ara / Etikete göre aramada sabit gecikme.  </li>
+</ul>
+<p>Artık arayüz askıda kalmayacak. Bu alan yeniden yapılandırılmış, varsayılan sonuçlar kaldırılmış ve yalnızca arandığında gösterilmiş.  </p>
+<ul>
+<li>Arama alanlarında Enter tuşuna basabilme özelliği eklendi.  </li>
+<li>Sabit kod hataları.  </li>
+</ul>
+<h2>Sürüm 0.1.</h2>
+<ul>
+<li>İlk sürüm.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zRadio for NVDA\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2022-05-29 23:33+0300\n"
+"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
+"Language-Team: Ukrainian NVDA Community\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: .\n"
+
+#: __init__.py:44
+msgid "&zRadio para NVDA"
+msgstr "& zRadio для NVDA"
+
+#: __init__.py:58
+msgid ""
+"zRadio necesita internet para ser ejecutado.\n"
+"Asegurese de que tiene todo correcto."
+msgstr ""
+"Для роботи zRadio потрібен Інтернет.\n"
+"Переконайтеся, що у вас все правильно працює."
+
+#: __init__.py:62 __init__.py:149 __init__.py:552 __init__.py:562
+#: __init__.py:583 __init__.py:619 __init__.py:640 __init__.py:674
+#: __init__.py:693 __init__.py:723 __init__.py:754 __init__.py:785
+#: __init__.py:1241 __init__.py:1284 __init__.py:1367 __init__.py:1527
+#: __init__.py:1537
+msgid "Error"
+msgstr "Помилка"
+
+#: __init__.py:76
+msgid "Muestra la ventana principal de zRadio"
+msgstr "Показує головне вікно zRadio"
+
+#: __init__.py:81
+msgid "Bajar volumen"
+msgstr "Зменшити гучність"
+
+#: __init__.py:86
+msgid "No se puede bajar más el volumen ya se encuentra al 0%"
+msgstr "Ви не можете зменшити гучність, гучність вже на 0%"
+
+#: __init__.py:96
+msgid "Subir volumen"
+msgstr "Збільшити гучність"
+
+#: __init__.py:101
+msgid "No se puede subir más el volumen ya se encuentra al 100%"
+msgstr "Ви не можете збільшити гучність, гучність вже на 100%"
+
+#: __init__.py:111
+msgid "Detener reproducción"
+msgstr "Зупинити відтворення"
+
+#: __init__.py:116
+msgid "No hay nada reproduciéndose"
+msgstr "Нічого не відтворюється"
+
+#: __init__.py:129
+msgid "Recargar reproducción"
+msgstr "Перезавантажити відтворення"
+
+#: __init__.py:134
+msgid "No hay nada para recargar"
+msgstr "Нічого немає, щоб перезапустити"
+
+#: __init__.py:140 __init__.py:245 __init__.py:1232 __init__.py:1275
+#: __init__.py:1358
+msgid ""
+"No se pudo cargar la emisora.\n"
+"\n"
+"Asegúrese de que tiene conexión a internet.\n"
+"\n"
+"Otros motivos pueden ser que la emisora tenga problemas en estos momentos.\n"
+"\n"
+"Inténtelo más tarde."
+msgstr ""
+"Не вдалося завантажити станцію.\n"
+"\n"
+"Переконайтеся, що у вас є інтернет-з’єднання.\n"
+"\n"
+"Іншою причиною може бути проблема зі станцією.\n"
+"\n"
+"Будь ласка, спробуйте пізніше."
+
+#: __init__.py:166
+msgid "Poner y quitar silencio"
+msgstr "Вимкнути й увімкнути звук"
+
+#: __init__.py:171
+msgid "No hay nada para silenciar"
+msgstr "Нічого не відтворюється"
+
+#: __init__.py:184
+msgid "Saber emisora en reproducción"
+msgstr "Проговорити станцію під час відтворення"
+
+#: __init__.py:191
+#, python-format
+msgid "Emisora en memoria: %s"
+msgstr "Станція в пам'яті: %s"
+
+#: __init__.py:202 __init__.py:546 __init__.py:961 __init__.py:1415
+#: variables.py:129
+msgid "Sin emisoras."
+msgstr "Немає станцій."
+
+#: __init__.py:286
+msgid "No tiene ninguna emisora en Favoritos en la posición 1"
+msgstr "У вас немає станції в обраному на позиції 1"
+
+#: __init__.py:289
+msgid "No tiene ninguna emisora en Favoritos en la posición 2"
+msgstr "У вас немає станції в обраному на позиції 2"
+
+#: __init__.py:292
+msgid "No tiene ninguna emisora en Favoritos en la posición 3"
+msgstr "У вас немає станції в обраному на позиції 3"
+
+#: __init__.py:295
+msgid "No tiene ninguna emisora en Favoritos en la posición 4"
+msgstr "У вас немає станції в обраному на позиції 4"
+
+#: __init__.py:298
+msgid "No tiene ninguna emisora en Favoritos en la posición 5"
+msgstr "У вас немає станції в обраному на позиції 5"
+
+#: __init__.py:301
+msgid "Reproducir emisora rápidamente 1"
+msgstr "Швидко відтворити станцію 1"
+
+#: __init__.py:306
+msgid "Reproducir emisora rápidamente 2"
+msgstr "Швидко відтворити станцію 2"
+
+#: __init__.py:311
+msgid "Reproducir emisora rápidamente 3"
+msgstr "Швидко відтворити станцію 3"
+
+#: __init__.py:316
+msgid "Reproducir emisora rápidamente 4"
+msgstr "Швидко відтворити станцію 4"
+
+#: __init__.py:321
+msgid "Reproducir emisora rápidamente 5"
+msgstr "Швидко відтворити станцію 5"
+
+#: __init__.py:333
+msgid "zRadio para NVDA"
+msgstr "zRadio для NVDA"
+
+#: __init__.py:391 __init__.py:1403
+msgid "Quitar &Silencio"
+msgstr "&Увімкнути звук"
+
+#: __init__.py:410 __init__.py:426 __init__.py:443 __init__.py:456
+#: __init__.py:466 __init__.py:480 __init__.py:492 __init__.py:505
+#: __init__.py:516 __init__.py:529 __init__.py:544 __init__.py:585
+#: __init__.py:600 __init__.py:612 __init__.py:642 __init__.py:656
+#: __init__.py:667 __init__.py:695 __init__.py:725 __init__.py:756
+#: __init__.py:787 __init__.py:801 __init__.py:810 __init__.py:820
+#: __init__.py:831 __init__.py:868 __init__.py:876 __init__.py:895
+#: __init__.py:903 __init__.py:976 __init__.py:1013 __init__.py:1024
+#: __init__.py:1046 __init__.py:1094 __init__.py:1120 __init__.py:1161
+#: __init__.py:1182 __init__.py:1203 xgui.py:95 xgui.py:125 xgui.py:160
+msgid "&Buscar"
+msgstr "&Пошук"
+
+#: __init__.py:421 __init__.py:872 __init__.py:899 __init__.py:911
+#: __init__.py:972 __init__.py:1080 __init__.py:1425
+msgid "No hay favoritos."
+msgstr "Немає обраних."
+
+#: __init__.py:445 __init__.py:454
+msgid "Búsqueda general:"
+msgstr "Загальний пошук:"
+
+#: __init__.py:449 __init__.py:460 __init__.py:522 __init__.py:533
+#: __init__.py:700 __init__.py:792 __init__.py:806 __init__.py:836 xgui.py:163
+msgid "Esperando una búsqueda."
+msgstr "Список порожній."
+
+#: __init__.py:468 __init__.py:478
+msgid "Buscar pais:"
+msgstr "Пошук країни:"
+
+#: __init__.py:474 __init__.py:487 __init__.py:499 __init__.py:511
+#: __init__.py:714 __init__.py:731 __init__.py:745 __init__.py:762
+#: __init__.py:776 __init__.py:816 __init__.py:826
+msgid "{} número de emisoras: {}"
+msgstr "{} Кількість станцій: {}"
+
+#: __init__.py:494 __init__.py:503
+msgid "Buscar idioma:"
+msgstr "Мова пошуку:"
+
+#: __init__.py:518 __init__.py:527
+msgid "Buscar etiqueta:"
+msgstr "Знайти тег:"
+
+#: __init__.py:549
+msgid "No hay emisoras para buscar."
+msgstr "Немає станцій для пошуку."
+
+#: __init__.py:559 __init__.py:616 __init__.py:671
+msgid ""
+"El campo de búsqueda esta vacío, escriba algo antes para poder realizar la "
+"búsqueda."
+msgstr "Поле пошуку порожнє, напишіть щось перед тим, як шукати."
+
+#: __init__.py:579 __init__.py:636 __init__.py:689 __init__.py:719
+#: __init__.py:750 __init__.py:781
+msgid ""
+"No se encontraron resultados.\n"
+"Haga una búsqueda más específica."
+msgstr ""
+"Результатів не знайдено.\n"
+"Вкажіть точніший запит пошуку."
+
+#: __init__.py:590 __init__.py:647 __init__.py:679 __init__.py:708
+#: __init__.py:739 __init__.py:770
+msgid "&Limpiar"
+msgstr "&Очистити"
+
+#: __init__.py:843
+msgid "&Nueva emisora"
+msgstr "&Нова станція"
+
+#: __init__.py:846
+msgid "&Editar emisora"
+msgstr "&Редагувати станцію"
+
+#: __init__.py:849
+msgid "&Quitar de favoritos"
+msgstr "&Видалити з обраного"
+
+#: __init__.py:860
+msgid "Añadir nueva emisora"
+msgstr "Додати нову станцію"
+
+#: __init__.py:887
+msgid "Editar emisora"
+msgstr "Редагувати станцію"
+
+#: __init__.py:919 __init__.py:935 __init__.py:946
+msgid "Reproducir"
+msgstr "Відтворити"
+
+#: __init__.py:922
+msgid "Agregar a favoritos"
+msgstr "Додати в обране"
+
+#: __init__.py:925 __init__.py:941 __init__.py:949
+msgid "Copiar URL"
+msgstr "Копіювати URL-адресу"
+
+#: __init__.py:930
+msgid "Poner por defecto en General"
+msgstr "Встановити основною"
+
+#: __init__.py:938
+msgid "Quitar de favoritos"
+msgstr "Видалити з обраного"
+
+#: __init__.py:1054 __init__.py:1066 __init__.py:1101 __init__.py:1111
+#: __init__.py:1126 __init__.py:1136 __init__.py:1149
+msgid "Información"
+msgstr "Інформація"
+
+#: __init__.py:1056 __init__.py:1068
+msgid "Se agrego la emisora {} a favoritos."
+msgstr "Станцію {} додано до обраного."
+
+#: __init__.py:1103 __init__.py:1113 __init__.py:1128 __init__.py:1138
+#: __init__.py:1151
+msgid ""
+"Se a copiado la URL de la emisora {} al portapapeles. Ya puede compartirla."
+msgstr ""
+"URL-адресу станції {} скопійовано в буфер обміну. Тепер ви можете "
+"поділитися нею."
+
+#: __init__.py:1256 __init__.py:1297 __init__.py:1333 __init__.py:1374
+#: __init__.py:1388 __init__.py:1400 __init__.py:1408 xgui.py:49
+msgid "&Silenciar"
+msgstr "&Вимкнути звук"
+
+#: __init__.py:1523
+msgid ""
+"No puede dejar el campo Nombre de la emisora en blanco.\n"
+"Asegúrese de introducir un nombre correcto."
+msgstr ""
+"Поле Назва станції не може бути порожнім.\n"
+"Переконайтеся, що ви ввели правильну назву."
+
+#: __init__.py:1533
+msgid ""
+"No puede dejar el campo de la URL de la emisora en blanco.\n"
+"Asegúrese de introducir una dirección correcta."
+msgstr ""
+"Поле URL-адреси станції не може бути порожнім.\n"
+"Переконайтеся, що ви ввели правильну адресу."
+
+#: variables.py:103
+msgid "Búsqueda general de radios"
+msgstr "Загальний пошук радіо"
+
+#: variables.py:105
+msgid "Búsqueda por países"
+msgstr "Пошук за країною"
+
+#: variables.py:107
+msgid "Búsqueda por idioma"
+msgstr "Пошук за мовою"
+
+#: variables.py:109
+msgid "Búsqueda por etiqueta"
+msgstr "Пошук за тегом"
+
+#: xgui.py:35
+msgid "General"
+msgstr "Основне"
+
+#: xgui.py:37
+msgid "Favoritos"
+msgstr "Обране"
+
+#: xgui.py:39
+msgid "Buscador"
+msgstr "Пошук"
+
+#: xgui.py:43
+msgid "&Detener"
+msgstr "&Зупинити"
+
+#: xgui.py:46
+msgid "&Recargar"
+msgstr "&Перезапустити"
+
+#: xgui.py:55
+msgid "&Acción"
+msgstr "&Дія"
+
+#: xgui.py:62
+msgid "Salir Alt + F4"
+msgstr "Вихід Alt + F4"
+
+#: xgui.py:92
+msgid "Busqueda emisoras:"
+msgstr "Пошук станції:"
+
+#: xgui.py:97
+msgid "Listado de emisoras:"
+msgstr "Список станцій:"
+
+#: xgui.py:122
+msgid "Busqueda emisoras favoritas:"
+msgstr "Пошук обраних станцій:"
+
+#: xgui.py:127
+msgid "Listado de emisoras favoritas:"
+msgstr "Список улюблених станцій:"
+
+#: xgui.py:152
+msgid "Seleccione una categoría:"
+msgstr "Виберіть категорію:"
+
+#: xgui.py:157
+msgid "Búsqueda general de radios:"
+msgstr "Загальний пошук радіостанцій:"
+
+#: xgui.py:165
+msgid "Resultado:"
+msgstr "Результат:"
+
+#: xgui.py:194
+msgid "Nombre de la emisora:"
+msgstr "Назва станції:"
+
+#: xgui.py:198
+msgid "Dirección URL de la emisora:"
+msgstr "URL-адреса станції:"
+
+#: xgui.py:202 xgui.py:235
+msgid "&Aceptar"
+msgstr "&Гаразд"
+
+#: xgui.py:204
+msgid "&Cancelar"
+msgstr "&Скасувати"

@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the instantTranslate package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: instantTranslate 3.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2017-03-05 15:15+1000\n"
+"PO-Revision-Date: 2017-03-05 14:49+0700\n"
+"Last-Translator: Dang Hoai Phuc <danghoaiphuc@gmail.com>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+
+#, fuzzy
+msgid ""
+"Instant Translate layer commands. t translates selected text, shift+t "
+"translates clipboard text, a announces current swap configuration, s swaps "
+"source and target languages, c copies last result to clipboard, i identify "
+"the language of selected text, l translates last spoken text, o opens "
+"translation setting dialog."
+msgstr ""
+"Các phím dùng trong lớp lệnh của add-on Dịch Nhanh. t dịch văn bản được "
+"chọn, shift+t dịch văn bản trên bộ nhớ đệm, a thông báo cấu hình ngôn ngữ "
+"dịch hiện tại, s đổi ngược lại giữa ngôn ngữ nguồn và ngôn ngữ đích, c sao "
+"chép kết quả dịch gần nhất lên bộ nhớ đệm, i nhận dạng ngôn ngữ của văn bản "
+"được chọn."
+
+#. Translators: message presented when user presses the shortcut key for translating clipboard text but the clipboard is empty.
+msgid "There is no text on the clipboard"
+msgstr "Không có văn bản trên bộ nhớ tạm."
+
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+msgid ""
+"Translates clipboard text from one language to another using Google "
+"Translate."
+msgstr "Dịch văn bản trên bộ nhớ đệm với Google Translate."
+
+#. Translators: user has pressed the shortcut key for translating selected text, but no text was actually selected.
+#. Translators: user has pressed the shortcut key for identifying the language of selected text, but no text was actually selected.
+msgid "no selection"
+msgstr "Không có văn bản được chọn."
+
+#. Translators: message presented in input help mode, when user presses the shortcut keys for this addon.
+msgid ""
+"Translates selected text from one language to another using Google Translate."
+msgstr "Dịch văn bản được chọn với Google Translate."
+
+#. Translators: message presented to announce that the source and target languages have been swapped.
+msgid "Languages swapped"
+msgstr "Ngôn ngữ được đổi lại"
+
+#. Translators: message presented to announce the current source and target languages.
+#, python-brace-format
+msgid "Translate: from {lang1} to {lang2}"
+msgstr "Dịch: từ {lang1} sang {lang2}"
+
+#. Translators: Presented in input help mode.
+msgid "It swaps source and target languages."
+msgstr "Thay đổi giữa ngôn ngữ nguồn và ngôn ngữ đích."
+
+#. Translators: Presented in input help mode.
+msgid "It announces the current source and target languages."
+msgstr "Thông báo ngôn ngữ địch và ngôn ngữ nguồn hiện tại."
+
+#. Translators: message presented to announce a successful copy
+msgid "Last translation copied in clipboard"
+msgstr "đã sao chép kết quả dịch lên bộ nhớ đệm"
+
+#. Translators: message presented to announce no previous translation disponibility
+msgid "No stored translation"
+msgstr "không có nội dung dịch nào được lưu"
+
+#. Translators: Presented in input help mode.
+msgid "It copies the last translation to clipboard"
+msgstr "Sẽ sao chép kết quả dịch gần nhất lên bộ nhớ đệm"
+
+msgid "Language is..."
+msgstr "Ngôn ngữ..."
+
+#. Translators: Presented in input help mode.
+msgid "It identifies the language of selected text"
+msgstr "Sẽ nhận dạng ngôn ngữ của văn bản được chọn"
+
+#. Translators: Presented in input help mode.
+msgid "It translates the last spoken text"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"t translates selected text, shift+t translates clipboard text, a announces "
+"current swap configuration, s swaps source and target languages, c copies "
+"last result to clipboard, i identify the language of selected text, l "
+"translates last spoken text, o open translation settings dialog, h displays "
+"this message."
+msgstr ""
+"t dịch văn bản được chọn, shift+t dịch văn bản trên bộ nhớ đệm, a thông báo "
+"cấu hình ngôn ngữ dịch hiện tại, s chuyển đổi giữa ngôn ngữ nguồn và ngôn "
+"ngữ đích, c sao chép kết quả dịch gần nhất lên bộ nhớ đệm, i nhận dạng ngôn "
+"ngữ của văn bản được chọn, h hiển thị nội dung trợ giúp này."
+
+#. Translators: Presented in input help mode.
+msgid "Announces all available layered commands"
+msgstr ""
+
+#. Translators: Presented in input help mode.
+#, fuzzy
+msgid "Opens Instant Translate settings dialog."
+msgstr "Thiết lập dịch nhanh"
+
+#. Translators: name of the dialog.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Instant Translate"
+msgstr "Dịch Nhanh"
+
+#. Translators: Help message for a dialog.
+msgid "Select translation source and target language:"
+msgstr "Chọn ngôn ngữ nguồn và ngôn ngữ đích:"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Source language:"
+msgstr "Ngôn ngữ nguồn:"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Target language:"
+msgstr "Ngôn ngữ đích:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid "Language for swapping:"
+msgstr "Ngôn ngữ để chuyển đổi:"
+
+#. Translators: A setting in addon settings dialog, shown if source language is on auto.
+msgid ""
+"Activate the auto-swap if recognized source is equal to the target "
+"(experimental)"
+msgstr ""
+"Kích hoạt chức năng tự động chuyển đổi ngôn ngữ dịch nếu phát hiện ngôn ngữ "
+"nguồn của văn bản là ngôn ngữ gốc (thử nghiệm)"
+
+#. Translators: A setting in addon settings dialog.
+msgid "Copy translation result to clipboard"
+msgstr "Sao chép kết quả dịch lên bộ nhớ đệm"
+
+#. Translators: A setting in addon settings dialog.
+msgid ""
+"Replace underscores with spaces (May provide better translation results "
+"depending on context)"
+msgstr ""
+
+#. Translators: An option to automatically detect source language for translation.
+msgid "Automatically detect language"
+msgstr "Tự động nhận dạng ngôn ngữ"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Cebuano"
+msgstr "Cebuano"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Hawaiian"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Hmong"
+msgstr "Hmong"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Creole Haiti"
+msgstr "Creole Haiti"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Javanese"
+msgstr "Javanese"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Kurdish"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Latin"
+msgstr "Latin"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Malagasy"
+msgstr "Malagasy"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Myanmar (Burmese)"
+msgstr "Myanmar (Burmese)"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Chichewa"
+msgstr "Chichewa"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sindhi"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Samoan"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Shona"
+msgstr ""
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Somali"
+msgstr "Somali"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sesotho"
+msgstr "Sesotho"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Sundanese"
+msgstr "Sundanese"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#. Translators: The name of a language supported by this add-on.
+msgid "Yiddish"
+msgstr "Yiddish"
+
+msgid "unavailable"
+msgstr "Chưa có"
+
+#. We have probably been blocked, so stop trying to translate.
+#. log.exception("Instant translate: Can not translate text '%s'" %chunk)
+#. raise e
+msgid "Translation failed"
+msgstr ""
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed an old and incompatible version of this addon. Do you "
+"want to uninstall the old version?"
+msgstr ""
+"Bạn đang sử dụng phiên bản add-on cũ và không tương thích. Bạn có muốn gỡ bỏ "
+"nó không?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Gỡ bỏ add-on không tương thích"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon translates selected or clipboard text using the Google Translate "
+"service and presents it."
+msgstr ""
+"Add-on này cho phép dịch văn bản được chọn hoặc từ bộ nhớ đệm với dịch vụ "
+"dịch của Google."
+
+#~ msgid "Instant &Translate Settings..."
+#~ msgstr "Thiết lập dịch nhanh..."
+
+#~ msgid "Select languages to be used for translation."
+#~ msgstr "Chọn ngôn ngữ để dịch."

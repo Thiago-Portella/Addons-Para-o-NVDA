@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Search With 2.5.6</title>
+</head>
+<body>
+<h1>Search With</h1>
+<ul>
+<li>Author: Ibrahim Hamadeh</li>
+<li>Download <a href="https://github.com/ibrahim-s/searchWith/releases/download/2.5.6/searchWith-2.5.6.nvda-addon">Stable version 2.5.6</a></li>
+<li>NVDA compatibility: 2019.3 and beyond</li>
+</ul>
+<p>This addon helps you to search text, via various search engines.<br />
+Let no text selected, and press the gesture of the addon<br />
+A dialog will be displayed, with an edit box to enter a search query<br />
+To search with Google press enter, or tab to search with other engines.<br />
+Or<br />
+select some text and press once, a menu will be displayed with various search engines to choose.<br />
+And while text is selected, you can press the gesture twice to search with Google directly.<br />
+The Default gesture for the addon is: NVDA+ Windows+ S.<br />
+If the keystroke do not work for you, or conflict with other keystroke,<br />
+you can as always add a gesture or change the existent one going to :  
+NVDA menu&gt;preferences&gt;inputGestures&gt;Search With category.  </p>
+<h2>Usage</h2>
+<ul>
+<li>If you want to enter a search query, just press the addon gesture  </li>
+<li>A dialog will be displayed, with an edit field to enter the search term.<br />
+Want to search with Google? just press enter  </li>
+<li>Otherwise tab to Other Engines button, and give it a space  </li>
+<li>A popup menu will show up, with various search engines to choose.<br />
+Yahoo, Bing, DuckDuckGo, and Youtube.<br />
+This is the default menu, and you may modify it from addon's setting panel.  </li>
+<li>Another way to use the addon, is by selecting some text<br />
+And on Pressing the addon's gesture, or any other you have assigned to it<br />
+a virtual menu will be displayed with various search engines<br />
+Either the default menu, or any other you have tailed to your needs.  </li>
+<li>Choose one and press enter, the default browser will open displaying search results.<br />
+Or, if you want to search with Google directly<br />
+press the gesture twice, and you are done.  </li>
+<li>Want to trigger search menu specifically for clipboard or last spoken text?<br />
+You can from input gestures dialog, assigned a gesture for:  <ul>
+<li>Trigger search menu for clipboard text, and pressed twice searches that text by Google directly.  </li>
+<li>Trigger search menu for last spoken text, and pressed twice searches that text by Google directly.  </li>
+</ul>
+</li>
+<li>Now if you ask, can I modify Search with menu?  </li>
+<li>Yes you  can do that from the setting panel,  and adjust the menu to fit to your mood and needs.  </li>
+<li>You can from there, add to Search with menu, other available search engines  </li>
+<li>And you can if you like, remove an item from it, move item up, move item down, or return and set it to default state.  </li>
+<li>If you want these modifications to be permanent, you have to save configuration after wards.  </li>
+<li>Want to search Google using other language options?<br />
+Go to, Search With category in setting panels<br />
+From the cumbo box there, you can choose search Google either:  <ol>
+<li>Using browser settings and language.  </li>
+<li>Using NVDA language.  </li>
+<li>Using windows language.  </li>
+</ol>
+</li>
+<li>Now, you have the option to choose the default query in Search with dialog<br />
+from the Options for default query combo box in setting panel, you can choose either  <ul>
+<li>Leave blank</li>
+<li>Use clipboard text</li>
+<li>Use last spoken text<br />
+And if clipboard or last spoken text is chosen, text in search box will be displayed selected, so that you can easily override it.  </li>
+</ul>
+</li>
+<li>Now let's choose the target language for translate engines, Google Translate and DeepL translator.</li>
+<li>Still in setting panel, under Translation engines group, there are two combo boxes, one for Google Translate and the other for DeepL Translator. Choose the target language you want for each of them and you are done.</li>
+<li>Lastly, especially for advanced users<br />
+You can through a check box in setting panel, choose if you want to preserve your data folder upon installing a new version.<br />
+This means that your data will be sustained, but added to it the newly entries in the new version.<br />
+And that's it, hope to search for good and find it, happy searching!  </li>
+</ul>
+<h3>Changes for 2.5.6</h3>
+<ul>
+<li>Replace gui.SettingsPanel with gui.settingsDialogs.SettingsPanel, to get rid of the warnings in the log.</li>
+<li>Add localization updates.</li>
+</ul>
+<h3>Changes for 2.5.5</h3>
+<ul>
+<li>Add documentation and localization updates.</li>
+</ul>
+<h3>Changes for 2.5.3</h3>
+<ul>
+<li>Add DeepL translator to available engines.</li>
+<li>Add two combo boxes in setting panel, to choose target language for Google translate and DeepL translator.</li>
+</ul>
+<h3>Changes for 2.5</h3>
+<ul>
+<li>Return the name of the addon to 'searchWith'(camel case).</li>
+<li>Add Google Scholar to available engines.</li>
+</ul>
+<h3>Changes for 2.4</h3>
+<ul>
+<li>Localization and documentation updates.</li>
+</ul>
+<h3>Changes for 2.3</h3>
+<ul>
+<li>Now choosing to preserve data from setting panel, does not means that you will not get the new data entries<br />
+but the new entries in the new version, will be merged and added to your old data file.  </li>
+<li>Update last tested version to 2023.1 to comply with NVDA version 2023.1.</li>
+</ul>
+<h3>Changes for 2.2</h3>
+<ul>
+<li>Add localization and documentation updates.</li>
+</ul>
+<h3>Changes for 2.0</h3>
+<ul>
+<li>Disable the addon in secure mode.</li>
+<li>Update last tested version to 2022.1, to comply with recent addon api version.</li>
+</ul>
+<h3>Changes for 1.9</h3>
+<ul>
+<li>Localization and documentation updates.</li>
+</ul>
+<h3>Changes for 1.8</h3>
+<ul>
+<li>Add a check box in setting panel, to let advanced users preserve their data folder.  </li>
+<li>Add two new entries in input gestures:  <ul>
+<li>trigger search menu for clipboard text, press twice searches Google directly.  </li>
+<li>Trigger search menu for last spoken text, press twice searches Google directly.  </li>
+</ul>
+</li>
+</ul>
+<h3>Changes for 1.7</h3>
+<ul>
+<li>Make a combo box in addon's setting, to choose an option for default query in search with dialog.  </li>
+<li>You can select either Leave blank, Use clipboard text, or Use last spoken text.  </li>
+</ul>
+<h3>Changes for 1.6</h3>
+<ul>
+<li>Add tew new sites or search engines:<ul>
+<li>Google Translate</li>
+<li>NVDA Issues On GitHub</li>
+</ul>
+</li>
+<li>Use script decorators, instead of traditional script gesture way.</li>
+</ul>
+<h3>Changes for 1.5</h3>
+<ul>
+<li>Fixing a serious bug, by escaping special characters in the query string, before including it in the url.</li>
+</ul>
+<h3>Changes for 1.4</h3>
+<ul>
+<li>Add localization updates .</li>
+<li>Remove some doc strings under script functions, not suitable be shown in input gestures.</li>
+</ul>
+<h3>Changes for 1.2</h3>
+<ul>
+<li>Add translations for Portuguese (Brazil), Portuguese (Portugal), and Turkish.</li>
+<li>Add translations for Chinese (Simplified, China)</li>
+</ul>
+<h3>Changes for 0.7</h3>
+<ul>
+<li>Add more sites that could be added to menu, such as Stackoverflow, Stackexchange, GoogleBooks and others.  </li>
+<li>Add the options to use last spoken text as default query, in search with dialog.  </li>
+</ul>
+<h3>Changes for 0.4</h3>
+<ul>
+<li>Add a dialog if no text selected, to enter a search query.  </li>
+<li>Make possible to modify Search with menu from setting panel, to fit to user needs.  </li>
+</ul>
+<h3>Changes for 0.3</h3>
+<ul>
+<li>Add setting panel, giving more language options in Google search.  </li>
+</ul>
+<h3>Changes for 0.1</h3>
+<ul>
+<li>Initial version  </li>
+</ul>
+</body>
+</html>

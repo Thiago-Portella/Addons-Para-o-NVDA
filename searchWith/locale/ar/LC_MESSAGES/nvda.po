@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the searchWith package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: searchWith 1.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-08-16 10:46+0000\n"
+"PO-Revision-Date: 2021-11-24 02:58+0200\n"
+"Last-Translator: Hatoon <h.felemban@hotmail.com>\n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#. Translators: Search with menu title.
+msgid "Search With Menu"
+msgstr "قائمة البحث باستخدام"
+
+#. Translators: Message displayed if error happens in getting url.
+#, python-brace-format
+msgid "Not able to get {item} url"
+msgstr "يتعذر الوصول لرابط {item} "
+
+#. Translators: Title of message box
+#. Translators: Title of message box.
+msgid "Error Message"
+msgstr "رسالةُ خطأ"
+
+#. Translators: Message displayed if there is no text in clipboard.
+msgid "No text in clipboard"
+msgstr "ليس هناك نص في الحافِظة"
+
+#. Translators: Message displayed if there is no last spoken text.
+msgid "No last spoken text"
+msgstr "لا يُوجد آخر نص منطوق "
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with dialog to enter a search query. And if text selected, "
+"displays a virtual menu pressed once, searches Google directly pressed twice."
+msgstr ""
+"عرضُ مربّع حوار البحث باستخدام لإدخال مصطلح البحث، وإذا كان النص محددا وضُغط "
+"عليه مرة واحدة يعرض القائمة الافتراضية، وبضغطه مرتين يبحث في Google مباشرة."
+
+#. Translators: Category of addon in input gestures.
+#. Translators: title of the panel
+#. Translators: Title of dialog
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Search With"
+msgstr "البحث باستخدام Search With"
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for clipboard text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"عرض قائمة البحث الإفتراضية للنص الموجود في الحافِظة, و بالضغط مرتين يبحث في "
+"جوجل مباشرة."
+
+#. Translators: Message displayed in input help mode.
+msgid ""
+"Display Search with virtual menu for last spoken text, and pressed twice "
+"searches Google directly."
+msgstr ""
+"عرض قائمة البحث الإفتراضية لآخِر نص منطوق, و بالضغط مرتين يبحث في جوجل مباشرة."
+
+#. Translators: Label of group related to menu.
+msgid "Menu"
+msgstr "قائمة"
+
+#. Translators: List of available items to add to menu.
+msgid "Available items to add"
+msgstr "العناصر المتوفرة لإضافتها"
+
+#. Translators: Label of add button.
+msgid "Add to menu"
+msgstr "إضافة إلى القائمة"
+
+#. Translators: Search with menu items.
+msgid "Search with menu"
+msgstr "قائمة البحث باستخدام"
+
+#. Translators: Label of remove button.
+msgid "Remove"
+msgstr "إزالة"
+
+#. Translators: Label of move up button.
+msgid "Move item up"
+msgstr "تحريك العنصر لأعلى"
+
+#. Translators: Label of move down button.
+msgid "Move item down"
+msgstr "تحريك العنصر لأسفل"
+
+#. Translators: Label of set menu to default button.
+msgid "Set menu to default"
+msgstr "إعادة ضبط القائمة للوضع الافتراضي"
+
+#. Translators: Label of options in searching google.
+msgid "In Google search"
+msgstr "في بحث Google"
+
+#. Translators: Option in cumbo box to choose browser setting
+msgid "Browser language and setting"
+msgstr "إعدادات ولغة المتصفح"
+
+#. Translators: Option in cumbo box to choose NVDA language
+msgid "NVDA language"
+msgstr "لغة NVDA"
+
+#. Translators: Option in cumbo box to choose windows language
+msgid "Windows language"
+msgstr "لغة Windows"
+
+#. Translators: Label of static text
+msgid "Use:"
+msgstr "استخدِمْ:"
+
+#. Translators: In search with dialog group
+msgid "In search with dialog"
+msgstr "في مربّع حوار البحث باستخدام"
+
+#. Translators: An option to use for default query.
+msgid "Leave Blank"
+msgstr "أُتركه فارغا"
+
+#. Translators: An option to use for default query.
+msgid "Use clipboard text"
+msgstr "إستخدِم النص الموجود في الحافِظة"
+
+#. Translators: An option to use for default query.
+msgid "Use last spoken text"
+msgstr "استخدِم آخر نص منطوق "
+
+#. Translators: Label of static text
+msgid "Options for default query:"
+msgstr "خَيارات النص الإفتراضي للبحث:"
+
+#. Translators: Label of options to choose target language for translation engines.
+msgid "Translation engines"
+msgstr ""
+
+#. Translators: Label of combo box for google translate.
+msgid "Target language for google translate:"
+msgstr ""
+
+#. Translators: Label of combo box for deepL translate.
+msgid "Target language for deepL translate:"
+msgstr ""
+
+#. For advanced users group
+#. Translators: Label of group for advanced users.
+msgid "For advanced users"
+msgstr "خاص بالمستخدمين المُحترفين"
+
+#. Translators: Label of checkbox preserve data folder.
+#, fuzzy
+msgid "Preserve data folder upon installing a new version"
+msgstr "المُحافَظة على ملف البيانات عندَ تثبيت إصدار جديد"
+
+#. Translators: Message informing that an item was added
+msgid "Information: Item added"
+msgstr "تنبيه: أُضيف العنصر"
+
+#. Translators: Message informing that an item was removed.
+msgid "Information: item removed"
+msgstr "تنبيه: العنصر أُزيل"
+
+#. Translators: Message informing that an item was moved up.
+msgid "Information: item moved up"
+msgstr "تنبيه: العنصر حُرِّكَ لأعلى"
+
+#. Translators: Message informing that an item was moved down.
+msgid "Information: item moved down"
+msgstr "تنبيه: العنصر حُرِّكَ لأسفل"
+
+#. Translators: Message informing that menu was set to default.
+msgid "Information: Menu set to default"
+msgstr "تنبيه: إعادة ضبط القائمة للوضع الافتراضي"
+
+#. Translators: Label of static text
+msgid "Search with google"
+msgstr "البحث في Google"
+
+#. Translators: Label of text control to enter query.
+msgid "Enter a search query"
+msgstr "أدخِلْ مصطلحًا للبحث عنه"
+
+#. Translators: Label of Other engines button
+msgid "Other Engines"
+msgstr "محرّكات أخرى"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"This addon helps you to search text, via various search engines.\n"
+"Let no text selected, and press the gesture of the addon\n"
+"A dialog will be displayed, with an edit box to enter a search query\n"
+"To search with Google press enter, or tab to search with other engins.\n"
+"Or\n"
+"select some text and press once, a menu will be displayed with various "
+"search engines to choose from.\n"
+"And while text is selected, you can press the gesture twice to search with "
+"Google directly.\n"
+"The Default gesture for the addon is: NVDA+ Windows+ S."
+msgstr ""
+"تساعدُك هذه الإضافة في البحث عن نص عبر محرّكات بحثٍ عديدة.\vتأكد مِن أنهُ ليس "
+"هناك نص مُحدد, و اضغط اختصار الإضافة\vستظهر مُحاوَرة, مع مربع بحث لإدخال مُصطلح "
+"البحث\vإذا أردتَ البحث في جوجل إضغط إنتر, أو تحرك بالتاب لاختيار مُحركات بحث "
+"أُخرى.\vأو\vحدِّد نص معين و اضغط مرة واحدة, و سيتم عرض قائمة مع العديد مِن "
+"محركات البحث للإختيار مِن بينِها.\vو في حالةْ وجود نص مُحدد, يُمكنك الضغط مرتين "
+"للبحث في جوجل مباشرة.\vالإختصار الإفتراضي للإضافة هو: NVDA+Windows+S."

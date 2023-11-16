@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Weather_Plus</title>
+</head>
+<body>
+<h1>Počasí Plus</h1>
+<ul>
+<li>Autor: Adriano Barbieri</li>
+<li>NVDA kompatibilita: 2017.3 a vyžší</li>
+<li>Stáhnout: <a href="https://addons.nvda-project.org/files/get.php?file=wetp">Stabilní verzi</a></li>
+</ul>
+<h1>O doplnku</h1>
+<ul>
+<li>Poskytuje informace o aktuálním počasí a předpověď počasí až na 2 dny
+  dopředu a hodinové předpovědi.</li>
+<li>Copyright (C) <a href="mailto:adrianobarb@yahoo.it">Adriano Barbieri</a></li>
+<li>Vydané pod licencí GNU GPL (General Public License) verze 2</li>
+<li>Doplněk využívá tyto služby:</li>
+<li><a href="https://www.weatherapi.com/">https://www.weatherapi.com/</a></li>
+<li><a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+<li><a href="http://veloroutes.org/elevation/">http://veloroutes.org/elevation/</a></li>
+<li><a href="https://www.nvda.it/">https://www.nvda.it/</a></li>
+</ul>
+<h1>POUŽITÍ:</h1>
+<ul>
+<li>nvda+W: Oznámí informaci o aktuálním počasí.</li>
+<li>NVDA+shift+W: Oznámí předpověď počasí až na 2 dny dopředu.</li>
+<li>NVDA+shift+W Stiskněte dvakrát, aby jste dostali hodinovou předpověď teploty a atmosférických podmínek.</li>
+<li>NVDA + shift + ctrl + w: Umožňuje nastavit dočasné město.</li>
+<li>NVDA + shift + ctrl + alt + w: Otevře nastavení doplnku.</li>
+<li>NVDA + alt + w: Oznámí datum a čas poslední aktualizace informaci o
+  počasí.</li>
+<li>ctrl+ shift + w: přepíná mezi oznamováním teploty v stupních Celsia anebo
+  Farenheita.</li>
+</ul>
+<h1>Nastavení:</h1>
+<ul>
+<li>Než začnete doplněk používat, je třeba nastavit parametry. V menu Možnosti aktivujte podmenu počasí a tam vyberte jednu z možností:</li>
+<li>Spravovat města: Umožní nastavit město, pro které se budou zobrazovat informace o počasí.</li>
+<li>Nápověda: Zobrazí dokument s pomocníkem v aktuálním jazyku.</li>
+<li>Zkontrolovat aktualizace: Zkontroluje a umožní nainstalovat novou verzi doplňku.</li>
+</ul>
+<p>Nové město na sledování přidáte nasledovně:</p>
+<ul>
+<li>Aktivujte položku Spravovat města.</li>
+<li>Zobrazí se táto zpráva: Předvolené město není. f1: Pomocník, f2: Oznámí
+  aktuální vybranou záložku, f3: přesune kurzor na editační pole nebo
+  seznam, f4: Nastaví délku předpovědi počasí, F5: Nastavení úrovně
+  hlasitosti.</li>
+<li>Do textového pole zadejte město nebo vyberte město ze
+  seznamu. Poznámka: Klávesa F5 funguje jen když jsou aktivované zvukové efekty.</li>
+<li>Po aktivování položky spravovat města jsou dostupné tyto možnosti:</li>
+<li>Otestovat: Otestujte platnost města a najděte jeho údaje.</li>
+<li>Přidat: přidá aktuální město do seznamu. Toto tlačítko se dá aktivovat, jestliže
+  je vybrané město ze seznamu a jestli jste zadané město otestovali.</li>
+<li>Podrobnosti: zobrazuje informace o aktuálním městě. Toto tlačítko se dá
+  aktivovat, pokud je ze seznamu vybrané město nebo když jste ho už otestovali.</li>
+<li>Nastavení zvukových efektů: Umožňuje definovat oblast s cílem
+  přizpůsobit zvukové efekty. Toto tlačítko se dá aktivovat, pokud jsou zvukové
+  efekty nainstalované a aktivované a ze seznamu je vybrané město.</li>
+<li>Předvolené město: Jestliže nastavíte město jako předvolené, použije se při každém
+  restartu doplňku. Toto tlačítko se dá aktivovat, když vyberete město,
+  které bylo předtím vložené do seznamu a není zatím předvolené alebo když
+  prošlo testováním.</li>
+<li>Odstranit: Odstraní aktuální město ze seznamu. Toto tlačítko se dá
+  aktivovat, pokud vyberete město, které bylo předtím vložené do seznamu.</li>
+<li>Přejmenovat: Přejmenuje aktuální město. Toto tlačítko se dá aktivovat, když
+  vyberete město, které bylo předtím vložené do seznamu.</li>
+<li>Importovat: Toto tlačítko umožňuje importovat města z jiného seznamu měst
+  s příponou * .zipcodes. Během  importu můžete zaškrtnout města, která
+  chcete importovat.</li>
+<li>Exportovat: Umožňuje vám uložit města do souboru s příponou *
+  .zipcodes. Exportovat můžete jen tehdy, když je v seznamu alespoň jedno město.</li>
+<li>nastavení hodinové předpovědi ... - Toto tlačítko umožňuje zvolit obsah zprávy hodinové předpovědi.</li>
+<li>Jednotky měření teploty: Pomocí přepínače vyberte mezi stupněmi Celzia
+  (předvolené), Fahrenheita nebo Kelvina.</li>
+<li>Zobrazit stupně jako: Pomocí přepínače vyberte mezi Celzia <code>-</code>
+  Fahrenheita <code>-</code> Kelvina (předvolené) C<code>-</code> F <code>-</code> K anebo neurčovat.</li>
+<li>Délka předpovědi: Nastavte počet dní předpovědi počasí. Maximálně 3.</li>
+<li>Seznamový rámec: API odpovídající jazyk:: English, en; můžete zvolit jazyk textu předpovědi.</li>
+<li>Dostupné jsou i tyto zaškrtávací pole:</li>
+<li>kopírovat předpověď počasí, aktuální počasí a informace o městě do
+  schránky - předvolene vypnuté</li>
+<li>Předpověď oznamovat také Zvukem: Po zaškrtnutí můžete spravovat zvukové
+  efekty. Jestliže jsou nainstalované zvukové efekty a pole je zaškrtnuté, můžete
+  upravovat hlasitost zvuků klávesou F5.</li>
+<li>Přibyde též zaškrtávací políčko Nepřehrávat zvuky Prostředí.</li>
+<li>Můžete změnit celkovú úroveň hlasitosti, případně upravit hlasitost pro
+  jednotlivé události. Předvolené není zaškrtnuté.</li>
+<li>Nepřehrávat zvuky Prostředí: Tato možnost je k dispozici, pokud jsou zvukové
+  efekty povolené. Po zaškrtnutí se budou přehrávat jen zvuky počasí (déšť,
+  bouřka, vítr) a ne zvuky prostředí. Předvolené je vypnuté.</li>
+<li>Používat 24-hodinový formát: Pokud je odškrtnuté, oznamuje čas v
+  12-hodinovém formátu, například 12 AM <code>-</code> 12 PM. Předvolené je zapnuté.</li>
+<li>Povolit texty Pomocníka v oknech s nastaveními: Předvolené je zapnuté.</li>
+<li>Oznamovat povětrnostní podmínky: Předvolené je vypnuté. Po zapnutí budou
+  dostupné tyto možnosti:</li>
+<li>Oznamovat směr větru: bude oznamovat při počasí aj směr větru. Předvolené
+  zapnuté.</li>
+<li>Oznamovat rychlost větru: Bude oznamovat rychlost větru v mílech nebo
+  kilometrech za hodinu. Předvolené zapnuté.</li>
+<li>Oznamovat rychlost větru v metrech za sekundu: Předvolené zapnuté.</li>
+<li>Oznamovat pocitovou teplotu: Předvolené zapnuté.</li>
+<li>Přidat rychlost  nárazů větru: Předvolené zapnuté</li>
+<li>Oznamovat atmosferické informace: Předvolené je vypnuté. Po zapnutí budou
+  dostupné tyto možnosti:</li>
+<li>Oznamovat vlhkost: Oznamuje vlhkost vzduchu v procentech. Předvolené
+  zapnuté.</li>
+<li>Oznamovat Viditelnost: Oznamuje viditelnost v mílech nebo
+  kilometrech. Předvolené zapnuté.</li>
+<li>Oznamovat hodnotu Atmosferického tlaku: Oznamuje stav tlaku v milibarech
+  nebo palcích ortuti. Předvolené je zapnuté. Po zaškrtnutí je též možné
+  zaškrtnout oznamování tlaku v milimetrech ortuti.</li>
+<li>Přidat hodnotu oblačnosti: Předvolené zapnuté</li>
+<li>Přidat hodnotu srážek: Předvolené zapnuté</li>
+<li>Přidat hodnotu ultrafialového záření: Předvolené zapnuté</li>
+<li>Oznamovat astronomické informace: oznamuje čas východu a západu slunce a čas východu a západu měsíce. Předvolené vypnuté</li>
+<li>Desetinné čísla oddělovat čárkou: Pokud je zaškrtnuté, použije na oddělení
+  celých a desetinných čísel desetinnou čárku (,). Předvolené je vypnuté a
+  používá se tečka (.)</li>
+<li>Zobrazuje výstup v okně; pokud je aktivována, zobrazí se předpověď v okně. Zaškrtávací políčko není zaškrtnuto (ve výchozím nastavení)</li>
+<li>Skontrolovat aktualizace: Skontroluje dostupnost nové verze doplňku.</li>
+<li>Nastavení uložíte tlačítkem OK a zrušíte tlačítkem Zrušit.</li>
+<li>Pokud jste upravili seznam s městy a aktivujete tlačítko Zrušit, doplněk vás
+  upozorní, že jste zapomněli uložit změny. Nastavení se ukládají do souborů:</li>
+<li>"Weather.ini": prvotní nastavení doplňku.</li>
+<li>"Weather.volumes": Nastavení hlasitosti pro jednotlivé události.</li>
+<li>"Weather.zipcodes": seznam měst.</li>
+<li>"Weather.default": Vaše výchozí město.</li>
+<li>"Weather_searchkey": Uložené vyhledávané řetězce.</li>
+</ul>
+<hr />
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

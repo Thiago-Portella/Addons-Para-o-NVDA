@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Read Feeds 26.0.0</title>
+</head>
+<body>
+<h1>Lue syötteet</h1>
+<ul>
+<li>Tekijät: Noelia Ruiz Martínez, Mesar Hameed</li>
+</ul>
+<p>Tämä lisäosa tarjoaa suoraviivaisen tavan lukea Atom -tai RSS-syötteitä
+NVDA:ta käyttäen.  Syötteitä ei päivitetä automaattisesti.  Alla mainitut
+syötteet tarkoittavat sekä Atom- että RSS-syötteitä.</p>
+<h2>Komennot</h2>
+<h3>Lue syötteet -valintaikkuna</h3>
+<p>Pääset Lue syötteet -valintaikkunaann Syötteet-kohdasta, joka löytyy
+NVDA-valikon Työkalut-alavalikosta.</p>
+<p>Se sisältää seuraavat säätimet:</p>
+<ul>
+<li>Suodata: Muokkauskenttä aiemmin tallennettujen syötteiden etsimiseen.</li>
+<li>Tallennettujen syötteiden luettelo, aktiivisena kun valintaikkuna avataan.</li>
+<li>Artikkeliluettelo: Avaa valintaikkunan, joka näyttää luettelon nykyisen
+  syötteen artikkeleista. Valitse artikkeli, jonka haluat lukea, ja paina
+  Enter tai Avaa valitun artikkelin verkkosivu -painiketta avataksesi
+  vastaavan sivun selaimessa. Paina Tietoa artikkelista -painiketta
+  avataksesi valintaikkunan, jossa näytetään valitun artikkelin otsikko ja
+  linkki. Tiedot on myös mahdollista kopioida leikepöydälle.</li>
+<li>Avaa syöte: Avaa valitun syötteen oletussovelluksessa.</li>
+<li>Avaa syöte HTML-muodossa: Avaa valitun syötteen oletusselaimessa. Voit
+  näyttää tai piilottaa julkaisupäivämäärät sekä artikkeleiden tiedot
+  leikepöydälle kopioivat painikkeet.</li>
+<li>Kopioi syötteen osoite: Avaa valintaikkunan, jossa kysytään vahvistus
+  syötteen osoitteen kopioinnista leikepöydälle.</li>
+<li>Uusi: Avaa muokkausruudun sisältävän valintaikkunan, johon voit kirjoittaa
+  uuden syötteen osoitteen. Mikäli syöte on kelvollinen ja se voidaan
+  tallentaa, sen otsikkoon pohjautuva nimi ilmestyy artikkeliluettelon
+  alaosaan.</li>
+<li>Nimeä uudelleen: Avaa muokkausruudun sisältävän valintaikkunan, jossa voit
+  uudelleennimetä valitun syötteen.</li>
+<li>Poista: Avaa vahvistuksen pyytävän valintaikkunan, jossa voit poistaa
+  valitun syötteen.</li>
+<li>Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
+  artikkeleihin pääsee NVDA:n näppäinkomennoilla.</li>
+<li>Tuo syötteet OPML-tiedostosta: Avaa valintaikkunan uusien syötteiden
+  lisäämiseen OPML-tiedostosta.</li>
+<li>Tallenna syötteet OPML-tiedostoon: Avaa valintaikkunan
+  Syötteet-valintaikkunassa käytettävissä olevien syötteiden tallentamiseen
+  OPML-tiedostoon.</li>
+<li>Asetukset: Avaa Lue syötteet -lisäosan asetusvalintaikkunan. Löytyy myös
+  NVDA-valikosta kohdasta Asetukset / Asetukset / Lue syötteet -kategoria.</li>
+<li>Sulje: Sulkee Syötteet-valintaikkunan.</li>
+</ul>
+<h3>Huomautuksia</h3>
+<ul>
+<li>Suodata-muokkauskenttä voidaan sijoittaa Avaa artikkeli -painikkeen
+  jälkeen NVDA-valikosta kohdasta Asetukset / Asetukset Lue syötteet
+  -kategoria tai painamalla Syötteet-valintaikkunan Asetukset-painiketta.</li>
+<li>Tässä paneelissa on vaihtoehto artikkelien päivämäärien näyttämiseen
+  Artikkeliluettelo-valintaikkunassa.</li>
+</ul>
+<h3>Näppäinkomennot</h3>
+<ul>
+<li>Ctrl+Vaihto+NVDA+Väli: Ilmoittaa nykyisen artikkelin
+  URL-osoitteen. Kahdesti painettaessa avataan sen verkkosivu.</li>
+<li>Ctrl+Vaihto+NVDA+8: Päivittää valitun syötteen ja ilmoittaa sen uusimman
+  artikkelin otsikon.</li>
+<li>Ctrl+Vaihto+NVDA+I: Ilmoittaa nykyisen syötteen otsikon ja
+  linkin. Kahdesti painettaessa ne kopioidaan leikepöydälle.</li>
+<li>Ctrl+Vaihto+NVDA+U: Ilmoittaa edellisen syötteen otsikon.</li>
+<li>Ctrl+Vaihto+NVDA+O: Ilmoittaa seuraavan syötteen otsikon.</li>
+</ul>
+<h2>Ilmoitukset</h2>
+<ul>
+<li>Kun otsikko tai URL-osoite on kopioitu.</li>
+<li>Kun yhdistäminen/syötteen päivittäminen ei onnistu, tai annetussa
+  URL-osoitteessa ei ole kelvollista syötettä.</li>
+<li>NVDA näyttää virheilmoituksen, jos uutta syötettä ei voi luoda.</li>
+<li>Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
+  Artikkeliluettelo-valintaikkunan otsikossa.</li>
+</ul>
+<h2>Muutokset versiossa 2.0</h2>
+<ul>
+<li>Nimettömiä artikkeleita sisältävät syötteet voidaan näyttää
+  Artikkelit-valintaikkunassa ja avata HTML-muodossa.</li>
+</ul>
+<h2>Muutokset versiossa 20.0</h2>
+<ul>
+<li>universalFeedParser-moduuli on päivitetty versioksi 5.0.1, joka lisää tuen
+  useammille syötteille.</li>
+</ul>
+<h2>Muutokset versiossa 14.0</h2>
+<ul>
+<li>Korjattu bugi, joka teki mahdottomaksi joidenkin syötteiden lisäämisen.</li>
+</ul>
+<h2>Muutokset versiossa 13.0</h2>
+<ul>
+<li>Lisäosaa ei voi käyttää suojatuissa ruuduissa.</li>
+<li>Syötteitä hallitaan OPML-tiedostoista.</li>
+<li>Syötteidenhallintajärjestelmään tehtyjen muutosten takia asetustiedosto,
+  jossa oletussyöte määritetään, on muuttunut. Käytä
+  Syötteet-valintaikkunaa, mikäli haluat määrittää sen uudelleen.</li>
+<li>Aiemmissa versioissa käyttämäsi vanhat tekstitiedostot tuodaan
+  automaattisesti uuteen OPML-muotoon, kun lisäosa käynnistetään.</li>
+<li>Syötteiden kopiointi- ja palautusominaisuudet on korvattu OPML-tiedostojen
+  tuonti- ja tallennusmahdollisuudella.</li>
+<li>Virheelliset syötteet voidaan käsitellä ennen lisäämistä, jotta ne ovat
+  yhteensopivia lisäosan kanssa.</li>
+<li>Lue syötteet -asetuspaneelin uusi vaihtoehto mahdollistaa artikkelien
+  päivämäärien näyttämisen Artikkeliluettelo-valintaikkunassa.</li>
+</ul>
+<h2>Muutokset versiossa 12.0</h2>
+<ul>
+<li>Korjattu bugi, joka sai NVDA:n Työkalut-valikon kohteiden pikanäppäimet
+  toimimaan odottamattomasti.</li>
+</ul>
+<h2>Muutokset versiossa 11.0</h2>
+<ul>
+<li>Yhteensopiva NVDA 2021.1:n kanssa</li>
+</ul>
+<h2>Muutokset versiossa 10.0</h2>
+<ul>
+<li>Lisätty painike valitun syötteen avaamiseen HTML-muodossa
+  oletusselaimessa.</li>
+<li>Mikäli uutta syötettä ei voi luoda, siitä näytetään virheilmoitus.</li>
+<li>Parannettu artikkeleiden järjestystä ja näyttämistä.</li>
+<li>Tuetaan mahdollisesti useampia syötteitä.</li>
+<li>Syöteluettelo on aktiivisena hakukentän sijaan, kun Syötteet-valintaikkuna
+  avataan.</li>
+<li>Voit valita, sijoitetaanko hakukenttä syöteluettelon jälkeen, jolloin
+  luettelo tulee aktiiviseksi jopa vaihdettaessa toisesta ikkunasta
+  sulkematta Syötteet-valintaikkunaa.</li>
+<li>Syötteet-valintaikkunaan lisätty painike syötteen osoitteen kopioimiseen
+  leikepöydälle.</li>
+</ul>
+<h2>Muutokset versiossa 9.0</h2>
+<ul>
+<li>Edellyttää NVDA 2019.3:a tai uudempaa.</li>
+</ul>
+<h2>Muutokset versiossa 8.0</h2>
+<ul>
+<li>Kun lisäosa päivitetään, aiemmassa versiossa tallennetut syötteet
+  kopioidaan  automaattisesti uuteen versioon, paitsi jos haluat tuoda ne
+  NVDA-asetusten pääkansiosta.</li>
+<li>Jos valitulle kansiolle ei ole Syötteidenkopiointivalintaikkunassa annettu
+  nimeksi personalFeeds, sen niminen alikansio luodaan, jotta estetään
+  tärkeää dataa sisältävien hakemistojen, kuten Tiedostot tai Ladatut
+  tiedostot, poistaminen.</li>
+</ul>
+<h2>Muutokset versiossa 7.0</h2>
+<ul>
+<li>Syötteet-valintaikkunassa on painike, jolla voidaan avata mahdollisen
+  syöttteiden varmuuskopion sisältävä kansio.</li>
+<li>Kun muokkauskenttää käytetään syötteiden suodattamiseen ja jos
+  hakutuloksia ei löydy, syötteiden luettelo sekä muut säätimet poistetaan
+  käytöstä, jottei NVDA sano "tuntematon" kohdistuksen siirtyessä tähän
+  tyhjään luetteloon.</li>
+<li>Mikäli Artikkeliluettelo-valintaikkunaa ei voida näyttää, esim. syötteessä
+  olevien virheiden vuoksi, NVDA ilmoittaa virheestä, jotta
+  Syötteet-valintaikkunaa voidaan käyttää ilman NVDA:n
+  uudelleenkäynnistystä.</li>
+</ul>
+<h2>Muutokset versiossa 6.0</h2>
+<ul>
+<li>Kun oletussyöte on päivitetty ja se lakkaa toimimasta palvelinongelmien
+  vuoksi, aiempia artikkeleita ei poisteta, vaan niitä voidaan lukea
+  tarkoitukseen varatuilla näppäinkomennoilla.</li>
+<li>Oletussyöte voidaan taas päivittää kahdesti.</li>
+</ul>
+<h2>Muutokset versiossa 5.0</h2>
+<ul>
+<li>Artikkeliluettelovalintaikkunaa on paranneltu.</li>
+<li>Yhteensopiva NVDA 2018.3:n tai uudemman kanssa (vaaditaan).</li>
+<li>Viimeisen NVDA 2017.3:n kanssa yhteensopivan version voi ladata
+  <a href="https://www.nvaccess.org/addonStore/legacy?file=rf-o">tästä. </a></li>
+</ul>
+<h2>Muutokset versiossa 4.0</h2>
+<ul>
+<li>Syötteet-valintaikkunaan lisätty painike valitun syötteen avaamiseen.</li>
+</ul>
+<h2>Muutokset versiossa 3.0</h2>
+<ul>
+<li>Syötetiedostojen hallintavalintaikkunat on poistettu. Niiden
+  toiminnallisuus on nyt sisällytetty Syötteet-valintaikkunaan.</li>
+<li>Valintaikkunoiden visuaalista esitystä on paranneltu noudattamaan NVDA:n
+  ikkunoiden ulkoasua.</li>
+<li>Oletussyöte tallennetaan NVDA:n asetushakemistoon. Tämän ansiosta
+  asetusprofiileissa on mahdollista asettaa eri oletussyötteitä.</li>
+<li>Edellyttää NVDA:n 2016.4-versiota.</li>
+</ul>
+<h2>Muutokset versiossa 2.0</h2>
+<ul>
+<li>Ohje on käytettävissä Lisäosien hallinnasta.</li>
+</ul>
+<h2>Muutokset versiossa 1.0</h2>
+<ul>
+<li>Ensimmäinen versio.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Thunderbird+ 4.9</title>
+</head>
+<body>
+<h1>Thunderbird+</h1>
+<ul>
+<li>Authors: Pierre-Louis Renaud (From Thunderbird 78 to 102) &amp; Cyrille Bougot (TB 102), Daniel Poiraud (From TB 78 to 91), Yannick (TB 45 to 60);</li>
+<li>URL: <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_en.html#navpanels">User manual</a> ;
+  <a href="https://www.rptools.org/NVDA-Thunderbird/changes.php?lg=en">History of changes at RPTools.org</a> ;
+  <a href="https://www.rptools.org/NVDA-Thunderbird/toContact.html">Contact in French or English</a> ;</li>
+<li>Download <a href="https://www.nvaccess.org/addonStore/legacy?file=thunderbirdPlus">stable version</a></li>
+<li>Download <a href="https://www.rptools.org/?p=8610">Latest version from RPTools.org</a> ;</li>
+<li>NVDA compatibility: 2019.3 and later;</li>
+<li>Thunderbird compatibility: versions 102.x;</li>
+<li><a href="https://github.com/RPTools-org/ThunderbirdPlus/">Source code on gitHub</a></li>
+</ul>
+<p>Note: This add-on is not compatible with the Mozilla Apps Enhancements add-on. If the latter is installed, you will have to disable or uninstall it before installing Thunderbird+;</p>
+<!-- [Jump to table of contents](#toc) -->
+
+<h2>Description</h2>
+<p>This add-on greatly improves the Mozilla Thunderbird messaging client's comfort and efficient use with NVDA.</p>
+<p>Improvements relate to the following aspects:</p>
+<h3>Auditory Comfort</h3>
+<ul>
+<li>Alerts such as "so-and-so requested a return receipt" can be deactivated via an option;</li>
+<li>The alerts "This is a draft" and "Thunderbird thinks this message is fraudulent" are simply dismissed in silence; </li>
+<li>Options allow you to disable mailing list names announcement, remove or group "RE" mentions and clean up the names of correspondents by removing numbers and other annoying special characters;  </li>
+</ul>
+<h3>Navigating The Main Window</h3>
+<ul>
+<li>Moving to the next panel is done using the TAB key, while the Escape key returns to the previous panel. This is more comfortable than through F6 and Shift+F6. </li>
+<li>The selection of tabs with Control+Tab and Control+number is spoken as in this example: Tab 1 of 4, inbox; </li>
+<li>A keyboard shortcut allows you to list tabs in a menu in order to easily activate one of them;</li>
+<li>A keyboard shortcut is used to display the context menu of the tabs bar;</li>
+</ul>
+<h3>The Folder Tree view</h3>
+<ul>
+<li>Alt+Down Arrow and Alt+Up Arrow let you navigate among folders containing unread messages;</li>
+<li>Typing a letter or number selects the next folder whose name begins with that character. With the Shift key, the move occurs from bottom to top. Besides, the name of the account to which the folder belongs is announced;</li>
+<li>Pressing Space bar on a folder containing unread messages selects the first unread message of the message list;</li>
+<li>Two dialogs for accounts and their associated folders allow you to filter them by keyword or display only folders with unread messages;</li>
+</ul>
+<h3>The Message List</h3>
+<ul>
+<li>Choosing columns and their layout within the message list is made accessible through a simple dialog;</li>
+<li>Viewing the columns of the message list: shortcuts allow you to easily listen to, spell or copy the sender's name, the message subject or its date by typing a digit on the alphanumeric keypad. For instance, a single press on 1 or &amp; announces the sender, two presses spell the name and three presses copy it to the clipboard;</li>
+<li>Viewing the headers in the header pane displayed using F8: with Alt+ a digit, 1 press announces any header containing the sender's addresses or recipients, 2 presses open a dialog to copy them, 3 presses open the native Thunderbird context menu associated with the header;</li>
+<li>Cleaned quick message text preview via space key, Alt+down arrow or F4: Large header blocks in message quotes are replaced by the phrase "Sender name wrote". NVDA will also announce "clickable link" instead of the long address of the link.</li>
+<li>Quick overview of quotes in chronological order, from bottom to top, via Shift+Space, Alt+up arrow or Shift+F4;</li>
+<li>Easy access to attachments using the shortcut Alt+page down or via number 1 of alphanumeric keypad;</li>
+</ul>
+<!-- Translators : étiquettes = tags -->
+<h3>Quick Filter Bar And Priority Tag Management</h3>
+<ul>
+<li>It is possible to navigate filtering options with the vertical arrows. The Enter key is used to check or uncheck a filter;</li>
+<li>Adding or removing tags is done by simply pressing Shift+ a digit on the alphanumeric keyboard. For example, press Shift+4 to add the "To Do" tag to a message. You can then filter the message list by tag via the quick filter bar which is hence accessible; </li>
+</ul>
+<h3>The Message Write Window</h3>
+<p>Alt+1 announces the Sender, Alt+2 announces the Recipient, Alt+3 announces the Attachments, etc. Two presses place the focus on one of these fields;</p>
+<h3>Spell-check Dialog</h3>
+<ul>
+<li>The misspelled word is announced with or without spelling before the suggested word. The shortcuts NVDA+Tab or Alt+up arrow announce misspelled and replacement words: 1 press spells the words at normal speed, 2 presses spell them quickly, 3 presses copy the misspelled word to the clipboard for analysis in another edit field; </li>
+<li>Various combinations involving the Enter key trigger the Replace, Replace All, Ignore, Ignore All, or Add Word to Dictionary buttons have been added for even more convenience within this dialog; </li>
+</ul>
+<h3>Automatic Update</h3>
+<p>ThunderbirdPlus contains an independent auto-update system with deactivation/reactivation and postponement features;</p>
+<h3>Side-to-side Operation with Chichi</h3>
+<p>ThunderbirdPlus is designed to work seamlessly with Chichi, an add-on that installs directly onto Thunderbird.</p>
+<p>Read about this on the <a href="https://www.rptools.org/Outils-DV/thunderbird-chichi-en.html">page of Chichi</a> ;</p>
+<h3>A Note About Languages</h3>
+<p>Some features will not work properly if ThunderbirdPlus is not translated into the language you use with NVDA and Thunderbird.</p>
+<ul>
+<li>Alerts will not be intercepted. These are draft-related alerts, receipt requests, fraudulent messages, updates and so on.;</li>
+<li>Thunderbird add-on search enhancement feature will not work.</li>
+</ul>
+<p>To date, the add-on is available in the following languages:</p>
+<p><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_fr.html">Original version in French</a> : written by the developer;</p>
+<p>Translations from oldest to newest order:</p>
+<ul>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_pt_PT.html">Portuguese</a>: by Rui Fontes from TifloTecnia.com and member of the NVDA Portuguese team;</li>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_es.html">Spanish</a>: by Rémy Ruiz;</li>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_en.html">English</a>: by Bachir Benanou, former member of the NVDA French translation team;</li>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_tr.html">Turkish</a>: by  umut korkmaz;</li>
+<li><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_cs.html">Czech</a> : by Jarek Krcmar ;</li>
+</ul>
+<p>Thank you, translators.</p>
+<p><a name="navpanels"></p>
+<h2>Navigating The Panels of the Message Tab (Tab, Escape)</h2>
+<p>This hereby concerns the tab containing the following panels: folder tree view, message list, header pane and message preview (shown or hidden via the F8 key).</p>
+<ul>
+<li>TAB: Moves to the next panel. This shortcut will be more ergonomic for some people than F6;</li>
+<li>Escape: Returns to the previous panel. Equivalent to Shift+F6;</li>
+</ul>
+<p>Note:</p>
+<p>When tabbing from the message list to reach the text, the header area is skipped. To reach this header area, press Alt+one digit on the alphanumeric keyboard three times quickly, then press Escape to exit the header context menu. These Alt+digit shortcuts reduce the need to go to the header area. For more details, see the "Header viewing" section below.  </p>
+<p><a name="threadTree"></p>
+<h2>Message List, Preview Pane And Separate Reading Window</h2>
+<p>Some of the following shortcuts are common to these three contexts, others relate to a particular context.</p>
+<p><a name="attach"></p>
+<h3>Accessing Attachments (Alt+Page down)</h3>
+<ul>
+<li>Alt+page down or Alt+p: if the preview pane is displayed (via F8), Opens the list of attachments for the selected message;</li>
+<li>Alt+9 or number 1 or 2: only from the message list, one press states the number of attachments, two presses open the list of attachments;</li>
+</ul>
+<p><a name="readPreview"></p>
+<h3>Quick And Uncluttered Message Reading</h3>
+<ul>
+<li>Quick message reading commands are available in three contexts: from the message list, from a message opened in a tab or from a message opened in a separate window;</li>
+<li>They are now all compatible with messages from Framalistes;</li>
+<li>Most quick-reading keyboard shortcuts have been concentrated to minimize hand movement during a session of reading many messages;</li>
+<li>A single press of the main key of a shortcut starts the uncluttered reading of the message, i.e. with strongly shortened quote headers.</li>
+<li>A double press starts reading the message in its original form. The terms "unfiltered reading" are synonymous;</li>
+</ul>
+<p><a name="readFromList"></p>
+<h4>Quick Message Reading From The List Without Leaving It (Spacebar, F4 or Alt+down arrow)</h4>
+<p>To benefit from this feature, you will have to display the message reading pane with the F8 key first. By pressing this key, you will hear if this pane is present or absent;</p>
+<p>Next, go to the message list and use the following keys:</p>
+<ul>
+<li>Space, Alt+Down Arrow or F4: Reads the message body without leaving the list. After reading a message, press down arrow then Space or Alt+down arrow or F4 to hear the next message;</li>
+<li>Double-keystroke, displays the list of links in a message if Chichi is active. If an RSS feed article is selected, it will be opened in the Internet browser;</li>
+<li>Shift+space, Alt+Up arrow or Shift+f4: same function in addition to reading quotes in their chronological order (from bottom to top);</li>
+</ul>
+<p>And to complete the commands available from the message list, let's mention here:</p>
+<ul>
+<li>Letter n or Alt+Right arrow: selects the next unread message, even across folders;</li>
+<li>Alt+Page down or Alt+p from the message list: allows you to go directly to the attachments area without Tabbing through the text;  </li>
+</ul>
+<p><a name="readFromWinTab"></p>
+<h3>Quick Message Reading In A Separate Window Or Message Tab (F4 or Alt+Down Arrow)</h3>
+<p>When a message is opened in a new window, the message body is read automatically by default. However, the following shortcuts allow you to hear the message again at any time.</p>
+<ul>
+<li>F4 or Alt+down arrow: quick message body reading;</li>
+<li>Shift+F4 or Alt+up arrow: same function but in reverse;</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>As a reminder, a double-press of these shortcuts starts the reading of the original message;</li>
+<li>Automatic reading may cause NVDA to crash on some PCs, especially if the account is set to IMAP. To try resolving this issue, the Alt+d shortcut opens an edit box that lets you lengthen the delay between opening the window and starting automatic reading <br>
+If setting this delay does not solve the problem, you may disable the automatic reading via the menu Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a> / Options for the main window / separate reading window: do not automatically read message if this causes NVDA blockages;</li>
+<li>To make the most of uncluttered reading and protect yourself from remote content that does not respect your privacy, display the body of messages in simple HTML. To do this, open the View menu, scroll down to Message Body and in the submenu, choose the Simple HTML option.</li>
+</ul>
+<p>Viewing columns and headers:</p>
+<p>It is important here to distinguish between columns and headers: the word "column" is used below to indicate the value of a row cell in the message table. The word "header" refers to the message itself. Headers can be viewed both in the message preview pane and in the separate tab or window of an open message;</p>
+<p><a name="readCols"></p>
+<h3>Viewing Columns: one Digit On The Alphanumeric Keyboard</h3>
+<p>These keys are for columns in the message list only. Type a number on the alphanumeric keyboard without pressing the Shift key:</p>
+<ul>
+<li>A single press of a number: states the name and value of the corresponding column;</li>
+<li>Two presses of a number: spells the value of the corresponding column;</li>
+<li>Three quick presses of a number: copies the column value to the clipboard. To copy the addresses of the various senders and recipients, use the header reading procedure discussed below; </li>
+</ul>
+<p><a name="readHeaders"></p>
+<h3>Header Reading: Alt+one Digit On Alphanumeric Keyboard</h3>
+<p>The following shortcuts can be used from the main window if the preview panel is displayed (via F8) and from the separate tab or window of an open message. One tap speaks the header and two taps displays a context menu as appropriate;</p>
+<ul>
+<li>Alt+1: one press announces the sender's name and his email address, two presses open an edit box of these values. You can edit them and then press Enter to copy them to the clipboard. Three presses: opens the context menu of the header;</li>
+<li>Alt+2: Subject with name of mailing list if any;</li>
+<li>Alt+3: Message date;</li>
+<li>Alt+4 to: main message recipients. If several recipients, three presses set focus on the first recipient, then tab moves to the next one. Applications key on each recipient displays the context menu;</li>
+<li>Alt+5: Copy recipients; </li>
+<li>Alt+6: Blind copy recipients;</li>
+<li>Alt+7: "reply to" address;</li>
+<li>Alt+8: User agent, if full headers are enabled via the View / headers / full menu;</li>
+<li>Alt+9: 1 press announces the number of attachments, 2 presses opens the attachment list;</li>
+<li>Alt+0: List of priority tags placed on a message;</li>
+<li>Alt+<a href="keyEquiv_en.html#bs2">Minus</a> or Alt+End: Gives a shortened version of the status bar: number of unread messages, total number of messages and quick filter expression; </li>
+<li>Alt+<a href="keyEquiv_en.html#bs1">Equals</a>: Opens the tabs context menu;</li>
+<li>Control+<a href="keyEquiv_en.html#bs1">Equals</a>: Displays the list of open tabs in a menu that lets you select the chosen tab;  </li>
+</ul>
+<p><a name="tags"></p>
+<h3>Adding And Removing Priority Tags: Shift+ digit On The Alphanumeric Keyboard</h3>
+<p>This feature allows you to mark a message as important or to do, for instance. Next, the quick filter bar will display only messages with one or more tags. For example, only important messages in the message list are shown;</p>
+<p>To verify which tags are already placed on a message, press Alt+0 on the alphanumeric keyboard. </p>
+<p>To add or remove a tag, press Shift+ number 1 to 9; </p>
+<p><a name="qfb"></p>
+<h3>Quick Filter Bar (Letter F Or Control+Shift+K)</h3>
+<ul>
+<li>letter F or Control+Shift+K: Displays the message quick filter bar in the current folder.</li>
+<li>Keyword filtering: Enter a keyword and press Tab to scroll through the filtered list using the arrow keys;</li>
+<li>
+<p>The down arrow key from the keyword edit box gives you access to the following options list: </p>
+<ul>
+<li>1: Keep filters when changing folders? c</li>
+<li>2: Show only unread messages u</li>
+<li>3: Show only tracked messages s</li>
+<li>4: Show only messages from persons listed in my address book d</li>
+<li>5: Show only messages with tags t</li>
+<li>6 : Show only messages with attachments a</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>
+<p>Press Enter to enable or disable one or several of the mentioned criteria;</p>
+</li>
+<li>Alt+End or Alt+<a href="keyEquiv_en.html#bs1">Equals</a>: Allows you to hear a summary of active filters and the number of filtered messages. These two shortcuts also work within the message list, not just within the quick filter bar;</li>
+<li>When a quick filter is active, a WAV audio file is played when the list or tab to which it belongs is focused. The sound resembles a breath;</li>
+<li>The file filter.wav is located in the folder:
+"%appdata%\NVDA\TB+sounds"
+You can place a sound to your liking as long as your file is called: filter.wav. After this file change, NVDA must be restarted; </li>
+</ul>
+<p><a name="tagFilter"></p>
+<h4>Filtering By Tag</h4>
+<p>When the focus is placed on the edit field of the Quick Filter bar:</p>
+<ul>
+<li>Press Down Arrow until you hear "tags" and press Enter to check this option;</li>
+<li>Press the Tab key at that point to move to the drop-down list of tag filtering modes. For example, if you choose "to do", only messages tagged "to do" will be listed in the message table; </li>
+</ul>
+<p><a name="colLayout"></p>
+<h3>Column Layout (Alt+c)</h3>
+<p>The shortcut Alt+c displays a dialog that lets you change the order of the columns in the message list, but also add or remove columns.</p>
+<p>To use it, first go to the message list or folder tree view and press Alt+c;</p>
+<p>The column layout dialog appears. It consists of the list of columns as well as the "Help", "Columns" and "Close" buttons.</p>
+<p>The "columns..." button     displays Thunderbird's native "Choose Columns to Display" menu  </p>
+<p>When you are in the column list, the following keyboard shortcuts are available:</p>
+<ul>
+<li>Left arrow: Displays the checkbox menu called "Choose columns to display". This shortcut corresponds to the "Columns..." button;</li>
+<li>Space: To move the selected column, press Space, go to another column and press Space again to place the column there. This is similar to a cut and paste operation;</li>
+</ul>
+<p>You can also use the following direct movement shortcuts:</p>
+<ul>
+<li>Control+Up or Control+Down Arrow: Moves the selected column up or down one step;</li>
+<li>Control+Home or Control+End: Moves the selected column to the top or bottom of the list;</li>
+<li>Control+Page up or Control+Page down: Moves the selected column up or down three steps;</li>
+</ul>
+<p>To perform such moves, the columns are actually displaced by drag and drop with the mouse. A one-millisecond beep is heard every 10 pointer movements;</p>
+<p>When the "Choose the columns to display" menu is present, you can use the following keyboard shortcuts:</p>
+<ul>
+<li>Right arrow: Displays the column layout dialog;</li>
+<li>Space: Checks or unchecks the selected column in the menu. The Enter key performs the same action;</li>
+</ul>
+<p>With the left and right arrows, it is therefore very easy to switch between the menu for choosing columns and the column layout dialog;</p>
+<p><a name="smartReply"></p>
+<h3>SmartReply: Reply To All Mailing Lists By Pressing Control+r</h3>
+<p>If you're one of those who forget to press Control+Shift+l to reply to a mailing list like GoogleGroups, this feature will save you from privately replying to the sender of a message without realizing it. </p>
+<p>You can always press Control+r as follows:</p>
+<ul>
+<li>Through a single keystroke: in order to reply to the list;</li>
+<li>Through a double keystroke: in order to reply privately to the sender of the message;</li>
+<li>Through a single keystroke to reply to the sender of a message which does not come from a list.</li>
+</ul>
+<p>Notes: </p>
+<p>The use of single or double keystrokes is possible with GoogleGroups, Framalistes and FreeLists.</p>
+<p>When using a single keystroke, with one of these three mailing lists, you will hear "to the list" before the write message window opens. </p>
+<p>You should also not use the "Reply All" command to reply to a list so that the sender does not receive your reply privately; </p>
+<p>And finally, if you want to return to the usual Control+r function:</p>
+<ul>
+<li>Press Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a> to display the Options menu;</li>
+<li>Select "Deactivations for Chichi and for Thunderbird+ sub-Menu";</li>
+<li>Press Enter to uncheck "Message list: no SmartReply";</li>
+</ul>
+<h3>Hotkeys A, J, M Spoken</h3>
+<ul>
+<li>a: Archives the selected message, announcing this. Press Control+z to cancel the operation;</li>
+<li>j : marks the message as spam, announcing this;</li>
+<li>Shift+j : marks the message as acceptable, announcing this;</li>
+<li>m : Marks selected messages as unread. Shift+m marks them as read; </li>
+</ul>
+<p><a name="folderTree"></p>
+<h2>Folder Tree view</h2>
+<p><a name="unreadFolders"></p>
+<h3>Quick Navigation Of Folders Containing Unread Messages (Alt+Down Arrow, Alt+Up Arrow)</h3>
+<p>When in the folder tree view, you can press:</p>
+<ul>
+<li>Alt+down arrow: to go to the next folder with unread messages;</li>
+<li>Alt+up arrow: to go to the previous folder with unread messages;</li>
+<li>Space, Chichi not installed: If the selected folder contains unread messages, selects the first unread message in the list;</li>
+<li>Space, Chichi installed: same function except that If the folder contains no unread messages, Chichi will display the list of unread folders.
+By pressing Enter on an unread folder in this list, the first unread message in that folder will be activated in the message list; <br>
+This lets you quickly know which folders have received messages before deciding which one you wish to start reading first. ;<br></li>
+</ul>
+<p>While on this matter, see also the two dialogs below:</p>
+<ul>
+<li>Filtered Lists dialog of account and folders (F12) </li>
+<li>List of folders in the main tree view, based on 4 types (F7, NVDA+F7 or Shift+F12)</li>
+</ul>
+<p>Note: When there is a large number of folders, Chichi operates instantaneously, unlike these two dialogs; </p>
+<p><a name="folderDlg"></p>
+<h3>Filtered Lists Dialog Of Account And Folders (F12)</h3>
+<p>This dialog displays the accounts and their associated folders in two separate lists. You can filter them on the base of a keyword or restrict the folder list to those containing unread messages.</p>
+<p>Setting the default view mode:</p>
+<p>If you plan to display most of the time folders containing only unread messages, first go to the folder tree view or the message list, then use the shortcut Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a>. In the main window options submenu, choose the item entitled: Show only folders containing unread messages.</p>
+<p>Basic use of the dialog:</p>
+<ul>
+<li>From within the main window, press F12 to display the dialog. </li>
+<li>If you have set the default view to folders containing unread messages, they will show in the list named: Account Folders;</li>
+<li>Otherwise, all folders of all accounts will be included in this list;</li>
+<li>You can move through this list by pressing the first letter of a folder name;</li>
+<li>Note that folders that are not displayed in the tree view will not be included here either. This occurs, for example, when folders belong to a collapsed account in the Accounts and Folders tree view;</li>
+<li>If you have found the folder you are interested in at this point, press Enter on it to select it within the tree view. You can also press Alt+g to simulate a simple left-click on the folder or Alt+d to simulate a simple right-click;</li>
+</ul>
+<p>Toggling view modes:</p>
+<ul>
+<li>To recall at anytime which view mode you are in, press the Backspace key (backspace). After hearing the information, press this key again to return to the folder list;</li>
+<li>To toggle the view from "unread folders only" mode to "all folders" mode and vice versa, press F12;</li>
+<li>In the "all folders" mode, the accounts are displayed in the list on the left and the folders of the selected account in the list on the right. To move from one list to the other, use the left or right arrow;</li>
+<li>a virtual account called "All accounts" is selected and the focus is placed in the folder list which includes all the folders of all accounts. For each folder in this list, the account name to which the folder belongs is mentioned; </li>
+</ul>
+<p>Keyword filtering usage:</p>
+<ul>
+<li>Beforehand, you will most likely benefit from switching to "All folders" mode as explained above;</li>
+<li>Below, you can use either the "Page Up" or "Page Down" keys; </li>
+<li>From within a list, press the "Page Up" key to go up to the filter expression edit field;</li>
+<li>Enter an expression, then validate it using the "Page Down" key to start filtering;</li>
+<li>The results are displayed in the folder list. If no folder is found, you will hear: No results. If you weren't expecting this, you may have forgotten to switch to all folders view mode; </li>
+<li>Finally, press Enter on the desired folder to select it from the folder tree view. As mentioned before, you can simulate a left-click or right-click on the folder by pressing Alt+g or Alt+d; </li>
+</ul>
+<h4>Excluding Certain Folders From The List Of Folders Containing Unread Messages</h4>
+<p>As stated above, you can exclude seldom or never accessed folders from the list of folders containing unread messages.</p>
+<p>All you have to do is rename a folder to exclude by adding a hyphen to the end of its name.</p>
+<p>It is necessary to point out here that if the renamed folder is part of a message filter, Thunderbird will automatically modify this filter to reflect this change.</p>
+<p><a name="foldersList"></p>
+<h3>List Of Folders In The Main Tree view, Based On 4 Types (F7, NVDA+F7 Or Shift+F12)</h3>
+<p>When you are in the folder tree view or message list, this command displays a dialog with a folder list that can have the following four layouts: </p>
+<ul>
+<li>Containing only unread messages (flat list), Alt+n;</li>
+<li>All folders (flat list), Alt+t;</li>
+<li>Containing only unread messages (entire tree view), Alt+o;</li>
+<li>All folders (entire tree view), Alt+u;</li>
+</ul>
+<p>For folders containing unread messages, Drafts and Trash folders and folders with names ending with a hyphen are excluded from the list;</p>
+<p>To activate one of these types, you can press the associated keyboard shortcut or Shift+Tab and then use the arrow keys to toggle modes.</p>
+<p>The type chosen will be memorized and activated the next time this dialog is displayed;</p>
+<p>You can also filter the list by keyword. Press Tab or Alt+e to reach the edit box.</p>
+<p>Navigation in a flat list or tree view is done with the up or down arrows as well as by the initial of a folder name;</p>
+<p>To activate the selected folder in the main tree view, simply press Enter on it.</p>
+<p>Tip: If you were to press Enter on a folder containing unread messages, press Space to select the first unread message in the message table; </p>
+<p><br>
+Note:</p>
+<p>Keyboard shortcuts that display this dialog can be removed and another can be added via NVDA's Input Gestures setting dialog. Follow these steps:</p>
+<ul>
+<li>First, bring the Thunderbird window to the foreground;</li>
+<li>Open the NVDA menu and select "Preferences";</li>
+<li>In the submenu, press Enter on: "Input gestures";</li>
+<li>In the dialog that opens press the letter t until you reach: Thunderbird+;</li>
+<li>Press the right arrow to expand this branch;</li>
+<li>Scroll down to the item: "Display the folder list in the main Thunderbird tree view based on several types. Collapsed 2 of 4 level 1" and press right arrow to expand this level;</li>
+<li>Tab to the "Add" button, press space then press an input gesture in the new dialog;</li>
+<li>Press Enter to confirm your choice;</li>
+<li>Back in the gesture list, verify the presence of your new input gesture;</li>
+<li>Close the dialog with the OK button.</li>
+</ul>
+<p><a name="alerts"></p>
+<h2>Alerts Made Accessible</h2>
+<p>For alerts requiring your intervention, the buttons are accessible and navigating them can be done using the arrow keys:</p>
+<ul>
+<li>installation of add-ons for Thunderbird: the "Install" button is selected. Just press Enter on it to continue installing;</li>
+<li>New Thunderbird update: this alert is also accessible;</li>
+<li>Request a read receipt: this can be dismissed via an option in the Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a> / options menu for the main window;;</li>
+<li>Blocking remote content display in messages: the "Options" button is selected and the following sentence is added to the message: Tip: Open the View menu, scroll down to Message Body and press Enter on Simple HTML in the submenu. Once the proposed settings applied, this alert will show no longer;</li>
+</ul>
+<p>For alerts that interfere with message list browsing:</p>
+<ul>
+<li>Alert This is a draft: This useless alert is removed;</li>
+<li>Thunderbird thinks that this message is fraudulent: this announcement is replaced by two short tones of a frequency close to the human voice (200 Hertz). To mark the message acceptable or unwanted, press the <a href="keyEquiv_en.html#aboveTab">Grave</a> key and select the desired action from the "Alert" submenu;</li>
+</ul>
+<p><a name="tabs"></p>
+<h2>Keyboard Shortcuts for Tabs</h2>
+<p>Besides new commands, tabs are announced as in this example: Tab 1 of 4, Inbox</p>
+<ul>
+<li>Control+Tab and Control+Shift+Tab: goes to the next or previous tab;</li>
+<li>Control+a number: selects the tab corresponding to its order number in the tab bar. If you press a number greater than the number of open tabs, you will be placed on the last one;</li>
+<li>Control+<a href="keyEquiv_en.html#bs1">Equals</a>: displays the list of open tabs in a menu. Press Enter on a tab name to move to it; </li>
+<li>Alt+<a href="keyEquiv_en.html#bs1">Equals</a>: Opens the tab bar context menu. It mainly includes the commands: Close the active tab and Close my other tabs;  </li>
+<li>Control+w, Control+Bakspace or Control+F4: closes the active tab; </li>
+<li>Control+j: opens the "Saved files" tab which groups the attachments and downloads saved on your hard drive;</li>
+</ul>
+<p><a name="tabAddons"></p>
+<h2>The Add-ons Tab</h2>
+<p>This add-on makes it easy to find and install add-ons for Thunderbird.</p>
+<ul>
+<li>In the "Add-ons" tab, enter a module name and press Enter;</li>
+<li>The Thunderbird+ add-on will wait for the search results tab to open and then tries to select the first add-on found;</li>
+<li>More concretely, you can read the <a href="#stwInstall">Start With Inbox module installation</a> example;</li>
+</ul>
+<!-- Translators : fenêtre de rédaction = Write window -->
+<p><a name="writeWnd"></p>
+<h2>The Write Window</h2>
+<p>When the write window opens, nothing special is noticeable although the following keyboard shortcuts are available:</p>
+<ul>
+<li>Escape: closes the write window;</li>
+<li>Review of address fields: one press on Alt+a digit announces the header, two presses focus the corresponding input field:<br>
+Alt+1: Sender: one of your email addresses in your e-mail address list;<br>
+Alt+2 : to:<br>
+Alt+3: The attachment names. Two presses focus the list of attachments;<br>
+The other digits give access to optional headers such as: copy to, blind copy to and reply to;</li>
+<li><a href="keyEquiv_en.html#aboveTab">Grave</a>: in a message text: displays the following context menu: - Mail toolbar then, in the submenu: Send, Spelling, Attach, Security, Save.<br>
+Text formatting and then, in the submenu: (Styles of) Paragraph, Apply or remove bulleted list, Apply or remove numbered list, Fonts, Indents, insert link, image, anchor, horizontal line or table. </li>
+</ul>
+<p><br>
+Note: this menu is reached through one or two <a href="keyEquiv_en.html#aboveTab">Grave</a> key presses depending on the setting in the write window options menu obtained by pressing Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a> once or twice;</p>
+<p><a name="spellDlg"></p>
+<h3>Spell Check Dialog: F7</h3>
+<p>Keyboard shortcuts that limit hand movement have been added. When the focus is on the replacement word edit field, you can use the following keyboard shortcuts:</p>
+<ul>
+<li>Enter: Activates the "Replace" button;</li>
+<li>Shift+Enter: Activates the "Replace All" button;</li>
+<li>Control+Enter: Activates the "Ignore" button;</li>
+<li>Shift+Control+Enter: Activates the "Ignore All" button;</li>
+<li>Alt+Enter: Activates the "Add word to dictionary" button;</li>
+</ul>
+<p>To remember these combinations involving the Enter key, Control refers to the "Ignore" action and the presence of Shift indicates "all occurrences".</p>
+<p>Moreover, the Alt+up arrow shortcut spells words:</p>
+<ul>
+<li>1 press spells words at normal speed;</li>
+<li>2 presses spell words quickly;</li>
+<li>3 presses copy the misspelled word to the clipboard for analysis in another edit field;</li>
+</ul>
+<p><a name="virtspell"></p>
+<h2>Improved spell check mode while typing</h2>
+<!-- Translators: this section was translated by Google on version 4.7.1, may 08, 2023 -->
+
+<p>Note : this section was translated from French into English by Google ;</p>
+<p>Despite the spellings added to the spell check dialog, it is sometimes necessary to close the dialog to hear the context of the mistake in the text. This done, this dialog restarts the spell check from the beginning and stops again on the words that we had voluntarily ignored previously.</p>
+<p>Spellchecking while typing avoids these inconveniences but can distract the writer with "Misspelling" announcements.</p>
+<p>In order not to be distracted by spelling errors while typing, this checking mode has been improved by adding three keyboard shortcuts:</p>
+<p>Before activating them, it is necessary to switch to navigation mode by pressing: NVDA+space;</p>
+<ul>
+<li>w and -shift+w to go to the next and previous error respectively;</li>
+<li>NVDA+F7 to display the list of mispelled words. You just need to press enter on an mispelled word to jump to it in the text;</li>
+</ul>
+<p>This mode of operation allows you to disable NVDA announcing mispelled words ;</p>
+<p>Before using this improved mode of spell chech while typing, it is necessary to carry out a small configuration.</p>
+<h3>Preliminary configuration</h3>
+<p>1: In Thunderbird, Enable spell check while typing in Settings :</p>
+<ul>
+<li>In the main window, open the Options menu, go down to Settings and press Enter ;</li>
+<li>In the Settings  tab, tab to reach the options search field, enter the word "spell" then press Tab;</li>
+<li>In the results, tabulate then check the box entitled: "Enable spell check while typing";</li>
+<li>Finally close the Settings tab with Control+w or -ctrl+Backspace;</li>
+</ul>
+<p>2: Disable reporting of misspellings in NVDA
+This setting is optional. If you prefer to hear an announcement about a mispelled word, you can also shorten this announcement by replacing in your pronunciation dictionary "mispelled word" by "misp", for example;</p>
+<p>To disable this ad:</p>
+<ul>
+<li>Open the NVDA menu, Preferences then press Enter  on: Settings ;</li>
+<li>In the settings dialog, go to the "Document formatting" category;</li>
+<li>Tab until you hear: "Spelling errors" then press space to uncheck this option;</li>
+<li>Close the dialog by validating on the OK button;</li>
+</ul>
+<h3>Using w, -shift+w and NVDA+F7 hotkeys</h3>
+<ul>
+<li>Before using these hotkeys, you must first activate browse mode by pressing NVDA+space;</li>
+<li>Then press the letter w to go to the next error or -shift+w to go to the previous error or press NVDA+F7 to select the word to correct from a list;* When the faulty word is selected in the text, You can press the Applications key to display the contextual menu of replacement suggestions;</li>
+<li>You can also easily listen to the sentence that contains the faulty word before proceeding to correct it;</li>
+<li>To manually correct a word, first press NVDA+space to return to form mode;</li>
+</ul>
+<p><a name="menus"></p>
+<h2>Thunderbird+ Options And Commands Menus</h2>
+<p><a name="optMenu"></p>
+<h3>Options Menu (Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a>)</h3>
+<p>Main window options: </p>
+<ul>
+<li>Group multiple 'RE' mentions into one: for example, Re: Re: Re: will be changed to 3Re:;</li>
+<li>Remove 'RE' in the subject column s : </li>
+<li>Delete the colon in the 'RE' mentions: </li>
+<li>Clean up correspondents' names in the message list: remove numbers and some special characters to make listening to names of correspondents less tiresome;</li>
+<li>Add punctuation to columns: a comma is added to some columns to create a short pause between them when announcing a row in the message list;</li>
+<li>Hide mailing list names: Removes the announcement of mailing list names in brackets or braces for more enjoyable listening when using a different folder for each mailing list. Otherwise, the mailing list name is announced only once if it appears several times in the subject line of a message; </li>
+<li>Edit the words to hide in message subjects: opens an edit box that lets you add or remove words not to be announced in the subject lines of messages. For example, add * so that <strong><em> Spam </em></strong> will be announced as Spam;</li>
+<li>Announce 'unwanted' if shown in the 'Unwanted status column: if the "unwanted status" column is present in the message table, this option may or may not be used to announce "Unwanted"; </li>
+<li>Pressing Space on a folder containing unread messages looks for the first unread message from the beginning of the message list: By default, the script for this option sends the "n" command to select the next unread message in the message list. Thunderbird does not always select the first unread message in the list. If this option is checked, the add-on will select the first unread message in the folder by making a detour that can be heard on some PCs;</li>
+<li>Do not use first-letter navigation in the folder tree view: this option is handy if you use the "Quick folder key navigation" add-on;</li>
+<li>Indirect initials navigation: Displays a folder name edit box as soon as you press a letter or number in the folder tree view. If this option is disabled, you can display this search box by pressing letter z; </li>
+<li>Ignore receipt requests: If enabled, the receipt request pane will be dismissed when a message is selected in the message list;   </li>
+<li>Do not emulate Shift+F6 with escape: disables the use of the escape key when navigating panels in the main window; </li>
+<li>Show only folders containing unread in the 'Tree view folders' dialog box a: displays only folders with unread messages each time you open this dialog via the F12 key;</li>
+<li>Separate reading window: do not read the message automatically if this blocks NVDA: By default, when you open a message by pressing Enter from the message list, an uncluttered reading of the message starts when the new window opens. On some computers, if the email account is set to IMAP, NVDA may crash. When this option is checked, the automatic reading is disabled to avoid blockage.  </li>
+</ul>
+<p>If you do experience a blockage when you open this window, you can extend the delay before Automatic reading starts. To do this, press Alt+d and type a different value. If you are unable to remove this blockage, then check this option; </p>
+<p><br>
+Options for the write window: </p>
+<ul>
+<li>Spell check: spell the misspelled word and suggested word: This option changes the announcements in the spell check dialog;</li>
+<li>Enable Spell Check enhancement while typing: The command for this setting does not yet work with NVDA 2022.1;</li>
+<li>The Escape key closes the message being composed;</li>
+<li>Single press to display the context menu, double press to write <a href="keyEquiv_en.html#aboveTab">Grave</a> or Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a> or their replacements: this option allows you to display the context menu by pressing the <a href="keyEquiv_en.html#aboveTab">Grave</a> key which will be more practical if you very rarely type the characters <a href="keyEquiv_en.html#aboveTab">Grave</a> and Shift+<a href="keyEquiv_en.html#aboveTab">Grave</a>;</li>
+</ul>
+<p><br>
+Update options:</p>
+<p>This option lets you disable Thunderbird+ automatic updates or re-enable them;</p>
+<p><br>
+Deactivations for Chichi and Thunderbird+:</p>
+<p>The main purpose of these options is to allow a good cohabitation between Thunderbird+ and Chichi by avoiding duplicate features. But you can use them without Chichi to suit your preferences;</p>
+<p>The term "folders" below refers to the folder tree view;</p>
+<ul>
+<li>Folders: Space does not select the next unread message in the list and does not display the list of unread folders d: Chichi does not yet have an autonomous equivalent feature;</li>
+<li>Folders: no navigation by initials d: by activating this option, Chichi will be used. This only works from top to bottom and does not announce the account name to which the activated folder belongs; </li>
+<li>List messages: Space does not read the message in the preview pane l: if you check this option, it is Chichi that will speak the message in the preview pane. Unlike Thunderbird+, this reading will not be uncluttered. On the other hand, F4 and Alt+down arrow will continue to use Thunderbird+ uncluttered reading; </li>
+<li>List messages: no SmartReply: disables the reply feature to a mailing list via Control+r on single press or to the sender via Control+r on double press;</li>
+<li>List messages: Do not handle the quick filter bar: Removes access to filtering options via down arrow;</li>
+<li>Main window: Tab does not move to the next pane: this option concerns navigation between the folder tree view, the message list and the message pane of headers;</li>
+<li>Main window: Reset the escape key to its default state. This particularly concerns the navigation between the panes mentioned above;</li>
+<li>Allow Thunderbird to be closed with Control+w or Control+F4: by checking this option, the forementioned two shortcuts close Thunderbird when only one tab is open. This behavior is embarrassing for some people;  </li>
+</ul>
+<p>Backing up and restoring settings:</p>
+<ul>
+<li>Back up the current configuration s: Copies the add-on's .ini file to a .inibak file.</li>
+<li>Restore Saved Configuration r: Copies the .inibak file to the .ini and reloads the settings;</li>
+<li>Reset Configuration r: Resets the add-on's default settings. Creates a backup beforehand if none already exists;</li>
+</ul>
+<p><a name="cmdMenu"></p>
+<h3>Commands Menu (<a href="keyEquiv_en.html#aboveTab">Grave</a>)</h3>
+<ul>
+<li>Choose and arrange columns from the message list: Displays the Thunderbird menu with check boxes called "Choose columns to display". When on a column name, press the right arrow to open the column layout dialog;</li>
+<li>Write to the support: in French or in English. This command opens a write window pre-addressed to the add-on's support. This only works if Thunderbird is properly set as your default email client;</li>
+</ul>
+<p><a name="startup"></p>
+<h2>Enhanced Thunderbird startup</h2>
+<p>Natively, after Thunderbird's last closes, it launches on the last active tab and without activating anything, which is rather unpleasant.</p>
+<p>To get a comfortable start, there are two add-ons that install directly on Thunderbird:</p>
+<ul>
+<li>Chichi, developed by Yannick: this add-on is recommended because it offers many other accessibility features and ThunderbirdPlus is designed to interact with it;</li>
+<li>Start with inbox: if you don't use Chichi, this module does a good job; </li>
+</ul>
+<p><a name="chichi"></p>
+<h3>With Chichi</h3>
+<p>To use Chichi, read the Download and Installation section together with the Set the Startup Folder section of the <a href="https://www.rptools.org/Outils-DV/thunderbird-chichi-en.html">Chichi WebPage</a>;</p>
+<p><a name="stwi"></p>
+<h3>With Start with inbox</h3>
+<p>As of October 2022, the latest version of this Thunderbird 102 add-on was 2.5.2.</p>
+<p>Characteristics:</p>
+<ul>
+<li>Installation: via a search by its name in the "Add-ons" tab of Thunderbird; </li>
+<li>Startup folder: always the same, either the inbox folder of the account chosen in the add-on settings or the unified folder;</li>
+<li>Auto-focus: on the last message in the message list or on the "Inbox" folder in the tree view, depending on the setting in the add-on options. The second option is selected by default; </li>
+<li>Settings: Less easy access. Go to the Add-ons tab, select "Start with inbox" in the list of installed add-ons then press enter on the "Add-on Options" button. This will open a new tab "Settings Start with inbox";  </li>
+</ul>
+<p>A drop-down list allows you to choose the email account for which the inbox folder will be selected when Thunderbird starts;  </p>
+<p>Three radio buttons will allow you to choose between focusing the last message, the first unread message in the message list or the folder in the tree view;</p>
+<p><a name="stwInstall"></p>
+<p>Installation:</p>
+<ul>
+<li>In Thunderbird, open the "Tools" menu and press Enter on: Add-ons and themes;</li>
+<li>In the Add-on Manager page, go to the search field. In browse mode, you can press letter e to reach it quickly;</li>
+<li>Write: Start with Inbox and press Enter;</li>
+<li>If you have Thunderbird+, wait a moment for it to select the add-on you are looking for in the results tab;</li>
+<li>Otherwise, manually select the tab "Start with inbox:: Search:: Add-ons for Thunderbird", for instance. Next, press 3 until you reach the level 3 heading which bears the name of the add-on you have searched for; </li>
+<li>Using the down arrow, scroll down to the link "Add to Thunderbird" and press Enter on it;</li>
+<li>Follow the procedure then restart Thunderbird;</li>
+<li>If all went well, Thunderbird will open on the main tab and focus the message list;</li>
+</ul>
+<p>Set Start with Inbox options:</p>
+<ul>
+<li>Return to the "Add-ons Manager" tab;</li>
+<li>If necessary, leave the search field to be in browse mode;</li>
+<li>Press 3 as many times as required to reach the level 3 heading titled "Start with Inbox in the list of installed add-ons;</li>
+<li>Next, activate the button: Add-on Options. This opens a new tab titled: Start with Inbox, Settings;</li>
+<li>Here's what is displayed by default:</li>
+</ul>
+<!-- En anglais : -->
+
+<p>Start with Inbox - Settings </p>
+<p>Please select the account for which its inbox shall be displayed after start of Thunderbird. </p>
+<p>Drop-down list: \&lt;your first email account&gt;</p>
+<p>Select and put the focus on:</p>
+<p>clickable radio button not checked: the latest* message.</p>
+<p>Clickable radio button not checked the inbox folder in the folder tree view.
+radio button checked: the first unread message.</p>
+<ul>
+<li>Definition of "latest": The last message that was put into the inbox (independent from the date of the message).</li>
+</ul>
+<p>If the inbox contains no messages, the inbox folder in the folder tree will be selected and focused.</p>
+<!-- Translators: for other languages, translate the sentences above into your language like the French tanslation below.
+
+Interprétation en français : 
+
+Start with Inbox - Réglages  ;
+
+Sélectionnez le compte dont  le dossier Courrier entrant  sera affiché au démarrage de Thunderbird ; 
+
+liste déroulante : \<votre premier compte de messagerie\>
+
+Sélectionner puis placer le focus sur :
+
+bouton radio   cliquable non coché :Le dernier message de la liste ;
+
+bouton radio non coché cliquable Le dossier Courrier entrant dans l'arborescence des dossiers ;
+
+bouton radio coché : Le premier message non lu de la liste ;
+-->
+
+<p>If the Inbox folder contains no messages, this folder will gain focus in the folder tree view; </p>
+<p><br>
+When you have defined your settings, restart Thunderbird.</p>
+<p><br>
+Built-in Thunderbird launcher via AltGr+<a href="keyEquiv_en.html#aboveTab">Grave</a>:</p>
+<p>For convenience and speed, you can launch Thunderbird by pressing AltGr+<a href="keyEquiv_en.html#aboveTab">Grave</a>. </p>
+<p>This shortcut is configurable via NVDA's input gesture manager which offers greater freedom to choose modifier keys than Windows shortcuts, limited to AltGr;</p>
+<p>Follow these steps to add another input gesture:</p>
+<ul>
+<li>First, bring the Thunderbird window to the foreground;</li>
+<li>Open the NVDA menu and select "Preferences";</li>
+<li>In the submenu, press Enter on: "Input gestures";</li>
+<li>In the dialog that opens press the letter t until you reach: "Thunderbird, Launcher";</li>
+<li>Press the right arrow to expand this branch;</li>
+<li>Scroll down to the item: "Starts Thunderbird" then press right arrow to expand this level;</li>
+<li>Tab to the "Add" button, press space then press an input gesture in the new dialog;</li>
+<li>Press Enter to confirm your choice;</li>
+<li>Back in the gesture list, verify the presence of your new input gesture;</li>
+<li>Close the dialog with the OK button.</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>The Thunderbird launcher is only intended for the Thunderbird installed version of which Thunderbird.exe paths are predictable. </li>
+<li>In a 64-bit Windows architecture, this add-on will not launch the 32-bit version of Thunderbird if both 64-bit and 32-bit versions are installed on your system; </li>
+</ul>
+<!-- links section -->
+</body>
+</html>

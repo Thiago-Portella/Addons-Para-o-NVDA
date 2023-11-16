@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Thunderbird+ 4.9</title>
+</head>
+<body>
+<h1>Thunderbird+</h1>
+<ul>
+<li>Autoři: Pierre-Louis Renaud (od Thunderbirdu 78 do 102) &amp; Cyrille Bougot (TB 102), Daniel Poiraud (od TB 78 do 91), Yannick (TB 45 až 60);</li>
+<li>URL: <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_cs.html#navpanels">Uživatelská příručka</a> ;
+  <a href="https://www.rptools.org/NVDA-Thunderbird/changes.php?lg=cs">Historie změn na RPTools.org</a> ;
+  <a href="https://www.rptools.org/NVDA-Thunderbird/toContact.html">Kontakt ve francouzštině nebo angličtině</a> ;</li>
+<li>Stáhnout <a href="https://www.nvaccess.org/addonStore/legacy?file=thunderbirdPlus">stabilní verze</a></li>
+<li>Stáhnout <a href="https://www.rptools.org/?p=8610">Nejnovější verze z RPTools.org</a> ;</li>
+<li>Kompatibilita s NVDA: 2019.3 a novější;</li>
+<li>Kompatibilita Thunderbird: verze 102.x;</li>
+<li><a href="https://github.com/RPTools-org/ThunderbirdPlus/">Zdrojový kód na gitHub</a></li>
+</ul>
+<p>Poznámka: Tento doplněk není kompatibilní s doplňkem Mozilla Apps Enhancements. Pokud je nainstalován druhý, budete jej muset před instalací Thunderbird+ deaktivovat nebo odinstalovat;</p>
+<!-- [Přejít na obsah](#toc) -->
+
+<h2>Popis</h2>
+<p>Tento doplněk výrazně zlepšuje pohodlí a efektivní použití klienta pro zasílání zpráv Mozilla Thunderbird s NVDA.</p>
+<p>Vylepšení se týkají následujících aspektů:</p>
+<h3>Sluchový komfort</h3>
+<ul>
+<li>Upozornění jako „tak a tak si vyžádali potvrzení o vrácení“ lze deaktivovat pomocí volby;</li>
+<li>Upozornění „Toto je koncept“ a „Thunderbird si myslí, že tato zpráva je podvodná“ jsou jednoduše v tichosti zamítnuta;</li>
+<li>Možnosti vám umožňují zakázat oznamování jmen e-mailových konferencí, odstranit nebo seskupit zmínky „RE“ a vyčistit jména korespondentů odstraněním čísel a dalších nepříjemných speciálních znaků;</li>
+</ul>
+<h3>Navigace v hlavním okně</h3>
+<ul>
+<li>Přesun na další panel se provádí pomocí klávesy TAB, zatímco klávesa Escape se vrátí na předchozí panel. To je pohodlnější než pomocí F6 a Shift+F6.</li>
+<li>Výběr karet pomocí Ctrl+Tab a Ctrl+číslo se vyslovuje jako v tomto příkladu: Karta 1 ze 4, doručená pošta;</li>
+<li>Klávesová zkratka vám umožňuje zobrazit seznam karet v nabídce, abyste mohli jednu z nich snadno aktivovat;</li>
+<li>Klávesová zkratka se používá k zobrazení kontextové nabídky panelu záložek;</li>
+</ul>
+<h3>Zobrazení stromu složek</h3>
+<ul>
+<li>Alt+šipka dolů a Alt+šipka nahoru umožňují navigaci mezi složkami obsahujícími nepřečtené zprávy;</li>
+<li>Zadáním písmene nebo čísla vyberete další složku, jejíž název začíná tímto znakem. Pomocí klávesy Shift se pohyb provádí zdola nahoru. Kromě toho je oznámen název účtu, ke kterému složka patří;</li>
+<li>Stisknutím mezerníku na složce obsahující nepřečtené zprávy vyberete první nepřečtenou zprávu ze seznamu zpráv;</li>
+<li>Dva dialogy pro účty a jejich přidružené složky umožňují filtrovat je podle klíčových slov nebo zobrazovat pouze složky s nepřečtenými zprávami;</li>
+</ul>
+<h3>Seznam zpráv</h3>
+<ul>
+<li>Výběr sloupců a jejich rozložení v seznamu zpráv je zpřístupněn prostřednictvím jednoduchého dialogu;</li>
+<li>Zobrazení sloupců seznamu zpráv: klávesové zkratky vám umožňují snadno poslouchat, hláskovat nebo kopírovat jméno odesílatele, předmět zprávy nebo její datum zadáním číslice na alfanumerické klávesnici. Například jediné stisknutí tlačítka 1 nebo &amp; oznámí odesílatele, dvě stisknutí vyhláskují jméno a tři stisknutí jej zkopírují do schránky;* Zobrazení záhlaví v podokně záhlaví zobrazeného pomocí F8: s Alt + číslice, 1 stisknutí oznámí jakékoli záhlaví obsahující adresy odesílatele nebo příjemce, 2 stisknutí otevře dialog pro jejich zkopírování, 3 stisknutí otevře nativní kontextovou nabídku Thunderbirdu spojenou se záhlavím ;</li>
+<li>Vyčištěný rychlý náhled textu zprávy pomocí mezerníku, Alt+šipka dolů nebo F4: Velké bloky záhlaví v uvozovkách zprávy jsou nahrazeny frází „Jméno odesílatele napsal“. NVDA také oznámí "klikací odkaz" místo dlouhé adresy odkazu.</li>
+<li>Rychlý přehled citací v chronologickém pořadí zdola nahoru pomocí Shift+Mezerník, Alt+šipka nahoru nebo Shift+F4;</li>
+<li>Snadný přístup k přílohám pomocí zkratky Alt+page down nebo pomocí čísla 1 na alfanumerické klávesnici;</li>
+</ul>
+<!-- Překladatelé : étiquettes = tags -->
+<h3>Panel rychlého filtru a správa prioritních značek</h3>
+<ul>
+<li>Možnosti filtrování je možné procházet svislými šipkami. Klávesa Enter se používá ke kontrole nebo zrušení zaškrtnutí filtru;</li>
+<li>Přidání nebo odebrání štítků se provádí pouhým stisknutím Shift+ číslice na alfanumerické klávesnici. Například stisknutím Shift+4 přidáte ke zprávě značku „To Do“. Poté můžete filtrovat seznam zpráv podle značky pomocí lišty rychlého filtru, která je tedy přístupná;</li>
+</ul>
+<h3>Okno pro psaní zpráv</h3>
+<p>Alt+1 oznámí odesílatele, Alt+2 oznámí příjemce, Alt+3 oznámí přílohy atd. Dvě stisknutí umístí fokus na jedno z těchto polí;</p>
+<h3>Dialog pro kontrolu pravopisu</h3>
+<ul>
+<li>Chybně napsané slovo je oznámeno s pravopisem nebo bez něj před navrhovaným slovem. Klávesové zkratky NVDA+Tab nebo Alt+šipka nahoru oznamují chybně napsaná slova a nahrazují je: 1 stisknutí hláskuje slova normální rychlostí, 2 stisknutí je vyhláskuje rychle, 3 stisknutí zkopíruje špatně napsané slovo do schránky pro analýzu v jiném editačním poli;</li>
+<li>Různé kombinace zahrnující klávesu Enter spouštějí tlačítka Nahradit, Nahradit vše, Ignorovat, Ignorovat vše nebo Přidat slovo do slovníku pro ještě větší pohodlí v tomto dialogu;</li>
+</ul>
+<h3>Automatická aktualizace</h3>
+<p>ThunderbirdPlus obsahuje nezávislý systém automatických aktualizací s funkcemi deaktivace/reaktivace a odložení;</p>
+<h3>Operace ze strany na stranu s Chichi</h3>
+<p>ThunderbirdPlus je navržen tak, aby bezproblémově spolupracoval s Chichi, doplňkem, který se instaluje přímo do Thunderbirdu.</p>
+<p>Přečtěte si o tom na <a href="https://www.rptools.org/Outils-DV/thunderbird-chichi-en.html">stránce Chichi</a> ;</p>
+<h3>Poznámka o jazycích</h3>
+<p>Některé funkce nebudou správně fungovat, pokud ThunderbirdPlus nebude přeložen do jazyka, který používáte s NVDA a Thunderbirdem.</p>
+<ul>
+<li>Upozornění nebudou zachycena. Jedná se o upozornění týkající se konceptů, žádosti o potvrzení, podvodné zprávy, aktualizace atd.;</li>
+<li>Funkce vylepšení vyhledávání doplňku Thunderbird nebude fungovat.</li>
+</ul>
+<p>K dnešnímu dni je doplněk dostupný v následujících jazycích:</p>
+<p><a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_fr.html">Původní verze ve francouzštině</a> : napsáno vývojářem;</p>
+<p>Překlady od nejstaršího k nejnovějšímu pořadí:* <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_pt_PT.html">portugalština</a>: Rui Fontes z TifloTecnia.com a člen portugalského týmu NVDA;
+* <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_es.html">španělština</a>: od Rémyho Ruize;
+* <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_en.html">anglicky</a>: Bachir Benanou, bývalý člen francouzského překladatelského týmu NVDA;
+* <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_tr.html">turečtina</a>: od umut korkmaz;
+* <a href="https://www.rptools.org/NVDA-Thunderbird/ThunderbirdPlus_it.html">italsky</a>: od Leonarda Marendy;</p>
+<p>Děkuji, překladatelé.</p>
+<p><a name="navpanels"></p>
+<h2>Procházení panelů karty Zpráva (Tab, Escape)</h2>
+<p>Týká se to záložky obsahující tyto panely: zobrazení stromu složek, seznam zpráv, podokno záhlaví a náhled zprávy (zobrazené nebo skryté klávesou F8).</p>
+<ul>
+<li>TAB: Přesun na další panel. Tato zkratka bude pro některé lidi ergonomičtější než F6;</li>
+<li>Escape: Vrátí se na předchozí panel. Ekvivalent Shift+F6;</li>
+</ul>
+<p>Poznámka:</p>
+<p>Při přechodu na text tabulátorem ze seznamu zpráv je oblast záhlaví přeskočena. Chcete-li se dostat do této oblasti záhlaví, stiskněte třikrát rychle Alt+jedna číslice na alfanumerické klávesnici a poté stisknutím klávesy Escape opusťte kontextovou nabídku záhlaví. Tyto zkratky Alt+číslice snižují potřebu přejít do oblasti záhlaví. Další podrobnosti naleznete v části „Zobrazení záhlaví“ níže.</p>
+<p><a name="threadTree"></p>
+<h2>Seznam zpráv, podokno náhledu a samostatné okno pro čtení</h2>
+<p>Některé z následujících zkratek jsou společné pro tyto tři kontexty, jiné se týkají konkrétního kontextu.</p>
+<p><a name="attach"></p>
+<h3>Přístup k přílohám (Alt+Page down)</h3>
+<ul>
+<li>Alt+stránka dolů nebo Alt+p: pokud je zobrazeno podokno náhledu (pomocí F8), otevře seznam příloh pro vybranou zprávu;</li>
+<li>Alt+9 nebo číslo 1 nebo 2: pouze ze seznamu zpráv, jedno stisknutí udává počet příloh, dvě stisknutí otevře seznam příloh;</li>
+</ul>
+<p><a name="readPreview"></p>
+<h3>Rychlé a přehledné čtení zpráv</h3>
+<ul>
+<li>Příkazy pro rychlé čtení zpráv jsou dostupné ve třech kontextech: ze seznamu zpráv, ze zprávy otevřené na kartě nebo ze zprávy otevřené v samostatném okně;</li>
+<li>Všechny jsou nyní kompatibilní se zprávami od Framalistes;</li>
+<li>Většina klávesových zkratek pro rychlé čtení byla soustředěna tak, aby minimalizovaly pohyby rukou během relace čtení mnoha zpráv;</li>
+<li>Jediným stisknutím hlavní klávesy zkratky spustíte přehledné čtení zprávy, tedy se silně zkrácenými hlavičkami uvozovek.</li>
+<li>Dvojité stisknutí spustí čtení zprávy v původní podobě. Termíny "nefiltrované čtení" jsou synonyma;</li>
+</ul>
+<p><a name="readFromList"></p>
+<h4>Rychlé čtení zpráv ze seznamu bez opuštění (mezerník, F4 nebo Alt+šipka dolů)</h4>
+<p>Chcete-li využít této funkce, budete muset nejprve zobrazit podokno čtení zpráv pomocí klávesy F8. Stisknutím tohoto tlačítka uslyšíte, zda je tento panel přítomen nebo nepřítomný;</p>
+<p>Další,přejděte do seznamu zpráv a použijte následující klávesy:</p>
+<ul>
+<li>Mezerník, Alt+šipka dolů nebo F4: Přečte tělo zprávy bez opuštění seznamu. Po přečtení zprávy stiskněte šipku dolů a poté mezerník nebo Alt+šipka dolů nebo F4, abyste si poslechli další zprávu;</li>
+<li>Dvojité stisknutí klávesy zobrazí seznam odkazů ve zprávě, pokud je Chichi aktivní. Pokud je vybrán článek RSS kanálu, otevře se v internetovém prohlížeči;</li>
+<li>Shift+mezera, Alt+šipka nahoru nebo Shift+f4: stejná funkce kromě čtení uvozovek v jejich chronologickém pořadí (zdola nahoru);</li>
+</ul>
+<p>A abychom dokončili příkazy dostupné ze seznamu zpráv, zmiňme se zde:</p>
+<ul>
+<li>Písmeno n nebo Alt+šipka vpravo: vybere další nepřečtenou zprávu, a to i ve složkách;</li>
+<li>Alt+Page down nebo Alt+p ze seznamu zpráv: umožňuje přejít přímo do oblasti příloh bez procházení textu;</li>
+</ul>
+<p><a name="readFromWinTab"></p>
+<h3>Rychlé čtení zpráv v samostatném okně nebo kartě zprávy (F4 nebo Alt+šipka dolů)</h3>
+<p>Při otevření zprávy v novém okně se tělo zprávy ve výchozím nastavení přečte automaticky. Následující klávesové zkratky vám však umožňují kdykoli znovu slyšet zprávu.</p>
+<ul>
+<li>F4 nebo Alt+šipka dolů: rychlé čtení těla zprávy;</li>
+<li>Shift+F4 nebo Alt+šipka nahoru: stejná funkce, ale obráceně;</li>
+</ul>
+<p>Poznámky:</p>
+<ul>
+<li>Pro připomenutí, dvojitým stisknutím těchto zkratek spustíte čtení původní zprávy;</li>
+<li>Automatické čtení může způsobit selhání NVDA na některých počítačích, zvláště pokud je účet nastaven na IMAP. Chcete-li se pokusit tento problém vyřešit, zkratka Alt+d otevře editační pole, které vám umožní prodloužit prodlevu mezi otevřením okna a spuštěním automatického čtení <br>
+Pokud nastavení tohoto zpoždění problém nevyřeší, můžete zakázat automatické čtení pomocí nabídky Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a> / Možnosti pro hlavní okno / samostatné okno pro čtení: nečíst zprávu automaticky, pokud to způsobí NVDA blokády;</li>
+<li>Chcete-li co nejlépe využít přehledné čtení a chránit se před vzdáleným obsahem, který nerespektuje vaše soukromí, zobrazujte tělo zpráv v jednoduchém HTML. Chcete-li to provést, otevřete nabídku Zobrazit, přejděte dolů na Tělo zprávy a v podnabídce vyberte možnost Jednoduché HTML.</li>
+</ul>
+<p>Zobrazení sloupců a záhlaví:</p>
+<p>Zde je důležité rozlišovat mezi sloupci a záhlavími: slovo "sloupec" se níže používá k označení hodnoty buňky řádku v tabulce zpráv. Slovo "záhlaví" odkazuje na samotnou zprávu. Záhlaví lze zobrazit jak v podokně náhledu zprávy, tak na samostatné kartě nebo okně otevřené zprávy;</p>
+<p><a name="readCols"></p>
+<h3>Zobrazení sloupců: jedna číslice na alfanumerické klávesnici</h3>
+<p>Tyto klíče jsou určeny pouze pro sloupce v seznamu zpráv. Zadejte číslo na alfanumerické klávesnici bez stisknutí klávesy Shift:</p>
+<ul>
+<li>Jedno stisknutí čísla: uvádí název a hodnotu odpovídajícího sloupce;</li>
+<li>Dvě stisknutí čísla: vyhláskuje hodnotu odpovídajícího sloupce;</li>
+<li>Tři rychlá stisknutí čísla: zkopíruje hodnotu sloupce do schránky.Chcete-li zkopírovat adresy různých odesílatelů a příjemců, použijte postup čtení záhlaví popsaný níže;</li>
+</ul>
+<p><a name="readHeaders"></p>
+<h3>Čtení záhlaví: Alt+jedna číslice na alfanumerické klávesnici</h3>
+<p>Následující zkratky lze použít z hlavního okna, pokud je zobrazen panel náhledu (pomocí F8) a ze samostatné karty nebo okna otevřené zprávy. Jedno klepnutí přečte záhlaví a dvě klepnutí zobrazí kontextovou nabídku podle potřeby;</p>
+<ul>
+<li>Alt+1: jedno stisknutí oznámí jméno odesílatele a jeho e-mailovou adresu, dvě stisknutí otevře editační pole těchto hodnot. Můžete je upravit a stisknutím klávesy Enter je zkopírovat do schránky. Tři stisknutí: otevře kontextovou nabídku záhlaví;</li>
+<li>Alt+2: Předmět s názvem konference, pokud existuje;</li>
+<li>Alt+3: datum zprávy;</li>
+<li>Alt+4 pro: hlavní příjemce zprávy. Pokud je několik příjemců, třemi stisky se zaměří na prvního příjemce a poté se karta přesune na dalšího. Tlačítko Aplikace u každého příjemce zobrazí kontextovou nabídku;</li>
+<li>Alt+5: Kopírovat příjemce;</li>
+<li>Alt+6: Příjemci slepé kopie;</li>
+<li>Alt+7: adresa "odpovědět";</li>
+<li>Alt+8: Uživatelský agent, pokud jsou povolena úplná záhlaví prostřednictvím nabídky Zobrazit / záhlaví / úplná;</li>
+<li>Alt+9: 1 stisknutí oznámí počet příloh, 2 stisknutí otevře seznam příloh;</li>
+<li>Alt+0: Seznam prioritních značek umístěných ve zprávě;</li>
+<li>Alt+<a href="keyEquiv_cs.html#bs2">Minus</a> nebo Alt+End: Poskytuje zkrácenou verzi stavového řádku: počet nepřečtených zpráv, celkový počet zpráv a výraz rychlého filtru;</li>
+<li>Alt+<a href="keyEquiv_cs.html#bs1"></a>: Otevře kontextovou nabídku karet;</li>
+<li>Control+<a href="keyEquiv_cs.html#bs1">přízvuk-akutní</a>: Zobrazí seznam otevřených karet v nabídce, která vám umožní vybrat vybranou kartu;</li>
+</ul>
+<p><a name="tags"></p>
+<h3>Přidávání a odebírání prioritních značek: Shift+ číslice na alfanumerické klávesnici</h3>
+<p>Tato funkce vám umožňuje například označit zprávu jako důležitou nebo jako úkol. Dále se na liště rychlého filtru zobrazí pouze zprávy s jednou nebo více značkami. Například jsou zobrazeny pouze důležité zprávy v seznamu zpráv;</p>
+<p>Chcete-li ověřit, které značky jsou již ve zprávě umístěny, stiskněte Alt+0 na alfanumerické klávesnici.</p>
+<p>Chcete-li přidat nebo odebrat značku, stiskněte Shift+ číslo 1 až 9;</p>
+<p><a name="qfb"></p>
+<h3>Panel rychlého filtru (písmeno F nebo Control+Shift+K)</h3>
+<ul>
+<li>písmeno F nebo Control+Shift+K: Zobrazí panel rychlého filtrování zpráv v aktuální složce.</li>
+<li>Filtrování klíčových slov: Zadejte klíčové slovo a stisknutím klávesy Tab procházejte filtrovaným seznamem pomocí kláves se šipkami;</li>
+<li>
+<p>Klávesa se šipkou dolů v poli pro úpravu klíčového slova vám umožňuje přístup k následujícímu seznamu možností:</p>
+<ul>
+<li>1: Ponechat filtry při změně složek? C</li>
+<li>2: Zobrazit pouze nepřečtené zprávy u</li>
+<li>3: Zobrazit pouze sledované zprávy s</li>
+<li>4: Zobrazit pouze zprávy od osob uvedených v mém adresáři d</li>
+<li>5: Zobrazit pouze zprávy se štítky t</li>
+<li>6 : Zobrazit pouze zprávy s přílohami a</li>
+<li>atd.</li>
+</ul>
+</li>
+<li>
+<p>Stisknutím klávesy Enter povolíte nebo zakážete jedno nebo několik z uvedených kritérií;</p>
+</li>
+<li>Alt+End nebo Alt+<a href="keyEquiv_cs.html#bs1"></a>:Umožňuje slyšet souhrn aktivních filtrů a počet vyfiltrovaných zpráv. Tyto dvě klávesové zkratky fungují také v rámci seznamu zpráv, nejen na liště rychlého filtru;</li>
+<li>Když je aktivní rychlý filtr, zvukový soubor WAV se přehraje, když je zaměřen seznam nebo karta, ke které patří. Zvuk připomíná nádech;</li>
+<li>Soubor filter.wav se nachází ve složce:
+"%appdata%\NVDA\TB+zvuky"
+Zvuk můžete umístit podle svých představ, pokud se váš soubor jmenuje: filter.wav. Po této změně souboru je nutné NVDA restartovat;</li>
+</ul>
+<p><a name="tagFilter"></p>
+<h4>Filtrování podle značky</h4>
+<p>Když je fokus umístěn na pole úprav na panelu Rychlý filtr:</p>
+<ul>
+<li>Tiskněte šipku dolů, dokud neuslyšíte „tags“, a stisknutím klávesy Enter tuto možnost zaškrtněte;</li>
+<li>Stisknutím klávesy Tab v tomto bodě přejděte do rozevíracího seznamu režimů filtrování značek. Pokud například zvolíte „to do“, budou v tabulce zpráv uvedeny pouze zprávy označené „to do“;</li>
+</ul>
+<p><a name="colLayout"></p>
+<h3>Rozložení sloupců (Alt+c)</h3>
+<p>Klávesová zkratka Alt+c zobrazí dialogové okno, které vám umožní změnit pořadí sloupců v seznamu zpráv, ale také přidat nebo odebrat sloupce.</p>
+<p>Chcete-li jej použít, nejprve přejděte do seznamu zpráv nebo stromového zobrazení složek a stiskněte Alt+c;</p>
+<p>Zobrazí se dialogové okno rozvržení sloupců. Skládá se ze seznamu sloupců a také z tlačítek "Nápověda", "Sloupce" a "Zavřít".</p>
+<p>Tlačítko „sloupce...“ zobrazí nativní nabídku Thunderbirdu „Vybrat sloupce k zobrazení“.</p>
+<p>Když jste v seznamu sloupců, jsou k dispozici následující klávesové zkratky:</p>
+<ul>
+<li>Šipka vlevo: Zobrazí nabídku zaškrtávacího políčka s názvem „Vyberte sloupce k zobrazení“. Tato zkratka odpovídá tlačítku "Sloupce...";</li>
+<li>Mezerník: Chcete-li přesunout vybraný sloupec, stiskněte mezerník, přejděte na jiný sloupec a znovu stiskněte mezerník, abyste tam sloupec umístili. Je to podobné operaci vyjmutí a vložení;</li>
+</ul>
+<p>Můžete také použít následující zkratky přímého pohybu:</p>
+<ul>
+<li>Ctrl+Nahoru nebo Ctrl+šipka dolů: Přesune vybraný sloupec o jeden krok nahoru nebo dolů;</li>
+<li>Control+Home nebo Control+End: Přesune vybraný sloupec na začátek nebo konec seznamu;</li>
+<li>Control+Page up nebo Control+Page down: Přesune vybraný sloupec o tři kroky nahoru nebo dolů;</li>
+</ul>
+<p>Chcete-li provést takové pohyby, sloupce jsou ve skutečnosti přemístěny přetažením myší. Každých 10 pohybů ukazatele se ozve jedno milisekundové pípnutí;</p>
+<p>Když je k dispozici nabídka „Vyberte sloupce k zobrazení“, můžete použít následující klávesové zkratky:</p>
+<ul>
+<li>Šipka vpravo: Zobrazí dialog rozložení sloupců;</li>
+<li>Mezerník: Zaškrtne nebo zruší zaškrtnutí vybraného sloupce v nabídce. Klávesa Enter provede stejnou akci;</li>
+</ul>
+<p>Šipkou doleva a doprava lze tedy velmi snadno přepínat mezi nabídkou výběru sloupců a dialogem rozložení sloupců;</p>
+<p><a name="smartReply"></p>
+<h3>SmartReply: Odpovězte na všechny seznamy adresátů stisknutím kláves Control+r</h3>
+<p>Pokud patříte k těm, kteří zapomněli stisknout Ctrl+Shift+l, aby odpověděli na seznam adresátů, jako je GoogleGroups, tato funkce vám ušetří soukromé odpovědi odesílateli zprávy, aniž byste si to uvědomovali.Vždy můžete stisknout Control+r následovně:</p>
+<ul>
+<li>Prostřednictvím jediného stisknutí klávesy: za účelem odpovědi na seznam;</li>
+<li>Prostřednictvím dvojitého stisknutí klávesy: za účelem soukromé odpovědi odesílateli zprávy;</li>
+<li>Prostřednictvím jediného stisknutí klávesy odpovědět odesílateli zprávy, která nepochází ze seznamu.</li>
+</ul>
+<p>Poznámky:</p>
+<p>Použití jednoduchých nebo dvojitých úhozů je možné u GoogleGroups, Framalistes a FreeLists.</p>
+<p>Při použití jediného úhozu u jednoho z těchto tří e-mailových konferencí uslyšíte před otevřením okna pro zápis zprávy "do seznamu".</p>
+<p>Také byste neměli používat příkaz "Odpovědět všem" k odpovědi na seznam, aby odesílatel neobdržel vaši odpověď soukromě;</p>
+<p>A nakonec, pokud se chcete vrátit k obvyklé funkci Control+r:</p>
+<ul>
+<li>Stiskněte Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a> pro zobrazení nabídky Možnosti;</li>
+<li>Vyberte "Deaktivace pro Chichi a pro Thunderbird+ dílčí menu";</li>
+<li>Stisknutím klávesy Enter zrušte zaškrtnutí políčka „Seznam zpráv: bez SmartReply“;</li>
+</ul>
+<h3>Mluvené klávesové zkratky A, J, M</h3>
+<ul>
+<li>a: Archivuje vybranou zprávu s oznámením. Stiskněte Control+z pro zrušení operace;</li>
+<li>j : označí zprávu jako spam a oznámí to;</li>
+<li>Shift+j : označí zprávu jako přijatelnou a oznámí to;</li>
+<li>m : Označí vybrané zprávy jako nepřečtené. Shift+m ​​je označí jako přečtené;</li>
+</ul>
+<p><a name="folderTree"></p>
+<h2>Zobrazení stromu složek</h2>
+<p><a name="unreadFolders"></p>
+<h3>Rychlá navigace ve složkách obsahujících nepřečtené zprávy (Alt+šipka dolů, Alt+šipka nahoru)</h3>
+<p>Ve stromovém zobrazení složek můžete stisknout:</p>
+<ul>
+<li>Alt+šipka dolů: přechod do další složky s nepřečtenými zprávami;</li>
+<li>Alt+šipka nahoru: přechod do předchozí složky s nepřečtenými zprávami;</li>
+<li>Prostor, Chichi není nainstalováno: Pokud vybraná složka obsahuje nepřečtené zprávy, vybere první nepřečtenou zprávu v seznamu;</li>
+<li>Space, Chichi nainstalováno: stejná funkce kromě toho, že Pokud složka neobsahuje žádné nepřečtené zprávy, Chichi zobrazí seznam nepřečtených složek.
+Stisknutím klávesy Enter na nepřečtené složce v tomto seznamu se v seznamu zpráv aktivuje první nepřečtená zpráva v této složce; <br>
+To vám umožní rychle zjistit, které složky přijaly zprávy, než se rozhodnete, kterou chcete začít číst jako první. ;<br></li>
+</ul>
+<p>V této záležitosti se podívejte také na dva dialogy níže:</p>
+<ul>
+<li>Dialogové okno Filtrované seznamy účtu a složek (F12)</li>
+<li>Seznam složek v hlavním stromovém zobrazení na základě 4 typů (F7, NVDA+F7 nebo Shift+F12)</li>
+</ul>
+<p>Poznámka: Pokud existuje velký počet složek, Chichi funguje okamžitě, na rozdíl od těchto dvou dialogů;</p>
+<p><a name="folderDlg"></p>
+<h3>Dialogové okno Filtrované seznamy účtů a složek (F12)</h3>
+<p>Tento dialog zobrazuje účty a jejich přidružené složky ve dvou samostatných seznamech. Můžete je filtrovat na základě klíčového slova nebo omezit seznam složek na ty, které obsahují nepřečtené zprávy.</p>
+<p>Nastavení výchozího režimu zobrazení:</p>
+<p>Pokud plánujete většinu času zobrazovat složky obsahující pouze nepřečtené zprávy, přejděte nejprve do stromového zobrazení složek nebo do seznamu zpráv a poté použijte zkratku Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a>.V podnabídce možností hlavního okna zvolte položku s názvem: Zobrazit pouze složky obsahující nepřečtené zprávy.</p>
+<p>Základní použití dialogu:</p>
+<ul>
+<li>V hlavním okně stiskněte F12 pro zobrazení dialogu.</li>
+<li>Pokud jste nastavili výchozí zobrazení na složky obsahující nepřečtené zprávy, zobrazí se v seznamu s názvem: Složky účtu;</li>
+<li>V opačném případě budou do tohoto seznamu zahrnuty všechny složky všech účtů;</li>
+<li>V tomto seznamu se můžete pohybovat stisknutím prvního písmene názvu složky;</li>
+<li>Upozorňujeme, že složky, které nejsou zobrazeny ve stromovém zobrazení, zde nebudou zahrnuty. K tomu dochází například, když složky patří ke sbalenému účtu ve stromovém zobrazení Účty a složky;</li>
+<li>Pokud jste v tuto chvíli našli složku, která vás zajímá, stiskněte klávesu Enter a vyberte ji ve stromovém zobrazení. Můžete také stisknout Alt+g pro simulaci jednoduchého kliknutí levým tlačítkem na složku nebo Alt+d pro simulaci jednoduchého kliknutí pravým tlačítkem;</li>
+</ul>
+<p>Přepínání režimů zobrazení:</p>
+<ul>
+<li>Chcete-li si kdykoli vyvolat, v jakém režimu zobrazení se nacházíte, stiskněte klávesu Backspace (backspace). Po vyslechnutí informací znovu stiskněte toto tlačítko pro návrat do seznamu složek;</li>
+<li>Chcete-li přepnout zobrazení z režimu "pouze nepřečtené složky" do režimu "všechny složky" a naopak, stiskněte F12;</li>
+<li>V režimu "všechny složky" jsou účty zobrazeny v seznamu vlevo a složky vybraného účtu v seznamu vpravo. Chcete-li se přesunout z jednoho seznamu do druhého, použijte levou nebo pravou šipku;</li>
+<li>je vybrán virtuální účet s názvem "Všechny účty" a fokus je umístěn v seznamu složek, který obsahuje všechny složky všech účtů. U každé složky v tomto seznamu je uveden název účtu, ke kterému složka patří;</li>
+</ul>
+<p>Použití filtrování klíčových slov:</p>
+<ul>
+<li>Předtím vám s největší pravděpodobností prospěje přepnutí do režimu „Všechny složky“, jak je vysvětleno výše;</li>
+<li>Níže můžete použít klávesy „Page Up“ nebo „Page Down“;</li>
+<li>Ze seznamu stiskněte klávesu "Page Up" pro přechod nahoru do pole pro úpravu výrazu filtru;</li>
+<li>Zadejte výraz a poté jej ověřte pomocí klávesy "Page Down" pro zahájení filtrování;</li>
+<li>Výsledky se zobrazí v seznamu složek. Pokud není nalezena žádná složka, uslyšíte: Žádné výsledky. Pokud jste to nečekali, možná jste zapomněli přepnout do režimu zobrazení všech složek;</li>
+<li>Nakonec stiskněte Enter na požadované složce a vyberte ji ze stromového zobrazení složek. Jak již bylo zmíněno, můžete simulovat kliknutí levým nebo pravým tlačítkem na složku stisknutím Alt+g nebo Alt+d;</li>
+</ul>
+<h4>Vyloučení určitých složek ze seznamu složek obsahujících nepřečtené zprávy</h4>
+<p>Jak je uvedeno výše, ze seznamu složek obsahujících nepřečtené zprávy můžete vyloučit složky, ke kterým se málokdy nebo nikdy přistupovalo.</p>
+<p>Jediné, co musíte udělat, je přejmenovat složku, kterou chcete vyloučit, přidáním pomlčky na konec jejího názvu.</p>
+<p>Zde je nutné upozornit, že pokud je přejmenovaná složka součástí filtru zpráv, Thunderbird tento filtr automaticky upraví tak, aby odrážel tuto změnu.</p>
+<p><a name="foldersList"></p>
+<h3>Seznam složek v zobrazení hlavního stromu,Na základě 4 typů (F7, NVDA+F7 nebo Shift+F12)</h3>
+<p>Když jste ve stromovém zobrazení složek nebo seznamu zpráv, tento příkaz zobrazí dialogové okno se seznamem složek, který může mít následující čtyři rozvržení:</p>
+<ul>
+<li>Obsahuje pouze nepřečtené zprávy (plochý seznam), Alt+n;</li>
+<li>Všechny složky (plochý seznam), Alt+t;</li>
+<li>Obsahuje pouze nepřečtené zprávy (celý stromový pohled), Alt+o;</li>
+<li>Všechny složky (celý stromový náhled), Alt+u;</li>
+</ul>
+<p>U složek obsahujících nepřečtené zprávy jsou ze seznamu vyloučeny složky Koncepty a Koš a složky s názvy končícími pomlčkou;</p>
+<p>Chcete-li aktivovat jeden z těchto typů, můžete stisknout příslušnou klávesovou zkratku nebo Shift+Tab a poté pomocí kláves se šipkami přepínat režimy.</p>
+<p>Zvolený typ se uloží do paměti a aktivuje se při příštím zobrazení tohoto dialogu;</p>
+<p>Seznam můžete také filtrovat podle klíčového slova. Stisknutím klávesy Tab nebo Alt+e přejděte do pole úprav.</p>
+<p>Navigace v plochém seznamu nebo stromovém zobrazení se provádí pomocí šipek nahoru nebo dolů a také pomocí iniciály názvu složky;</p>
+<p>Chcete-li aktivovat vybranou složku v hlavním stromovém zobrazení, jednoduše na ní stiskněte Enter.</p>
+<p>Tip: Pokud byste měli stisknout Enter ve složce obsahující nepřečtené zprávy, stisknutím mezerníku vyberte první nepřečtenou zprávu v tabulce zpráv;</p>
+<p><br>
+Poznámka:</p>
+<p>Klávesové zkratky, které zobrazují tento dialog, mohou být odstraněny a další mohou být přidány pomocí dialogu nastavení vstupních gest NVDA. Následuj tyto kroky:</p>
+<ul>
+<li>Nejprve přesuňte okno Thunderbirdu do popředí;</li>
+<li>Otevřete nabídku NVDA a vyberte "Předvolby";</li>
+<li>V podnabídce stiskněte Enter na: "Vstupní gesta";</li>
+<li>V dialogovém okně, které se otevře, stiskněte písmeno t, dokud nedosáhnete: Thunderbird+;</li>
+<li>Stisknutím pravé šipky rozbalíte tuto větev;</li>
+<li>Přejděte dolů na položku: "Zobrazit seznam složek v hlavním stromovém zobrazení Thunderbirdu na základě několika typů. Sbaleno 2 ze 4 úrovně 1" a stisknutím šipky vpravo tuto úroveň rozbalte;</li>
+<li>Tab na tlačítko "Přidat", stiskněte mezerník a poté stiskněte vstupní gesto v novém dialogu;</li>
+<li>Stiskněte Enter pro potvrzení vaší volby;</li>
+<li>Zpět v seznamu gest ověřte přítomnost nového vstupního gesta;</li>
+<li>Zavřete dialog tlačítkem OK.</li>
+</ul>
+<p><a name="alerts"></p>
+<h2>Upozornění zpřístupněna</h2>
+<p>U výstrah vyžadujících váš zásah jsou tlačítka přístupná a navigaci v nich lze provádět pomocí kláves se šipkami:</p>
+<ul>
+<li>instalace doplňků pro Thunderbird: je vybráno tlačítko "Instalovat". Stačí na něm stisknout Enter a pokračovat v instalaci;</li>
+<li>Nová aktualizace Thunderbirdu: tato výstraha je také dostupná;</li>
+<li>Vyžádat potvrzení o přečtení: toto lze zrušit pomocí možnosti v nabídce Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a> / v nabídce možností hlavního okna;;</li>
+<li>Blokování vzdáleného zobrazování obsahu ve zprávách: je vybráno tlačítko "Možnosti" a ke zprávě je přidána následující věta: Tip: Otevřete nabídku Zobrazit, přejděte dolů na Tělo zprávy a v podnabídce stiskněte Enter na Simple HTML. Jakmile se použije navrhovaná nastavení, toto upozornění se již nebude zobrazovat;</li>
+</ul>
+<p>Upozornění, která narušují procházení seznamu zpráv:</p>
+<ul>
+<li>Upozornění Toto je koncept: Toto zbytečné upozornění je odstraněno;* Thunderbird si myslí, že tato zpráva je podvodná: toto oznámení je nahrazeno dvěma krátkými tóny o frekvenci blízké lidskému hlasu (200 Hz). Chcete-li označit zprávu jako přijatelnou nebo nežádoucí, stiskněte klávesu <a href="keyEquiv_cs.html#aboveTab">středník</a> a vyberte požadovanou akci z podnabídky „Výstraha“;</li>
+</ul>
+<p><a name="tabs"></p>
+<h2>Klávesové zkratky pro karty</h2>
+<p>Kromě nových příkazů jsou oznamovány karty jako v tomto příkladu: Karta 1 ze 4, Doručená pošta</p>
+<ul>
+<li>Ctrl+Tab a Ctrl+Shift+Tab: přejde na další nebo předchozí kartu;</li>
+<li>Control+číslo: vybere záložku odpovídající jejímu číslu objednávky na liště karet. Pokud stisknete číslo větší, než je počet otevřených karet, budete umístěni na poslední;</li>
+<li>Control+<a href="keyEquiv_cs.html#bs1">přízvuk-akutní</a>: zobrazí seznam otevřených karet v nabídce. Stisknutím klávesy Enter na názvu karty se na ni přesunete;</li>
+<li>Alt+<a href="keyEquiv_cs.html#bs1"></a>: Otevře kontextovou nabídku lišty karet. Obsahuje především příkazy: Close the active tab a Close my other tabs;</li>
+<li>Ctrl+w, Ctrl+Bakspace nebo Ctrl+F4: zavře aktivní kartu;</li>
+<li>Control+j: otevře záložku "Uložené soubory", která seskupuje přílohy a stažené soubory uložené na vašem pevném disku;</li>
+</ul>
+<p><a name="tabAddons"></p>
+<h2>Karta Doplňky</h2>
+<p>Tento doplněk usnadňuje vyhledání a instalaci doplňků pro Thunderbird.</p>
+<ul>
+<li>Na kartě "Doplňky" zadejte název modulu a stiskněte Enter;</li>
+<li>Doplněk Thunderbird+ počká na otevření karty s výsledky vyhledávání a poté se pokusí vybrat první nalezený doplněk;</li>
+<li>Konkrétněji si můžete přečíst příklad <a href="#stwInstall">Začít s instalací modulu Inbox</a>;</li>
+</ul>
+<!-- Překladatelé : fenêtre de rédaction = Okno zápisu -->
+<p><a name="writeWnd"></p>
+<h2>Okno zápisu</h2>
+<p>Když se otevře okno pro zápis, nic zvláštního není patrné, ačkoli jsou k dispozici následující klávesové zkratky:</p>
+<ul>
+<li>Escape: zavře okno pro zápis;</li>
+<li>Kontrola polí adresy: jedno stisknutí Alt+číslice oznámí záhlaví, dvě stisknutí zaměření na odpovídající vstupní pole:<br>
+Alt+1: Odesílatel: jedna z vašich e-mailových adres ve vašem seznamu e-mailových adres;<br>
+Alt+2 : do:<br>
+Alt+3: Názvy příloh. Dva stisky označí seznam příloh;<br>
+Ostatní číslice umožňují přístup k volitelným záhlavím, jako jsou: kopírovat do, skrytá kopie do a odpovědět na;</li>
+<li><a href="keyEquiv_cs.html#aboveTab">středník</a>: v textu zprávy: zobrazí následující kontextové menu: - Panel nástrojů Mail a poté v podnabídce: Odeslat, Pravopis, Připojit, Zabezpečení, Uložit.<br>
+Formátování textu a poté v podnabídce: (Styly) odstavce, Použít nebo odebrat seznam s odrážkami, Použít nebo odebrat číslovaný seznam, Písma, Odsazení, vložit odkaz, obrázek, kotvu, vodorovnou čáru nebo tabulku.</li>
+</ul>
+<p><br>
+Poznámka: Do této nabídky se dostanete jedním nebo dvěma stisknutími klávesy <a href="keyEquiv_cs.html#aboveTab">středník</a> v závislosti na nastavení v nabídce možností okna pro zápis, kterou získáte stisknutím Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a> jednou nebo dvakrát;</p>
+<p><a name="spellDlg"></p>
+<h3>Dialog pro kontrolu pravopisu: F7</h3>
+<p>Přibyly klávesové zkratky, které omezují pohyb ruky.Když je fokus na editačním poli náhradního slova, můžete použít následující klávesové zkratky:</p>
+<ul>
+<li>Enter: Aktivuje tlačítko "Nahradit";</li>
+<li>Shift+Enter: Aktivuje tlačítko "Nahradit vše";</li>
+<li>Control+Enter: Aktivuje tlačítko "Ignorovat";</li>
+<li>Shift+Control+Enter: Aktivuje tlačítko "Ignorovat vše";</li>
+<li>Alt+Enter: Aktivuje tlačítko "Přidat slovo do slovníku";</li>
+</ul>
+<p>Chcete-li si zapamatovat tyto kombinace zahrnující klávesu Enter, Control odkazuje na akci "Ignorovat" a přítomnost Shift označuje "všechny výskyty".</p>
+<p>Navíc klávesová zkratka Alt+šipka nahoru hláskuje slova:</p>
+<ul>
+<li>1 stisknutí hláskuje slova normální rychlostí;</li>
+<li>2 stisknutí hláskovat slova rychle;</li>
+<li>3 stisknutí zkopíruje chybně napsané slovo do schránky pro analýzu v jiném editačním poli;</li>
+</ul>
+<p><a name="virtspell"></p>
+<h2>Vylepšený režim kontroly pravopisu při psaní</h2>
+<!-- Překladatelé: tato sekce byla přeložena společností Google ve verzi 4.7.1, 8. května 2023 -->
+
+<p>Poznámka: Tato sekce byla přeložena z francouzštiny do angličtiny společností Google;</p>
+<p>Navzdory pravopisu přidanému do dialogového okna kontroly pravopisu je někdy nutné zavřít dialog, abyste slyšeli kontext chyby v textu. Po dokončení tento dialog restartuje kontrolu pravopisu od začátku a znovu se zastaví u slov, která jsme dříve dobrovolně ignorovali.</p>
+<p>Kontrola pravopisu při psaní se těmto nepříjemnostem vyhýbá, ale může odvádět pozornost pisatele pomocí oznámení „Překlepy“.</p>
+<p>Aby vás při psaní nerozptylovaly pravopisné chyby, byl tento režim kontroly vylepšen přidáním tří klávesových zkratek:</p>
+<p>Před jejich aktivací je nutné přepnout do navigačního režimu stisknutím: NVDA+mezera;</p>
+<ul>
+<li>w a -shift+w pro přechod na další a předchozí chybu;</li>
+<li>NVDA+F7 pro zobrazení seznamu chybně napsaných slov. Na špatně napsané slovo stačí stisknout enter, abyste na něj v textu přeskočili;</li>
+</ul>
+<p>Tento režim provozu vám umožňuje zakázat oznamování chybně napsaných slov NVDA;</p>
+<p>Před použitím tohoto vylepšeného režimu kontroly pravopisu při psaní je nutné provést malou konfiguraci.</p>
+<h3>Předběžná konfigurace</h3>
+<p>1: V Thunderbirdu povolte kontrolu pravopisu při psaní v Nastavení:</p>
+<ul>
+<li>V hlavním okně otevřete nabídku Možnosti, přejděte dolů do Nastavení a stiskněte Enter ;</li>
+<li>Na záložce Nastavení přejděte tabulátorem do vyhledávacího pole možností, zadejte slovo „kouzlo“ a stiskněte tabulátor;</li>
+<li>Ve výsledcích vytvořte tabulku a poté zaškrtněte políčko s názvem: "Povolit kontrolu pravopisu při psaní";</li>
+<li>Nakonec zavřete kartu Nastavení pomocí Ctrl+w nebo -ctrl+Backspace;</li>
+</ul>
+<p>2: Zakázat hlášení překlepů v NVDA
+Toto nastavení je volitelné. Pokud si přejete slyšet oznámení o špatně napsaném slově, můžete toto oznámení také zkrátit tak, že ve slovníku výslovnosti nahradíte „chybně napsané slovo“ například „chybně napsané“;</p>
+<p>Chcete-li tuto reklamu zakázat:</p>
+<ul>
+<li>Otevřete nabídku NVDA, Předvolby a poté stiskněte Enter na: Nastavení ;</li>
+<li>V dialogovém okně nastavení přejděte do kategorie "Formátování dokumentu";</li>
+<li>Tab, dokud neuslyšíte: "Pravopisné chyby", poté stisknutím mezerníku zrušte zaškrtnutí této možnosti;* Zavřete dialog potvrzením na tlačítku OK;</li>
+</ul>
+<h3>Pomocí klávesových zkratek w, -shift+w a NVDA+F7</h3>
+<ul>
+<li>Před použitím těchto klávesových zkratek musíte nejprve aktivovat režim prohlížení stisknutím NVDA+mezera;</li>
+<li>Poté stiskněte písmeno w pro přechod na další chybu nebo -shift+w pro přechod na předchozí chybu nebo stiskněte NVDA+F7 pro výběr slova, které chcete opravit ze seznamu;* Když je v textu vybráno chybné slovo, můžete stisknutím klávesy Aplikace zobrazit kontextovou nabídku návrhů náhrad;</li>
+<li>Můžete si také snadno poslechnout větu, která obsahuje chybné slovo, než přistoupíte k jeho opravě;</li>
+<li>Chcete-li ručně opravit slovo, nejprve stiskněte NVDA+mezera pro návrat do režimu formuláře;</li>
+</ul>
+<p><a name="menus"></p>
+<h2>Thunderbird+ nabídky možností a příkazů</h2>
+<p><a name="optMenu"></p>
+<h3>Nabídka Možnosti (Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a>)</h3>
+<p>Možnosti hlavního okna:</p>
+<ul>
+<li>Seskupte více zmínek 'RE' do jedné: například Re: Re: Re: se změní na 3Re:;</li>
+<li>Odstraňte „RE“ ve sloupcích s předmětem:</li>
+<li>Smažte dvojtečku ve zmínkách „RE“:</li>
+<li>Vyčistěte jména korespondentů v seznamu zpráv: odstraňte čísla a některé speciální znaky, aby byl poslech jmen korespondentů méně únavný;</li>
+<li>Přidat do sloupců interpunkci: do některých sloupců se přidá čárka, aby se mezi nimi vytvořila krátká pauza při oznamování řádku v seznamu zpráv;</li>
+<li>Skrýt názvy e-mailových konferencí: Odstraní oznámení názvů e-mailových konferencí v hranatých závorkách pro příjemnější poslech při použití jiné složky pro každý e-mailový seznam. Jinak je jméno konference oznámeno pouze jednou, pokud se v předmětu zprávy objeví několikrát;</li>
+<li>Upravit slova, která se mají skrýt v předmětech zpráv: otevře pole pro úpravy, které vám umožní přidat nebo odebrat slova, která nemají být oznámena v řádcích s předmětem zpráv. Například přidejte <em>, aby </em><strong> Spam </strong>* byl oznámen jako spam;</li>
+<li>Oznámit 'nežádoucí', pokud je uvedeno ve sloupci 'Nežádoucí stav: pokud je v tabulce zpráv sloupec "nechtěný stav", tato možnost může, ale nemusí být použita k oznámení "Nežádoucí";</li>
+<li>Stisknutí mezerníku na složce obsahující nepřečtené zprávy hledá první nepřečtenou zprávu od začátku seznamu zpráv: Ve výchozím nastavení skript pro tuto možnost odesílá příkaz "n" pro výběr další nepřečtené zprávy v seznamu zpráv. Thunderbird ne vždy vybere první nepřečtenou zprávu v seznamu. Pokud je tato možnost zaškrtnuta, doplněk vybere první nepřečtenou zprávu ve složce oklikou, kterou lze slyšet na některých počítačích;</li>
+<li>Nepoužívejte navigaci prvním písmenem ve stromovém zobrazení složek: tato možnost je užitečná, pokud používáte doplněk „Rychlá navigace pomocí kláves složky“;</li>
+<li>Nepřímá navigace iniciálami: Zobrazí pole pro úpravu názvu složky, jakmile stisknete písmeno nebo číslo ve stromovém zobrazení složek. Pokud je tato možnost zakázána, můžete toto vyhledávací pole zobrazit stisknutím písmene z;</li>
+<li>Ignorovat požadavky na potvrzení: Je-li povoleno, podokno žádostí o přijetí bude zrušeno, když je v seznamu zpráv vybrána zpráva;* Neemulovat Shift+F6 s escape: deaktivuje použití klávesy escape při procházení panelů v hlavním okně;</li>
+<li>Zobrazit pouze složky obsahující nepřečtené v dialogovém okně 'Stromové zobrazení složek' a: při každém otevření tohoto dialogu pomocí klávesy F12 zobrazí pouze složky s nepřečtenými zprávami;</li>
+<li>Samostatné okno pro čtení: nečíst zprávu automaticky, pokud to blokuje NVDA: Ve výchozím nastavení, když otevřete zprávu stisknutím klávesy Enter ze seznamu zpráv, po otevření nového okna se spustí nepřehledné čtení zprávy. Na některých počítačích, pokud je e-mailový účet nastaven na IMAP, může dojít k selhání NVDA. Když je tato možnost zaškrtnuta, automatické čtení je deaktivováno, aby nedošlo k zablokování.</li>
+</ul>
+<p>Pokud při otevření tohoto okna dojde k zablokování, můžete prodloužit prodlevu, než se spustí automatické čtení. Chcete-li to provést, stiskněte Alt+d a zadejte jinou hodnotu. Pokud nemůžete toto zablokování odstranit, zaškrtněte tuto možnost;</p>
+<p><br>
+Možnosti pro okno zápisu:</p>
+<ul>
+<li>Kontrola pravopisu: hláskujte špatně napsané slovo a navrhované slovo: Tato možnost změní oznámení v dialogovém okně kontroly pravopisu;</li>
+<li>Povolit vylepšení kontroly pravopisu při psaní: Příkaz pro toto nastavení zatím nefunguje s NVDA 2022.1;</li>
+<li>Klávesa Escape zavře vytvářenou zprávu;</li>
+<li>Jediným stisknutím zobrazíte kontextovou nabídku, dvojím stisknutím zapíšete <a href="keyEquiv_cs.html#aboveTab">středník</a> nebo Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a> nebo jejich náhrady: tato volba umožňuje zobrazit kontextovou nabídku stisknutím klávesu <a href="keyEquiv_cs.html#aboveTab">středník</a>, která bude praktičtější, pokud znaky <a href="keyEquiv_cs.html#aboveTab">středník</a> a Shift+<a href="keyEquiv_cs.html#aboveTab">středník</a> zadáváte velmi zřídka;</li>
+</ul>
+<p><br>
+Možnosti aktualizace:</p>
+<p>Tato možnost vám umožňuje zakázat automatické aktualizace Thunderbird+ nebo je znovu povolit;</p>
+<p><br>
+Deaktivace pro Chichi a Thunderbird+:</p>
+<p>Hlavním účelem těchto možností je umožnit dobré soužití mezi Thunderbird+ a Chichi tím, že se vyhnete duplicitním funkcím. Ale můžete je použít bez Chichi, aby vyhovovaly vašim preferencím;</p>
+<p>Termín "složky" níže odkazuje na stromové zobrazení složek;</p>
+<ul>
+<li>Složky: Prostor nevybírá další nepřečtenou zprávu v seznamu a nezobrazuje seznam nepřečtených složek d: Chichi zatím nemá autonomní ekvivalentní funkci;</li>
+<li>Složky: žádná navigace podle iniciál d: aktivací této možnosti se použije Chichi. Toto funguje pouze shora dolů a neoznamuje název účtu, ke kterému patří aktivovaná složka;</li>
+<li>Vypsat zprávy: Mezerník nečte zprávu v podokně náhledu l: pokud zaškrtnete tuto možnost, je to Chichi, kdo vysloví zprávu v podokně náhledu. Na rozdíl od Thunderbirdu+ nebude toto čtení přehledné. Na druhou stranu F4 a Alt+šipka dolů budou nadále používat Thunderbird+ přehledné čtení;</li>
+<li>Seznam zpráv: ne SmartReply: deaktivuje funkci odpovědi na seznam adresátů pomocí Control+r při jediném stisknutí nebo odesílateli pomocí Control+r při dvojitém stisknutí;</li>
+<li>Seznam zpráv:Nemanipulovat s panelem rychlého filtru: Odebere přístup k možnostem filtrování pomocí šipky dolů;</li>
+<li>Hlavní okno: Karta se nepřesouvá do dalšího podokna: tato možnost se týká navigace mezi zobrazením stromu složek, seznamem zpráv a panelem záhlaví zpráv;</li>
+<li>Hlavní okno: Resetujte klávesu Escape do výchozího stavu. To se týká zejména navigace mezi výše uvedenými panely;</li>
+<li>Povolit ukončení Thunderbirdu pomocí Control+w nebo Control+F4: zaškrtnutím této možnosti výše uvedené dvě zkratky ukončí Thunderbird, když je otevřena pouze jedna karta. Toto chování je pro některé lidi trapné;</li>
+</ul>
+<p>Zálohování a obnovení nastavení:</p>
+<ul>
+<li>Zálohovat aktuální konfiguraci s: Zkopíruje soubor .ini doplňku do souboru .inibak.</li>
+<li>Obnovit uloženou konfiguraci r: Zkopíruje soubor .inibak do .ini a znovu načte nastavení;</li>
+<li>Reset Configuration r: Obnoví výchozí nastavení doplňku. Vytvoří zálohu předem, pokud již žádná neexistuje;</li>
+</ul>
+<p><a name="cmdMenu"></p>
+<h3>Nabídka příkazů (<a href="keyEquiv_cs.html#aboveTab">středník</a>)</h3>
+<ul>
+<li>Vyberte a uspořádejte sloupce ze seznamu zpráv: Zobrazí nabídku Thunderbirdu se zaškrtávacími políčky nazvanými „Vybrat sloupce k zobrazení“. Když jste na názvu sloupce, stisknutím pravé šipky otevřete dialogové okno rozložení sloupců;</li>
+<li>Napište na podporu: ve francouzštině nebo angličtině. Tento příkaz otevře okno pro zápis předem adresované podpoře doplňku. Toto funguje pouze v případě, že je Thunderbird správně nastaven jako váš výchozí e-mailový klient;</li>
+</ul>
+<p><a name="startup"></p>
+<h2>Vylepšené spouštění Thunderbirdu</h2>
+<p>Nativně se po posledním zavření Thunderbirdu spustí na poslední aktivní kartě a bez aktivace čehokoli, což je poměrně nepříjemné.</p>
+<p>Pro pohodlný začátek existují dva doplňky, které se instalují přímo do Thunderbirdu:</p>
+<ul>
+<li>Chichi, vyvinutý Yannickem: tento doplněk je doporučen, protože nabízí mnoho dalších funkcí pro usnadnění a ThunderbirdPlus je navržen tak, aby s ním spolupracoval;</li>
+<li>Začněte s doručenou poštou: pokud nepoužíváte Chichi, tento modul odvádí dobrou práci;</li>
+</ul>
+<p><a name="chichi"></p>
+<h3>S Chichi</h3>
+<p>Chcete-li používat Chichi, přečtěte si část Stažení a instalace spolu s částí Nastavení spouštěcí složky na [Webové stránce Chichi] (https://www.rptools.org/Outils-DV/thunderbird-chichi-en.html);</p>
+<p><a name="stwi"></p>
+<h3>S Začít s doručenou poštou</h3>
+<p>Od října 2022 byla nejnovější verze tohoto doplňku Thunderbird 102 2.5.2.</p>
+<p>Vlastnosti:</p>
+<ul>
+<li>Instalace: pomocí vyhledávání podle názvu na kartě "Doplňky" Thunderbirdu;</li>
+<li>Spouštěcí složka: vždy stejná, buď složka doručené pošty účtu zvoleného v nastavení doplňku, nebo sjednocená složka;</li>
+<li>Automatické ostření: na poslední zprávu v seznamu zpráv nebo na složku "Doručená pošta" ve stromovém zobrazení, v závislosti na nastavení v možnostech doplňku. Ve výchozím nastavení je vybrána druhá možnost;</li>
+<li>Nastavení: Méně snadný přístup. Přejděte na kartu Doplňky, v seznamu nainstalovaných doplňků vyberte „Začít s doručenou poštou“ a poté stiskněte klávesu Enter na tlačítku „Možnosti doplňku“. Tím se otevře nová karta „Nastavení Začít s doručenou poštou“;Rozbalovací seznam vám umožňuje vybrat e-mailový účet, pro který bude při spuštění Thunderbirdu vybrána složka doručené pošty;</li>
+</ul>
+<p>Tři přepínače vám umožní vybrat mezi zaměřením na poslední zprávu, první nepřečtenou zprávu v seznamu zpráv nebo složku ve stromovém zobrazení;</p>
+<p><a name="stwInstall"></p>
+<p>Instalace:</p>
+<ul>
+<li>V Thunderbirdu otevřete nabídku „Nástroje“ a stiskněte Enter na: Doplňky a motivy;</li>
+<li>Na stránce Správce doplňků přejděte do vyhledávacího pole. V režimu procházení jej můžete rychle najít stisknutím písmene e;</li>
+<li>Psaní: Začněte s Doručená pošta a stiskněte Enter;</li>
+<li>Pokud máte Thunderbird+, chvíli počkejte, než na kartě výsledků vybere doplněk, který hledáte;</li>
+<li>V opačném případě ručně vyberte například kartu „Začít s doručenou poštou:: Hledat:: Doplňky pro Thunderbird“. Dále stiskněte 3, dokud se nedostanete k nadpisu úrovně 3, který nese název doplňku, který jste hledali;</li>
+<li>Pomocí šipky dolů přejděte dolů na odkaz „Přidat do Thunderbirdu“ a stiskněte na něm Enter;</li>
+<li>Postupujte podle pokynů a restartujte Thunderbird;</li>
+<li>Pokud vše proběhlo v pořádku, Thunderbird se otevře na hlavní kartě a zaměří se na seznam zpráv;</li>
+</ul>
+<p>Nastavení možností Začít s doručenou poštou:</p>
+<ul>
+<li>Návrat na kartu "Správce doplňků";</li>
+<li>V případě potřeby ponechte vyhledávací pole v režimu procházení;</li>
+<li>Stiskněte 3 tolikrát, kolikrát je potřeba, abyste dosáhli nadpisu úrovně 3 s názvem „Začít s doručenou poštou v seznamu nainstalovaných doplňků;</li>
+<li>Dále aktivujte tlačítko: Možnosti doplňku. Otevře se nová karta s názvem: Start with Inbox, Settings;</li>
+<li>Ve výchozím nastavení se zobrazuje následující:</li>
+</ul>
+<!-- En anglais : -->
+
+<p>Začněte s Doručená pošta – Nastavení</p>
+<p>Vyberte účet, pro který se má po spuštění Thunderbirdu zobrazovat jeho doručená pošta.</p>
+<p>Rozbalovací seznam: \&lt;váš první e-mailový účet&gt;</p>
+<p>Vyberte a zaměřte se na:</p>
+<p>nezaškrtnutý přepínač, na který lze kliknout: nejnovější* zpráva.</p>
+<p>Přepínač, na který lze kliknout, nezaškrtl složku doručené pošty ve stromovém zobrazení složek.
+přepínač zaškrtnutý: první nepřečtená zpráva.</p>
+<ul>
+<li>Definice "nejnovější": Poslední zpráva, která byla vložena do doručené pošty (nezávisle na datu zprávy).</li>
+</ul>
+<p>Pokud doručená pošta neobsahuje žádné zprávy, bude vybrána a vybrána složka doručené pošty ve stromu složek.</p>
+<!-- Překladatelé: pro jiné jazyky přeložte věty výše do svého jazyka, jako je francouzská tanslace níže.
+
+Interpretace ve français:
+
+Začněte s Inbox - Réglages ;
+
+Sélectionnez le compte dont le dossier Courrier entrant sera affiché au démarrage de Thunderbird ;
+
+liste déroulante : \<votre premier compte de messagerie\>
+
+Sélectionner puis placer le focus sur:
+
+boutonové rádio cliquable non coché :Le dernier message de la liste ;
+
+boutonové rádio non coché cliquable Le dossier Courrier entrant dans l'arborescence des dossiers ;
+
+boutonové rádio coché : Le premier message non lu de la liste ;
+-->
+
+<p>Pokud složka Doručená pošta neobsahuje žádné zprávy, bude tato složka aktivní ve stromovém zobrazení složek;</p>
+<p><br>
+Po nadefinování nastavení restartujte Thunderbird.<br>
+Vestavěný spouštěč Thunderbirdu přes AltGr+<a href="keyEquiv_cs.html#aboveTab">středník</a>:</p>
+<p>Pro pohodlí a rychlost můžete Thunderbird spustit stisknutím AltGr+<a href="keyEquiv_cs.html#aboveTab">středník</a>.</p>
+<p>Tato zkratka je konfigurovatelná pomocí správce vstupních gest NVDA, který nabízí větší svobodu výběru modifikačních kláves než zkratky Windows, omezené na AltGr;</p>
+<p>Chcete-li přidat další vstupní gesto, postupujte takto:</p>
+<ul>
+<li>Nejprve přesuňte okno Thunderbirdu do popředí;</li>
+<li>Otevřete nabídku NVDA a vyberte "Předvolby";</li>
+<li>V podnabídce stiskněte Enter na: "Vstupní gesta";</li>
+<li>V dialogovém okně, které se otevře, stiskněte písmeno t, dokud nedosáhnete: "Thunderbird, Launcher";</li>
+<li>Stisknutím pravé šipky rozbalíte tuto větev;</li>
+<li>Přejděte dolů na položku: "Spustí Thunderbird" a poté stisknutím šipky doprava tuto úroveň rozbalte;</li>
+<li>Tab na tlačítko "Přidat", stiskněte mezerník a poté stiskněte vstupní gesto v novém dialogu;</li>
+<li>Stiskněte Enter pro potvrzení vaší volby;</li>
+<li>Zpět v seznamu gest ověřte přítomnost nového vstupního gesta;</li>
+<li>Zavřete dialog tlačítkem OK.</li>
+</ul>
+<p>Poznámky:</p>
+<ul>
+<li>Spouštěč Thunderbird je určen pouze pro nainstalovanou verzi Thunderbirdu, jejíž cesty Thunderbird.exe jsou předvídatelné.</li>
+<li>V 64bitové architektuře Windows tento doplněk nespustí 32bitovou verzi Thunderbirdu, pokud je na vašem systému nainstalována 64bitová i 32bitová verze;<!-- links section --></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Read Feeds 26.0.0</title>
+</head>
+<body>
+<h1>Read Feeds</h1>
+<ul>
+<li>Autorzy: Noelia Ruiz Martínez, Mesar Hameed</li>
+</ul>
+<p>Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
+formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
+kanałach, mamy na myśli kanały w formatach RSS i ATOM.</p>
+<h2>Polecenia</h2>
+<h3>Okno dialogowe Czytanie kanałów informacyjnych</h3>
+<p>Dostęp do okna dialogowego Odczyt kanałów można uzyskać z menu nvda, podmenu
+Narzędzia, elementu Kanały.</p>
+<p>Zawiera następujące kontrolki:</p>
+<ul>
+<li>Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
+  kanałów osobistych.</li>
+<li>Lista zapisanych kanałów informacyjnych, zostanie sfokusowana po otwarciu
+  okna dialogowego.</li>
+<li>Lista artykułow: Otwiera dialog wyświetlający spis artykułów z teraz
+  wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
+  przeczytać, a potem naciśnij przycisk OK, aby otworzyć odnoszącą się
+  stronę w przeglądarce. Z tego oka dialogowego, będzie można skopiować tę
+  informację do schowka.</li>
+<li>Otwórz kanał: otwiera wybrany kanał w domyślnej aplikacji.</li>
+<li>Otwórz kanał jako HTML: Otwiera wybrany kanał w domyślnej przeglądarce
+  internetowej. Będziesz mógł pokazywać lub ukrywać daty publikacji i
+  przyciski do kopiowania informacji o artykułach do schowka.</li>
+<li>Kopiuj adres kanału: Otwiera okno dialogowe z potwierdzeniem, czy chcesz
+  skopiować adres kanału do schowka.</li>
+<li>Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
+  wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
+  kanał osobisty może być zachowany, nazwa kanału, bazowana na podstawie
+  tytułu kanału, będzie wyświetlana na końcu listy.</li>
+<li>Zmień nazwę: Otwiera okno dialogowe zawierające pole edycyjne do zmiany
+  nazwy zaznaczonego kanału osobistego.</li>
+<li>Usuń: Otwiera okno dialogowe umożliwiające  usuwanie oznaczonego kanału
+  osobistego po potwierdzeniu.</li>
+<li>Ustaw jako domyślny: Ustawia kanał osobisty jako domyślny, aby można było
+  się dostać do artykułów za pomocą gestów NVDA.</li>
+<li>Importowanie plików danych z pliku OPML: Otwiera okno dialogowe
+  umożliwiające dodanie nowych źródeł danych z pliku OPML.</li>
+<li>Zapisz źródła danych w pliku OPML: Otwiera okno dialogowe, aby zapisać
+  źródła dostępne w oknie dialogowym Źródła danych w pliku OPML.</li>
+<li>Preferencje: Otwiera okno dialogowe ustawień dla readFeeds, dostępne
+  również w menu NVDA, opcje, ustawienia, kategoria readFeeds.</li>
+<li>Zamknij: Zamyka dialog kanały osobiste.</li>
+</ul>
+<h3>Brak notatek</h3>
+<ul>
+<li>Pole edycji Filtruj według można umieścić za przyciskiem Otwórz artykuł z
+  menu NVDA, Preferencje, Ustawienia, Kategoria Odczyt kanałów lub
+  naciskając przycisk Preferencje w oknie dialogowym Kanały.</li>
+<li>Ten panel ma opcję wyświetlania dat artykułów w oknie dialogowym Lista
+  artykułów.</li>
+</ul>
+<h3>Skróty klawiszowe</h3>
+<ul>
+<li>Ctrl+Szift+NVDA+Spacja: mówi adres artykułu. Jeżeli się naciśnie dwa razy,
+  otwiera stronę.</li>
+<li>Ctrl+Szift+NVDA+8: Odświeża oznaczony kanał osobisty i wymawia najnowszy
+  teraźniejszy nagłówek.</li>
+<li>Ctrl+Szift+NVDA+I: Wymawia teraźniejszy tytuł kanału osobistego i
+  link. Dwukrotne naciśnięcie spowoduje kopiowanie tytułu odnoszącego się
+  linku do schowka.</li>
+<li>Ctrl+Szift+NVDA+U: Wymawia poprzedni tytuł kanału osobistego.</li>
+<li>Ctrl+Szift+NVDA+O: Wymawia następujący tytuł kanału osobistego.</li>
+</ul>
+<h2>Powiadomienia</h2>
+<ul>
+<li>Kiedy tytuł i adres zostały skopiowane.</li>
+<li>Kiedy jest niemożliwe odświeżanie/łączenie z kanałem osobistym, albo adres
+  się nie zgadza z prawdziwym kanałem osobistym.</li>
+<li>NVDA wyświetli komunikat o błędzie, jeśli nie można utworzyć nowego
+  kanału.</li>
+<li>Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
+  osobistego i ilość dostępnych artykułów.</li>
+</ul>
+<h2>Changes for 21.0</h2>
+<ul>
+<li>Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.</li>
+</ul>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>universalFeedParser is updated to 5.0.1, adding support for more feeds.</li>
+</ul>
+<h2>Zmiany w wersji 14.0</h2>
+<ul>
+<li>Naprawiono błąd, który uniemożliwiał dodanie niektórych kanałów.</li>
+</ul>
+<h2>Zmiany dla wersji 13.0</h2>
+<ul>
+<li>Dodatek nie może być używany na bezpiecznych ekranach.</li>
+<li>Kanały informacyjne są zarządzane z plików OPML.</li>
+<li>Ze względu na zmiany w systemie zarządzania plikami danych, w którym
+  ustawiono domyślny plik danych, występują zmiany w pliku
+  konfiguracyjnym. Użyj okna dialogowego Kanały, jeśli chcesz ustawić je
+  ponownie.</li>
+<li>Stare pliki tekstowe używane w poprzednich wersjach zostaną automatycznie
+  zaimportowane do nowego formatu OPML po uruchomieniu dodatku.</li>
+<li>Funkcja kopiowania i przywracania kanałów danych została zastąpiona
+  możliwością importowania i zapisywania w plikach OPML.</li>
+<li>Niezbyt dobrze uformowane kanały mogą być przetwarzane przed dodaniem, aby
+  były zgodne z dodatkiem.</li>
+<li>W panelu ustawień Odczyt kanałów nowa opcja umożliwia wyświetlanie dat
+  artykułów w oknie dialogowym Lista artykułów.</li>
+</ul>
+<h2>Zmiany dla wersji 12.0</h2>
+<ul>
+<li>Naprawiono błąd, który powodował, że skróty do elementów menu narzędzi
+  NVDA nie działały zgodnie z oczekiwaniami.</li>
+</ul>
+<h2>Zmiany dla wersji 11.0</h2>
+<ul>
+<li>Kompatybilny z NVDA 2021.1</li>
+</ul>
+<h2>Zmiany dla wersji 10.0</h2>
+<ul>
+<li>Dodano przycisk do otwierania wybranego kanału informacyjnego jako HTML w
+  domyślnej przeglądarce internetowej.</li>
+<li>Jeśli nie można utworzyć nowego pliku danych, zostanie to wyświetlone w
+  oknie dialogowym błędu.</li>
+<li>Poprawiono kolejność i prezentację niektórych artykułów.</li>
+<li>Może być obsługiwane więcej kanałów.</li>
+<li>Po otwarciu okna dialogowego kanały informacyjne zostanie wyświetlona
+  zamiast pola edycji wyszukiwania.</li>
+<li>Możesz wybrać, czy pole edycji wyszukiwania ma być umieszczone po liście
+  kanałów, co jest przydatne do skupienia listy nawet podczas przełączania z
+  innego okna bez zamykania okna dialogowego Źródła.</li>
+<li>Dodano przycisk do kopiowania adresu kanału do schowka z okna dialogowego
+  kanałów.</li>
+</ul>
+<h2>Zmiany w wersji 9.0</h2>
+<ul>
+<li>Wymaga NVDA 2019.3 lub nowszą.</li>
+</ul>
+<h2>Zmiany w wersji 8.0</h2>
+<ul>
+<li>Po zaktualizowaniu dodatku kanały zapisane w poprzedniej wersji dodatku
+  zostaną automatycznie skopiowane do nowej wersji, chyba że wolisz
+  importować kanały zapisane w głównym folderze konfiguracyjnym NVDA.</li>
+<li>Podczas korzystania z okna dialogowego do kopiowania kanałów
+  informacyjnych, jeśli wybrany folder nie ma nazwy personalFeeds, zostanie
+  utworzony podfolder o tej nazwie, aby zapobiec usunięciu katalogów
+  zawierających ważne dane, takie jak Dokumenty lub Pobrane.</li>
+</ul>
+<h2>Zmiany w wersji 7.0</h2>
+<ul>
+<li>Okno dialogowe Kanały zawiera przycisk do otwierania folderu, który może
+  zawierać kopię zapasową kanałów.</li>
+<li>Podczas używania pola edycji do filtrowania kanałów, jeśli nie zostaną
+  znalezione żadne wyniki, lista kanałów i innych kontrolek jest wyłączona,
+  dzięki czemu NVDA nie zgłasza "nieznanego" na pustej liście.</li>
+<li>Jeśli nie można wyświetlić okna dialogowego listy artykułów, na przykład z
+  powodu błędów w kanale, NVDA spowoduje wyświetlenie błędu, dzięki czemu
+  okno dialogowe kanałów może być używane bez ponownego uruchamiania NVDA.</li>
+</ul>
+<h2>Zmiany w wersji 6.0</h2>
+<ul>
+<li>Gdy domyślny kanał informacyjny został zaktualizowany i przestaje działać
+  z powodu problemów z serwerem, poprzednie artykuły nie są usuwane i można
+  je odczytać za pomocą odpowiednich naciśnięć.</li>
+<li>Naprawiony błąd: Domyślny kanał może być aktualizowany znowu dwa razy.</li>
+</ul>
+<h2>Zmiany dla wersji 5.0</h2>
+<ul>
+<li>Ulepszone okno dialogowe artykułów.</li>
+<li>Zgodny z NVDA 2018.3 lub nowszą (wymagane).</li>
+<li>Jeżeli to potrzebne, można pobrać <a href="https://www.nvaccess.org/addonStore/legacy?file=rf-o">ostatnią wersję zgodną z NVDA
+  2017.3</a>.</li>
+</ul>
+<h2>Zmiany w wersji 4.0</h2>
+<ul>
+<li>Dodano przycisk służący do otwierania wybranego kanału z dialogu kanałów
+  osobistych.</li>
+</ul>
+<h2>Zmiany dla wersji 3.0</h2>
+<ul>
+<li>Dialogi do zarządzania plikami kanałami osobistymi został usunięty. Teraz
+  tę funkcjonalność można znaleźć w dialogu "Kanaly osobiste".</li>
+<li>Wizualna prezentacja dialogów została ulepszona, aby była zgodna z
+  wyświetlanymi dialogami w NVDA.</li>
+<li>Domyślny kanał osobisty jest zachowany w konfiguracji NVDA's. Aczkolwiek,
+  można ustawić poszczególne domyślne kanały osobiste w profilach
+  konfiguracyjnych.</li>
+<li>Wymaga NVDA 2016.4.</li>
+</ul>
+<h2>Zmiany dla wersji 2.0</h2>
+<ul>
+<li>Pomoc dodatku jest dostępna w menedżerze dodatków.</li>
+</ul>
+<h2>Zmiany dla wersji 1.0</h2>
+<ul>
+<li>Pierwsza wersja.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

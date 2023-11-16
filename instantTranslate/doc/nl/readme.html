@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>instantTranslate</h1>
+<ul>
+<li>Authors: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  and other nvda contributors.</li>
+<li>Download <a href="http://addons.nvda-project.org/files/get.php?file=it-dev">version 3.0-dev</a></li>
+</ul>
+<p>Deze add-on kan geselecteerde tekst of tekst van het klembord vertalen. Dit
+wordt gedaan met de Google Translate dienst.</p>
+<h2>Talen instellen</h2>
+<p>To configure source, target and in case swap language, from NVDA menu, go to
+Preferences, then go to Instant Translate Settings.  There are three combo
+boxes labeled "translate from", "translate into" and "Language for swapping"
+(if you selected auto option from source languages).</p>
+<p>If you selected the auto option from source languages, there is also a
+checkbox about the auto-swap: if you activate it, then the addon tries to
+commute automatically from your source and target configuration to a
+configuration where target becomes the source language, and language
+selected in "Language for swapping" combo is the new target language;
+extremely useful if the source language of the text you want translate is
+the target language.</p>
+<p>However, this is a temporary configuration, if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below.</p>
+<h2>Hoe gebruikt u deze add-on</h2>
+<p>Er zijn twee manieren om deze add-on te gebruiken:</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example). Then press Shift+NVDA+T to translate the selected text. Then
+   the translated string will be read, providing that the synthesizer you
+   are using supports the target language.</li>
+<li>Copy some text to clipboard. Then press Shift+NVDA+Y to translate the
+   text in the clipboard to the target language.</li>
+</ol>
+<h2>Other useful commands</h2>
+<ul>
+<li>NVDA+shift+r: pressed once, announce current configuration; pressed twice,
+  swap source and target languages.</li>
+</ul>
+<h2>Changes for 3.0</h2>
+<ul>
+<li>Implemented swapping languages.</li>
+<li>Changed configuration format, now we can change instant translate settings
+  if we are in readonly pane, but remember that this will work before first
+  restart of nvda.</li>
+<li>Removed limit on amount of text that can be translated.</li>
+<li>Sneltoets t toegevoegd aan het menu-item Instellingen voor Instant
+  Translate</li>
+<li>The auto option is now in first position in source combo, and absent in
+  target combo.</li>
+<li>Selectievakje toegevoegd voor het configureren van het kopiëren van
+  vertaalresultaten.</li>
+<li>Het configuratiebestand wordt opgeslagen in de root van de
+  instellingenmap.</li>
+<li>Nieuwe vertalingen: Aragonees, Arabisch, Braziliaans Portuguees,
+  Kroatisch, Nederlands, Fins, Frans, Gallisch, Duits, Hongaars, Italiaans,
+  Japans, Koreaans, Nepali, Pools, Slovaaks, Sloveens, Spaans, Tamil, Turks.</li>
+</ul>
+<h2>Veranderingen voor 2.1</h2>
+<ul>
+<li>De add-on kan nu tekst vertalen van het klembord als u nvda+shift+y drukt.</li>
+</ul>
+<h2>Veranderingen voor 2.0</h2>
+<ul>
+<li>Gui configurator toegevoegd waar u de bron- en doeltaal kunt kiezen.</li>
+<li>U vindt de add-on nu in het menu onder Instellingen.</li>
+<li>De instellingen worden nu opgeslagen in een apart configuratiebestand.</li>
+<li>De vertaalresultaten komen automatisch op het klembord zodat u er verder
+  mee kunt werken.</li>
+</ul>
+<h2>Veranderingen voor 1.0</h2>
+<ul>
+<li>Eerste versie.</li>
+</ul>
+<p>[[!tag dev]]</p>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>Pikakääntäjä</h1>
+<ul>
+<li>Tekijät: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  sekä muut NVDA-yhteisön jäsenet.</li>
+<li>Lataa <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">vakaa versio</a></li>
+<li>Lataa <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">kehitysversio</a></li>
+</ul>
+<p>Tätä lisäosaa käytetään valitun ja/tai leikepöydällä olevan tekstin
+kääntämiseen kielestä toiselle.  Käännös suoritetaan
+Google-kääntäjä-palvelua käyttäen.</p>
+<h2>Kielten määrittäminen</h2>
+<p>Määritä lähde-, kohde- ja vaihdettava kieli valitsemalla "Pikakääntäjä..."-vaihtoehto kohdasta NVDA-valikko -&gt; Asetukset.</p>
+<p>Valintaikkunassa on kaksi yhdistelmäruutua, jotka ovat "Lähdekieli" ja
+"Kohdekieli", sekä valintaruutu, jolla voit valita, kopioidaanko käännös
+leikepöydälle.</p>
+<p>Lisäksi, jos valitsit "Lähdekieli"-yhdistelmäruudusta ensimmäisenä olevan
+Tunnista automaattisesti -vaihtoehdon, käytössä on myös "Vaihdettava
+kieli"-yhdistelmäruutu sekä valintaruutu, jolla automaattinen kielen
+vaihtaminen voidaan ottaa käyttöön.</p>
+<p>Kahden ensimmäisen yhdistelmäruudun ja kopiointivalintaruudun tarkoitus on
+selvä, mutta muiden käytöstä on tarpeen kertoa jotain. Alla olevissa
+selityksissä oletetaan, että Lähdekieli-yhdistelmäruudussa on valittuna
+automaattinen tunnistus.</p>
+<p>"Vaihdettava kieli" -yhdistelmäruudusta on hyötyä vaihtaessasi lähde- ja
+kohdekieltä näppäinkomentoa avulla (katso alta). Kohdekielen määrittämisestä
+automaattiseksi ei ole järkeä, joten lisäosa asettaa sen arvoksi saman kuin
+yllä olevassa yhdistelmäruudussa.</p>
+<p>Kuvittele seuraavanlainen tilanne: käännät tekstiä tavallisesti englanniksi,
+joka on pääasiallinen kielesi, mutta toisinaan (esim. asiakirjaa
+kirjoittaessasi) sinun täytyy kääntää italiaksi, joka on toinen
+kielesi. Valitse "Vaihdettava kieli" -yhdistelmäruudusta italia, jotta voit
+kääntää englannista italiaksi menemättä lisäosan asetuksiin. On selvää, että
+tämän toiminnon hyödyllisyys riippuu siitä, miten usein sinulla on sille
+käyttöä.</p>
+<p>Nyt on vuorossa automaattisen kielen vaihtamisen valintaruutu: Se on
+näkyvissä jos ja vain jos olet valinnut "Lähdekieli"-yhdistelmäruudusta
+automaattisen tunnistuksen, ja se on suoraan yhteydessä "Vaihdettava kieli"
+-yhdistelmäruutuun. Mikäli olet valinnut tämän valintaruudun, lisäosa
+yrittää muuttaa lähde- ja kohdekielten asetukset sellaisiksi, joissa
+kohdekielestä tulee lähdekieli ja "Vaihdettava kieli"-yhdistelmäruudussa
+valitusta kielestä uusi kohdekieli. Tämä on äärimmäisen hyödyllistä, mikäli
+kääntämäsi tekstin kieli on "Kohdekieli"-yhdistelmäruudussa määritettyä
+kieltä.</p>
+<p>Yksinkertainen esimerkki: Palauta mieleesi aiemmin kuviteltu tilanne. Jos
+kääntämäsi tekstin kieli on jokin muu kuin englanti, ongelmia ei ole - saat
+asianmukaisen englanninkielisen käännöksen. Mutta jos sinun täytyy kääntää
+englanninkielistä tekstiä, saat normaalisti käännöksen englanniksi, joka on
+täsmälleen sama kuin alkuperäinen teksti, mistä ei tietenkään ole mitään
+hyötyä. Kiitos automaattisen kielenvaihtamistoiminnon, olettaen, että haluat
+tietää, miltä tekstisi italiankielinen käännös kuulostaa, lisäosa voi
+kuitenkin vaihtaa kohdekielen automaattisesti italiaksi, jolloin saat
+asianmukaisen käännöksen.</p>
+<p>Tämä asetus on oikeastaan tarkoitettu vain tilapäiseen käyttöön. Mikäli
+tällä kokeellisella toiminnolla ei ole vaikutusta, kokeile vaihtaa
+manuaalisesti vakaisiin asetuksiin alla kuvailtua kielenvaihtamiskomentoa
+käyttäen. Toiminto on kokeellinen, koska Google ei tunnista todellista
+lähdekieltä oikein joissakin tilanteissa (tyypillisesti lyhyiden tekstien
+kanssa), ja sinun täytyy vaihtaa kieliä manuaalisesti näppäinkomentoa
+käyttäen pakottaaksesi lähdekieleksi aiemman kohdekielen (meidän
+tapauksessamme englanti).</p>
+<p>Voit halutessasi valita "Vaihda kieltä automaattisesti (kun sitä tuetaan)" -asetuksen Puheasetukset-asetuspaneelista (NVDA-valikko -&gt; Asetukset -&gt; Asetukset -&gt; Puhe). Tällä tavoin syntetisaattori puhuu käännöksen kohdekielen äänellä, mikäli käytät monikielistä syntetisaattoria.</p>
+<h2>Käyttö</h2>
+<p>Voit käyttää tätä lisäosaa kolmella eri tavalla:</p>
+<ol>
+<li>Valitse tekstiä valitsemiskomennoilla
+   (esim. Shift+nuolinäppäimet). Käännä sitten valittu teksti painamalla
+   määritettyä näppäinkomentoa. Tämän jälkeen käännös luetaan käyttämälläsi
+   puhesyntetisaattorilla.</li>
+<li>Voit kääntää myös leikepöydällä olevaa tekstiä.</li>
+<li>Käännä viimeksi puhuttu teksti painamalla erillistä pikanäppäintä.</li>
+</ol>
+<h2>Pikanäppäimet</h2>
+<p>Seuraavia komentoja  on painettava toimintonäppäimen NVDA+Shift+T jälkeen:</p>
+<ul>
+<li>T: Käännä valittu teksti.</li>
+<li>Shift+T: Käännä leikepöydällä oleva teksti.</li>
+<li>S: Vaihda lähde- ja kohdekieliä.</li>
+<li>A: Ilmoita nykyiset asetukset.</li>
+<li>C: Kopioi viimeisin käännös leikepöydälle.</li>
+<li>I: Tunnista valitun tekstin kieli.</li>
+<li>L: Käännä viimeksi puhuttu teksti.</li>
+<li>O: Avaa käännösasetusten valintaikkuna.</li>
+<li>H: Puhuu kaikki käytettävissä olevat komentokerroksen komennot.</li>
+</ul>
+<h2>Muutokset versiossa 4.4.3</h2>
+<ul>
+<li>Lisätty mahdollisuus alaviivojen korvaamiseen välilyönneillä, mikä saattaa
+  kontekstista riippuen tarjota parempia käännöstuloksia (kiitos Beka
+  Gozalishvilille)</li>
+<li>Lisätty yhteensopivuus NVDA 2022.1:lle</li>
+</ul>
+<h2>Muutokset versiossa 4.4.2</h2>
+<ul>
+<li>Kielen tunnistus ja automaattinen vaihto palautettu (kiitos Cyrille'lle
+  korjauksesta).</li>
+<li>Käännöskieliä päivitetty (kiitos Cyrille'lle).</li>
+</ul>
+<h2>Muutokset versiossa 4.4</h2>
+<ul>
+<li>Pikakääntäjä on nyt yhteensopiva NVDA 2019.3:n kanssa (NVDA:n Python 3
+  -versiot).</li>
+</ul>
+<h2>Muutokset versiossa 4.3</h2>
+<ul>
+<li>NVDA-yhteensopivuus korjattu. Pikakääntäjä on nyt yhteensopiva
+  viimeisimpien NVDA-versioiden kanssa.</li>
+<li>Löydetty jälleen keino Googlen käyttämiseen käännöspalveluna.</li>
+</ul>
+<h2>Muutokset versiossa 4.2</h2>
+<ul>
+<li>Palautettu toimivuus uudempien NVDA-versioiden kanssa.</li>
+<li>Automaattinen kielen tunnistus palautettu.</li>
+</ul>
+<h2>Muutokset versiossa 4.1</h2>
+<ul>
+<li>Pikakääntäjä toimii taas, ja käyttää nyt Googlen sijaan
+  Yandex-kääntäjäpalvelua.</li>
+</ul>
+<h2>Muutokset versiossa 4.0</h2>
+<ul>
+<li>Käännös suoritetaan automaattisesti kielen vaihtamisen jälkeen.</li>
+<li>Välimuistibugi korjattu.</li>
+</ul>
+<h2>Muutokset versiossa 3.0</h2>
+<ul>
+<li>Pikanäppäinten käyttötapaa on muutettu. Paina ensin Pikakääntäjän
+  toimintonäppäintä (NVDA+Shift+T) ja sitten haluamaasi toimintoa vastaavaa
+  kirjainta (katso kaikki komennot Pikanäppäimet-kappaleesta).</li>
+<li>Kielten vaihtaminen toteutettu.</li>
+<li>Asetusten muotoa on muutettu. Pikakääntäjän asetusten muuttaminen on nyt
+  mahdollista vain luku -tiedostojärjestelmissä, mutta tehdyt muutokset ovat
+  voimassa vain NVDA:n seuraavaan uudelleenkäynnistykseen asti.</li>
+<li>Poistettu käännettävän tekstimäärän rajoitus.</li>
+<li>Lisätty t-pikanäppäin englanninkieliseen Pikakäännöksen asetukset
+  -valikkokohteeseen</li>
+<li>Automaattinen tunnistus on nyt ensimmäisenä vaihtoehtona
+  Lähdekieli-yhdistelmäruudussa, ja poistettu kokonaan
+  Kohdekieli-yhdistelmäruudusta.</li>
+<li>Lisätty valintaruutu käännöstuloksen kopioinnin määrittämiseksi.</li>
+<li>Asetustiedosto tallennetaan asetuskansion juureen.</li>
+<li>Lähde- ja kohdekielet synkronoitu Google-kääntäjän tällä hetkellä
+  käyttämien kielten kanssa (22. huhtikuuta 2015).</li>
+</ul>
+<h2>Muutokset versiossa 2.1</h2>
+<ul>
+<li>Lisäosa voi kääntää leikepöydällä olevan tekstin painettaessa
+  NVDA+Shift+Y.</li>
+</ul>
+<h2>Muutokset versiossa 2.0</h2>
+<ul>
+<li>Lisätty graafinen käyttöliittymä, josta voidaan valita lähde- ja
+  kohdekieli.</li>
+<li>Lisätty valikko, joka löytyy Asetukset-valikosta.</li>
+<li>Asetukset kirjoitetaan nyt erilliseen asetustiedostoon.</li>
+<li>Käännöksen tulokset kopioidaan nyt automaattisesti leikepöydälle tulevaa
+  käsittelyä varten.</li>
+</ul>
+<h2>Muutokset versiossa 1.0</h2>
+<ul>
+<li>Ensimmäinen versio.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

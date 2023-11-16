@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>Gyorsfordító</h1>
+<ul>
+<li>Készítők: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto
+  Buffolino, és további NVDA közreműködők.</li>
+<li>Letöltés <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">Stabil verzió</a></li>
+<li>Letöltés <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">Fejlesztői verzió</a></li>
+</ul>
+<p>This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.</p>
+<h2>Nyelvek beállítása</h2>
+<p>A forrás, célnyelv, és nyelvek felcserélésére szolgáló lehetőségeket az NVDA menü-&gt;beállítások-&gt;Gyorsfordító beállításai menüpontban érheti el.</p>
+<p>A megnyíló ablakban két kombinált listamező található a forrásnyelv és
+célnyelv beállítására, ill. egy jelölőnégyzet, mellyel a fordítás vágólapra
+másolását lehet elrendelni vagy tiltani.</p>
+<p>Amennyiben a forrásnyelvnél az automatikus nyelvfelismerését választotta ki
+(a listában az első elem), megjelenik egy "Felcserélés nyelve" megnevezésű
+lista, amellyel a nyelv felcserélését lehet konfigurálni, és egy az
+automatikus felcserélés beállítására való jelölőnégyzet is.</p>
+<p>Az első két kombinált listamező és a másolást szabályzó jelölőnégyzet
+működése egyértelmű, viszont a többi beállítás bővebb magyarázatra
+szorul. Fontos, hogy az alábbiak csak akkor érvényesek, ha a forrás nyelve
+automatikusra van állítva.</p>
+<p>A "Felcserélés nyelve" funkció abban az esetben hasznos, ha a forrás és cél
+nyelv váltását automatikusan szeretné megoldani. Mivel az automatikus
+felismerésnek a cél nyelv esetén nincs értelme, így ez ebben a listában nem
+jelenik meg.</p>
+<p>Képzelje el a következő szituációt: Minden szöveget magyar nyelvre szeretne
+lefordítani, de olykor a magyarul begépelt szövegnek szeretné megnézni az
+angol fordítását is. Amennyiben a felcserélés nyelvét angolra állítja, úgy a
+két nyelv közötti fordítás automatikusan megtörténik, anélkül, hogy
+megnyitná a kiegészítő párbeszédablakát.</p>
+<p>Ha a forrás nyelvnél az automatikus felismerés van kiválasztva, megjelenik
+egy jelölőnégyzet az automatikus forrás és célnyelv felcseréléséről. Ha
+aktiválja ezt, a kiegészítő megpróbálja automatikusan váltogatni a forrás és
+a célnyelvet. Ekkor a forrás nyelv lesz a célnyelv, és a "Felcserélés
+nyelve" az új forrás nyelv. Ez a lehetőség akkor nagyon hasznos, hogyha a
+beállított célnyelvről szeretnénk egy szöveget lefordíttatni.</p>
+<p>A fenti példából  kiindulva, ha bármilyen szöveget lefordít magyarra, az
+eredmény magyar nyelvű lesz. A felcserélés nyelve funkció használata nélkül
+ha egy magyar szöveget ad meg a programnak, ugyanazt a szöveget kapja
+vissza, aminek nincs túl sok értelme. Az automatikus felcserélésnek
+köszönhetően a kiegészítő felismeri, hogy az éppen kijelölt szöveget milyen
+nyelvre kell lefordítania, ha a szöveg nyelve nem egyezik meg a
+célnyelvével, akkor automatikusan a célnyelven adja vissza.</p>
+<p>Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).</p>
+<p>At least, in the speech settings parameters dialog (NVDA Menu &gt;&gt; Preferences &gt;&gt; Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.</p>
+<h2>Használat</h2>
+<p>You can use this add-on in three ways:</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.</li>
+<li>A kiegészítő képes a vágólapon lévő szöveg lefordítására is.</li>
+<li>Press the dedicated shortcut key to translate the last spoken text.</li>
+</ol>
+<h2>Billentyűparancsok</h2>
+<p>Az alábbi parancsok az "NVDA+Shift+t" módosító billentyűparancs lenyomása
+után használhatók:</p>
+<ul>
+<li>T: Lefordítja a kijelölt szöveget,</li>
+<li>Shift+t: Lefordítja a vágólapon található szöveget,</li>
+<li>S: Felcseréli a forrás- és a célnyelvet.</li>
+<li>A: Bemondja az aktuális beállításokat,</li>
+<li>C: Az utolsó fordítás eredményét a vágólapra másolja,</li>
+<li>I: Felismeri a kijelölt szöveg nyelvét,</li>
+<li>L: translate the last spoken text,</li>
+<li>O: open translation settings dialog</li>
+<li>H: announces all available layered commands.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>Changes for 4.4.2</h2>
+<ul>
+<li>Restore language detection and auto-swapping (Thanks to Cyrille for fix)</li>
+<li>updated languages for translation (thanks to Cyrille)</li>
+</ul>
+<h2>Changes for 4.4</h2>
+<ul>
+<li>Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)</li>
+</ul>
+<h2>Changes for 4.3</h2>
+<ul>
+<li>nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.</li>
+<li>found a way to use google as a translation service again.</li>
+</ul>
+<h2>Changes for 4.2</h2>
+<ul>
+<li>Restored working state with newer versions of nvda.</li>
+<li>Restored automatic language detection.</li>
+</ul>
+<h2>A 4.1 verzió változásai</h2>
+<ul>
+<li>A gyorsfordító újra működik, a Google szolgáltatása helyett Yandex fordító
+  szolgáltatásával.</li>
+</ul>
+<h2>A 4.0 verzió változásai</h2>
+<ul>
+<li>A fordítás eredménye automatikusan a vágólapra kerül a nyelv  felcserélést
+  követöen.</li>
+<li>A gyorsítótárazási hibát javították.</li>
+</ul>
+<h2>A 3.0 verzió változásai</h2>
+<ul>
+<li>Megváltoztatták a billentyűparancsok felépítését, az NVDA+shift+t
+  megnyomása után az egykarakteres gyorsbillentyűt lenyomva aktiválható a
+  kiválasztott funkció. Bővebb információk a {"Billentyűparancsok"
+  fejezetben} olvashatók.</li>
+<li>Beépítették a nyelvek felcserélése funkciót.</li>
+<li>A beállítás módjának megváltoztatása, így módosíthatóak a Gyorsfordító
+  beállításai egy csak olvasható eszközön is, de ezek csak az NVDA
+  újraindításáig maradnak életben.</li>
+<li>A lefordítható szöveg mennyisége korlátozásának megszüntetése.</li>
+<li>Gyorsbillentyű hozzáadása a Gyorsfordító menüjének eléréséhez.</li>
+<li>Az automatikus felismerés a legelső a forrásnyelv listában, a célnyelvéből
+  pedig hiányzik.</li>
+<li>Egy jelölőnégyzet hozzáadása a fordítás eredményének konfigurálásához.</li>
+<li>A konfigurációs fájl a beállítások főmappájában található.</li>
+<li>A forrás és célnyelv már a Google-nek megfelelő formátumban kerül
+  elküldésre (2015 április22)</li>
+</ul>
+<h2>A 2.1 verzió változásai</h2>
+<ul>
+<li>Mostantól a kiegészítő képes a vágólapon lévő szöveg lefordítására is az
+  nvda+shift+y billentyűparanccsal.</li>
+</ul>
+<h2>A 2.0 verzió változásai</h2>
+<ul>
+<li>Grafikus ablak hozzáadása, ahol kiválasztható a forrás és a célnyelv.</li>
+<li>A kiegészítő menüjének hozzáadása a beállítások menühöz.</li>
+<li>A beállítások mostantól egy elkülönített konfigurációs fájlba íródnak.</li>
+<li>A fordítás eredménye automatikusan a vágólapra kerül, így később ez
+  könnyen használható.</li>
+</ul>
+<h2>Az 1.0 verzió változásai</h2>
+<ul>
+<li>Első változat</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

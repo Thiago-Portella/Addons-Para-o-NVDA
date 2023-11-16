@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>Sofortübersetzung</h1>
+<ul>
+<li>Autoren: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  und andere NVDA-Entwickler.</li>
+<li><a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">Stabile Version herunterladen</a></li>
+<li><a href="https://addons.nvda-project.org/files/get.php?file=it-dev">Entwicklerversion herunterladen</a></li>
+</ul>
+<p>Diese Erweiterung wird verwendet, um ausgewählten Text und/oder Text aus der
+Zwischenablage von einer Sprache in eine andere zu übersetzen. Dies
+geschieht über den Google-Dienst für Übersetzungen.</p>
+<h2>Sprachen einstellen</h2>
+<p>Um die Quell-, Ziel- und ggf. Tauschsprache zu konfigurieren, gehen Sie zu: NVDA-Menü &gt;&gt; Einstellungen &gt;&gt; Einstellungen für die Sofortübersetzung.</p>
+<p>Es gibt zwei Ausklapplisten mit den Bezeichnungen"Quellsprache"
+und"Zielsprache" und ein Kontrollkästchen, um zu entscheiden, ob die
+Übersetzung in die Zwischenablage kopiert werden soll.</p>
+<p>Zusätzlich, wenn Sie die Auto-Option (die erste Wahl) aus der
+"Quellsprache"-Ausklappliste ausgewählt haben, gibt es auch eine
+Ausklappliste mit der Bezeichnung"Sprachentausch" und ein Kontrollkästchen
+Automatischer Tausch.</p>
+<p>Die Bedeutung der beiden ersten Ausklapplisten und des Kontrollfeldes für
+die Kopie ist klar, aber einige Worte über den Rest sind notwendig. Denken
+Sie immer daran, dass die folgenden Erklärungen die Quellsprache mit
+Auto-Option voraussetzen.</p>
+<p>Die Ausklappliste "Sprachentausch" ist nützlich, wenn Sie per Skript (siehe
+unten) die Quell- und Zielsprache austauschen. Tatsächlich hat eine
+Zielsprache, die auf der Auto-Option eingestellt ist, keinen Sinn, also
+setzt die Erweiterung sie auf den Wert der obigen Ausklappliste.</p>
+<p>Stellen Sie sich diese Situation vor: Sie übersetzen normalerweise ins
+Englische (Ihre Hauptsprache). Manchmal (zum Beispiel, wenn Sie ein Dokument
+schreiben) müssen Sie ins Italienische übersetzen (Ihre zweite
+Sprache). Nehmen Sie an Sie könnten die "Sprachentausch"-Ausklappliste auf
+Italienisch einstellen, so dass Sie aus dem Englischen ins Italienische
+übersetzen ohne direkt auf die Erweiterungseinstellungen
+zuzugreifen. Offensichtlich hat diese Funktion einen höheren oder geringeren
+Nutzen, je nach Ihren individuellen Bedürfnissen.</p>
+<p>Das Auto-Tausch-Kontrollkästchen erscheint ausschließlich wenn Sie die
+Auto-Option in der Ausklappliste "Quellsprache" eingestellt haben. Das
+Kontrollkästchen ist direkt mit der Ausklappliste "Sprachentausch"
+verbunden. Wenn Sie es aktivieren, dann versucht die Erweiterung automatisch
+von Ihrer Quell- und Zielkonfiguration in eine Konfiguration umzuwandeln,
+bei der die Ziel- zur Quellsprache wird und die Sprache, die in der
+"Sprachentausch"-Ausklappliste ausgewählt wurde, Zielsprache wird. Dies ist
+äußerst nützlich, wenn die Quellsprache des zu übersetzenden Textes die
+Zielsprache ist.</p>
+<p>Ein einfaches Beispiel: Denken Sie noch einmal an die Situation, die Sie
+sich vorher vorgestellt haben. Wenn Sie einen Text aus einer anderen Sprache
+als Englisch übersetzen, gibt es kein Problem. Sie erhalten die richtige
+Übersetzung ins Englische. Aber wenn Sie einen Text aus dem Englischen
+übersetzen müssen, erhalten Sie normalerweise eine Übersetzung ins
+Englische, die mit dem Originaltext identisch ist. Das ist ein Wenig
+nutzlos. Durch die Auto-Swap-Funktion geht die Erweiterung davon aus, dass
+Sie wissen wollen wie Ihr Text ins Italienische klingt. Die Funktion
+schaltet automatisch die Zielsprache ins Italienische um, so dass eine
+gültige Übersetzung ausgegeben wird.</p>
+<p>Wie auch immer, dies ist eine temporäre Konfiguration; Wenn diese Option
+keine Wirkung hat (sie ist experimentell), versuchen Sie, manuell zu einer
+stabilen Konfiguration zu wechseln, indem Sie die unten beschriebene
+Tastenkombination zum Wechseln verwenden. Es ist experimentell, da Google in
+einigen Situationen (in der Regel bei kurzen Texten) die echte
+Ausgangssprache nicht richtig erkennt und Sie die Sprachen manuell per
+Skript austauschen müssen, um die Ausgangssprache als vorherige Zielsprache
+zu erzwingen (Englisch in unserem Beispiel).</p>
+<p>Zumindest im Dialogfeld mit den Sprach-Einstellungen (NVDA-Menü -&gt; Einstellungen -&gt; Sprache) möchten Sie vielleicht die Option "Automatische Sprachumschaltung (wenn unterstützt)" aktivieren. Wenn Sie einen mehrsprachigen Synthesizer verwenden, wird die Übersetzung auf diese Weise mit der zielsprachlichen Stimme der Sprachausgabe angesagt.</p>
+<h2>Verwendung</h2>
+<p>Sie können diese Erweiterung auf drei Arten verwenden:</p>
+<ol>
+<li>Wählen Sie Text mit Tastenkombinationen zur Auswahl aus (z. B. Umschalten
+   mit den Pfeiltasten) und drücken Sie zum Übersetzen die entsprechende
+   Taste. Das Übersetzungsergebnis wird von der verwendeten Sprachausgabe
+   mitgeteilt.</li>
+<li>Sie können auch den Text der Zwischenablage übersetzen lassen.</li>
+<li>Drücken Sie die entsprechende Tastenkombination, um den zuletzt
+   gesprochenen Text zu übersetzen.</li>
+</ol>
+<h2>Tastenkürzel</h2>
+<p>Alle folgenden Befehle müssen nach der zuvor gedrückten Modifikationstaste
+"NVDA+Shift+t" gedrückt werden:</p>
+<ul>
+<li>T: Markierten Text übersetzen,</li>
+<li>Umschalt+t: Text aus der Zwischenablage übersetzen,</li>
+<li>S: tausche Ausgangs- und Zielsprache,</li>
+<li>A: aktuelle Konfiguration ansagen,</li>
+<li>C: kopiere letztes Ergebnis in die Zwischenablage,</li>
+<li>I: die Sprache des markierten Texts ermitteln,</li>
+<li>L: Den zuletzt vorgelesenen Text übersetzen,</li>
+<li>O: Einstellungen für die Übersetzungen öffnen</li>
+<li>H: Nennt alle verfügbaren Tastenbefehle.</li>
+</ul>
+<h2>Änderungen in 4.4.3</h2>
+<ul>
+<li>Es wurde die Möglichkeit hinzugefügt, Unterstriche durch Leerzeichen zu
+  ersetzen, was je nach Kontext zu besseren Übersetzungsergebnissen führen
+  kann (Dank an Beka Gozalishvili)</li>
+<li>Kompatibilität für NVDA 2022.1 hinzugefügt</li>
+</ul>
+<h2>Änderungen in 4.4.2</h2>
+<ul>
+<li>Stellt die Spracherkennung und den automatischen Austausch wieder her
+  (Danke an Cyrille für die Korrektur)</li>
+<li>aktualisierte Sprachen für die Übersetzung (Dank an Cyrille)</li>
+</ul>
+<h2>Änderungen in 4.4</h2>
+<ul>
+<li>Instant Translate ist jetzt mit neueren NVDA (Python 3) kompatibel.</li>
+</ul>
+<h2>Änderungen in 4.3</h2>
+<ul>
+<li>Instant Translate ist mit den neuesten NVDA-Builds kompatibel.</li>
+<li>einen Weg gefunden, Google wieder als Übersetzungsdienst zu nutzen.</li>
+</ul>
+<h2>Änderungen in 4.2</h2>
+<ul>
+<li>Betriebszustand mit neueren Versionen von NVDA wiederhergestellt.</li>
+<li>Automatische Spracherkennung wiederhergestellt.</li>
+</ul>
+<h2>Änderungen in 4.1</h2>
+<ul>
+<li>Sofortübersetzung funktioniert wieder, jetzt jedoch mit Yandex-Übersetzer
+  statt mit Google.</li>
+</ul>
+<h2>Änderungen in 4.0</h2>
+<ul>
+<li>Übersetzungsergebnisse  werden nun automatisch in die Zwischenablage
+  kopiert, um diese weiter verwenden zu können.</li>
+<li>Cache-Problem behoben.</li>
+</ul>
+<h2>Änderungen in 3.0</h2>
+<ul>
+<li>Ändert die Art und Weise, wie Shortcuts verwendet werden. Jetzt können Sie
+  die Änderungstasten der Sofortübersetzung (NVDA+Shift+t) drücken und dann
+  einen Buchstaben, um eine Aktion auszuführen (siehe alle Befehle im
+  Abschnitt"Tastenbefehle").</li>
+<li>Sprachen vertauschen implementiert.</li>
+<li>Geändertes Einstellungsformat, jetzt können Sie die Einstellungen für die
+  Sofortübersetzung ändern, wenn Sie sich im Nur-Lesen-Fenster
+  befinden. Dies wird nur vor dem ersten Neustart von NVDA funktionieren.</li>
+<li>Die Begrenzung der Textmenge, die übersetzt werden kann, wurde entfernt.</li>
+<li>Tastenkürzel T zum Menüpunkt für die Einstellungen von Sofortübersetzung
+  hinzugefügt</li>
+<li>Die Auto-Option befindet sich jetzt an erster Stelle in der
+  Quellkombination und fehlt in der Zielkombination.</li>
+<li>Option hinzugefügt, um festzulegen, ob das Resultat der Übersetzung
+  kopiert werden soll.</li>
+<li>Konfigurationsdatei wird im Einstellungsverzeichnis gespeichert.</li>
+<li>Ausgangs- und Zielsprache mit Google-Translate-Vorschlägen synchronisiert
+  ( 22. April 2015 ).</li>
+</ul>
+<h2>Änderungen in 2.1</h2>
+<ul>
+<li>Die Erweiterung übersetzt nun den Text aus der Zwischenablage mittels
+  NVDA+Y.</li>
+</ul>
+<h2>Änderungen in 2.0</h2>
+<ul>
+<li>Einstellungsdialog zur Wahl der Ein- und Ausgabesprache hinzugefügt.</li>
+<li>Menü für die Erweiterung im Einstellungen-Menü hinzugefügt.</li>
+<li>Einstellungen werden in eine separate Datei geschrieben.</li>
+<li>Übersetzungsergebnisse  werden nun automatisch in die Zwischenablage
+  kopiert, um diese weiter verwenden zu können.</li>
+</ul>
+<h2>Änderungen in 1.0</h2>
+<ul>
+<li>Erste Version.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

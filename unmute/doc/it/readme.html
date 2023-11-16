@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Unmute Windows audio 1.5.7</title>
+</head>
+<body>
+<h1>NVDA Unmute</h1>
+<ul>
+<li>Authore: Oleksandr Gryshchenko</li>
+<li>Versione: 1.3</li>
+<li><a href="https://github.com/grisov/Unmute/releases/download/v1.3/unmute-1.3.nvda-addon">versione stabile</a></li>
+<li><a href="https://github.com/grisov/Unmute/releases/download/v1.3/unmute-1.3.nvda-addon">versione in sviluppo</a></li>
+</ul>
+<p>Questo componente aggiuntivo controlla lo stato del sistema audio di Windows all'avvio di NVDA. Se l'audio dovesse essere disattivato, il componente aggiuntivo lo attiva forzatamente.</p>
+<p>Il componente aggiuntivo controlla anche lo stato del sintetizzatore vocale. In caso di problemi con la sua inizializzazione, si tenta di avviare il sintetizzatore, specificato nelle impostazioni di NVDA.</p>
+<p>Una caratteristica aggiuntiva è la possibilità di regolare il volume del dispositivo audio principale e di ogni singola applicazione.</p>
+<h2>impostazioni del componente aggiuntivo</h2>
+<p>Le seguenti opzioni sono disponibili nella finestra di dialogo delle impostazioni del componente aggiuntivo:</p>
+<ol>
+<li>Il primo cursore d'avanzamento nella finestra di dialogo delle impostazioni del componente aggiuntivo consente di specificare il livello del volume di Windows, che verrà eseguito all'avvio di NVDA Se il suono era precedentemente disattivato o era troppo basso.</li>
+<li>Aumenta il volume se è  inferiore a: questo cursore d'avanzamento consente di regolare il livello di sensibilità del componente aggiuntivo. Se il livello del volume scende al di sotto del valore specificato, il volume verrà aumentato al successivo avvio di NVDA. In caso contrario, se il livello del volume è superiore al valore specificato, al riavvio di NVDA, il suo livello non cambierà. Naturalmente, se il volume è stato precedentemente disattivato, al riavvio il componente aggiuntivo lo attiverà comunque.</li>
+<li>La successiva casella di controllo consente di abilitare la reinizializzazione del driver del sintetizzatore vocale. Questa procedura verrà avviata solo se all'avvio di NVDA viene rilevato che il driver del sintetizzatore vocale non è stato inizializzato.</li>
+<li>In questo campo è possibile specificare il numero di tentativi per reinizializzare il driver del sintetizzatore vocale. I tentativi vengono eseguiti ciclicamente con un intervallo di 1 secondo. Il valore 0 significa che i tentativi verranno eseguiti  fino a quando l'operazione non sarà completata con successo.</li>
+<li>La casella di controllo successiva attiva o disattiva la riproduzione del suono di avvio quando l'operazione è riuscita.</li>
+</ol>
+<h2>Regola il volume</h2>
+<p>Questo componente aggiuntivo consente di regolare il volume del dispositivo audio principale di Windows e per ogni programma attualmente in esecuzione.</p>
+<p>Per fare questo utilizza le scorciatoie da tastiera NVDA + Windows + tasti freccia.</p>
+<p>Utilizzare le frecce sinistra e destra per selezionare un dispositivo o un'applicazione. Quindi utilizzare le frecce su e giù per regolare il livello del volume della sorgente audio selezionata.</p>
+<p>Se si riduce il volume a zero per un determinato programma e si preme nuovamente la freccia in basso, questa sorgente sonora verrà disattivata.</p>
+<blockquote>
+<p>Nota: l'elenco delle sorgenti audio cambia dinamicamente e dipende dai programmi attualmente in esecuzione.</p>
+</blockquote>
+<h2>Change log</h2>
+<h3>Version 1.3</h3>
+<ul>
+<li>added the ability to control the volume of the main audio device and separately for each running program;</li>
+<li>updated translation into Vietnamese (thanks to Dang Manh Cuong);</li>
+<li>updated Ukrainian translation;</li>
+<li>updated ReadMe.</li>
+</ul>
+<h3>Version 1.2</h3>
+<ul>
+<li>switched to using the <strong>Core Audio Windows API</strong> instead of <strong>Windows Sound Manager</strong>;</li>
+<li>added startup sound playback when audio is successfully turned on by add-on.</li>
+</ul>
+<h3>Version 1.1</h3>
+<ul>
+<li>added add-on settings dialog;</li>
+<li>updated Ukrainian translation.</li>
+</ul>
+<h3>Version 1.0.1</h3>
+<ul>
+<li>Performs repeated attempts to enabling the synth driver in case of its failed initialization;</li>
+<li>Vietnamese translation added by Dang Manh Cuong;</li>
+<li>Ukrainian translation added.</li>
+</ul>
+<h3>Version 1.0. Features of implementation</h3>
+<p>The add-on uses a third-party module Windows Sound Manager.</p>
+<h2>Altering NVDA Unmute</h2>
+<p>You may clone this repo to make alteration to NVDA Unmute.</p>
+<h3>Third Party dependencies</h3>
+<p>These can be installed with pip:
+- markdown
+- scons
+- python-gettext</p>
+<h3>To package the add-on for distribution:</h3>
+<ol>
+<li>Open a command line, change to the root of this repo</li>
+<li>Run the <strong>scons</strong> command. The created add-on, if there were no errors, is placed in the current directory.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Read Feeds 26.0.0</title>
+</head>
+<body>
+<h1>Read Feeds</h1>
+<ul>
+<li>Autori: Noelia Ruiz Martínez, Mesar Hameed</li>
+</ul>
+<p>Questo componente aggiuntivo fornisce un modo semplice per leggere i feed
+nel formato Atom o RSS usando NVDA. I feed non verranno aggiornati
+automaticamente. Nel seguito, quando menzioneremo i feed, intenderemo sia i
+feed RSS che i feed ATOM.</p>
+<h2>Comandi</h2>
+<h3>La finestra Read Feeds</h3>
+<p>Si può accedere alla finestra  Read Feeds dal menu di NVDA, Strumenti,
+Feeds.</p>
+<p>Contiene  i seguenti controlli:</p>
+<ul>
+<li>Filtra per: un campo editazione per la ricerca tra i feed salvati.</li>
+<li>Un elenco dei feed salvati, che viene focalizzato quando la finestra viene
+  aperta.</li>
+<li>Elenco articoli: apre una finestra che presenta l'elenco degli articoli
+  del feed selezionato. Selezionate l'articolo che vi interessa leggere,
+  quindi premete Invio o il pulsante Apri feed per aprire l'articolo con il
+  vostro browser predefinito. Premendo il pulsante Informazioni Articolo è
+  possibile visualizzare il link ed il titolo dell'articolo
+  selezionato. Queste informazioni possono essere copiate negli appunti.</li>
+<li>Apri feed: apre il feed selezionato nell'applicazione predefinita.</li>
+<li>Apri feed come HTML. Apre il feed selezionato nel vostro browser
+  predefinito. Potrete mostrare o nascondere la data di pubblicazione e il
+  pulsante per copiare negli appunti le informazioni sull'articolo.</li>
+<li>Copia indirizzo feed. Apre una finestra che vi consente di cfonfermare se
+  volete copiare negli appunti l'indirizzo del feed.</li>
+<li>Nuovo: apre una finestra didialogo con un campo editazione per inserire
+  l'indirizzo  di un nuovo feed. Se l'indirizzo è valido ed il feed può
+  essere salvato, il nome del  feed, basato sul titolo, apparirà in fondo
+  all'elenco dei feed.</li>
+<li>Rinomina: apre una finestra con un campo editazione per rinominare il feed
+  selezionato.</li>
+<li>Elimina: apre una finestra che consente di eliminare il feed selezionato,
+  dopo conferma.</li>
+<li>Imposta come predefinito: permette di impostare il feed selezionato come
+  predefinito, in modo che si possa accedere ai suoi articoli con i comandi
+  di NVDA.</li>
+<li>Importa feeds da file OPML: Apre una finestra di dialogo per aggiungere
+  nuovi feed da file OPML.</li>
+<li>Salva i  feed in file  OPML: Apre una finestra di dialogo per salvare i
+  feed disponibili dalla finestra di dialogo Feed in file OPML.</li>
+<li>Preferenze: apre la finestra impostazioni di ReadFeeds, disponibile anche
+  dal menu di NVDA-&gt;Preferenze-&gt;Impostazioni, categoria Read Feeds.</li>
+<li>Chiudi: chiude la finestra dei feed.</li>
+</ul>
+<h3>Note</h3>
+<ul>
+<li>Il campo editazione "Filtra per" può essere collocato dopo il pulsante
+  "Apri articolo" andando nel menu di NVDA-&gt;Preferenze-&gt;Impostazioni,
+  categoria Read feeds, oppure attivando il pulsante "Preferenze" della
+  finestra Feeds.</li>
+<li>Questo riquadro  ha un'opzione per mostrare le date degli articoli nella
+  finestra di dialogo Elenco degli articoli.</li>
+</ul>
+<h3>Comandi da tastiera</h3>
+<ul>
+<li>Ctrl+Shift+NVDA+Spazio: Legge il link dell'articolo selezionato. Se
+  premuto due volte apre la pagina web dell'articolo.</li>
+<li>Ctrl+Shift+NVDA+8: Aggiorna il feed selezionato e legge il titolo
+  dell'articolo più recente.</li>
+<li>Ctrl+Shift+NVDA+I: legge il titolo e il link del feed selezionato. Se
+  premuto due volte, copia queste informazioni negli appunti.</li>
+<li>Ctrl+Shift+NVDA+U: legge il titolo del feed precedente.</li>
+<li>Ctrl+Shift+NVDA+O: legge il titolo del feed successivo.</li>
+</ul>
+<h2>Avvisi vocali</h2>
+<ul>
+<li>Quando un titolo o un link sono stati copiati.</li>
+<li>Quando non è possibile connettersi o aggiornare un feed, o l'URL non
+  corrisponde ad un feed valido.</li>
+<li>NVDA visualizzerà un messaggio di errore se non è possibile creare un
+  nuovo feed.</li>
+<li>Nel titolo della finestra elenco articoli viene indicato il nome del feed
+  selezionato ed il numero di elementi disponibili.</li>
+</ul>
+<h2>Changes for 21.0</h2>
+<ul>
+<li>Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.</li>
+</ul>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>universalFeedParser is updated to 5.0.1, adding support for more feeds.</li>
+</ul>
+<h2>Novità nella versione 14.0</h2>
+<ul>
+<li>Risolto un errore che rendeva impossibile aggiungere alcuni feed.</li>
+</ul>
+<h2>Novità nella versione 13.0</h2>
+<ul>
+<li>Il componente aggiuntivo non può essere utilizzato in modalità schermo
+  protetto.</li>
+<li>I feed sono gestiti con file OPML.</li>
+<li>A causa di modifiche nel sistema di gestione dei feed, sono state
+  apportate modifiche al file di configurazione dove è impostato il feed
+  predefinito. Usa la finestra di dialogo Feed se vuoi impostarla di nuovo.</li>
+<li>I vecchi file di testo utilizzati nelle versioni precedenti verranno
+  automaticamente importati nel nuovo formato OPML all'avvio del componente
+  aggiuntivo.</li>
+<li>La funzione di copia e ripristino dei feed è stata sostituita con la
+  possibilità di importare e salvare in file OPML.</li>
+<li>I feed con formato incorretto possono essere elaborati prima di essere
+  aggiunti per renderli compatibili con il componente aggiuntivo.</li>
+<li>Nelle impostazioni del componente ReadFeeds, una nuova opzione consente di
+  visualizzare le date degli articoli nella finestra Elenco articoli.</li>
+</ul>
+<h2>Novità nella versione 12.0</h2>
+<ul>
+<li>Risolto un errore per il quale le scorciatoie per gli elementi del menu
+  degli strumenti di NVDA non funzionavano come previsto.</li>
+</ul>
+<h2>Novità nella versione 11.0</h2>
+<ul>
+<li>Compatibile con NVDA 2021.1</li>
+</ul>
+<h2>Novità nella versione 10.0</h2>
+<ul>
+<li>Aggiunto un pulsante per aprire il feed selezionato come HTML nel browser
+  preferito.</li>
+<li>Se un nuovo feed non può essere creato, apparirà una finestra di errore.</li>
+<li>Migliorato l'ordine e il layout di alcuni articoli.</li>
+<li>Aggiunto il supporto per nuove tipologie di feeds.</li>
+<li>Quando viene aperta la finestra Feeds, verrà focalizzata la lista dei
+  feeds anziché il campo editazione Cerca.</li>
+<li>E' possibile scegliere se il campo editazione "Cerca" sia mostrato dopo la
+  lista dei feeds; ciò è utile per focalizzare la lista anche quando di
+  viene da un'altra finestra senza chiudere la finestra Feeds.</li>
+<li>Aggiunto un pulsante per copiare l'indirizzo del feed selezionato dalla
+  finestra Feeds.</li>
+</ul>
+<h2>Novità nella versione 9.0</h2>
+<ul>
+<li>Richiede NVDA 2019.3 o versioni successive.</li>
+</ul>
+<h2>Novità nella versione 8.0</h2>
+<ul>
+<li>Quando l'add-on viene aggiornato, i feed salvati nella versione precedente
+  saranno automaticamente copiati nella nuova versione, a meno che non si
+  preferisca importare i feed salvati nella cartella di configurazione di
+  NVDA.</li>
+<li>Quando si usa la finestra per copiare i feeds, se la cartella scelta non
+  si chiama personalFeeds, verà creata una sottocartella con questo nome,
+  per evitare la cancellazione di cartelle contenenti dati importanti, quali
+  Documenti o Downloads.</li>
+</ul>
+<h2>Novità nella versione 7.0</h2>
+<ul>
+<li>Aggiunto un pulsante Nella finestra Feed che consente di aprire una
+  cartella di backup.</li>
+<li>Quando non si trova nessun risultato dal campo editazione per filtrare i
+  feeds, l'elenco Feed e gli altri controlli vengono disattivati. In questo
+  modo NVDA non annuncierà più "sconosciuto" in elenchi vuoti.</li>
+<li>Se l'elenco degli articoli non può essere visualizzato, perché per esempio
+  c'è un problema nel feed, NVDA mostrerà un messaggio di errore. In questo
+  modo non sarà più necessario riavviare NVDA per usare la finestra Feed.</li>
+</ul>
+<h2>Novità nella versione 6.0</h2>
+<ul>
+<li>Quando il feed predefinito è stato aggiornato, ma per problemi sul server
+  smette di funzionare, gli articoli precedenti non vengono eliminati e
+  possono essere letti con i comandi corrispondenti.</li>
+<li>Il feed predefinito può essere nuovamente aggiornato due volte (Fix
+  regression).</li>
+</ul>
+<h2>Novità nella versione 5.0</h2>
+<ul>
+<li>Migliorata la finestra per l'elenco articoli.</li>
+<li>Compatibile con NVDA 2018.3 o versioni successive (richiesto).</li>
+<li>Se è necessario, è possibile scaricare l'ultima versione <a href="https://www.nvaccess.org/addonStore/legacy?file=rf-o">compatibile con
+  NVDA 2017.3</a>.</li>
+</ul>
+<h2>Novità nella versione 4.0</h2>
+<ul>
+<li>Aggiunto un pulsante per aprire il feed selezionato dalla finestra Feeds.</li>
+</ul>
+<h2>Novità nella versione 3.0</h2>
+<ul>
+<li>Le finestre per gestire i file dei feed sono state rimosse. Questa
+  funzione verrà eseguita dalla finestra Feeds.</li>
+<li>La rappresentazione grafica dell'interfaccia per le finestre di dialogo è
+  stata migliorata, in conformità con il layout delle finestre di dialogo di
+  NVDA.</li>
+<li>Il feed predefinito viene salvato nella cartella di configurazione di
+  NVDA. E' quindi possibile impostare feed predefiniti diversi nei profili
+  di configurazione.</li>
+<li>Richiede NVDA 2016.4.</li>
+</ul>
+<h2>Novità nella versione 2.0</h2>
+<ul>
+<li>Nel gestore componenti aggiuntivi è disponibile la guida dell'add-on.</li>
+</ul>
+<h2>Novità nella versione 1.0</h2>
+<ul>
+<li>Versione iniziale.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

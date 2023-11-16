@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Read Feeds 26.0.0</title>
+</head>
+<body>
+<h1>Read Feeds</h1>
+<ul>
+<li>Authors: Noelia Ruiz Martínez, Mesar Hameed</li>
+</ul>
+<p>This addon provides a straightforward way to read feeds in Atom or RSS formats using NVDA.
+The feeds will not be refreshed automatically.
+Below when we mention feeds, we mean both RSS and ATOM feeds.</p>
+<h2>Commands</h2>
+<h3>Read Feeds dialog</h3>
+<p>You can access the Read Feeds dialog from the nvda menu, Tools submenu, Feeds item.</p>
+<p>It contains the following controls:</p>
+<ul>
+<li>Filter by: An edit box to search previously saved feeds.</li>
+<li>A list of the saved feeds, focused when the dialog is opened.</li>
+<li>List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.</li>
+<li>Open feed: Opens the selected feed in the default application.</li>
+<li>Open feed as HTML: Opens the selected feed in the default web browser. You will be able to show or hide publication dates and buttons to copy information about articles to clipboard.</li>
+<li>Copy feed address: Opens a dialog to confirm if you want to copy the feed address to clipboard.</li>
+<li>New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.</li>
+<li>Rename: Opens a dialog with an edit box to rename the selected feed.</li>
+<li>Delete: Opens a dialog to delete the selected feed after confirmation.</li>
+<li>Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.</li>
+<li>Import feeds from OPML file: Opens a dialog to add new feeds from an OPML file.</li>
+<li>Save feeds to OPML file: Opens a dialog to save the feeds available from the Feeds dialog in an OPML file.</li>
+<li>Preferences: Opens the settings dialog for readFeeds, also available in NVDA's menu, Preferences, settings, readFeeds category.</li>
+<li>Close: Closes the Feeds dialog.</li>
+</ul>
+<h3>Notes</h3>
+<ul>
+<li>The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.</li>
+<li>This panel has an option to show article dates on the List of articles dialog.</li>
+</ul>
+<h3>Keyboard commands</h3>
+<ul>
+<li>Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice will open the web page.</li>
+<li>Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most recent title.</li>
+<li>Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice will copy the title and related link to clipboard.</li>
+<li>Ctrl+Shift+NVDA+U: Announces previous feed title.</li>
+<li>Ctrl+Shift+NVDA+O: Announces next feed title.</li>
+</ul>
+<h2>Notifications</h2>
+<ul>
+<li>When the title or URL have been copied.</li>
+<li>When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.</li>
+<li>NVDA will display an error message if a new feed cannot be created.</li>
+<li>The title of the articles list dialog displays the selected feed name and number of items available.</li>
+</ul>
+<h2>Changes for 21.0</h2>
+<ul>
+<li>Feeds with untitled articles can be presented in the Articles dialog, and opened as HTML.</li>
+</ul>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>universalFeedParser is updated to 5.0.1, adding support for more feeds.</li>
+</ul>
+<h2>Changes for 15.0</h2>
+<ul>
+<li>Compatible with NVDA 2023.1.</li>
+</ul>
+<h2>Changes for 14.0</h2>
+<ul>
+<li>Fixed a bug that made impossible to add some feeds.</li>
+</ul>
+<h2>Changes for 13.0</h2>
+<ul>
+<li>The add-on cannot be used on secure screens.</li>
+<li>Feeds are managed from OPML files.</li>
+<li>Due to changes in the feeds management system, there are changes in the configuration file where the default feed is set. Please, use the Feeds dialog if you want to set it again.</li>
+<li>Your old text files used in previous versions will be automatically imported into the new OPML format when the add-on is started.</li>
+<li>The copy and restore feeds feature has been replaced with the ability to import from and save to OPML files.</li>
+<li>Non well-formed feeds can be processed before being added to make them compatible with the add-on.</li>
+<li>In the Read Feeds settings panel, a new option allows to show article dates on the List of articles dialog.</li>
+</ul>
+<h2>Changes for 12.0</h2>
+<ul>
+<li>Fixed a bug which made shortcuts for items of NVDA's tools menu don't work as expected.</li>
+</ul>
+<h2>Changes for 11.0</h2>
+<ul>
+<li>Compatible with NVDA 2021.1</li>
+</ul>
+<h2>Changes for 10.0</h2>
+<ul>
+<li>Added a button to open the selected feed as HTML in the default web browser.</li>
+<li>If a new feed cannot be created, this will be notified in an error dialog.</li>
+<li>Improved order and presentation of some articles.</li>
+<li>More feeds may be supported.</li>
+<li>When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.</li>
+<li>You can choose if the search edit box is placed after the list of feeds, useful to focus the list even when switching from another window without closing the Feeds dialog.</li>
+<li>Added a button to copy the feed address to clipboard from the feeds dialog.</li>
+</ul>
+<h2>Changes for 9.0</h2>
+<ul>
+<li>Requires NVDA 2019.3 or later.</li>
+</ul>
+<h2>Changes for 8.0</h2>
+<ul>
+<li>When the add-on is updated, feeds saved in the previous version of the add-on will be automatically copied to the new version, unless you prefer to import feeds saved in the main configuration folder of NVDA.</li>
+<li>When using the dialog to copy feeds, if the chosen folder is not named personalFeeds, a subfolder with this name will be created to prevent the deletion of directories containing important data, such as Documents or Downloads.</li>
+</ul>
+<h2>Changes for 7.0</h2>
+<ul>
+<li>The Feeds dialog includes a button to open a folder which may contain a backup of feeds.</li>
+<li>When using the edit box to filter feeds, if no results are found, the list of feeds and other controls are disabled, so that NVDA doesn't report "unknown" in the empty list.</li>
+<li>If the list of articles dialog can't be shown, for example due to errors in the feed, NVDA will raise an error, so that the feeds dialog can be used without restarting NVDA.</li>
+</ul>
+<h2>Changes for 6.0</h2>
+<ul>
+<li>When the default feed has been updated and it stops working due to server issues, the previous articles aren't deleted and can be read with the corresponding keystrokes.</li>
+<li>Fix regression: The default feed can be updated twice again.</li>
+</ul>
+<h2>Changes for 5.0</h2>
+<ul>
+<li>The articles list dialog has been enhanced.</li>
+<li>Compatible with NVDA 2018.3 or later (required).</li>
+<li>If needed, you can download the <a href="https://www.nvaccess.org/addonStore/legacy?file=rf-o">last version compatible with NVDA 2017.3</a>.</li>
+</ul>
+<h2>Changes for 4.0</h2>
+<ul>
+<li>Added a button to open the selected feed from the Feeds dialog.</li>
+</ul>
+<h2>Changes for 3.0</h2>
+<ul>
+<li>The dialogs to manage feed files have been removed. Now their functionality is included in the Feeds dialog.</li>
+<li>The visual presentation of the dialogs has been enhanced, adhering to the appearance of the dialogs shown in NVDA.</li>
+<li>The default feed is saved on the NVDA's configuration. Therefore, it's possible to set different default feeds in configuration profiles.</li>
+<li>Requires NVDA 2016.4.</li>
+</ul>
+<h2>Changes for 2.0</h2>
+<ul>
+<li>Add-on help is available from the Add-ons Manager.</li>
+</ul>
+<h2>Changes for 1.0</h2>
+<ul>
+<li>Initial version.</li>
+</ul>
+</body>
+</html>

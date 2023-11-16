@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>Anında Çeviri</h1>
+<ul>
+<li>Yazarlar: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto
+  Buffolino ve diğer NVDA gönüllüleri.</li>
+<li><a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">kararlı sürümü</a> indir</li>
+<li><a href="https://addons.nvda-project.org/files/get.php?file=it-dev">geliştirme sürümünü</a> indir</li>
+</ul>
+<p>Bu eklenti, seçili ve/veya pano metnini bir dilden diğerine çevirmek için
+kullanılır. Bu, Google Çeviri hizmeti kullanılarak yapılır.</p>
+<h2>Dillerin ayarlanması</h2>
+<p>Kaynak, hedef ve takas dilini yapılandırmak için şuraya gidin: NVDA Menüsü &gt;&gt; Tercihler &gt;&gt; Ayarlar iletişim kutusu &gt;&gt; Anında Çeviri kategorisi.\n</p>
+<p>"Kaynak dil" ve "Hedef dil" etiketli iki seçim kutusu ve çevirinin panoya
+kopyalanıp kopyalanmayacağını bbelirlemek için bir onay kutusu bulunur.</p>
+<p>Ek olarak, "Kaynak dil" seçim kutusundan otomatik seçeneği (ilk tercih)
+seçtiyseniz, "Değişim için kullanılacak dil" etiketli bir seçim kutusu ve
+otomatik takas hakkında bir onay kutusu da gösterilir.</p>
+<p>İlk iki seçim kutusunun ve kopyalamayla ilgili  onay kutusunun anlamı bariz,
+ancak geri kalanı hakkında bazı açıklamalar gerekebilir. Aşağıdaki
+açıklamaların otomatik seçeneğinde ayarlanan kaynak dili varsaydığını daima
+unutmayın.</p>
+<p>"Değişim için dil" seçim kutusu, kaynak ve hedef dili komut dosyası
+aracılığıyla değiştirdiğinizde (aşağıya bakın) kullanışlıdır; aslında,
+otomatik seçeneğinde ayarlanan bir hedef dilin bir anlamı yoktur, bu nedenle
+eklenti onu yukarıdaki seçim kutusundaki  değere ayarlar.</p>
+<p>Öyleyse, şu durumu farzedin: genellikle türkçe'ye (ana diliniz) çeviri
+yaparsınız, ancak bazen (örneğin, bir belge yazarken) İngilizce'ye'ya
+(diyelim ki ikinci diliniz) çevirmeniz gerekebilir; "değişim için
+kullanılacak dil" seçim kutusunu İngilizce'ye ayarlayabilirsiniz, böylece
+eklenti ayarlarına tekrar girmeksizin Türkçe'den İngilizce'ye çeviri
+yapabilirsiniz. Açıkçası, bu işlevin daha sık ihtiyaçlarınıza göre büyük
+veya küçük bir faydası vardır.</p>
+<p>Şimdi, otomatik takas onay kutusu: Yalnızca "Kaynak dil" seçim kutusunda
+otomatik seçeneğini ayarlamışsanız gösterilir ve "takas için dil" seçim
+kutusunda belirlediğiniz dil kullanılır. Etkinleştirirseniz, eklenti, kaynak
+ve hedef yapılandırmanızdan otomatik olarak hedefin kaynak dil olduğu ve
+"takas için dil" seçim kutusunda seçilen dilin yeni hedef dil olacağı bir
+konfigürasyona geçiş yapmaya çalışır; Çevirmek istediğiniz metnin dili hedef
+olarak belirlemiş olduğunuz dille aynıysa  son derece kullanışlı olabilir.</p>
+<p>Basit bir örnek: daha önce farzedilen durumu tekrar hatırlayın; Bir metni
+İngilizce'den farklı bir dilden çeviriyorsanız sorun olmaz, İngilizce'de
+doğru çeviriyi alırsınız. Ancak İngilizce'den bir metni çevirmeniz
+gerekiyorsa, normalde orijinal metinle aynı olan İngilizce'ye bir çeviri
+alırsınız ve bu biraz işe yaramaz. Ancak otomatik değiş tokuş işlevi
+sayesinde, metninizin İtalyancaya nasıl geldiğini bilmek istediğinizi
+varsayarsak, eklenti hedef dili otomatik olarak İtalyancaya çevirir, böylece
+geçerli bir çeviri döndürür sonuç olarak.</p>
+<p>Neyse, bu geçici bir yapılandırmadır; bu seçeneğin bir etkisi yoksa
+(deneyseldir), aşağıda açıklanan takas hareketini kullanarak manuel olarak
+kararlı bir yapılandırmaya geçmeyi deneyin. Deneyseldir, çünkü bazı
+durumlarda (genellikle kısa metinlerle), Google gerçek kaynak dili doğru
+tanımaz ve kaynak dili önceki hedef dil olmaya zorlamak için dilleri komut
+dosyası aracılığıyla manuel olarak değiştirmeniz gerekir (örneğimizde
+İngilizceye).</p>
+<p>En azından konuşma ayarları kategorisinde (NVDA Menüsü &gt;&gt; Tercihler &gt;&gt; ayarlar iletişim kutusu), "destekleniyorsa konuşma dilini otomatik olarak değiştir" seçeneğini işaretlemek isteyebilirsiniz. Bu şekilde, çok dilli bir sentezleyici kullanıyorsanız çeviri, sentezleyicinin hedef dil sesi kullanılarak söylenir.\n</p>
+<h2>kullanarak</h2>
+<p>Bu eklentiyi üç şekilde kullanabilirsiniz:</p>
+<ol>
+<li>Seçim komutlarını kullanarak bir metin seçin (örneğin, shift tuşuyla
+   birlikte ok tuşlarını kullanın) ve çevirmek için ilgili tuşa
+   basın. çeviri sonucu kullandığınız sentezleyici ile okunacaktır.</li>
+<li>Panodaki metni de çevirebilirsiniz.</li>
+<li>Son söylenen metni çevirmek için ilgili kısayol tuşuna basın.</li>
+</ol>
+<h2>Kısayollar</h2>
+<p>Aşağıdaki tüm komutlar "NVDA+Shift+t" tuşları ile komut katmanını açtıktan
+sonra kullanılabilir:</p>
+<ul>
+<li>T: Seçili metni çevir,</li>
+<li>Shift+t: Panodaki metni çevir,</li>
+<li>S: kaynak ve hedef dilleri değiştir,</li>
+<li>A: mevcut konfigürasyonu söyle,</li>
+<li>C: son sonucu panoya kopyala,</li>
+<li>I: seçilen metnin dilini tanımla,</li>
+<li>L: son konuşulan metni çevir,</li>
+<li>O: çeviri ayarları iletişim kutusunu aç</li>
+<li>H: mevcut tüm katman komutlarını duyurur.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>4.4.2 için değişiklikler</h2>
+<ul>
+<li>Dil algılama ve otomatik dil değiştirme restore edildi (Düzeltme için
+  Cyrille'a teşekkürler)</li>
+<li>çeviri için güncellenmiş diller (Cyrille'e teşekkürler)</li>
+</ul>
+<h2>4.4 için değişiklikler</h2>
+<ul>
+<li>Anında çeviri artık NVDA 2019.3 ile (NVDA'nın Python 3 sürümleri) uyumlu</li>
+</ul>
+<h2>4.3 için değişiklikler</h2>
+<ul>
+<li>nvda uyumluluk düzeltmesi Şimdi anında çeviri, en son nvda derlemeleriyle
+  uyumlu olacak.</li>
+<li>google'ı tekrar bir çeviri hizmeti olarak kullanmanın bir yolu bulundu.</li>
+</ul>
+<h2>4.2 için değişiklikler</h2>
+<ul>
+<li>Daha yeni nvda sürümleriyle çalışması sağlandı.</li>
+<li>Otomatik dil algılama özelliği  restore edildi</li>
+</ul>
+<h2>4.1 için değişiklikler</h2>
+<ul>
+<li>Anında Çeviri, artık Google yerine Yandex çeviri hizmetiyle yeniden
+  çalışıyor.</li>
+</ul>
+<h2>4.0 için değişiklikler</h2>
+<ul>
+<li>Çeviri, takas sonrasında otomatik olarak gerçekleştirilir.</li>
+<li>Önbellek hatası düzeltildi.</li>
+</ul>
+<h2>3.0 için değişiklikler</h2>
+<ul>
+<li>Kısayolların kullanım şekli değişti, şimdi "NVDA+Shift+t" anında Çeviri
+  komut katmanı Kısayol tuşuna ve ardından çeşitli işlemleri gerçekleştirmek
+  için ilgili komut tuşuna basabilirsiniz ("girdi hareketleri " bölümündeki
+  tüm Komutlara bakın).</li>
+<li>Takas dil seçeneği eklendi.</li>
+<li>Değiştirilen yapılandırma biçimi, şimdi salt okunur bölmesinde ise anında
+  çeviri ayarları değiştirilebbilir, ancak bunun için NVDA'nın yeniden
+  başlatılması gerektiğini unutmayın.</li>
+<li>Çevrilebilecek metin miktarıyla ilgili sınır kaldırıldı.</li>
+<li>Anında Çeviri Ayarlar menü öğesi eklendi kısayol t</li>
+<li>Otomatik seçeneği yalnızca kaynak dil seçim kutusunda bulunuyor.</li>
+<li>Çeviri sonuçlarının kopyalanmasıyla ilgili bir onay kutusu eklendi.</li>
+<li>Yapılandırma dosyasını konfigürasyon dizininin kökünde bulundur</li>
+<li>Kaynak ve hedef diller, Google Çeviri'nin şu anda sundukları ile
+  senkronize edildi (22 Nisan 2015).</li>
+</ul>
+<h2>2.1 için değişiklikler</h2>
+<ul>
+<li>NVDA + shift + y basılınca Şimdi eklenti panodaki metni çevirebilir.</li>
+</ul>
+<h2>2.0 için değişiklikler</h2>
+<ul>
+<li>kaynak ve hedef dil seçebileceğiniz gui yapılandırıcı eklendi.</li>
+<li>Tercihler menüsü altına eklenti menü öğesi eklendi.</li>
+<li>Ayarlar şimdi ayrı bir yapılandırma dosyasına yazılıyor.</li>
+<li>Çeviri sonuçları artık otomatik olarak gelecek kullanımlar için panoya
+  kopyalanır.</li>
+</ul>
+<h2>1.0 için değişiklikler</h2>
+<ul>
+<li>İlk sürümü.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

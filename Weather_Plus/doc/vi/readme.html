@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Weather_Plus</title>
+</head>
+<body>
+<h1>Weather Plus</h1>
+<ul>
+<li>Tác giả: Adriano Barbieri</li>
+<li>NVDA tương thích: 2017.3 trở đi</li>
+<li>Tải về: <a href="https://addons.nvda-project.org/files/get.php?file=wetp">Phiên bản chính thức</a></li>
+</ul>
+<h1>VỀ WEATHER PLUS:</h1>
+<ul>
+<li>Plugin này thêm dự báo thời tiết và nhiệt độ địa phương trong 24 giờ đến hai ngày tiếp theo cho NVDA.</li>
+<li>Bản quyền (C) <a href="mailto:adrianobarb@yahoo.it">Adriano Barbieri</a></li>
+<li>Phát hành theo giấy phép GNU GPL (General Public License) v2</li>
+<li>Weather Plus hoạt động bằng cách sử dụng các dịch vụ sau:</li>
+<li><a href="https://www.weatherapi.com/">https://www.weatherapi.com/</a></li>
+<li><a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+<li><a href="http://veloroutes.org/elevation/">http://veloroutes.org/elevation/</a></li>
+<li><a href="https://www.nvda.it/">https://www.nvda.it/</a></li>
+</ul>
+<h1>Sử dụng:</h1>
+<ul>
+<li>Bấm NVDA+w để lấy thông tin về nhiệt độ và thời tiết hiện tại.</li>
+<li>Bấm NVDA+shift+W để xem dự báo thời tiết trong 24 giờ và dự báo đến hai ngày tiếp theo.</li>
+<li>Bấm NVDA + SHIFT + W hai lần để xem dự báo nhiệt độ và điều kiện khi quyển từng giờ .</li>
+<li>Bấm NVDA+shift+control+w để cài đặt một tỉnh / thành tạm thời.</li>
+<li>Bấm NVDA+shift+control+alt+w để mở hộp thoại cài đặt Weather Plus.</li>
+<li>Bấm NVDA+alt+w để xem thời gian dự báo thời tiết được cập nhật.</li>
+<li>Bấm control+shift+w để chuyển qua lại giữa đơn vị nhiệt độ là Fahrenheit, Celsius hoặc Kelvin.        </li>
+</ul>
+<h1>Cài đặt Weather Plus:</h1>
+<ul>
+<li>Bạn phải thực hiện cài đặt cho Weather Plus addon trước khi dùng nó! Vào mục Tùy Chọn, Cài đặt Weather Plus và chọn một trong các tùy chọn sau:</li>
+<li>Cài đặt và quản lý các tỉnh / thành của bạn... - hiển thị hoặc cho phép chọn tỉnh / thành hiện tại từ một danh sách.</li>
+<li>Cài đặt một tỉnh / thành tạm... - hiển thị và cho phép chọn một tỉnh / thành tạm thời từ danh sách nếu có.</li>
+<li>Tài liệu hướng dẫn - mở tập tin trợ giúp cho ngôn ngữ hiện tại.</li>
+<li>Kiểm tra cập nhật... - thông báo nếu có phiên bản mới.</li>
+</ul>
+<p>Để thêm một tỉnh / thành mới: bấm vào các mục sau:</p>
+<ul>
+<li>Cài đặt và quản lý các tỉnh / thành của bạn... - hiển thị hoặc cho phép chọn tỉnh / thành hiện tại từ danh sách.</li>
+<li>Các thông điệp sau đây chỉ hiển thị ở lần sử dụng đầu tiên! Cài đặt có sẵn không có F1: thông tin giúp đỡ, F2: TAB được chọn cuối cùng, F3: danh sách và ô nhập liệu, F4: điều khiển thời gian dự báo thời tiết, F5: điều khiển âm lượng.</li>
+<li>Trong ô nhập liệu, gõ tên tỉnh / thành hoặc chọn trong danh sách nếu có. Lưu ý: phím F5 sẽ hoạt động nếu đã bật hiệu ứng âm thanh.</li>
+<li>Sau khi bấm enter ở mục "Cài đặt và quản lý các tỉnh / thành của bạn...", bạn sẽ tìm thấy các nút sau đây:</li>
+<li>Kiểm tra - kiểm tra tính hợp lệ của tỉnh / thành và tìm dữ liệu của nó.</li>
+<li>Thêm - thêm tỉnh / thành hiện tại vào danh sách của bạn. Có thể bấm nút này nếu bạn chọn một tỉnh / thành từ danh sách, khi tỉnh / thành được nhập vào qua  được bước kiểm tra và hợp lệ.</li>
+<li>Chi tiết - hiển thị thông tin về tỉnh / thành hiện tại. Kích hoạt nút này nếu bạn chọn một tỉnh / thành từ danh sách, hoặc nó đã qua được bước kiểm tra.</li>
+<li>Quy định - cho phép bạn quy định khu vực để sử dụng hiệu ứng âm thanh. Có thể bấm nút này nếu đã cài đặt và bật hiệu ứng âm thanh, và bạn chọn một tỉnh / thành từ danh sách.</li>
+<li>Bản có sẵn - đặt trước một tỉnh / thành làm mặc định, sẽ được dùng mỗi khi khởi động lại  plugin. Có thể bấm nút này nếu bạn chọn  một tỉnh / thành được thêm vào danh sách trước đó không phải là bản có sẵn, hoặc qua được bước kiểm nghiệm.</li>
+<li>Gỡ bỏ - xóa tỉnh / thành hiện tại khỏi danh sách của bạn. Có thể bấm nút này nếu bạn chọn một tỉnh / thành đã được them vào danh sách trước đó.</li>
+<li>Đổi tên - đổi tên tỉnh / thành hiện tại. Có thể bấm nút này nếu bạn chọn một tỉnh / thành đã được thêm vào danh sách trước đó.</li>
+<li>Nạp các tỉnh / thành mới... - nút này cho phép bạn nạp các tỉnh / thành từ một danh sách tỉnh / thành khác với phần mở rộng *.zipcodes; bạn có thể chọn tỉnh / thành muốn nạp vào bằng cách bật các hộp kiểm được gắn với nó.</li>
+<li>Xuất các tỉnh / thành của bạn... - cho phép lưu các tỉnh / thành vào một tập tin với phần mở rộng là *.zipcodes. Có thể bấm nút này nếu bạn đã thêm và lưu  ít nhất một tỉnh / thành vào danh sách.</li>
+<li>Cài đặt dự báo từng giờ... - nút này cho phép bạn chọn nội dung của việc dự báo theo từng giờ.</li>
+<li>Đơn vị đo nhiệt độ: dùng các nút radio để chọn giữa Celsius (mặc định), Fahrenheit và Kelvin.</li>
+<li>Hiển thị nhiệt độ: dùng các nút radio để chọn giữa: Celsius <code>-</code> Fahrenheit <code>-</code> Kelvin (làm mặc định) C <code>-</code> F <code>-</code> K hoặc không quy định.</li>
+<li>Hộp xổ: dự báo thời tiết đến ngày: 1; bạn có thể chọn từ 1 đến 3 (mặc định là một ngày).</li>
+<li>Hộp xổ: Ngôn ngữ trả về cho API: English, en; bạn có thể chọn ngôn ngữ của nội dung dự báo thời tiết.</li>
+<li>Để thực hiện các hoạt động sau đây, hay bật / tắt các hộp kiểm tương ứng:</li>
+<li>Sao chép thông tin và dự báo thời tiết, bao gồm chi tiết tỉnh / thành vào bộ ""nhớ tạm; hộp kiểm (mặc định không chọn)</li>
+<li>Bật hiệu ứng âm thanh (chỉ cho điều kiện thời tiết hiện tại); hộp kiểm này cũng cho phép bạn quản lý việc cài đặt hiệu ứng âm thanh; nếu đã cài hiệu ứng âm thanh và bật hộp kiểm này, phím F5 và các cài đặt âm lượng sẽ có tác dụng.</li>
+<li>Cũng có thêm một hộp kiểm khác: "Chỉ dùng hiệu ứng thời tiết".</li>
+<li>Bạn có thể thay đổi âm lượng tổng thể hoặc thay đổi hiệu ứng âm thanh được nghe sau cùng và lọc đi các âm thanh khác trong môi trường của bạn. Hộp kiểm mặc định không được bật.</li>
+<li>Chỉ dùng hiệu ứng thời tiết - tùy chọn này xuất hiện khi bật hiệu ứng âm thanh; nếu chọn, chỉ cho nghe các hiệu ứng thời tiết như mưa, gió, sấm sét, v...v..., lọc đi các âm thanh môi trường. (mặc định không chọn)</li>
+<li>Bật đọc giờ ở định dạng 24-giờ. - nếu không chọn hộp kiểm này, sẽ  đọc giờ ở định dạng 12-giờ, 12 SA <code>-</code> 12 CH chẳng hạn. Hộp kiểm được bật mặc định.</li>
+<li>Bật nút trợ giúp trong cửa sổ cài đặt; hộp kiểm mặc định được chọn</li>
+<li>Đọc thông tin gió; hộp kiểm mặc định không chọn. Nếu chọn, bạn có thể bật thêm các hộp kiểm sau:</li>
+<li>Thêm hướng gió; xác định hướng đi của gió. Hộp kiểm mặc định được chọn</li>
+<li>Thêm tốc độ gió; xác định tốc độ gió bằng ki lô mét hoặc dặm trên giờ. Hộp kiểm mặc định được chọn</li>
+<li>Thêm tốc độ gió tính bằng &amp;mét trên giây; hộp kiểm mặc định được chọn</li>
+<li>Thêm lượng gió tốc độ của gió; hộp kiểm mặc định được chọn</li>
+<li>Thêm nhiệt độ nhận thức; hộp kiểm mặc định được chọn</li>
+<li>Đọc thông tin khí quyển; hộp kiểm mặc định không chọn. Nếu chọn, bạn có thể chọn thêm các hộp kiểm sau:</li>
+<li>Thêm giá trị độ ẩm; xác định độ ẩm bằng phần trăm. Hộp kiểm mặc định được chọn</li>
+<li>Thêm giá trị tầm nhìn; xác định tầm nhìn bằng ki lô mét hoặc dặm. Hộp kiểm mặc định được chọn</li>
+<li>Thêm giá trị áp suất khí quyển; xác định áp suất khí quyển bằng millibars hoặc inch thủy ngân. Nếu chọn, bật thêm một hộp kiểm cho phép bạn xác định áp suất bằng mi li mét thủy ngân. Hộp kiểm mặc định được chọn</li>
+<li>Thêm giá trị mây; hộp kiểm mặc định được chọn</li>
+<li>Thêm giá trị lượng mưa; hộp kiểm mặc định được chọn</li>
+<li>Thêm giá trị bức xạ tia cực tím; Hộp kiểm mặc định được chọn</li>
+<li>Đọc các thông tin thiên văn; xác định thời gian mặc trời / mặt trăng mọc và lặn. Hộp kiểm mặc định không chọn</li>
+<li>Dùng dấu phảy để phân cách số thập phân; nếu chọn, sẽ dùng dấu phảy làm dấu tách cho số thập phân. Nếu không thì sẽ dùng dấu chấm. Hộp kiểm mặc định được chọn</li>
+<li>Hiển thị đầu ra trong một cửa sổ; nếu được kích hoạt, điều này sẽ hiển thị dự báo trong một cửa sổ. Hộp kiểm không được chọn (theo mặc định)</li>
+<li>Kiểm tra cập nhật; chọn mục này, sẽ có thông báo khi add-on có bản cập nhật. Hộp kiểm mặc định được chọn</li>
+<li>Bấm nút Đồng ý để xác nhận hoặc nút Hủy để hủy bỏ hoạt động.</li>
+<li>Nếu đã chỉnh sửa danh sách tỉnh / thành, việc bấm nút "Hủy", thay đổi sẽ được ghi nhớ và bạn vẫn còn có thể lưu nó lại. Lưu ý: thiết lập của bạn sẽ được lưu trong tập tin có tên:</li>
+<li>"Weather.ini": thiết lập khởi động của Weather Plus.</li>
+<li>"Weather.volumes": tùy chỉnh mức độ âm thanh, kể cả âm lượng tổng.</li>
+<li>"Weather.zipcodes": danh sách tỉnh / thành với mã bưu chính và quy định.</li>
+<li>"Weather.default": tỉnh / thành mặc định của bạn.</li>
+<li>"Weather_searchkey": khóa tìm kiếm đã đoược lưu.</li>
+</ul>
+<hr />
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

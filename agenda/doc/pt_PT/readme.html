@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Accessible agenda 2023.10.17</title>
+</head>
+<body>
+<h1>Agenda</h1>
+<h2>Informações</h2>
+<ul>
+<li>Autores: Abel Passos, Ângelo Abrantes  e Rui Fontes</li>
+<li>Actualizado em: 17.10.2023</li>
+<li>Descarregar <a href="https://github.com/ruifontes/agenda-for-NVDA/releases/download/2023.10.17/agenda-2023.10.17.nvda-addon">versão estável</a></li>
+<li>Compatibilidade: NVDA versão 2019.3 e posteriores</li>
+</ul>
+<h2>Apresentação</h2>
+<p>Este extra permite anotar  compromissos e actividades, com ou sem alarmes e com ou sem repetições periódicas.
+É possível utilizar duas agendas diferentes.
+Para alternar entre elas, vá ao menu do NVDA, Preferências, Configurações, secção Agenda e escolha, na caixa combinada, a agenda que quer usar.
+Se a segunda linha estiver vazia, use o botão "Seleccionar ou adicionar um directório" para criar uma segunda agenda.
+Se utilizar este botão com um caminho seleccionado, a agenda será movida para o novo caminho, se nele não existir nenhuma. Se existir, será apenas mudado o caminho, as duas agendas serão preservadas, passando a ser utilizada a do novo caminho.
+No arranque do NVDA, seremos alertados para os compromissos para os próximos dias. Este lembrete pode ser uma janela com a lista de todos os compromissos ou um lembrete com um diálogo e um alarme sonoro para os compromissos com alarme definido.
+Esta opção pode ser configurada nas definições do extra.
+Também nas configurações do NVDA, secção Agenda, pode seleccionar os sons a serem usados, e também escolher entre o calendário gregoriano e o iraniano.</p>
+<h2>Comando</h2>
+<p>O comando para chamar o extra é NVDA+F4.
+É possível alterá-lo no diálogo "Definir comandos", na secção Agenda.</p>
+<h2>Como funciona:</h2>
+<ul>
+<li>Ao abrir o programa, serão mostrados os compromissos do dia actual.</li>
+<li>Na jannela principal, existem os campos para se alterar a data, os compromissos da data selecionada e alguns botões de controlo do programa que serão descritos adiante.
+Os campos da data podem ser alterados usando as setas verticais ou digitando o valor pretendido. Ao alterar-se a data, os compromissos do dia serão automaticamente mostrados.</li>
+</ul>
+<h3>Teclas de atalho da janela principal:</h3>
+<ul>
+<li>Alt + 1-9: Avança a quantidade de dias correspondentes ao valor pressionado;</li>
+<li>Alt+0: Retorna à data atual;</li>
+<li>Alt+seta esquerda: Retrocede um dia na data;</li>
+<li>Alt+seta direita: Avança um dia na data;</li>
+<li>Alt+Seta acima: Avança uma semana;</li>
+<li>Alt+Seta abaixo: Retrocede uma semana;</li>
+<li>Alt+PageUp: Avança um mês;</li>
+<li>Alt+PageDown: Retrocede um mês;</li>
+<li>Enter: Se estiver seleccionado um compromisso, abre a janela de edição. Caso contrário, abre a janela para criar um novo compromisso;</li>
+<li>Delete: Apaga o registo selecionado. Mesma função do botão Remover;</li>
+<li>Control+F: Abre a janela de pesquisa. Equivalente a pressionar o botão "Pesquisar".</li>
+</ul>
+<h3>Funções dos botões da janela principal e suas respectivas teclas aceleradoras:</h3>
+<ul>
+<li>Adicionar (Alt+A): abre uma janela para registar compromissos na data seleccionada;</li>
+<li>Editar (Alt+E): abre uma janela para editar o compromisso seleccionado;</li>
+<li>Remover (Alt+R): apaga o compromisso seleccionado;</li>
+<li>Pesquisar (Alt+P): abre uma janela para pesquisa de informações na agenda;</li>
+<li>sair (Alt+S): Fecha a janela.</li>
+</ul>
+<h3>As funções de adicionar e editar são bastante semelhantes e, por este motivo, a janela que será descrita serve para ambas as funcionalidades.</h3>
+<p>A principal diferença é que, para editar, necessita ter seleccionado, previamente, um compromisso a ser alterado.
+Além disto, na função Editar, os dados do compromisso seleccionado são apresentados na janela para modificação. Na opção Adicionar, a janela abre com a data seleccionada e com os demais campos em branco. </p>
+<h3>Campos da janela Adicionar e Editar:</h3>
+<ul>
+<li>dia/mês/ano: campos da data que podem ser alterados com as setas verticais ou digitando o valor pretendido; </li>
+<li>hora/minutos: campos da hora  que podem ser alterados com as setas verticais ou digitando o valor pretendido; </li>
+<li>Descrição: campo para preenchimento das informações sobre o compromisso ;</li>
+<li>Botão Repetições: Acede à janela onde podemos seleccionar o a periodicidade das repetições e sua duração.</li>
+<li>Botão Alarmes: Acede a uma  janela onde encontramos  várias caixas de verificação para seleccionarmos os alarmes necessários. Por padrão, quando algum alarme for seleccionado com antecedência à data e hora do compromisso, automaticamente o alarme de hora exacta é activado.</li>
+<li>Botão OK (Alt+O): regista na agenda as informações do compromisso; </li>
+<li>Botão Cancelar (Alt+C): não guarda as informações preenchidas nesta janela. </li>
+<li>A janela Adicionar/Editar possui a tecla de atalho Ctrl+Enter para guardar as informações preenchidas. Equivalente à função do botão OK. </li>
+</ul>
+<h3>Campos da janela de pesquisa.</h3>
+<ul>
+<li>Tipo de pesquisa: deve seleccionar entre as seguintes opções:
+<br><ul>
+<li>pesquisa por texto: será aberto um campo de edição para digitar o que deseja procurar. Não é necessário digitar a expressão completa, a pesquisa pode ser feita com partes de palavras;</li>
+<li>Próximos 7 dias: mostra os compromissos para os próximos 7 dias, não incluindo o dia actual;</li>
+<li>Próximos 30 dias: mostra os compromissos para os próximos 30 dias, não incluindo o dia actual;</li>
+<li>Intervalo de datas: mostra os campos de data inicial e final para pesquisar;
+<br></li>
+</ul>
+</li>
+<li>Botão Pesquisar (Alt+P): executa a pesquisa seleccionada e retorna as informações encontradas;</li>
+<li>Botão Adicionar (Alt+A): A mesma função adicionar da janela principal. A diferença é que, se seleccionou um compromisso, a janela para adicionar estará na data do compromisso seleccionado. Se nenhum registo for seleccionado, mostra a janela na data actual;</li>
+<li>Botão Editar (Alt+E): A mesma função editar da janela principal. Necessita que algum compromisso esteja seleccionado;</li>
+<li>Remover (Alt+R): apaga o compromisso seleccionado;</li>
+<li>Remover tudo (Alt+T): apaga todos os compromissos apresentados;</li>
+<li>Botão Cancelar  (Alt+C): fecha a janela de pesquisa e retorna à janela principal.</li>
+</ul>
+</body>
+</html>

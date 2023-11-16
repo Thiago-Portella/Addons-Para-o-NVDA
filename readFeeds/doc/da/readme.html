@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Read Feeds 26.0.0</title>
+</head>
+<body>
+<h1>Læs feeds</h1>
+<ul>
+<li>Forfattere: Noelia Ruiz Martínez, Mesar Hameed</li>
+</ul>
+<p>Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
+atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
+automatisk. Når vi nedenfor nævner feeds, mener vi både RSS- og atom-feeds.</p>
+<h2>Kommandoer</h2>
+<h3>Dialogboksen Læs feeds</h3>
+<p>Du kan få adgang til undermenuen Læs Feeds fra NVDA-menuen værktøjer.</p>
+<p>It contains the following controls:</p>
+<ul>
+<li>Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte feeds.</li>
+<li>En liste over de gemte feeds, der automatisk får fokus, når dialogen
+  åbnes.</li>
+<li>Liste over artikler: Åbner en dialog, der viser en liste over artikler fra
+  dit nuværende feed. Vælg den artikel, du vil læse, og tryk på Enter eller
+  Åbn webside for den valgte artikel for at åbne den tilsvarende side i din
+  browser. Tryk på knappen "Om artiklen" for at åbne en dialog med titel og
+  link for den valgte artikel; Fra denne dialog kan du kopiere denne
+  information til udklipsholderen.</li>
+<li>Åbn feed: Åbner det valgte feed i standardprogrammet.</li>
+<li>Åbn feed som HTML: Åbner det valgte feed i standardwebbrowseren. Du vil
+  være i stand til at vise eller skjule udgivelsesdatoer og knapper for at
+  kopiere oplysninger om artikler til udklipsholderen.</li>
+<li>Kopier feedadresse: Åbner en dialog for at bekræfte, om du vil kopiere
+  feedadressen til udklipsholderen.</li>
+<li>Ny: Åbner en dialogboks med et redigeringsfelt til at indtaste adressen på
+  et nyt feed. Hvis adressen er gyldig og feedet kan gemmes, vises dets
+  navn, baseret på feedets titel nederst på listen over feeds.</li>
+<li>Omdøb: Åbner en dialogboks med et redigeringsfelt til at omdøbe det valgte
+  feed.</li>
+<li>Slet: Åbner en dialogboks for at slette det valgte feed efter bekræftelse.</li>
+<li>Indstil som standard: Indstiller det valgte feed som standard, så dets
+  artikler kan tilgås med NVDAs inputbevægelser.</li>
+<li>Importér feeds fra OPML-fil: Åbner en dialogboks, så du kan tilføje nye
+  feeds fra en OPML-fil.</li>
+<li>Gem feeds til OPML-fil: Åbner en dialog for at gemme de tilgængelige feeds
+  fra feeds-dialogen i en OPML-fil.</li>
+<li>Indstillinger: Åbner indstillingerne for tilføjelsen. Indstillingerne kan
+  også findes i NVDA-menuen&gt;Opsætning&gt;Indstillinger og ved at vælge
+  kategorien "Læs Feeds".</li>
+<li>Luk: Lukker dialogen Nyhedskanaler.</li>
+</ul>
+<h3>Bemærkninger</h3>
+<ul>
+<li>Filtrer efter redigeringsfelt kan placeres efter knappen Åbn artikel fra
+  NVDA's menu, Indstillinger, Indstillinger, Læs feeds-kategori eller ved at
+  trykke på knappen Indstillinger i dialogboksen Feeds.</li>
+<li>Dette panel har en mulighed for at vise artikeldatoer i dialogboksen Liste
+  over artikler.</li>
+</ul>
+<h3>Tastaturkommandoer</h3>
+<ul>
+<li>CTRL+Skift+NVDA+Mellemrum: Annoncerer URL på den aktuelle artikel. Ved at
+  trykke to gange åbnes adressen i din browser.</li>
+<li>CTRL+NVDA+Skift+8: Opdaterer det valgte feed og oplyser den seneste titel.</li>
+<li>CTRL+Skift+NVDA+I: Annoncerer den aktuelle titel på det valgte feed. Ved
+  to tryk kopieres titlen og det tilsvarende link til udklipsholderen.</li>
+<li>CTRL+Skift+NVDA+U: Annoncerer titel på det forrige feed.</li>
+<li>CTRL+Skift+NVDA+O: Annoncerer titel på det næste feed.</li>
+</ul>
+<h2>Meddelelser</h2>
+<ul>
+<li>Når titlen eller URL-adressen er blevet kopieret.</li>
+<li>Når det ikke er muligt at forbinde/opdatere et feed, eller den angivne URL
+  ikke svarer til et gyldigt feed.</li>
+<li>NVDA vil vise en fejlmeddelelse, hvis et nyt feed ikke kan oprettes.</li>
+<li>Titlen på dialogen der viser listen over artikler viser navnet på det
+  aktuelle feed, samt antallet af artikler til rådighed.</li>
+</ul>
+<h2>Changes for 21.0</h2>
+<ul>
+<li>Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.</li>
+</ul>
+<h2>Changes for 20.0</h2>
+<ul>
+<li>universalFeedParser is updated to 5.0.1, adding support for more feeds.</li>
+</ul>
+<h2>Ændringer for 14.0</h2>
+<ul>
+<li>Rettede en fejl, der gjorde det umuligt at tilføje nogle feeds.</li>
+</ul>
+<h2>Ændringer i 13,0</h2>
+<ul>
+<li>Tilføjelsen kan ikke bruges på sikre skærme.</li>
+<li>Feeds administreres fra OPML-filer.</li>
+<li>På grund af ændringer i feeds-styringssystemet er der ændringer i
+  konfigurationsfilen, hvor standardfeedet er indstillet. Brug venligst
+  feed-dialogen, hvis du vil indstille den igen.</li>
+<li>Dine gamle tekstfiler, der blev brugt i tidligere versioner, importeres
+  automatisk til det nye OPML-format, når tilføjelsen startes.</li>
+<li>Funktionen til kopiering og gendannelse af feeds er blevet erstattet med
+  muligheden for at importere fra og gemme til OPML-filer.</li>
+<li>Ikke velformede feeds kan behandles, før de tilføjes, for at gøre dem
+  kompatible med tilføjelsen.</li>
+<li>I indstillingspanelet Læs feeds giver en ny mulighed mulighed for at vise
+  artikeldatoer i dialogboksen Liste over artikler.</li>
+</ul>
+<h2>Ændringer for 12.0</h2>
+<ul>
+<li>Rettede en fejl, der gjorde, at genveje til elementer i NVDA's
+  værktøjsmenu ikke fungerede som forventet.</li>
+</ul>
+<h2>Ændringer for 11.0</h2>
+<ul>
+<li>Kompatibel med NVDA 2021.1.</li>
+</ul>
+<h2>Ændringer for 10.0</h2>
+<ul>
+<li>Tilføjet en knap for at åbne det valgte feed som HTML i
+  standardwebbrowseren.</li>
+<li>Hvis et nyt feed ikke kan oprettes, vil du få besked om dette i en dialog.</li>
+<li>Forbedret rækkefølge og præsentation af nogle artikler.</li>
+<li>Potentiale for understøttelse af flere feeds.</li>
+<li>Når feeds-dialogen åbnes, vil listen over feeds være i fokus i stedet for
+  søgefeltet.</li>
+<li>Du kan vælge, om søgefeltet skal placeres efter feedslisten, hvilket er
+  nyttigt, når du skifter fra et andet vindue uden at lukke dialogen.</li>
+<li>Tilføjet en knap til at kopiere feedadressen til udklipsholderen fra
+  feeds-dialogen.</li>
+</ul>
+<h2>Ændringer for 9.0</h2>
+<ul>
+<li>Kræver NVDA 2019.3 eller nyere.</li>
+</ul>
+<h2>Ændringer i 8.0</h2>
+<ul>
+<li>Når tilføjelsesprogrammet opdateres, bliver feeds, der er gemt i den
+  tidligere version af tilføjelsesprogrammet automatisk kopieret til den nye
+  version, medmindre du foretrækker at importere feeds, der er gemt i den
+  primære konfigurations mappe i NVDA.</li>
+<li>Når du bruger dialogen til at kopiere feeds, hvis den valgte mappe ikke er
+  navngivet personalFeeds, vil en undermappe med dette navn blive oprettet
+  for at forhindre sletning af mapper, der indeholder vigtige data, såsom
+  dokumenter eller overførsler.</li>
+</ul>
+<h2>Ændringer i7.0</h2>
+<ul>
+<li>Dialogboksen "Feeds" indeholder en knap for at åbne en mappe, der
+  indeholder en sikkerhedskopi af feeds.</li>
+<li>Når du bruger redigeringsboksen til at filtrere feeds, og hvis der ikke
+  findes nogen resultater, er listen over feeds og andre kontroller
+  deaktiveret, så NVDA ikke rapporterer "ukendt" i den tomme liste.</li>
+<li>Hvis dialogen "Liste over artikler" ikke kan vises, for eksempel på grund
+  af fejl med feedet, vil NVDA fejle, så dialogen kan bruges uden at
+  genstarte NVDA.</li>
+</ul>
+<h2>Ændringer i 6.0</h2>
+<ul>
+<li>Når standardfeedet er opdateret, og det ophører med at fungere på grund af
+  serverproblemer, fjernes de tidligere artikler ikke og kan læses med de
+  tilsvarende tastetryk.</li>
+<li>Rettede regression: Standardfeedet kan opdateres to gange igen.</li>
+</ul>
+<h2>Ændringer i 5.0</h2>
+<ul>
+<li>Dialogen med listen over artikler er blevet forbedret.</li>
+<li>Kompatibel med NVDA 2018.3 eller nyere (påkrævet).</li>
+<li>Hvis nødvendigt, kan du hente <a href="https://www.nvaccess.org/addonStore/legacy?file=rf-o">den sidste version kompatibel med NVDA
+  2017.3</a>.</li>
+</ul>
+<h2>Ændringer i4.0</h2>
+<ul>
+<li>Tilføjet en knap for at åbne det valgte feed fra dialogen "Feeds".</li>
+</ul>
+<h2>Ændringer i 3.0</h2>
+<ul>
+<li>Dialoger til at administrere filer til feeds er blevet fjernet. Nu er
+  deres funktionalitet medtaget i dialogen "Feeds".</li>
+<li>Dialogens visuelle præsentation er blevet forbedret og overholder
+  udseendet af de dialoger, der vises i NVDA.</li>
+<li>Standardfeed er gemt i NVDA-konfigurationen. Derfor er det muligt at
+  indstille forskellige standardfeeds i konfigurationsprofilerne.</li>
+<li>Kræver NVDA 2016.4.</li>
+</ul>
+<h2>Ændringer i 2.0</h2>
+<ul>
+<li>Hjælp til tilføjelsesprogrammet er til rådighed fra styring af
+  tilføjelsesprogrammer.</li>
+</ul>
+<h2>Ændringer i 1.0</h2>
+<ul>
+<li>Første version.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

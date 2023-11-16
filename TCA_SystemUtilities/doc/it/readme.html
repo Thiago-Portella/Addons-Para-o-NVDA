@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>TCA SystemUtilities 06b4</title>
+</head>
+<body>
+<h2>TCA SystemUtilities.</h2>
+<p>Piccolo add-on che ci consente di eseguire rapidamente alcune azioni di Windows tramite una scorciatoia da tastiera.
+È in grado di eseguire una riparazione del sistema con SFC. Puoi copiare le informazioni di sistema negli appunti, accedere al BIOS e molto altro.
+Possiamo anche aprire il sito ufficiale per ottenere add-on per NVDA in modo diretto.</p>
+<ul>
+<li>Autore: Peter Reina <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#101;&#116;&#101;&#114;&#114;&#99;&#56;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#101;&#116;&#101;&#114;&#114;&#99;&#56;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
+<li>Compatibilità: NVDA 2018 fino a NVDA 2021.3</li>
+</ul>
+<h2>Funzioni di sistema:</h2>
+<ul>
+<li>
+<p>Arresto del sistema: chiude Windows
+ Inoltre, emette il classico suono di chiusura di Windows. Ci avverte che il sistema sta per essere spento tramite un messaggio.
+ Ci offre la possibilità di chiudere o annullare lo spegnimento per 3 secondi.</p>
+</li>
+<li>
+<p>Riavvio del sistema: riavvia Windows
+ Inoltre, emette il classico suono di chiusura di Windows. Ci avverte che il sistema si riavvierà tramite un messaggio.
+ Ci offre la possibilità di chiudere o annullare il riavvio per 3 secondi.</p>
+</li>
+<li>
+<p>Annulla (arresto o riavvio): ci consente di annullare una qualsiasi delle 2 opzioni precedenti (arresto o riavvio)
+ Inoltre, ci informa con un messaggio che l'arresto/riavvio è stato annullato.
+ ! Nota! Abbiamo solo 3 secondi per eseguire questa azione.</p>
+</li>
+<li>
+<p>Ibernazione: ci consente di mettere il sistema in modalità ibernazione, comodamente da NVDA.</p>
+</li>
+<li>
+<p>Riavvia ed entra in modalità provvisoria con rete: questa funzionalità a volte è molto complicata da inserire, invece con TCA SystemUtilities è un gioco da ragazzi.
+Ci permette di entrare molto facilmente  in Windows con funzioni limitate senza caricare servizi o programmi non necessari, da dove possiamo fare una pulizia più approfondita, rimuovere programmi indesiderati, malware e molto altro.
+! Nota importante!
+In questa modalità, nei sistemi precedenti a Windows 10, il servizio audio potrebbe non essere attivato, quindi non possiamo avere la sintesi vocale dello screen reader.
+Una volta attivata questa funzione, dobbiamo quindi disabilitarla, possiamo farlo dallo stesso menu TCA-SystemUtilities, nella sezione: "Arresto del sistema".</p>
+</li>
+<li>
+<p>Riavvia in modalità normale: ci consente di disabilitare la modalità provvisoria se l'abbiamo attivata, riporta l'avvio di Windows ai suoi valori normali (carica tutti i servizi e i programmi che abbiamo all'avvio).</p>
+</li>
+<li>
+<p>Sospendi: consente di sospendere il sistema, comodamente da NVDA.</p>
+</li>
+<li>
+<p>Entra nel BIOS-UEFI: Possiamo comodamente da Windows e con NVDA dire al PC di entrare nel BIOS-UEFI al prossimo riavvio.
+Non c'è bisogno di premere o conoscere il tasto, direttamente e facilmente.
+(Nota importante!) nel BIOS-UEFI non è presente il servizio audio, quindi non potremo utilizzare uno screen reader nella sua interfaccia). Una volta che vogliamo tornare al nostro sistema, possiamo premere la combinazione di tasti: CTRL+ALT+Canc.</p>
+</li>
+<li>
+<p>Apri CMD nel percorso corrente: con una semplice scorciatoia da tastiera possiamo aprire il prompt dei comandi in Windows (CMD) e prenderà il percorso della cartella in cui ci troviamo.</p>
+</li>
+<li>
+<p>Apri CMD come amministratore: Con una semplice scorciatoia da tastiera, apriremo il prompt dei comandi di Windows con tutti i privilegi di amministratore (Solo nei sistemi precedenti a Windows 10, ci troveremo nel percorso della cartella dove si trova il focus, altrimenti si aprirà in System32).</p>
+</li>
+<li>
+<p>Cancella gli appunti e la loro cronologia: comoda funzionalità che svuota tutto ciò che abbiamo negli appunti, in Windows 10 e 11, se abbiamo attivato la cronologia, verranno anche cancellati tutti gli elementi che si trovano al suo interno.</p>
+</li>
+<li>
+<p>Riavvia Explorer: riavviamo comodamente Windows Explorer da NVDA.
+Possiamo farlo tramite una scorciatoia che assegniamo o dal menu TCA-SystemUtilities.</p>
+</li>
+<li>
+<p>Conoscere l'architettura del sistema: ci dirà qual è l'architettura di Windows (32 o 64 bit).</p>
+</li>
+<li>
+<p>Nascondi cartelle: ci consente di inserire l'attributo nascosto nella cartella in cui ci troviamo, ovvero la cartella non verrà mostrata (dobbiamo inserirla affinché abbia effetto).</p>
+</li>
+<li>
+<p>Mostra cartelle nascoste: questa funzione ci consente di rendere visibili tutte le cartelle e i file nascosti (validi in chiavette USB, unità esterne e altro), molto utile quando si collega qualsiasi dispositivo esterno. Dobbiamo entrare nella cartella e premere la scorciatoia da tastiera.</p>
+</li>
+</ul>
+<h2>Funzioni di riparazione del sistema.</h2>
+<ul>
+<li>
+<p>Esegui una scansione del sistema con SFC: ci consente di eseguire una scansione / riparazione del file system di Windows SFC /SCANNOW.</p>
+</li>
+<li>
+<p>Disattiva spazio di archiviazione riservato: restituisce i quasi 10 Gb che Windows dirotta dal nostro disco rigido per gli aggiornamenti (non è necessario attivarlo affinché gli aggiornamenti funzionino).</p>
+</li>
+<li>
+<p>Attiva spazio di archiviazione riservato: Se desideri comunque attivare questa funzione di Windows e forzare il tuo disco rigido a riservare quasi 10 Gb per gli aggiornamenti, con questo comando l'attiverai.</p>
+</li>
+<li>
+<p>Cancella cache DNS: cancella rapidamente e direttamente tutta la cache DNS di Windows (può migliorare i problemi di navigazione in Internet). (</p>
+</li>
+<li>
+<p>Pulisci le impostazioni salvate per le schermate protette: rimuove tutti i plug-in e le impostazioni che abbiamo copiato per essere eseguite nelle schermate protette, lasciando NVDA come viene fornito in modo nativo.</p>
+</li>
+<li>
+<p>Pulisci disco: ci consente di avviare Windows Disk Cleaner, ma con opzioni molto più avanzate. Pulirà tutti i dischi e i dispositivi di archiviazione che abbiamo collegato al sistema.
+La prima volta che lo eseguiamo, verrà visualizzata una finestra di dialogo per creare un profilo di pulizia, possiamo selezionare tutte le caselle che vogliamo pulire più a fondo. È conveniente che premiamo il pulsante: "Crea profilo" questo è necessario farlo solo una volta. Abbiamo una casella di controllo che possiamo contrassegnare se non vogliamo che questa finestra di dialogo appaia di nuovo. </p>
+</li>
+<li>
+<p>Ripara il sistema con Dism: esegui una scansione approfondita e prova a riparare i problemi in Windows.</p>
+</li>
+</ul>
+<h2>Funzioni dirette degli appunti:</h2>
+<ul>
+<li>
+<p>Copia negli appunti l'elenco delle cartelle o dei file del percorso corrente:
+Copia l'elenco degli elementi del percorso in cui ci troviamo direttamente negli appunti, così potremo incollarlo in qualsiasi posto modificabile.</p>
+</li>
+<li>
+<p>Copia negli appunti le informazioni sulle schede audio: ci permette di copiare direttamente negli appunti le informazioni su tutti i dispositivi audio che abbiamo nel sistema.
+così potremo incollarlo in qualsiasi posto modificabile.</p>
+</li>
+<li>
+<p>Copia le informazioni dell'intero sistema negli appunti: ci consente di copiare direttamente un riepilogo del nostro sistema.
+così potremo incollarlo in qualsiasi posto modificabile.</p>
+</li>
+<li>
+<p>Copia il percorso: copierà negli appunti il percorso della cartella in cui ci troviamo.
+ così potremo incollarlo in qualsiasi posto modificabile. </p>
+</li>
+</ul>
+<h2>Opzioni di sicurezza di Windows (Windows Defender).</h2>
+<ul>
+<li>
+<p>Analizza avvio del sistema: esegue direttamente un'analisi di virus e malware dei file appartenenti al settore di avvio di Windows (Boot sector).</p>
+</li>
+<li>
+<p>Scansione completa: avvia direttamente una scansione antivirus dell'intero sistema.</p>
+</li>
+<li>
+<p>Scansione rapida: avvia direttamente una scansione rapida di virus e malware (di parti di sistema essenziali).</p>
+</li>
+<li>
+<p>Scansiona file compressi: attiva direttamente, L'antivirus di Windows può scansionare file compressi (rar, zip, ace, tar, ecc.).</p>
+</li>
+<li>
+<p>Non eseguire la scansione di file compressi: disabilita direttamente l'antivirus di Windows dalla scansione di file compressi (rar, zip, ace, tar, ecc.).</p>
+</li>
+<li>
+<p>Elenco dei file in quarantena negli appunti: copia negli appunti, un elenco e le informazioni di tutti i file che l'antivirus di Windows ha messo in quarantena.</p>
+</li>
+</ul>
+<h2>Opzioni multimediali.</h2>
+<ul>
+<li>
+<p>Attiva Webcam: Ci permette  di attivare comodamente da NVDA la webcam se ce l'abbiamo (lasciarla pronta per essere utilizzata).</p>
+</li>
+<li>
+<p>Disattiva Webcam: Ci permette  di disabilitare comodamente da NVDA la webcam se ce l'abbiamo (disattivandola, nessun programma può usarla).</p>
+</li>
+<li>
+<p>Mixer del volume: ci consente di aprire facilmente il mixer del volume di Windows da NVDA.
+Possiamo farlo dal menu TCA SystemUtilities, nella sezione: "Voce e multimedia", oppure possiamo stabilire una scorciatoia da tastiera.</p>
+</li>
+<li>
+<p>Apri opzioni vocali: apre rapidamente le opzioni o le proprietà di sintesi vocale. Qui possiamo scegliere la nostra voce TTS installata di default sul sistema. </p>
+</li>
+<li>
+<p>Apri opzioni audio: ci consente di aprire direttamente le opzioni audio del pannello di controllo (audio, riproduzione, registrazione, comunicazioni).</p>
+</li>
+</ul>
+<h2>Apri rapidamente alcune funzioni di sistema:</h2>
+<ul>
+<li>
+<p>Apri Ottimizza unità: ci consente di aprire direttamente questa interessante funzionalità di Windows, per migliorare le prestazioni dei nostri dischi rigidi.</p>
+</li>
+<li>
+<p>Apri mappa caratteri: apre direttamente questa interessante funzionalità di Windows. Ciò ci consente di scegliere e conoscere tutti i segni, i numeri e le lettere esistenti nel sistema.
+Molto utile per conoscere segni rari o difficili da ottenere con la tastiera.</p>
+</li>
+<li>
+<p>Procedura guidata di salvataggio delle password utente: Apre la procedura guidata di questa utilissima ma poco conosciuta utility di Windows.
+Ciò ci consente di salvare le credenziali (nomi, password e altro), degli account utente che abbiamo nel sistema.</p>
+</li>
+<li>Apri procedura guidata per trasferire file tramite Bluethoot: ci consente di avviare direttamente questa procedura guidata per ricevere o inviare file tramite i nostri dispositivi Bluethoot.</li>
+<li>Apri Opzioni cartella: apre direttamente questa funzione molto utilizzata, per gestire Esplora risorse, visualizzazione di cartelle, visualizzazione di estensioni di file e altro.</li>
+<li>Apri cartella Roaming: apri direttamente la cartella AppData&gt;Roaming (qui troviamo la cartella di configurazione NVDA, e di molti altri programmi).</li>
+<li>
+<p>Apri Gestione disco: ci permette di aprire direttamente questa interessante funzionalità per gestire i dischi, le partizioni e altri dispositivi di archiviazione installati sul nostro PC.</p>
+</li>
+<li>
+<p>Apri password di backup:
+Si aprirà questo utile Wizard poco conosciuto che ci permette di fare un backup della password di Windows,per poterla recuperare da un dispositivo esterno.</p>
+</li>
+<li>
+<p>apri Gestione risorse del computer: possiamo aprire direttamente questo potente e poco conosciuto strumento Windows. È come un Gestione attività migliorato, possiamo gestire tutti i servizi, le applicazioni e i processi in esecuzione sul nostro sistema.
+Inoltre possiamo sapere quanta memoria, disco, rete e altro i programmi consumano.</p>
+</li>
+<li>
+<p>Apri Gestione dispositivi: ci consente di aprire questa utile funzionalità di Windows per gestire l'hardware e i driver del computer.</p>
+</li>
+<li>
+<p>Conoscere la versione di Windows: si apriranno le informazioni con la versione del sistema operativo.</p>
+</li>
+<li>
+<p>Apri sito ufficiale degli add-on: si aprirà nel browser predefinito, il sito ufficiale per ottenere add-on NVDA.</p>
+</li>
+</ul>
+<h2>Nota importante!</h2>
+<p>Ciascuna delle scorciatoie da tastiera può essere assegnata a gusto personale, dalla finestra di dialogo Preferenze NVDA &gt; Gesti e tasti di immissione.</p>
+<h2>Modifiche alla versione 05.</h2>
+<ul>
+<li>Nuova funzione per pulire plugin e impostazioni su schermate sicure.</li>
+<li>Nuova funzione di cancellazione degli appunti inclusa la cronologia in Windows.</li>
+<li>Nuova funzione apri il CMD nel percorso corrente.</li>
+<li>Nuova funzione per aprire il CMD con privilegi di amministratore.</li>
+<li>Nuova funzionalità: disabilita l'archiviazione riservata in Windows.</li>
+<li>Nuova funzionalità: abilita l'archiviazione riservata in Windows.</li>
+<li>Corretta e ottimizzata la funzione per ottenere l'oggetto, con questa vengono migliorate diverse funzioni come: copiare il percorso negli appunti, copiare l'elenco dei file negli appunti, nascondere o mostrare file e cartelle.</li>
+</ul>
+<h2>Modifiche alla versione: 04.</h2>
+<ul>
+<li>Nuova funzione per entrare nel BIOS-UEFI del sistema (nella sezione: "Arresto del sistema").</li>
+<li>Modificato il menu: "Suono e voce", in: "Voce e multimedia".</li>
+<li>2 Nuove funzioni nella sezione: "Voce e multimedia" (Attiva/disattiva la webcam).</li>
+<li>Nuova funzionalità: "Cancella cache DNS" (nella sezione Riparazione e ottimizzazione).</li>
+<li>Ristrutturazione della documentazione degli add-on.</li>
+<li>Correzione di sicurezza (sys.path.remove()).</li>
+</ul>
+<h2>Modifiche alla versione 03:</h2>
+<ul>
+<li>In questa versione TCA SystemUtilities è già completamente compatibile con il nuovo sistema: Windows 11.</li>
+<li>Nuovo menu: Sicurezza di Windows
+con diverse opzioni per quanto riguarda l'antivirus di Windows.</li>
+<li>Un'altra opzione nel menu: Arresto del sistema, l'opzione: "sospendere il sistema".</li>
+<li>In questa versione l'add-on è tradotto nelle seguenti lingue: arabo, portoghese (Portogallo, portoghese Brasile) e rumeno.</li>
+</ul>
+<h2>Modifiche alla versione: 02.</h2>
+<ul>
+<li>In questa versione l'add-on ha un comodo Menu da cui possiamo eseguire la maggior parte delle sue funzionalità (non tutte).
+Si trova nel menu: "Strumenti" di NVDA e ha il nome del plug-in: "TCA SystemUtilities".</li>
+<li>Tutte le scorciatoie preimpostate sono state rimosse in questa versione, quindi ora devi assegnare le scorciatoie a qualsiasi funzione, dal menu: "Gesti di input" di NVDA.</li>
+<li>Altre funzioni nelle sezioni: Arresto del sistema, Esplora risorse, Suono e voce, Ripristino del sistema.</li>
+<li>Ottimizzazione di tutto il codice dell'add-on.</li>
+</ul>
+<hr />
+<p>Codice del progetto su GitHub:
+<a href="https://github.com/peterrc87/TCA-SystemUtilities-NVDA-Complemento">https://github.com/peterrc87/TCA-SystemUtilities-NVDA-Complemento</a></p>
+</body>
+</html>

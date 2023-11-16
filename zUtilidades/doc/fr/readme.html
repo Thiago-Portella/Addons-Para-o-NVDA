@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>zUtilidades pour NVDA 0.2.8</title>
+</head>
+<body>
+<h1>Manuel de zUtilidades</h1>
+<ul>
+<li>Auteur: Héctor J. Benítez Corredera</li>
+<li>Compatibilité NVDA: 2019.3 à 2021.1</li>
+<li><a href="https://nvda.es/files/get.php?file=zUtilidades">télécharger l'extension:</a></li>
+<li><a href="https://github.com/hxebolax/zUtilidades-para-NVDA">Projet  sur GitHub:</a></li>
+</ul>
+<hr />
+<h2>Sommaire<a id="Sommaire"></a></h2>
+<ul>
+<li><a href="#mark0">Introduction</a></li>
+<li><a href="#mark1">Module Lanceur d'applications</a></li>
+<li><a href="#mark2">Écran principal</a></li>
+<li><a href="#mark3">Liste des catégories</a></li>
+<li><a href="#mark4">Liste des applications</a></li>
+<li><a href="#mark5">Menu Ajouter une action</a></li>
+<li><a href="#mark6">Modifier une action</a></li>
+<li><a href="#mark7">Supprimer une action</a></li>
+<li><a href="#mark8">Bouton Menu</a></li>
+<li><a href="#mark9">Raccourcis clavier</a></li>
+<li><a href="#mark10">Observations de l'auteur</a></li>
+<li><a href="#mark11">Module Notes rapides</a></li>
+<li><a href="#mark12">Ajouter une note rapide de n'importe où</a></li>
+<li><a href="#mark13">Menus virtuels pour le Lanceur d'applications et pour les Notes rapides</a></li>
+<li><a href="#mark14">Traducteurs et contributeurs</a></li>
+<li><a href="#mark15">Journal des changements</a></li>
+<li><a href="#mark0.2.5">Version 0.2.5</a></li>
+<li><a href="#mark0.2.4">Version 0.2.4</a></li>
+<li><a href="#mark0.2.3">Version 0.2.3</a></li>
+<li><a href="#mark0.2.2">Version 0.2.2</a></li>
+<li><a href="#mark0.2.1">Version 0.2.1</a></li>
+<li><a href="#mark0.2">Version 0.2</a></li>
+<li><a href="#mark0.1.6">Version 0.1.6</a></li>
+<li><a href="#mark0.1.5">Version 0.1.5</a></li>
+<li><a href="#mark0.1">Version 0.1</a></li>
+</ul>
+<hr />
+<h1>Introduction<a id="mark0"></a></h1>
+<p>zUtilidades vise à être un ensemble de petites applications pour NVDA.</p>
+<p>Nous allons essayer d'ajouter des applications qui peuvent être intéressantes afin que nous puissions les consulter rapidement et que à son tour, soit faciles à gérer et clair dans son interface.</p>
+<p>zUtilidades aura un menu dans Outils de NVDA, Dans ce menu ils seront ajoutés les différents modules.</p>
+<p>Chaque module est préparé afin que nous puissions ajouter un raccourci allant dans le menu NVDA / Préférences /  Gestes de commandes dans la catégorie zUtilidades.</p>
+<p>Par défaut, les modules viendront sans raccourci attribué.</p>
+<p>Par conséquent, nous pouvons démarrer les modules en allant dans le menu Outils / zUtilidades ou en attribuant une combinaison de touches pour chaque module.</p>
+<p>Il est actuellement composé des modules suivants:</p>
+<ul>
+<li>Lanceur d'applications.</li>
+<li>Notes rapides.</li>
+</ul>
+<h1>Module Lanceur d'applications<a id="mark1"></a></h1>
+<p>Ce module nous permettra rapidement et à partir de n'importe quelle partie de notre ordinateur lancer une application portable ou installé.</p>
+<h2>Écran principal<a id="mark2"></a></h2>
+<p>L'écran principal consiste en une liste de catégories, une liste d'applications et un bouton Menu.</p>
+<p>Si nous faisons Tabulation nous passerons à travers les différents zones.</p>
+<h3>Liste des catégories<a id="mark3"></a></h3>
+<p>Dans cette zone, nous pouvons ajouter, modifier ou supprimer une catégorie, pouvant trier à notre goût et par catégories nos applications.</p>
+<p>Nous pouvons accéder aux options Ajouter, Modifier ou Supprimer de deux manières.</p>
+<p>Lorsque nous sommes dans la zone Catégories en appuyant sur la touche Application ou si nous n'avons pas la  touche Maj+F10, un menu sera affiché où nous pouvons choisir l'une des 3 options.</p>
+<p>Les dialogues tantot pour ajouter comme pour modifier sont très simples disposant d'un seul champ de édition où nous pouvons mettre le nom de la nouvelle catégorie ou modifier la catégorie que nous avons choisie, deux boutons, OK et Annuler.</p>
+<p>Si nous choisissons de supprimer, nous devons prendre en compte que le contenu de cette catégorie sera complètement effacée sans pouvoir refaire l'action, soyez donc prudent  car nous pourrons perdre les applications Que nous avons  dans la base de données et nous devrons re-entrez toutes les applications ou les commandes ou les accès à cette catégorie.</p>
+<p>Nous pouvons également accéder à ces options en cliquant sur le bouton Menu, lorsque nous faisons Tabulation ou avec la combinaison Alt+M. Si nous le faisons, un menu sera affiché avec un sous-menu appelé Catégories où nous pouvons choisir l'une des 3 options précédentes.</p>
+<p>Notez que Modifier et Supprimer seront toujours dans la catégorie qui a le focus, donnant les messages correspondants si nous n'avons pas de catégories.</p>
+<p>Nous pouvons également utiliser les combinaisons de touches Alt + Flèche  haut et Flèche  bas pour déplacer la catégorie pour pouvoir les trier.</p>
+<h3>Liste des applications<a id="mark4"></a></h3>
+<p>Dans cette zone, c'est où les applications correspondantes à la catégorie que nous avons choisies seront placées.</p>
+<p>Nous avons 3 options qui son Ajouter une action, Modifier une action ou Supprimer une action.</p>
+<p>Nous pouvons obtenir ces options comme dans la liste des catégories soit avec la touche Applications ou dans se cas Maj+F10 ou accédez au bouton Menu (Alt+M) et chercher le sous-menu Applications.</p>
+<p>Dans cette liste d'applications, nous pouvons lancer l'application qui a le focus en appuyant sur la barre d'espace.</p>
+<p>Nous pouvons également utiliser les combinaisons de touches Alt + Flèche  haut et Flèche  bas  pour déplacer  l'entrée pour pouvoir les trier.</p>
+<p>Dans cette zone, nous pouvons rapidement naviguer dans les différentes entrées, en appuyant sur la première lettre, afin que nous puissions trouver rapidement l'application que nous souhaitons exécuter si nous en avons beaucoup dans la base de données.</p>
+<h4>Menu Ajouter une action<a id="mark5"></a></h4>
+<p>Dans ce menu, nous pouvons choisir entre les options suivantes:</p>
+<ul>
+<li>Ajouter une application:</li>
+</ul>
+<p>Si nous ajoutons une application, il existe deux champs obligatoires et c'est le nom de l'application et le répertoire dans lequel notre application est située.</p>
+<p>Actuellement, cette extension prend en charge les applications avec les extensions exe, bat et com.</p>
+<p>Une fois que les champs obligatoires sont remplis, nous pouvons choisir si l'application nécessite des paramètres supplémentaires ou si nous voulons exécuter l'application en mode administrateur.</p>
+<p>Si nous voulons exécuter une application en mode administrateur, on nous demandera l'autorisation correspondante lorsque nous démarrons l'application.</p>
+<ul>
+<li>Ajouter une commande CMD</li>
+</ul>
+<p>Dans ce dialogue, nous pouvons ajouter des commandes de console.</p>
+<p>Les champs nom pour identifier la commande et le champ commandes sont obligatoires.</p>
+<p>Dans ce cas, en plus de lancer des commandes CMD, si nous maîtrisons Windows PowerShell, si nous mettons PowerShell en ligne de commande et suivi de ce que nous voulons, nous allons également exécuter des commandes PowerShell.</p>
+<p>De même, si son des commandes CMD j'ajoute que nous pouvons exécuter plusieurs lignes de commande qui doivent être séparées par le symbole (et commercial) pouvant être effectuées avec  Maj+6, ceci avec un clavier QWERTY espagnol. Si un clavier QWERTY anglais est utilisé, Cela sera effectué avec Maj+7.</p>
+<p>Par exemple, j'ai mis une ligne de commande pour redémarrer Windows Explorer, vous vérifierez que j'utilise le symbole (et commercial) pour séparer une ligne de commande de l'autre.</p>
+<p><code>taskkill /f /im explorer.exe &amp; start explorer</code></p>
+<p>En outre, dans ce dialogue, nous pouvons mettre une pause de sorte que la console ne se ferme pas et nous pouvons voir les résultats.</p>
+<p>Nous pouvons également exécuter en tant qu'administrateur.</p>
+<ul>
+<li>Ajouter des accès aux dossiers</li>
+</ul>
+<p>Dans ce dialogue, nous devrons choisir un nom pour identifier l'accès au dossier et choisir un dossier.</p>
+<p>Cela nous permettra d'ouvrir rapidement des dossiers de notre système de n'importe où.</p>
+<ul>
+<li>Ajouter Exécuter des raccourcis de Windows</li>
+</ul>
+<p>Dans ce dialogue, nous pouvons choisir un raccourci pour le démarrer. Nous pouvons également choisir si nous voulons le démarrer en tant qu'administrateur.</p>
+<p>Les champs pour identifier le nom du raccourci et le chemin sont obligatoires.</p>
+<ul>
+<li>Ajouter une application installée</li>
+</ul>
+<p>Dans ce dialogue, toutes les applications installées sur notre ordinateur seront obtenues par l'utilisateur ou sont des applications qui sont déjà livrées avec Windows.</p>
+<p>Également sur cet écran, nous pouvons choisir les applications installées à partir du Microsoft Store de Windows.</p>
+<p>AVERTISSEMENT ceci n'est pas valide pour Windows 7.</p>
+<p>Une fois qu'une application est ajoutée à partir de ce dialogue, notez qu'il ne peut pas être modifié, alors nous devrons supprimer l'entrée si nous voulons l'ajouter à nouveau.</p>
+<p>L'option Exécuter en tant qu’administrateur dans ce dialogue ne fonctionnera pas pour toutes les applications. Fonctionnant uniquement pour celle qui vous permettent d'utiliser des privilèges d'administrateur.</p>
+<p>Notez également que dans ce dialogue, les accès installés par les applications apparaissent également dans la zone de liste déroulante, nous pouvons les sélectionner, mais certains ne sont pas autorisés d'être ouvert, donnant une erreur.</p>
+<p>Notez également que vous devez faire attention car dans cette liste, apparaîtront des applications qui peut être pour administrer ou des applications pour la gestion Que si nous ne savons pas à quoi servent il vaut mieux ne pas les toucher.</p>
+<h4>Modifier une action<a id="mark6"></a></h4>
+<p>Le dialogue Modifier est exactement le même que le dialogue Ajouter une action Mais cela nous permettra de modifier l'entrée que nous choisissons.</p>
+<p>Cela nous permettra de modifier tous les éléments, à l'exception de ceux qui ont été ajoutés par l'option  Ajouter une application installée, Les dialogue seront identiques que dans les options pour ajouter.</p>
+<h4>Supprimer une action<a id="mark7"></a></h4>
+<p>Si nous supprimons une entrée, nous devons garder à l'esprit que l'action ne sera pas réversible.</p>
+<h3>Bouton Menu<a id="mark8"></a></h3>
+<p>Ce bouton sera accessible depuis n'importe quelle partie de l'interface en appuyant sur la combinaison  Alt+M.</p>
+<p>Dans ce menu, nous trouverons quatre sous-menus qui sont  Catégories, Actions, Faire ou restaurer une sauvegarde et Options, dans ce menu nous trouvons aussi l'option Quitter.</p>
+<p>Eh bien,  Catégories et Actions que j'ai expliquées auparavant, je n'expliquerai que le sous-menu Faire ou restaurer une sauvegarde et Options.</p>
+<p>Eh bien, si nous choisissons Faire  une sauvegarde, une fenêtre d'enregistrement de Windows s'ouvre où nous devrons choisir où enregistrer notre sauvegarde de la base de données.</p>
+<p>Par défaut, le nom du fichier est plus ou moins comme ceci:</p>
+<p><code>Backup-03052021230645.zut-zl</code></p>
+<p>Eh bien, l'extension est configurée par défaut et le nom correspond au module et contient la date à laquelle il a été créé, mais nous pouvons mettre le nom que nous souhaitons.</p>
+<p>Une fois enregistré, nous pouvons la restaurer si notre base de données est corrompue ou tout simplement si celle-ci est supprimée par erreur ou nous souhaitons revenir à une version que nous avons précédemment enregistrée.</p>
+<p>Si nous choisissons Restaurer une sauvegarde, une fenêtre Windows classique s'ouvrira, pour nous permettre d'ouvrir les fichiers respectifs.</p>
+<p>Nous devons choisir la copiie que nous avons enregistrée qui aura l'extension *.zut-zl , veillez à ne pas modifier l'extension car sinon vous ne trouverez pas le fichier.</p>
+<p>Une fois que vous avez choisi, la sauvegarde sera restaurée et lorsque nous avons appuyer sur OK l'extension sera fermé  et la prochaine fois que nous l'ouvrons, il aura notre copie restaurée.</p>
+<p>Notez que les fichiers *.zut-zl sont en réalité des fichiers compressés, mais faites attention lorsque vous les modifiez, si elles sont modifiées, la signature ne correspondra pas et ne leur permettra pas d'être restaurer.</p>
+<p>Avec cela, je tiens à dire que ces fichiers apportent une signature qui ne correspond pas au moment de la restauration, cela donnera une erreur et chaque signature est différente pour chaque fichier.</p>
+<p>Dans le sous-menu Options maintenant il n'y a que l'option Réinitialiser le lanceur d'applications aux valeurs par défaut.</p>
+<p>Si nous choisissons cette option, toute la base de données sera supprimée, laissant  l'extension comme s'il était nouvellement installé.</p>
+<h2>Raccourcis clavier<a id="mark9"></a></h2>
+<p>Dans les deux zones, Catégories et Applications, nous pouvons trier les entrées avec:</p>
+<ul>
+<li>Alt + Flèche  haut ou Flèche bas</li>
+</ul>
+<p>Lorsqu'une catégorie ou une application atteint le début ou la fin de la liste, cela sera annoncé avec un son distinct pour savoir que nous ne pouvons pas ni monter ni descendre plus.</p>
+<ul>
+<li>
+<p>Alt + C: Ça va nous amener rapidement à la zone des catégories.</p>
+</li>
+<li>
+<p>Alt + L: Ça va nous amener rapidement à la liste des applications.</p>
+</li>
+<li>
+<p>Alt + M: Cela nous ouvrira le menu.</p>
+</li>
+<li>
+<p>Touche Applications ou Maj + F10: Dans les zones des catégories et applications nous déploierons le menu contextuel avec des options.</p>
+</li>
+<li>
+<p>Espace: Dans la zone liste des applications s'exécutera l'application qui a le focus.</p>
+</li>
+<li>
+<p>Echap: Ferme tous les dialogues que l'application peut ouvrir même l'écran principal du lanceur d'applications, laissant le focus depuis l'endroit où elle a été appelée.</p>
+</li>
+</ul>
+<h2>Observations de l'auteur<a id="mark10"></a></h2>
+<p>Prenez garde sur diverses choses, la première que le lanceur d'applications se fermera lorsque nous exécuterons une application, devant l'appeler à nouveau lorsque nous voulons exécuter une  autre.</p>
+<p>Il a également été implémenté une fonction qui sauvegardera la position de la catégorie et les dernières applications visitées, alors lorsque nous ouvrons le lanceur d'applications, la dernière catégorie et la dernière application de cette catégorie seront toujours choisies.</p>
+<p>Aussi il a été implémenté la sauvegarde du focus, alors lorsque nous appelons le lanceur d'applications, il nous laissera toujours dans la dernière position où le focus a était mis  avant de fermer.</p>
+<p>Par exemple,  si le focus est mis sur le bouton  Menu et nous fermons le lanceur d'applications, la prochaine fois que nous l'ouvrons, le focus sera mis sur le bouton Menu.</p>
+<p>Ces caractéristiques ne sont valables que lors de la session de NVDA, cela signifie que si nous redémarrons NVDA on va démarrer avec le focus mis dans la zone catégories.</p>
+<p>Cette extension a été faite pour être utilisée avec Windows 10, de sorte que si vous utilisez des versions antérieures et que vous avez  un problème quelconque vous pouvez me le dire, mais je ne peux sûrement rien faire car certaines fonctionnalités ne sont trouvées que dans Windows 10.</p>
+<h1>Module Notes rapides<a id="mark11"></a></h1>
+<p>Ce module nous aidera à avoir de petites notes à portée de main que nous pouvons consulter, modifier, supprimer.</p>
+<p>Ce module a la même façon de fonctionner que le lanceur d'applications mais varie sur certaines touches expliquées ci-dessous.</p>
+<p>Je n'expliquerai plus le menu avec lequel nous pouvons faire ou restaurer une sauvegarde, réinitialiser le lanceur d'applications aux valeurs par défaut, gérer les catégories et les notes.</p>
+<p>Je ne vais pas non plus expliquer le parcours de l'interface principale car c'est exactement la même chose.</p>
+<p>Nous pouvons ajouter une note rapide et dans le dialogue qui s'ouvre, nous pouvons mettre le titre de la note et si nous faisons Tabulation le contenu.</p>
+<p>Le  dialogue pour Modifier la note est exactement le même, mettre un titre ou modifier celui-ci qui est déjà et de pouvoir modifier la note.</p>
+<p>Ce module diffère avec le lanceur d'applications dans lequel il utilise de nouvelles combinaisons de touches.</p>
+<ul>
+<li>F1: Lorsque nous sommes sur une note si nous appuyons F1 nous lira le contenu de la note.</li>
+<li>F2: Nous allons copier la note focalisé dans le presse-papiers afin que nous puissions la copier n'importe où tant que l'application qui admette l'écriture doit être focalisé, sinon, rien ne se passera.</li>
+<li>F3: Cette combinaison fermera la fenêtre des notes rapides et collera le contenu de la note que nous avons focalisé ayant le focus, c'est-à-dire que vous collez la note dans l'application qui s'ouvre chaque fois que cela vous permet de coller du texte par la dite application, par exemple, le Bloc-notes, le champ d'un E-mail, dans Word, etc.</li>
+</ul>
+<p>Cela signifie que si nous appelons le module Notes rapides à partir du Bloc-notes ou quand Nous sommes situés  dans l'objet  d'un E-mail lorsque nous appuyons sur cette combinaison, le texte sera coller où nous avons eu le focus.</p>
+<p>Par exemple, si nous lançons le module Notes rapides à partir du bureau et nous appuyons sur F3 sur une note, rien ne se passera, si nous ouvrons le Bloc-notes et nous appuyons sur F3 il collera le contenu de la note dans le bloc-notes.</p>
+<p>Soyez prudent si nous sommes sur le bureau ou quelque part où vous ne pouvez pas coller directement, cela ne fera rien</p>
+<p>Cela continue également de fonctionner tantôt dans la zone des catégories comme dans la zone de liste de notes pour pouvoir trier lesdites zones avec Alt+Flèches haut et bas pour déplacer ce que nous avons sélectionné.</p>
+<p>Si nous appuyons sur espace, une fenêtre s'ouvrira où nous ne pouvons voir que notre note.</p>
+<p>Je tiens à dire que ce module vient sans un raccourci défini, , nous devrons donc l'ajouter dans le dialogue Gestes de commandes.</p>
+<p>Un dialogue Options est ajoutée dans le menu Options.</p>
+<p>Il n'a actuellement qu'une option qui est la suivante:</p>
+<ul>
+<li>Capturer le titre de la fenêtre dans les notes rapides (de n'importe où)</li>
+</ul>
+<p>Si nous cochons cette option lorsque nous appuyons soit sur Ajouter une nouvelle note rapide ou sur Ajouter une note rapide du texte sélectionné le titre de la note sera rempli avec le titre de la fenêtre que à ce moment est focalisée.</p>
+<h1>Ajouter une note rapide de n'importe où<a id="mark12"></a></h1>
+<p>De plus, le module Notes rapides a une fonctionnalité pour ajouter des notes rapides de n'importe où sans qu'il soit nécessaire d'ouvrir l'extension pour l'ajouter.</p>
+<p>Dans le dialogue Gestes de commandes, nous pouvons maintenant configurer une nouvelle combinaison de   touches que vous trouverez dans:</p>
+<p>NVDA / Préférences /  Gestes de commandes / zUtilidades / Avec un appui s'ajoute une note rapide du texte sélectionné, avec deux appuis s'ajoute une nouvelle note rapide</p>
+<p>Lorsque nous avons une combinaison attribuée, nous ne devrons choisir un texte de n'importe où et appuyer sur la combinaison de touches.</p>
+<p>Une fenêtre s'ouvrira dans laquelle la première chose que nous devrons choisir est dans quelle catégorie nous souhaitons sauvegarder notre note, seules les catégories que nous avons ajoutées apparaîtront.</p>
+<p>Si nous faisons Tabulation, nous allons tomber dans le champ pour mettre le titre de la note et Si nous faisons à nouveau Tabulation, nous aurons le texte que nous avions sélectionné.</p>
+<p>Lorsque nous appuyons sur OK, celle-ci se sauvegardera et nous aurons notre note Dans notre catégorie que nous aurons choisi.</p>
+<p>Si nous appuyons sur cette combinaison deux fois, le même écran s'ouvrira mais pour ajouter une note à partir de zéro. Nous devrons sélectionner dans quelle catégorie sauvegarder la note, le titre de la note ainsi que le contenu de la note.</p>
+<h1>Menus virtuels pour le Lanceur d'applications et pour les Notes rapides<a id="mark13"></a></h1>
+<p>Eh bien, ces menus sont venus pour améliorer l'extension zUtilidades, ce qui la rendra maintenant beaucoup plus productive et plus rapide.</p>
+<p>Eh bien, les gestes de commandes que nous avons affectés au Lanceur d'applications et Notes rapides ont maintenant une double pulsation.</p>
+<p>Si nous appuyons une seule fois cette combinaison nous affichera l'interface graphique, Si nous appuyons deux fois nous affichera le menu virtuel.</p>
+<p>Eh bien, dans ce menu, nous pouvons nous déplacer avec les flèches droite et gauche entre les catégories et avec les flèches haut et bas entre les éléments de cette catégorie s'il y en a.</p>
+<p>Eh bien, il existe des différences entre le menu du Lanceur d'applications et Notes rapides.</p>
+<p>Dans le menu virtuel du Lanceur d'applications avec les flèches nous nous déplaçons et avec entrée nous exécutons l'élément que nous avons sélectionné en faisant l'action correspondante.</p>
+<p>S'il s'agit d'une commande CMD, donc, celle-ci s'exécutera, s'il s'agit d'un raccourci de la même façon et de même si c'était pour l'interface graphique.</p>
+<p>Eh bien avec Échap, nous allons quitter le menu si nous ne voulons rien faire.</p>
+<p>Nous pouvons également passer à travers les catégories en appuyant sur les touches commençant par le début de la lettre du nom sauf  la ñ qui n'est pas pris en charge par ce menu, tous les autres nous amèneront rapidement à la catégorie.</p>
+<p>Eh bien, si cette lettre n'a pas de catégorie, cela nous donnera le message d'aide de la même façon que si nous appuyons sur une quelconque touche différente de celles mentionnées.</p>
+<p>Je tiens à dire que lorsque le menu est actif, toutes les autres combinaisons de touches NVDA ne fonctionneront pas avant que nous quittions le menu.</p>
+<p>Dans le menu  Notes rapides, la touche Barre d'espacement n'est pas valable du tout et si a des différences avec celle du lanceur d'applications.</p>
+<p>Lorsque nous sommes sur un élément, si nous appuyons sur F1 nous verbalisera le contenu de la note, avec F2 nous copiera la note dans le presse-papiers et avec F3 nous collera le contenu de la note où nous avons le focus.</p>
+<p>Également je vous dit aussi que le menu étant actif celui-ci a une priorité jusqu'à ce que nous appuyons sur la touche Échap pour quitter le menu en restaurant la fonctionnalité normale du clavier.</p>
+<h2>Traducteurs et contributeurs:<a id="mark14"></a></h2>
+<ul>
+<li>Français: Rémy Ruiz</li>
+<li>Portugais: Ângelo Miguel Abrantes</li>
+<li>Italien: Alessio Lenzi</li>
+<li>Russe: Valentin Kupriyanov</li>
+<li>Turc: Umut KORKMAZ</li>
+<li>Javi Domínguez: Mille merci de m'avoir appris à programmer le menu. Mieux dit pour l'expliquer pour les imbéciles comme moi.</li>
+</ul>
+<h1>Journal des changements.<a id="mark15"></a></h1>
+<h2>Version 0.2.5.<a id="mark0.2.5"></a></h2>
+<ul>
+<li>
+<p>Résolu une erreur de sécurité sur les écrans sécurisés.</p>
+</li>
+<li>
+<p>Résolu un problème avec la recharge des extensions dans NVDA.</p>
+</li>
+</ul>
+<h2>Version 0.2.4.<a id="mark0.2.4"></a></h2>
+<ul>
+<li>Ajouté la possibilité de capturer l'URL sur une note rapide.</li>
+</ul>
+<p>Configurer dans Options du module zNotas.</p>
+<ul>
+<li>
+<p>Ajout des langues Russe et Turc.</p>
+</li>
+<li>
+<p>Corrigé erreur avec les chemins internes de NVDA.</p>
+</li>
+<li>
+<p>Un problème a été résolu dans les distributions de clavier qui utilisent des caractères cyrilliques.</p>
+</li>
+<li>
+<p>Compatibilité avec NVDA 2022.1.</p>
+</li>
+</ul>
+<h2>Version 0.2.3.<a id="mark0.2.3"></a></h2>
+<p>Ajouté la possibilité de capturer le titre des fenêtres sur Ajouter une nouvelle note rapide ou sur Ajouter une note rapide du texte sélectionné.</p>
+<p>Cette option peut être activée dans le menu du module Notes rapides dans la section Options / Options.</p>
+<p>Si la case est cochée à partir de ce moment le titre des fenêtres sera capturé d'où il a été invoqué soit les options Ajouter une nouvelle note rapide ou Ajouter une note rapide du texte électionné.</p>
+<h2>Version 0.2.2.<a id="mark0.2.2"></a></h2>
+<ul>
+<li>Ajouté la possibilité de déplacer entre les catégories tantôt pour les 'éléments du lanceur d'applications comme pour les notes.</li>
+<li>Ajout d'un double appui pour la touche Ajouter une note rapide du texte sélectionné. Maintenant, avec deux appui nous laissera créer une nouvelle note rapide à partir de zéro.</li>
+<li>Documentation française mise à jour.</li>
+<li>eAjout de la langue italienne</li>
+</ul>
+<h2>Version 0.2.1.<a id="mark0.2.1"></a></h2>
+<ul>
+<li>Problème résolu avec le presse-papiers vides lorsque vous souhaitez coller un texte.</li>
+</ul>
+<h2>Version 0.2.<a id="mark0.2"></a></h2>
+<ul>
+<li>De nombreuses erreurs internes ont été corrigées.</li>
+<li>Le module Lanceur d'applications a été stabilisé.</li>
+<li>Un nouveau module Notes rapides a été ajouté.</li>
+<li>Les menus virtuels ont été ajoutés pour les deux modules.</li>
+</ul>
+<h2>Version 0.1.6.<a id="mark0.1.6"></a></h2>
+<ul>
+<li>Ajout de la traduction française et Portugaise (Portugal / Brésil).</li>
+</ul>
+<h2>Version 0.1.5.<a id="mark0.1.5"></a></h2>
+<ul>
+<li>Menus restructurés.</li>
+</ul>
+<p>Ajoutez la possibilité d'ajouter:</p>
+<ul>
+<li>
+<p>Ajouter une commande CMD</p>
+</li>
+<li>
+<p>Ajouter des accès aux dossiers</p>
+</li>
+<li>
+<p>Ajouter Exécuter des raccourcis de Windows</p>
+</li>
+<li>
+<p>Ajouter une application installée</p>
+</li>
+<li>
+<p>Ajouté dans le bouton Menu la possibilité  dans Options Réinitialiser le lanceur d'applications aux valeurs par défaut</p>
+</li>
+<li>
+<p>Différentes erreurs ont été corrigées avec la base de données.</p>
+</li>
+<li>
+<p>Des erreurs internes ont été corrigées.</p>
+</li>
+<li>
+<p>L'extension a été préparée afin  d'être traduite.</p>
+</li>
+</ul>
+<h2>Version 0.1.<a id="mark0.1"></a></h2>
+<ul>
+<li>
+<p>Module Lanceur d'applications ajouté.</p>
+</li>
+<li>
+<p>Version initiale.</p>
+</li>
+</ul>
+</body>
+</html>

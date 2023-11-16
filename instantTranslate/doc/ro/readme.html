@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ro" lang="ro">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Instant Translate 4.6</title>
+</head>
+<body>
+<h1>instantTranslate</h1>
+<ul>
+<li>Autori: Alexy Sadovoy, Beqa Gozalishvili, Mesar Hameed, Alberto Buffolino
+  și alți contribuitori NVDA.</li>
+<li>Descărcați <a href="https://addons.nvda-project.org/files/get.php?file=instantTranslate">versiunea stabilă</a></li>
+<li>Descărcați <a href="https://addons.nvda-project.org/files/get.php?file=it-dev">versiunea în dezvoltare</a></li>
+</ul>
+<p>This add-on is used to translate selected and/or clipboard text from one
+language to another.  This is done using the Google Translate service.</p>
+<h2>Configurarea limbilor</h2>
+<p>Pentru a configura limba sursă, cea aleasă și cea pentru schimbare, mergeți la: Meniul NVDA, Preferințe, Setări Instant Translate.</p>
+<p>Acolo sunt două casete combinate etichetate „limba sursă” și „limba aleasă”
+și o casetă de bifat pentru a decide dacă traducerea trebuie să fie copiată
+pe planșetă.</p>
+<p>În plus, dacă ați selectat opțiunea automată (prima alegere) din caseta
+combinată "Limba sursă", există, de asemenea, o casetă combinată etichetată
+"Limba de schimbare" și o casetă de bifat cu privire la auto-schimbare.</p>
+<p>Semnificația primelor două casete combinate și caseta pentru copiere este
+clară, dar unele cuvinte despre restul sunt necesare. Amintiți-vă
+întotdeauna că explicațiile de mai jos își asumă limba sursă setată pe
+opțiunea automată.</p>
+<p>Caseta combinată „limba de schimbare” atunci când o modificați prin script
+(vedeți mai jos) limba sursă și cea aleasă; de fapt, limba aleasă setată la
+opțiunea auto nu are nici un sens, deci add-on-ul o setează la valoarea
+casetei combinate de mai sus.</p>
+<p>Așadar, imaginați-vă această situație: De obicei, traduceți în Engleză
+(limba dumneavoastră principală), dar câteodată (de exemplu, când scrieți un
+document) aveți nevoie să-l traduceți în italiană (limba dumneavoastră
+secundară; puteți seta caseta combinată „limba pentru schimbare” la
+italiană, deci veți traduce din engleză în italiană fără a accesa în mod
+direct setările add-on-ului. Evident că această funcție are o utilitate
+minoră sau majoră în funcție de nevoile dumneavoastră mai frecvente.</p>
+<p>Acum, caseta de bifat auto-schimbare: Apare dacă și numai dacă setați
+opțiunea auto în caseta combinată „limba sursă” și este conectată în mod
+direct cu combobox-ul „limba pentru schimbare”. Dacă o activați, add-onul
+încearcă să comute automat de la configurația sursă și cea aleasă la o
+configurație unde limba aleasă devine limbă sursă și limba selectată în
+combobox-ul „limba pentru schimbare” este noua limbă aleasă; în mod extrem,
+este utilă dacă limba sursă a textului pe care vreți să-l traduceți este
+limba aleasă.</p>
+<p>Un exemplu simplu: Luați din nou în considerare situația imaginată mai
+devreme; dacă traduceți un text în altă limbă decât engleza, nu există o
+problemă, obțineți traducerea corectă în engleză, dar dacă aveți nevoie să
+traduceți un text din engleză, în mod normal veți obține o traducere în
+engleză, identică cu textul original, acest lucru este un pic
+inutil. Mulțumiri funcției auto-schimbare! Totuși,presupunând că vreți să
+știți cum sună textul în italiană, add-on-ul comută automat limba aleasă la
+italiană, așa că returnează o traducere validă.</p>
+<p>Anyway, this is a temporary configuration; if this option has no effect
+(it's experimental), try to commute manually to a stable configuration,
+using the gesture for swapping described below. It's experimental because in
+some situations (with short texts, typically), Google does not recognize the
+real source language correctly, and you have to swap languages manually via
+script, so to force the source language to be the previous target language
+(English in our example).</p>
+<p>At least, in the speech settings parameters dialog (NVDA Menu &gt;&gt; Preferences &gt;&gt; Speech), you may want to check the "Automatic language switching (when supported)" option. This way, if you are using a multi-lingual synthesizer, the translation will be announced using the target language voice of the synthesizer.</p>
+<h2>Utilizare</h2>
+<p>You can use this add-on in three ways:</p>
+<ol>
+<li>Select some text using selection commands (shift with arrow keys, for
+   example) and press associated key to translate. translation result will
+   be read with synthesizer which you are using.</li>
+<li>De asemenea, puteți traduce un text de pe planșetă.</li>
+<li>Press the dedicated shortcut key to translate the last spoken text.</li>
+</ol>
+<h2>Scurtături</h2>
+<p>Toate comenzile afișate mai jos trebuiesc apăsate după tasta de modificare
+"NVDA+Shift+t":</p>
+<ul>
+<li>T: Traduce textul selectat,</li>
+<li>Shift+t: Traduce textul de pe planșetă,</li>
+<li>S: Schimbă limba sursă și cea aleasă,</li>
+<li>A: Anunță configurația curentă,</li>
+<li>C: Copiază ultimul rezultat pe planșetă,</li>
+<li>I: Identifică limba textului selectat,</li>
+<li>L: translate the last spoken text,</li>
+<li>O: open translation settings dialog</li>
+<li>H: announces all available layered commands.</li>
+</ul>
+<h2>Changes for 4.4.3</h2>
+<ul>
+<li>Added the ability to replace underscores with spaces, may provide better
+  translation results depending on context (thanks to Beka Gozalishvili)</li>
+<li>Added compatibility for NVDA 2022.1</li>
+</ul>
+<h2>Changes for 4.4.2</h2>
+<ul>
+<li>Restore language detection and auto-swapping (Thanks to Cyrille for fix)</li>
+<li>updated languages for translation (thanks to Cyrille)</li>
+</ul>
+<h2>Changes for 4.4</h2>
+<ul>
+<li>Instant translate is now compatible with NVDA 2019.3 (Python 3 versions of
+  NVDA)</li>
+</ul>
+<h2>Changes for 4.3</h2>
+<ul>
+<li>nvda compatibility fix Now instant translate will be compatible with
+  latest nvda builds.</li>
+<li>found a way to use google as a translation service again.</li>
+</ul>
+<h2>Changes for 4.2</h2>
+<ul>
+<li>Restored working state with newer versions of nvda.</li>
+<li>Restored automatic language detection.</li>
+</ul>
+<h2>Modificări în 4.1</h2>
+<ul>
+<li>InstantTranslate funcționează din nou, acum cu serviciul Yandex translator
+  în loc de Google.</li>
+</ul>
+<h2>Modificări în 4.0</h2>
+<ul>
+<li>Traducerea este efectuată automat după schimbare.</li>
+<li>O eroare a fost reparată.</li>
+</ul>
+<h2>Modificări în 3.0</h2>
+<ul>
+<li>A fost schimbat modul în care sunt folosite scurtăturile, acum puteți
+  apăsa tasta de modificare instantTranslate "NVDA+Shift+t", apoi o singură
+  literă pentru a efectua o acțiune (vedeți toate comenzile în secțiunea
+  „Scurtături”.</li>
+<li>A fost implementată schimbarea limbilor.</li>
+<li>A fost schimbat formatul configurației, acum putem modifica setările de
+  traducere dacă suntem în panoul doar citire, dar amintiți-vă că aceasta va
+  funcționa înainte de prima repornire a NVDA-ului.</li>
+<li>A fost eliminată de cantitate a textului bare poate fi tradus.</li>
+<li>A fost adăugată o scurtătură t pentru elementul Setări Instant Translate.</li>
+<li>Opțiunea auto este acum în prima poziție în caseta sursă și absentă în
+  caseta limbii alese.</li>
+<li>A fost adăugată o casetă de bifat pentru configurarea copierii
+  rezultatelor traducerilor.</li>
+<li>Fișierul de configurare se păstrează în rădăcina dosarului  cu setări.</li>
+<li>Limba sursă și cea aleasă sunt sincronizate cu ceea ce expune Google
+  Translate în prezent.</li>
+</ul>
+<h2>Modificări în 2.1</h2>
+<ul>
+<li>Acum add-on-ul poate traduce textul de pe planșetă la apăsarea
+  nvda+shift+y.</li>
+</ul>
+<h2>Modificări în 2.0</h2>
+<ul>
+<li>A fost adăugat configuratorul gui de unde puteți alege limba sursă și
+  limba aleasă.</li>
+<li>A fost adăugată opțiunea add-on-ului găsită în meniul Preferințe.</li>
+<li>Setările sunt acum scrise într-un fișier separat de configurare.</li>
+<li>Rezultatele traducerilor sunt copiate automat pe planșetă pentru
+  manipulările viitoare.</li>
+</ul>
+<h2>Modificări în 1.0</h2>
+<ul>
+<li>Versiunea inițială.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>取消系统静音 1.5.7</title>
+</head>
+<body>
+<h1>NVDA Unmute</h1>
+<ul>
+<li>作者： Oleksandr Gryshchenko</li>
+<li>版本： 1.5.3</li>
+<li>下载<a href="https://github.com/grisov/Unmute/releases/download/v1.5/unmute-1.5.nvda-addon">稳定版</a></li>
+<li>下载<a href="https://github.com/grisov/Unmute/releases/download/v1.5/unmute-1.5.nvda-addon">开发版</a></li>
+</ul>
+<p>当 NVDA 启动时，此插件会检查 Windows 系统声音状态，如果已静音，则将其打开。
+该插件还可以检查语音合成器驱动程序的状态。
+如果语音合成器初始化存在问题，则尝试恢复，该合成器是在 NVDA 设置中所指定的合成器。
+还有一个功能是检查 NVDA 的默认声音输出设备
+如果此设备不是系统默认的设备，则插件会自动切换回系统默认设备。</p>
+<p>注意：每次启动 NVDA 时，插件都会将声音切换到 Windows 默认输出设备。
+当 NVDA 的输出设备不是“默认输出设备”或“Microsoft 声音映射器”时会进行该调整。
+当然，您可以通过以下两种方式调整或禁用该功能：
+1. 重新启动NVDA后，只需使用NVDA + Ctrl + C保存当前配置。默认音频设备将保存在NVDA设置中，并且每次 NVDA 启动时都不会自动切换。
+2. 如果您不想通过上面方法更改 NVDA 配置，那么只需在 NVDA 设置面板中的“取消系统静音”类别下禁用“切换到默认声音输出设备”功能即可。</p>
+<h2>插件设置对话框</h2>
+<p>要打开插件设置面板，请按照下列步骤操作：
+* 按NVDA + N打开NVDA菜单。
+* 找到“选项” ➡ “设置...”，然后在类别列表中找到“取消系统静音”。
+这样，您现在可以使用 Tab 键在插件的设置中移动。</p>
+<p>插件设置对话框中提供以下选项：</p>
+<ol>
+<li>
+<p>插件设置对话框中的第一个滑块“恢复到的音量级别”，如果系统音量被静音或低于相应级别，则在 NVDA 启动时恢复到该音量。</p>
+</li>
+<li>
+<p>当音量小于或等于以下值时也会增大音量，
+如果音量小于或等于此处指定的值，则下次启动NVDA时音量将增大。
+如果音量大于此处指定的值，插件则不会调整。
+当然，如果系统音量被静音，则重新启动 NVDA 时无论如何都会自动恢复。</p>
+</li>
+<li>
+<p>尝试初始化语音合成器驱动程序。
+仅当在 NVDA 启动且检测到语音合成器驱动程序尚未初始化时，才尝试该操作。</p>
+</li>
+<li>
+<p>尝试次数，在这里，您可以指定尝试重新初始化语音合成器驱动程序的次数。
+值为 0 表示无限次尝试，直到完成该过程。</p>
+</li>
+<li>
+<p>“切换到默认声音输出设备”
+该选项允许在启动时检查NVDA 声音的输出设备。
+如果检查到不是默认的声音输出设备，则插件会自动切换。</p>
+</li>
+<li>
+<p>成功恢复音量后播放声音。</p>
+</li>
+</ol>
+<h2>升级日志</h2>
+<h3>1.5.3版</h3>
+<ul>
+<li>更新了第三方<strong>psutil</strong>模块；</li>
+<li>添加了“切换到默认声音输出设备”功能。</li>
+<li>使插件同时兼容 python3.7和3.8版；</li>
+<li>在插件源代码中添加了 MyPy 类型注释；</li>
+</ul>
+<h3>1.4版</h3>
+<ul>
+<li>增加了针对 NVDA 进程单独增加启动音量的方法；</li>
+<li>更改了成功恢复音量后的音效（感谢Manolo）；</li>
+<li>所有的音量控制功能已转移到“volumeAdjustment”插件中。</li>
+</ul>
+<h3>1.3版</h3>
+<ul>
+<li>增加了控制主音量的功能，还可分别针对每个正在运行的应用程序进行控制；</li>
+<li>更新了越南语的翻译（感谢 Dang Manh Cuong）；</li>
+<li>添加了土耳其语的翻译（感谢 Cagri Dogan）；</li>
+<li>添加了意大利语的翻译（感谢 Christianlm）；</li>
+<li>更新了乌克兰语的翻译；</li>
+<li>更新了自述文件。</li>
+</ul>
+<h3>1.2版</h3>
+<ul>
+<li>使用了 <strong>Core Audio Windows API</strong> 以代替 <strong>Windows Sound Manager</strong>；</li>
+<li>添加了通过插件成功打开音频后播放声音；</li>
+</ul>
+<h3>1.1版</h3>
+<ul>
+<li>添加了插件设置对话框；</li>
+<li>更新了乌克兰语翻译。</li>
+</ul>
+<h3>1.0.1版</h3>
+<ul>
+<li>在语音合成器初始化失败时，反复尝试恢复语音合成器；</li>
+<li>Dang Manh Cuong添加了越南语的翻译；</li>
+<li>增加了乌克兰语的翻译。</li>
+</ul>
+<h3>1.0版</h3>
+<p>实现插件特性，该插件使用了第三方模块Windows Sound Manager。</p>
+<p><em>译者注： 以下内容适用于开发者，故不再翻译。</em>
+<strong>简体中文由 Eureka 翻译</strong></p>
+<h2>Altering NVDA Unmute</h2>
+<p>You may clone this repo to make alteration to NVDA Unmute.</p>
+<h3>Third Party dependencies</h3>
+<p>These can be installed with pip:
+- markdown
+- scons
+- python-gettext</p>
+<h3>To package the add-on for distribution:</h3>
+<ol>
+<li>Open a command line, change to the root of this repo</li>
+<li>Run the <strong>scons</strong> command. The created add-on, if there were no errors, is placed in the current directory.</li>
+</ol>
+</body>
+</html>
