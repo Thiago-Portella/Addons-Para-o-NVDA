@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Audio Manager 1.0.7</title>
+</head>
+<body>
+<h1>Audio Manager</h1>
+<h2>Overview of the Add-On Features</h2>
+<p>The NVDA Audio Manager add-on is designed to help you manage multiple audio devices and optimize audio routing effectively.</p>
+<p>The functionalities of this add-on can be categorized into four main modules:</p>
+<ul>
+<li><strong>Playback Device Management</strong>: This module enables volume adjustment, setting of the system's default playback device, and toggling between mute and unmute states.</li>
+<li><strong>Recording Device Management</strong>: Similar to the playback device management, this allows for volume control, setting of the system's default recording device, and muting/unmuting.</li>
+<li><strong>Application-specific Audio Control</strong>: This feature facilitates the customization of playback and recording devices, volume modification, and muting/unmuting for individual audio applications.</li>
+<li><strong>Additional Functionalities</strong>: Alongside the features mentioned above, there are several practical functionalities such as microphone volume lock, NVDA output device switching, etc.</li>
+</ul>
+<h2>Function Hotkeys</h2>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>Desktop layout</th>
+<th>Laptop layout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Previous Recording Device</td>
+<td>control+windows+alt+numpad1</td>
+<td>control+windows+alt+Home</td>
+</tr>
+<tr>
+<td>Next Recording Device</td>
+<td>control+windows+alt+numpad3</td>
+<td>control+windows+alt+End</td>
+</tr>
+<tr>
+<td>Previous Playback Device</td>
+<td>control+windows+alt+numpad4</td>
+<td>control+windows+alt+PageUp</td>
+</tr>
+<tr>
+<td>Next Playback Device</td>
+<td>control+windows+alt+numpad6</td>
+<td>control+windows+alt+PageDown</td>
+</tr>
+<tr>
+<td>Previous Audio Application</td>
+<td>control+windows+alt+numpad7</td>
+<td>control+windows+alt+LeftArrow</td>
+</tr>
+<tr>
+<td>Next Audio Application</td>
+<td>control+windows+alt+numpad9</td>
+<td>control+windows+alt+RightArrow</td>
+</tr>
+<tr>
+<td>Increase Volume</td>
+<td>control+windows+alt+numpad8</td>
+<td>control+windows+alt+UpArrow</td>
+</tr>
+<tr>
+<td>Reduce Volume</td>
+<td>control+windows+alt+numpad2</td>
+<td>control+windows+alt+DownArrow</td>
+</tr>
+<tr>
+<td>Mute/Unmute</td>
+<td>control+windows+alt+numpad5</td>
+<td>control+windows+alt +Space</td>
+</tr>
+<tr>
+<td>Set default playback/recording device</td>
+<td>control+windows+alt+numpadEnter</td>
+<td>control+windows+alt+Enter</td>
+</tr>
+<tr>
+<td>Previous recording device for audio application</td>
+<td>shift+control+windows+alt+numpadDivide</td>
+<td>shift+control+windows+alt+[</td>
+</tr>
+<tr>
+<td>Next Recording Device for Audio Applications</td>
+<td>control+windows+alt+numpadDivide</td>
+<td>control+windows+alt+[</td>
+</tr>
+<tr>
+<td>Previous playback device for audio application</td>
+<td>shift+control+windows+alt+numpadMultiply</td>
+<td>shift+control+windows+alt+]</td>
+</tr>
+<tr>
+<td>Next playback device for audio applications</td>
+<td>control+windows+alt+numpadMultiply</td>
+<td>control+windows+alt+]</td>
+</tr>
+<tr>
+<td>Restore audio application parameters (click to reset all audio application playback and recording devices, double-click to reset all audio application volume and unmute)</td>
+<td>control+windows+alt+numpadMinus</td>
+<td>control+windows+alt+Backspace</td>
+</tr>
+<tr>
+<td>Previous NVDA playback device</td>
+<td>shift+control+windows+alt+numpadPlus</td>
+<td>shift+control+windows+alt+\</td>
+</tr>
+<tr>
+<td>Next NVDA playback device</td>
+<td>control+windows+alt+numpadPlus</td>
+<td>control+windows+alt+\</td>
+</tr>
+<tr>
+<td>Mute/Unmute Current Window</td>
+<td>shift+control+windows+alt+numpad8</td>
+<td>shift+control+windows+alt+Space</td>
+</tr>
+<tr>
+<td>Sound Switch</td>
+<td>shift+control+windows+alt+numpad5</td>
+<td>shift+control+windows+alt+UpArrow</td>
+</tr>
+<tr>
+<td>Microphone Switch</td>
+<td>shift+control+windows+alt+numpad2</td>
+<td>shift+control+windows+alt+DownArrow</td>
+</tr>
+<tr>
+<td>Lock/Unlock Microphone Volume</td>
+<td>control+windows+alt+numpadDelete</td>
+<td>control+windows+alt+Delete</td>
+</tr>
+</tbody>
+</table>
+<h2>Contact feedback</h2>
+<p>If you have any opinions or suggestions, please feel free to communicate:</p>
+<ul>
+<li>Email: huaiyinfeilong@163.com</li>
+<li>QQ: 354522977</li>
+<li>WeChat: huaiyinfeilong</li>
+</ul>
+<h2>Acknowledgements</h2>
+<p>Special thanks to Cary-rowen,雪岭冰龙 and 社会主义好 for their help and support during the development of the plugin.</p>
+<h2>Upgrade log</h2>
+<h3>Version 1.0.7</h3>
+<ul>
+<li>Added support for Ukrainian localization.</li>
+<li>Changed the desktop layout gesture to be effective across all layouts, consistent with NVDA core gestures.</li>
+</ul>
+<h3>Version 1.0.6</h3>
+<ul>
+<li>Adapt to NVDA 2024.1.</li>
+<li>Enhance compatibility stability.</li>
+</ul>
+<h3>Version 1.0.5</h3>
+<ul>
+<li>For unsupported system versions, a prompt will be provided during plugin installation.</li>
+</ul>
+<h3>Version 1.0.4</h3>
+<ul>
+<li>Improve program compatibility and fix incompatibilities with certain software.</li>
+<li>Fix the issue where setting default playback and recording devices may not take effect.</li>
+</ul>
+<h3>Version 1.0.3</h3>
+<ul>
+<li>Modify the audio application name acquisition method, and synchronize the application window title.</li>
+<li>Fix some bugs.</li>
+</ul>
+<h3>Version 1.0.2</h3>
+<ul>
+<li>Fix the problem that the microphone volume is not remembered after restarting after locking the microphone under certain circumstances.</li>
+</ul>
+<h3>Version 1.0.1</h3>
+<ul>
+<li>Fixed some audio applications not showing up.</li>
+<li>Improved some hints.</li>
+</ul>
+</body>
+</html>

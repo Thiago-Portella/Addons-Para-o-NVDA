@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Check Input Gestures 1.0.6</title>
+</head>
+<body>
+<h1>NVDA Check Input Gestures</h1>
+<ul>
+<li>Author: Oleksandr Gryshchenko</li>
+<li>Version: 1.0</li>
+<li>NVDA compatibility: 2020.3 and beyond</li>
+<li>Download <a href="https://addons.nvda-project.org/files/get.php?file=checkGestures">stable version</a></li>
+</ul>
+<p>Find and fix input gestures conflicts in NVDA and add-ons. The general term "input gestures" includes keyboard commands, commands entered from Braille keyboards and gestures of touch screens.</p>
+<p>Each of the installed add-ons can make changes to the NVDA configuration by adding or reassigning existing input gestures. If the same input gestures are binded to several functions, it will be impossible to call some of them.</p>
+<h2>Search for duplicate gestures</h2>
+<p>To detect duplicate gestures, call the NVDA menu, go to the "Tools" submenu, then - "Check Input Gestures" and activate the menu item "Search for duplicate gestures...".</p>
+<p>After that, all input gestures used in NVDA will be checked in the following order:</p>
+<ol>
+<li>globalCommands;</li>
+<li>globalPlugins.</li>
+</ol>
+<p>If the same input gestures will be detected, which are assigned to different functions, their list will be displayed in a separate dialog box.</p>
+<p>After pressing the Enter key on the selected list item, the corresponding NVDA function will be selected and opened in the standard "Input Gestures..." dialog, where you can delete or reassign the associated gesture.</p>
+<p>Note: As you know, features that don't have a text description do not appear in the "Input Gestures..." dialog. Therefore, after activating such an element, the corresponding warning will be displayed.</p>
+<h2>Gestures without description</h2>
+<p>To view the list of gestures binded with functions without a text description, if they are found in your NVDA configuration, you need to call the NVDA menu, go to the submenu "Tools", then - "Gestures without description...".</p>
+<p>Such features do not appear in the standard NVDA "Input Gestures..." dialog, so it is not yet possible to delete or reassign associated gestures.</p>
+<h2>Help</h2>
+<p>One way to view this help page is to call up the NVDA menu, go to the "Tools" submenu, then - "Check Input Gestures", and activate "Help".</p>
+<p>Note: All features of the add-on are presented in the NVDA "Input Gestures" dialog and you can assign your own keyboard shortcuts to each of them.</p>
+<h2>Contributions</h2>
+<p>We are very grateful to everyone who made the effort to develop, translate and maintain this add-on:</p>
+<ul>
+<li>Jani Kinnunen - Finnish translation;</li>
+<li>Wafiqtaher - Arabic translation;</li>
+<li>Angelo Miguel Abrantes - Portuguese translation;</li>
+<li>Cagri Dogan - Turkish translation;</li>
+<li>Cary Rowen - simplified Chinese translation.</li>
+</ul>
+<h2>Change log</h2>
+<h3>Version 1.0.5</h3>
+<ul>
+<li>the add-on has been tested for compatibility with NVDA 2023.1;</li>
+<li>changed the short name of the add-on in the store and updated the download link in ReadMe.</li>
+</ul>
+<h3>Version 1.0.3</h3>
+<ul>
+<li>the add-on has been tested for compatibility with NVDA 2022.1;</li>
+<li>implemented search for duplicate input gestures;</li>
+<li>implemented search for input gestures binded to functions without a text description.</li>
+</ul>
+<h2>Altering of add-on source code</h2>
+<p>You may clone this repo to make alteration to NVDA Check Input Gestures.</p>
+<h3>Third Party dependencies</h3>
+<p>These can be installed with pip:</p>
+<ul>
+<li>markdown</li>
+<li>scons</li>
+<li>python-gettext</li>
+</ul>
+<h3>To package the add-on for distribution</h3>
+<ol>
+<li>Open a command line, change to the root of this repo</li>
+<li>Run the <strong>scons</strong> command. The created add-on, if there were no errors, is placed in the current directory.</li>
+</ol>
+</body>
+</html>

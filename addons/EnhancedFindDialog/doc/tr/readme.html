@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.5.1</title>
+</head>
+<body>
+<h1>NVDA için Gelişmiş Ara İletişim Kutusu 1.5.1</h1>
+<p>NVDA için arama işlevini geliştiren gelişmiş ara iletişim kutusu eklentisi:  </p>
+<ul>
+<li>arama geçmişi.  </li>
+<li>arama kaydırma, profil başına yapılandırılmış.  </li>
+<li>büyük/küçük harf duyarlılığı, profil başına yapılandırılmış.  </li>
+<li>aramalarla ilgili bağlamsal bilgiler.  </li>
+</ul>
+<h2>İndirme:</h2>
+<p><a href="https://github.com/marlon-sousa/EnhancedFindDialog/releases/download/1.5.1/EnhancedFindDialog-1.5.1.nvda-addon">Gelişmiş Ara İletişim Kutusu 1.5.1 eklentisini indirin</a></p>
+<h2>Özellikler:</h2>
+<h3>Arama geçmişi:</h3>
+<p>Birçok web sitesinde ve web uygulamasında, belirli yerlere erişmenin en hızlı yolu, genellikle ctrl + nvda + f tuşlarına bağlı olan arama komutunu kullanmaktır.  </p>
+<p>Arama iletişim kutusu, bir metin yazmamıza ve bulunursa o metnin sonraki örneğine erişmemize olanak tanır.</p>
+<p>Çoğu durumda, tek NVDA oturumu sırasında aynı web sitelerini birkaç kez ziyaret ettiğinizi göreceksiniz. Bu web sitelerinin birçoğunda, özellikle o web sitesinin bir bağlantısına veya bölümüne hızlı bir şekilde ulaşmanın tek yolu buysa, aynı terimleri aramanız gerekecektir.  </p>
+<p>Bu, özellikle işlerinin bir gereği olarak web tabanlı sistemlerle günlük olarak çalışan kişiler için geçerlidir.  </p>
+<p>Ancak NVDA, daha önce aradığınız terimleri bir listede tutmaz. Bu, üretkenliğinizi yavaşlatır, çünkü son aramanızın tam olarak aynı terimini aramadığınız sürece, tekrar yazmanız gerekir.  </p>
+<p>Bu eklenti, NVDA çalıştığı sürece devam eden bir arama geçmişi tutar. Bu nedenle, aktivasyonda, yeni bir arama yapmak için aşağı oka basmanız ve daha önce aranan terimleri seçmeniz yeterlidir.  </p>
+<p>Elbette yeni terimler yazabilirsiniz. Ayrıca, arama iletişim kutusunu bir sonraki etkinleştirdiğinizde listeye eklenecektir.  </p>
+<h4>Nasıl çalışır?</h4>
+<p>Eklentiyi kurmanız yeterlidir. Etkinleştirildiğinde, arama iletişim kutusundaki düzenleme alanında aşağı ve yukarı oklara basmak, daha önce aranan terimler listesinde gezinmenizi sağlar.  </p>
+<p>Her zaman olduğu gibi istediğiniz zaman yeni bir terim yazabilirsiniz.  </p>
+<h3>Arama Kaydırma:</h3>
+<p>Arama kaydırma yapılandırılmışsa, arama yaparken bir metin üzerinde bulunduğunuz geçerli konumu dikkate almayan bir özelliktir.  </p>
+<p>Bu, mevcut konumunuzun altında olmayan bir şey ararsanız, bu terimin tüm metinde bir yerde olup olmadığını kontrol etmek için metnin başından itibaren arama yapılacağı anlamına gelir.  </p>
+<p>Bu, web tabanlı sistemlerle çalışan ve sayfanın neresinde olurlarsa olsunlar belirli bir düğmeyi veya metin parçasını bulması gereken kişiler için özellikle önemlidir.  </p>
+<p>Bu seçenek profile özeldir, yani etkin olduğu yerde bir profiliniz olabilir ve olmadığı yerde başka bir profiliniz olabilir.  </p>
+<h4>Nasıl çalışır?</h4>
+<p>Eklentiyi kurmanız yeterlidir. Etkinleştirildiğinde, bul iletişim kutusu arama kaydır adı verilen bir onay kutusu sunacaktır.  </p>
+<p>Kontrol edilirse:  </p>
+<ol>
+<li>Bir terim ararsanız ve mevcut konumun altında bulunursa, o metnin üzerine odaklanırsınız.  </li>
+<li>Bu terim mevcut pozisyonun altında bulunamazsa, metnin üstünden aranacaktır.  </li>
+<li>Terim bulunursa, bulunan metnin mevcut konumunuzun üzerinde olduğunu ve yerine yerleştirildiğinizi bildirmek için kısa bir bip sesi duyulur.  </li>
+<li>Bu terim hiç bulunamazsa, metin bulunamadı mesajı görüntülenir.  </li>
+</ol>
+<p>Bu onay kutusunu değiştirmek ve bir arama yapmak, aktif profil için yeni durumu (işaretli veya işaretsiz) kaydeder. Aramayı iptal etmeden önce değiştirmiş olsanız bile, aramayı iptal etmek etkin profildeki durumunu değiştirmez.  </p>
+<h3>büyük küçük harf duyarlılığı:</h3>
+<p>NVDA, büyük/küçük harfe duyarlı aramalara izin vermek için büyük/küçük harf duyarlılığı onay kutusunu zaten sunuyor. Bu eklenti, bu onay kutusunun durumunu etkin profilde kaydederek bu işlevi genişletir, böylece farklı şekilde yapılandırılmış profillere sahip olabilirsiniz.  </p>
+<h4>Nasıl çalışır?</h4>
+<p>Eklentiyi kurmanız yeterlidir. Büyük/küçük harf duyarlılığı onay kutusunun değiştirilmesi ve bir arama yapılması, etkin profil için yeni durumu (işaretli veya işaretsiz) kaydeder. Aramayı iptal etmeden önce değiştirmiş olsanız bile, aramayı iptal etmek etkin profildeki durumunu değiştirmez.  </p>
+<h3>aramalarla ilgili bağlamsal bilgiler:</h3>
+<p>Bir arama terimi bulunduğunda NVDA'nın davranış şekli şu şekildedir: aranan terimin konumuna yerleştirilirsiniz ve satır, aranan terimden itibaren okunur.  </p>
+<p>Bir şey için birkaç kez (NVDA + f3 kullanarak) arama yapmanız gerektiğinde bu her zaman sorunlu olmuştur, çünkü dinlediğiniz ilk şey aranan terimin kendisidir, o terimi sadece aradığınız için bildiğiniz zaman.  </p>
+<p>Bu eklenti, imleci terimin konumuna yerleştirir, ancak üzerindeki terimden okumak yerine tam satırı okur ve size o terimin bulunduğu bağlamı gösterir.  </p>
+<p>Örneğin, "Marlon" kelimesini aradığınızı, çünkü Marlon'u bir yerde hedefle adlı bir düğme olduğunu bildiğinizi varsayalım. Hedef aramak istemiyorsunuz çünkü "target x y z" adında başka butonlar var ve Marlon Button hedefi bulmak istiyorsunuz.</p>
+<p>İşte metin:  </p>
+<p>Marlon yorumlarını sil  </p>
+<p>doğrudan Marlon'a cevap ver  </p>
+<p>Marlon'u spam gönderici olarak bildir  </p>
+<p>Bir yanıtta Marlon'u hedefle  </p>
+<p>Bu bloktan önce Marlon'u ararsanız, şunu duyardınız:
+Marlon Yorumları  </p>
+<p>NVDA + f3'e basmaya devam ederseniz şunu duyarsınız:  </p>
+<p>marlon  </p>
+<p>Marlon as spammer</p>
+<p>Marlon on a response</p>
+<p>Bu, üretkenliğinizi azaltır çünkü ilk önce bu oluşum hakkında hiçbir şey bilmeden sadece marlon duyarsınız.  </p>
+<p>Bir dahaki sefere, Marlon'u duyacaksınız ve spam gönderici olarak konuşulmasını beklemek zorunda kalacaksınız, çünkü bu metinde Marlon hakkında ne olduğunu da bilemezsiniz.  </p>
+<p>Benzer şekilde, bir dahaki sefere söylenecek bir yanıtı beklemeniz gerekecekti çünkü Marlon'la ilgili bu şeyin ne olduğundan da emin olmayacaktınız.  </p>
+<p>Üstelik NVDA + f3'e hızlı basarsanız, Marlon, Marlon, Marlon, Marlon'u duyardınız... Çok üretken olmayan cinse Marlon aradığınızı bilirsiniz.  </p>
+<h4>Nasıl çalışır?</h4>
+<p>Eklentiyi kurmanız yeterlidir.</p>
+<p>Kurulduktan sonra, bulunan arama teriminin mevcut satırı okunur ve üzerindeki terime yerleştirilirsiniz.  </p>
+<p>Yukarıdaki örneğimizde, aramayı ilk yaptığınızda duyacağınız.  </p>
+<p>Marlon yorumlarını sil  </p>
+<p>NVDA + f3'e basmaya devam ederseniz şunu duyarsınız:  </p>
+<p>doğrudan Marlon'a cevap ver  </p>
+<p>Marlon'u spam gönderici olarak bildir  </p>
+<p>Bir yanıtta Marlon'u hedefle  </p>
+<p>Ayrıca, NVDA + f3'e hızlı bir şekilde basarsanız, her satırın başlangıcını duyarsınız, bu da hedef satırda hızlı bir şekilde enter'a basmanıza olanak tanır çünkü Marlon'un aynı satırda daha sonraki bir konumda bulunduğunu bilirsiniz.  </p>
+<h2>Katkıda bulunmak ve tercüme etmek:</h2>
+<p>Bu eklentiye katkıda bulunmak veya bu eklentiyi çevirmek istiyorsanız, lütfen <a href="https://github.com/marlon-sousa/EnhancedFindDialog">proje deposuna</a> erişin ve İngilizce dokümantasyon dizininde Contribute.md ile ilgili talimatları bulun.  </p>
+<h2>Katkıda Bulunanlar.</h2>
+<p>Özel teşekkür:  </p>
+<ul>
+<li>Angelo Miguel Abrantes - Portekizce çeviri  </li>
+<li>Rémy Ruiz - Fransızca çeviri</li>
+<li>Rémy Ruiz - İspanyolca çeviri  </li>
+<li>Tarik Hadžirović - Hırvatça çeviri</li>
+<li>Thiago Seus - Brezilya Portekizcesi çeviri, NVDA 2024.1 ile uyumluluk</li>
+<li>Umut KORKMAZ - Türkçe Çeviri  </li>
+<li>Valentin Kupriyanov - Rusça çeviri  </li>
+<li>Ivan Shtefuriak - Ukraynaca çeviri</li>
+</ul>
+</body>
+</html>

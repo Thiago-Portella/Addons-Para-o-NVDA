@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the enhancedTouchGestures package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enhancedTouchGestures 18.04\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2017-12-15 06:10+1000\n"
+"PO-Revision-Date: 2022-02-02 12:00+0800\n"
+"Last-Translator: 完美很难 <1872265132@qq.com>\n"
+"Language-Team: NVDASimplified Chinese team All volunteers <Copyright (C) "
+"2010-2019>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. Translators: message shown when touch keyboard button is not found.
+msgid "Cannot activate touch keyboard"
+msgstr "无法激活触摸键盘"
+
+#. Translators: message shown when dictation command is unavailable.
+msgid "Dictation is supported on Windows 10 Version 1709 or later"
+msgstr "Windows 10 版本 1709 或更高支持听写"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Enhanced Touch Gestures"
+msgstr "触摸手势增强"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A suite of additional touch commands, including navigation and help "
+"commands.\n"
+"\tRequires a touch-enabled computer with Windows 8.1 or later with NVDA "
+"2017.4 or later installed."
+msgstr ""
+"一套附加的触摸手势，涵盖了导航和帮助命令。\n"
+"需要安装了 NVDA 2017.4 或更高版本， Windows 8.1 或更高版本且带有触摸屏的"
+"电脑。"

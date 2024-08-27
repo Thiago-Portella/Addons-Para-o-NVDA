@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Audio Manager 1.0.7</title>
+</head>
+<body>
+<h1>Менеджер аудіо</h1>
+<h2>Огляд можливостей додатка</h2>
+<p>Додаток «Менеджер аудіо» для NVDA призначений для ефективного керування кількома аудіопристроями та оптимізації маршрутизації звуку.</p>
+<p>Функції цього додатка можна розділити на чотири основні модулі:</p>
+<ul>
+<li><strong>Керування пристроєм відтворення</strong>: цей модуль дозволяє регулювати гучність, встановлювати основний системний пристрій відтворення та вимикати і вмикати його звук.</li>
+<li><strong>Керування пристроєм запису</strong>: подібно до керування пристроєм відтворення, тут можна регулювати гучність, встановлювати основний пристрій запису, а також вимикати/вмикати звук.</li>
+<li><strong>Керування гучністю окремого застосунку</strong>: ця функція полегшує налаштування пристроїв відтворення та запису, зміну гучності та вимикання/вмикання звуку для окремих аудіозастосунків.</li>
+<li><strong>Додаткові функції</strong>: Окрім згаданих вище можливостей, є кілька практичних функцій, таких як блокування гучності мікрофона, перемикання пристроїв виводу NVDA тощо.</li>
+</ul>
+<h2>Гарячі клавіші функцій</h2>
+<table>
+<thead>
+<tr>
+<th>Функції</th>
+<th>Розкладка desktop</th>
+<th>Розкладка laptop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Попередній пристрій запису</td>
+<td>control+windows+alt+додаткова1</td>
+<td>control+windows+alt+на початок</td>
+</tr>
+<tr>
+<td>Наступний пристрій запису</td>
+<td>control+windows+alt+додаткова3</td>
+<td>control+windows+alt+в кінець</td>
+</tr>
+<tr>
+<td>Попередній пристрій відтворення</td>
+<td>control+windows+alt+додаткова4</td>
+<td>control+windows+alt+сторінка вгору</td>
+</tr>
+<tr>
+<td>Наступний пристрій відтворення</td>
+<td>control+windows+alt+додаткова6</td>
+<td>control+windows+alt+сторінка вниз</td>
+</tr>
+<tr>
+<td>Попередній аудіозастосунок</td>
+<td>control+windows+alt+додаткова7</td>
+<td>control+windows+alt+стрілка вліво</td>
+</tr>
+<tr>
+<td>Наступний аудіозастосунок</td>
+<td>control+windows+alt+додаткова9</td>
+<td>control+windows+alt+стрілка вправо</td>
+</tr>
+<tr>
+<td>Збільшити гучність</td>
+<td>control+windows+alt+додаткова8</td>
+<td>control+windows+alt+стрілка вгору</td>
+</tr>
+<tr>
+<td>Зменшити гучність</td>
+<td>control+windows+alt+додаткова2</td>
+<td>control+windows+alt+стрілка вниз</td>
+</tr>
+<tr>
+<td>Вимкнути/Увімкнути звук</td>
+<td>control+windows+alt+додаткова5</td>
+<td>control+windows+alt +пробіл</td>
+</tr>
+<tr>
+<td>Встановити основний пристрій відтворення/запису</td>
+<td>control+windows+alt+додатковий Enter</td>
+<td>control+windows+alt+Enter</td>
+</tr>
+<tr>
+<td>Попередній пристрій запису для аудіозастосунків</td>
+<td>shift+control+windows+alt+додатковий знак ділення</td>
+<td>shift+control+windows+alt+[</td>
+</tr>
+<tr>
+<td>Наступний пристрій запису для аудіозастосунків</td>
+<td>control+windows+alt+додатковий знак ділення</td>
+<td>control+windows+alt+[</td>
+</tr>
+<tr>
+<td>Попередній пристрій відтворення для аудіозастосунків</td>
+<td>shift+control+windows+alt+додатковий знак множення</td>
+<td>shift+control+windows+alt+]</td>
+</tr>
+<tr>
+<td>Наступний пристрій відтворення для аудіозастосунків</td>
+<td>control+windows+alt+додатковий знак множення</td>
+<td>control+windows+alt+]</td>
+</tr>
+<tr>
+<td>Відновити параметри аудіозастосунку (натисніть, щоб скинути всі пристрої відтворення та запису аудіозастосунків, натисніть двічі, щоб скинути гучність аудіопрограми та увімкнути звук)</td>
+<td>control+windows+alt+додатковий мінус</td>
+<td>control+windows+alt+бекспейс</td>
+</tr>
+<tr>
+<td>Попередній пристрій відтворення  NVDA</td>
+<td>shift+control+windows+alt+додатковий плюс</td>
+<td>shift+control+windows+alt+\</td>
+</tr>
+<tr>
+<td>Наступний пристрій відтворення  NVDA</td>
+<td>control+windows+alt+додатковий плюс</td>
+<td>control+windows+alt+\</td>
+</tr>
+<tr>
+<td>Вимкнути/увімкнути звук застосунку в поточному вікні</td>
+<td>shift+control+windows+alt+додаткова8</td>
+<td>shift+control+windows+alt+пробіл</td>
+</tr>
+<tr>
+<td>Перемкнути звук</td>
+<td>shift+control+windows+alt+додаткова5</td>
+<td>shift+control+windows+alt+стрілка вгору</td>
+</tr>
+<tr>
+<td>Перемкнути мікрофон</td>
+<td>shift+control+windows+alt+додаткова2</td>
+<td>shift+control+windows+alt+стрілка вниз</td>
+</tr>
+<tr>
+<td>Заблокувати/розблокувати гучність мікрофона</td>
+<td>control+windows+alt+додатковий деліт</td>
+<td>control+windows+alt+деліт</td>
+</tr>
+</tbody>
+</table>
+<h2>Контакт та зворотний зв’язок</h2>
+<p>Якщо у вас є якісь думки чи пропозиції, будь ласка, не соромтеся звертатися:</p>
+<ul>
+<li>Електронна пошта: huaiyinfeilong@163.com</li>
+<li>QQ: 354522977</li>
+<li>WeChat: huaiyinfeilong</li>
+</ul>
+<h2>Подяки</h2>
+<p>Спеціальна подяка для Cary-rowen, 雪岭冰龙 і 社会主义好 за їхню допомогу й підтримку під час розробки цього додатка.</p>
+<h2>Журнал оновлень</h2>
+<h3>Version 1.0.6</h3>
+<ul>
+<li>Adapt to NVDA 2024.1.</li>
+<li>Enhance compatibility stability.</li>
+</ul>
+<h3>Version 1.0.5</h3>
+<ul>
+<li>For unsupported system versions, a prompt will be provided during plugin installation.</li>
+</ul>
+<h3>Version 1.0.4</h3>
+<ul>
+<li>Improve program compatibility and fix incompatibilities with certain software.</li>
+<li>Fix the issue where setting default playback and recording devices may not take effect.</li>
+</ul>
+<h3>Version 1.0.3</h3>
+<ul>
+<li>Modify the audio application name acquisition method, and synchronize the application window title.</li>
+<li>Fix some bugs.</li>
+</ul>
+<h3>Version 1.0.2</h3>
+<ul>
+<li>Fix the problem that the microphone volume is not remembered after restarting after locking the microphone under certain circumstances.</li>
+</ul>
+<h3>Version 1.0.1</h3>
+<ul>
+<li>Fixed some audio applications not showing up.</li>
+<li>Improved some hints.</li>
+</ul>
+</body>
+</html>

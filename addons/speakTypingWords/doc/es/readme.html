@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Verbalización de palabras al escribir mejorada 2024.0.3</title>
+</head>
+<body>
+<h1>Verbalización de palabras al escribir mejorada</h1>
+<p>NVDA lee la palabra completa si se modifica, en lugar de sólo la parte añadida, que es el comportamiento predeterminado.</p>
+<p>Este código ha sido extraído del complemento NVDAExtensionGlobalPlugin de Paulber19.
+https://github.com/paulber19/NVDAExtensionGlobalPlugin
+Según la Licencia Pública General GNU.
+Todo el crédito pertenece a sus autores originales: Paulber19 y Leonardder.</p>
+<p>La función que ejecuta este código se eliminó del complemento original en la versión 13.3; sin embargo, algunos usuarios la echan de menos. Este fork recupera la función adaptándola para que funcione de forma independiente en un pequeño complemento para esos usuarios.</p>
+<p>Copyright de esta adaptación de Javi Domínguez (2024)</p>
+<h3>Advertencias:</h3>
+<ul>
+<li>Si se está ejecutando una versión anterior a la 13.3 de NVDAExtensionGlobalPlugin y ha habilitado la opción eco por palabras mejorada, el manejo de dicha característica se delegará a ese complemento. Cuando la opción esté desactivada o NVDAExtensionGlobalPlugin se elimine/actualice, SpeakTypingWords tomará el control del eco por palabras.  </li>
+<li>Se han reportado errores al ejecutar esta función en Musescore que no se pudieron solucionar. Permanecerá deshabilitado en esa aplicación mientras no se solucionen los errores.  </li>
+<li>Algunos usuarios han reportado problemas al usar el eco por palabras mejorado con teclados Braille. No puedo asegurar que funcione correctamente con todos los dispositivos Braille.</li>
+</ul>
+</body>
+</html>

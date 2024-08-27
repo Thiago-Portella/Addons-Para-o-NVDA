@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the enhancedTouchGestures package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enhancedTouchGestures 18.12\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2018-11-30 05:10+1000\n"
+"PO-Revision-Date: 2021-02-09 11:32+0100\n"
+"Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
+"Language-Team: \n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.11\n"
+
+#. Translators: message shown when touch keyboard button is not found.
+msgid "Cannot activate touch keyboard"
+msgstr "Nie je možné aktivovať dotykovú klávesnicu"
+
+#. Translators: message shown when dictation command is unavailable.
+msgid "Dictation is supported on Windows 10 Version 1709 or later"
+msgstr "Diktovanie je podporované v systémoch Windows od verzie 1709 "
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Enhanced Touch Gestures"
+msgstr "Pokročilé dotykové gestá"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A suite of additional touch commands, including navigation and help "
+"commands.\n"
+"\tRequires a touch-enabled computer with Windows 8.1 or later with NVDA "
+"2017.4 or later installed."
+msgstr ""
+"Sada ďalších dotykových príkazov, vrátane navigačných a pomocných príkazov\n"
+"\tVyžaduje počítač s dotykovou obrazovkou so systémom Windows od verzie 8.1 "
+"s nainštalovaným programom NVDA od verzie 2017.4."

@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the enhancedTouchGestures package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enhancedTouchGestures 17.12\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2017-12-15 06:10+1000\n"
+"PO-Revision-Date: 2023-05-20 16:51+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. Enhanced Touch Gestures requires Windows 10 21H2 or later.
+#. Translators: title of the error dialog shown when trying to install the add-on in unsupported systems.
+#. Unsupported systems include Windows versions earlier than 10 and unsupported feature updates.
+msgid "Unsupported Windows release"
+msgstr "Desteklenmeyen Windows sürümü"
+
+#. Translators: Dialog text shown when trying to install the add-on on
+#. releases earlier than minimum supported release.
+#, python-brace-format
+msgid ""
+"You are using {releaseName} ({build}), a Windows release not supported by "
+"this add-on.\n"
+"This add-on requires {supportedReleaseName} ({supportedBuild}) or later."
+msgstr ""
+"Bu eklenti tarafından desteklenmeyen bir Windows sürümü olan {releaseName} "
+"({build}) kullanıyorsunuz.\n"
+"Bu eklenti, {supportedReleaseName} ({supportedBuild}) veya sonraki bir "
+"sürümünü gerektirir."
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Enhanced Touch Gestures"
+msgstr "Gelişmiş Dokunma Hareketleri"
+
+#. Translators: input help message for Enhanced touch Gestures command.
+msgid "Toggles touch keyboard"
+msgstr "Dokunmatik klavyeye geçiş yapar"
+
+#. Translators: message shown when touch keyboard button is not found.
+msgid "Cannot activate touch keyboard"
+msgstr "Dokunmatik klavye etkinleştirilemiyor"
+
+#. Translators: input help message for Enhanced touch Gestures command.
+msgid "Toggles voice dictation"
+msgstr "Dikteye geçiş yapar"
+
+#. Translators: message shown when dictation command is unavailable.
+msgid "Dictation is supported on Windows 10 Version 1709 or later"
+msgstr "Dikte, Windows 10 1709 veya sonraki sürümlerde desteklenir"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid ""
+"A suite of additional touch commands, including navigation and help "
+"commands.\n"
+"\tRequires a touch-enabled computer with Windows 8.1 or later with NVDA "
+"2017.4 or later installed."
+msgstr ""
+"navigasyon ve yardım komutları da dahil olmak üzere, ek dokunmatik "
+"komutlardan oluşan bir paket.\n"
+"\tNVDA 2017.4 ya da sonraki sürümlerinden birinin kurulu olduğu, dokunmatik "
+"ekranlı ve en az Windows 8.1 yüklü bir bilgisayar gerektirir."
+
+#~ msgid ""
+#~ "You are using an older version of Windows. This add-on requires Windows "
+#~ "10 or later."
+#~ msgstr ""
+#~ "Windows'un eski bir sürümünü kullanıyorsunuz. Bu eklenti, Windows 10 veya "
+#~ "üzerini gerektirir."
+
+#~ msgid "Old Windows version"
+#~ msgstr "Eski Windows sürümü"

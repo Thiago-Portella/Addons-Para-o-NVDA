@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.5.1</title>
+</head>
+<body>
+<h1>Poboljšani dijaloški okvir traženja za NVDA1.5.1</h1>
+<p>Poboljšani dijaloški okvir traženja dodatak za NVDA implementira poboljšano pretraživanje:</p>
+<ul>
+<li>povijest pretraživanja</li>
+<li>prelamanje pretraživanja, konfigurirano po profilu</li>
+<li>osjetljivost na velika i mala slova, konfigurirano po profilu</li>
+<li>kontekstualne informacije o pretraživanjima</li>
+</ul>
+<h2>Preuzimanje</h2>
+<p>Preuzmite Poboljšani dijaloški okvir traženja 1.5.1 dodatak](https://github.com/marlon-sousa/EnhancedFindDialog/releases/download/1.5.1/EnhancedFindDialog-1.5.1.nvda-addon)</p>
+<h2>Značajke</h2>
+<h3>Povijest pretraživanja</h3>
+<p>Na mnogim web-mjestima i web-aplikacijama, najbrži način za pristup određenim mjestima je pomoću naredbe za pretraživanje, često vezane na tipke NVDA + Control + F.</p>
+<p>Dijaloški okvir za pretraživanje omogućuje nam upisivanje teksta i postavljanje na sljedeće pojavljivanje tog teksta ako postoji.</p>
+<p>U mnogim slučajevima, naći ćete se kako posjećujete iste web stranice nekoliko puta tijekom iste NVDA sesije. Na mnogim od ovih web stranica morat ćete tražiti iste pojmove, posebno ako je to jedini način da brzo dođete do poveznice ili odjeljka te web stranice.</p>
+<p>To je posebno slučaj s ljudima koji svakodnevno rade sa sustavima koji se temelje na webu kao dijelom svog posla.</p>
+<p>Međutim, NVDA ne čuva prethodne pojmove koje ste tražili na popisu. To usporava vašu produktivnost, jer osim ako ne tražite točno isti pojam kao što ste prošli put tražili, morate ga ponovno upisati.</p>
+<p>Ovaj dodatak čuva povijest pretraživanja koja traje sve dok je NVDA pokrenut. Dakle, prilikom aktivacije samo trebate pritisnuti strelicu prema dolje i odabrati prethodno tražene pojmove za izvođenje nove pretrage.</p>
+<p>Naravno, možete upisati nove pojmove. Oni će također biti dodani na popis sljedeći put kada aktivirate dijaloški okvir za pretraživanje.</p>
+<h4>Kako radi?</h4>
+<p>Jednostavno instalirajte dodatak. Kada je aktiviran, pritiskanje strelica prema dolje i gore na polju za uređivanje u dijaloškom okviru za pretraživanje omogućit će vam navigaciju kroz popis prethodno pretraživanih pojmova.</p>
+<p>U svakom trenutku možete upisati novi pojam kao i obično.</p>
+<h3>Prelamanje pretraživanja</h3>
+<p>Prelamanje pretraživanja je značajka koja, ako je konfigurirana, ne uzima u obzir trenutni položaj na kojem se nalazite u tekstu prilikom pretraživanja.</p>
+<p>To znači da ako tražite nešto čega nema ispod vaše trenutne pozicije, pretraga će se izvršiti od početka teksta kako bi se provjerilo postoji li taj pojam negdje u cijelom tekstu.</p>
+<p>Ovo je posebno važno ljudima koji rade sa sustavima temeljenim na webu i trebaju pronaći određeni gumb ili dio teksta bez obzira na to gdje se na stranici nalaze.</p>
+<p>Ova je opcija specifična za profil, što znači da možete imati profil tamo gdje je aktivan, a drugi gdje nije.</p>
+<h4>Kako radi?</h4>
+<p>Jednostavno instalirajte dodatak. Kada je aktiviran, dijaloški okvir za traženje ponudit će potvrdni okvir pod nazivom prelamanje pretraživanja.</p>
+<p>Ako je označen:</p>
+<ol>
+<li>Ako tražite pojam i nađete ga ispod trenutne pozicije, bit ćete postavljeni na taj tekst.</li>
+<li>Ako se ovaj pojam ne nalazi ispod trenutne pozicije, tražit će se od vrha teksta.</li>
+<li>Ako je pojam pronađen, oglasit će se kratki zvučni signal koji vas obavještava da je pronađeni tekst iznad vaše trenutne pozicije i da ste postavljeni na njegovu poziciju.</li>
+<li>Ako ovaj pojam uopće nije pronađen, prikazuje se poruka da tekst nije pronađen.</li>
+</ol>
+<p>Promjenom ovog potvrdnog okvira i izvođenjem pretraživanja spremit će se novo stanje (označeno ili neoznačeno) za aktivni profil. Otkazivanjem pretraživanja neće se promijeniti njegovo stanje na aktivnom profilu, čak i ako ste ga promijenili prije otkazivanja pretraživanja.</p>
+<h3>osjetljivost na velika i mala slova</h3>
+<p>NVDA već nudi potvrdni okvir osjetljivosti na velika i mala slova kako bi omogućio pretraživanje s obzirom na velika i mala slova. Ovaj dodatak proširuje ovu funkcionalnost spremanjem stanja ovog potvrdnog okvira u aktivnom profilu, tako da možete imati profile s ovim konfiguriranim drugačije.</p>
+<h4>Kako radi?</h4>
+<p>Jednostavno instalirajte dodatak. Promjena potvrdnog okvira osjetljivosti na velika i mala slova i izvođenje pretraživanja spremit će novo stanje (označeno ili neoznačeno) za aktivni profil. Otkazivanjem pretraživanja neće se promijeniti njegovo stanje na aktivnom profilu, čak i ako ste ga promijenili prije otkazivanja pretraživanja.</p>
+<h3>kontekstualne informacije o pretraživanjima</h3>
+<p>Način na koji se NVDA ponaša kada se pronađe traženi pojam je sljedeći: postavljeni ste na mjesto traženog pojma i red se čita od traženog pojma dalje.</p>
+<p>Ovo je oduvijek bilo problematično kada nešto trebate pretraživati ​​nekoliko puta (koristeći NVDA + F3), jer prvo što slušate je sam traženi pojam, kada taj pojam znate jer ste ga upravo tražili.</p>
+<p>Ovaj dodatak postavlja pokazivač na poziciju izraza, ali umjesto da čita od pojma, on čita cijeli redak, dajući vam kontekst u kojem je taj pojam pronađen.</p>
+<p>Na primjer, pretpostavimo da tražite "Marlon" jer znate da postoji gumb koji se zove "Target Marlon somehwere". Ne želite tražiti metu jer postoje drugi gumbi koji se zovu "Cilj, x, y, z" i želite pronaći metu Gumb Marlon.</p>
+<p>Evo teksta:</p>
+<p>Izbriši Marlonove komentare</p>
+<p>Odgovori izravno Marlonu</p>
+<p>Prijavite Marlona kao spamera</p>
+<p>Ciljajte Marlona na odgovor</p>
+<p>Kad biste tražili Marlona prije ovog bloka, čuli biste
+Komentari Marlona</p>
+<p>Ako nastavite pritiskati NVDA + F3 čut ćete
+Marlon</p>
+<p>Marlon kao spamer</p>
+<p>Marlon na odgovoru</p>
+<p>To bi smanjilo vašu produktivnost jer biste prvo čuli samo marlon, a da ništa ne znate o ovoj pojavi.</p>
+<p>Sljedeći put biste čuli Marlona i morali biste čekati da se kao spammer progovori, jer ni vi ne biste znali što je o Marlonu u ovom tekstu.</p>
+<p>Slično tome, sljedeći put ćete morati pričekati na odgovor, jer ni vi ne biste bili sigurni što je to s Marlonom.</p>
+<p>Štoviše, ako biste brzo pritisnuli NVDA + F3, čuli biste Marlon, Marlon, Marlon, Marlon ... što nije produktivno jer znate da tražite Marlona.</p>
+<h4>Kako radi?</h4>
+<p>Jednostavno instalirajte dodatak.</p>
+<p>Nakon što se instalira, očitava se trenutni redak pronađenog traženog pojma i nalazite se na pojmu koji se nalazi u njemu.</p>
+<p>U našem gornjem primjeru, kada ste prvi put izvršili pretraživanje čuli biste</p>
+<p>Izbriši Marlonove komentare</p>
+<p>Ako nastavite pritiskati NVDA + F3 čut ćete</p>
+<p>Odgovori izravno Marlonu</p>
+<p>Prijavite Marlona kao spamera</p>
+<p>Ciljajte Marlona na odgovor</p>
+<p>Nadalje, ako ste brzo pritisnuli NVDA + F3, čut ćete početak svakog retka, što vam omogućuje da brzo pritisnete Enter na ciljnom retku jer znate da je Marlon prisutan na kasnijoj poziciji u tom istom retku.</p>
+<h2>Doprinos i prevođenje</h2>
+<p>Ako želite doprinijeti ili prevesti ovaj dodatak, pristupite <a href="https://github.com/marlon-sousa/EnhancedFindDialog">repozitoriju projekta</a> i pronađite upute na contributing.md u direktoriju dokumentacije na engleskom jeziku.</p>
+<h2>Suradnici</h2>
+<p>Posebna zahvala za</p>
+<ul>
+<li>Ângelo Miguel Abrantes - portugalski prijevod</li>
+<li>Rémy Ruiz - španjolski prijevod</li>
+<li>Rémy Ruiz - francuski prijevod</li>
+<li>Tarik Hadžirović - hrvatski prijevod</li>
+<li>Thiago Seus - brazilski portugalski prijevod, kompatibilnost s NVDA 2024.1</li>
+<li>Umut KORKMAZ - turski prijevod</li>
+<li>Valentin Kupriyanov - ruski prijevod</li>
+<li>Ivan Shtefuriak - ukrajinski prijevod</li>
+</ul>
+</body>
+</html>

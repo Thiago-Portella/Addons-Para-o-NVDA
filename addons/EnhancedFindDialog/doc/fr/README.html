@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.5.1</title>
+</head>
+<body>
+<h1>EnhancedFindDialog pour NVDA 1.5.1</h1>
+<p>Extension qui améliore le dialogue de recherche de NVDA:</p>
+<ul>
+<li>historique de recherche</li>
+<li>continuité de recherche, configurée par profil</li>
+<li>respecter la casse, configurée par profil</li>
+<li>informations contextuelles sur les recherches</li>
+</ul>
+<h2>Télécharger</h2>
+<p>Télécharger l'extension <a href="https://github.com/marlon-sousa/EnhancedFindDialog/releases/download/1.5.1/EnhancedFindDialog-1.5.1.nvda-addon">Enhanced Find Dialog 1.5.1</a></p>
+<h2>Caractéristiques</h2>
+<h3>Historique de recherche</h3>
+<p>Dans de nombreuses pages Internet et d'autres applications, le moyen le plus rapide d'accéder à certains endroits spécifiques consiste à utiliser la commande "Rechercher", généralement liée aux touches "ctrl+nvda+f".</p>
+<p>Le dialogue de recherche nous permet d'écrire un texte et en appuyant sur "Entrée", d'être placé dans la prochaine occurrence de ce texte s'il existe.</p>
+<p>Dans de nombreux cas, vous visiterez plusieurs fois les mêmes endroits d'une page, même les mêmes pages pendant  la même session NVDA. Par conséquent, vous devez rechercher les mêmes termes, surtout s'il s'agit du seul moyen d'accéder rapidement à un lien ou à une section de ce site.</p>
+<p>C'est notamment le cas des personnes qui travaillent, dans leur vie quotidienne, avec des systèmes Web.</p>
+<p>Cependant, NVDA ne garde pas  un historique des termes précédemment recherchés, ce qui diminue votre productivité car, à moins que vous ne recherchiez exactement le même terme  de votre dernière recherche, vous devez l'écrire à nouveau.</p>
+<p>Cette extension garde un historique de recherche qui dure tant que   NVDA est en cours d'exécution. Par conséquent, lorsque vous appuyez sur les touches pour effectuer la recherche , si vous avez déjà cherché un terme ou une expression donné, vous devez simplement appuyer sur les flèches bas ou haut pour sélectionnez les termes précédemment recherchés afin d'effectuer une nouvelle recherche et revenir à l'endroit souhaité.</p>
+<p>Bien sûr, vous pouvez toujours écrire de nouveaux termes. Dans ce cas, ils seront également ajoutés à la liste, la prochaine fois que vous activez la boîte de dialogue de recherche.</p>
+<h4>Comment ça marche?</h4>
+<p>Il suffit d'installer l'extension. Lorsqu'elle est activée, à l'aide des touches "ctrl+nvda+f", comme vous le faites habituellement pour le dialogue de recherche NVDA , appuyez sur les flèches  haut et bas dans le champ d'édition, ce qui vous permet de naviguer dans la liste des termes et des expressions précédemment recherchés.</p>
+<p>Vous pouvez à tout moment et quand vous en avez besoin, écrire un nouveau terme, comme d'habitude.</p>
+<h3>Continuité de recherche</h3>
+<p>La continuité de recherche est une fonctionnalité qui, si configurée, ne considère pas la position actuelle dans laquelle il se trouve, dans un texte, lors de la recherche.</p>
+<p>Cela signifie que si vous recherchez quelque chose qui n'est pas présent en dessous de votre position actuelle, la recherche sera effectuée à partir du début du texte pour vérifier que ce terme existe quelque part dans le document.</p>
+<p>Ceci est particulièrement important pour les personnes qui travaillent avec des systèmes Web et doivent trouver un déterminé bouton ou une partie du texte, indépendamment de l'endroit où ils sont sur la page.</p>
+<p>Cette option est spécifique pour  un profil, ce qui signifie que vous pouvez avoir un profil où il est active et un autre où il n'est pas.</p>
+<h4>Comment ça marche?</h4>
+<p>Il suffit d'installer l'extension. Lorsqu'elle est activée, la boîte de dialogue "Rechercher" proposera une case à cocher appelée "Continuité de recherche".</p>
+<p>Si c'est cochée:</p>
+<ol>
+<li>Si vous recherchez un terme et il se trouve en bas de la position actuelle, le curseur sera  placé sur ce texte.</li>
+<li>Si ce terme ne se trouve pas en bas de la position actuelle, il sera recherché en haut du texte.</li>
+<li>Si le terme est trouvé,  un petit bip s'émettra pour vous informer que le texte trouvé   est au-dessus de votre position actuelle et que le curseur est placé sur cette position.</li>
+<li>Si ce terme n'est pas trouvé, le message texte non trouvé sera affiché.</li>
+</ol>
+<p>Changer cette case à cocher et effectuer une  recherche enregistrera le nouvel état (cochée ou non cochée) pour le profil actif. Annuler la recherche ne changera pas l'état sur le profil actif, même si vous l'avez changé avant d'annuler la recherche.</p>
+<h3>Respecter la casse</h3>
+<p>NVDA propose déjà la case à cocher "Respecter la casse" pour permettre les recherches en considérant ce cas. Cette extension étend cette fonctionnalité en enregistrant l'état de cette case à cocher sur le profil actif, pour que vous ayez des profils configurés différemment.</p>
+<h4>Comment ça marche?</h4>
+<p>Il suffit d'installer l'extension. Changer la case à cocher  "Respecter la casse" et effectuer une  recherche enregistrera le nouvel état (cochée ou non cochée) pour le profil actif. Annuler la recherche ne changera pas l'état sur le profil actif, même si vous l'avez changé avant d'annuler la recherche.</p>
+<h3>Informations contextuelles sur les recherches</h3>
+<p>Actuellement, sans cette extension, la manière dont NVDA se comporte lorsqu'un terme de recherche est trouvé, est le suivant: le curseur est placé sur la position du terme recherché et  ce terme est prononcé.</p>
+<p>Cela devient quelque chose de problématique lorsque vous devez rechercher plusieurs fois pour n'importe quel terme (à l'aide de NVDA + f3) parce que la première chose qui est entendue est le terme recherché, ce qui est redondant, parce que  vous venez de le rechercher!</p>
+<p>Cette extension place le curseur sur la position du terme, mais au lieu de lire le terme en lui-même, lit la ligne complète fournissant le contexte sur lequel ce terme a été trouvé.</p>
+<p>Par exemple, supposons que vous recherchiez "Marlon" parce que vous savez qu'il y a un bouton appelé "Mentionner Marlon" quelque part sur la page. Vous ne voulez pas rechercher le terme "mentionner," car il existe d'autres boutons appelés "mentionner x y z" et vous voulez trouver le bouton "Mentionner Marlon".</p>
+<p>Voici le texte:</p>
+<p>Exclure les commentaires de Marlon</p>
+<p>répondre directement à Marlon</p>
+<p>Signaler Marlon en tant que spammeur</p>
+<p>Mentionner Marlon dans une réponse</p>
+<p>Si vous avez cherché "Marlon" avant ce bloc, vous entendriez
+"commentaires de Marlon"</p>
+<p>Si vous maintenez enfoncée les touches NVDA + f3, vous entendriez</p>
+<p>"Marlon"</p>
+<p>Marlon en tant que spammeur</p>
+<p>Marlon dans une réponse</p>
+<p>Cela réduirait votre productivité, car, d'abord, vous entendrez à peine Marlon, sans rien savoir sur cette occurrence.</p>
+<p>La prochaine fois, vous entendriez Marlon et devriez attendre que "en tant que spammeur" soit prononcé, car vous ne sauriez pas ce qu'il y a à propos de Marlon sur ce texte.</p>
+<p>De la même manière, la prochaine fois, vous devriez attendre que le reste de la phrase "dans une réponse" soit prononcé, car vous n'auriez pas la certitude sur de ce qui était la chose à propos  de Marlon.</p>
+<p>De plus, si vous appuyez sur NVDA + f3 rapidement, vous écouterez Marlon, Marlon, Marlon, Marlon... ce qui n'est pas productif parce que vous savez que vous recherchez Marlon.</p>
+<h4>Comment ça marche?</h4>
+<p>Il suffit d'installer l'extension.</p>
+<p>Après l'installation, la ligne actuelle du terme de recherche est lue et le curseur est placé sur ce terme.</p>
+<p>Dans l'exemple précédent, la première fois que la recherche a été effectuée, vous avez écouté</p>
+<p>"Exclure les commentaires de Marlon"</p>
+<p>Si vous maintenez enfoncée les touches NVDA + f3, vous entendriez</p>
+<p>"répondre directement à Marlon"</p>
+<p>"Signaler Marlon en tant que spammeur"</p>
+<p>"Mentionner Marlon dans une réponse"</p>
+<p>De plus, si vous appuyez sur NVDA + f3 rapidement, vous écoutez le début de chaque ligne, vous permettant d'appuyer rapidement sur  "Entrée" sur la ligne commençant par Mentionner, car vous savez que le terme "Marlon" est présent sur une dernière position sur cette même ligne.</p>
+<h1>aidant à traduire ou à développer l'extension</h1>
+<p>Si vous voulez aider à traduire ou à développer l'extension, s'il vous plaît accéder au <a href="https://github.com/marlon-sousa/EnhancedFindDialog">dépôt du projet</a> et recherchez le fichier contributing.md dans le répertoire de documentation équivalent à votre langue.</p>
+<h2>Contributeurs</h2>
+<p>Remerciement spécial à</p>
+<ul>
+<li>Ângelo Miguel Abrantes - Traduction Portugais Portugal</li>
+<li>Rémy Ruiz - Traduction Espagnol</li>
+<li>Rémy Ruiz - Traduction Français</li>
+<li>Tarik Hadžirović - Traduction Croate</li>
+<li>Thiago Seus - Traduction Portugais Brésil, compatibilité avec NVDA 2024.1</li>
+<li>Umut KORKMAZ - Traduction turc</li>
+<li>Valentin Kupriyanov - Traduction Russe</li>
+<li>Ivan Shtefuriak - Traduction Ukrainien</li>
+</ul>
+</body>
+</html>

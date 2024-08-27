@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.5.1</title>
+</head>
+<body>
+<h1>EnhancedFindDialog para NVDA 1.5.1</h1>
+<p>Complemento que melhora o diálogo de busca:</p>
+<ul>
+<li>histórico de busca</li>
+<li>pesquisa circular, configurada por perfil</li>
+<li>distinção entre maiúsculas e minúsculas, configurada por perfil</li>
+<li>informações contextuais na busca</li>
+</ul>
+<h2>Download</h2>
+<p>Baixe o <a href="https://github.com/marlon-sousa/EnhancedFindDialog/releases/download/1.5.1/EnhancedFindDialog-1.5.1.nvda-addon">Complemento para o Diálogo de Busca Estendido 1.5.1</a></p>
+<h2>Recursos</h2>
+<h3>Histórico de busca</h3>
+<p>Em muitos sites e aplicativos, a maneira mais rápida de acessar locais específicos é usando o
+comando de busca, geralmente vinculado às teclas ctrl + nvda + f.</p>
+<p>O diálogo de busca nos permite digitar um texto e sermos colocados na próxima ocorrência desse texto, se ele existir.</p>
+<p>Frequentemente, você estará visitando os mesmos sites várias vezes durante a mesma sessão do NVDA. Em muitos desses sites, você precisará pesquisar
+pelos mesmos termos, especialmente se essa for a única maneira de acessar rapidamente um link ou seção desse site.</p>
+<p>Esse é especialmente o caso de pessoas que programam diariamente com sistemas baseados na Web como parte de seu trabalho.</p>
+<p>No entanto, o NVDA não mantém os termos que você pesquisou
+anteriormente em uma lista. Isso diminui sua produtividade, porque, a menos que você esteja procurando exatamente
+o mesmo termo da sua última pesquisa, será preciso digitá-lo novamente.</p>
+<p>Esse complemento mantém um histórico de pesquisa que vale enquanto o NVDA estiver em execução. Assim, quando ele estiver ativo, basta pressionar as setas para baixo
+e para cima para ver o histórico dos termos anteriormente pesquisados e
+pressionar enter no termo desejado para efetuar uma nova pesquisa.</p>
+<p>Você pode, naturalmente, digitar novos termos no diálogo de pesquisa. Eles também serão adicionados à lista na próxima vez que você ativar a caixa de diálogo.</p>
+<h4>Como funciona?</h4>
+<p>Basta instalar o complemento. Quando ele for ativado, pressionar as setas para cima e para baixo no campo de edição
+da caixa de diálogo de pesquisa permitirá
+navegar pela lista de termos pesquisados anteriormente.</p>
+<p>Você pode a qualquer momento digitar um novo termo, como de costume.</p>
+<h3>Pesquisa circular</h3>
+<p>A pesquisa circular é um recurso que, se configurado, não considera a posição atual em que você está em um texto ao
+realizar a busca.</p>
+<p>Isso significa que, se você procurar algo que não está presente abaixo da sua posição atual, a pesquisa será realizada desde o
+início para verificar se esse termo existe em algum lugar do texto inteiro.</p>
+<p>Isso é muito útil para pessoas que trabalham com sistemas baseados na Web e precisam encontrar um determinado botão ou parte do texto, independentemente de onde estejam na página.</p>
+<p>Essa opção é específica para cada perfil, o que significa que você pode ter um perfil onde
+ela está ativa e outro onde não está.</p>
+<h4>Como funciona?</h4>
+<p>Basta instalar o complemento. Quando ativada, a caixa de diálogo Procurar oferecerá uma caixa de seleção chamada
+pesquisa circular.</p>
+<p>Se estiver marcada:</p>
+<ol>
+<li>Se você procurar um termo e ele for encontrado abaixo da posição atual, você será colocado nele.</li>
+<li>Se este termo não for encontrado abaixo da posição atual, ele será
+pesquisado no início do texto.</li>
+<li>Se o termo for encontrado, um bipe curto será produzido para que você saiba que o texto está acima da sua posição
+atual e o cursor se moverá para essa posição.</li>
+<li>Se esse termo não for encontrado, a mensagem de texto não encontrado será exibida.</li>
+</ol>
+<p>Alterar essa caixa de seleção e realizar uma nova pesquisa salvará o novo estado
+da caixa (marcado ou desmarcado) para o perfil atual. Cancelar a pesquisa não mudará seu estado no perfil
+atual, mesmo se a caixa tiver sido alterada antes de cancelar a pesquisa.</p>
+<h3>distinção entre maiúsculas e minúsculas</h3>
+<p>O NVDA já oferece a caixa de seleção de distinção entre maiúsculas e minúsculas. Esse complemento estende essa funcionalidade salvando o estado dessa caixa de seleção no perfil
+atual, para que você possa ter perfis com essa opção configurados de maneiras
+diferentes.</p>
+<h4>Como funciona?</h4>
+<p>Basta instalar o complemento. Alterar a caixa de seleção de distinção entre maiúsculas e minúsculas e executar uma pesquisa salvará o novo estado (marcado ou desmarcado)
+da caixa para o perfil atual. Cancelar a pesquisa não mudará seu estado no
+perfil atual, mesmo se você a tiver alterado antes de cancelar a pesquisa.</p>
+<h3>informações contextuais na busca</h3>
+<p>A maneira como o NVDA se comporta quando um termo de pesquisa é encontrado é a seguinte: você é colocado na posição do termo pesquisado e a linha é lida a partir dele.</p>
+<p>Isso sempre foi problemático quando você precisa pesquisar várias vezes (usando o NVDA + f3) por alguma coisa, porque a primeira coisa
+que é lida é o próprio termo pesquisado, quando você o conhece, porque acabou de pesquisá-lo.</p>
+<p>Esse complemento coloca o cursor na posição do termo, mas ao invés de ler
+do termo em diante ele lê a linha completa, fornecendo o contexto completo de
+onde ele foi encontrado.</p>
+<p>Por exemplo, suponha que você esteja pesquisando "Marlon" porque sabe que existe um botão chamado
+mencionar Marlon em algum lugar da página. Você não quer procurar por
+mencionar, porque existem outros botões chamados "mencionar x y z" e deseja encontrar o botão Marlon de destino.</p>
+<p>Aqui está o texto:</p>
+<p>Excluir comentários de Marlon</p>
+<p>responder diretamente a Marlon</p>
+<p>Relatar Marlon como spammer</p>
+<p>Mencionar Marlon em uma resposta</p>
+<p>Se você pesquisasse Marlon antes desse bloco, ouviria
+Marlon</p>
+<p>Se você mantivesse pressionado NVDA + f3, ouviria</p>
+<p>Marlon</p>
+<p>Marlon como spammer</p>
+<p>Marlon em uma resposta</p>
+<p>Isso reduziria sua produtividade, porque primeiro você ouviria apenas marlon, sem saber nada sobre essa ocorrência.</p>
+<p>Na próxima vez, você ouviria Marlon e teria que esperar que "como spammer" fosse falado, porque também não saberia o que há sobre Marlon neste texto.</p>
+<p>Da mesma forma, da próxima vez você precisaria esperar "numa resposta" ser
+lida, porque também não teria certeza sobre o que Marlon está se referindo
+nessa linha.</p>
+<p>Além disso, se você pressionasse NVDA + f3 rapidamente, ouviria Marlon, Marlon, Marlon, Marlon ... o que não é produtivo porque você sabe que está procurando por Marlon.</p>
+<h4>Como funciona</h4>
+<p>Basta instalar o complemento.</p>
+<p>Após a instalação, a linha completa onde o termo de pesquisa for encontrado é lida e você é colocado nesse termo.</p>
+<p>No exemplo acima, na primeira vez que você realizou a pesquisa, você ouviria</p>
+<p>Excluir comentários de Marlon</p>
+<p>Se você mantivesse pressionado NVDA + f3, ouviria</p>
+<p>Responder diretamente a Marlon</p>
+<p>Relatar Marlon como spammer</p>
+<p>Mencionar Marlon em uma resposta</p>
+<p>Além disso, se você pressionasse NVDA + f3 rapidamente, ouviria o início de cada linha, permitindo pressionar rapidamente enter na linha iniciada com mensionar, porque você sabe que
+"Marlon" está presente mais à frente nessa linha.</p>
+<h1>ajudando a traduzir ou desenvolver o complemento</h1>
+<p>Se quiser ajudar a traduzir ou desenvolver o complemento, acesse o <a href="https://github.com/marlon-sousa/EnhancedFindDialog">repositório do projeto</a> e busque pelo arquivo contributing.md no diretório de documentação equivalente ao seu idioma.</p>
+<h2>Colaboradores</h2>
+<p>Agradecimentos a:</p>
+<ul>
+<li>Ângelo Miguel Abrantes - Tradução para Português</li>
+<li>Rémy Ruiz - Tradução para Espanhol</li>
+<li>Rémy Ruiz - Tradução para Francês</li>
+<li>Tarik Hadžirović - Tradução para Croata</li>
+<li>Thiago Seus - Tradução para Português Brasileiro e compatibilidade com NVDA 2024.1</li>
+<li>Umut KORKMAZ - tradução para Turco</li>
+<li>Valentin Kupriyanov - tradução para Russo</li>
+<li>Ivan Shtefuriak - tradução para Ucraniano</li>
+</ul>
+</body>
+</html>

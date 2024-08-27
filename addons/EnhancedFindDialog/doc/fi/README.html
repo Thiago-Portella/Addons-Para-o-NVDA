@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi" lang="fi">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.5.1</title>
+</head>
+<body>
+<h1>Paranneltu Etsi-valintaikkuna 1.5.0</h1>
+<p>Paranneltu Etsi-valintaikkuna -lisäosa toteuttaa seuraavat haun parannukset:</p>
+<ul>
+<li>Hakuhistoria</li>
+<li>Profiilikohtainen haun aloittaminen alusta asiakirjan lopussa</li>
+<li>Profiilikohtainen kirjainkoko</li>
+<li>Tilannekohtaiset tiedot hakujen yhteydessä</li>
+</ul>
+<h2>Lataaminen</h2>
+<p>Lataa <a href="https://github.com/marlon-sousa/EnhancedFindDialog/releases/download/1.5.0/EnhancedFindDialog-1.5.0.nvda-addon">Paranneltu Etsi-valintaikkuna 1.5.0 -lisäosa</a></p>
+<h2>Ominaisuudet</h2>
+<h3>Hakuhistoria</h3>
+<p>Nopein tapa päästä tiettyihin kohtiin monilla sivustoilla ja verkkopohjaisissa sovelluksissa on hakutoiminto, jonka näppäinkomento on yleensä Ctrl+NVDA+F.</p>
+<p>Etsi-valintaikkuna mahdollistaa haettavan tekstin kirjoittamisen ja kyseisen tekstin seuraavaan esiintymään siirtymisen, mikäli sellainen löytyy.</p>
+<p>Saatat usein huomata vierailevasi samoilla sivustoilla useita kertoja saman NVDA-istunnon aikana. Monilla näistä verkkosivuista sinun on etsittävä samaa tekstiä, erityisesti jos se on ainoa tapa päästä nopeasti kyseisellä sivulla olevaan linkkiin tai osioon.</p>
+<p>Tämä pätee erityisesti sellaisten henkilöiden kohdalla, jotka työskentelevät päivittäin verkkopohjaisten järjestelmien parissa.</p>
+<p>Valitettavasti NVDA ei säilytä luetteloa aiemmista hakusanoista. Tämä hidastaa tuottavuutta, koska ellet etsi täsmälleen samaa hakusanaa kuin edellisellä kerralla, sinun on kirjoitettava se uudelleen.</p>
+<p>Tämä lisäosa säilyttää hakuhistorian niin kauan kuin NVDA on käynnissä. Joten voit suorittaa uuden haun vain avaamalla Etsi-valintaikkunan ja valitsemalla aiemmin haetun hakusanan painamalla alanuolinäppäintä.</p>
+<p>Voit tietenkin myös kirjoittaa uusia hakusanoja. Ne näkyvät luettelossa seuraavalla Etsi-valintaikkunan avaamiskerralla.</p>
+<h4>Miten se toimii?</h4>
+<p>Asenna lisäosa. Kun se on otettu käyttöön, voit liikkua Etsi-valintaikkunassa hakukentän aiempien hakusanojen luettelossa painamalla ylä- ja alanuolinäppäimiä.</p>
+<p>Voit kirjoittaa uuden hakusanan tavalliseen tapaan milloin tahansa.</p>
+<h3>Jatka hakua alusta</h3>
+<p>Jatka hakua alusta on toiminto, joka ei käytössä ollessaan ota huomioon nykyistä tekstikohtaa hakuja suoritettaessa.</p>
+<p>Tämä tarkoittaa, että jos etsit jotain, mitä ei löydy nykyisen sijaintisi alapuolelta, haku suoritetaan tekstin alusta , jolloin hakusanaa etsitään koko tekstistä.</p>
+<p>Tämä on erityisen tärkeää verkkopohjaisten järjestelmien parissa työskenteleville, jotka tarvitsevat mahdollisuuden tiettyjen painikkeiden tai tekstien löytämiseen sivun senhetkisestä kohdasta riippumatta.</p>
+<p>Tämä asetus on profiilikohtainen, mikä tarkoittaa, että voit käyttää profiilia, jossa se on käytössä, ja toista profiilia, jossa se ei ole käytössä.</p>
+<h4>Miten se toimii?</h4>
+<p>Asenna lisäosa. Kun se on käytössä, Etsi-valintaikkunassa on "Jatka hakua alusta" -valintaruutu.</p>
+<p>Kun se on valittuna:</p>
+<ol>
+<li>Jos etsimäsi hakusana löytyy senhetkisen sijaintisi alapuolelta, kohdistus siirretään kyseiseen kohtaan.</li>
+<li>Jos etsimääsi hakusanaa ei löydy senhetkisen sijaintisi alapuolelta, sitä etsitään yläpuolelta.</li>
+<li>Jos hakusana löytyy, lisäosa ilmoittaa lyhyellä äänimerkillä, että löydetty teksti on senhetkisen sijainnin yläpuolella ja kohdistus siirretään sen kohdalle.</li>
+<li>Jos hakusanaa ei löydy, siitä näytetään ilmoitus.</li>
+</ol>
+<p>Tämän valintaruudun tilan muuttaminen ja haun suorittaminen tallentavat uuden tilan (valittu tai ei valittu) käytössä olevaan profiiliin. Haun peruuttaminen ei muuta valintaruudun tilaa käytössä olevassa profiilissa, vaikka muuttaisit sitä ennen haun peruuttamista.</p>
+<h3>Sama kirjainkoko</h3>
+<p>NVDA tarjoaa jo "Sama kirjainkoko" -valintaruudun, jotta hakuja voidaan tehdä kirjainkoosta riippumatta. Tämä lisäosa laajentaa kyseistä toiminnallisuutta tallentamalla valintaruudun tilan käytössä olevaan profiiliin, joten voit luoda profiileja, joissa tämä on määritetty eri tavalla.</p>
+<h4>Miten se toimii?</h4>
+<p>Asenna lisäosa. "Sama kirjainkoko" -valintaruudun tilan muuttaminen ja haun suorittaminen tallentavat uuden tilan (valittu tai ei valittu) käytössä olevaan profiiliin. Haun peruuttaminen ei muuta valintaruudun tilaa käytössä olevassa profiilissa, vaikka muuttaisit sitä ennen haun peruuttamista.</p>
+<h3>Hakujen tilannekohtaiset tiedot</h3>
+<p>NVDA käyttäytyy hakusanan löytyessä seuraavasti: kohdistus sijoitetaan hakusanan kohdalle ja rivi luetaan siitä eteenpäin.</p>
+<p>Tämä on aina ollut ongelmallista suoritettaessa useita hakuja NVDA+F3-näppäinkomennolla, koska ensimmäinen kuulemasi asia on itse hakusana, mikä on täysin tarpeetonta, koska hait sitä juuri.</p>
+<p>Tämä lisäosa sijoittaa kohdistimen hakusanan kohdalle, mutta sen sijaan että lukisi siitä eteenpäin, se lukee koko rivin, mikä antaa käsityksen siitä, mistä kohdasta kyseinen hakusana löytyi.</p>
+<p>Oletetaan esimerkiksi, että etsit hakusanaa "Marlon", koska tiedät, että jossain on painike nimeltä "Kohdista Marlonille". Et halua etsiä hakusanaa "Kohdista", koska muitakin "kohdista XYZ" -nimisiä painikkeita on, ja haluat löytää vain "Kohdista Marlonille" -painikkeen.</p>
+<p>Tässä on teksti:</p>
+<p>Poista Marlonin kommentit</p>
+<p>Vastaa suoraan Marlonille</p>
+<p>Ilmoita Marlon roskapostittajaksi</p>
+<p>Kohdista vastaus Marlonille</p>
+<p>Jos etsisit hakusanaa "Marlon" ennen tätä lohkoa, kuulisit</p>
+<p>Marlonin kommentit</p>
+<p>Jos jatkaisit NVDA+F3:n painamista, kuulisit</p>
+<p>Marlonille</p>
+<p>Marlon roskapostittajaksi</p>
+<p>vastaus Marlonille</p>
+<p>Tämä vähentäisi tuottavuuttasi, koska ensin kuulisit vain "Marlon", etkä tietäisi mitään tästä esiintymästä.</p>
+<p>Seuraavalla kerralla kuulisit "Marlon" ja sinun olisi odotettava, että "roskapostittajaksi" puhutaan, koska et tietäisi, miten tämä teksti liittyy Marloniin.</p>
+<p>Samoin seuraavalla kerralla sinun olisi odotettava, että "vastaus" puhutaan, koska et olisi varma, mitä siinä tekstissä puhutaan Marlonista.</p>
+<p>Lisäksi, jos painaisit nopeasti NVDA+F3, kuulisit "Marlon, Marlon, Marlon, Marlon...", mikä ei ole tuottavaa, koska tiedät etsiväsi Marlonia.</p>
+<h4>Miten se toimii?</h4>
+<p>Asenna lisäosa.</p>
+<p>Kun se on asennettu, rivi, jolla senhetkinen löytynyt hakusana on, luetaan ja kohdistus siirretään hakusanan kohdalle.</p>
+<p>Edellisessä esimerkissämme ensimmäisellä hakukerralla kuulisit</p>
+<p>Poista Marlonin kommentit</p>
+<p>Jos jatkaisit NVDA+F3:n painamista, kuulisit</p>
+<p>Vastaa suoraan Marlonille</p>
+<p>Ilmoita Marlon roskapostittajaksi</p>
+<p>Kohdista vastaus Marlonille</p>
+<p>Lisäksi, jos painaisit nopeasti NVDA+F3, kuulisit jokaisen rivin alun, mikä mahdollistaisi nopean Enterin painamisen kohderivillä, koska tiedät, että "Marlon" on myöhemmin samalla rivillä.</p>
+<h2>Kehitykseen osallistuminen ja kääntäminen eri kielille</h2>
+<p>Mikäli haluat osallistua tämän lisäosan kehitykseen tai kääntää sen jollekin kielelle, mene <a href="https://github.com/marlon-sousa/EnhancedFindDialog">projektin koodivarastoon</a> ja katso ohjeet tiedostosta contributing.md, joka löytyy englanninkielisen dokumentaation hakemistosta.</p>
+<h2>Osallistujat</h2>
+<p>Erityiskiitokset seuraaville:</p>
+<ul>
+<li>Ângelo Miguel Abrantes - portugalinkielinen käännös</li>
+<li>Rémy Ruiz - ranskankielinen käännös</li>
+<li>Rémy Ruiz - espanjankielinen käännös</li>
+<li>Tarik Hadžirović - kroaatinkielinen käännös</li>
+<li>Thiago Seus - brasilianportugalinkielinen käännös, NVDA 2024.1 -yhteensopivuus</li>
+<li>Umut KORKMAZ - turkinkielinen käännös</li>
+<li>Valentin Kupriyanov - venäjänkielinen käännös</li>
+<li>Ivan Shtefuriak - ukrainankielinen käännös</li>
+<li>Jani Kinnunen - suomenkielinen käännös</li>
+</ul>
+</body>
+</html>

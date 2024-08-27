@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Enhanced Touch Gestures 23.06.1</title>
+</head>
+<body>
+<h1>Enhanced Touch Gestures</h1>
+<ul>
+<li>Автор: Joseph Lee</li>
+<li>Загрузить <a href="https://addons.nvda-project.org/files/get.php?file=ets">стабильную версию</a></li>
+<li>NVDA compatibility: 2019.3 and beyond</li>
+</ul>
+<p>Это дополнение предоставляет дополнительные жесты сенсорного экрана для
+NVDA. Также, оно предоставляет набор жестов для облегчения навигации режима
+обзора.</p>
+<p>Note: this add-on requires NVDA 2019.3 or later running on a touchscreen
+computer with Windows 8.1 or 10.</p>
+<h2>Команды</h2>
+<h3>Доступно везде</h3>
+<ul>
+<li>Двойное касание четырьмя пальцами: включить режим справки по вводу.</li>
+<li>Касание с последующим удержанием: выполнить щелчок правой кнопки мыши на
+  объекте под вашим пальцем.</li>
+<li>Смахивание четырьмя пальцами вправо: Изменить состояние экранной
+  клавиатуры (обычно, вызывает ее)</li>
+</ul>
+<h3>Объектный режим</h3>
+<ul>
+<li>Смахивание тремя пальцами вниз: прочитать текущее окно.</li>
+<li>Смахивание тремя пальцами влево: Объявить объект в фокусе.</li>
+<li>Смахивание тремя пальцами вправо: Объявить текущий объект навигатора.</li>
+<li>Смахивание четырьмя пальцами вверх: Объявляет название текущего окна.</li>
+<li>смахивание четырьмя пальцами вниз: прочитать текст строки состояния.</li>
+</ul>
+<h2>Сенсорный режим веб</h2>
+<p>Этот сенсорный режим, доступный в режиме обзора, позволяет осуществлять
+навигацию  в документе по выбранным элементам. Чтобы переключиться в
+Сенсорный режим веб из режима обзора документа, выполните двойное касание
+тремя пальцами. В этом режиме пролистывания одним пальцем вверх или вниз
+выбирают доступные действия с элементом, а пролистывания одним пальцем влево
+или вправо перемещают к предыдущему и следующему элементам
+соответственно. Когда вы покинете режим обзора документов, будет активирован
+объектный режим.</p>
+<h2>Сенсорный режим настроек синтезатора</h2>
+<p>Вы можете использовать этот режим для быстрого изменения настроек
+синтезатора, таких как выбор голоса и изменения громкости. В этом режиме
+используются пролистывания двумя пальцами влево или вправо, чтобы
+перемещаться между настройками синтезатора и пролистывания двумя пальцами
+вверх и вниз, чтобы изменить значения. Это зеркало жестов настроек
+клавиатурных команд кольца синтезатора.</p>
+<h2>Сигнал объявления координат</h2>
+<p>Если вы включили настройку изменяющегося сигнала при перемещении мыши в
+настройках мыши, вы услышите звуковой сигнал, указывающий текущие координаты
+экрана, когда вы используете исследование сенсорными жестами.</p>
+<h2>Touch command passthrough</h2>
+<p>An unassigned command is available to allow you to use touchscreen gestures
+as though NVDA is not running. In order to use this, you need to assign a
+command (via Input Gestures dialog) under Enhanced Touch Gestures category
+to let you do this for up to ten seconds or toggle this manually. Then go to
+NVDA menu/Preferences/Touch Interaction, then configure pause NVDA's touch
+command value between 3 to 10 seconds (default is 5 seconds).</p>
+<h2>Version 20.01</h2>
+<ul>
+<li>NVDA 2019.3 or later is required.</li>
+<li>Touch support toggle command (including touch passthrough) will no longer
+  function if touch support is turned off completely.</li>
+</ul>
+<h2>Version 19.11</h2>
+<ul>
+<li>Added input help messages for additional touch commands.</li>
+</ul>
+<h2>Version 19.09</h2>
+<ul>
+<li>Touch support can now be disabled from everywhere, not just from profiles
+  other than normal profile.</li>
+</ul>
+<h2>Version 19.07</h2>
+<ul>
+<li>Internal changes to support future NVDA releases.</li>
+</ul>
+<h2>Version 18.12</h2>
+<ul>
+<li>Internal changes to support future NVDA releases.</li>
+</ul>
+<h2>Version 18.08</h2>
+<ul>
+<li>Compatible with NVDA 2018.3 and future versions.</li>
+</ul>
+<h2>Version 18.06</h2>
+<ul>
+<li>Add-on settings is now found in new multi-category NVDA Settings screen
+  under "Enhanced Touch Gestures" category. As a result, NVDA 2018.2 is
+  required.</li>
+<li>Fixed compatibility issues with wxPython 4.</li>
+</ul>
+<h2>Version 18.04</h2>
+<ul>
+<li>Resolves an issue where touch interaction category in NVDA Settings panel
+  may cause error sounds to be heard due to changes made from this add-on.</li>
+</ul>
+<h2>Версия 18.03</h2>
+<ul>
+<li>Требуется NVDA 2018.1.</li>
+<li>Because NVDA 2018.1 comes with touch typing checkbox, the checkbox is no
+  longer included in this add-on.</li>
+</ul>
+<h2>Версия 17.12</h2>
+<ul>
+<li>Requires NVDA 2017.4. Specifically, this add-on can now handle
+  configuration profile switches.</li>
+<li>As NVDA 2017.4 includes screen orientation announcement, this feature is
+  no longer part of this add-on.</li>
+<li>Added a hidden checkbox in Touch Interaction dialog to completely disable
+  touch support (available if profiles other than normal configuration is
+  active).</li>
+<li>If using NVDA 2018.1 or later, Touch Interaction dialog will be listed
+  twice in NVDA's preferences menu. The second item is the dialog that comes
+  with the add-on.</li>
+<li>In Touch Interaction dialog for the add-on, touch typing mode is no longer
+  shown if using NVDA 2018.1 or later.</li>
+</ul>
+<h2>Версия 17.10</h2>
+<ul>
+<li>Due to support policy from Microsoft, Windows 8 (original release) is no
+  longer supported.</li>
+<li>NVDA will no longer announce screen orientation twice when running NVDA
+  2017.4 development snapshots.</li>
+</ul>
+<h2>Версия 17.07.1</h2>
+<ul>
+<li>Added an option in touch interaction dialog to manually toggle touch
+  passthrough without use of a timer.</li>
+<li>With manual passthrough mode off, if touch passthrough is turned on before
+  the passthrough duration expires, touch interaction would be enabled.</li>
+</ul>
+<h2>Версия 17.07</h2>
+<ul>
+<li>Added a new dialog named Touch Interaction under NVDA's preferences menu
+  to configure how NVDA works with touchscreens.</li>
+<li>After installing this version, when pressing keys on the touch keyboard,
+  one must double tap the desired key. You can switch back to the old way by
+  enabling touch typing from Touch Interaction dialog.</li>
+<li>Added a command (unassigned) to allow NVDA to ignore touch gestures for up
+  to 10 seconds.</li>
+<li>Added an option in Touch Interaction dialog to allow NVDA to pause touch
+  interaction between 3 to 10 seconds in order to perform touchscreen
+  gestures directly (as though NVDA is not running; default is 5 seconds).</li>
+<li>Added debug logging messages when performing right clicks (tap and hold)
+  to be recorded in the NVDA log (requires NVDA 2017.1 or later).</li>
+<li>Due to changes made when playing screen coordinates, NVDA 2017.1 or later
+  is required.</li>
+</ul>
+<h2>Версия 17.03</h2>
+<ul>
+<li>Fixed an issue where coordinate announcement beep did not play or an error
+  tone played instead when using NVDA 2017.1 or later.</li>
+</ul>
+<h2>Версия 16.12</h2>
+<ul>
+<li>Сенсорный режим веб работает в Microsoft EDGE, Microsoft Word и в других
+  приложениях, где используется режим просмотра.</li>
+<li>Добавлены списки и ориентиры для элементов режимаweb touch.</li>
+</ul>
+<h2>Версия 16.06</h2>
+<ul>
+<li>Первая стабильная версия.</li>
+</ul>
+<p>[[!tag dev stable]]</p>
+</body>
+</html>
