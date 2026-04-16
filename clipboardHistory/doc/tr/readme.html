@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Historial del portapapeles 1.4</title>
+</head>
+<body>
+<h1>Pano Geçmişi</h1>
+<p><a href="http://gera.ar">gera Kessler</a></p>
+<p>ve Héctor Benítez'in paha biçilmez işbirliğiyle.</p>
+<p>Bu eklenti, bir pano geçmişini yerel bir veritabanında tutarak yönetmenizi sağlar; bu, sistem yeniden başlatıldığında bile metinleri korumanıza olanak tanır.
+Geçmişe göz atma, arama, sayma, favoriler, yedekleme ve öğe görüntüleme işlevleri için komutlar ekler.A parte de la interacción a través de la capa de comandos con funciones gelişmiş, derleme istemeyenler için basit bir grafik versiyonunu kullanabilirsiniz.</p>
+<p>NVDA'yı ilk kez kurup başlattığınızda, veritabanını içeren "clipboard_history" dosyası oluşturulur. Bu dosya, kullanıcı yapılandırma dizinlerindeki nvda klasörünün kökünde bulunur.
+Pano değişikliklerini yakalamak ve yeni metin içeriği olduğunda veritabanını güncellemek için bir dinleyici de oluşturulur.El historial no guarda duplicaciones para evitar un Gereksiz veritabanı büyümesi. Mevcut bir metni kopyalarken listedeki ilk konuma kopyalanır ve önceki metin elenir.</p>
+<p>Girdi hareketleri iletişim kutusunda, Pano Geçmişi kategorisinde atanabilir 2 işlev vardır. Yani:</p>
+<ul>
+<li>Komut katmanını etkinleştirir</li>
+<li>Grafik arayüzü etkinleştirir</li>
+</ul>
+<p>Önemli Not:<br />
+Pano geçmişi hassas verileri tutabilir; bu nedenle, ayarların bir kopyasıyla taşınabilir bir sürümü paylaşmadan önce içeriği silmek kullanıcının sorumluluğundadır.</p>
+<h2>Komut katmanı</h2>
+<p>Komut katmanını önceden atanmış hareketle etkinleştirdiğimizde aşağıdaki kısayol gruplarına sahip oluruz. Aşağıda listelenen tuşlar dışında herhangi bir tuşa basıldığında komut katmanı devre dışı bırakılır ve tuşlar varsayılan işlevlerine geri döner.</p>
+<h3>Hareket Listesi:</h3>
+<ul>
+<li>Yukarı ok; önceki liste öğesi</li>
+<li>Aşağı ok; Sonraki liste öğesi</li>
+<li>Baş; listedeki ilk öğe</li>
+<li>son; listedeki son öğe</li>
+</ul>
+<h3>Listedeki odaklanılan öğeyi etkileyen özellikler</h3>
+<ul>
+<li>Geri Silme tuşu; genel listedeki öğeyi kaldırır. Favorilerdeyse bu şekilde favorilerden kaldırır.</li>
+<li>Sağ ok; metni panoya kopyalar ve genel listenin başına taşır</li>
+<li>Sol ok; metni daha sonra incelenmek üzere bir NVDA penceresinde açar</li>
+<li>v; Metni odaklanılan pencereye yapıştırır.</li>
+<li>c; boşluklar, boşluklar, kelimeler ve satırlar hariç karakter sayısını sözlü olarak ifade eder</li>
+<li>f; öğeyi favori olarak işaretler veya işaretini kaldırır.</li>
+</ul>
+<h3>Arama işlevleri</h3>
+<ul>
+<li>b; listedeki öğeleri aramak için pencereyi etkinleştirir</li>
+<li>f3; aranan metnin bir sonraki eşleşmesine ilerler</li>
+<li>g; öğeye sipariş numarasına göre odaklanmak için pencereyi etkinleştirir</li>
+</ul>
+<h3>Diğer özellikler</h3>
+<ul>
+<li>f1; komut katmanı kısayollarının listesini içeren bir NVDA penceresi görüntüler</li>
+<li>tab; genel liste ile favoriler listesi arasında geçiş yapar.</li>
+<li>e; favori olup olmadığını, geçerli öğenin dizin numarasını ve listedeki toplam sayıyı sözlü olarak belirtir</li>
+<li>s; eklenti ayarları iletişim kutusunu gösterir</li>
+<li>z; liste öğesi silme iletişim kutusunu gösterir</li>
+<li>escape; komut katmanını devre dışı bırakır.</li>
+</ul>
+<h2>Öğeleri ara</h2>
+<p>Geçmişteki bir metni kelimelere göre aramak için, komut katmanı etkinken b harfine basmanız yeterlidir.<br />
+Bu, herhangi bir kelimeyi veya ifadeyi yazıp enter tuşuna bastığınızda aramanın gerçekleştirileceği arama diyalog penceresini açar.<br />
+Sonuç bulunursa metin ve sıra numarası sözlü olarak ifade edilir. F3 tuşuna basarsak aynı içerikle tekrar arama yapılır, başka bir eşleşme bulunursa bir sonraki sonuca geçilir.</p>
+<h2>Favoriler</h2>
+<p>Sekme tuşu, odağı genel liste ile Favoriler listesi arasında değiştirir. İkincisi aktif olduğunda geri silme tuşu, öğenin favori durumunu kaldırır ve listeden çıkarır.
+Genel listede, f harfi favori durumunu değiştirir ve onu favoriler listesine ekler veya listeden çıkarır.<br />
+Kopyalama, görüntüleme, arama, yapıştırma, konuşma sırası ve pencereyi kapatma işlevleri her iki listede de aynı işlevi yerine getirir.</p>
+<h2>Ayarlar penceresi</h2>
+<p>Komut katmanı etkinken s harfine veya grafik versiyonda control + p'ye basmak, Ayarlar arayüzünü görüntüler.<br />
+İçinde aşağıdakiler değiştirilebilir:</p>
+<h3>Kaydedilecek dize sayısı</h3>
+<p>Burada veritabanına kaç öğenin kaydedileceğini belirleyebilirsiniz. Bu sayı aşıldığında son girişten önceki eski girişler silinir.<br />
+Maksimum sayıda öğeyi yapılandırırken veritabanı bu değerden daha büyük bir miktar içeriyorsa, yeni veri girildiğinde eski girişler silinecek ancak mevcut öğe sayısı korunacak, böylece kullanıcı hangilerini sileceğini seçebilecektir.</p>
+<h3>Sesler</h3>
+<p>Eklenti seslerini açma veya kapatma</p>
+<h3>Dizin öğe sayısı</h3>
+<p>Bu kutu etkinleştirilirse, öğe listesine göz atıldığında sıra numarası söylenir.</p>
+<h3>Veritabanını dışa aktar</h3>
+<p>Bu düğme, içinde depolanan verileri yedeklemek için veritabanını mevcut durumunda kaydetme iletişim kutusunu etkinleştirir ve bu eklentiyle daha sonra başka bir NVDA'dan içe aktarmaya olanak tanır.</p>
+<h3>Veritabanını içe aktar</h3>
+<p>Bu seçenek, geçerli veritabanında bulunmayan öğeleri kurtarmak amacıyla önceden dışa aktarılan veritabanında arama yapmak için bir iletişim kutusunu etkinleştirir.</p>
+<h2>Grafik arayüz</h2>
+<p>Hareket atandıktan sonra bu seçenek, gezinmeyi ve geçmişle etkileşimi kolaylaştıran grafik arayüzü açar.<br />
+Saklanan farklı öğeler, yukarı ve aşağı oklarla kaydırılabilen bir liste biçiminde görünür.<br />
+Seçilen listedeki bir öğe üzerindeyken sekme tuşuna basılırsa, öğe içeriği salt okunur bir kutuda görüntülenir.<br />
+Öğe listesinde aşağıdaki kısayollar mevcuttur:</p>
+<ul>
+<li>f1; öğelerin konumunu ve toplamını sözlü olarak ifade eder</li>
+<li>Enter; odaklanılan öğenin metnini panoya kopyalar</li>
+<li>f5; liste içeriğini yeniler</li>
+<li>Sil tuşu; odaklanılan öğeyi kaldırır.</li>
+<li>alt + sil; geçmişi siler.</li>
+<li>CTRL + p; eklenti Ayarları penceresini etkinleştirir</li>
+<li>escape; arayüzü kapatır.</li>
+</ul>
+</body>
+</html>

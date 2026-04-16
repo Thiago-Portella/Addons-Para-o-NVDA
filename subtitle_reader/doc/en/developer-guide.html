@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Subtitle reader 3.74</title>
+</head>
+<body>
+<h1>Developer Guide</h1>
+<p>This guide is for adding support for new streaming platforms to Subtitle Reader. It's intended for anyone who knows Python and wants to help make Subtitle Reader even better.
+You can also refer to this guide when fixing a broken platform.</p>
+<h2>Step 1 — Check Whether NVDA Can Find the Subtitles</h2>
+<p>First, play a video on the platform you want to support. When you hear dialogue, pause the video, then use Browse Mode to search for the subtitle text on the page.
+If you can find the subtitle text, congratulations — that platform can most likely be supported.
+If you cannot find it, the platform generally cannot be supported unless you can find another way to make the subtitles accessible to NVDA.
+A Chromium-based browser is recommended, since a finished extractor will automatically work across many browsers.</p>
+<h2>Step 2 — Create a Subclass of SubtitleExtractor</h2>
+<p>Open the <code>subtitleExtractors</code> folder. A good starting point is to copy an extractor for a platform you're already familiar with, or one with a small amount of code, such as <code>netflix.py</code>.
+Rename the copied file to match the new platform, for example <code>myPlatform.py</code>.
+Open the file and rename the class to match the new platform. The first letter must be uppercase, e.g. <code>class MyPlatform(SubtitleExtractor):</code>.</p>
+<h2>Step 3 — Fill In the Platform Info</h2>
+<p>Look for the <code>info</code> attribute near the top of the class. It's a dictionary containing three fields: the platform name, the platform URL, and the support status.
+Update the name and URL to match the new platform. Leave the status as <code>supported</code> — after all, you'll only ship it once it's working.</p>
+<h2>Step 4 — Identify the Platform</h2>
+<p>There are two ways to identify a platform: by window title or by URL. Choose one.
+The window title is preferred, because the URL is not always accessible in every browser.
+Observe the part of the window title that stays the same across different videos — typically the platform name — and express it as a regular expression in the <code>windowTitle</code> attribute.
+If you're not familiar with regular expressions, here's the most common pattern:</p>
+<p>Say the window title is:
+<code>My Movie - My Platform</code>
+You can write:
+<code>.+ - My Platform</code>
+<code>.+</code> means "one or more of any character."</p>
+<p>The <code>url</code> attribute works the same way — observe the part of the URL that stays consistent across videos. Only use this if you can't find a reliable pattern in the window title.</p>
+<h2>Step 5 — Find the Video Player Object</h2>
+<p>Go back to the page where the video is playing. Move focus to the play/pause button, or anywhere else inside the player area.
+Open the NVDA Python Console with <code>NVDA+Ctrl+Z</code>. This console provides two variables: <code>focus</code> (the current focus object) and <code>nav</code> (the current navigator object). Both are <code>NVDAObject</code> instances.
+You can call <code>.parent</code>, <code>.firstChild</code>, <code>.previous</code>, and <code>.next</code> on them, chaining as many calls as needed until you reach <code>None</code>.</p>
+<p>Start with <code>focus.parent</code> and inspect its attributes. Pay particular attention to <code>IA2Attributes</code> — its <code>id</code> and <code>class</code> values often contain useful identifiers like <code>player</code>. Keep traversing <code>.parent</code> until you locate the video player object.</p>
+<p>If the page has a very simple structure with nothing but the player, you can also treat the object whose <code>role</code> equals <code>role('document')</code> as the video player.</p>
+<p>Once you've identified the player, go to <code>getVideoPlayer</code> in the code. Retrieve the current focus with <code>self.main.focusObject</code>, then use <code>find</code> to walk in the right direction. For example, if the player has <code>id='movie_player'</code>:</p>
+<p><code>python
+obj = find(focusObject, 'parent', 'id', 'movie_player')</code></p>
+<p>Return the result directly. If <code>find</code> returns <code>None</code>, the main plugin treats it as "no player found" and stops looking for subtitles.</p>
+<p>One note about <code>class</code>: because class values sometimes mix fixed text with dynamic alphanumeric strings, you only need to provide the fixed part — <code>find</code> uses <code>in</code> to check whether the class contains it.</p>
+<h2>Step 6 — Find the Subtitle Container</h2>
+<p>Start from <code>self.main.videoPlayer</code> to get the player object.</p>
+<p>Go back to the video page. It helps to disable Simple Review Mode under NVDA's Review Cursor settings — with it off, object navigation moves exactly like calling <code>.parent</code>, <code>.next</code>, etc. on an <code>NVDAObject</code>.</p>
+<p>Starting from the play/pause button, use object navigation to reach the video player, then continue navigating until you find the subtitle text. Note the path you took.</p>
+<p>Now go back one step from the subtitle text. Open the Python Console on that object — you can now use the <code>nav</code> variable. Save it to another variable.</p>
+<p>Resume playback and let the next line of dialogue appear, then pause again. Go back to the console and check whether the <code>role</code> attribute of the saved object has become <code>UNKNOWN</code>. If it has, go back to object navigation, find the subtitle text again, step back one more level, and repeat until you find an object whose <code>role</code> does not become <code>UNKNOWN</code> when the subtitle changes. That object is your subtitle container — return it from <code>getSubtitleContainer</code>.</p>
+<h2>Final Step — Read the Subtitle Text</h2>
+<p>Retrieve the container with <code>self.main.subtitleContainer</code>.</p>
+<p>Remember the relationship between the container and the actual subtitle text. If one <code>.firstChild</code> call from the container lands directly on the subtitle, you can simply call:</p>
+<p><code>python
+return super().getSubtitle(obj)</code></p>
+<p>Otherwise, navigate from the container down to the parent of the subtitle text, pass that object to the base class <code>getSubtitle</code>, and return the result. That's all there is to it!</p>
+<hr />
+</body>
+</html>

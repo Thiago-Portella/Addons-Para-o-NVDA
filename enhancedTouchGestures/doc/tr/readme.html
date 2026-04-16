@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Gelişmiş Dokunma Hareketleri 26.04</title>
+</head>
+<body>
+<h1>Gelişmiş Dokunmatik Ekran Hareketleri</h1>
+<ul>
+<li>Yazarlar: Joseph Lee ve Kefas Lungu</li>
+</ul>
+<p>Bu eklenti NVDA'ya ek dokunma hareketleri ekler. Ayrıca tarama kipinde daha kolay dolaşım için ek hareketler sunar.</p>
+<p>Not: Bu eklenti, Windows 10 veya 11 yüklü dokunmatik ekranlı bir bilgisayarda NVDA 2025.3.2 veya sonraki bir sürümünün çalıştırılmasını gerektirir.</p>
+<h2>Hareketler</h2>
+<h3>Her yerde kullanılabilen hareketler</h3>
+<ul>
+<li>İki parmakla üç kez dokunma: NVDA'yı kapatır!</li>
+<li>Üç parmakla sağa kaydırma: Sekme tuşuna basar.</li>
+<li>Üç parmakla sola kaydırma: Shift+Sekme tuşlarına basar.</li>
+<li>Üç parmakla aşağı kaydırma (nesne modu): geçerli pencereyi okur.</li>
+<li>Üç parmakla çift dokunma: hangi sembollerin seslendirileceğini belirleyen sembol konuşma seviyeleri arasında geçiş yapar.</li>
+<li>Üç parmakla üçlü dokunma: ekran perdesini değiştirir.</li>
+<li>Dört parmakla dokunma: ses kısma modları arasında geçiş yapar.</li>
+<li>Dört parmakla iki kez dokunma: Yardım giriş modunu değiştirir.</li>
+<li>Dört parmakla sola kaydırma: nesneyi odaklı olarak seslendirir.</li>
+<li>Dört parmakla sağa kaydırma: geçerli dolaşım nesnesini seslendirir.</li>
+<li>Dört parmakla yukarı kaydırma: geçerli pencerenin başlığını seslendirir.</li>
+<li>Dört parmakla aşağı kaydırma: durum çubuğu metnini seslendirir.</li>
+</ul>
+<h2>Göz atma moduna dokunun</h2>
+<p>Göz atma modunda kullanılabilen bu dokunma modu, belgede seçilen öğeye göre gezinmenize olanak tanır. Tarama moduna geçmek için, tarama modu belgelerinde 3 parmakla hafifçe vurun. Bu moddan, bir parmakla yukarı veya aşağı kaydırmak mevcut öğe gezinme modları arasında geçiş yapar, bir parmakla sağa veya sola kaydırmak ise sırasıyla sonraki veya önceki seçilen öğeye gider. Belgelere göz atma modundan uzaklaştığınızda nesneye dokunma modu kullanılacaktır.</p>
+<p>Kullanılabilir web modları şunlardır: varsayılan (türden bağımsız olarak öğeler/nesneler arasında dolaşma), bağlantılar, düğmeler, form alanları, başlıklar, çerçeveler, tablolar, listeler, grafikler, yer işaretleri, gömülü nesneler (örneğin diyaloglar ve web uygulamaları) ve metin paragrafları.</p>
+<h2>Sentezleyici ayarları dokunma kipi</h2>
+<p>Ses seçimi, ses seviyesi gibi sentezleyici ayarlarını yapmak için bu kipi kullanabilirsiniz. İki parmakla sola veya sağa fiske yaparak sentezleyici ayarları arasında dolaşabilir, iki parmakla yukarı veya aşağı fiske yaparak ayarları değiştirebilirsiniz. Bu hareketler klavyedeki hızlı sentezleyici ayarlarını dokunmatik ekrana aktarır.</p>
+<h2>Sürüm 26.03</h2>
+<ul>
+<li>Bu mod, Word 365'teki göz atma modu da dahil olmak üzere ek durumları kapsayacağı için "web modu", "gözatma modu" olarak yeniden adlandırıldı.</li>
+</ul>
+<h2>Sürüm 26.02</h2>
+<ul>
+<li>NVDA 2025.3.2 veya sonrası gerekli.</li>
+<li>Eklentiyi dokunmatik ekranı olmayan veya taşınabilir NVDA sürümünün kullanıldığı bilgisayarlara yüklerken bir uyarı görüntülenecek.</li>
+<li>Eklenti taşınabilir bir NVDA sürümüne yüklendiğinde, eklentiden gelen hareketler girdi hareketleri iletişim kutusunda gösterilmeyecek.</li>
+<li>Sekme tuşuna basma (üç parmakla sağa kaydırma), Shift+Sekme tuşlarına basma (üç parmakla sola kaydırma), odaklanılan nesneyi seslendirme (dört parmakla sola kaydırma) ve dolaşma nesnesini bildirme (dört parmakla sağa kaydırma) dahil olmak üzere dokunma hareketi değişiklikleri.</li>
+<li>Dokunmatik klavye ve dikte geçiş hareketleri, öncekiyle ilgili güvenilirlik sorunları nedeniyle kaldırıldı ve Windows 11'de diktenin yerini Sesli Erişim aldı.</li>
+<li>İlerleme çubuğu çıktı ayarları geçiş hareketi (tek parmakla üç kez dokunma) kaldırıldı.</li>
+<li>Ekran perdesi geçiş hareketi eklendi (üç parmakla üçlü dokunma).</li>
+<li>Geçerli pencereyi okuma hareketi (üç parmakla aşağı kaydırma) nesneye dokunma moduyla sınırlı olacaktır.</li>
+<li>Web dokunmatik moduna gömülü nesne ve metin paragrafında dolaşma eklendi.</li>
+</ul>
+<h2>Sürüm 25.07</h2>
+<ul>
+<li>Pyright (bir Python statik tür denetleyicisi) yardımıyla eklenti kodu daha sağlam hale getirildi.</li>
+</ul>
+<h2>Sürüm 25.02</h2>
+<ul>
+<li>Windows 8.1 için sınırlı destek geri yüklendi.</li>
+</ul>
+<h2>Sürüm 25.01</h2>
+<ul>
+<li>Eklenti sürümlerinin indirme bağlantıları artık eklenti belgelerine dahil edilmemektedir. Eklentiyi NV Access eklenti mağazasından indirebilirsiniz.</li>
+<li>Linting aracı Flake8'den Ruff'a değiştirildi ve NVDA kodlama standartlarıyla daha iyi uyum sağlamak için eklenti modülleri yeniden biçimlendirildi.</li>
+<li>Eklenti Güncelleyici eklentisinden otomatik eklenti güncellemeleri özelliği desteği kaldırıldı.</li>
+</ul>
+<h2>Sürüm 24.05</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2024.1 veya sonrası gerekli.</li>
+</ul>
+<h2>Sürüm 23.06.1</h2>
+<ul>
+<li>nvda'nın konuşma durdurma komutuyla çakışması nedeniyle sesin kısılması 4 parmakla dokunmaya taşındı.</li>
+</ul>
+<h2>Sürüm 23.06</h2>
+<ul>
+<li>Eklenti bakımı Kefas Lungu olarak değiştirildi.</li>
+<li>Nesne modundaki tüm hareketler artık her yerde kullanılabiliyor.</li>
+<li>Artık yeni hareketler mevcut.</li>
+<li>3 parmakla çift dokunma: Hangi simgelerin söyleneceğini belirleyen konuşma simgesi düzeyleri arasında geçiş yapar</li>
+<li>2 parmakla üç kez dokunma: NVDA'dan çıkar!.</li>
+<li>4 parmakla dokunma: Ses Zayıflaması modları arasında geçiş yapar.</li>
+<li>Üçlü dokunma: İlerleme çubuğu çıkışını bip sesleri, konuşma, bip sesleri ve konuşma arasında değiştirir ve kapatır.</li>
+<li>Web modunda, halihazırda mevcut olan göz atma öğesi listesine ek olarak düğmeleri, grafikleri ve yer işaretlerini kullanmak artık mümkün.</li>
+<li>Web modunda, diğer göz atma öğeleri listesinden varsayılan gezinmeye geçtiğinizde NVDA artık normal değil, varsayılan diyecek. Örneğin, düğmelerden geçiş yaparken NVDA artık varsayılan diyecek.</li>
+</ul>
+<h2>Sürüm 23.02</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2022.4 veya sonrası gerekli.</li>
+<li>Windows 10 21H2 (Kasım 2021 Güncelleme/Build 19044) veya daha sonraki sürümler gereklidir.</li>
+</ul>
+<h2>Sürüm 23.01</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2022.3 veya sonrası gerekli.</li>
+<li>Windows 8.1 Ocak 2023 itibariyle Microsoft tarafından artık desteklenmediğinden Windows 10 veya daha sonraki sürümler gereklidir.</li>
+<li>Girdi hareketleri iletişim kutusunda, Geliştirilmiş Dokunmatik Hareketler kategorisi altındaki dokunmatik klavye ve dikte geçiş komutlarını yeniden atamak mümkündür.</li>
+<li>Windows 10'da çözüldüğü için dokunmatik klavye tuşları için salt okunur durum geçici çözümü kaldırıldı.</li>
+</ul>
+<h2>Sürüm 22.03</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2021.3 veya sonrası gerekli.</li>
+<li>Eklentiyi Windows 7, 8 ve 8.1'e yüklemeye çalışırken bir uyarı mesajı gösterilecek.</li>
+</ul>
+<h2>Sürüm 21.10</h2>
+<ul>
+<li>Bu eklentiyi etkileyen NVDA'daki değişiklikler nedeniyle NVDA 2021.2 veya sonraki sürümler gereklidir.</li>
+</ul>
+<h2>Sürüm 21.08</h2>
+<ul>
+<li>Windows 11 için ilk destek.</li>
+</ul>
+<h2>Sürüm 21.01</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2020.3 veya sonrası gerekli.</li>
+<li>Windows 10 1709 veya daha üzeri sürümlerinde dört parmak sola fiske dikteyi açıp kapatır (Windows+H).</li>
+<li>Eklentiden dokunmatik etkileşim desteği ayarı kaldırıldı.</li>
+<li>Dokunmatik etkileşim desteği ayarı NVDA'nın dokunmatik etkileşim ayarlarından değiştirilebildiğinden, geliştirilmiş dokunmatik ekran hareketleri ayarları iletişim kutusu kaldırıldı.</li>
+</ul>
+<h2>Sürüm 20.09</h2>
+<ul>
+<li>NVDA'nın 10 saniye boyunca dokunmatik ekran desteğini devredışı bırakmaya yarayan dokunmatik hareketi yoksayma özelliği kaldırıldı.</li>
+<li>Bip sesi ile koordinat belirtme özelliği kaldırıldı.</li>
+</ul>
+<h2>Sürüm 20.07</h2>
+<ul>
+<li>Dokunmatik etkileşimi veya dokunmatik hareket yoksayma özelliğini açıp kapatmak için bir klavye kısayolu eklendi (Kontrol+Alt+NVDA+T).</li>
+<li>NVDA 2020.1 veya üzeri sürümlerde sağ fare tıklaması bir parmakla dokunup basılı tutularak gerçekleştirilebildiğinden, söz konusu komut eklentiden kaldırıldı. Eklentiyi kullanabilmek için NVDA 2020.1 veya daha üzeri bir sürüm gerekli.</li>
+<li>NVDA'nın dokunmatik ekran desteğini 10 saniye boyunca devredışı bırakmaya yarayan dokunmatik hareketi yoksayma özelliği kaldırıldı. Gelecekte aynı komutla dokunmatik etkileşim ayarı değiştirilebilecek.</li>
+<li>NVDA snapshotlarında yapılan dokunmatik etkileşim değişikliklerinden dolayı, dokunmatik hareketi yoksayma özelliği ve geliştirilmiş dokunmatik ekran hareketleri ayarları iletişim kutusu devredışı bırakılacak. Dokunmatik hareketi yoksayma özelliğini açıp kapatmayı sağlayan ayar dokunmatik etkileşimi açıp kapatmak için kullanılacak.</li>
+<li>Bip sesi ile koordinat belirtme özelliği devredışı bırakıldı ve gelecek bir sürümde kaldırılacak.</li>
+<li>Dokunmatik klavye kullanılırken bip sesi ile koordinat belirtilmeyecek.</li>
+<li>Emoji gibi modern giriş olanakları dokunmatik etkileşim yoluyla kullanılırken NVDA hiçbir şey yapmıyormuş gibi görünmeyecek veya hata sesi çalmayacak.</li>
+<li>NVDA, dokunmatik klavye etkinleştirilemiyorsa bir hata mesajı verecek (dört parmakla sağa fiske hareketi).</li>
+</ul>
+<h2>Sürüm 20.06</h2>
+<ul>
+<li>Flake8 ile ilgili birçok kodlama biçimi sorunu ve potansiyel hata düzeltildi.</li>
+</ul>
+<h2>Sürüm 20.04</h2>
+<ul>
+<li>Fare ile sağ tıklama hareketi (bir parmakla dokunup basılı tutma) NVDA 2020.1 sürümüne eklendi.</li>
+</ul>
+<h2>Sürüm 20.01</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2019.3 veya sonrası gerekli.</li>
+<li>Dokunmatik ekran desteği tamamen kapatıldığında, dokunmatik hareketi yoksayma özelliği dahil olmak üzere dokunmatik destek ayarı kullanılamayacak.</li>
+</ul>
+<h2>Sürüm 19.11</h2>
+<ul>
+<li>Ek hareketler için girdi yardımı mesajları eklendi.</li>
+</ul>
+<h2>Sürüm 19.09</h2>
+<ul>
+<li>Dokunmatik ekran desteği önceden sadece normal profili dışındaki profillerde devredışı bırakılabiliyordu. Artık her yerden devredışı bırakılabiliyor.</li>
+</ul>
+<h2>Sürüm 19.07</h2>
+<ul>
+<li>Gelecek NVDA sürümlerini desteklemek için dahili değişiklikler yapıldı.</li>
+</ul>
+<h2>Sürüm 18.12</h2>
+<ul>
+<li>Gelecekteki NVDA sürümlerini desteklemek için dahili değişiklikler.</li>
+</ul>
+<h2>Sürüm 18.08</h2>
+<ul>
+<li>Eklenti NVDA 2018.3 ve üzeri sürümler için uyumlu hâle getirildi.</li>
+</ul>
+<h2>Sürüm 18.06</h2>
+<ul>
+<li>Eklenti ayarları NVDA'nın çok kategorili eklenti ayarları iletişim kutusuna taşındı. Sonuç olarak eklentiyi kullanabilmek için NVDA 2018.2 sürümü gerekli.</li>
+<li>WxPython 4 ile ilgili uyumluluk sorunları giderildi.</li>
+</ul>
+<h2>Sürüm 18.04</h2>
+<ul>
+<li>Eklentinin yaptığı değişikliklerden dolayı NVDA ayarları iletişim kutusundaki dokunmatik etkileşim kategorisinde hata sesleri duyulma sorunu giderildi.</li>
+</ul>
+<h2>Sürüm 18.03</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2018.1 sürümü gerekli.</li>
+<li>Dokunmatik yazma onay kutusu NVDA 2018.1 sürümüne eklendiğinden söz konusu onay kutusu eklentiden kaldırıldı.</li>
+</ul>
+<h2>Sürüm 17.12</h2>
+<ul>
+<li>Eklentiyi kullanabilmek için NVDA 2017.4 sürümü gerekli. Eklenti konfigürasyon profillerini destekliyor.</li>
+<li>NVDA 2017.4 sürümüne ekran yönü duyurma özelliği eklendiğinden söz konusu özellik eklentiden kaldırıldı.</li>
+<li>Dokunmatik etkileşim iletişim kutusuna dokunmatik ekran desteğini tamamen devredışı bırakmaya yarayan gizli bir onay kutusu eklendi. Söz konusu onay kutusu normal konfigürasyon profili dışında profiller etkinken kullanılabiliyor.</li>
+<li>NVDA 2018.1 veya üzeri sürümleri kullanıyorsanız NVDA'nın ayarlar menüsünde dokunmatik etkileşim iletişim kutusu iki kez görünecektir. İkinci iletişim kutusu eklentiye aittir.</li>
+<li>NVDA 2018.1 veya üzeri sürümleri kullanıyorsanız eklentiye ait olan dokunmatik etkileşim iletişim kutusunda dokunmatik yazma modu görünmeyecek.</li>
+</ul>
+<h2>Sürüm 17.10</h2>
+<ul>
+<li>Microsoft'un destek poliçesinden dolayı Windows 8 (orijinal sürüm) artık desteklenmiyor.</li>
+<li>NVDA 2017.4 snapshotlarında NVDA ekran yönünü iki kez söylemeyecek.</li>
+</ul>
+<h2>Sürüm 17.07.1</h2>
+<ul>
+<li>Dokunmatik etkileşim iletişim kutusuna dokunmatik hareketi yoksayma özelliğini süresiz şekilde kullanabilmek için bir seçenek eklendi.</li>
+<li>Dokunmatik hareketi yoksayma özelliği el ile kapatıldığında, dokunmatik hareketi yoksayma özelliğinin süresi dolmadan önce özellik açıldığında, dokunmatik etkileşimin devreye girme sorunu düzeltildi.</li>
+</ul>
+<h2>Sürüm 17.07</h2>
+<ul>
+<li>NVDA'nın ayarlar menüsüne NVDA'nın dokunmatik ekranlarla çalışma şeklini ayarlamaya yarayan dokunmatik etkileşim iletişim kutusu eklendi.</li>
+<li>Eklentinin bu sürümünü kurduktan sonra dokunmatik klavyede tuşlara çift dokunarak basılabilir. Eski kullanıma dönmek için dokunmatik etkileşim iletişim kutusundan dokunmatik yazmayı etkinleştirebilirsiniz.</li>
+<li>NVDA'nın dokunmatik hareketleri 10 saniye boyunca yoksaymasına yarayan, kısayol tuşu atanmamış bir komut eklendi.</li>
+<li>Dokunmatik etkileşim iletişim kutusuna NVDA'nın dokunmatik etkileşimini 3-10 saniye süre boyunca devredışı bırakma özelliğini ayarlamak için bir seçenek eklendi. Bu özellik dokunmatik hareketleri NVDA çalışmıyormuş gibi sisteme doğrudan aktarır. Varsayılan süre 5 saniyedir.</li>
+<li>Fareyle sağ tıklandığında (bir parmakla dokunup basılı tutma) NVDA günlüğüne hata ayıklama seviyesinde hata ayıklama mesajları kaydediliyor. Bu özellik NVDA 2017.1 veya daha üzeri sürümünü gerektirir.</li>
+<li>Ekran koordinatlarını duyurma ile ilgili yapılan değişikliklerden dolayı eklentiyi kullanabilmek için NVDA 2017.1 sürümü veya daha üzeri gerekli.</li>
+</ul>
+<h2>Sürüm 17.03</h2>
+<ul>
+<li>NVDA 2017.1 veya daha üzeri bir sürümü kullanılırken, koordinat sesinin çalınmaması veya hata sesi çalınmasıyla ilgili bir sorun düzeltildi.</li>
+</ul>
+<h2>Sürüm 16.12</h2>
+<ul>
+<li>Microsoft Edge, Microsoft Word ve diğerleri gibi tarama modu kullanılan uygulamalarda web dokunma kipi çalışıyor.</li>
+<li>Web dokunmatik kipi öğelerine listeler ve sınır imleri eklendi.</li>
+</ul>
+<h2>Sürüm 16.06</h2>
+<ul>
+<li>İlk kararlı sürüm.</li>
+</ul>
+</body>
+</html>

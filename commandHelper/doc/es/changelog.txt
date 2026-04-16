@@ -1,0 +1,1 @@
+Solucionado #16 Unable to bind a new gesture in input gesture dialog 

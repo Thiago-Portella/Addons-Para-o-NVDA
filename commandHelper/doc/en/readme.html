@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Command Helper 2025.1.0</title>
+</head>
+<body>
+<h1>commandHelper</h1>
+<p>An addon for NVDA that provides a alternative method for executing scripts for people who have difficulty pressing complicated key combinations. </p>
+<h3>USAGE</h3>
+<p>First you need to configure a method to invoke the wizard. A keyboard gesture can be assigned in NVDA preferences&gt; Input gestures. You can also configure the control key in the addon preferences (see below).</p>
+<p>When the wizard is invoked a layer of keyboard commands is activated with the following options: </p>
+<ul>
+<li>Right and left arrows to select a category. </li>
+<li>Up and down arrows to select a command from the selected category. </li>
+<li>Space bar to apply a filter by voice. </li>
+<li>Enter to execute the command. </li>
+<li>Shift+enter runs the command as if its gesture had been pressed twice quickly. </li>
+<li>Control+enter runs the command as if its gesture had been pressed three times. </li>
+<li>Any letter A-Z to jump to the category with that initial letter. </li>
+<li>F1 announces the gesture corresponding to the selected command. </li>
+<li>Escape   leaves the command layer and restores normal keyboard operation. </li>
+</ul>
+<h3>Settings</h3>
+<p>The gesture to activate the command helper can be modified in NVDA preferences&gt; Input gestures. </p>
+<p>Some other keys can be customized in NVDA preferences&gt; Options&gt; Command Helper. </p>
+<ul>
+<li>Enable / disable the use of the control key to launch the command helper. </li>
+<li>Choose  key to quit the helper. </li>
+<li>Choose key to anounce the gesture associated with a command. </li>
+<li>Activate / deactivate the handling of the helper through the numeric keyboard. </li>
+</ul>
+<h4>Using the control key to launch the helper</h4>
+<p>With this option activated, the helper is launched by pressing the control key five times in a row. This is useful for people who find it difficult to press combinations of several keys at the same time. However, it can sometimes cause unintentional helper activation when you press the control key for other uses, for example control + C and control + V to copy and paste. To avoid this, you must reduce the repetition speed of the keyboard. This is configured in the Windows control panel. In the preferences dialog of the addon there is a button that pressing it takes you directly to it. It can also be opened by pressing Windows key + R and typing control.exe keyboard in the Windows run box. In the slider "Repetition rate" you have to set a value as low as possible. By setting it to zero you ensure that you will not have problems but the activation of the assistant will stop working by holding down the control key, which could be inconvenient for some users with reduced mobility who find it difficult to make repeated quick keystrokes and they prefer to launch the helper in this way. There is no universal configuration, each user must find the most suitable for their needs or preferences. </p>
+<h4>Numpad keyboard</h4>
+<p>With this option enabled, the helper can be used with the numeric keypad keys. </p>
+<ul>
+<li>4 and 6 to choose a category. </li>
+<li>2 and 8 to select a command from the chosen category. </li>
+<li>5 to report the gesture corresponding to the selected command. </li>
+<li>Enter to execute the command. </li>
+<li>Plus  runs the command as if its gesture had been pressed twice quickly. </li>
+<li>Minus  runs the command as if its gesture had been pressed three times. </li>
+<li>Delete leaves the command layer and restores normal keyboard functionality. </li>
+</ul>
+<h4>Filter through voice</h4>
+<p>In the virtual menu, press the space bar and speak to the microphone. The menu will show only the commands that match the spoken words. If the result is not satisfactory, press space again to perform another search or escape to return to the full menu.</p>
+<p>for it to work it is necessary to have an internet connection.</p>
+<p>Note about compatibility: The addon is ready to work with previous versions of NVDA. The oldest one that has been tested is 2018.1 but it should work with even older ones. However, no future support will be provided for specific issues that may arise in those versions. </p>
+</body>
+</html>

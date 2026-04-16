@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced dictionaries processing for NVDA 1.6.0</title>
+</head>
+<body>
+<h1>Poboljšani rječnici 1.6.0</h1>
+<p>NVDA dodatak za rukovanje naprednijom obradom rječnika</p>
+<h2>Preuzimanje</h2>
+<p>Preuzmite <a href="https://github.com/marlon-sousa/EnhancedDictionaries/releases/download/1.6.0/EnhancedDictionaries-1.6.0.nvda-addon">Poboljšani rječnik 1.6.0 dodatak</a></p>
+<h2>Značajke</h2>
+<h3>Rječnici specifični za profil</h3>
+<p>Način na koji NVDA primjenjuje uvjetne postavke, kao što je formatiranje dokumenta i druge, je kroz korištenje profila.</p>
+<p>Profili su skupine postavki koje se zajedno mogu uvjetno primijeniti na čitač zaslona.</p>
+<p>Na primjer, možete stvoriti profil za aplikacije kodiranja, u kojem je razina interpunkcije postavljena na sve, najava uvlačenja postavljena je na tonove, a brzina govora postavljena je na nižu razinu, tako da možete čitati kod na bolji način. Možete, zatim, povezati ovaj profil s Visual Studiom, Eclipseom, Notepad++-om i Visual Studio Codeom, tako da kada bilo koja od ovih aplikacija postane aktivna, te će se konfiguracije automatski primijeniti.</p>
+<p>Kada, na primjer, prebacite tipku Alt Tab na druge aplikacije ili kada zatvorite jednu od tih aplikacija i sletite na radnu površinu, odvija se zadana konfiguracija. Tada je moguće jednostavno skočiti s vaše aplikacije za kodiranje na preglednik i, bez pritiskanja bilo koje tipke, čitati bez interpunkcijskih znakova u pregledniku i primijeniti svoju specifičnu konfiguraciju kada se vratite u okruženje koda.</p>
+<p>NVDA rječnici su moćni, nude sjajne značajke kao što je zamjena regularnih izraza. Međutim, trenutno ne postoji način za prilaganje rječnika profilima na NVDA.</p>
+<p>To znači da ako postavite zamjenu u zadanom rječniku, ona će se primijeniti u svim slučajevima, čak i u aplikacijama ili situacijama u kojima biste željeli da nisu.</p>
+<p>Ovaj dodatak implementira kontekst profila prilikom obrade i stvaranja/uređivanja rječnika.</p>
+<h4>Kako radi?</h4>
+<p>Jednostavno instalirajte dodatak. Kada je aktivan:</p>
+<ul>
+<li>Rječnicima se sada ispravno rukuje uzimajući u obzir aktivni profil.</li>
+<li>Ako za trenutni profil postoje rječnici (zadani ili specifični za glas), oni se koriste.</li>
+<li>Ako ne postoje, koriste se rječnici za zadani profil. Ovo je u skladu s načinom na koji se NVDA ponaša, u smislu da kada kreiram novi profil, konfiguracije koje ne mijenjam na ovom novom profilu preuzimaju se iz zadanog.</li>
+</ul>
+<p>Slično, ako ne postavim rječnik za profil, koristi se zadani rječnik.</p>
+<ul>
+<li>Glasovni rječnici ponašaju se na potpuno isti način: ako postoji rječnik specifičan za glas za aktivni profil, on se koristi. Inače se koristi rječnik za taj glas iz zadanog profila (ako postoji).</li>
+<li>Dijaloški okvir rječnika, kada se otvori, u naslovu uvijek pokazuje na koji se profil taj rječnik odnosi.</li>
+<li>Aktivni profil će odrediti koji će rječnik biti otvoren za uređivanje kada su aktivirani zadani ili glasovni izbornici rječnika.</li>
+</ul>
+<p>Ovo je u skladu s načinom na koji se NVDA ponaša, jer ako netko ode u postavke i promijeni postavku, to će biti spremljeno na aktivnom profilu.</p>
+<pre><code>Slično tome, otvoreni rječnik će pripadati tom profilu.
+</code></pre>
+<ul>
+<li>
+<p>Ako određeni rječnik ne postoji na aktivnom profilu, a dijaloški okvir rječnika je otvoren, novi rječnik za taj profil bit će kreiran.</p>
+<p>Neće prikazivati ​​unose jer je nov. Međutim, neće biti spremljen sve dok korisnik ne zatvori taj dijaloški okvir klikom na "U redu".</p>
+</li>
+</ul>
+<p>Ako to učini, novi će rječnik biti učinkovit. Ako poništi dijaloški okvir, i dalje će se koristiti zadani rječnik profila i ne sprema se rječnik specifičan za profil.</p>
+<ul>
+<li>
+<p>Kada se stvori novi rječnik specifičan za profil, on postaje učinkovit i, stoga, uzorci na zadanom rječniku više nisu aktivni za taj profil.</p>
+<p>Ovo bi moglo biti željeno ponašanje, ali možda i ne. Možda korisnik želi koristiti sve uzorke iz zadanog rječnika plus nove uzorke koji su aktivni samo na ovom profilu.</p>
+</li>
+<li>
+<p>Kako bi se pokrila ova mogućnost, u dijaloškom okviru rječnika stvoren je novi gumb pod nazivom "Uvezi unose iz zadanog profila rječnika".</p>
+<p>Ovaj se gumb pojavljuje samo kada se uređuje rječnik specifičan za profil. Prilikom aktivacije ponaša se na sljedeći način:</p>
+</li>
+<li>
+<p>Čitaju se unosi iz zadanog rječnika (ili rječnika specifičnog za glas) iz zadanog profila.</p>
+<ul>
+<li>Unosi koji se ne nalaze u rječniku koji se uređuje dodaju se u njega.</li>
+<li>Ako se unos iz zadanog (ili glasovnog) rječnika pronađe u rječniku koji se uređuje, on neće prebrisati trenutni unos.</li>
+<li>Uvoz ne sprema nove unose na disk. Samo dodaje uvezene unose na popis unosa u dijaloškom okviru rječnika. Fokus se stavlja na popis i korisnik zatim ima priliku pregledati novi popis unosa, kao da ih je sve ručno upisao.</li>
+</ul>
+</li>
+<li>
+<p>Kad god korisnik kreira rječnik na određenom profilu, on odmah stupa na snagu za taj profil.</p>
+</li>
+<li>Kad god se profil promijeni, određeni rječnici (zadani i glasovni) odmah postaju aktivni. Ako ti rječnici ne postoje, koristi se zadani profil.</li>
+<li>To ne utječe na ugrađene i privremene rječnike, ne ovise o profilima, potonji jer je privremen, prvi jer je ugrađen.</li>
+</ul>
+<h1>Doprinos i prevođenje</h1>
+<p>Ako želite doprinijeti ili prevesti ovaj dodatak, pristupite <a href="https://github.com/marlon-sousa/EnhancedDictionaries">repozitoriju projekta</a> i pronađite upute na contributing.md u direktoriju dokumentacije na engleskom jeziku.</p>
+<h2>Suradnici</h2>
+<p>Posebna zahvala za</p>
+<ul>
+<li>Ângelo Miguel Abrantes - portugalski prijevod</li>
+<li>Rémy Ruiz - francuski prijevod</li>
+<li>Rémy Ruiz - španjolski prijevod</li>
+<li>Thiago Seus - brazilski portugalski prijevod</li>
+<li>Umut KORKMAZ - turski prijevod</li>
+<li>Tarik Hadžirović - hrvatski prijevod</li>
+<li>Ivan Shtefuriak - ukrajinski prijevod</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Навігатор Markdown 0.2.1</title>
+</head>
+<body>
+<h1>Навігатор Markdown NVDA</h1>
+<p>Навігатор Markdown — це додаток для NVDA, призначений для покращення редагування та читання вмісту Markdown. Він дозволяє використовувати функції навігації за допомогою однієї клавіші, подібні до режиму огляду NVDA, у редагованих текстових областях (таких як Notepad, VS Code, веб-редактори тощо).</p>
+<p>Це дозволяє швидко переходити до заголовків, списків, таблиць, блоків коду та різних вбудованих форматувань без необхідності часто натискати клавіші зі стрілками.</p>
+<h2>Основні особливості</h2>
+<ul>
+<li><strong>Ефективна навігація</strong>: реалізує швидкі алгоритми, що дозволяють миттєво переходити навіть у великих документах, що містять десятки тисяч рядків.</li>
+<li><strong>Структурований перегляд</strong>: підтримує навігацію за заголовками, списками, таблицями, цитатами, блоками коду тощо.</li>
+<li><strong>Вбудовані елементи</strong>: підтримує перехід до жирного шрифту, курсиву, посилань, зображень та вбудованого коду.</li>
+<li><strong>Навігація по комірках таблиці</strong>: надає скорочення, сумісні з NVDA, для переміщення між комірками в таблицях Markdown.</li>
+</ul>
+<h2>Використання</h2>
+<h3>Перемикання режиму огляду</h3>
+<p>Початково навігація за допомогою однієї клавіші вимкнена. Вам потрібно вручну увімкнути режим огляду Markdown.</p>
+<ul>
+<li><strong>Комбінація клавіш</strong>: <code>NVDA + Shift + Пробіл</code> (пробіл)</li>
+<li><strong>Ефект</strong>: вмикає або вимикає функції додатка. NVDA оголосить «Увімкнення/вимкнення режиму огляду Markdown». Ця функція також відповідає налаштуванню NVDA «Звукові індикації для режимів фокусування та огляду» в налаштуваннях режиму огляду.</li>
+</ul>
+<h3>Список комбінацій (якщо увімкнено режим огляду)</h3>
+<p>Після увімкнення цього режиму ви можете використовувати наступні команди.
+* Натисніть <strong>літеру</strong>, щоб перейти до наступного елемента.
+* Натисніть <strong>Shift + літеру</strong>, щоб перейти до попереднього елемента.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Клавіша</th>
+<th style="text-align: left;">Тип елемента</th>
+<th style="text-align: left;">Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>H</strong></td>
+<td style="text-align: left;">Заголовок</td>
+<td style="text-align: left;">Заголовок будь-якого рівня (від <code>#</code> до <code>######</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1-6</strong></td>
+<td style="text-align: left;">Заголовок 1-6</td>
+<td style="text-align: left;">Конкретний рівень заголовка</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>T</strong></td>
+<td style="text-align: left;">Таблиця</td>
+<td style="text-align: left;">Початок таблиці</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L</strong></td>
+<td style="text-align: left;">Список</td>
+<td style="text-align: left;">Початок блоку списку</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td style="text-align: left;">Елемент списку</td>
+<td style="text-align: left;">Конкретний елемент списку (<code>-</code>, <code>*</code>, <code>1.</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q</strong></td>
+<td style="text-align: left;">Цитата</td>
+<td style="text-align: left;">Блок цитати (<code>&gt;</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">Код</td>
+<td style="text-align: left;">Блок коду (<code>```</code>) або вбудований код (<code>`</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S</strong></td>
+<td style="text-align: left;">Роздільник</td>
+<td style="text-align: left;">Горизонтальна лінія (<code>---</code>, <code>***</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>X</strong></td>
+<td style="text-align: left;">Прапорець</td>
+<td style="text-align: left;">Елемент списку завдань (<code>- [ ]</code>, <code>- [x]</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>K</strong></td>
+<td style="text-align: left;">Посилання</td>
+<td style="text-align: left;">Посилання Markdown <code>[текст](url)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G</strong></td>
+<td style="text-align: left;">Графіка</td>
+<td style="text-align: left;">Тег зображення <code>![alt](url)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Жирний шрифт</td>
+<td style="text-align: left;">Жирний текст (<code>**</code> або <code>__</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E</strong></td>
+<td style="text-align: left;">Виділення</td>
+<td style="text-align: left;">Курсив/виділений текст (<code>*</code> або <code>_</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>D</strong></td>
+<td style="text-align: left;">Видалити</td>
+<td style="text-align: left;">Перекреслений текст (<code>~~</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>F</strong></td>
+<td style="text-align: left;">Виноска</td>
+<td style="text-align: left;">Посилання на виноску <code>[^1]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>,</strong></td>
+<td style="text-align: left;">Кінець блоку</td>
+<td style="text-align: left;">Перехід до кінця поточного блокового елемента</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shift+,</strong></td>
+<td style="text-align: left;">Початок блоку</td>
+<td style="text-align: left;">Перехід до початку поточного блокового елемента</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M</strong></td>
+<td style="text-align: left;">Математика</td>
+<td style="text-align: left;">Математичний вираз LaTeX (<code>$...$</code> або <code>$$...$$</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3>Навігація комірками таблиці</h3>
+<p>Коли курсор знаходиться всередині таблиці Markdown і ввімкнено режим огляду, ви можете використовувати такі комбінації клавіш для переходу між комірками:</p>
+<ul>
+<li><strong>Ctrl + Alt + стрілка вліво</strong>: попередня комірка</li>
+<li><strong>Ctrl + Alt + стрілка вправо</strong>: наступна комірка</li>
+<li><strong>Ctrl + Alt + стрілка вгору</strong>: комірка вище</li>
+<li><strong>Ctrl + Alt + стрілка вниз</strong>: комірка нижче</li>
+</ul>
+<h2>Примітки</h2>
+<ul>
+<li>Цей додаток спеціально розроблений для редагування Markdown. Якщо ви читаєте HTML-сторінку, відтворену браузером, використовуйте вбудований режим огляду NVDA.</li>
+<li>Якщо натискання клавіш призводить до введення символів замість навігації, перевірте, чи увімкнено режим огляду, натиснувши <code>NVDA + Shift + Пробіл</code>.</li>
+<li>У VS Code, через те, що редактор відображає вміст за запитом (віртуалізація), режим огляду цього додатка може не працювати як очікується для вмісту, який наразі не показується/не візуалізується.</li>
+</ul>
+<p>Авторське право (C) 2026 Cary-rowen <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+<ul>
+<li>Переклад: Георгій Галас.</li>
+</ul>
+</body>
+</html>

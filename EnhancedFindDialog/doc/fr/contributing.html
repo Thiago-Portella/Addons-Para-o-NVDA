@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.7.0</title>
+</head>
+<body>
+<h1>Contribuant</h1>
+<h2>Générer l'extension</h2>
+<p>Vous aurez besoin de:</p>
+<ul>
+<li>python 3.6 ou supérieur</li>
+<li>pip doit être configuré</li>
+<li>scons (pip install scons)</li>
+<li>markdown (pip install markdown)</li>
+<li>commande msgfmt. Le moyen le plus simple de l'obtenir est d'installer git et, de choisir l'option pour créer les outils Bash disponibles pour l'invite de commande</li>
+</ul>
+<p>Une fois que ces éléments sont installés, écrivez simplement  scons dans la racine du dossier du projet pour générer l'extension</p>
+<h2>Contribuant aux traductions</h2>
+<h3>Traduisant l'extension</h3>
+<p>En supposant que vous ayez déjà l'environnement configuré pour construire l'extension (voir la section ci-dessus), pour générer un fichier ".pot" où tous les messages seront pour la traduction, écrivez simplement scons pot dans la racine du dossier du projet.</p>
+<p>À partir de ce fichier de base, vous pouvez générer les fichiers ".po" de traduction  pour votre langue.
+Les langues actuellement traduites peuvent être trouvées dans le dossier /addon/locale.</p>
+<h3>Traduisant la documentation</h3>
+<p>La documentation de traduction doit être générée à partir des fichiers ".tpl.md" ((pas des fichiers ".md"). Par conséquent, à l'exception du fichier "readme.md", dans la racine du projet, vous ne trouverez pas d'autres fichiers ".md" versionnés.</p>
+<p>Les fichiers ".tpl.md" sont des fichiers markdown normaux, Sauf pour  une fonctionnalité en plus: si vous utilisez ${[var]} n'importe où dans le texte, [var] sera remplacé par une variable avec le même nom défini dans  le buildVars.py.</p>
+<p>S'il n'y a pas de variable avec le même nom, le remplacement ne se produit pas.</p>
+<p>Ceci est utile, par exemple, pour faire que la documentation reflète les liens et titres avec le numéro de version  de l'extension automatiquement, sans besoin d'être réécrite.</p>
+<p>Pour traduire la documentation, traduisez le fichier "readme.tpl.md", dans la racine du projet. Le fichier traduit doit être placé dans le dossier addon/doc/[lang] et doit être appelé "readme.tpl.md".</p>
+<p>Les variables ${[var]} ne doivent pas être modifiées. Écrivez  scons dans la racine du projet afin que la documentation  HTML et markdown soit générée.</p>
+</body>
+</html>

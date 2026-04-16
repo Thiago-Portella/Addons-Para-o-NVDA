@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Historial del portapapeles 1.4</title>
+</head>
+<body>
+<h1>Clipboard History</h1>
+<p>Por  <a href="http://gera.ar">gera Kessler</a></p>
+<p>Con la inestimable colaboración de Héctor Benítez.</p>
+<p>Este complemento permite gestionar un historial del portapapeles persistiéndolo en una base de datos local, lo que permite conservar los textos aún cuando el sistema se reinicia.
+Añade comandos para la exploración del historial, funciones de búsqueda, conteo, favoritos, backup, y visualización de los elementos.
+A parte de la interacción a través de la capa de comandos con funciones avanzadas, se puede utilizar una versión gráfica sencilla para quienes no quieran compicaciones.</p>
+<p>Al instalarlo por primera vez e iniciar NVDA, se crea el archivo "clipboard_history" que contiene la base de datos. Este archivo se aloja en la raíz de la carpeta nvda en los directorios de la configuración del usuario.
+También se crea un escuchador (listener) para capturar los cambios del portapapeles, y actualizar la base de datos cuando haya contenido de texto nuevo.
+El historial no guarda duplicaciones para evitar un crecimiento innecesario de la base de datos. al copiar un texto existente, este se copia en la primera posición de la lista eliminando la anterior.</p>
+<p>Hay 2 funciones asignables desde el diálogo gestos de entrada, categoría clipboardHistory. A saber</p>
+<ul>
+<li>Activar la capa de comandos</li>
+<li>Activar la interfaz gráfica</li>
+</ul>
+<p>Nota importante:<br />
+El historial del portapapeles puede conservar datos sensibles, por lo que es responsabilidad del usuario el eliminar el contenido antes de compartir una versión portable con copia de la configuración.</p>
+<h2>Capa de comandos</h2>
+<p>Una vez activa la capa de comandos con el gesto asignado previamente, tenemos los siguientes grupos de atajos. Si se pulsa alguna tecla diferente a las listadas a continuación, se desactiva la capa de comandos y las teclas vuelven a su funcionalidad por defecto.</p>
+<h3>Movimiento en la lista</h3>
+<ul>
+<li>Flecha arriba; anterior elemento de la lista</li>
+<li>Flecha abajo; siguiente elemento de la lista</li>
+<li>Inicio; primer elemento de la lista</li>
+<li>fin; último elemento de la lista</li>
+</ul>
+<h3>Funcionalidades que afectan al elemento enfocado en la lista</h3>
+<ul>
+<li>Retroceso; en la lista general elimina el elemento. En favoritos lo desmarca como tal</li>
+<li>Flecha derecha; copia el texto al portapapeles y lo desplaza al comienzo de la lista general</li>
+<li>Flecha izquierda; abre el texto en una ventana de NVDA para su posterior revisión</li>
+<li>v; Pega el texto en la ventana con el foco</li>
+<li>c; verbaliza el número de caracteres excluyendo los espacios, los espacios en blanco, las palabras y las líneas</li>
+<li>f; marca o desmarca el elemento como favorito</li>
+</ul>
+<h3>Funciones de búsqueda</h3>
+<ul>
+<li>b; activa la ventana para buscar elementos en la lista</li>
+<li>f3; avanza a la siguiente coincidencia  del texto buscado</li>
+<li>g; activa la ventana para enfocar el elemento por número de orden</li>
+</ul>
+<h3>Otras funcionalidades</h3>
+<ul>
+<li>f1; muestra una ventana de NVDA con la lista de los atajos de la capa de comandos</li>
+<li>tab; conmuta entre la lista general y la de favoritos</li>
+<li>e; verbaliza si es favorito, el número de índice del elemento actual y el número total de la lista</li>
+<li>s; muestra el  diálogo de configuración del complemento</li>
+<li>z; muestra el diálogo de eliminación de elementos de la lista</li>
+<li>escape; desactiva la capa de comandos</li>
+</ul>
+<h2>Búsqueda de elementos</h2>
+<p>Para buscar algún texto del historial por palabras, tan solo hay que pulsar la letra b con la capa de comandos activa.
+Esto abre el diálogo de búsqueda donde al escribir alguna palabra o frase y pulsar intro, se realizará la búsqueda.
+Si se encuentra un resultado se verbaliza el texto y su número de orden. Si pulsamos f3, se vuelve a realizar la búsqueda con el mismo contenido, avanzando hasta el siguiente resultado en el caso de encontrar otra coincidencia.</p>
+<h2>Favoritos</h2>
+<p>La tecla tabulador cambia el enfoque entre la lista general y la lista de favoritos. Cuando esta última está activa, la tecla de retroceso quita el estado favorito del elemento, y a este de la lista.
+En la lista general, la letra f conmuta el estado favorito y lo añade o quita de la lista de favoritos.
+Las funciones de copia, visualización, búsqueda, pegado, verbalización de orden, y cerrado de ventana  cumplen la misma función en ambas listas.</p>
+<h2>Ventana de configuración</h2>
+<p>Al pulsar la letra s con la capa de comandos activa, o control + p en la versión gráfica,  se muestra la interfaz de configuración.
+En ella puede modificarse lo siguiente:</p>
+<h3>Número de cadenas a guardar</h3>
+<p>Aquí se puede especificar hasta cuantos elementos se van a guardar en la base de datos. Cuando se supere este número, se van eliminando las entradas antiguas desde la última.
+Si al configurar un número máximo de elementos la base de datos contiene una cantidad mayor a ese valor, cuando se ingresen nuevos datos se eliminarán las entradas antiguas pero manteniendo el número actual de elementos para que el usuario pueda seleccionar cuales eliminar.</p>
+<h3>Sonidos</h3>
+<p>Activa o desactiva los sonidos del complemento</p>
+<h3>Número de índice de los elementos</h3>
+<p>Si está activa esta casilla, al navegar por la lista de elementos se verbaliza el número de orden de los mismos.</p>
+<h3>Exportar base de datos</h3>
+<p>Este botón activa el diálogo para guardar la base de datos en su estado actual para copia de seguridad de los datos alojados en ella, permitiendo la posterior importación desde otro NVDA con este complemento.</p>
+<h3>Importar base de datos</h3>
+<p>Esta opción activa un diálogo  para buscar una base de datos exportada previamente para recuperar los elementos inexistentes en la base de datos actual.</p>
+<h2>Interfaz gráfica</h2>
+<p>Una vez asignado el gesto, esta opción abre la interfaz gráfica que simplifica la navegación e interacción con el historial.
+Los diferentes elementos almacenados aparecen en forma de lista, la cual puede recorrerse con flechas arriba y abajo.
+Al tabular teniendo seleccionado algún elemento en la lista, el contenido se muestra en un cuadro de solo lectura.</p>
+<p>La lista de elementos tiene los siguientes atajos disponibles:</p>
+<ul>
+<li>f1; verbaliza la posición y el total de elementos</li>
+<li>intro; copia el texto del elemento enfocado al portapapeles</li>
+<li>f5; refresca el contenido de la lista</li>
+<li>suprimir; elimina el elemento enfocado</li>
+<li>alt + suprimir; elimina el historial</li>
+<li>control + p; activa la ventana de configuración del complemento</li>
+<li>escape; cierra la interfaz</li>
+</ul>
+</body>
+</html>

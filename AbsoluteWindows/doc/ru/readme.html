@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>AbsoluteWindows NVDA Add-on</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f7f9; color: #333; }
+.container { max-width: 850px; margin: auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 30px; margin-bottom: 30px; }
+.nvda-logo { width: 100px; height: auto; margin-bottom: 15px; }
+h1 { color: #2c3e50; font-size: 2.5em; margin: 0; }
+h2 { color: #2980b9; border-left: 5px solid #2980b9; padding-left: 15px; margin-top: 40px; text-align: left; }
+b { color: #2c3e50; }
+.status-box { background: #e8f4fd; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #d0e3f0; }
+.hotkey { background: #2d3436; color: #dfe6e9; padding: 15px; border-radius: 6px; font-family: 'Consolas', monospace; display: inline-block; margin: 10px 0; font-size: 1.1em; }
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.feature-item { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; transition: transform 0.2s; }
+.feature-item:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.note { background: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+.footer { text-align: center; margin-top: 50px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+a { color: #3498db; text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+        <h1>AbsoluteWindows</h1>
+        <p style="font-size: 1.2em; color: #7f8c8d;"><b>Управляйте системой. Верните производительность.</b></p>
+        <p><b>Автор:</b> Chai Chaimee</p>
+        <p><a href="https://github.com/chaichaimee/AbsoluteWindows">Открыть репозиторий на GitHub</a></p>
+    </div>
+
+    <div class="section">
+        <h2>Сила абсолютного контроля</h2>
+        <p><b>AbsoluteWindows</b> — это не просто дополнение, это личный командир вашей системы. Созданный для продвинутых пользователей, он объединяет сложные задачи администрирования в единый сверхбыстрый интерфейс. Больше не нужно копаться в настройках Windows — только чистый контроль в ваших руках.</p>
+    </div>
+
+    <div class="section">
+        <h2>Адаптивный интеллект</h2>
+        <p>Сердце AbsoluteWindows — <b>умный движок состояний</b>. Меню отслеживает параметры ПК и динамически меняет опции в зависимости от ситуации:</p>
+        
+        <div class="status-box">
+            <h3>🌐 Сетевое подключение</h3>
+            <p>• <b>Если в сети:</b> Показывает <b>"Отключить интернет"</b>. Одно нажатие мгновенно разрывает связь для приватности или обслуживания.<br>
+            • <b>Если не в сети:</b> Мгновенно меняется на <b>"Подключить интернет"</b> для быстрого восстановления связи.</p>
+        </div>
+
+        <div class="status-box" style="background: #fdf2f2; border-color: #f0d0d0;">
+            <h3>🛡️ Безопасность и UAC</h3>
+            <p>• <b>Если включен (Защита):</b> Показывает <b>"Отключить UAC"</b>. Снижает контроль до 0% для плавной работы без лишних уведомлений.<br>
+            • <b>Если отключен:</b> Показывает <b>"Включить UAC"</b>, мгновенно возвращая защитный уровень 40% (По умолчанию).</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Элитный набор функций</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <b>Спасение и стабильность</b><br>
+                Завершайте зависшие приложения, перезапускайте Explorer или открывайте системный трей мгновенно.
+            </div>
+            <div class="feature-item">
+                <b>Диагностика системы</b><br>
+                Запуск DISM, SFC Scannow и Chkdsk с автоотчетом в Блокноте. Профи-результат без усилий.
+            </div>
+            <div class="feature-item">
+                <b>Очистка памяти</b><br>
+                Сброс кэша RAM и очистка Temp/Prefetch файлов для мгновенного отклика в тяжелых программах.
+            </div>
+            <div class="feature-item">
+                <b>Мастер безопасности</b><br>
+                Просмотр скрытых паролей Wi-Fi и управление автозагрузкой для быстрого старта системы.
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="text-align: center;">
+        <h2>Как вызвать</h2>
+        <p>Откройте центр управления из любого места в Windows с помощью глобальной комбинации:</p>
+        <div class="hotkey">Alt + Windows + W</div>
+        <div class="note">
+            <b>Совет:</b> AbsoluteWindows использует <b>звуковое подтверждение</b>. Высокий тон — успех, низкий тон — ошибка или отмена.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Полный список возможностей</h2>
+        <ul>
+            <li><b>Управление сетью:</b> Переключение адаптеров и получение ключей Wi-Fi.</li>
+            <li><b>Обслуживание системы:</b> Управление службами, автозагрузкой и оптимизация дисков (TRIM/Defrag).</li>
+            <li><b>Глубокая очистка:</b> Удаление системных файлов, Prefetch, истории и логов выполнения.</li>
+            <li><b>Мощные утилиты:</b> Сброс кэша RAM, очистка корзины и HTML-отчеты о состоянии батареи.</li>
+        </ul>
+    </div>
+<br><br>
+<h2>Поддержать проект</h2>
+    <p>Если AbsoluteWindows помог вам, поддержите его дальнейшее развитие.</p>
+    <br>
+    <p style="text-align:center; font-size:1.1em;">
+      <strong><a href="https://github.com/chaichaimee" style="color:#0f766e; text-decoration:none;">Пожертвовать через GitHub Sponsors</a></strong>
+    </p>
+  </div>
+  <div class="footer">
+<p>&copy; 2026 Chai Chaimee • AbsoluteWindows NVDA Add-on • Лицензия GNU GPL v2+</p>
+  </div>
+</div>
+</body>
+</html>

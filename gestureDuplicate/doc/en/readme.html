@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>gestureDuplicate NVDA Add-on</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; }
+.container { max-width: 800px; margin: auto; background: #fff; padding: 20px 40px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+h1, h2, h3 { text-align: center; }
+b { font-weight: bold; }
+.section { margin-bottom: 30px; }
+.nvda-logo { display: block; margin: 0 auto 20px; width: 120px; height: auto; }
+.hotkey { background: #f8f9fa; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+.feature-item { margin: 15px 0; padding-left: 10px; }
+.note { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+a { color: #3498db; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="section">
+        <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+        <h1>gestureDuplicate</h1>
+        <br>
+        <p style="text-align: center;">Identifies and manages conflicting keyboard shortcuts and cleans up your NVDA configuration.</p>
+    </div>
+    <br>
+    <div class="section">
+        <p style="text-align: center;"><b>Author:</b> Chai Chaimee</p>
+        <p style="text-align: center;"><b>URL:</b> <a href="https://github.com/chaichaimee/gestureDuplicate">https://github.com/chaichaimee/gestureDuplicate</a></p>
+    </div>
+    <hr>
+    <div class="section">
+        <h2>Description</h2>
+        <p><b>gestureDuplicate</b> is a professional-grade NVDA add-on designed to maintain the health and efficiency of your screen reader's configuration. It helps you identify conflicting input gestures (duplicate shortcuts), manage custom mappings, and perform deep cleaning of leftover configuration data from uninstalled add-ons.</p>
+        <p>The add-on provides three essential maintenance tools:</p>
+        <ul>
+            <li><strong>Check Duplicate Gestures</strong> — Detects and lists all duplicate gestures across all contexts (global, app modules, etc.).</li>
+            <li><strong>My Gestures Management</strong> — Allows you to view and safely remove custom gestures assigned to add-ons that are no longer installed.</li>
+            <li><strong>Clean Configuration (nvda.ini)</strong> — Identifies and removes obsolete configuration sections belonging to uninstalled add-ons that still reside in your main <em>nvda.ini</em> file.</li>
+        </ul>
+        <div class="note">
+            <strong>Important:</strong> Over time, uninstalling add-ons often leaves "ghost" settings in <em>nvda.ini</em> and <em>gestures.ini</em>. This can lead to increased memory usage, configuration conflicts, or unexpected behavior. This tool ensures your NVDA remains lean and stable.
+        </div>
+    </div>
+    <br>
+    <div class="section">
+        <h2>Hot Keys</h2>
+        <div class="hotkey">
+            <strong>Windows + Shift + G</strong><br>
+            • <b>Single tap:</b> Open <strong>Check Duplicate Gestures</strong> dialog<br>
+            • <b>Double tap:</b> Open <strong>My Gestures Management</strong> dialog<br>
+            • <b>Triple tap:</b> Open <strong>Clean Configuration</strong> dialog
+        </div>
+        <br>
+        <p style="padding-left: 20px;">
+            <strong>Menu Access: NVDA Menu → Tools → gestureDuplicate →</strong><br>
+                • Check Duplicate Gestures...<br>
+                • Manage Custom Gestures...<br>
+                • Clean Configuration...
+        </p>
+    </div>
+    <br>
+    <div class="section">
+        <h2>Features</h2>
+        <ul>
+            <li class="feature-item"><strong>Duplicate Gesture Detection:</strong> Scans all loaded mappings (Core + Add-ons) to find functional conflicts.</li>
+            <li class="feature-item"><strong>Intelligent Navigation:</strong> One-click jump to NVDA's standard "Input Gestures" dialog with the relevant script pre-selected for immediate fixing.</li>
+            <li class="feature-item"><strong>Ghost Gesture Cleanup:</strong> Specifically targets <em>gestures.ini</em> to find entries linked to missing add-ons, displaying them in gray for easy identification.</li>
+            <li class="feature-item"><strong>Advanced Configuration Cleaning:</strong> Scans the primary <em>nvda.ini</em> for leftover sections from uninstalled add-ons, allowing you to "purge" obsolete settings safely.</li>
+            <li class="feature-item"><strong>Bulk Actions:</strong> Supports removing individual items, all gestures for a specific add-on, or clearing all custom addon mappings at once.</li>
+            <li class="feature-item"><strong>Multi-Tap Workflow:</strong> Rapidly switch between detection, management, and cleaning tools using a single hotkey.</li>
+            <li class="feature-item"><strong>Accessibility Focused:</strong> All dialogs are fully keyboard accessible with support for Enter (execute), Space (toggle), Delete (remove), and Escape (close).</li>
+        </ul>
+    </div>
+    <br>
+    <div class="section">
+        <h2>How to Clean Your Configuration</h2>
+        <p>To keep NVDA performing at its best, follow these steps:</p>
+        <ol>
+            <li>Open the <strong>Clean Configuration</strong> tool (Triple tap <b>Windows+Shift+G</b>).</li>
+            <li>Review the list of sections found in your <em>nvda.ini</em>.</li>
+            <li>Check the boxes for add-ons you have already uninstalled.</li>
+            <li>Press <strong>Remove Selected</strong> to safely delete those sections from your configuration file.</li>
+        </ol>
+        <div class="note">
+            <strong>Recommendation:</strong> Run "My Gestures Management" and "Clean Configuration" after every major add-on cleanup to prevent potential conflicts and keep your settings organized.
+        </div>
+    </div>
+
+<br><br>
+<h2 style="text-align: center;">Support the Project</h2>
+    <p style="text-align: center;">If <b>gestureDuplicate</b> has improved your productivity or made your NVDA management easier, please consider supporting its continued development.</p>
+    <p style="text-align: center;">
+        <strong><a href="https://github.com/chaichaimee/gestureDuplicate">Visit the Repository on GitHub</a></strong>
+    </p>
+    <br>
+    <p style="text-align: center; font-size: 0.8em; color: #7f8c8d;">&copy; 2026 Chai Chaimee • Released under GNU GPL v2+</p>
+</div>
+</body>
+</html>

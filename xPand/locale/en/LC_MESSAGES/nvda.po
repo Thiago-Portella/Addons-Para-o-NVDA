@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand AutoCorrect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2025-10-25 14:17+0700\n"
+"Last-Translator: NVDA User <user@example.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.7\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - AutoCorrect"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "Code:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "OK"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "Cancel"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "Code not found"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Cannot copy to clipboard"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "Cannot paste text. Please try manual paste (Ctrl+V)."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "Error pasting text"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand Settings"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "Code list:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "Code"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "Word"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "Word:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "Add"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "Edit"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "Remove"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "Close"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "No code starting with: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "No matching code"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "Please enter a code"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "Please enter a word"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "Code already exists"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "Add Succeeded"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "Error adding code"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "Edit mode. Modify code and word, then click Edit to save."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "Are you sure you want to delete the code '{name}'?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "Confirm deletion"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "Code removed"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "Error removing code"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "Open xPand AutoCorrect"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "Error opening xPand"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "Error opening xPand settings"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "Open xPand Settings"

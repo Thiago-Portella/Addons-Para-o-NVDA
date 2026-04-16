@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-PT" lang="pt-PT">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced dictionaries processing for NVDA 1.6.0</title>
+</head>
+<body>
+<h1>EnhancedDictionaries 1.6.0</h1>
+<p>Extra para lidar com um processamento de dicionários mais avançado</p>
+<h2>Descarregar</h2>
+<p>Descarregar o <a href="https://github.com/marlon-sousa/EnhancedDictionaries/releases/download/1.6.0/EnhancedDictionaries-1.6.0.nvda-addon">extra Enhanced Dictionaries 1.6.0</a></p>
+<h2>Recursos</h2>
+<h3>Dicionários para perfis específicos</h3>
+<p>A maneira como o NVDA aplica configurações condicionais, como formatação de documentos e outras, é através do uso de perfis.</p>
+<p>Os Perfis são conjuntos de configurações que podem, momentaneamente, ser aplicados  ao leitor de ecrã, quando usamos dada aplicação ou grupo de aplicações .</p>
+<p>Por exemplo, pode criar-se um perfil para aplicativos de escrita de código de programação, no qual o nível de pontuação é definido para "todos", o nível de indentação é definido para usar tons e a velocidade da voz é definida para um nível mais lento, para que se possa ler o código de maneira melhor e mais compreensiva.</p>
+<p>É possível, então, associar este perfil ao "visual studio", ao "Eclipse", ao "notePad++" e ao "Visual Studio Code", para que, quando qualquer um destes aplicativos for activado, essas configurações sejam aplicadas automaticamente.</p>
+<p>Com esta ferramenta, associada à faculdade que o NVDA nos oferece para criarmos perfis, quando nos movemos  para outros aplicativos ou quando fechamos um desses aplicativos e regressamos à  área de trabalho, por exemplo, volramos, sem que tenhamos que fazer mais nada, à configuração padrão.</p>
+<p>Assim, torna-se possível, então, saltar facilmente do nosso aplicativo de codificação para um navegador e ler sem pontuações no navegador e aplicar as nossas configurações específicas, quando  voltarmos ao nosso ambiente de código de programação.</p>
+<p>Os dicionários do NVDA são ferramentas poderosas, oferecendo ótimos recursos, como, por exemplo, a substituição de termos, usando expressões regulares.</p>
+<p>No entanto,  até ao aparecimento deste extra, não havia como anexar dicionários a perfis no NVDA.</p>
+<p>Até agora, Isto significava que, se  definisse uma substituição no dicionário padrão, ela seria aplicada em todos os casos, mesmo em aplicativos ou situações em que  desejasse que não fosse.</p>
+<p>Este extra implementa o contexto do perfil ao processar e criar / editar dicionários.</p>
+<h4>Como funciona?</h4>
+<p>Instale o extra e quando ele estiver activo, observará o seguinte:</p>
+<ul>
+<li>Os dicionários agora são usados correctamente, tendo em consideração o perfil activo.</li>
+<li>Se existirem dicionários (padrão ou específicos da voz) para o perfil actual, eles serão usados.</li>
+<li>
+<p>Se  não existirem dicionários específicos para o perfil que estamos a usar, os dicionários do perfil padrão serão usados.</p>
+<p>Isso é consistente com a maneira como o NVDA se comporta, no sentido de que quando eu crio um novo perfil, as configurações que eu não altero nesse novo perfil são retiradas do padrão. Da mesma forma, se eu não definir um dicionário para um perfil, o dicionário padrão será usado.</p>
+</li>
+<li>
+<p>Os dicionários de determinada voz comportam-se do modo anteriormente indicado.</p>
+</li>
+<li>A caixa de diálogo do dicionário, quando aberta, mostra, no  título, a que perfil esse dicionário se refere.</li>
+<li>
+<p>O perfil activo, quando carregado,  determinará qual o dicionário que será aberto para edição, quando os menus padrão ou de dicionário de voz forem activados.</p>
+<p>Isto é consistente com a maneira como o NVDA se comporta, porque se alguém aceder às configurações e alterar uma configuração, isso será guardado no perfil activo. Da mesma forma, o dicionário aberto pertencerá a esse perfil.</p>
+</li>
+<li>
+<p>Se um determinado dicionário não existir num perfil activo e a caixa de diálogo do dicionário for aberta, um novo dicionário para esse perfil será criado. Não mostrará quaisquer entradas, dado tratar-se de um dicionário novo.</p>
+<p>No entanto, não será guardado até que o utilizador feche a caixa de diálogo, clicando em "ok".</p>
+<p>Se procederem assim, o novo dicionário será eficaz. Se  cancelarem a caixa de diálogo, o dicionário de perfil padrão continuará a ser usado e nenhum dicionário específico de perfil será guardado.</p>
+</li>
+<li>
+<p>Quando um novo dicionário específico de perfil é criado, torna-se efectivo e, portanto, as configurações do dicionário padrão não estão mais activas para esse perfil.</p>
+<p>Esse pode ser o comportamento desejado, mas talvez não. Talvez o utilizador queira usar todas as configurações do dicionário padrão, para além das novas opções activas apenas nesse perfil.</p>
+</li>
+<li>
+<p>Para cobrir essa possibilidade, um novo botão, chamado "importar entradas do perfil padrão do dicionário", é criado na caixa de diálogo do dicionário.</p>
+<p>Este botão aparece apenas quando um dicionário específico do perfil está a ser editado. Na activação, comporta-se da seguinte maneira:</p>
+<ul>
+<li>As entradas do dicionário padrão (ou do dicionário específico de voz), do perfil padrão, são lidas.</li>
+<li>As entradas que não são encontradas no dicionário que está a ser editado são-lhe adicionadas.</li>
+<li>Se uma entrada do dicionário padrão (ou de voz) for encontrada no dicionário que está a ser editado, não substituirá a entrada actual.</li>
+<li>A importação não guarda as novas entradas no disco. Apenas adiciona entradas importadas na lista de entradas na caixa de diálogo do dicionário. O foco é colocado na lista e o utilizador tem a oportunidade de rever a nova lista de entradas, como se as tivesse escrito, manualmente, a todas elas.</li>
+</ul>
+</li>
+<li>
+<p>Sempre que o utilizador cria um dicionário para um perfil específico, esse dicionário é imediatamente associado a esse perfil.</p>
+</li>
+<li>Sempre que um perfil muda, os seus dicionários específicos (padrão e de voz) ficam activos imediatamente. Se esses dicionários não existirem, os do perfil padrão serão usados.</li>
+<li>Os dicionários embutidos e temporários não são afectados, pois não dependem de perfis, o último por ser temporário e o primeiro por ser embutido.</li>
+</ul>
+<h1>ajudando a traduzir ou desenvolver o extra</h1>
+<p>Se quiser ajudar a traduzir ou desenvolver o extra, acesse o <a href="https://github.com/marlon-sousa/EnhancedDictionaries">repositório do projeto</a> e busque pelo arquivo contributing.md no diretório de documentação equivalente ao seu idioma.</p>
+<h2>Colaboradores</h2>
+<p>Agradecimentos a:</p>
+<ul>
+<li>Ângelo Miguel Abrantes - Tradução para Português</li>
+<li>Rémy Ruiz - Tradução para Espanhol</li>
+<li>Rémy Ruiz - Tradução para Francês</li>
+<li>Tarik Hadžirović - Tradução para Croata</li>
+<li>Thiago Seus - Tradução para Português do Brasil</li>
+<li>Umut KORKMAZ - tradução para Turco</li>
+<li>Ivan Shtefuriak - tradução para Ucraniana</li>
+</ul>
+</body>
+</html>

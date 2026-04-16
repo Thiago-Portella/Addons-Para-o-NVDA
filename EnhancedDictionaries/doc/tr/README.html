@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="tr" lang="tr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced dictionaries processing for NVDA 1.6.0</title>
+</head>
+<body>
+<h1>Gelişmiş Sözlükler 1.6.0</h1>
+<p>Daha gelişmiş sözlüklerin işlenmesi için Nvda eklentisi.</p>
+<h2>indirme:</h2>
+<p><a href="https://github.com/marlon-sousa/EnhancedDictionaries/releases/download/1.6.0/EnhancedDictionaries-1.6.0.nvda-addon">Gelişmiş Sözlükler 1.6.0 eklentisini indirin</a></p>
+<h2>Özellikler:</h2>
+<h3>Profile özel sözlükler:</h3>
+<p>NVDA'nın belge biçimlendirme ve diğerleri gibi koşullu ayarları uygulama yolu, profillerin kullanılmasıdır.  </p>
+<p>Profiller, birlikte ekran okuyucuya koşullu olarak uygulanabilen ayar gruplarıdır.  </p>
+<p>Örneğin, kodlama uygulamaları için, noktalama seviyesinin tümü, girinti duyurusunun tonların ve konuşma hızının daha yavaş bir seviyeye ayarlandığı bir profil oluşturabilir, böylece kodu daha iyi okuyabilirsiniz. Daha sonra bu profili visual studio, eclipse, notepad plus plus ve Visual Studio Code ile ilişkilendirebilirsiniz, böylece bu uygulamalardan herhangi biri aktif hale geldiğinde bu konfigürasyonlar otomatik olarak uygulanacaktır.  </p>
+<p>Sekmeyi diğer uygulamalara değiştirdiğinizde veya bu uygulamalardan birini kapatıp masaüstüne indiğinizde, örneğin, varsayılan yapılandırma gerçekleşir. Böylece, kodlama uygulamanızdan bir tarayıcıya kolayca atlamak ve herhangi bir tuşa basmadan, tarayıcıda noktalama işaretleri olmadan okumak ve kod ortamınıza geri döndüğünüzde özel yapılandırmanızın uygulanmasını sağlamak mümkündür.  </p>
+<p>NVDA sözlükleri güçlüdür ve düzenli ifade değiştirme gibi harika özellikler sunar. Ancak, şu anda NVDA'daki profillere sözlük eklemenin bir yolu yoktur.  </p>
+<p>Bu, varsayılan sözlükte bir değiştirme ayarlarsanız, her durumda, hatta olmasını istemediğiniz uygulamalarda veya durumlarda bile uygulanacağı anlamına gelir.  </p>
+<p>Bu eklenti, sözlükleri işlerken ve oluştururken / düzenlerken profil bağlamını uygular.  </p>
+<h4>Nasıl çalışır?</h4>
+<p>Eklentiyi kurmanız yeterlidir. Aktif olduğunda:  </p>
+<ul>
+<li>Sözlükler artık aktif profil dikkate alınarak doğru bir şekilde işleniyor.</li>
+<li>Geçerli profil için sözlükler (varsayılan veya sese özel) varsa, bunlar kullanılır.</li>
+<li>Mevcut değillerse, varsayılan profil için sözlükler kullanılır. Bu, yeni bir profil oluşturduğumuzda bu yeni profilde değiştirmediğimiz konfigürasyonların varsayılandan alınması anlamında NVDA'nın davranış biçimiyle tutarlıdır.</li>
+</ul>
+<p>Benzer şekilde, bir profil için sözlük ayarlamazsak, varsayılan sözlük kullanılır.</p>
+<ul>
+<li>Ses sözlükleri tam olarak aynı şekilde davranır: etkin profil için sese özel bir sözlük varsa kullanılır. Aksi takdirde, varsayılan profildeki (varsa) o sesin sözlüğü kullanılır.</li>
+<li>Sözlük iletişim kutusu açıldığında, başlığında her zaman sözlüğün hangi profille ilgili olduğunu gösterir.</li>
+<li>Etkin profil, varsayılan veya sesli sözlük menüleri etkinleştirildiğinde hangi sözlüğün düzenlenmek üzere açılacağını belirleyecektir.</li>
+</ul>
+<p>Bu, NVDA'nın davranış şekliyle tutarlıdır, çünkü biri ayarlara gider ve bir ayarı değiştirirse, bu aktif profile kaydedilecektir.  </p>
+<p>Aynı şekilde açılan sözlük de o profile ait olacaktır.  </p>
+<ul>
+<li>Aktif bir profilde belirli bir sözlük yoksa ve sözlük iletişim kutusu açılırsa, o profil için yeni bir sözlük oluşturulur.</li>
+</ul>
+<p>Yeni olduğu için giriş göstermeyecektir. Ancak, kullanıcı "tamam" düğmesine tıklayarak bu iletişim kutusunu kapatana kadar kaydedilmeyecektir.  </p>
+<p>Eğer yaparlarsa, yeni sözlük etkili olacaktır. İletişim kutusunu iptal ederlerse, varsayılan profil sözlüğü kullanılmaya devam eder ve profile özel sözlük kaydedilmez.  </p>
+<ul>
+<li>
+<p>Profile özel yeni bir sözlük oluşturulduğunda, etkin hale gelir ve bu nedenle, varsayılan sözlükteki kalıplar artık o profil için etkin değildir.</p>
+<p>Bu istenen davranış olabilir, ama belki de değil. Belki de kullanıcı, varsayılan sözlükteki tüm kalıpları ve yalnızca bu profilde etkin olan yeni kalıpları kullanmak istiyor.  </p>
+</li>
+<li>
+<p>Bu olasılığı kapatmak için, sözlük iletişim kutusunda "varsayılan sözlük profilinden girişleri içe aktar" adlı yeni bir düğme oluşturulur.</p>
+<p>Bu düğme yalnızca profile özel bir sözlük düzenlenirken görünür. etkinleştirildiğinde, aşağıdaki şekilde davranır:</p>
+<ul>
+<li>Varsayılan profilden varsayılan sözlükten (veya sese özel sözlükten) girdiler okunur.</li>
+<li>Düzenlenmekte olan sözlükte bulunmayan girdiler buna eklenir.</li>
+<li>Düzenlenmekte olan sözlükte varsayılan (veya sesli) sözlükten bir girdi bulunursa, mevcut girdinin üzerine yazmaz.</li>
+<li>İçe aktarma, yeni girdileri diske kaydetmez. Yalnızca içe aktarılan girdileri sözlük iletişim kutusundaki girdiler listesine ekler. Odak listeye yerleştirilir ve kullanıcı, sanki hepsini elle yazmış gibi yeni giriş listesini gözden geçirme fırsatına sahip olur.</li>
+</ul>
+</li>
+<li>
+<p>Kullanıcı belirli bir profilde bir sözlük oluşturduğunda, o profil için hemen etkilidir.</p>
+</li>
+<li>Bir profil değiştiğinde, belirli sözlükler (varsayılan ve ses) hemen etkinleşir. Bu sözlükler yoksa, varsayılan profil birininki kullanılır.</li>
+<li>Yerleşik ve geçici sözlükler etkilenmezler, profillere bağımlı değildirler, ikincisi geçici olduğu için, birincisi yerleşik olduğu için.</li>
+</ul>
+<h1>Katkıda bulunma ve tercüme etme:</h1>
+<p>Bu eklentiye katkıda bulunmak veya bu eklentiyi çevirmek istiyorsanız, lütfen <a href="https://github.com/marlon-sousa/EnhancedDictionaries">proje deposuna</a> erişin ve ingilizce dokümantasyon dizininde Contribute.md ile ilgili talimatları bulun.</p>
+<h2>Katkıda Bulunanlar:</h2>
+<p>Özellikle ..... 'ya teşekkür</p>
+<ul>
+<li>Ângelo Miguel Abrantes - Portekizce çeviri</li>
+<li>Tarik Hadžirović - Hırvatça çeviri</li>
+<li>Rémy Ruiz - Fransızca çeviri</li>
+<li>Rémy Ruiz - İspanyolca çeviri</li>
+<li>Thiago Seus - Brezilya Portekizcesi çeviri</li>
+<li>Umut KORKMAZ - Türkçe çeviri</li>
+<li>Ivan Shtefuriak - Ukraynaca çeviri</li>
+</ul>
+</body>
+</html>

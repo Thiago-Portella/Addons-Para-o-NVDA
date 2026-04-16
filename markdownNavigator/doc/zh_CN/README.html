@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Markdown 导航 0.2.1</title>
+</head>
+<body>
+<h1>NVDA Markdown 导航</h1>
+<p>Markdown Navigator 是一个 NVDA 插件，旨在提升编辑和阅读 Markdown 内容时的体验。它允许你在可编辑的文本区域（如记事本、VS Code、网页编辑器等）中使用类似于 NVDA 浏览模式的单键导航功能。</p>
+<p>它可以让你无需频繁按方向键就可以快速跳转到标题、列表、表格、代码块以及各种行内格式。</p>
+<h2>主要特性</h2>
+<ul>
+<li>高效导航：实现了快速算法，即使在数万行的大型文档中也能秒级跳转。</li>
+<li>结构化浏览：支持按标题、列表、表格、引用块、代码块等结构跳转。</li>
+<li>行内元素：支持跳转到粗体、斜体、链接、图片和行内代码。</li>
+<li>表格单元格导航：提供与  NVDA 一致的快捷键在 Markdown 表格中按单元格移动。</li>
+</ul>
+<h2>使用方法</h2>
+<h3>切换浏览模式</h3>
+<p>默认情况下，单键导航是关闭的。你需要手动开启 Markdown 浏览模式。</p>
+<ul>
+<li>快捷键：NVDA + Shift + Space (空格键)</li>
+<li>开启或关闭插件功能。NVDA 会朗读 "Markdown Browse Mode On/Off"，该功能也将跟随 NVDA 浏览模式中“用音效提示焦点模式或浏览模式”设置。</li>
+</ul>
+<h3>快捷键列表 (浏览模式开启时)</h3>
+<p>当模式开启后，你可以使用以下单字母按键：</p>
+<ul>
+<li>按以下字母键 跳转到下一个元素。</li>
+<li>按 Shift + 对应字母键跳转到上一个元素。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>元素类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H</td>
+<td>标题</td>
+<td>任意级别的标题 (# 到 ######)</td>
+</tr>
+<tr>
+<td>1-6</td>
+<td>1-6级标题</td>
+<td>跳转到特定级别的标题</td>
+</tr>
+<tr>
+<td>T</td>
+<td>表格</td>
+<td>表格起始处</td>
+</tr>
+<tr>
+<td>L</td>
+<td>列表</td>
+<td>列表块的开始</td>
+</tr>
+<tr>
+<td>I</td>
+<td>列表项</td>
+<td>具体的列表项 (-, *, 1.)</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>引用块</td>
+<td>引用段落 (&gt;)</td>
+</tr>
+<tr>
+<td>C</td>
+<td>代码</td>
+<td>代码块 (<code>``) 或行内代码 (</code>)</td>
+</tr>
+<tr>
+<td>S</td>
+<td>分隔线</td>
+<td>水平分割线 (---, ***)</td>
+</tr>
+<tr>
+<td>X</td>
+<td>复选框</td>
+<td>任务列表项 (- [ ], - [x])</td>
+</tr>
+<tr>
+<td>K</td>
+<td>链接</td>
+<td>Markdown 链接 <a href="链接">文本</a></td>
+</tr>
+<tr>
+<td>G</td>
+<td>图片 (Graphic)</td>
+<td>图片标签 <img alt="说明" src="链接" /></td>
+</tr>
+<tr>
+<td>B</td>
+<td>粗体 (Bold)</td>
+<td>粗体文本 (** 或 __)</td>
+</tr>
+<tr>
+<td>E</td>
+<td>斜体 (Emphasis)</td>
+<td>斜体/强调文本 (* 或 _)</td>
+</tr>
+<tr>
+<td>D</td>
+<td>删除线 (Delete)</td>
+<td>删除线文本 (~~)</td>
+</tr>
+<tr>
+<td>F</td>
+<td>脚注 (Footnote)</td>
+<td>脚注引用 [^1]</td>
+</tr>
+<tr>
+<td>,</td>
+<td>块结尾</td>
+<td>跳转到当前块级元素的末尾</td>
+</tr>
+<tr>
+<td>Shift+,</td>
+<td>块开始</td>
+<td>跳转到当前块级元素的开头</td>
+</tr>
+<tr>
+<td>M</td>
+<td>公式</td>
+<td>在 LaTeX 之间跳转，包括$...$和$$...$$</td>
+</tr>
+</tbody>
+</table>
+<h3>表格单元格导航</h3>
+<p>当光标位于 Markdown 表格内时，若开启了浏览模式，可以使用以下快捷键在单元格间移动：</p>
+<ul>
+<li>Ctrl + Alt + 左光标: 上一个单元格</li>
+<li>Ctrl + Alt + 右光标: 下一个单元格</li>
+<li>Ctrl + Alt + 上光标: 上一行同列</li>
+<li>Ctrl + Alt + 下光标: 下一行同列</li>
+</ul>
+<h2>注意事项</h2>
+<ul>
+<li>本插件专为 markdown 编辑场景而开发。如果你正在阅读浏览器渲染后的 HTML 页面，请使用 NVDA 的浏览模式。</li>
+<li>如果按下上述按键是键入字符而不是位置跳转，请检查是否按下了 NVDA + Shift + Space 开启了浏览模式。</li>
+<li>在 VS Code 中，由于编辑区域一次性呈现的内容有限，该插件的浏览模式可能不符合预期。</li>
+</ul>
+<p>Copyright (C) 2026 Cary-rowen <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+</body>
+</html>

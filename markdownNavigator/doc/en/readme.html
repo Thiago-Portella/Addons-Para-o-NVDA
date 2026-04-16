@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Markdown Navigator 0.2.1</title>
+</head>
+<body>
+<h1>NVDA Markdown Navigator</h1>
+<p>Markdown Navigator is an NVDA add-on designed to enhance the experience of editing and reading Markdown content. It allows you to use single-key navigation features, similar to NVDA's Browse Mode, within editable text areas (such as Notepad, VS Code, web-based editors, etc.).</p>
+<p>It enables you to quickly jump to headings, lists, tables, code blocks, and various inline formatting without frequently pressing the arrow keys.</p>
+<h2>Key Features</h2>
+<ul>
+<li><strong>Efficient Navigation</strong>: Implements fast algorithms that allow for instant jumping even in large documents with tens of thousands of lines.</li>
+<li><strong>Structured Browsing</strong>: Supports navigation by headings, lists, tables, blockquotes, code blocks, and more.</li>
+<li><strong>Inline Elements</strong>: Supports jumping to bold, italic, links, images, and inline code.</li>
+<li><strong>Table Cell Navigation</strong>: Provides shortcuts consistent with NVDA for moving between cells in Markdown tables.</li>
+</ul>
+<h2>Usage</h2>
+<h3>Toggle Browse Mode</h3>
+<p>By default, single-key navigation is disabled. You need to manually enable Markdown Browse Mode.</p>
+<ul>
+<li><strong>Shortcut</strong>: <code>NVDA + Shift + Space</code> (Spacebar)</li>
+<li><strong>Effect</strong>: Turns the add-on's functionality on or off. NVDA will announce "Markdown Browse Mode On/Off". This feature also follows NVDA's "Audio indications for focus and browse modes" setting in the Browse Mode settings.</li>
+</ul>
+<h3>Shortcut List (When Browse Mode is Enabled)</h3>
+<p>Once the mode is enabled, you can use the following single-letter keys.
+*   Press the <strong>Letter Key</strong> to jump to the next element.
+*   Press <strong>Shift + Letter Key</strong> to jump to the previous element.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Element Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>H</strong></td>
+<td style="text-align: left;">Heading</td>
+<td style="text-align: left;">Any level heading (<code>#</code> to <code>######</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1-6</strong></td>
+<td style="text-align: left;">Heading 1-6</td>
+<td style="text-align: left;">Specific heading level</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>T</strong></td>
+<td style="text-align: left;">Table</td>
+<td style="text-align: left;">Start of a table</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L</strong></td>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">Start of a list block</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td style="text-align: left;">List Item</td>
+<td style="text-align: left;">Specific list item (<code>-</code>, <code>*</code>, <code>1.</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q</strong></td>
+<td style="text-align: left;">Blockquote</td>
+<td style="text-align: left;">Quote block (<code>&gt;</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">Code</td>
+<td style="text-align: left;">Code block (<code>```</code>) or inline code (<code>`</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S</strong></td>
+<td style="text-align: left;">Separator</td>
+<td style="text-align: left;">Horizontal rule (<code>---</code>, <code>***</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>X</strong></td>
+<td style="text-align: left;">Checkbox</td>
+<td style="text-align: left;">Task list item (<code>- [ ]</code>, <code>- [x]</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>K</strong></td>
+<td style="text-align: left;">Link</td>
+<td style="text-align: left;">Markdown link <code>[text](url)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G</strong></td>
+<td style="text-align: left;">Graphic</td>
+<td style="text-align: left;">Image tag <code>![alt](url)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Bold</td>
+<td style="text-align: left;">Bold text (<code>**</code> or <code>__</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E</strong></td>
+<td style="text-align: left;">Emphasis</td>
+<td style="text-align: left;">Italic/Emphasis text (<code>*</code> or <code>_</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>D</strong></td>
+<td style="text-align: left;">Delete</td>
+<td style="text-align: left;">Strikethrough text (<code>~~</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>F</strong></td>
+<td style="text-align: left;">Footnote</td>
+<td style="text-align: left;">Footnote reference <code>[^1]</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>,</strong></td>
+<td style="text-align: left;">End of Block</td>
+<td style="text-align: left;">Jump to the end of the current block element</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shift+,</strong></td>
+<td style="text-align: left;">Start of Block</td>
+<td style="text-align: left;">Jump to the start of the current block element</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M</strong></td>
+<td style="text-align: left;">Math</td>
+<td style="text-align: left;">LaTeX math expression (<code>$...$</code> or <code>$$...$$</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3>Table Cell Navigation</h3>
+<p>When the cursor is inside a Markdown table and Browse Mode is enabled, you can use the following shortcuts to move between cells:</p>
+<ul>
+<li><strong>Ctrl + Alt + Left Arrow</strong>: Previous cell</li>
+<li><strong>Ctrl + Alt + Right Arrow</strong>: Next cell</li>
+<li><strong>Ctrl + Alt + Up Arrow</strong>: Cell above</li>
+<li><strong>Ctrl + Alt + Down Arrow</strong>: Cell below</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>This add-on is specifically developed for Markdown editing scenarios. If you are reading an HTML page rendered by a browser, please use NVDA's built-in Browse Mode.</li>
+<li>If pressing the keys above types characters instead of navigating, please check if you have enabled Browse Mode by pressing <code>NVDA + Shift + Space</code>.</li>
+<li>In VS Code, due to the editor rendering content on demand (virtualization), this add-on's browse mode may not work as expected for content that is not currently visible/rendered.</li>
+</ul>
+<p>Copyright (C) 2026 Cary-rowen <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+</body>
+</html>

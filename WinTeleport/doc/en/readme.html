@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>WinTeleport 0.3.1</title>
+</head>
+<body>
+<h1>WinTeleport</h1>
+<p>This NVDA add-on allows you to move the focused window between Windows virtual desktops using keyboard shortcuts.</p>
+<h2>Features</h2>
+<ul>
+<li>Move the focused window to the left or right virtual desktop.</li>
+<li>Move the focused window to a specific desktop by number.</li>
+<li>Optionally switch to the target desktop after moving the window.</li>
+<li>Report the current virtual desktop's name and number.</li>
+</ul>
+<h2>Default Keyboard Shortcuts</h2>
+<ul>
+<li><code>NVDA+Windows+D</code>: Report current virtual desktop information (name, number, and total count).</li>
+<li><code>NVDA+Control+Windows+LeftArrow</code>: Move the focused window to the left desktop and switch to it.</li>
+<li><code>NVDA+Control+Windows+RightArrow</code>: Move the focused window to the right desktop and switch to it.</li>
+<li><code>NVDA+Control+Windows+1</code> to <code>9</code>: Move the focused window to desktops 1 through 9.</li>
+</ul>
+<p><em>Note: If you want to move a window without switching desktops (staying on the current one), you can assign your own shortcuts in the NVDA Input Gestures dialog under the "WinTeleport" category.</em></p>
+<h2>Numeric Shortcut Limitations</h2>
+<ul>
+<li>Moving directly to a specific desktop is currently limited to desktops 1 through 9. You can only assign custom key combinations that include the keys 1 through 9.</li>
+</ul>
+<h2>Known Issues and Limitations</h2>
+<ul>
+<li><strong>Compatibility</strong>: A small number of applications with non-standard window frames (e.g., traditional/legacy versions of QQ) may not support moving between desktops via this add-on.</li>
+<li><strong>Focus Issues</strong>: If you move the last window out of a virtual desktop without switching to the target desktop, the system focus may land on an "unknown" object.</li>
+</ul>
+<h2>References</h2>
+<p>This project is inspired by and incorporates logic from the following open-source projects:
+- <a href="https://github.com/mirober/pyvda">pyvda</a>: A Python library for Windows 10/11 virtual desktop management.
+- <a href="https://github.com/Eun/MoveToDesktop">MoveToDesktop</a>: A utility for moving windows between virtual desktops.</p>
+<h2>Future To-Dos (If Needed)</h2>
+<ul>
+<li><strong>Window Pinning</strong>: Support for "pinning" windows or applications so they remain visible on all virtual desktops.</li>
+<li><strong>Settings Panel</strong>: Support for personalizing specific options via a configuration interface.</li>
+</ul>
+</body>
+</html>

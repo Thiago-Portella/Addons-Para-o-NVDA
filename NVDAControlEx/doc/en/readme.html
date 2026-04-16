@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDAControlEx 0.1</title>
+</head>
+<body>
+<h1>NVDA Control Ex Add-on Documentation</h1>
+<h2>Overview</h2>
+<p>The NVDA Control Ex Add-on provides a named pipe interface (<code>\\.\pipe\NVDAControlPipe</code>) for external applications to send commands to NVDA. These commands can control speech output, braille display, and other NVDA functionalities.</p>
+<h2>Key Features</h2>
+<ol>
+<li><strong>Named Pipe Communication</strong>:</li>
+<li>The add-on creates a named pipe (<code>\\.\pipe\NVDAControlPipe</code>) to receive commands from external applications.</li>
+<li>
+<p>Commands are sent as strings and processed by the plugin.</p>
+</li>
+<li>
+<p><strong>Supported Commands</strong>:</p>
+</li>
+<li>
+<p>The add-on supports the following commands:</p>
+<ul>
+<li><code>speak</code>: Speaks the provided text.</li>
+<li><code>speakSpelling</code>: Spells out the provided text.</li>
+<li><code>speakSsml</code>: Speaks SSML (Speech Synthesis Markup Language) content.</li>
+<li><code>pauseSpeech</code>: Pauses or resumes speech.</li>
+<li><code>cancelSpeech</code>: Cancels the current speech output.</li>
+<li><code>braille</code>: Displays the provided text on the braille display.</li>
+<li><code>active</code>: Responds with "NVDA" to confirm the add-on is active.</li>
+</ul>
+</li>
+<li>
+<p><strong>Threaded Architecture</strong>:</p>
+</li>
+<li>The add-on uses a separate thread to listen for incoming connections and process commands, ensuring that NVDA remains responsive.</li>
+</ol>
+<hr />
+<h2>How to Use</h2>
+<h3>1. <strong>Install the Add-on</strong></h3>
+<ul>
+<li>Download the <code>NVDAControlEx</code> add-on from the <a href="https://github.com/m1maker/NVDAControlEx">GitHub repository</a>.</li>
+<li>Install it in NVDA.</li>
+</ul>
+<h3>2. <strong>Enable the Add-on</strong></h3>
+<ul>
+<li>Ensure the add-on is enabled in NVDA's Add-on Manager.</li>
+</ul>
+<h3>3. <strong>Send Commands via Named Pipe</strong></h3>
+<ul>
+<li>External applications can send commands to NVDA by writing to the named pipe (<code>\\.\pipe\NVDAControlPipe</code>).</li>
+<li>Commands are sent as strings in the following format:
+     <code>command_name arg1 arg2 ...</code></li>
+<li>Example: To make NVDA speak "Hello, World!", send the following command:
+     <code>speak "Hello, World!" 0 -1</code></li>
+</ul>
+<h3>4. <strong>Supported Commands and Arguments</strong></h3>
+<p>| Command         | Arguments                                                                 | Description                                                                 |
+|-----------------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| <code>speak</code>         | <code>text</code>, <code>reason (unused)</code>, <code>symbolLevel</code>                                           | Speaks the provided text.                                                   |
+| <code>speakSpelling</code> | <code>text</code>, <code>locale</code>, <code>useCharacterDescriptions</code>                              | Spells out the provided text.                                               |
+| <code>speakSsml</code>     | <code>ssml</code>, <code>markCallback (unused)</code>, <code>symbolLevel</code>                                     | Speaks SSML content.                                                        |
+| <code>pauseSpeech</code>   | <code>switch</code>                                                                  | Pauses or resumes speech.                                                   |
+| <code>cancelSpeech</code>  | None                                                                      | Cancels the current speech output.                                          |
+| <code>braille</code>       | <code>text</code>                                                                    | Displays the provided text on the braille display.                          |
+| <code>active</code>        | None                                                                      | Responds with "NVDA" to confirm the add-on is active.                       |</p>
+<hr />
+<h2>Example Usage</h2>
+<h3>Sending a Command from an External Application</h3>
+<p>To send a command to NVDA, you can use any programming language that supports Windows named pipes. Below is an example in C:
+I will use interface from <a href="https://github.com/m1maker/SRAL">this repo</a>
+These files can be found in Dep directory, nvda_control.h and nvda_control.c</p>
+<p>```c</p>
+<h1>include <nvda_control.h></h1>
+<p>int main() {
+    // Step 1: Connect to the NVDA named pipe
+    if (nvda_connect() != 0) {
+        fprintf(stderr, "Failed to connect to NVDA.\n");
+        return -1;
+    }</p>
+<pre><code>// Step 2: Send a command to speak some text
+const char* textToSpeak = "Hello, this is a test of the NVDA control interface.";
+int symbolLevel = NVDA_SYMBOL_LEVEL_ALL; // Use all punctuation
+
+if (nvda_speak(textToSpeak, symbolLevel) != 0) {
+    fprintf(stderr, "Failed to send speak command to NVDA.\n");
+    nvda_disconnect();
+    return -1;
+}
+
+// Optional: Pause speech for demonstration
+if (nvda_pause_speech(1) != 0) {
+    fprintf(stderr, "Failed to pause speech.\n");
+}
+
+// Wait for a few seconds (this is just for demonstration purposes)
+Sleep(3000); // Sleep for 3 seconds
+
+// Resume speech
+if (nvda_pause_speech(0) != 0) {
+    fprintf(stderr, "Failed to unpause speech.\n");
+}
+
+// Step 3: Disconnect from NVDA
+nvda_disconnect();
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>```</p>
+<hr />
+<h2>Troubleshooting</h2>
+<ol>
+<li><strong>Add-on Not Responding</strong>:</li>
+<li>Ensure the <code>NVDAControlEx</code> add-on is installed and enabled in NVDA.</li>
+<li>
+<p>Restart NVDA after installing the add-on.</p>
+</li>
+<li>
+<p><strong>Named Pipe Connection Issues</strong>:</p>
+</li>
+<li>Ensure the external application has the correct permissions to access the named pipe.</li>
+<li>
+<p>Check for errors in the NVDA log (accessible via NVDA's Log Viewer).</p>
+</li>
+<li>
+<p><strong>Command Execution Errors</strong>:</p>
+</li>
+<li>Verify that the command and arguments are correctly formatted.</li>
+<li>Check the NVDA log for any error messages related to command execution.</li>
+</ol>
+<hr />
+</body>
+</html>

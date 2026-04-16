@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced dictionaries processing for NVDA 1.6.0</title>
+</head>
+<body>
+<h1>EnhancedDictionaries 1.6.0</h1>
+<p>Extension pour la gestion du traitement des dictionnaires plus avancés</p>
+<h2>Télécharger</h2>
+<p>Télécharger l'extension <a href="https://github.com/marlon-sousa/EnhancedDictionaries/releases/download/1.6.0/EnhancedDictionaries-1.6.0.nvda-addon">Enhanced Dictionaries 1.6.0</a></p>
+<h2>Caractéristiques</h2>
+<h3>Dictionnaires pour des profils spécifiques</h3>
+<p>La manière dont NVDA applique les paramètres conditionnels, tels que la mise en Forme des Documents  et d'autres, c'est par l'utilisation de profils.</p>
+<p>Les profils sont des ensembles de paramètres pouvant être  momentanément appliqués au lecteur d'écran, lorsque nous utilisons  une application particulière ou un groupe d'applications.</p>
+<p>Par exemple, vous pouvez créer un profil,  pour des applications dédiés  à l'écriture de code de programmation, Dans lequel le niveau des ponctuations  est défini sur "tous", le niveau de la mise en retrait  est défini  sur "Des sons" et le débit de la parole est défini sur un niveau plus lent, afin que vous puissiez lire le code  d'de manière plus confortable. Vous pouvez ensuite associer ce profil avec "visual studio", "Eclipse", "notePad++" et "Visual Studio Code", lorsque l'une de ces applications deviennent actives, ces configurations s'appliqueront automatiquement.</p>
+<p>Lorsque nous faisons Alt Tab pour aller à d'autres applications ou lorsque nous avons fermé l'une de ces applications et nous tombons  sur le bureau, par exemple, la configuration par défaut prends effet. C'est alors possible de passer facilement à partir  de notre application de codage et le navigateur, et sans appuyer sur aucune touche supplémentaire, de lire sans ponctuations dans le navigateur et que  notre configuration spécifique est appliquée lorsque nous sommes de retour dans notre environnement de code de programmation.</p>
+<p>Les dictionnaires de NVDA sont des outils puissants, offrant d'excellentes fonctionnalités, telles que le remplacement de termes, en utilisant des expressions régulières. Cependant, jusqu'à l'apparition de cet extension, il n'y avait pas aucun moyen de rattacher de dictionnaires aux profils de NVDA.</p>
+<p>Jusqu'à présent, cela signifiait que si un remplacement était défini dans le dictionnaire  Défaut, il serait appliqué dans tous les cas, même dans des applications ou des situations dans lesquelles vous pourriez souhaiter qu'ils ne le soient pas.</p>
+<p>Cette extension implémente le traitement et la création / édition de dictionnaires dans le contexte du profil.</p>
+<h4>Comment ça marche?</h4>
+<p>Simplement installer l'extension et lorsqu'elle est active, vous remarquerez les points suivants:</p>
+<ul>
+<li>Les dictionnaires sont maintenant utilisés correctement, en tenant compte du profil actif.</li>
+<li>S'il y a des dictionnaires (Défaut ou spécifique à la voix) pour le profil actuel, ils seront utilisés.</li>
+<li>
+<p>S'il n'y a pas de dictionnaires spécifiques pour le profil que nous utilisons, les dictionnaires de profil par défaut seront utilisés. Ceci est cohérent avec la façon dont NVDA se comporte, dans le sens où lorsqu'un nouveau profil est créé, les configurations ne sont pas modifiées dans ce nouveau profil en prenant le profil par défaut.</p>
+<p>De même, si un dictionnaire n'est pas configuré pour le profil actuel, le dictionnaire de profil par défaut sera utilisé.</p>
+</li>
+<li>
+<p>Les dictionnaires spécifique à la voix se comportent exactement de la même manière: S'il y a un dictionnaire de voix pour le profil actuel, il sera utilisé. Sinon, le dictionnaire de voix du profil par défaut, s'il existe, sera utilisé.</p>
+</li>
+<li>La boîte de  dialogue de dictionnaire , lorsqu'elle est ouverte, montre toujours dans le titre, à quel profil de ce dictionnaire se réfère.</li>
+<li>
+<p>Le profil actif, lorsqu'il est chargé, déterminera quel dictionnaire sera ouvert pour l'édition, lorsque les menus de dictionnaire  Défaut  ou de Voix sont activés.</p>
+<p>Ceci est cohérent avec la manière dont NVDA se comporte, car si une personne accède à la configuration  et elle est modifiée, cela sera  sauvegardé sur le profil actif.</p>
+<p>De même, le dictionnaire ouvert appartiendra à ce profil.</p>
+</li>
+<li>
+<p>Si un dictionnaire spécifique n'existe pas sur un profil actif et que la boîte de dialogue de dictionnaire est ouverte, un nouveau dictionnaire pour ce profil sera créé.</p>
+<p>Ceci ne montrera aucune entrée, étant donné être un nouveau dictionnaire. Cependant, il ne sera pas sauvegardé avant que l'utilisateur ferme cette boîte de dialogue en cliquant sur "OK".</p>
+<p>Si nous procédons ainsi , le nouveau dictionnaire sera effectif. Si nous annulons la boîte de dialogue, le dictionnaire de profil par défaut sera toujours utilisé et aucun dictionnaire spécifique au profil ne sera sauvegardé.</p>
+</li>
+<li>
+<p>Lorsqu'un nouveau dictionnaire spécifique de profil est créé, il devient effectif et, par conséquent, les modèles  par défaut ne sont plus actifs pour ce profil.</p>
+<p>Cela pourrait être le comportement souhaité, mais peut-être pas. L'utilisateur souhaite peut-être utiliser tous les modèles à partir du dictionnaire par défaut et de nouveaux modèles uniquement actifs sur ce profil.</p>
+</li>
+<li>
+<p>Pour couvrir cette possibilité, un nouveau  bouton, appelé "Importer des entrées à partir du profil du dictionnaire par défaut", est créée dans la boîte de dialogue de dictionnaire.</p>
+<p>Ce bouton apparaît uniquement lorsqu'un dictionnaire spécifique au profil est édité. Pendant l'activation, il se comporte comme suit:</p>
+<ul>
+<li>Les entrées du dictionnaire Défaut (ou du dictionnaire spécifique à la voix) à partir du profil par défaut sont lues.</li>
+<li>Les entrées introuvables dans le dictionnaire étant éditées sont ajoutées à celui-ci.</li>
+<li>Si une entrée du dictionnaire  Défaut (ou voix) se trouve sur le dictionnaire étant édité, elle ne remplace pas l'entrée actuelle.</li>
+<li>L'importation ne sauvegarde pas les nouvelles entrées sur le disque. Il ajoute simplement des entrées importées dans la liste des entrées dans la boîte de dialogue de dictionnaire. Le focus est mis sur la liste et l'utilisateur a la possibilité d'examiner la nouvelle liste  d'entrées, Comme s'il les avait tous écrite manuellement.</li>
+</ul>
+</li>
+<li>
+<p>Chaque fois que l'utilisateur crée un dictionnaire pour un profil spécifique, ce dictionnaire est immédiatement associé à ce profil.</p>
+</li>
+<li>Chaque fois qu'un profil change, les dictionnaires spécifiques (Défaut et Voix) deviennent actifs immédiatement. Si ces dictionnaires n'existent pas, ceux du profil par défaut seront utilisés.</li>
+<li>Les dictionnaires intégrés et temporaires ne sont pas affectés car ils ne dépendent pas des profils, le dernier pour être temporaire et le premier pour être intégré.</li>
+</ul>
+<h1>aidant à traduire ou à développer l'extension</h1>
+<p>Si vous voulez aider à traduire ou à développer l'extension, s'il vous plaît accéder au  <a href="https://github.com/marlon-sousa/EnhancedDictionaries">dépôt du projet</a> et recherchez le fichier contributing.md dans le répertoire de documentation équivalent à votre langue.</p>
+<h2>Contributeurs</h2>
+<p>Remerciement spécial à</p>
+<ul>
+<li>Ângelo Miguel Abrantes - Traduction Portugais Portugal</li>
+<li>Rémy Ruiz - Traduction Français</li>
+<li>Rémy Ruiz - Traduction Espagnol</li>
+<li>Tarik Hadžirović - Traduction Croate</li>
+<li>Thiago Seus - Traduction Portugais Brésil</li>
+<li>Umut KORKMAZ - Traduction turc</li>
+<li>Ivan Shtefuriak - Traduction Ukrainien</li>
+</ul>
+</body>
+</html>

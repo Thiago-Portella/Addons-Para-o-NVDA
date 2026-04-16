@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: nvdaaddons\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2026-02-23 03:47+0000\n"
+"PO-Revision-Date: 2026-03-30 00:45\n"
+"Last-Translator: \n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: enhancedTouchGestures.pot\n"
+"X-Crowdin-File-ID: 210\n"
+
+#. Translators: dialog title shown when trying to install the add-on on unsupported systems.
+#: addon/installTasks.py:24
+msgid "Enhanced Touch Gestures install warning"
+msgstr "Gelişmiş Dokunma Hareketleri yükleme uyarısı"
+
+#. No touch hardware whatsoever
+#. Translators: dialog text shown when trying to install the add-on on unsupported systems.
+#: addon/installTasks.py:29
+msgid "This device does not support touch interaction. A touch capable device is required to use add-on features."
+msgstr "Bu cihaz dokunmatik etkileşimi desteklemiyor. Ek özellikler kullanmak için dokunmatik özellikli bir cihaz gereklidir."
+
+#. Portable NVDA running on a touch capable hardware
+#. Translators: dialog text shown when trying to install the add-on on unsupported systems.
+#: addon/installTasks.py:33
+msgid "You are using a portable copy of NVDA and the device supports touch interaction. NVDA must be installed to use add-on features."
+msgstr "NVDA'nın taşınabilir bir kopyasını kullanıyorsunuz ve cihaz dokunmatik etkileşimi destekliyor. Eklenti özelliklerini kullanmak için NVDA'nın kurulu olması gerekir."
+
+#. Translators: The gestures category for this add-on in input gestures dialog (2013.3 or later).
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
+#: addon/globalPlugins/enhancedTouchGestures.py:38 buildVars.py:21
+msgid "Enhanced Touch Gestures"
+msgstr "Gelişmiş Dokunma Hareketleri"
+
+#. Translators: input help message for Enhanced touch Gestures command.
+#: addon/globalPlugins/enhancedTouchGestures.py:226
+msgid "Emulates pressing tab on the system keyboard"
+msgstr "Sistem klavyesinde Sekme tuşuna basmayı taklit eder"
+
+#. Translators: input help message for Enhanced touch Gestures command.
+#: addon/globalPlugins/enhancedTouchGestures.py:234
+msgid "Emulates pressing shift+tab on the system keyboard"
+msgstr "Sistem klavyesinde Shift+Sekme tuşlarına basmayı taklit eder"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
+msgid "A suite of additional touch commands, including navigation and help commands.\n"
+"\tRequires a touch-enabled computer with Windows 8.1 or later with NVDA 2017.4 or later installed."
+msgstr "navigasyon ve yardım komutları da dahil olmak üzere, ek dokunmatik komutlardan oluşan bir paket.\n"
+"\tNVDA 2017.4 ya da sonraki sürümlerinden birinin kurulu olduğu, dokunmatik ekranlı ve en az Windows 8.1 yüklü bir bilgisayar gerektirir."
+
+#. Brief changelog for this version
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:30
+msgid "* Renamed 'web mode' to 'browse mode' as this mode will cover additional situations including browse mode in Word 365."
+msgstr "* Bu mod, Word 365'teki göz atma modu da dahil olmak üzere ek durumları kapsayacağından 'web modu', 'gözatma modu' olarak yeniden adlandırıldı."
+

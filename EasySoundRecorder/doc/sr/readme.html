@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Jednostavni Snimač Zvuka 1.1.1</title>
+</head>
+<body>
+<h1>Jednostavan Snimač Zvuka</h1>
+<p>Jednostavan Snimač Zvuka omogućava snimanje zvuka sa zvučne karte i mikrofona istovremeno koristeći WASAPI.
+Ovaj dodatak koristi trenutnu zvučnu karticu, ili bluetooth slušalice kao i mikrofon koji je trenutno aktivan, a omogućava snimanje za sada u wave, ili mp3 formatu.</p>
+<h1>Instalacija</h1>
+<p>Jednostavan Snimač Zvuka možete instalirati na 2 načina:</p>
+<ul>
+<li>Koristeći prodavnicu dodataka,</li>
+<li>Preuzimanjem aktuelne verzije dodatka sa stranice<br />
+<a href="https://github.com/DarkoMilosevic86/EasySoundRecorder/releases">https://github.com/DarkoMilosevic86/EasySoundRecorder/releases</a></li>
+</ul>
+<h1>Korišćenje</h1>
+<p>Jednostavan Snimač Zvuka koristite veoma jednostavno koristeći samo 2 komande:</p>
+<ul>
+<li>**Shift+NVDA+R - Pokreće snimanje, pauzira i nastavlja snimanje,</li>
+<li>**Shift+NVDA+T - Zaustavlja snimanje i čuva snimak u <code>.wav</code>, ili <code>.mp3</code> datoteku, u zavisnosti od podešavanja.</li>
+</ul>
+<h2>Važne napomene</h2>
+<ul>
+<li>Prilikom gašenja bluetooth slušalica može se dogoditi da Jednostavan Snimač Zvuka ne promeni automatski izlazni uređaj za snimanje, tako da ukoliko snimanje ne započne, morate ponovo pokrenuti NVDA.</li>
+<li>Ukoliko se dogodi da mikrofon blago secka kod snimka, podesite format mikrofona da odgovara formatu vaše zvučne kartice u odeljku Zvuk u kontrolnoj tabli.</li>
+</ul>
+<p>Kada instalirate Jednostavan Snimač Zvuka, podrazumevana fascikla u koju se čuvaju snimci je:<br />
+<code>C:\Users\username\Documents\EasySoundRecorder</code></p>
+<p>Tako na primer ako je vaše korisničko ime John, snimci će sse po zadatim podešavanjima čuvati u:<br />
+<code>C:\Users\john\Documents\EasySoundRecorder</code></p>
+<p>Podrazumevani format snimaka prilikom instalacije Jednostavnog Snimača Zvuka je WAV<br />
+Format snimaka kao i fasciklu u koju se čuvaju snimci možete promeniti u podešavanjima za Jednostavan Snimač Zvuka na sledeći način:  </p>
+<ol>
+<li>Pritisnite NVDA+N da otvorite NVDA meni,</li>
+<li>Pritisnite strelicu nadole dok ne čujete Opcije,</li>
+<li>Pritisnite strelicu udesno</li>
+<li>Pritiskajte strelicu nadole dok ne čujete Podešavanja Jednostavnog Snimača zvuka...</li>
+<li>Pritisnite Enter taster, i pojaviće se dijalog za podešavanja Jednostavan Snimača Zvuka.</li>
+</ol>
+<p>U ovom dijalogu možete podesiti format čuvanja snimaka:</p>
+<ul>
+<li>WAV</li>
+<li>MP3  </li>
+</ul>
+<p>Takođe, možete podesiti izlazni i ulazni uređaj za snimanje, a to se odnosi na odabir vaše zvučne kartice i mikrofona.
+Kada koristite Jednostavan Snimač Zvuka prvi put, koristiće podrazumevanu zvučnu karticu i mikrofon sve dok to ne promenite u podešavanjima.
+Možete podesiti i zvučni signal koji će vas obaveštavati kada je snimanje završeno, odnosno kada je snimak sačuvan i čućete zvučni signal beep.
+Za ovo koristite Zapišti kada je snimak sačuvan checkbox.</p>
+<p>Takođe, možete podesiti i fasciklu u koju će se čuvati snimci.
+Možete upisati naziv fascikle, ili aktivirati dugme <strong>Traži...</strong> kako biste odabrali fasciklu u koju želite čuvati snimke.</p>
+<h2>Važna napomena</h2>
+<p>Ukoliko fascikla u koju čuvatte snimke ne postoji, ista će biti kreirana pri prvom snimanju.</p>
+<h1>Za razvojne programere</h1>
+<p>Ukoliko želite da doprinesete razvoju Jednostavnog Snimača Zvuka, to možete učiniti na sledeći način:</p>
+<ul>
+<li>Klonirajte Github repozitorijum koristeći sledeću komandu:<br />
+  ```bash
+  git clone https://github.com/DarkoMilosevic86/EasySoundRecorder.git</li>
+<li>Izvršite fork ovog repozitorijuma i napravite odgovarajuće promene, bilo da se radi o dodavanju lokalizacije, ili promene u kodu</li>
+<li>Napravite pull request za pridruživanje vaših izmena glavnom repozitorijumu</li>
+</ul>
+<h1>Prijavljivanje problema</h1>
+<p>Ukoliko imate bilo kakvih problema sa radom Jednostavnog Snimača Zvuka, otvorite diskusiju na stranici</p>
+<p><a href="https://github.com/DarkoMilosevic86/EasySoundRecorder/issues">https://github.com/DarkoMilosevic86/EasySoundRecorder/issues</a></p>
+</body>
+</html>

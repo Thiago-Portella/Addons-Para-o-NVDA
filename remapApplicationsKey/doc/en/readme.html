@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Remap Applications key 2025.07.14</title>
+</head>
+<body>
+<h1>Remap Applications key</h1>
+<h2>Information</h2>
+<ul>
+<li>Authors: Rui Fontes based on the work of Héctor J. Benítez Corredera</li>
+<li>Updated in 22/03/2024</li>
+<li>Download <a href="https://github.com/ruifontes/RemapKeyAplication-para-NVDA/releases/download/2025.07.14/remapApplicationsKey-2025.07.14.nvda-addon">stable version</a></li>
+<li>Compatibility: NVDA version 2019.3 and beyond</li>
+</ul>
+<h2>Presentation</h2>
+<p>Simple add-on for those computers that do not have an applications key or whose applications key does not work.
+It is also usefull in the File explorer of Windows 11 build 22621 and laters, since it allows to assign a key to the combination Shift+applications key, used to display the full context menu. Starting in this Windows build, applications key only shows a stripped version of context menu.
+It is necessary to assign the key or combination of keys we want to replace applications key.
+In NVDA / Preferences / Input Gestures... / RemapApplicationsKey we can assign the combination we desire.</p>
+<h2>Observations</h2>
+<p>When assigning a key combination or a single key, we have to take into account that this combination or key is not used in any application.
+For example, Ctrl + Down Arrow could work for most of the system but would give an error in Google Chrome, not allowing access to the context menu.
+To give an example, I usually use the "printScreen" key, which is usually on the top row on the right and is usually the second or third key.
+We can find out which one it is if we use NVDA's input help; for this, we press the NVDA + 1 key and start exploring the keys on the keyboard. When it says "printScreen," that will be the key we were looking for. We can exit NVDA's input help by pressing NVDA + 1 again.
+This is an example, leaving it up to the user to choose their key or key combination.</p>
+<h2>Translators and collaborators:</h2>
+<ul>
+<li>French: Rémy Ruiz</li>
+<li>Russian: Valentin Kupriyanov</li>
+<li>Ukrainian: VovaMobile</li>
+<li>Turkish: Umut Korkmaz</li>
+</ul>
+<h2>Change Log</h2>
+<h3>Version 2023.09.30</h3>
+<ul>
+<li>In the 2023.09.26 NVDA compatibility was extended to version 2024.1;</li>
+<li>Now it is also possible to assign a keystroke to Shift+application key;</li>
+</ul>
+<h3>Version 2023.09.02</h3>
+<ul>
+<li>Now maintained by Rui Fontes and NVDA portuguese team</li>
+<li>Now the code is based in english.</li>
+</ul>
+<h3>Version 0.4</h3>
+<ul>
+<li>Added Russian, Ukrainian, and Turkish languages.</li>
+<li>Added compatibility with NVDA 2023.1</li>
+</ul>
+<h3>Version 0.3</h3>
+<ul>
+<li>Changed the way to invoke the applications key from native NVDA to native Windows, since it is a more reliable and more direct method.</li>
+<li>Added the possibility of left and right mouse clicks on focus.
+We will have to assign the corresponding key combinations in the Input gesture dialog.
+When we execute the action, the mouse will move to the focus and make the corresponding click, and a sound will be heard indicating that the click was executed.</li>
+</ul>
+<h3>Version 0.2</h3>
+<ul>
+<li>Compatibility with NVDA 2022</li>
+</ul>
+<h3>Version 0.1.5</h3>
+<ul>
+<li>Fixed issue in NVDA add-ons.</li>
+<li>Added French language.</li>
+</ul>
+<h3>Version 0.1</h3>
+<ul>
+<li>Initial version.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.7.0</title>
+</head>
+<body>
+<h1>EnhancedFindDialog for NVDA 1.7.0</h1>
+<p>Enhanced find dialog addon for NVDA, implementing search improvements:</p>
+<ul>
+<li>search history</li>
+<li>search wrapping, configured per profile</li>
+<li>case sensitivity, configured per profile</li>
+<li>contextual information on searches</li>
+</ul>
+<h2>Download</h2>
+<p>Download the <a href="https://github.com/marlon-sousa/EnhancedFindDialog/releases/download/1.7.0/EnhancedFindDialog-1.7.0.nvda-addon">Enhanced Find Dialog 1.7.0 addon</a></p>
+<h2>Features</h2>
+<h3>Search history</h3>
+<p>In many web sites and web applications, the fastest way to access specific places is by using the search command, often bound to ctrl + nvda + f keys.</p>
+<p>The search dialog allows us to type a text and be placed on the next occurrence of that text if it exists.</p>
+<p>In many cases, you will find yourself visiting the same web sites several times during the same NVDA session. In many of these web sites you will need to search for the same terms, specially if this is the only way to get quickly to a link or section of that web site.</p>
+<p>This is specially the case of people who work on a daily basis with web based systems as part of their jobs.</p>
+<p>However, NVDA does not keep the previous terms you searched on a list. This slows down your productivity, because unless you are searching for the exact same term of your last search, you have to type it again.</p>
+<p>This addon keeps a search history that lasts as long as NVDA is running. So, on activation, you just need to press down arrow and choose previously searched terms to perform a new search.</p>
+<p>You can of course type new terms. They will also be added to the list next time you activate the search dialog.</p>
+<h4>How it works?</h4>
+<p>Simply install the addon. When it is activated, pressing down and up arrows on the edit field on the search dialog will let you navigate through the list of previously searched terms.</p>
+<p>You can at any time type a new term as usual.</p>
+<h3>Search wrapping</h3>
+<p>Search Wrapping is a feature that, if configured, doesn't consider the current position you are on a text when performing searches.</p>
+<p>This means that if you search for something that is not present below your current position, search will be performed from the beginning of the text to check if this term exists somewhere in the whole text.</p>
+<p>This is specially important to people who work with web based systems and need to find a given button or piece of text regardless of where they are on the page.</p>
+<p>This option is profile specific, meaning that you can have a profile where it is active and other where it isn't.</p>
+<h4>How it works?</h4>
+<p>Simply install the addon. When it is activated, the find dialog will offer a checkbox called search wrap.</p>
+<p>If it is checked:</p>
+<ol>
+<li>Iff you search for a term and it is found below the current position, you will be placed on that text.</li>
+<li>If this term is not found below the current position, it will be searched from the top of the text.</li>
+<li>If the term is found, a short beep is produced to let you know that the text found is above your current position and you are placed at its position.</li>
+<li>If this term isn't found at all, then the text not found message is displayed.</li>
+</ol>
+<p>Changing this check box and performing a search will save the new state (checked or unchecked) for the active profile. Canceling the search won't change its state on the active profile, even if you changed it before canceling the search.</p>
+<h3>case sensitivity</h3>
+<p>NVDA already offers the case sensitivity checkbox to allow searches considering case. This addon extends this functionality by saving the state of this checkbox in the active profile, so that you can have profiles with this configured differently.</p>
+<h4>How it works?</h4>
+<p>Simply install the addon. Changing the case sensitivity check box and performing a search will save the new state (checked or unchecked) for the active profile. Canceling the search won't change its state on the active profile, even if you changed it before canceling the search.</p>
+<h3>contextual information on searches</h3>
+<p>The way NVDA behaves when a search term is found is the following: you are placed at the position of the searched term and the line is read from the searched term on.</p>
+<p>This has always been problematic when you need to search several times (by using NVDA + f3) for something, because the first thing you listen is the searched term itself, when you know that term because you just searched for it.</p>
+<p>This addon places the cursor at the position of the term, but instead of reading from the term on it reads the full line, gibing you the context where that term was found.</p>
+<p>For example, supose you are searching for "Marlon" because you know that there is a button called target Marlon somehwere. You don't want to search for target, because there are other buttons called "target x y z" and you want to find the target Marlon Button.</p>
+<p>Here is the text:</p>
+<p>Delete Marlon comments</p>
+<p>reply directly to Marlon</p>
+<p>Report Marlon as spammer</p>
+<p>Target Marlon on a response</p>
+<p>If you would search for Marlon before this block, you would hear
+Marlon Comments</p>
+<p>If you keept pressing NVDA + f3 you would hear</p>
+<p>Marlon</p>
+<p>Marlon as spammer</p>
+<p>Marlon on a response</p>
+<p>This would reduce your productivity because first you would hear only marlon, without knowing nothing about this ocurrence.</p>
+<p>The next time, you would hear Marlon and would have to wait for as spammer to be spoken, because  you wouldn't know either what is about Marlon on this text.</p>
+<p>Similarly, the next time you would need to wait for on a response to be spoken, because you wouldn't be sure about what was this thing about Marlon either.</p>
+<p>Further more, if you pressed NVDA + f3 quickly, you would hear Marlon, Marlon, Marlon, Marlon ... which is not productive cinse you know you are searching for Marlon.</p>
+<h4>How it works</h4>
+<p>Simply install the addon.</p>
+<p>After it is installed, the current line of the found search term is read and you are placed at the term on it.</p>
+<p>In our example above, at The first time you performed the search you would hear</p>
+<p>Delete Marlon comments</p>
+<p>If you keept pressing NVDA + f3 you would hear</p>
+<p>reply directly to Marlon</p>
+<p>Report Marlon as spammer</p>
+<p>Target Marlon on a response</p>
+<p>Further more, if you pressed NVDA + f3 quickly, you would hear the beginning of each line, allowing you to quickly hit enter on the target line because you know that Marlon is present att a latter position on that same line.</p>
+<h2>Contributing and translating</h2>
+<p>If you want to contribute or translate this addon, please access the <a href="https://github.com/marlon-sousa/EnhancedFindDialog">project repository</a> and find instructions on the contributing.md in the english documentation directory.</p>
+<h2>Contributors</h2>
+<p>Special thanks to</p>
+<ul>
+<li>Ângelo Miguel Abrantes - Portuguese translation</li>
+<li>Rémy Ruiz - French translation</li>
+<li>Rémy Ruiz - Spanish translation</li>
+<li>Tarik Hadžirović - Croatian translation</li>
+<li>Thiago Seus - Brazilian Portuguese translation, NVDA 2024.1 compatibility</li>
+<li>Umut KORKMAZ - Turkish translation</li>
+<li>Valentin Kupriyanov - Russian translation</li>
+<li>Ivan Shtefuriak - Ukrainian translation</li>
+<li>Jani Kinnunen - Finnish translation</li>
+<li>Leonardo Marenda - Italian translation</li>
+</ul>
+</body>
+</html>

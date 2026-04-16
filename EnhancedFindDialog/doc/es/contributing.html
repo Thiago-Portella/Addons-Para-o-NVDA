@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen"/>
+<title>Enhanced find dialog for NVDA 1.7.0</title>
+</head>
+<body>
+<h1>Contribuir</h1>
+<h2>Crear el complemento</h2>
+<p>Para esto, necesitarás:</p>
+<ul>
+<li>python 3.6 o superior</li>
+<li>El pip debe estar configurado</li>
+<li>scons (pip install scons)</li>
+<li>markdown (pip install markdown)</li>
+<li>comando msgfmt. La forma más sencilla de obtener es instalar el git y, en la instalación, elija la opción para que las herramientas Bash estén disponibles para el símbolo del sistema</li>
+</ul>
+<p>Una vez que estos elementos están instalados, basta escribir scons en la carpeta raíz del proyecto para crear el complemento</p>
+<h2>Contribuir para las traducciones</h2>
+<h3>Traducir el complemento</h3>
+<p>Suponiendo que ya tienes el entorno configurado para construir el complemento (consulta la sección anterior), para crear un archivo ".pot", donde todos los mensajes serán para la traducción, basta escribir scons pot, en la carpeta raíz del proyecto.</p>
+<p>A partir de este archivo base, puedes construir los archivos ".po" de traducción para tu idioma.
+Los idiomas ya traducidos se pueden encontrar en la carpeta /addon/locale.</p>
+<h3>Traducir la documentación</h3>
+<p>La documentación de traducción debe generarse a partir de los archivos ".tpl.md" (no de los archivos ".md"). Por lo tanto, excepto en el archivo  "readme.md", en la raíz del proyecto, no encontrarás otros archivos ".md" versionados.</p>
+<p>Los archivos ".tpl.md" son archivos markdown normales, excepto por una característica adicional: si  usas ${[var]} en cualquier lugar del texto, [var] será reemplazado  por una variable con el mismo nombre definido en el buildVars.py.</p>
+<p>Si no hay una variable con el mismo nombre, el reemplazo no sucede.</p>
+<p>Esto es útil, por ejemplo, para hacer que la documentación refleje los enlaces y títulos con el número de versión  del complemento automáticamente, sin necesidad de  ser reescrita.</p>
+<p>Para traducir la documentación, tradusca el archivo "readme.tpl.md", en la raíz del proyecto. El archivo traducido debe colocarse en la carpeta addon/doc/[lang] y debe llamarse "readme.tpl.md".</p>
+<p>Las variables ${[var]} no deben cambiarse. Escriba scons en la raíz del proyecto para que la documentación HTML y markdown sea creada.</p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Command Helper 2025.1.0</title>
+</head>
+<body>
+<h1>commandHelper</h1>
+<p>Proporciona un método alternativo de ejecutar scripts para personas que tienen dificultades al pulsar combinaciones de teclado complicadas.</p>
+<h3>Modo de uso</h3>
+<p>En primer lugar es necesario configurar un método para invocar el asistente. Se puede asignar un gesto de teclado en preferencias de NVDA &gt; Gestos de entrada. También se puede configurar la tecla control en las preferencias del complemento (ver más adelante).</p>
+<p>Cuando se invoca el asistente se activa una capa de órdenes de teclado con las siguientes opciones: </p>
+<ul>
+<li>Flechas izquierda y derecha para elegir una categoría. </li>
+<li>Cualquier letra de la A a la Z para saltar a la categoría con esa inicial. </li>
+<li>Flechas arriba y abajo para seleccionar una orden de la categoría elegida. </li>
+<li>Barra espaciadora para aplicar un filtro mediante voz. </li>
+<li>Enter para ejecutar la orden. </li>
+<li>Mayúsculas+enter para ejecutar la órden como si se hubiera pulsado su combinación de teclas dos veces rápidamente. </li>
+<li>Control+enter para ejecutar la órden como si se hubiese pulsado su combinación de teclas tres veces. </li>
+<li>F1 para informar del gesto correspondiente a la órden seleccionada. </li>
+<li>Escape abandona la capa de órdenes y restaura la funcionalidad normal del teclado.  </li>
+</ul>
+<h3>Configuración</h3>
+<p>La combinación de teclas para activar el ayudante de órdenes se puede modificar en las preferencias de NVDA &gt; Gestos de entrada. </p>
+<p>Algunas otras teclas pueden personalizarse en las preferencias de NVDA &gt; Opciones &gt; Ayudante de órdenes. </p>
+<ul>
+<li>Activar/desactivar el uso de la tecla control para invocar el ayudante de órdenes. </li>
+<li>Seleccionar con qué tecla se abandona el ayudante. </li>
+<li>Seleccionar con qué tecla se anuncia el gesto asociado a una órden. </li>
+<li>Activar/desactivar el manejo del ayudante a través del teclado numérico. </li>
+</ul>
+<h4>Uso de la tecla control para invocar el ayudante</h4>
+<p>Con esta opción activada se  invoca el ayudante pulsando cinco veces seguidas la tecla control. Esto es útil para personas a quienes  les resulta difícil pulsar combinaciones de varias teclas a la vez. Sin embargo, puede provocar en ocasiones la activación  involuntaria del ahyudante al pulsar la tecla control para otros usos, por ejemplo control+C y control+V para copiar y pegar. Para evitarlo hay que reducir la velocidad de repetición del teclado. Esto se hace en el panel de control de Windows. En el diálogo de preferencias del complemento hay un botón que pulsándolo lleva directamente a él. También se puede  abrir pulsando la tecla Windows+R y escribiendo control.exe keyboard en el cuadro ejecutar de Windows. En el control deslizante "Velocidad de repetición" hay que poner un valor lo más bajo posible. Poniéndolo a cero nos aseguramos de que no tendremos problemas pero dejará de  funcionar la activación del ayudante manteniendo pulsada la tecla control, lo que podría ser un inconveniente para algunos usuarios con movilidad reducida a quienes les cuesta hacer pulsaciones rápidas repetidas y prefieren activarlo así. No hay una configuración universal, cada usuario deberá encontrar la más adecuada para sus necesidades o preferencias. </p>
+<h4>Teclado numérico</h4>
+<p>Con esta opción activada se puede usar el ayudante con las teclas del teclado numérico. </p>
+<ul>
+<li>4 y 6 para elegir una categoría. </li>
+<li>2 y 8 para seleccionar una orden de la categoría elegida. </li>
+<li>5 para informar del gesto correspondiente a la órden seleccionada. </li>
+<li>Enter para ejecutar la orden. </li>
+<li>Signo más para ejecutar la órden como si se hubiera pulsado su combinación de teclas dos veces rápidamente. </li>
+<li>Signo menos para ejecutar la órden como si se hubiese pulsado su combinación de teclas tres veces. </li>
+<li>Suprimir abandona la capa de órdenes y restaura la funcionalidad normal del teclado.  </li>
+</ul>
+<h4>Filtro por voz</h4>
+<p>En el menú virtual pulsa la barra espaciadora y habla al micrófono. El menú  mostrará sólo los comandos que coincidan con las palabras habladas. Si el resultado no es satisfactorio, pulsa espacio de nuevo para realizar otra búsqueda o escape para regresar al menú completo.</p>
+<p>para que funcione es necesario tener conexión a internet. </p>
+<p>Nota sobre compativilidad: El complemento está preparado para funcionar con versiones previas de NVDA. La más antigua con la que se ha probado es la 2018.1 pero debería funcionar con otras aún más antiguas. Sin embargo no se proporcionará soporte futuro para problemas específicos que puedan surgir en esas versiones. </p>
+</body>
+</html>

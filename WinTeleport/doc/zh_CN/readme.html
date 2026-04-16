@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>WinTeleport 0.3.1</title>
+</head>
+<body>
+<h1>WinTeleport</h1>
+<p>本 NVDA 插件通过快捷键让你可以轻松地在 Windows 虚拟桌面之间移动当前焦点窗口。</p>
+<h2>功能特性</h2>
+<ul>
+<li>将窗口移动到左侧或右侧的虚拟桌面。</li>
+<li>将窗口移动到指定编号的虚拟桌面。</li>
+<li>支持在移动窗口后自动切换到目标桌面。</li>
+<li>播报当前虚拟桌面的名称和编号。</li>
+</ul>
+<h2>默认快捷键</h2>
+<ul>
+<li><code>NVDA+Windows+D</code>: 播报当前虚拟桌面的信息（名称、编号及总数）。</li>
+<li><code>NVDA+Control+Windows+左方向键</code>: 将焦点窗口移动到左侧桌面并切换过去。</li>
+<li><code>NVDA+Control+Windows+右方向键</code>: 将焦点窗口移动到右侧桌面并切换过去。</li>
+<li><code>NVDA+Control+Windows+1</code> 至 <code>9</code>: 将焦点窗口移动到第 1-9 个虚拟桌面。</li>
+</ul>
+<p><em>注意：如果你希望在移动窗口后保留在当前桌面（不跟随切换），可以在 NVDA 的“输入按键”对话框中的“虚拟桌面”类别下自行分配快捷键。</em></p>
+<h2>数字快捷键限制</h2>
+<ul>
+<li>目前直接移动到指定编号的功能仅支持第 1 到第 9 个桌面，你只能分配包含 1 到 9 键的自定义按键组合。</li>
+</ul>
+<h2>已知问题与限制</h2>
+<ul>
+<li><strong>兼容性</strong>: 极个别采用非标准窗口框架的应用（例如传统版 QQ）可能无法通过该插件移动窗口。</li>
+<li><strong>焦点问题</strong>: 当你将某个虚拟桌面上的最后一个窗口移动到其他桌面，且选择不跟随切换时，系统焦点可能会停留在“未知”对象上。</li>
+</ul>
+<h2>参考项目</h2>
+<p>本项目参考并集成了以下开源项目的实现逻辑：
+- <a href="https://github.com/mirober/pyvda">pyvda</a>: 适用于 Windows 10/11 虚拟桌面管理的 Python 库。
+- <a href="https://github.com/Eun/MoveToDesktop">MoveToDesktop</a>: 一个实用的窗口桌面移动工具。</p>
+<h2>未来规划 (To-Do) 如有需要：</h2>
+<ul>
+<li><strong>窗口固定</strong>: 支持“置顶/固定”窗口或应用，使其在所有虚拟桌面中始终可见。</li>
+<li><strong>设置面板</strong>: 支持对个别选项进行个性化配置。</li>
+</ul>
+</body>
+</html>

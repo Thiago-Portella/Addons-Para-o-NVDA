@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>資源監視器 26.04</title>
+</head>
+<body>
+<h1>資源監視器</h1>
+<ul>
+<li>作者：Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst 和其他 NVDA 貢獻者</li>
+</ul>
+<p>這個附加元件提供有關 CPU 負載，記憶體使用情況，及其他資源的使用訊息。</p>
+<h1>快速鍵</h1>
+<p>所有指令皆支援隨選語音模式。</p>
+<ul>
+<li>NVDA+Shift+E：顯示已使用記憶體、處理器平均負載、電池資訊 (若可用)。</li>
+<li>NVDA+Shift+1：顯示平均處理器負載；若有多核心 CPU，則一併顯示各個核心的負載。</li>
+<li>NVDA+Shift+2/5：顯示實體及虛擬記憶體的已使用空間及總計空間。</li>
+<li>NVDA+Shift+3：顯示本機磁碟與卸除式磁碟機的已用空間和總空間。</li>
+<li>NVDA+Shift+4：顯示電池百分比、充電狀態、剩餘時間 (若沒有在充電)，及電池電量低或非常低時的警告。</li>
+<li>NVDA+Shift+6：顯示 CPU 架構、Windows 版本及組件編號。</li>
+<li>NVDA+Shift+7：顯示系統執行時間。</li>
+<li>NVDA+Shift+8：顯示無線網路連線的資訊、SSID 名稱及強度；若沒有可用連線，則顯示沒有 SSID。</li>
+</ul>
+<p>您可以透過輸入手勢對話框來變更這些快速鍵。</p>
+<h2>使用者請注意</h2>
+<p>這個附加元件不會取代 Windows 的工作管理員及其他系統程式訊息。還要留意以下幾點：</p>
+<ul>
+<li>若在安全畫面上執行此附加元件，資源資訊將無法複製至剪貼簿。</li>
+<li>CPU 使用率是針對邏輯處理器而非實體核心。對於使用超執行緒的處理器來說，這是顯而易見的，其中 CPU 的數量是 CPU 核心數量的兩倍。在某些較新的電腦上，並非所有 CPU 核心都會啟用超執行緒。</li>
+<li>如果正在進行繁忙的磁碟活動例如複製大型檔案，則獲取磁碟使用訊息時可能出現延遲。</li>
+<li>讀出處理器架構資訊時，「x86」和「AMD64」分別指 32 位元和 64 位元 (x64) 的 Intel 及 AMD 處理器。</li>
+<li>雖然此附加元件支援 Windows 8.1 (有限支援)，但建議使用 Windows 10 22H2 (2022 年更新/組建 19045) 或更新版本。</li>
+<li>不支援在 Windows 10/11 LTSC 上安裝此附加元件。</li>
+</ul>
+<h2>26.01 版</h2>
+<ul>
+<li>需要 NVDA 2025.3.2 或更新版本。</li>
+<li>NVDA 將會使用標準化版本名稱來讀出 Windows Server 版本，而非專用的伺服器版本名稱；例如使用 Windows Server 24H2 而非 Windows Server 2025。</li>
+<li>NVDA 不再於電池狀態中加入「0 分鐘」(例如：讀為「4 小時」，而非「4 小時 0 分鐘」)。</li>
+<li>NVDA 將可識別更大記憶體與儲存空間容量的額外字首，包括 ronnabyte (1000 的 9 次方) 及 quettabyte (1000 的 10 次方)。</li>
+</ul>
+<h2>25.09 版</h2>
+<ul>
+<li>需要 NVDA 2025.2 或更新版本。</li>
+</ul>
+<h2>25.07 版</h2>
+<ul>
+<li>在 Pyright (一個 Python 靜態類型檢查器) 的幫助下，使附加元件的程式碼更為穩健。</li>
+</ul>
+<h2>25.06 版</h2>
+<ul>
+<li>改善了連線至無線網路時的連線狀態報讀 (@danstiv)。</li>
+</ul>
+<h2>25.02 版</h2>
+<ul>
+<li>恢復了對 Windows 8.1 的有限支援。</li>
+<li>改善了已使用與總記憶體資訊報讀的準確性 (@danstiv)。</li>
+<li>啟動 NVDA 後，首次執行記憶體用量指令 (NVDA+Shift+2/5) 時，NVDA 不再會短暫凍結。</li>
+<li>Windows Insider Preview 版本不再會被報讀為「Windows Insider」。</li>
+</ul>
+<h2>24.08 版</h2>
+<ul>
+<li>需要 NVDA 2024.2 或更新版本。這使得附加元件可以移除 psutil 相依套件，因為 NVDA 已包含此套件。</li>
+<li>已將 psutil 相依套件更新至 NVDA 2024.2 內含的版本 (6.0.0)。</li>
+<li>Ruff 取代 Flake8 作為程式碼風格檢查工具。</li>
+</ul>
+<h2>24.05 版</h2>
+<ul>
+<li>需要 NVDA 2024.1 或更新版本。</li>
+<li>NVDA 現在能識別採用 WPA3 驗證方式 (例如對等實體同步驗證 (SAE)) 的無線網路。</li>
+</ul>
+<h2>24.04 版</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 5.9.8 版。</li>
+<li>新增了對隨選朗讀模式的支援，以便在此模式下能讀出資源資訊。</li>
+</ul>
+<h2>23.11 版</h2>
+<ul>
+<li>由於讀出記憶體用量發生問題，已將 psutil 相依套件降級至 5.9.4 版。</li>
+</ul>
+<h2>23.10 版</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 5.9.5 版。</li>
+</ul>
+<h2>23.09 版</h2>
+<ul>
+<li>在 Windows Server 系統上，當無線功能模組不可用時，NVDA 不再會記錄啟動錯誤訊息。</li>
+</ul>
+<h2>23.06 版</h2>
+<ul>
+<li>修正了因無線網路卡無法使用，而導致資源監視器無法正常運作的問題。</li>
+</ul>
+<h2>23.05.1 版</h2>
+<p>wlanReporter NVDA 附加元件現已成為資源監視器的一部分！</p>
+<ul>
+<li>檢查無線網路連線的舊方法已被 wlanReporter 的 Windows API 取代：https://github.com/kvark128/WlanReporter/ 。</li>
+<li>讀出 SSID 名稱與訊號強度後，NVDA 現在也會告知您網路的安全性類型。</li>
+<li>當您連線或中斷無線網路時，NVDA 現在會提醒您。</li>
+<li>當無線網路連線開啟或關閉時，NVDA 會提醒您。</li>
+</ul>
+<h2>23.05 版</h2>
+<ul>
+<li>新增了偵測並顯示已連線無線網路狀態的功能。</li>
+<li>讀出已連線無線網路的 SSID 名稱。</li>
+<li>讀出 ssid 的訊號強度</li>
+<li>若偵測不到任何 SSID，則讀出找不到 SSID。</li>
+</ul>
+<h2>23.02 版</h2>
+<ul>
+<li>需要 NVDA 2022.4 或更新版本。</li>
+<li>需要 Windows 10 21H2 (2021 年 11 月更新/組建 19044) 或更新版本。</li>
+</ul>
+<h2>23.01 版</h2>
+<ul>
+<li>需要 NVDA 2022.3 或更新版本。</li>
+<li>需要 Windows 10 或更新版本，因為微軟自 2023 年 1 月起，已不再支援 Windows 7、8 和 8.1。</li>
+<li>已將 psutil 相依套件更新至 5.9.4 版。</li>
+<li>NVDA 會讀出實際的處理器架構 (x86/AMD64/ARM64)，作為 Windows 版本資訊的一部分。</li>
+<li>在單核心系統上，NVDA 不再讀出 CPU 核心負載，因為平均 CPU 負載與核心負載相同。</li>
+</ul>
+<h2>22.03 版</h2>
+<p>22.03 版是最後一個支援 Windows 7 Service Pack 1、8 和 8.1 的穩定版本。</p>
+<ul>
+<li>需要 NVDA 2021.3 或更新版本。</li>
+<li>當嘗試在 Windows 7、8 和 8.1 上安裝此附加元件時，將會顯示一則警告訊息。</li>
+<li>已將 psutil 相依套件更新至 5.9.0 版。</li>
+</ul>
+<h2>22.01 版</h2>
+<ul>
+<li>需要 NVDA 2021.2 或更新版本。</li>
+</ul>
+<h2>21.10 版</h2>
+<ul>
+<li>由於 NVDA 的變更會影響此附加元件，因此需要 NVDA 2021.1 或更新版本。</li>
+</ul>
+<h2>21.08 版</h2>
+<ul>
+<li>最低 Windows 版本需求現已與 NVDA 版本綁定。</li>
+<li>Windows 組建 20348 和 22000 分別被識別為 Windows Server 2022 和 Windows 11。</li>
+<li>在 Insider Preview 組建上，不會使用「Windows 10」等 Windows 版本名稱，Nvda 將改為讀出「Windows Insider」。</li>
+<li>在 64 位元系統上，處理器架構 (x64 或 ARM64) 將會作為 Windows 版本資訊的一部分被讀出。</li>
+</ul>
+<h2>21.04 版</h2>
+<ul>
+<li>需要 NVDA 2020.4 或更新版本。</li>
+<li>已將 psutil 相依套件更新至 5.8.0 版。</li>
+<li>按兩次附加元件指令以將資源資訊複製至剪貼簿時，NVDA 會讀出正在被複製的資源摘要。</li>
+</ul>
+<h2>21.01 版</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 5.7.3 版。</li>
+<li>縮短了 Windows 版本訊息。</li>
+<li>在 Windows 8.1 上，build.revision 將會作為 Windows 版本訊息的一部分被報讀，類似於 Windows 10。</li>
+</ul>
+<h2>20.09 版</h2>
+<ul>
+<li>系統執行時間現在以日、時、分、秒的方式呈現。</li>
+<li>Windows Server Insider Preview 組建 20201 或更新版本，現在能被正確識別為 Server Insider 組建。</li>
+</ul>
+<h2>20.07 版</h2>
+<ul>
+<li>取得 Windows 版本資訊 (NVDA+Shift+6) 時，Windows 10 20H2 版能被正確識別。</li>
+<li>按下 NVDA+Shift+6 時，簡化了 Windows 10 版本訊息，即從 Windows 10verYYMM改為Windows 10 YYMM。</li>
+</ul>
+<h2>20.06 版</h2>
+<ul>
+<li>透過 Flake8 解決了許多編碼風格問題與潛在錯誤。</li>
+</ul>
+<h2>20.04 版</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 5.7.0 版。</li>
+</ul>
+<h2>20.01 版</h2>
+<ul>
+<li>由於廣泛使用 Python 3，因此需要 NVDA 2019.3 或更新版本。</li>
+</ul>
+<h2>19.11 版</h2>
+<ul>
+<li>改善了 Windows Insider Preview 組建的偵測，特別是對於 20H1 及之後的版本。</li>
+</ul>
+<h2>19.07 版</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 5.6.3 版。</li>
+<li>讀出電池狀態指令的內部變更。</li>
+</ul>
+<h2>18.12 版</h2>
+<ul>
+<li>內部變更，以支援未來的 NVDA 版本。</li>
+</ul>
+<h2>18.10 版</h2>
+<ul>
+<li>程式碼已變得與 Python 3 更相容。</li>
+<li>已將 psutil 相依套件更新至 5.4.7 版。</li>
+<li>當取得磁碟容量和記憶體用量時，若使用具備超過 1 PB 記憶體或磁碟空間的電腦或服務，NVDA 不再會出現錯誤。</li>
+<li>記憶體與磁碟用量的值，現在會顯示至小數點後兩位 (例如 4.00 GB 而非 4.0 GB)。</li>
+<li>改善了 Windows Insider Preview 組建的偵測。</li>
+</ul>
+<h2>18.04 版</h2>
+<p>18.04.x 版是最後一個支援 Windows 7 SP1 之前版本作業系統的版本。</p>
+<ul>
+<li>最後一個支援 Windows Server 2003、Vista 和 Server 2008 的版本。</li>
+<li>更佳地偵測 Windows 10 版本，並能區分公開版與 Insider Preview 組建。</li>
+</ul>
+<h2>17.12 版</h2>
+<ul>
+<li>新增支援 Windows 10 的 64 位元 ARM 處理器。</li>
+</ul>
+<h2>17.09 版</h2>
+<p>重要提醒：17.09.x 版是支援 Windows XP 的最後一個版本。</p>
+<ul>
+<li>最後一個能在 Windows XP 執行的版本。</li>
+<li>Windows 10 組建 16278 及其之後的版本，已可被識別為 1709 版。等到組建 1709 的穩定版釋出後，此元件也將發布一個小幅修正的版本。</li>
+</ul>
+<h2>17.07.1 版</h2>
+<ul>
+<li>重新支援 Windows XP。（早先從 17.02 版就不支援了）。</li>
+</ul>
+<h2>17.05 版</h2>
+<ul>
+<li>顯示系統執行時間（最近一次開機後經過的時間，NVDA+Shift+7）。</li>
+</ul>
+<h2>17.02 版</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 5.0.1 版。</li>
+<li>檢查磁碟使用情形時，在卸除式裝置未被正確識別的某些系統上（例如，當卡未插入讀卡機時），NVDA 不在出現錯誤對話框。）</li>
+</ul>
+<h2>16.08 版</h2>
+<p>從 16.08 版起，新版附加元件將使用年.月為版本號。</p>
+<ul>
+<li>Windows 10 的幾個更新版本，已可正確識別（例如：1607、14393）。</li>
+<li>Windows 10 組建版本（在安裝累積更新後），已可被正確識別，（如14393.51）。</li>
+<li>如果使用 Insider Preview 組建，已可識別。</li>
+</ul>
+<h2>4.5 版的變更</h2>
+<ul>
+<li>此元件的儲存庫搬移到 GitHub，網址為 (https://github.com/josephsl/resourcemonitor)。</li>
+<li>Windows Server 2016 已能正確識別。</li>
+</ul>
+<h2>4.0 版的變更</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 2.2.1 版。</li>
+<li>在取得有關 CPU 負載資訊時，效能大幅改善。</li>
+<li>新增了對 Windows 10 的識別。</li>
+<li>在 Windows 10中，已可顯示 Windows 的內部版本號。</li>
+<li>您可在「管理附加元件」中，獲得元件說明。</li>
+</ul>
+<h2>3.1 版的變更</h2>
+<ul>
+<li>資源監視器正式支援 Windows 8.1。</li>
+<li>更新翻譯。</li>
+</ul>
+<h2>3.0 版的變更</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 1.2.1 版。</li>
+<li>顯示目前 Windows 版本及 Service Pack (NVDA+Shift+6)。</li>
+<li>可變更元件快速鍵，（需 NVDA 2013.3 或更高版本）。</li>
+<li>可複製個別資源摘要到剪貼簿，方法是相同的元件指令連按兩次。</li>
+</ul>
+<h2>2.4 版的變更</h2>
+<ul>
+<li>新增語言：中文（簡體）、，烏克蘭文。</li>
+<li>更新翻譯。</li>
+</ul>
+<h2>2.3 版的變更</h2>
+<ul>
+<li>新增保加利亞文翻譯。</li>
+</ul>
+<h2>2.2 版的變更</h2>
+<ul>
+<li>新增以下翻譯：阿拉伯文、阿拉貢文、克羅埃西亞文、荷蘭文、芬蘭文、法文、加里斯亞文、德文、匈牙利文、意大利文、日文、韓文、尼泊爾文、波蘭文、葡萄牙文（巴西）、俄文、斯洛伐克文、斯洛維尼亞文、西班牙文、坦米爾文、土耳其文。</li>
+</ul>
+<h2>2.1 版的變更</h2>
+<ul>
+<li>已將 psutil 相依套件更新至 0.6.1 版。</li>
+<li>取得磁碟訊息時，修正延遲較長時間的問題。</li>
+<li>程式碼清理。</li>
+</ul>
+<h2>2.0 版的變更</h2>
+<ul>
+<li>支援翻譯元件及翻譯註解。</li>
+</ul>
+<h2>1.0 版的變更</h2>
+<ul>
+<li>初始版本</li>
+</ul>
+</body>
+</html>
