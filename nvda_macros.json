@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1781192588.4327738",
+        "name": "novo arquivo no explorer",
+        "loop_count": 1,
+        "speed": 1.0,
+        "target_app": null,
+        "recorded_app": "",
+        "events": [
+            {
+                "action": "keyDown",
+                "vkCode": 164,
+                "scanCode": 56,
+                "extended": false,
+                "delay": 0.0
+            },
+            {
+                "action": "keyUp",
+                "vkCode": 164,
+                "scanCode": 56,
+                "extended": false,
+                "delay": 0.13487810001242906
+            },
+            {
+                "action": "keyDown",
+                "vkCode": 13,
+                "scanCode": 28,
+                "extended": false,
+                "delay": 0.123
+            },
+            {
+                "action": "keyUp",
+                "vkCode": 13,
+                "scanCode": 28,
+                "extended": false,
+                "delay": 0.035
+            },
+            {
+                "action": "keyDown",
+                "vkCode": 38,
+                "scanCode": 72,
+                "extended": true,
+                "delay": 0.3150086999812629
+            },
+            {
+                "action": "keyUp",
+                "vkCode": 38,
+                "scanCode": 72,
+                "extended": true,
+                "delay": 0.035
+            },
+            {
+                "action": "keyDown",
+                "vkCode": 38,
+                "scanCode": 72,
+                "extended": true,
+                "delay": 0.022378999972715974
+            },
+            {
+                "action": "keyUp",
+                "vkCode": 38,
+                "scanCode": 72,
+                "extended": true,
+                "delay": 0.035
+            },
+            {
+                "action": "keyDown",
+                "vkCode": 13,
+                "scanCode": 28,
+                "extended": false,
+                "delay": 0.0
+            },
+            {
+                "action": "keyUp",
+                "vkCode": 13,
+                "scanCode": 28,
+                "extended": false,
+                "delay": 0.035
+            }
+        ]
+    }
+]

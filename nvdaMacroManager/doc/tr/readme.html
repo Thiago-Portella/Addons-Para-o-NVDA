@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDA Macro Manager 1.2.3</title>
+</head>
+<body>
+<h1>NVDAMacroManager (Modern Makro IDE ve Otomasyon Motoru)</h1>
+<p><strong>Geliştirici:</strong> Muhammet Enes Şenovalı
+<strong>Sürüm:</strong> 1.0.3</p>
+<p>NVDA Macro Manager, erişilebilirliği merkezine alan, işletim sistemi seviyesinde (low-level) çalışan, yüksek performanslı bir makro kayıt, düzenleme ve oynatma motorudur. Oyunlardaki karmaşık kombolardan günlük ofis işlerinize kadar tüm tekrarlayan görevlerinizi, NVDA ekran okuyucusuna tam entegre bir şekilde kusursuzca otomatikleştirir.</p>
+<h2>🚀 Temel Özellikler</h2>
+<ul>
+<li><strong>Çift Kayıt Motoru (Canlı ve Güvenli Mod):</strong> Makrolarınızı isterseniz ekranda görerek (Canlı), isterseniz de sistemden tamamen gizleyerek (Güvenli Mod) kaydedebilirsiniz. Güvenli modda bastığınız tuşlar işletim sistemine iletilmez; böylece masaüstünde gezinirken veya makro kaydederken yanlışlıkla dosyalarınız silinmez, pencereleriniz kapanmaz.</li>
+<li><strong>Dinamik NVDA Kısayolları:</strong> Kaydettiğiniz her bir makroyu NVDA sistemine otomatik olarak entegre eder. NVDA'in <code>Tercihler -&gt; Girdi Hareketleri -&gt; Makro Yöneticisi</code> menüsünden dilediğiniz makroya özel kısayol atayabilirsiniz. Arayüze girmeden makrolarınızı saniyeler içinde tetikleyin.</li>
+<li><strong>Profesyonel Makro IDE'si (Olay Düzenleyici):</strong> Makrolarınızı profesyonel bir geliştirici gibi yönetin.</li>
+<li><strong>Doğrusal İş Akışı:</strong> Tuşlar ve bekleme süreleri temiz, bağımsız adımlara bölünmüştür (Bekle, Bas-Çek, Tuş Aşağı, Tuş Yukarı).</li>
+<li><strong>Yerleşik Pano (Clipboard):</strong> Makro adımlarını kopyalamak veya taşımak için standart <code>Ctrl + C</code>, <code>Ctrl + X</code> ve <code>Ctrl + V</code> kısayollarını tam destekler.</li>
+<li><strong>Geri/İleri Al:</strong> Hata mı yaptınız? <code>Ctrl + Z</code> (Geri Al) veya <code>Ctrl + Y</code> (İleri Al) ile anında düzeltin.</li>
+<li><strong>Dinamik Olay Ekleme:</strong> Kayıt sırasında bir tuşa basmayı mı unuttunuz? Baştan kaydetmeye gerek kalmadan makronun herhangi bir yerine yeni bekleme süreleri veya belirli tuş vuruşları ekleyin.</li>
+<li><strong>Akıllı Tuş Yakalama:</strong> Yeni bir tuş eklerken veya düzenlerken klavyeden fiziksel olarak tuşa basabilir veya doğrudan işletim sisteminden çekilip yerelleştirilmiş akıllı listeden (Harfler, Noktalama İşaretleri, Numpad, Sistem Tuşları) seçim yapabilirsiniz.</li>
+<li><strong>Oyun ve Anti-Cheat Uyumlu:</strong> Tuşları donanım seviyesinde (SendInput API ve ScanCode) göndererek oyunların güvenlik sistemlerine takılmadan kusursuz çalışır.</li>
+<li><strong>Hassas Hız ve Döngü Kontrolü:</strong> Makroları 0.1'lik adımlarla (Örn: 1.3x) hızlandırabilir, anında (0 gecikme) oynatabilir veya sonsuz döngüye alabilirsiniz.</li>
+<li><strong>Uygulama Kilidi (App-Binding):</strong> Kritik hataları önlemek için makrolarınızı sadece belirli uygulamalarda (.exe) çalışacak şekilde kilitleyebilirsiniz.</li>
+<li><strong>Çoklu Dil (i18n) Desteği:</strong> Yerleşik olarak Türkçe (<code>tr</code>), İngilizce (<code>en</code>), İspanyolca (<code>es</code>) ve Almanca (<code>de</code>) dillerini destekler.</li>
+</ul>
+<h2>⌨️ Varsayılan Kısayollar</h2>
+<ul>
+<li><strong><code>NVDA + Windows + R</code></strong> : <strong>CANLI</strong> makro kaydını başlatır veya durdurur. (Tuş vuruşlarınız işletim sisteminde işlem görür).</li>
+<li><strong><code>NVDA + Windows + Shift + R</code></strong> : <strong>GÜVENLİ (GÖLGE)</strong> makro kaydını başlatır veya durdurur. (Kayıt sırasında bastığınız tuşlar sistemden gizlenir, bilgisayarınızda hiçbir işlem gerçekleşmez).</li>
+<li><strong><code>NVDA + Windows + P</code></strong> : Son kaydedilen (geçici) makroyu oynatır. <strong>Oynatma devam ederken basılırsa işlemi anında iptal eden bir Acil Durum Freni (Kill Switch) işlevi görür.</strong></li>
+<li><strong><code>NVDA + Shift + M</code></strong> : Makro Yöneticisi arayüzünü açar.</li>
+</ul>
+<h2>🛠️ Nasıl Kullanılır?</h2>
+<h3>1. Hızlı Makro Kaydetme</h3>
+<ul>
+<li>Yaptığınız işlemi anında ekranda görmek istiyorsanız <code>NVDA + Win + R</code> kullanın.</li>
+<li>Eğer klavyede tehlikeli tuşlara (<code>Delete</code>, <code>Alt+F4</code> vb.) basacaksanız ve bilgisayarınızın etkilenmesini istemiyorsanız <code>NVDA + Win + Shift + R</code> kullanın.</li>
+<li>Kaydı bitirmek için aynı kısayola tekrar basın. Kaydedilen bu geçici makroyu <code>NVDA + Win + P</code> ile hemen test edebilirsiniz.</li>
+</ul>
+<h3>2. Makroyu Kalıcı Hale Getirme ve IDE Kullanımı</h3>
+<p>Geçici makronuzu veritabanına kaydetmek için <code>NVDA + Shift + M</code> kısayoluyla Makro Yöneticisini açın. Burada makronuza isim verip, hızını veya döngüsünü ayarlayarak "Kaydet" butonuna basın.</p>
+<p>Listede kayıtlı bir makroyu seçip <strong>Düzenle</strong> dediğinizde IDE açılır:
+* Olaylar listesinde <code>Shift</code> ile birden çok adımı seçebilirsiniz.
+* Seçili adımları <code>Ctrl + C</code> ile kopyalayıp, makronun farklı bir yerine <code>Ctrl + V</code> ile yapıştırabilirsiniz.
+* Gecikme sürelerini topluca değiştirebilir veya yanlış basılan bir tuşu güncelleyebilirsiniz.
+* "Olay Ekle" butonu ile makronun arasına yepyeni tuşlar veya bekleme süreleri enjekte edebilirsiniz.</p>
+<h3>3. Özel Kısayol Atama</h3>
+<p>Makronuzu kaydettikten sonra NVDA menüsünden <code>Tercihler -&gt; Girdi Hareketleri</code> yolunu izleyin. Listeden <strong>Makro Yöneticisi</strong> kategorisini bulun. Orada kaydettiğiniz makronun adını göreceksiniz. Ekle butonuna basarak dilediğiniz tuş kombinasyonunu atayın.</p>
+</body>
+</html>

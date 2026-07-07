@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Tagalog\n"
+"Language: tl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - AutoCorrect"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "Code:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "OK"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "I-cancel"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "Hindi nahanap ang code"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Hindi makopya sa clipboard"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "Hindi ma-paste ang text. Pakisubukan ang manual paste (Ctrl+V)."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "Error sa pag-paste ng text"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "Mga Setting ng xPand"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "Listahan ng code:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "Code"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "Salita"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "Salita:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "Idagdag"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "I-edit"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "Alisin"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "Isara"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "Walang code na nagsisimula sa: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "Walang tugmang code"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "Mangyaring maglagay ng code"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "Mangyaring maglagay ng salita"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "Mayroon na ang code na ito"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "Tagumpay ang pagdagdag"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "Error sa pagdagdag ng code"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "Edit mode. Baguhin ang code at salita, tapos i-click ang Edit para i-save."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "Sigurado ka bang gusto mong burahin ang code na '{name}'?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "Kumpirmahin ang pagbura"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "Naalis na ang code"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "Error sa pag-alis ng code"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "Buksan ang xPand AutoCorrect"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "Error sa pagbukas ng xPand"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "Error sa pagbukas ng mga setting ng xPand"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "Buksan ang mga Setting ng xPand"

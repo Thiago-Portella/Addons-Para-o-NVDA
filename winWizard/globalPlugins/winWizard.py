@@ -66,12 +66,19 @@ class WinWizardSettingsPanel(gsd.SettingsPanel):
 		# Translators: Label of a checkbox which can be used to enable or disable sounds.
 		self.enableBeepsChk = sHelper.addItem(wx.CheckBox(self, label=_("&Confirm actions with sounds")))
 		self.enableBeepsChk.SetValue(config.conf["winWizard"]["playConfirmationBeeps"])
+		# Translators: Label of a checkbox to enable legacy window switching behavior.
+		self.useOldCycleChk = sHelper.addItem(
+			wx.CheckBox(self, label=_("Use old window cycling behavior"))
+		)
+		self.useOldCycleChk.SetValue(config.conf["winWizard"]["useOldCycleBehavior"])
+
 
 	def postInit(self):
 		self.enableBeepsChk.SetFocus()
 
 	def onSave(self):
 		config.conf["winWizard"]["playConfirmationBeeps"] = self.enableBeepsChk.GetValue()
+		config.conf["winWizard"]["useOldCycleBehavior"] = self.useOldCycleChk.GetValue()
 
 
 class Win32FunctionError(Exception):
@@ -565,14 +572,23 @@ def disableInSecureMode(decoratedCls):
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
+
 	scriptCategory = _("Win Wizard")
 
 	def __init__(self):
 		super().__init__()
-		confSpec = {"playConfirmationBeeps": "boolean(default=True)"}
+		confSpec = {
+			"playConfirmationBeeps": "boolean(default=True)",
+			"useOldCycleBehavior": "boolean(default=False)"
+		}
 		config.conf.spec["winWizard"] = confSpec
 		self.hiddenWindowsList: hiddenWindowsList = hiddenWindowsList()
 		gsd.NVDASettingsDialog.categoryClasses.append(WinWizardSettingsPanel)
+		# Initialize cycle state
+		self._cycleIndex = None
+		self._cycleSelection = None
+		self._cycleWindows = None
+		self._cycleApp = None
 
 	def terminate(self):
 		super().terminate()
@@ -584,41 +600,153 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_(
 			# Translators: Description of the keyboard command
 			# allowing to jump between top-level windows of the current application.
-			"Jumps between top-level windows of the current application."
+			"Cycles through top-level windows of the current application."
 		),
 		gesture="kb:NVDA+windows+Tab",
 	)
 	def script_cycleWindows(self, gesture):
-		if(
-			api.getForegroundObject()
-			and api.getForegroundObject().parent
-			and hasattr(api.getForegroundObject().parent, "appModule")
-		):
-			topWindow = api.getForegroundObject().parent
-			topWindowAppModule = api.getForegroundObject().parent.appModule
-			if topWindowAppModule.appName == "explorer":
-				# Translators: Information given when user tries to move to top-level window in Windows  Explorer
-				ui.message(_("Not supported here."))
-				return
-			nextTopWin = prevTopWin = None
-			if topWindow.simplePrevious and topWindow.simplePrevious.appModule == topWindowAppModule:
-				prevTopWin = topWindow.simplePrevious
-			if topWindow.simpleNext and topWindow.simpleNext.appModule == topWindowAppModule:
-				nextTopWin = topWindow.simpleNext
-			if not prevTopWin and not nextTopWin:
-				# Translators: Announced when the current application has no top-level windows.
-				ui.message(_("This window has no top level windows to cycle to."))
-				return
-			elif prevTopWin and not nextTopWin:
-				prevTopWin.setFocus()
-			elif not prevTopWin and nextTopWin:
-				nextTopWin.setFocus()
+		if config.conf["winWizard"]["useOldCycleBehavior"]:
+			if(
+				api.getForegroundObject()
+				and api.getForegroundObject().parent
+				and hasattr(api.getForegroundObject().parent, "appModule")
+			):
+				topWindow = api.getForegroundObject().parent
+				topWindowAppModule = api.getForegroundObject().parent.appModule
+				if topWindowAppModule.appName == "explorer":
+					# Translators: Information given when user tries to move to top-level window in Windows  Explorer
+					ui.message(_("Not supported here."))
+					return
+				nextTopWin = prevTopWin = None
+				if topWindow.simplePrevious and topWindow.simplePrevious.appModule == topWindowAppModule:
+					prevTopWin = topWindow.simplePrevious
+				if topWindow.simpleNext and topWindow.simpleNext.appModule == topWindowAppModule:
+					nextTopWin = topWindow.simpleNext
+				if not prevTopWin and not nextTopWin:
+					# Translators: Announced when the current application has no top-level windows.
+					ui.message(_("This window has no top level windows to cycle to."))
+					return
+				elif prevTopWin and not nextTopWin:
+					prevTopWin.setFocus()
+				elif not prevTopWin and nextTopWin:
+					nextTopWin.setFocus()
+				else:
+					# Translators: Announced when current program has multiple top-level windows.
+					ui.message(_("Multiple top level windows detected."))
 			else:
-				# Translators: Announced when current program has multiple top-level windows.
-				ui.message(_("Multiple top level windows detected."))
-		else:
+				# Translators: Reported when informations for the current window cannot be retrieved.
+				ui.message(_("Can't retrieve window information for this object."))
+			return
+
+		fg = api.getForegroundObject()
+		parent = fg.parent if hasattr(fg, "parent") else None
+		if not parent:
 			# Translators: Reported when informations for the current window cannot be retrieved.
 			ui.message(_("Can't retrieve window information for this object."))
+			return
+		appModule = parent.appModule
+		if appModule.appName == "explorer":
+			# Translators: Information given when user tries to move to top-level window in Windows  Explorer.
+			ui.message(_("Not supported here."))
+			return
+		# Reset cycle state if app changed
+		if self._cycleApp != appModule:
+			self._resetCycleState()
+			self._cycleApp = appModule
+		# Build window list
+		windows = []
+		current = parent
+		while current.simplePrevious and current.simplePrevious.appModule == appModule:
+			current = current.simplePrevious
+		while current:
+			if current.appModule == appModule:
+				windows.append(current)
+			current = current.simpleNext
+		if len(windows) <= 1:
+			# Translators: Announced when the current application has no top-level windows.
+			ui.message(_("This window has no top level windows to cycle to."))
+			return
+		# Initialize index if needed
+		if self._cycleIndex is None:
+			try:
+				self._cycleIndex = windows.index(parent)
+			except ValueError:
+				self._cycleIndex = 0
+		# Move forward
+		self._cycleIndex = (self._cycleIndex + 1) % len(windows)
+		# Store selection
+		self._cycleWindows = windows
+		self._cycleSelection = windows[self._cycleIndex]
+		# Translators: Announces the currently selected window when cycling.
+		# {name} is the window title, {index} is current position, {total} is total windows.
+		ui.message(_("{name} ({index} of {total})").format(
+			# Translators: Reported for a window with no name when cycling between top level windows.
+			name=self._cycleSelection.name or _("Unknown window"),
+			index=self._cycleIndex + 1,
+			total=len(windows)
+		))
+
+	@scriptHandler.script(
+		description=_(
+			# Translators: Command description for focusing selected window.
+			"Focuses the currently selected window from the cycle."
+		),
+		gesture="kb:NVDA+windows+`",
+	)
+	def script_confirmCycleWindow(self, gesture):
+		if config.conf["winWizard"]["useOldCycleBehavior"]:
+			# Translators: Reported when confirm command is used while old mode is enabled.
+			ui.message(_("This command is disabled in old mode."))
+			return
+		selection = self._cycleSelection
+		if not selection:
+			# Translators: Reported when no window is currently selected in the cycle.
+			ui.message(_("No window selected."))
+			return
+		fg = api.getForegroundObject()
+		parent = fg.parent if hasattr(fg, "parent") else None
+		if not parent:
+			# Translators: Reported when no window is currently selected in the cycle.
+			ui.message(_("No window selected."))
+			return
+		# App mismatch check
+		if self._cycleApp != parent.appModule:
+			ui.message(_("No window selected."))
+			self._resetCycleState()
+			return
+		# Window validity check
+		if (
+			not hasattr(selection, "windowHandle")
+			or not winUser.isWindow(selection.windowHandle)
+		):
+			# Translators: Reported when the selected window is no longer available.
+			ui.message(_("Window no longer available."))
+			return
+		# Check if the selected window is already focused
+		try:
+			focusHandle = winUser.getForegroundWindow()
+			if selection.windowHandle == focusHandle:
+				# Translators: Reported when the selected window is already focused.
+				ui.message(_("Already focused"))
+				self._resetCycleState()
+				return
+		except Exception as e:
+			log.exception("Failed to check foreground window: %s", e)
+		try:
+			selection.setFocus()
+		except Exception as e:
+			log.exception("Failed to focus window: %s", e)
+			# Translators: Reported when focusing the selected window fails.
+			ui.message(_("Failed to focus window."))
+		else:
+			playTonesIfEnabled(180, 50)
+		self._resetCycleState()
+	# Helper
+	def _resetCycleState(self):
+		self._cycleSelection = None
+		self._cycleWindows = None
+		self._cycleIndex = None
+		self._cycleApp = None
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command that kills currently focused process.

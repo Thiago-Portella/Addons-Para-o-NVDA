@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 07:55+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Bulgarian\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - Автокорекция"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "Код:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "ОК"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "Отказ"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "Кодът не е намерен"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Не може да се копира в клипборда"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "Текстът не може да бъде поставен. Моля, опитайте ръчно (Ctrl+V)."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "Грешка при поставяне на текста"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "Настройки на xPand"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "Списък с кодове:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "Код"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "Дума"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "Дума:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "Добави"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "Редактирай"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "Премахни"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "Затвори"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "Няма код, започващ с: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "Няма съвпадащ код"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "Моля, въведете код"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "Моля, въведете дума"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "Кодът вече съществува"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "Добавянето е успешно"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "Грешка при добавяне на код"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "Режим на редактиране. Променете кода и думата, след което щракнете върху Редактирай."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "Сигурни ли сте, че искате да изтриете код '{name}'?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "Потвърдете изтриването"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "Кодът е премахнат"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "Грешка при премахване на код"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "Отвори xPand Автокорекция"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "Грешка при отваряне на xPand"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "Грешка при отваряне на настройките"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "Отвори настройките на xPand"

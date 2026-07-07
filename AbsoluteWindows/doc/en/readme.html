@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AbsoluteWindows NVDA Add-on</title>
+<title>AbsoluteWindows NVDA Add-on - Documentation v2</title>
 <style>
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f7f9; color: #333; }
 .container { max-width: 850px; margin: auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
@@ -10,12 +10,56 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
 .nvda-logo { width: 100px; height: auto; margin-bottom: 15px; }
 h1 { color: #2c3e50; font-size: 2.5em; margin: 0; }
 h2 { color: #2980b9; border-left: 5px solid #2980b9; padding-left: 15px; margin-top: 40px; text-align: left; }
+h3 { color: #34495e; margin-top: 25px; border-bottom: 1px solid #ecc94b; padding-bottom: 5px; }
 b { color: #2c3e50; }
 .status-box { background: #e8f4fd; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #d0e3f0; }
-.hotkey { background: #2d3436; color: #dfe6e9; padding: 15px; border-radius: 6px; font-family: 'Consolas', monospace; display: inline-block; margin: 10px 0; font-size: 1.1em; }
-.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-.feature-item { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; transition: transform 0.2s; }
-.feature-item:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+/* Code Block with Copy Button Styles for Hotkeys */
+.code-wrapper {
+    position: relative;
+    margin: 15px 0;
+}
+.hotkey { 
+    background: #2d3436; 
+    color: #dfe6e9; 
+    padding: 15px 70px 15px 15px; 
+    border-radius: 6px; 
+    font-family: 'Consolas', monospace; 
+    display: block; 
+    font-size: 1.1em;
+    word-break: break-all;
+}
+.copy-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #636e72;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.3s;
+}
+.copy-btn:hover { background: #2980b9; }
+.copy-btn.copied { background: #27ae60; }
+
+.feature-grid { display: block; margin-top: 20px; }
+.feature-section { background: #fafbfc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+.feature-item-detail { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #e2e8f0; }
+.feature-item-detail:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.feature-title { font-weight: bold; color: #2c3e50; font-size: 1.1em; }
+.feature-desc { color: #555; font-size: 0.95em; margin: 4px 0; }
+
+.monitor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style-type: none; padding-left: 0; margin-top: 20px; }
+.monitor-card { background: #2c3e50; color: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid #ecc94b; }
+.monitor-label { color: #ecc94b; font-weight: bold; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+.monitor-text { font-size: 1em; color: #f7fafc; }
+
+@media(max-width: 600px) { .monitor-grid { grid-template-columns: 1fr; } }
+
 .note { background: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
 .footer { text-align: center; margin-top: 50px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
 a { color: #3498db; text-decoration: none; font-weight: bold; }
@@ -25,91 +69,329 @@ a { color: #3498db; text-decoration: none; font-weight: bold; }
 <div class="container">
     <div class="header">
         <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+        <br><br>        
+
         <h1>AbsoluteWindows</h1>
+        <br>        
+        
         <p style="font-size: 1.2em; color: #7f8c8d;"><b>Command Your OS. Reclaim Your Performance.</b></p>
-<p><b>Author:</b> Chai Chaimee | <b>Version:</b> 2026 Pro Edition</p>
         
-       <p><a href="https://github.com/chaichaimee/AbsoluteWindows">View Repository on GitHub</a></p>
+        <br>        
+
+        <p><b>Author:</b> Chai Chaimee and Peera Pilarit</p>
+        <p><strong>URL:</strong> <a href="https://github.com/chaichaimee/AbsoluteWindows">github.com/chaichaimee/AbsoluteWindows</a></p>
     </div>
 
     <div class="section">
+        <br>
+        
         <h2>The Power of Absolute Control</h2>
-        <p><b>AbsoluteWindows</b> is not just a tool; it's your system's personal commander. Designed for elite users, it condenses complex administrative tasks into a single, high-speed accessible interface. No more digging through Windows settings—just pure, raw control at your fingertips.</p>
+        <p><b>AbsoluteWindows</b> is not just a tool; it's your system's personal commander. Designed for elite users who demand efficiency, it condenses complex administrative tasks into a single, high-speed accessible interface. From deep-cleaning your system files to managing advanced environment variables, AbsoluteWindows provides pure, raw control at your fingertips, ensuring your PC remains lean, secure, and incredibly fast.</p>
     </div>
 
     <div class="section">
-        <h2>Adaptive Intelligence</h2>
-        <p>The core of AbsoluteWindows is its <b>State-Aware Engine</b>. The menu intelligently monitors your PC and changes options dynamically based on what you actually need:</p>
+        <br>
+
+        <h2>What's New</h2>
+        <p>• <b>Real-Time System Monitor:</b> Instantly check CPU, RAM, Network speeds, and the highly accurate <b>Windows Activation Status</b> with a quick double-tap.<br>
+        • <b>Advanced Security:</b> Integrated Windows Defender and Microsoft Malicious Software Removal Tool (MSRT) for deep scans.<br>
+        • <b>One-Click Maintenance:</b> Automated Drive Optimization (TRIM/Defrag) and professional-grade RAM flushing.<br>
+        • <b>Deep Cleaning:</b> New modules to purge Windows Run history, system files, and recent history logs.</p>
+    </div>
+
+    <div class="section">
+        <br>
+
+        <h2>Master Hotkeys: The Power of the Tap</h2>
+        <p>AbsoluteWindows utilizes an intelligent tap-recognition system built into a single master global shortcut. No need to memorize dozens of keys.</p>
         
-        <div class="status-box">
-            <h3>🌐 Network Connectivity</h3>
-            <p>• <b>If Online:</b> Shows <b>"Disconnect Internet"</b>. One click instantly severs the connection for privacy or maintenance.<br>
-            • <b>If Offline:</b> Instantly transforms to <b>"Connect Internet"</b>, allowing you to restore your link in a split second.</p>
+        <div class="code-wrapper">
+            <code class="hotkey" id="hotkey1">Alt + Windows + W (Single Tap)</code>
+            <button class="copy-btn" onclick="copyCode('hotkey1', this)">Copy</button>
         </div>
-
-        <div class="status-box" style="background: #fdf2f2; border-color: #f0d0d0;">
-            <h3>🛡️ Security & UAC</h3>
-            <p>• <b>If Active (High Protection):</b> Shows <b>"Disable User Account Control"</b>. Quickly drops UAC to 0% for a seamless, prompt-free admin experience.<br>
-            • <b>If Silent (Unprotected):</b> Shows <b>"Enable User Account Control"</b>. Instantly restores the secure 40% (Default) level to guard your system.</p>
+        <p><b>The Command Center:</b> Press once from anywhere to open the main administrative tool list. Instantly execute tasks ranging from network management to deep system sanitization.</p>
+        
+        <div class="code-wrapper">
+            <code class="hotkey" id="hotkey3">Alt + Windows + W (Double Tap)</code>
+            <button class="copy-btn" onclick="copyCode('hotkey3', this)">Copy</button>
         </div>
-    </div>
+        <p><b>The System Monitor Dashboard:</b> Press twice quickly to fetch a live diagnostic report of your machine's hardware and operating system status directly through your screen reader.</p>
 
-    <div class="section">
-        <h2>Elite Feature Set</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <b>Rescue & Stability</b><br>
-                Kill frozen apps, restart Explorer, or access the System Tray instantly. No more hard reboots.
-            </div>
-            <div class="feature-item">
-                <b>System Diagnostics</b><br>
-                Run DISM, SFC Scannow, and Chkdsk with automated Notepad reporting. Professional results, zero effort.
-            </div>
-            <div class="feature-item">
-                <b>Elite Memory Purge</b><br>
-                Flush your RAM cache and clear Temp/Prefetch files to experience immediate responsiveness in heavy apps.
-            </div>
-            <div class="feature-item">
-                <b>Security Mastery</b><br>
-                Show hidden Wi-Fi passwords and manage startup items to keep your boot sequence lean and fast.
-            </div>
+        <div class="code-wrapper">
+            <code class="hotkey" id="hotkey2">Alt + Windows + Z</code>
+            <button class="copy-btn" onclick="copyCode('hotkey2', this)">Copy</button>
         </div>
-    </div>
-
-    <div class="section" style="text-align: center;">
-        <h2>How to Invoke</h2>
-        <p>Access the Command Center from anywhere in Windows with the global master shortcut:</p>
-        <div class="hotkey">Alt + Windows + W</div>
+        <p><b>Emergency Rescue Switch:</b> Open the "Kill Not Responding Apps" module directly to rescue a completely frozen desktop.</p>
+        
+        <br>
         <div class="note">
-            <b>Pro Tip:</b> AbsoluteWindows uses <b>Auditory Confirmation</b>. Listen for the High Tone for success and the Low Tone for failure/cancellation.
+            <b>Pro Tip:</b> AbsoluteWindows uses <b>Auditory Confirmation</b>. Listen for the High Tone for success and the Low Tone for failure or cancellation.
         </div>
     </div>
 
     <div class="section">
-        <h2>Full Capability List</h2>
-        <ul>
-            <li><b>Manage Connections:</b> Toggle Internet adapters and retrieve Wi-Fi keys.</li>
-            <li><b>System Maintenance:</b> Manage Services, Startup apps, and Drive optimization (TRIM/Defrag).</li>
-            <li><b>Deep Cleaning:</b> Purge System files, Prefetch, Recent History, Temp files, and Windows Run logs.</li>
-            <li><b>Power Tools:</b> Clear RAM cache, empty Recycle Bin, and generate HTML Battery Health reports.</li>
-        </ul>
+        <h2>🛠️ The Command Center (Single Tap Menu)</h2>
+        <p>Pressing the shortcut once gives you an organized, rapid-access menu to control every hidden corner of Windows. No more digging through nested system settings or running cryptic command lines. Here is your full operational arsenal, ordered exactly as it appears in the tool:</p>
+        
+        <div class="feature-grid">
+            
+            <div class="feature-section">
+                <h3>🌐 Desktop, Devices & Connectivity</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">System Tray</span>
+                    <p class="feature-desc">Instantly jump your focus directly into the system tray area to manage background apps easily.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Disconnect / Connect Internet</span>
+                    <p class="feature-desc">An intelligent state-aware switch. Instantly sever your web connection for privacy/security, or restore it in a split second.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Toggle Bluetooth</span>
+                    <p class="feature-desc">Turn your Bluetooth radio on or off instantly without clicking through the Windows Action Center.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Show Wi-Fi Password</span>
+                    <p class="feature-desc">Recovers and speaks the security key of your currently connected wireless network instantly.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Safely Remove USB</span>
+                    <p class="feature-desc">Ejects external flash drives and hardware cleanly to eliminate data corruption risks.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Restart Windows Audio Service</span>
+                    <p class="feature-desc">The ultimate fix when your sound cuts out or glitches. Reloads the Windows audio sub-system in a flash.</p>
+                </div>
+            </div>
+
+            <div class="feature-section">
+                <h3>🚨 System Control & Emergency Rescue</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Disable / Enable User Account Control (UAC)</span>
+                    <p class="feature-desc">Toggles UAC prompts. Silence repetitive security prompts for an uninterrupted administrative session, or toggle it back on to stay protected.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Restart to BIOS/UEFI Settings</span>
+                    <p class="feature-desc">Bypass the complex Shift+Restart menus. Commands your PC to reboot directly into its core motherboard firmware screen.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Kill Not Responding Apps</span>
+                    <p class="feature-desc">The ultimate emergency escape. Force-terminates frozen, unclickable programs stalling your workflows.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Restart Windows Explorer</span>
+                    <p class="feature-desc">Refreshes your desktop, taskbar, and file system fluidly without restarting your entire PC.</p>
+                </div>
+            </div>
+
+            <div class="feature-section">
+                <h3>⚙️ Advanced Administrative Tools</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Control Panel</span>
+                    <p class="feature-desc">Launches the classic, fully-accessible Windows Control Panel instantly.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Programs and Features</span>
+                    <p class="feature-desc">Opens the uninstallation manager immediately to let you remove software cleanly.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Sound setting</span>
+                    <p class="feature-desc">Direct route to managing recording devices, playback levels, and system audio properties.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Folder Option</span>
+                    <p class="feature-desc">Quickly configure file viewing preferences, hidden file visibility, and file explorer behaviors.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Startup Manager</span>
+                    <p class="feature-desc">Control what applications are permitted to boot with your PC to optimize boot times.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Open Services</span>
+                    <p class="feature-desc">Launches the standard Windows Services console (services.msc) to view background infrastructure.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Manage Services</span>
+                    <p class="feature-desc">Provides advanced command controls over custom service configurations effortlessly.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Environment Variables</span>
+                    <p class="feature-desc">Directly configures system and user paths without clicking through deep system properties screens.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Run Cmd</span>
+                    <p class="feature-desc">Launches an elevated Command Prompt window with full administrative privileges ready for action.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Regedit</span>
+                    <p class="feature-desc">Opens the Windows Registry Editor swiftly for deep-level configuration tweaks.</p>
+                </div>
+            </div>
+
+            <div class="feature-section">
+                <h3>🧹 Security & Deep System Optimization</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Windows Defender</span>
+                    <p class="feature-desc">Launches security panels directly to manage malware shields, firewalls, and real-time defense layers.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Microsoft Windows Malicious Software Removal Tool (MSRT)</span>
+                    <p class="feature-desc">Triggers Microsoft's specialized, built-in threat scanner to hunt down and remove deep infections.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Optimize and defragment drive</span>
+                    <p class="feature-desc">Keeps storage hardware running at peak speeds by intelligently running TRIM on SSDs or defragmenting HDDs.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Disk Cleanup</span>
+                    <p class="feature-desc">Fires up the built-in storage manager to clear old updates, cache data, and unneeded files safely.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Clean Prefetch & Recent</span>
+                    <p class="feature-desc">Purges hidden system prefetch caches and recently opened shortcuts to keep file tracking lightweight.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Clean System files</span>
+                    <p class="feature-desc">Performs a deeper administrative sweep to clear obsolete OS deployment leftovers and massive update debris.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Clean Temp</span>
+                    <p class="feature-desc">Instantly scrubs temporary workspace folders where messy software leaves hidden junk files behind.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Clean Windows Run History</span>
+                    <p class="feature-desc">Wipes the stored log of commands typed into the Windows Run box (Win+R) for absolute privacy.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Empty Recycle Bin</span>
+                    <p class="feature-desc">Flushes your system trash permanently with a single click, instantly regaining trapped disk storage.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Clear Ram</span>
+                    <p class="feature-desc">Flushes the Windows standby list and background memory allocations. Reclaims active RAM instantly for high-intensity apps.</p>
+                </div>
+            </div>
+            
+        </div>
     </div>
-<br><br>
-<h2>Support the project</h2>
 
-    <p>If AbsoluteWindows has improved your daily browsing experience, consider supporting its continued development.</p>
+    <div class="section">
+        <h2>📊 The Real-Time System Monitor (Double Tap Menu)</h2>
+        <p>Double-tapping the shortcut acts as a continuous diagnostic dashboard. Instead of trying to navigate complex visual charts in Task Manager, AbsoluteWindows queries your hardware components directly and reports their exact live state to you. When triggered, it scans and reports the following components on your specific machine:</p>
+        
+        <div class="monitor-grid">
+            <div class="monitor-card">
+                <span class="monitor-label">1. CPU Usage</span>
+                <span class="monitor-text">Reports the exact real-time workload percentage currently utilized by your central processor.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">2. RAM / Memory Allocation</span>
+                <span class="monitor-text">Displays how many gigabytes of your total physical memory are currently used vs. remaining, plus the precise percentage.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">3. Disk Storage Capacity</span>
+                <span class="monitor-text">Scans your primary system drive (C:) and calculates the exact amount of gigabytes used out of your total storage drive size.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">4. Disk Drive Activity</span>
+                <span class="monitor-text">Measures the live data flow speeds, showing exactly how many Megabytes per second (MB/s) your drive is reading and writing right now.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">5. Network Speed & Link Status</span>
+                <span class="monitor-text">Tracks live Internet bandwidth speeds (Download/Upload rates) or displays your active connection state.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">6. Wi-Fi Status & Signal Quality</span>
+                <span class="monitor-text">Identifies the name (SSID) of the wireless network you are connected to alongside a clear signal strength rating.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">7. Battery & Power Status</span>
+                <span class="monitor-text">Provides live percentage remaining and power status (Discharging/Charging). <i>(Automatically active on laptop devices only)</i>.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">8. System Uptime Duration</span>
+                <span class="monitor-text">Calculates the exact time elapsed (Days, Hours, Minutes, Seconds) since your computer was last booted or turned on.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">9. Active Processes Count</span>
+                <span class="monitor-text">Counts the total number of individual operational tasks and application threads running in the background.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">10. Graphics Processor (GPU) Info</span>
+                <span class="monitor-text">Identifies and speaks the exact brand and model name of the graphics hardware running inside your computer.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">11. Windows Activation & License Status</span>
+                <span class="monitor-text"><b>[NEW]</b> Dynamically checks and verifies whether your Windows Operating System license is properly activated.</span>
+            </div>
+            <div class="monitor-card">
+                <span class="monitor-label">12. Windows OS Build & Architecture</span>
+                <span class="monitor-text">Reports your exact operating system version name, bit architecture, and specific build number for precise compatibility verification.</span>
+            </div>
+        </div>
+    </div>
 
+    <br><br>
+    <h2>Support Me</h2>
+    <p>If this tool has made your life easier, consider fueling the next update with a small donation.</p>
     <br>
-
-    <p style="text-align:center; font-size:1.1em;">
-      <strong><a href="https://github.com/chaichaimee" style="color:#0f766e; text-decoration:none;">Donate via GitHub Sponsors</a></strong>
+    <p>
+      <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+        <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Support me">
+      </a>
     </p>
-  </div>
-
-  <div class="footer-note">
-<p>&copy; 2026 Chai Chaimee • AbsoluteWindows NVDA Add-on • Released under GNU GPL v2+</p>
-  </div>
-
+    <br>
+    <p>Your support means the world. Let's build something great together</p>
+    <br>
+    <div class="footer">
+        <p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GNU General Public License.</p>
+    </div>
 </div>
+
+<script>
+function copyCode(elementId, btn) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerText;
+        btn.innerText = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+</script>
 </body>
 </html>

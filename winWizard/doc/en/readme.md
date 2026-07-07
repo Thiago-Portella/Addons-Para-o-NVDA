@@ -3,29 +3,43 @@
 * Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * NVDA compatibility: 2019.3 and beyond
 
-This add-on allows you to perform some operations on the focused window or the process associated with it.
-When killing a process, or showing / hiding a window a confirmation beep is played when the action succeeds.
+This add-on allows you to perform some operations on the focused window or the process associated with it.  
+When killing a process, or showing / hiding a window a confirmation beep is played when the action succeeds.  
 If you find this annoying you can disable these beeps in the Win Wizard's settings panel available from NVDA's settings dialog.
 
 ## Keyboard commands:
+
 All these commands can be remapped from the Input gestures dialog in the Win Wizard category.
+
 ### Hiding and showing hidden windows:
-* NVDA+Windows+numbers from 1 to 0 - hides  currently focused window in the slot corresponding to the pressed number
-* NVDA+Windows+left arrow - moves to the previous stack of hidden windows.
-* NVDA+Windows+right arrow - moves to the next stack of hidden windows.
+
+* NVDA+Windows+numbers from 1 to 0 - hides currently focused window in the slot corresponding to the pressed number
+* NVDA+Windows+left arrow - moves to the previous stack of hidden windows
+* NVDA+Windows+right arrow - moves to the next stack of hidden windows
 * Windows+Shift+h - hides the currently focused window in the first available slot
 * NVDA+Windows+h - shows the last hidden window
 * Windows+Shift+l - shows the list of all hidden windows grouped by the stacks (please note that by default last hidden window is selected)
 
 ### Managing processes:
+
 * Windows+F4 - kills the process associated with the currently focused window
 * NVDA+Windows+p - opens dialog allowing you to set priority of the process associated with the currently focused window
 
-### Miscellaneous  commands:
+### Miscellaneous commands:
+
 * NVDA+Windows+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+` - confirms and switches to the selected window in the cycle  
+  * In the new behavior, this command is used to activate the selected window
+  * The old behavior can still be enabled in settings
 * CTRL+ALT+T - allows you to change title of the currently focused program
 
 ## Changes:
+
+### Changes for 5.0.8:
+
+* Added a new window cycling system with improved selection and confirmation behavior
+* Added option to switch between the new window cycling system and the legacy behavior
+* Compatibility with NVDA 2026.1
 
 ### Changes for 5.0.7:
 

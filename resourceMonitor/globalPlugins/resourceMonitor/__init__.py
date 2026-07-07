@@ -1,22 +1,24 @@
 # Resource Monitor for NVDA
-# Presents basic info on CPU load, memory and disk usage, as well as battery information.
-# Copyright 2013-2026 Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst,
+# Presents basic info on CPU load, memory, disk usage, and other resource information.
+# Copyright 2013-2026 Alex Hall, Joseph Lee, Kefas Lungu, Beqa Gozalishvili, Tuukka Ojala, Ethin Probst, Kevin Derome
 # released under GPL.
 # This add-on uses Psutil, licensed under 3-Clause BSD License which is compatible with GPL.
 # psutil is included in NVDA 2024.2 and later.
 
 import functools
 import os.path
-import queueHandler
 import winsound
 from ctypes import addressof, byref, POINTER, wintypes
 from datetime import datetime
 from typing import Any
 import api
 import globalPluginHandler
+import queueHandler
 import scriptHandler
+import inputCore
 import ui
 import winVersion
+from gui import blockAction
 import psutil
 
 # Windows Server systems prior to Server 2025 do not include wlanapi.dll.
@@ -27,6 +29,7 @@ try:
 except OSError:
 	wlanapiAvailable = False
 import addonHandler
+from .gpu import BaseGpuProvider, getGpuProviders
 
 addonHandler.initTranslation()
 
@@ -56,7 +59,7 @@ try:
 	}
 
 	@wlanapi.WLAN_NOTIFICATION_CALLBACK
-	def notifyHandler(pData, pCtx):
+	def notifyHandler(pData: Any, pCtx: Any):
 		if pData.contents.NotificationSource != wlanapi.WLAN_NOTIFICATION_SOURCE_ACM:
 			return
 		match pData.contents.NotificationCode:
@@ -98,7 +101,7 @@ except NameError:
 	pass
 
 
-def customResize(array, newSize):
+def customResize(array: Any, newSize: Any):
 	return (array._type_ * newSize).from_address(addressof(array))
 
 
@@ -203,6 +206,7 @@ def tryTrunk(n: float) -> int | float:
 
 
 # Moved from battery module to the main module in 2019 (code provided by Alex Hall)
+# Deprecated
 def _batteryInfo(verbose: bool = False) -> str | None:
 	# Returns current battery status provided that the computer has a detectable battery.
 	# The verbose argument will force this function to return something if there is no battery.
@@ -291,6 +295,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
+		self._gpuProviders: list[BaseGpuProvider] = getGpuProviders()
 		if not wlanapiAvailable:
 			self._client_handle = None
 			return
@@ -315,6 +320,59 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except OSError:
 			pass
 
+	def terminate(self):
+		super().terminate()
+		self._gpuProviders.clear()
+		if not self._client_handle:
+			return
+		self._negotiated_version = None
+		try:
+			wlanapi.WlanRegisterNotification(
+				self._client_handle,
+				wlanapi.WLAN_NOTIFICATION_SOURCE_NONE,
+				True,
+				notifyHandler,
+				None,
+				None,
+				None,
+			)
+			wlanapi.WlanCloseHandle(
+				byref(self._client_handle),
+				None,
+			)
+			self._client_handle = None
+		except OSError:
+			pass
+
+	def _getGpuInfo(self) -> str:
+		hasProvider = False
+		hasFailure = False
+		for provider in self._gpuProviders:
+			telemetry = provider.collect()
+			if telemetry is None:
+				continue
+			hasProvider = True
+			if not telemetry:
+				hasFailure = True
+				continue
+			gpuInfoParts = []
+			for index, item in enumerate(telemetry, start=1):
+				gpuInfoParts.append(
+					_("GPU {gpuNumber}: usage {usage}%, temp {temperature}°C.").format(
+						gpuNumber=index,
+						usage=item.utilization,
+						temperature=item.temperature,
+					)
+				)
+			if gpuInfoParts:
+				return " ".join(gpuInfoParts)
+			hasFailure = True
+		if not hasProvider:
+			return _("No GPU information available.")
+		if hasFailure:
+			return _("Unable to get GPU information.")
+		return _("No GPU data available.")
+
 	@scriptHandler.script(
 		description=_(
 			# Translators: Input help message about battery info command in Resource Monitor.
@@ -324,7 +382,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+4",
 		speakOnDemand=True,
 	)
-	def script_announceBatteryInfo(self, gesture):
+	def script_announceBatteryInfo(self, gesture: inputCore.InputGesture):
+		# Deprecated
 		info = _batteryInfo(verbose=True)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
@@ -339,7 +398,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+3",
 		speakOnDemand=True,
 	)
-	def script_announceDriveInfo(self, gesture):
+	def script_announceDriveInfo(self, gesture: inputCore.InputGesture):
 		# Goes through all registered drives and gives info on each one
 		info = []
 		for drive in psutil.disk_partitions():
@@ -353,7 +412,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					# Translators: Shows drive letter, type of drive (fixed or removable),
 					# used capacity and total capacity of a drive
 					# (example: C drive, ntfs; 40 GB of 100 GB used (40%).
-					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used {percent}%.").format(
+					_("{driveName} ({driveType} drive): {usedSpace} of {totalSpace} used ({percent}%).").format(
 						driveName=drive[0],
 						driveType=drive[2],
 						usedSpace=size(driveInfo[1], alternative),
@@ -372,7 +431,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+1",
 		speakOnDemand=True,
 	)
-	def script_announceProcessorInfo(self, gesture):
+	def script_announceProcessorInfo(self, gesture: inputCore.InputGesture):
 		averageLoad = psutil.cpu_percent()
 		# Lists load for each core
 		perCpuLoad = psutil.cpu_percent(percpu=True)
@@ -385,10 +444,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Only display average CPU load on single-core systems.
 		if psutil.cpu_count() == 1:
 			# Translators: Shows average load of the processor on single-core systems.
-			info = _("Average CPU load {avgLoad}%.").format(avgLoad=tryTrunk(averageLoad))
+			info = _("{avgLoad}% CPU load.").format(avgLoad=tryTrunk(averageLoad))
 		else:
 			# Translators: Shows average load of the processor and the load for each core on multi-core systems.
-			info = _("Average CPU load {avgLoad}%, {cores}.").format(
+			info = _("{avgLoad}% average CPU load, {cores}.").format(
 				avgLoad=tryTrunk(averageLoad), cores=", ".join(coreLoad)
 			)
 		if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -402,7 +461,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gestures=["KB:NVDA+shift+2", "KB:NVDA+shift+5"],
 		speakOnDemand=True,
 	)
-	def script_announceRamInfo(self, gesture):
+	def script_announceRamInfo(self, gesture: inputCore.InputGesture):
 		memory = psutil.virtual_memory()
 		physicalRamUsed, physicalRamTotal = memory.used, memory.total
 		# Translators: Shows RAM (physical memory) usage.
@@ -430,7 +489,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+6",
 		speakOnDemand=True,
 	)
-	def script_announceWinVer(self, gesture):
+	def script_announceWinVer(self, gesture: inputCore.InputGesture):
 		# Unlike other resource usage information, current Windows version info is static.
 		info = getWinVer()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -445,12 +504,32 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="kb:NVDA+shift+8",
 		speakOnDemand=True,
 	)
-	def script_wlanStatusReport(self, gesture):
+	def script_wlanStatusReport(self, gesture: inputCore.InputGesture):
 		info = self._getWlanInfo()
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(info)
 		else:
 			api.copyToClip(info, notify=True)
+
+	@scriptHandler.script(
+		# Translators: Input help mode message about GPU usage and temperature command.
+		description=_("Announces GPU usage and temperature."),
+		speakOnDemand=True,
+	)
+	# Do not report GPU info in secure mode
+	# (for NVIDIA, GPU info is obtained by parsing output from another program,
+	# potentially introducing security issues such as parsing problems).
+	@blockAction.when(blockAction.Context.SECURE_MODE)
+	def script_announceGpuInfo(self, gesture: inputCore.InputGesture):
+		try:
+			info = self._getGpuInfo()
+			if scriptHandler.getLastScriptRepeatCount() == 0:
+				ui.message(info)
+			else:
+				api.copyToClip(info, notify=True)
+		except Exception:
+			# Translators: Message reported when the GPU command fails unexpectedly.
+			ui.message(_("Failed to get GPU information."))
 
 	def _getWlanInfo(self) -> str:
 		if not self._client_handle:
@@ -478,7 +557,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			):
 				if n.Flags & wlanapi.WLAN_AVAILABLE_NETWORK_CONNECTED:
 					info = _(
-						"Connected wireless network: {}. Signal strength: {}%. Security type: {}"
+						"Connected to {}, signal strength: {}%, security type: {}"
 					).format(
 						n.dot11Ssid.SSID.decode(),
 						n.wlanSignalQuality,
@@ -521,7 +600,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="kb:NVDA+shift+7",
 		speakOnDemand=True,
 	)
-	def script_announceUptime(self, gesture):
+	def script_announceUptime(self, gesture: inputCore.InputGesture):
 		try:
 			uptime = self.getUptime()
 			if scriptHandler.getLastScriptRepeatCount() == 0:
@@ -538,7 +617,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="KB:NVDA+shift+e",
 		speakOnDemand=True,
 	)
-	def script_announceResourceSummary(self, gesture):
+	def script_announceResourceSummary(self, gesture: inputCore.InputGesture):
 		# Faster to build info on the fly rather than keep appending to a string.
 		# Translators: presents the overall summary of resource usage, such as CPU load and RAM usage.
 		info = [
@@ -546,6 +625,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ramPercent=tryTrunk(psutil.virtual_memory()[2]), cpuPercent=tryTrunk(psutil.cpu_percent())
 			)
 		]
+		# Deprecated: battery info can be obtained directly via NVDA (NVDA+Shift+B).
 		batteryInfo = _batteryInfo()
 		if batteryInfo is not None:
 			info.append(batteryInfo)

@@ -4,25 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
-<title>Udvidede berøringsfunktioner 26.04</title>
+<title>Udvidede berøringsfunktioner 26.07</title>
 </head>
 <body>
 <h1>Udvidede berøringsfunktioner)</h1>
 <ul>
 <li>Forfatter: Joseph Lee</li>
 </ul>
-<p>Dette tilføjelsesprogram tilføjer ekstra berøringskommandoer til NVDA. Det
-giver et sæt bevægelser for lettere navigering i gennemsynstilstand.</p>
-<p>Note: this add-on requires NVDA 2024.1 or later running on a touchscreen
-computer with Windows 10 or 11.</p>
+<p>Dette tilføjelsesprogram tilføjer ekstra berøringskommandoer til NVDA. Det giver et sæt bevægelser for lettere navigering i gennemsynstilstand.</p>
+<p>Note: this add-on requires NVDA 2024.1 or later running on a touchscreen computer with Windows 10 or 11.</p>
 <h2>Kommandoer</h2>
 <h3>Tilgængelig over alt</h3>
 <ul>
 <li>Dobbelt-tap med 4 fingre: Slå hjælpetilstand til/fra.</li>
-<li>Svirp til højre med 4 fingre: Slå berøringstastatur til/fra (som regel
-  til).</li>
-<li>Svirp med fire fingre til venstre: Aktivér eller deaktivér diktering
-  (Windows+H; Windows 10 version 1709 eller nyere).</li>
+<li>Svirp til højre med 4 fingre: Slå berøringstastatur til/fra (som regel til).</li>
+<li>Svirp med fire fingre til venstre: Aktivér eller deaktivér diktering (Windows+H; Windows 10 version 1709 eller nyere).</li>
 </ul>
 <h3>Objekttilstand</h3>
 <ul>
@@ -33,266 +29,8 @@ computer with Windows 10 or 11.</p>
 <li>Svirp ned med 4 fingre: Annoncer tekst på statuslinjen.</li>
 </ul>
 <h2>Web-berøringstilstand</h2>
-<p>Med denne berøringstilstand, som kan bruges i gennemsynstilstand, kan du
-navigere i et dokument efter det valgte element. I dokumenter, der
-understøtter gennemsynstilstand, kan du skifte til web-tilstand ved at tappe
-med 3 fingre. I denne tilstand kan du svirpe op og ned med en finger for at
-vælge den type element, du vil navigere efter. Du kan svirpe mod højre eller
-venstre flytter til henholdsvis det næste eller forrige element af den
-valgte type. Når du går ud af et dokument, som understøtter
-gennemsynstilstand, vil objektberøringstilstand blive brugt.</p>
+<p>Med denne berøringstilstand, som kan bruges i gennemsynstilstand, kan du navigere i et dokument efter det valgte element. I dokumenter, der understøtter gennemsynstilstand, kan du skifte til web-tilstand ved at tappe med 3 fingre. I denne tilstand kan du svirpe op og ned med en finger for at vælge den type element, du vil navigere efter. Du kan svirpe mod højre eller venstre flytter til henholdsvis det næste eller forrige element af den valgte type. Når du går ud af et dokument, som understøtter gennemsynstilstand, vil objektberøringstilstand blive brugt.</p>
 <h2>Berøringstilstand til indstilling af talesyntese</h2>
-<p>Du kan bruge denne tilstand til hurtigt at at skifte indstillinger for
-talesyntese, f.eks. vælge en stemme og ændre lydstyrke. I denne tilstand kan
-du svirpe til højre eller venstre med to fingre for at flytte mellem de
-forskellige indstillinger for talesyntesen. Svirp op og ned for at ændre den
-valgte indstilling. Disse bevægelser svarer til tastaturkommandoerne til
-ringen for talesynteseindstillinger.</p>
-<h2>Version 25.07</h2>
-<ul>
-<li>Made the add-on code more robust with help from Pyright (a Python static
-  type checker).</li>
-</ul>
-<h2>Version 25.02</h2>
-<ul>
-<li>Restored limited support for Windows 8.1.</li>
-</ul>
-<h2>Version 25.01</h2>
-<ul>
-<li>Download links for add-on releases are no longer included in add-on
-  documentation. You can download the add-on from NV Access add-on store.</li>
-<li>Switched linting tool from Flake8 to Ruff and reformatted add-on modules
-  to better align with NVDA coding standards.</li>
-<li>Removed support for automatic add-on updates feature from Add-on Updater
-  add-on.</li>
-</ul>
-<h2>Version 24.05</h2>
-<ul>
-<li>NVDA 2024.1 or later is required.</li>
-</ul>
-<h2>Version 23.06.1</h2>
-<ul>
-<li>audio ducking moved to 4 finger tap due to conflict with speech stops NVDA
-  command.</li>
-</ul>
-<h2>Version 23.06</h2>
-<ul>
-<li>Enhanced Touch gestures nvda-addon is now maintained by Kefas Lungu.</li>
-<li>All gestures in object mode are now available everywhere.</li>
-<li>
-<p>New gestures are now available.</p>
-</li>
-<li>
-<p>3 finger double tap: Cycles through speech symbol levels which determine
-    what symbols are spoken</p>
-</li>
-<li>2 finger tripple tap: Quit NVDA!.</li>
-<li>4 finger tap: Cycles through audio ducking modes.</li>
-<li>
-<p>Triple tap: Toggles between beeps, speech, beeps and speech, and off.</p>
-</li>
-<li>
-<p>In web mode, it is now possible to Use buttons, graphics, and landmarks in
-  addition to the already available browse element list.</p>
-</li>
-<li>In web mode, NVDA is no longer going to say normal, but default when you
-  switch to default navigation from other browse element list. For example,
-  when switching from buttons, NVDA will now say default.</li>
-</ul>
-<h2>Version 23.02</h2>
-<ul>
-<li>NVDA 2022.4 or later is required.</li>
-<li>Windows 10 21H2 (November 2021 Update/build 19044) or later is required.</li>
-</ul>
-<h2>Version 23.01</h2>
-<ul>
-<li>NVDA 2022.3 or later is required.</li>
-<li>Windows 10 or later is required as Windows 8.1 is no longer supported by
-  Microsoft as of January 2023.</li>
-<li>It is possible to reassign touch keyboard and dictation toggle commands
-  from input gestures dialog under Enhanced Touch Gestures category.</li>
-<li>Removed read-only state workaround for touch keyboard keys as it is
-  resolved in Windows 10.</li>
-</ul>
-<h2>Version 22.03</h2>
-<ul>
-<li>NVDA 2021.3 eller nyere er påkrævet.</li>
-<li>En advarselsmeddelelse vil blive vist, når du forsøger at installere
-  tilføjelsen på Windows 7, 8 og 8.1.</li>
-</ul>
-<h2>Version 21.10</h2>
-<ul>
-<li>NVDA 2021.2 eller nyere er påkrævet på grund af ændringer til NVDA, der
-  påvirker denne tilføjelse.</li>
-</ul>
-<h2>Version 21.08</h2>
-<ul>
-<li>Første understøttelse til Windows 11.</li>
-</ul>
-<h2>Version 21.01</h2>
-<ul>
-<li>NVDA 2020.3 eller nyere er påkrævet.</li>
-<li>I Windows 10 Version 1709 og senere vil et svirp med fire fingre til
-  venstre slå diktering til eller fra(Windows+H).</li>
-<li>Fjernet berøringsinteraktionskommando fra tilføjelsen.</li>
-<li>Da understøttelse af berøringsinteraktion kan skiftes fra NVDA's panel for
-  berøringsinteraktionsindstillinger, er et særligt panel med forbedrede
-  berøringsbevægelser blevet fjernet.</li>
-</ul>
-<h2>Version 20.09</h2>
-<ul>
-<li>Fjernet indstillingen til at lade NVDA deaktivere berøringsinteraktion i
-  op til ti sekunder (slip bevægelser direkte igennem til systemet).</li>
-<li>Fjernede funktionen for annoncering af koordinater som lydsignal</li>
-</ul>
-<h2>Version 20.07</h2>
-<ul>
-<li>Tilføjede en tastaturkommando til at skifte berøringsinteraktion eller
-  aktivere/deaktivere  funktion, der slipper berøringsbevægelser igennem, så
-  bevægelser ikke indfanges af NVDA (Ctrl+Alt+NVDA+T).</li>
-<li>Da NVDA 2020.1 og nyere inkluderer en touch-kommando til at udføre
-  højreklik med musen (tryk og hold på en finger), er kommandoen blevet
-  fjernet fra denne tilføjelse. Derfor kræves NVDA 2020.1 eller nyere.</li>
-<li>Muligheden for at lade NVDA slå berøringsinteraktion fra i op til ti
-  sekunder (funktion til at slippe bevægelser direkte igennem til systemet)
-  er forældet. I fremtiden skifter denne kommando i stedet for indstillingen
-  for berøringsinteraktion.</li>
-<li>I NVDA-udviklingssnapshots, på grund af ændringer i
-  berøringsinteraktionsfunktionen, vil berøringskommandoens funktion til at
-  slippe bevægelser direkte igennem til operativsystemet blive
-  deaktiveret. Den kommando, der bruges til at aktivere denne funktion, vil
-  nu slå berøringsinteraktion til og fra i stedet.</li>
-<li>Koordinat-meddelelsesbip-funktionen er forældet og fjernes i en fremtidig
-  tilføjelsesopdatering.</li>
-<li>Koordinat-meddelelsesbip høres ikke, mens du bruger berøringstastaturet.</li>
-<li>NVDA vil ikke længere se ud til at gøre ingenting eller afspille
-  fejletoner, mens man udforsker moderne inputmetoder såsom emoji-panelet
-  via berøring.</li>
-<li>NVDA vil vise en fejlmeddelelse, hvis berøringstastaturet ikke kan
-  aktiveres (svirp fire fingre til højre).</li>
-</ul>
-<h2>Version 20.06</h2>
-<ul>
-<li>Løst mange problemer med kodningstil og potentielle fejl med Flake8.</li>
-</ul>
-<h2>Version 20.04</h2>
-<ul>
-<li>Højre museklik (tryk og hold med én finger) er nu en del af NVDA 2020.1.</li>
-</ul>
-<h2>Version 20.01</h2>
-<ul>
-<li>NVDA 2019.3 eller nyere er påkrævet.</li>
-<li>Kommandoen til at slå understøttelse for berøring til og fra (herunder
-  muligheden for at slippe bevægelser direkte igennem) fungerer ikke
-  længere, hvis berøringsunderstøttelse er slået helt fra.</li>
-</ul>
-<h2>Version 19.09</h2>
-<ul>
-<li>Tilføjede meddelelser for inputhjælp til yderligere berøringskommandoer.</li>
-</ul>
-<h2>Version 19.09</h2>
-<ul>
-<li>Berøringsunderstøttelse kan nu deaktiveres fra alle steder, ikke kun fra
-  andre profiler end den normale profil.</li>
-</ul>
-<h2>Version 19.07</h2>
-<ul>
-<li>Interne ændringer for at bedre kunne understøtte fremtidige versioner af
-  NVDA.</li>
-</ul>
-<h2>Version 18.12</h2>
-<ul>
-<li>Interne ændringer for at bedre kunne understøtte fremtidige versioner af
-  NVDA.</li>
-</ul>
-<h2>Version 18.08</h2>
-<ul>
-<li>Kompatibel med NVDA 2018.3 og fremtidige versioner.</li>
-</ul>
-<h2>Version 18.06</h2>
-<ul>
-<li>Tilføjelsesindstillinger er nu at finde i kategorien "Udvidede
-  berøringsbevægelser" i NVDAs indstillingsdialog. Som følge heraf er NVDA
-  2018.2 påkrævet.</li>
-<li>Rettede kompatibilitetsproblemer med wxPython 4.</li>
-</ul>
-<h2>Version 18.04</h2>
-<ul>
-<li>Løser et problem, hvor indstillingskategorien "Berøringsinteraktion"i
-  NVDA-indstillingspanelet kan forårsage fejllyde, der høres på grund af
-  ændringer foretaget af denne tilføjelse.</li>
-</ul>
-<h2>Version 18.03</h2>
-<ul>
-<li>NVDA 2018.1 er påkrævet.</li>
-<li>Fordi NVDA 2018.1 kommer med check box til at slå berøringsindtastning til
-  og fra, er afkrydsningsfeltet ikke længere inkluderet i denne tilføjelse.</li>
-</ul>
-<h2>Version 17.12</h2>
-<ul>
-<li>Kræver NVDA 2017.4. Specifikt, kan denne tilføjelse nu håndtere skift af
-  indstillingsprofiler.</li>
-<li>Da NVDA 2017.4 omfatter meddelelser om skærmens orientering, er denne
-  funktion ikke længere en del af denne tilføjelse.</li>
-<li>Tilføjede en skjult check box i berøringsinteraktion, der lader dig slå
-  understøttelse for berøring helt fra (tilgængelig hvis andre profiler end
-  den normale indstillingsprofil er aktiv).</li>
-<li>Hvis du bruger NVDA 2018.1 eller nyere, vil du få vist dialoger til
-  berøringsinteraktion to gange under NVDAs indstillingskategorier. Det
-  andet punkt er den dialog, der tilhører tilføjelsen.</li>
-<li>Indstillingen til berøringsindtastning vises ikke længere i tilføjelsens
-  egen dialog for berøringsindtastning, hvis du benytter NVDA 2018.2 eller
-  nyere.</li>
-</ul>
-<h2>Version 17.10</h2>
-<ul>
-<li>På grund af støttepolitik fra Microsoft understøttes Windows 8 (original
-  version) ikke længere.</li>
-<li>NVDA meddeler ikke længere skærmorientation to gange, når du kører NVDA
-  2017.4 development snapshots.</li>
-</ul>
-<h2>Version 17.07.1</h2>
-<ul>
-<li>Tilføjet en mulighed i dialogboksen "Berøringsinteraktion" til at manuelt
-  lade berøringsbevægelser slippe igennem, uden at bruge en timer.</li>
-<li>Med tilstanden til manuelt at slippe berøringsbevægelser igennem slået
-  fra, og hvis berøringsbevægelser slippes igennem før varigheden udløber,
-  slås berøringsinteraktion til.</li>
-</ul>
-<h2>Version 17.07Version: <a href="https://www.nvaccess.org/addonStore/legacy?file=enhancedTouchGestures">0.6</a></h2>
-<ul>
-<li>Tilføjet en ny dialogboks ved navn "Berøringsindtastning" under NVDAs menu
-  under Præferencer til at konfigurere, hvordan NVDA fungere med
-  berøringsskærme.</li>
-<li>Du skal trykke to gange på den ønskede tast på berøringstastaturet, når du
-  har installeret denne version. Du kan skifte tilbage til den forrige
-  metode ved at benytte dialogen "Beræringsindteraktion".</li>
-<li>Tilføjede en utildelt kommando, der lader NVDA ignorere alle
-  berøringsbevægelser op til 10 sekunder.</li>
-<li>Tilføjet en mulighed i dialogen "Berøringsinteraktion", der tillader NVDA
-  at pause berøringsinteraktion mellem 3 til 10 sekunder for at udføre
-  bevægelser direkte (som om NVDA ikke kørte, standard er 5 sekunder).</li>
-<li>Tilføjede beskeder ang. fejlfinding når du udføre højreklik (tryk og hold
-  nede), der skrives ind i din NVDA-logfil. Dette kræver NVDA 2017.1 eller
-  nyere.</li>
-<li>På grund af ændringer, der foretages ved afspilning af skærmkoordinater,
-  kræves NVDA 2017.1 eller nyere.</li>
-</ul>
-<h2>Version 17.03</h2>
-<ul>
-<li>Løst et problem, hvor bip når koordinater blev annoncerede ikke spillede
-  eller en fejltone blev spillet i stedet, når du bruger NVDA 2017.1 eller
-  nyere.</li>
-</ul>
-<h2>Version 16.12</h2>
-<ul>
-<li>Web-berøringstilstand fungerer i Microsoft Edge, Microsoft Word og andre
-  hvor steder gennemsynstilstand benyttes.</li>
-<li>Tilføjede lister og landmærker til elementer af web-berøringstilstande.</li>
-</ul>
-<h2>Version 16.06</h2>
-<ul>
-<li>Første stabile version.</li>
-</ul>
+<p>Du kan bruge denne tilstand til hurtigt at at skifte indstillinger for talesyntese, f.eks. vælge en stemme og ændre lydstyrke. I denne tilstand kan du svirpe til højre eller venstre med to fingre for at flytte mellem de forskellige indstillinger for talesyntesen. Svirp op og ned for at ændre den valgte indstilling. Disse bevægelser svarer til tastaturkommandoerne til ringen for talesynteseindstillinger.</p>
 </body>
 </html>

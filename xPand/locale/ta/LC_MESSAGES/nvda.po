@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Tamil\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - தானியங்கி திருத்தம்"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "குறியீடு:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "சரி"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "ரத்து"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "குறியீடு காணப்படவில்லை"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "கிளிப்போர்டுக்கு நகலெடுக்க முடியவில்லை"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "உரையை ஒட்ட முடியவில்லை. கைமுறையாக (Ctrl+V) முயற்சிக்கவும்."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "உரையை ஒட்டுவதில் பிழை"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand அமைப்புகள்"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "குறியீடு பட்டியல்:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "குறியீடு"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "சொல்"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "சொல்:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "சேர்"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "திருத்து"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "நீக்கு"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "மூடு"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "இதில் தொடங்கும் குறியீடு எதுவுமில்லை: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "பொருந்தும் குறியீடு இல்லை"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "தயவுசெய்து ஒரு குறியீட்டை உள்ளிடவும்"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "தயவுசெய்து ஒரு சொல்லை உள்ளிடவும்"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "குறியீடு ஏற்கனவே உள்ளது"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "சேர்த்தல் வெற்றியடைந்தது"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "குறியீட்டைச் சேர்ப்பதில் பிழை"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "திருத்த முறை. குறியீடு மற்றும் சொல்லை மாற்றி, சேமிக்க 'திருத்து' என்பதைக் கிளிக் செய்யவும்."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "'{name}' என்ற குறியீட்டை நீக்க விரும்புகிறீர்களா?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "நீக்குவதை உறுதிப்படுத்து"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "குறியீடு நீக்கப்பட்டது"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "குறியீட்டை நீக்குவதில் பிழை"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand தானியங்கி திருத்தத்தைத் திற"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand திறப்பதில் பிழை"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand அமைப்புகளைத் திறப்பதில் பிழை"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand அமைப்புகளைத் திற"

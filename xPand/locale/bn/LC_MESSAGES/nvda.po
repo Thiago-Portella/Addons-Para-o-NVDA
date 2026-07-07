@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 07:55+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Bengali\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - স্বয়ংক্রিয় সংশোধন"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "কোড:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "ঠিক আছে"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "বাতিল"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "কোড পাওয়া যায়নি"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "ক্লিপবোর্ডে কপি করা যাচ্ছে না"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "টেক্সট পেস্ট করা যাচ্ছে না। অনুগ্রহ করে ম্যানুয়ালি (Ctrl+V) চেষ্টা করুন।"
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "টেক্সট পেস্ট করতে ত্রুটি"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand সেটিংস"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "কোড তালিকা:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "কোড"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "শব্দ"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "শব্দ:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "যোগ করুন"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "সম্পাদনা"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "সরিয়ে ফেলুন"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "বন্ধ করুন"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "{} দিয়ে শুরু হওয়া কোন কোড নেই"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "কোন মিল পাওয়া কোড নেই"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "অনুগ্রহ করে একটি কোড দিন"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "অনুগ্রহ করে একটি শব্দ দিন"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "কোডটি ইতিমধ্যেই আছে"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "সফলভাবে যোগ করা হয়েছে"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "কোড যোগ করতে ত্রুটি"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "সম্পাদনা মোড। কোড এবং শব্দ পরিবর্তন করুন, তারপর সংরক্ষণ করতে সম্পাদনা ক্লিক করুন।"
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "আপনি কি নিশ্চিত যে আপনি '{name}' কোডটি মুছে ফেলতে চান?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "মুছে ফেলার নিশ্চিতকরণ"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "কোড সরানো হয়েছে"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "কোড সরাতে ত্রুটি"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand স্বয়ংক্রিয় সংশোধন খুলুন"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand খুলতে ত্রুটি"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand সেটিংস খুলতে ত্রুটি"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand সেটিংস খুলুন"

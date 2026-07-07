@@ -1,21 +1,21 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: xPand AutoCorrect\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
 "POT-Creation-Date: 2025-10-25 00:00+0000\n"
-"PO-Revision-Date: 2025-10-25 14:17+0700\n"
-"Last-Translator: NVDA User <user@example.com>\n"
+"PO-Revision-Date: 2026-05-04 07:55+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: DevOn Addon\n"
 
 #: __init__.py:84
 msgid "xPand - AutoCorrect"
-msgstr "xPand - AutoKorrektur"
+msgstr "xPand - Autokorrektur"
 
 #: __init__.py:97 __init__.py:263
 msgid "Code:"
@@ -35,7 +35,7 @@ msgstr "Code nicht gefunden"
 
 #: __init__.py:174
 msgid "Cannot copy to clipboard"
-msgstr "Kann nicht in die Zwischenablage kopiert werden"
+msgstr "Kopieren in die Zwischenablage nicht möglich"
 
 #: __init__.py:208
 msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
@@ -43,11 +43,11 @@ msgstr "Text kann nicht eingefügt werden. Bitte versuchen Sie es manuell (Strg+
 
 #: __init__.py:214
 msgid "Error pasting text"
-msgstr "Fehler beim Einfügen von Text"
+msgstr "Fehler beim Einfügen des Textes"
 
 #: __init__.py:225
 msgid "xPand Settings"
-msgstr "xPand Einstellungen"
+msgstr "xPand-Einstellungen"
 
 #: __init__.py:246
 msgid "Code list:"
@@ -87,11 +87,11 @@ msgstr "{}"
 
 #: __init__.py:350
 msgid "No code starting with: {}"
-msgstr "Kein Code beginnend mit: {}"
+msgstr "Kein Code beginnt mit: {}"
 
 #: __init__.py:353
 msgid "No matching code"
-msgstr "Kein übereinstimmender Code"
+msgstr "Kein passender Code"
 
 #: __init__.py:368
 msgid "Please enter a code"
@@ -115,7 +115,7 @@ msgstr "Fehler beim Hinzufügen des Codes"
 
 #: __init__.py:392
 msgid "Edit mode. Modify code and word, then click Edit to save."
-msgstr "Bearbeitungsmodus. Ändern Sie Code und Wort, dann klicken Sie auf Bearbeiten zum Speichern."
+msgstr "Bearbeitungsmodus. Ändern Sie Code und Wort, dann auf Bearbeiten klicken."
 
 #: __init__.py:401
 msgid "Are you sure you want to delete the code '{name}'?"
@@ -123,7 +123,7 @@ msgstr "Sind Sie sicher, dass Sie den Code '{name}' löschen möchten?"
 
 #: __init__.py:405
 msgid "Confirm deletion"
-msgstr "Löschung bestätigen"
+msgstr "Löschen bestätigen"
 
 #: __init__.py:411
 msgid "Code removed"
@@ -135,7 +135,7 @@ msgstr "Fehler beim Entfernen des Codes"
 
 #: __init__.py:427
 msgid "Open xPand AutoCorrect"
-msgstr "xPand AutoKorrektur öffnen"
+msgstr "xPand-Autokorrektur öffnen"
 
 #: __init__.py:481
 msgid "Error opening xPand"
@@ -143,8 +143,8 @@ msgstr "Fehler beim Öffnen von xPand"
 
 #: __init__.py:506
 msgid "Error opening xPand settings"
-msgstr "Fehler beim Öffnen der xPand Einstellungen"
+msgstr "Fehler beim Öffnen der xPand-Einstellungen"
 
 #: __init__.py:515
 msgid "Open xPand Settings"
-msgstr "xPand Einstellungen öffnen"
+msgstr "xPand-Einstellungen öffnen"

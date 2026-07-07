@@ -24,6 +24,8 @@ SHERB_NOCONFIRMATION = 0x00000001
 SHERB_NOPROGRESSUI = 0x00000002
 SHERB_NOSOUND = 0x00000004
 
+BM_CLICK = 0x00F5
+
 shell32 = ctypes.windll.shell32
 shell32.SHEmptyRecycleBinW.argtypes = [wintypes.HWND, wintypes.LPCWSTR, wintypes.DWORD]
 shell32.SHEmptyRecycleBinW.restype = ctypes.c_long
@@ -51,6 +53,89 @@ class SHQUERYRBINFO(ctypes.Structure):
 
 shell32.SHQueryRecycleBinW.argtypes = [wintypes.LPCWSTR, ctypes.POINTER(SHQUERYRBINFO)]
 shell32.SHQueryRecycleBinW.restype = ctypes.c_long
+
+def open_system_tray():
+	try:
+		user32 = ctypes.windll.user32
+		VK_LWIN = 0x5B
+		VK_B = 0x42
+		KEYEVENTF_KEYUP = 0x0002
+
+		user32.keybd_event(VK_LWIN, 0, 0, 0)
+		user32.keybd_event(VK_B, 0, 0, 0)
+		user32.keybd_event(VK_B, 0, KEYEVENTF_KEYUP, 0)
+		user32.keybd_event(VK_LWIN, 0, KEYEVENTF_KEYUP, 0)
+		return True
+	except Exception as e:
+		log.error(f"System tray open error: {e}")
+		return False
+
+def restart_audio_services():
+	cmd = "net stop Audiosrv /y && net start Audiosrv"
+	return _runAsAdmin(cmd, hide=True)
+
+def get_usb_drives():
+	drives = []
+	try:
+		info = subprocess.STARTUPINFO()
+		info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+		out = subprocess.check_output("wmic logicaldisk where drivetype=2 get deviceid,volumename", startupinfo=info, text=True)
+		lines = out.splitlines()
+		for line in lines[1:]:
+			if line.strip():
+				parts = line.split(maxsplit=1)
+				if len(parts) >= 1:
+					letter = parts[0]
+					name = parts[1].strip() if len(parts) > 1 else _("USB Drive")
+					drives.append({'letter': letter, 'name': name})
+	except Exception as e:
+		log.error(f"Error getting USB drives: {e}")
+	return drives
+
+def eject_usb(drive_letter):
+	ps_script = f"$driveEject = New-Object -comObject Shell.Application; $driveEject.Namespace(17).ParseName('{drive_letter}').InvokeVerb('Eject')"
+	try:
+		info = subprocess.STARTUPINFO()
+		info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+		subprocess.run(["powershell", "-ExecutionPolicy", "Bypass", "-NoProfile", "-Command", ps_script], startupinfo=info, check=True)
+		return True
+	except Exception as e:
+		log.error(f"Eject USB error: {e}")
+		return False
+
+def toggle_bluetooth():
+	ps_script = (
+		"[Windows.Devices.Radios.Radio,Windows.System.Devices,ContentType=WindowsRuntime] | Out-Null; "
+		"$radios = [Windows.Devices.Radios.Radio]::GetRadiosAsync().GetResults(); "
+		"foreach($r in $radios) { "
+		"if($r.Kind -eq 'Bluetooth') { "
+		"if($r.State -eq 'On') { $r.SetStateAsync('Off').GetResults(); Write-Output 'Off' } "
+		"else { $r.SetStateAsync('On').GetResults(); Write-Output 'On' } "
+		"} }"
+	)
+	try:
+		info = subprocess.STARTUPINFO()
+		info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+		out = subprocess.check_output(
+			["powershell", "-ExecutionPolicy", "Bypass", "-NoProfile", "-Command", ps_script],
+			startupinfo=info, text=True
+		)
+		if "Off" in out: return True, _("Bluetooth turned off.")
+		elif "On" in out: return True, _("Bluetooth turned on.")
+		return False, _("Could not find or change Bluetooth status.")
+	except Exception as e:
+		log.error(f"BT toggle error: {e}")
+		return False, _("Failed to toggle Bluetooth.")
+
+def force_restart_now():
+	try:
+		subprocess.Popen("shutdown.exe /r /t 0", shell=True)
+	except Exception as e:
+		log.error(f"Force restart failed: {e}")
+
+def boot_to_uefi_firmware():
+	cmd = "shutdown.exe /r /fw /t 0"
+	return _runAsAdmin(cmd, hide=True)
 
 def isInternetConnected():
 	try:
@@ -137,16 +222,72 @@ def get_first_disabled_adapter():
 
 def isUACEnabled():
 	try:
-		key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System", 0, winreg.KEY_READ)
-		value, _ = winreg.QueryValueEx(key, "EnableLUA")
-		winreg.CloseKey(key)
-		return value == 1
-	except Exception:
+		KEY_WOW64_64KEY = 0x0100
+		key_handle = winreg.OpenKey(
+			winreg.HKEY_LOCAL_MACHINE,
+			r"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System",
+			0,
+			winreg.KEY_READ | KEY_WOW64_64KEY
+		)
+		value, reg_type = winreg.QueryValueEx(key_handle, "EnableLUA")
+		winreg.CloseKey(key_handle)
+		is_enabled = (value == 1)
+		log.info(f"UAC registry EnableLUA = {value} (type {reg_type}) => enabled={is_enabled}")
+		return is_enabled
+	except FileNotFoundError:
+		log.warning("EnableLUA registry key not found, assuming UAC enabled")
 		return True
+	except Exception as e:
+		log.error(f"Failed to read UAC registry: {e}, falling back to reg query")
+		try:
+			cmd = 'reg query "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA'
+			output = subprocess.check_output(cmd, shell=True, text=True, stderr=subprocess.DEVNULL)
+			for line in output.splitlines():
+				if "EnableLUA" in line:
+					parts = line.split()
+					if len(parts) >= 3:
+						value_str = parts[-1]
+						if value_str == "0x1":
+							log.info("reg query returned EnableLUA=0x1")
+							return True
+						elif value_str == "0x0":
+							log.info("reg query returned EnableLUA=0x0")
+							return False
+			log.warning("reg query could not parse EnableLUA value, assuming True")
+			return True
+		except subprocess.CalledProcessError as e:
+			log.error(f"reg query failed: {e}, assuming UAC enabled")
+			return True
+		except Exception as e2:
+			log.error(f"Unexpected error in fallback: {e2}, assuming True")
+			return True
 
 def _setUACRegistry(value):
 	cmd = f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f'
-	return _runAsAdmin(cmd, hide=True)
+	try:
+		result = ctypes.windll.shell32.ShellExecuteW(None, "runas", "reg.exe", cmd, None, 0)
+		if result <= 32:
+			log.error(f"Failed to launch reg.exe: {result}")
+			return False
+		time.sleep(0.5)
+		current = isUACEnabled()
+		expected = (value == 1)
+		if current == expected:
+			log.info(f"UAC registry set to {value} and verified")
+			return True
+		else:
+			log.warning(f"UAC registry set to {value} but current is {current}, retrying with subprocess")
+			try:
+				subprocess.run(f'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" /v EnableLUA /t REG_DWORD /d {value} /f', shell=True, check=True, timeout=5)
+				time.sleep(0.3)
+				if isUACEnabled() == expected:
+					return True
+			except Exception as e2:
+				log.error(f"Fallback reg add also failed: {e2}")
+			return False
+	except Exception as e:
+		log.error(f"_setUACRegistry exception: {e}")
+		return False
 
 def disableUAC():
 	return _setUACRegistry(0)
@@ -155,60 +296,72 @@ def enableUAC():
 	return _setUACRegistry(1)
 
 def cleanTempFolders():
-	overall_success = True
-	userTemp = os.environ.get("TEMP", "")
-	if userTemp and os.path.exists(userTemp):
+	totalRemoved = 0
+	overallSuccess = True
+	
+	userTempPath = os.environ.get("TEMP", "")
+	if userTempPath and os.path.exists(userTempPath):
 		try:
-			for item in os.listdir(userTemp):
-				itemPath = os.path.join(userTemp, item)
+			for item in os.listdir(userTempPath):
+				itemFullPath = os.path.join(userTempPath, item)
 				try:
-					if os.path.isfile(itemPath):
-						os.remove(itemPath)
-					elif os.path.isdir(itemPath):
-						shutil.rmtree(itemPath, ignore_errors=True)
-				except Exception as e:
-					log.warning(f"Could not delete {itemPath}: {e}")
+					if os.path.isfile(itemFullPath):
+						os.remove(itemFullPath)
+						totalRemoved += 1
+					elif os.path.isdir(itemFullPath):
+						shutil.rmtree(itemFullPath, ignore_errors=True)
+						totalRemoved += 1
+				except Exception:
+					pass
 		except Exception as e:
 			log.error(f"User temp clean error: {e}")
-			overall_success = False
-	winTemp = r"C:\Windows\Temp"
-	if os.path.exists(winTemp):
+			overallSuccess = False
+			
+	winTempPath = r"C:\Windows\Temp"
+	if os.path.exists(winTempPath):
 		try:
-			for item in os.listdir(winTemp):
-				itemPath = os.path.join(winTemp, item)
+			for item in os.listdir(winTempPath):
+				itemFullPath = os.path.join(winTempPath, item)
 				try:
-					if os.path.isfile(itemPath):
-						os.remove(itemPath)
-					elif os.path.isdir(itemPath):
-						shutil.rmtree(itemPath, ignore_errors=True)
-				except Exception as e:
-					log.warning(f"Could not delete {itemPath}: {e}")
+					if os.path.isfile(itemFullPath):
+						os.remove(itemFullPath)
+						totalRemoved += 1
+					elif os.path.isdir(itemFullPath):
+						shutil.rmtree(itemFullPath, ignore_errors=True)
+						totalRemoved += 1
+				except Exception:
+					pass
 		except Exception as e:
 			log.error(f"Windows temp clean error: {e}")
-			overall_success = False
-	return overall_success
+			overallSuccess = False
+			
+	return overallSuccess, totalRemoved
 
 def cleanRunHistory():
 	try:
-		key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU", 0, winreg.KEY_SET_VALUE | winreg.KEY_QUERY_VALUE)
-		i = 0
-		valueNames = []
+		targetKey = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU", 0, winreg.KEY_SET_VALUE | winreg.KEY_QUERY_VALUE)
+		itemIndex = 0
+		historyItems = []
 		while True:
 			try:
-				name, _, _ = winreg.EnumValue(key, i)
-				valueNames.append(name)
-				i += 1
+				itemName, _, _ = winreg.EnumValue(targetKey, itemIndex)
+				historyItems.append(itemName)
+				itemIndex += 1
 			except OSError:
 				break
-		for name in valueNames:
-			if name != "MRUList":
-				winreg.DeleteValue(key, name)
-		winreg.SetValueEx(key, "MRUList", 0, winreg.REG_SZ, "")
-		winreg.CloseKey(key)
-		return True
+				
+		removedCount = 0
+		for itemName in historyItems:
+			if itemName != "MRUList":
+				winreg.DeleteValue(targetKey, itemName)
+				removedCount += 1
+				
+		winreg.SetValueEx(targetKey, "MRUList", 0, winreg.REG_SZ, "")
+		winreg.CloseKey(targetKey)
+		return True, removedCount
 	except Exception as e:
 		log.error(f"Run history clean error: {e}")
-		return False
+		return False, 0
 
 def get_current_wifi_password():
 	try:
@@ -302,29 +455,25 @@ def restart_explorer():
 		log.error(f"Failed to restart explorer: {e}")
 		return False
 
-def _is_recycle_bin_empty():
-	try:
-		info = SHQUERYRBINFO()
-		info.cbSize = ctypes.sizeof(SHQUERYRBINFO)
-		result = shell32.SHQueryRecycleBinW(None, ctypes.byref(info))
-		if result == 0:
-			return info.i64NumItems == 0
-		else:
-			log.warning(f"SHQueryRecycleBinW returned {result}")
-			return False
-	except Exception as e:
-		log.warning(f"Failed to query recycle bin: {e}")
-		return False
-
 def empty_recycle_bin():
 	try:
-		if _is_recycle_bin_empty():
-			return True, _("Recycle bin is already empty.")
-		result = shell32.SHEmptyRecycleBinW(None, None, SHERB_NOCONFIRMATION | SHERB_NOPROGRESSUI | SHERB_NOSOUND)
-		if result == 0:
-			return True, _("Recycle bin emptied.")
+		rbInfo = SHQUERYRBINFO()
+		rbInfo.cbSize = ctypes.sizeof(SHQUERYRBINFO)
+		queryStatus = shell32.SHQueryRecycleBinW(None, ctypes.byref(rbInfo))
+		
+		itemsToRemove = 0
+		if queryStatus == 0:
+			itemsToRemove = rbInfo.i64NumItems
+			if itemsToRemove == 0:
+				return True, _("Recycle bin is already empty.")
 		else:
-			log.error(f"SHEmptyRecycleBinW failed with code {result}")
+			log.warning(f"SHQueryRecycleBinW returned {queryStatus}")
+
+		emptyStatus = shell32.SHEmptyRecycleBinW(None, None, SHERB_NOCONFIRMATION | SHERB_NOPROGRESSUI | SHERB_NOSOUND)
+		if emptyStatus == 0:
+			return True, _("Recycle bin emptied. {count} items removed.").format(count=itemsToRemove)
+		else:
+			log.error(f"SHEmptyRecycleBinW failed with code {emptyStatus}")
 			return False, _("Failed to empty recycle bin.")
 	except Exception as e:
 		log.error(f"Empty recycle bin error: {e}")
@@ -379,20 +528,6 @@ def clear_ram_cache():
 	except Exception as e:
 		log.error(f"Failed to clear RAM cache: {e}")
 		return -1
-
-def open_system_tray():
-	try:
-		import winUser
-		winUser.keybd_event(winUser.VK_LWIN, 0, 0, 0)
-		winUser.keybd_event(ord('B'), 0, 0, 0)
-		winUser.keybd_event(ord('B'), 0, winUser.KEYEVENTF_KEYUP, 0)
-		winUser.keybd_event(winUser.VK_LWIN, 0, winUser.KEYEVENTF_KEYUP, 0)
-		time.sleep(0.1)
-		winUser.keybd_event(winUser.VK_RETURN, 0, 0, 0)
-		winUser.keybd_event(winUser.VK_RETURN, 0, winUser.KEYEVENTF_KEYUP, 0)
-	except Exception as e:
-		log.error(f"Failed to open system tray via Win+B: {e}")
-		wx.CallAfter(ui.message, _("Press Windows+B, then Enter to open system tray."))
 
 def get_startup_items():
 	items = []
@@ -606,27 +741,32 @@ def open_services_mmc():
 
 def clean_prefetch_recent():
 	try:
-		prefetch_dir = r"C:\Windows\Prefetch"
-		if os.path.exists(prefetch_dir):
-			for f in os.listdir(prefetch_dir):
-				if f.lower() in ("readyboot", "readyboot.ini"):
+		totalRemoved = 0
+		prefetchPath = r"C:\Windows\Prefetch"
+		if os.path.exists(prefetchPath):
+			for prefetchFile in os.listdir(prefetchPath):
+				if prefetchFile.lower() in ("readyboot", "readyboot.ini"):
 					continue
-				full = os.path.join(prefetch_dir, f)
+				fullPath = os.path.join(prefetchPath, prefetchFile)
 				try:
-					if os.path.isfile(full):
-						os.remove(full)
-				except Exception as e:
-					log.warning(f"Could not delete prefetch file {full}: {e}")
-		recent_dir = os.path.join(os.getenv('APPDATA'), r'Microsoft\Windows\Recent')
-		if os.path.exists(recent_dir):
-			for f in os.listdir(recent_dir):
-				full = os.path.join(recent_dir, f)
+					if os.path.isfile(fullPath):
+						os.remove(fullPath)
+						totalRemoved += 1
+				except Exception:
+					pass
+					
+		recentPath = os.path.join(os.getenv('APPDATA'), r'Microsoft\Windows\Recent')
+		if os.path.exists(recentPath):
+			for recentFile in os.listdir(recentPath):
+				fullPath = os.path.join(recentPath, recentFile)
 				try:
-					if os.path.isfile(full):
-						os.remove(full)
-				except Exception as e:
-					log.warning(f"Could not delete recent file {full}: {e}")
-		return True, ""
+					if os.path.isfile(fullPath):
+						os.remove(fullPath)
+						totalRemoved += 1
+				except Exception:
+					pass
+					
+		return True, totalRemoved
 	except Exception as e:
 		log.error(f"Error cleaning prefetch/recent: {e}")
 		return False, str(e)

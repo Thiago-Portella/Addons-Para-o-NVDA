@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Turkmen\n"
+"Language: tk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - Awtomatiki Düzediş"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "Kod:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "OK"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "Goýbolsun et"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "Kod tapylmady"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Alyş-çalyş buferine nusgalap bolmady"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "Teksti goýup bolmady. El bilen (Ctrl+V) synanyşyň."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "Tekst goýlanda säwlik ýüze çykdy"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand Sazlamalary"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "Kod sanawy:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "Kod"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "Söz"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "Söz:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "Goş"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "Redaktirle"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "Aýyr"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "Ýap"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "Şunuň bilen başlaýan kod ýok: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "Degişli kod tapylmady"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "Kody giriziň"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "Sözi giriziň"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "Kod eýýäm bar"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "Goşmak üstünlikli tamamlandy"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "Kod goşulanda säwlik"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "Redaktirleme tertibi. Kod we sözi üýtgedip, 'Redaktirle' düwmesine basyň."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "'{name}' koduny pozmak isleýändigiňize ynanýarsyňyzmy?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "Pozmagy tassykla"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "Kod aýryldy"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "Kody aýyrmakda säwlik"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand Awtomatiki Düzedişi aç"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand açylanda säwlik"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand sazlamalary açylanda säwlik"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand Sazlamalaryny aç"

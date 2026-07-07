@@ -70,6 +70,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     # Default gestures
     # ------------------------------------------------------------
     __gestures = {
-        "kb:NVDA+control+shift+i": "toggleStayAwake",
-        "kb:NVDA+control+shift+a": "stayAwakeStatus",
+        "kb:NVDA+control+shift+a": "toggleStayAwake",
+        "kb:NVDA+control+shift+i": "stayAwakeStatus",
     }

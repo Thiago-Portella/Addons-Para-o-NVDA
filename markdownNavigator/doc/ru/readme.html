@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Markdown-навигатор 0.2.7</title>
+</head>
+<body>
+<h1>Markdown-навигатор NVDA</h1>
+<p>Markdown-навигатор — это дополнение для NVDA, спроектированное для улучшения работы с текстом в формате Markdown. Оно позволяет использовать функции навигации с помощью одной клавиши, аналогичные режиму обзора NVDA, в редактируемых текстовых областях (например, в Блокноте, VS Code, веб-редакторах и т.д.).</p>
+<p>Оно позволяет быстро переходить к заголовкам, спискам, таблицам, блокам кода и различным строчным форматированиям без частого нажатия клавиш со стрелками.</p>
+<h2>Ключевые особенности</h2>
+<ul>
+<li><strong>Эффективная навигация</strong>: Реализует быстрые алгоритмы, позволяющие выполнять мгновенные переходы даже в больших документах, содержащих десятки тысяч строк.</li>
+<li><strong>Структурированный просмотр</strong>: Поддерживает навигацию по заголовкам, спискам, таблицам, цитатам, блокам кода и многому другому.</li>
+<li><strong>Строчные элементы</strong>: Поддерживает переход к выделению полужирным шрифтом, курсивом, ссылкам, изображениям и строчным вставкам кода.</li>
+<li><strong>Навигация по ячейкам таблицы</strong>: В таблицах Markdown предоставляет сочетания клавиш, соответствующие стандартным командам NVDA.</li>
+</ul>
+<h2>Использование</h2>
+<h3>Переключение режима обзора</h3>
+<p>По умолчанию навигация одной клавишей отключена. Вам необходимо вручную включить режим обзора Markdown.</p>
+<ul>
+<li><strong>Сочетание клавиш</strong>: <code>NVDA + Shift + Space</code> (Пробел)</li>
+<li><strong>Эффект</strong>: Включает или выключает функциональность дополнения. NVDA объявит "Режим обзора Markdown включён/выключен". Эта функция также соотносится с настройкой NVDA "Звуковая индикация режимов обзора и редактирования" в настройках режима обзора.</li>
+</ul>
+<h3>Список сочетаний клавиш (при включённом режиме обзора)</h3>
+<p>После включения режима вы можете использовать следующие однобуквенные клавиши.
+*   Нажмите <strong>буквенную клавишу</strong>, чтобы перейти к следующему элементу.
+*   Нажмите <strong>Shift + Буквенную клавишу</strong>, чтобы перейти к предыдущему элементу.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Клавиша</th>
+<th style="text-align: left;">Тип элемента</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>H</strong></td>
+<td style="text-align: left;">Заголовок</td>
+<td style="text-align: left;">Заголовок любого уровня (от <code>#</code> до <code>######</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1-6</strong></td>
+<td style="text-align: left;">Заголовок 1-6</td>
+<td style="text-align: left;">Конкретный уровень заголовка</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>T</strong></td>
+<td style="text-align: left;">Таблица</td>
+<td style="text-align: left;">Начало таблицы</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L</strong></td>
+<td style="text-align: left;">Список</td>
+<td style="text-align: left;">Начало блока списка</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td style="text-align: left;">Элемент списка</td>
+<td style="text-align: left;">Конкретный элемент списка (<code>-</code>, <code>*</code>, <code>1.</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Q</strong></td>
+<td style="text-align: left;">Цитата</td>
+<td style="text-align: left;">Блок цитаты (<code>&gt;</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">Код</td>
+<td style="text-align: left;">Блок кода (<code>```</code>) или строчная вставка кода (<code>`</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S</strong></td>
+<td style="text-align: left;">Разделитель</td>
+<td style="text-align: left;">Горизонтальная линия (<code>---</code>, <code>***</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>X</strong></td>
+<td style="text-align: left;">Флажок</td>
+<td style="text-align: left;">Элемент списка задач (<code>- [ ]</code>, <code>- [x]</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>K</strong></td>
+<td style="text-align: left;">Ссылка</td>
+<td style="text-align: left;">Ссылка Markdown <code>[текст](url)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>G</strong></td>
+<td style="text-align: left;">Графический элемент</td>
+<td style="text-align: left;">Тег изображения <code>![alt](url)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>B</strong></td>
+<td style="text-align: left;">Полужирный</td>
+<td style="text-align: left;">Полужирный текст (<code>**</code> или <code>__</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E</strong></td>
+<td style="text-align: left;">Акцент</td>
+<td style="text-align: left;">Курсивный/акцентированный текст (<code>*</code> или <code>_</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>D</strong></td>
+<td style="text-align: left;">Удаление</td>
+<td style="text-align: left;">Зачёркнутый текст (<code>~~</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>F</strong></td>
+<td style="text-align: left;">Ссылка</td>
+<td style="text-align: left;">Ссылка на сноску [^1]`</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>,</strong></td>
+<td style="text-align: left;">Конец блока</td>
+<td style="text-align: left;">Перейти к концу текущего блочного элемента</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shift+,</strong></td>
+<td style="text-align: left;">Начало блока</td>
+<td style="text-align: left;">Перейти к началу текущего блочного элемента</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>M</strong></td>
+<td style="text-align: left;">Математика</td>
+<td style="text-align: left;">Математическое выражение LaTeX (<code>$...$</code> или <code>$$...$$</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3>Навигация по ячейкам таблицы</h3>
+<p>Когда курсор находится внутри таблицы Markdown и включён режим обзора, вы можете использовать следующие сочетания клавиш для перемещения между ячейками:</p>
+<ul>
+<li><strong>Ctrl + Alt + Стрелка влево</strong>: Предыдущая ячейка</li>
+<li><strong>Ctrl + Alt + Стрелка вправо</strong>: Следующая ячейка</li>
+<li><strong>Ctrl + Alt + Стрелка вверх</strong>: Ячейка выше</li>
+<li><strong>Ctrl + Alt + Стрелка вниз</strong>: Ячейка ниже</li>
+</ul>
+<h2>Примечания</h2>
+<ul>
+<li>Это дополнение разработано специально для сценариев редактирования Markdown. Если вы читаете HTML-страницу, отображаемую браузером, используйте встроенный режим обзора NVDA.</li>
+<li>Если нажатие указанных выше клавиш вводит символы вместо навигации, проверьте, включён ли режим обзора, нажав <code>NVDA + Shift + Space</code>.</li>
+<li>В VS Code, из-за того, что редактор отображает содержимое по запросу (виртуализация), режим обзора этого дополнения может работать некорректно для содержимого, которое в данный момент не видно/не отображается.</li>
+</ul>
+<p>Copyright (C) 2026 Cary-rowen <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#109;&#97;&#110;&#99;&#104;&#101;&#110;&#95;&#48;&#53;&#50;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+<p>Перевод: Copyright (C) 2026 Nikita Tseykovets <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#115;&#101;&#105;&#107;&#111;&#118;&#101;&#116;&#115;&#64;&#114;&#97;&#109;&#98;&#108;&#101;&#114;&#46;&#114;&#117;">&#116;&#115;&#101;&#105;&#107;&#111;&#118;&#101;&#116;&#115;&#64;&#114;&#97;&#109;&#98;&#108;&#101;&#114;&#46;&#114;&#117;</a></p>
+</body>
+</html>

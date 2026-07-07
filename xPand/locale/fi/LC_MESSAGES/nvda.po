@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 07:55+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Finnish\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - Automaattinen korjaus"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "Koodi:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "OK"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "Koodia ei löytynyt"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Ei voida kopioida leikepöydälle"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "Tekstiä ei voida liittää. Yritä manuaalisesti (Ctrl+V)."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "Virhe tekstiä liitettäessä"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPandin asetukset"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "Koodiluettelo:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "Koodi"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "Sana"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "Sana:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "Lisää"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "Poista"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "Sulje"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "Ei koodia, joka alkaa: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "Ei vastaavaa koodia"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "Anna koodi"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "Anna sana"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "Koodi on jo olemassa"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "Lisääminen onnistui"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "Virhe koodia lisättäessä"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "Muokkaustila. Muuta koodia ja sanaa, ja napsauta Muokkaa."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "Haluatko varmasti poistaa koodin '{name}'?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "Vahvista poisto"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "Koodi poistettu"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "Virhe koodia poistettaessa"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "Avaa xPand-automaattinen korjaus"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "Virhe xPandia avattaessa"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "Virhe xPandin asetuksia avattaessa"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "Avaa xPandin asetukset"

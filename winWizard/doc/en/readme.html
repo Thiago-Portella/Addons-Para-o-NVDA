@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
-<title>Win Wizard 5.0.7</title>
+<title>Win Wizard 5.0.8</title>
 </head>
 <body>
 <h1>Win Wizard</h1>
@@ -11,16 +11,16 @@
 <li>Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz</li>
 <li>NVDA compatibility: 2019.3 and beyond</li>
 </ul>
-<p>This add-on allows you to perform some operations on the focused window or the process associated with it.
-When killing a process, or showing / hiding a window a confirmation beep is played when the action succeeds.
+<p>This add-on allows you to perform some operations on the focused window or the process associated with it.<br />
+When killing a process, or showing / hiding a window a confirmation beep is played when the action succeeds.<br />
 If you find this annoying you can disable these beeps in the Win Wizard's settings panel available from NVDA's settings dialog.</p>
 <h2>Keyboard commands:</h2>
 <p>All these commands can be remapped from the Input gestures dialog in the Win Wizard category.</p>
 <h3>Hiding and showing hidden windows:</h3>
 <ul>
-<li>NVDA+Windows+numbers from 1 to 0 - hides  currently focused window in the slot corresponding to the pressed number</li>
-<li>NVDA+Windows+left arrow - moves to the previous stack of hidden windows.</li>
-<li>NVDA+Windows+right arrow - moves to the next stack of hidden windows.</li>
+<li>NVDA+Windows+numbers from 1 to 0 - hides currently focused window in the slot corresponding to the pressed number</li>
+<li>NVDA+Windows+left arrow - moves to the previous stack of hidden windows</li>
+<li>NVDA+Windows+right arrow - moves to the next stack of hidden windows</li>
 <li>Windows+Shift+h - hides the currently focused window in the first available slot</li>
 <li>NVDA+Windows+h - shows the last hidden window</li>
 <li>Windows+Shift+l - shows the list of all hidden windows grouped by the stacks (please note that by default last hidden window is selected)</li>
@@ -30,12 +30,21 @@ If you find this annoying you can disable these beeps in the Win Wizard's settin
 <li>Windows+F4 - kills the process associated with the currently focused window</li>
 <li>NVDA+Windows+p - opens dialog allowing you to set priority of the process associated with the currently focused window</li>
 </ul>
-<h3>Miscellaneous  commands:</h3>
+<h3>Miscellaneous commands:</h3>
 <ul>
 <li>NVDA+Windows+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.)</li>
+<li>NVDA+Windows+` - confirms and switches to the selected window in the cycle  </li>
+<li>In the new behavior, this command is used to activate the selected window</li>
+<li>The old behavior can still be enabled in settings</li>
 <li>CTRL+ALT+T - allows you to change title of the currently focused program</li>
 </ul>
 <h2>Changes:</h2>
+<h3>Changes for 5.0.8:</h3>
+<ul>
+<li>Added a new window cycling system with improved selection and confirmation behavior</li>
+<li>Added option to switch between the new window cycling system and the legacy behavior</li>
+<li>Compatibility with NVDA 2026.1</li>
+</ul>
 <h3>Changes for 5.0.7:</h3>
 <ul>
 <li>Compatibility with NVDA 2025.1</li>

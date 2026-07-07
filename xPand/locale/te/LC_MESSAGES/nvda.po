@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Telugu\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - ఆటోకరెక్ట్"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "కోడ్:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "సరే"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "రద్దు చేయి"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "కోడ్ కనుగొనబడలేదు"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "క్లిప్‌బోర్డ్‌కు కాపీ చేయడం సాధ్యం కాదు"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "వచనాన్ని అతికించడం సాధ్యం కాదు. దయచేసి మాన్యువల్‌గా (Ctrl+V) ప్రయత్నించండి."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "వచనాన్ని అతికించడంలో లోపం"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand సెట్టింగ్‌లు"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "కోడ్ జాబితా:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "కోడ్"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "పదం"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "పదం:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "జోడించు"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "సవరించు"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "తొలగించు"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "మూసివేయి"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "దీనితో ప్రారంభమయ్యే కోడ్ లేదు: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "సరిపోలే కోడ్ లేదు"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "దయచేసి ఒక కోడ్‌ను నమోదు చేయండి"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "దయచేసి ఒక పదాన్ని నమోదు చేయండి"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "కోడ్ ఇప్పటికే ఉంది"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "జోడించడం విజయవంతమైంది"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "కోడ్‌ను జోడించడంలో లోపం"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "సవరణ మోడ్. కోడ్ మరియు పదాన్ని మార్చి, సేవ్ చేయడానికి సవరించు క్లిక్ చేయండి."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "మీరు కోడ్ '{name}'ని ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "తొలగింపును ధృవీకరించండి"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "కోడ్ తొలగించబడింది"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "కోడ్‌ను తొลగించడంలో లోపం"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand ఆటోకరెక్ట్ తెరువు"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand తెరవడంలో లోపం"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand సెట్టింగ్‌లు తెరవడంలో లోపం"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand సెట్టింగ్‌లు తెరువు"

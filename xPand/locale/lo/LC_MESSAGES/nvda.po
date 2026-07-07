@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Lao\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - ແກ້ໄຂອັດຕະໂນມັດ"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "ລະຫັດ:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "ຕົກລົງ"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "ບໍ່ພົບລະຫັດ"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "ບໍ່ສາມາດສຳເນົາໄປຍັງຄລິບບອດ"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "ບໍ່ສາມາດວາງຂໍ້ຄວາມໄດ້. ກະລຸນາລອງວາງດ້ວຍຕົນເອງ (Ctrl+V)."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການວາງຂໍ້ຄວາມ"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "ການຕັ້ງຄ່າ xPand"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "ລາຍການລະຫັດ:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "ລະຫັດ"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "ຄຳສັບ"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "ຄຳສັບ:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "ເພີ່ມ"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "ແກ້ໄຂ"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "ລຶບອອກ"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "ປິດ"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "ບໍ່ມີລະຫັດທີ່ຂຶ້ນຕົ້ນດ້ວຍ: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "ບໍ່ມີລະຫັດທີ່ກົງກັນ"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "ກະລຸນາປ້ອນລະຫັດ"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "ກະລຸນາປ້ອນຄຳສັບ"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "ລະຫັດນີ້ມີຢູ່ແລ້ວ"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "ເພີ່ມສຳເລັດແລ້ວ"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການເພີ່ມລະຫັດ"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "ໂໝດແກ້ໄຂ. ປ່ຽນລະຫັດແລະຄຳສັບ, ແລ້ວກົດ ແກ້ໄຂ ເພື່ອບັນທຶກ."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບລະຫັດ '{name}'?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "ຢືນຢັນການລຶບ"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "ລຶບລະຫັດອອກແລ້ວ"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການລຶບລະຫັດ"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "ເປີດ xPand ແກ້ໄຂອັດຕະໂນມັດ"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "ເກີดຂໍ້ຜິດພາດໃນການເປີດ xPand"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການເປີດການຕັ້ງຄ່າ xPand"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "ເປີດການຕັ້ງຄ່າ xPand"

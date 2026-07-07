@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>NVDA Macro Manager 1.2.3</title>
+</head>
+<body>
+<h1>NVDAMacroManager (Modern Macro IDE &amp; Automation Engine)</h1>
+<p><strong>Developer:</strong> Muhammet Enes Şenovalı
+<strong>Version:</strong> 1.0.3</p>
+<p>NVDA Macro Manager is an accessibility-centric, low-level OS-based, high-performance macro recording, editing, and playback engine. It flawlessly automates your repetitive tasks, from complex gaming combos to daily office workflows, fully integrated into the NVDA screen reader.</p>
+<h2>🚀 Key Features</h2>
+<ul>
+<li><strong>Dual Recording Engine (Live and Stealth Mode):</strong> Record your macros either by seeing the actions on screen (Live) or completely hidden from the system (Stealth Mode). In Stealth mode, keystrokes are intercepted before reaching the OS, preventing accidental file deletions or window closures while recording.</li>
+<li><strong>Dynamic NVDA Shortcuts:</strong> Automatically injects your saved macros into NVDA's system. You can assign custom hotkeys to each macro directly from NVDA's <code>Preferences -&gt; Input Gestures -&gt; Macro Manager</code> menu. Trigger your macros in seconds without opening the interface.</li>
+<li><strong>Professional Macro IDE (Event Editor):</strong> Manage your macros like a pro developer.</li>
+<li><strong>Linear Workflow:</strong> Keys and delays are separated into clean, independent steps (Wait, Press, Key Down, Key Up).</li>
+<li><strong>Native Clipboard:</strong> Full support for <code>Ctrl + C</code>, <code>Ctrl + X</code>, and <code>Ctrl + V</code> to duplicate or move macro events seamlessly.</li>
+<li><strong>Undo/Redo:</strong> Made a mistake? Instantly revert it using <code>Ctrl + Z</code> (Undo) or <code>Ctrl + Y</code> (Redo).</li>
+<li><strong>Dynamic Event Injection:</strong> Forgot to press a key during recording? Add new delays or specific keystrokes anywhere in the macro without re-recording.</li>
+<li><strong>Intelligent Key Capture:</strong> When adding or editing a key, capture actual physical keypresses or select from a dynamically generated, localized OS-level dropdown menu (Letters, Punctuation, Numpad, System keys).</li>
+<li><strong>Game &amp; Anti-Cheat Compatible:</strong> Works seamlessly without triggering game security systems by utilizing hardware-level execution (SendInput API and ScanCodes).</li>
+<li><strong>Precision Speed &amp; Loop Control:</strong> Adjust playback speed in 0.1 increments (e.g., 1.3x), play instantly (0 delay), or set to an infinite loop.</li>
+<li><strong>App-Binding (Security Locks):</strong> Lock your macros to run only in specific applications (.exe) to prevent disastrous cross-app executions.</li>
+<li><strong>Multilingual (i18n):</strong> Native support for English, Turkish (<code>tr</code>), Spanish (<code>es</code>), and German (<code>de</code>).</li>
+</ul>
+<h2>⌨️ Default Shortcuts</h2>
+<ul>
+<li><strong><code>NVDA + Windows + R</code></strong> : Starts or stops <strong>LIVE</strong> macro recording. (Your keystrokes are processed by the operating system).</li>
+<li><strong><code>NVDA + Windows + Shift + R</code></strong> : Starts or stops <strong>SAFE (STEALTH)</strong> macro recording. (Keys pressed are completely hidden from the OS).</li>
+<li><strong><code>NVDA + Windows + P</code></strong> : Plays the last recorded (temporary) macro. <strong>If pressed while a macro is playing, it acts as an instant Kill Switch to cancel the operation.</strong></li>
+<li><strong><code>NVDA + Shift + M</code></strong> : Opens the Macro Manager interface.</li>
+</ul>
+<h2>🛠️ How to Use?</h2>
+<h3>1. Quick Macro Recording</h3>
+<ul>
+<li>Press <code>NVDA + Win + R</code> to record normally.</li>
+<li>Use <code>NVDA + Win + Shift + R</code> if you are going to press system-altering keys (<code>Delete</code>, <code>Alt+F4</code>, etc.) and don't want your computer to act on them during recording.</li>
+<li>Press the same shortcut again to stop recording. Test your temporary macro immediately with <code>NVDA + Win + P</code>.</li>
+</ul>
+<h3>2. Saving Macros and Using the IDE</h3>
+<p>To save a temporary macro permanently, open the manager with <code>NVDA + Shift + M</code>. Give it a name, set its speed or loop count, and click "Save".</p>
+<p>Select a saved macro from the list and click <strong>Edit</strong> to open the IDE:
+* Use <code>Shift</code> to select multiple events.
+* Press <code>Ctrl + C</code> to copy selected steps and <code>Ctrl + V</code> to paste them elsewhere.
+* Change delay times in bulk or modify specific captured keystrokes.
+* Add brand new events via the "Add Event" button.</p>
+<h3>3. Assigning Custom Shortcuts</h3>
+<p>After saving your macro, go to <code>Preferences -&gt; Input Gestures</code> from the NVDA menu. Expand the <strong>Macro Manager</strong> category. Find your macro's name, click "Add," and assign any physical key combination you desire.</p>
+</body>
+</html>

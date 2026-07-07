@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - 自動糾錯"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "代碼："
+
+#: __init__.py:105
+msgid "OK"
+msgstr "確定"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "取消"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "未找到代碼"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "無法複製到剪貼簿"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "無法貼上文字。請嘗試手動貼上 (Ctrl+V)。"
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "貼上文字時出錯"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand 設定"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "代碼列表："
+
+#: __init__.py:253
+msgid "Code"
+msgstr "代碼"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "詞語"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "詞語："
+
+#: __init__.py:275
+msgid "Add"
+msgstr "新增"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "編輯"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "移除"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "關閉"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "沒有以此開頭的代碼：{}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "無比對代碼"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "請輸入代碼"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "請輸入詞語"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "代碼已存在"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "新增成功"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "新增代碼時出錯"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "編輯模式。修改代碼和詞語後，點擊「編輯」儲存。"
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "確定要刪除代碼「{name}」嗎？"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "確認刪除"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "代碼已移除"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "移除代碼時出錯"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "開啟 xPand 自動糾錯"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "開啟 xPand 時出錯"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "開啟 xPand 設定時出錯"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "開啟 xPand 設定"

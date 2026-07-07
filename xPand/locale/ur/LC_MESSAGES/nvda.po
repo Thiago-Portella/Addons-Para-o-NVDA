@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Urdu\n"
+"Language: ur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - آٹو کریکٹ"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "کوڈ:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "ٹھیک ہے"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "منسوخ کریں"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "کوڈ نہیں ملا"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "کلپ بورڈ پر کاپی نہیں کیا جا سکتا"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "تحریر چسپاں نہیں کی جا سکتی۔ براہ کرم خود (Ctrl+V) سے کوشش کریں۔"
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "تحریر چسپاں کرنے میں غلطی"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand ترتیبات"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "کوڈ کی فہرست:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "کوڈ"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "لفظ"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "لفظ:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "شامل کریں"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "ترمیم کریں"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "خارج کریں"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "بند کریں"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "اس سے شروع ہونے والا کوئی کوڈ نہیں ہے: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "کوئی مماثل کوڈ نہیں ملا"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "براہ کرم کوڈ درج کریں"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "براہ کرم لفظ درج کریں"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "کوڈ پہلے سے موجود ہے"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "کامیابی سے شامل ہو گیا"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "کوڈ شامل کرنے میں غلطی"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "ترمیی موڈ۔ کوڈ اور لفظ تبدیل کریں، پھر محفوظ کرنے کے لیے ترمیم پر کلک کریں۔"
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "کیا آپ واقعی کوڈ '{name}' کو حذف کرنا چاہتے ہیں؟"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "حذف کرنے کی تصدیق کریں"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "کوڈ ختم کر دیا گیا"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "کوڈ ختم کرنے میں غلطی"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand آٹو کریکٹ کھولیں"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand کھولنے میں غلطی"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand ترتیبات کھولنے میں غلطی"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand ترتیبات کھولیں"

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>AbsoluteWindows NVDA Add-on</title>
+<title>AbsoluteWindows NVDA Add-on - Документация v2</title>
 <style>
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f7f9; color: #333; }
 .container { max-width: 850px; margin: auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
@@ -10,12 +10,56 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
 .nvda-logo { width: 100px; height: auto; margin-bottom: 15px; }
 h1 { color: #2c3e50; font-size: 2.5em; margin: 0; }
 h2 { color: #2980b9; border-left: 5px solid #2980b9; padding-left: 15px; margin-top: 40px; text-align: left; }
+h3 { color: #34495e; margin-top: 25px; border-bottom: 1px solid #ecc94b; padding-bottom: 5px; }
 b { color: #2c3e50; }
 .status-box { background: #e8f4fd; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #d0e3f0; }
-.hotkey { background: #2d3436; color: #dfe6e9; padding: 15px; border-radius: 6px; font-family: 'Consolas', monospace; display: inline-block; margin: 10px 0; font-size: 1.1em; }
-.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-.feature-item { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; transition: transform 0.2s; }
-.feature-item:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+/* Code Block with Copy Button Styles for Hotkeys */
+.code-wrapper {
+    position: relative;
+    margin: 15px 0;
+}
+.hotkey { 
+    background: #2d3436; 
+    color: #dfe6e9; 
+    padding: 15px 70px 15px 15px; 
+    border-radius: 6px; 
+    font-family: 'Consolas', monospace; 
+    display: block; 
+    font-size: 1.1em;
+    word-break: break-all;
+}
+.copy-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #636e72;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.3s;
+}
+.copy-btn:hover { background: #2980b9; }
+.copy-btn.copied { background: #27ae60; }
+
+.feature-grid { display: block; margin-top: 20px; }
+.feature-section { background: #fafbfc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+.feature-item-detail { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #e2e8f0; }
+.feature-item-detail:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.feature-title { font-weight: bold; color: #2c3e50; font-size: 1.1em; }
+.feature-desc { color: #555; font-size: 0.95em; margin: 4px 0; }
+
+.monitor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style-type: none; padding-left: 0; margin-top: 20px; }
+.monitor-card { background: #2c3e50; color: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid #ecc94b; }
+.monitor-label { color: #ecc94b; font-weight: bold; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+.monitor-text { font-size: 1em; color: #f7fafc; }
+
+@media(max-width: 600px) { .monitor-grid { grid-template-columns: 1fr; } }
+
 .note { background: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
 .footer { text-align: center; margin-top: 50px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
 a { color: #3498db; text-decoration: none; font-weight: bold; }
@@ -25,85 +69,215 @@ a { color: #3498db; text-decoration: none; font-weight: bold; }
 <div class="container">
     <div class="header">
         <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+        <br><br>        
+
         <h1>AbsoluteWindows</h1>
-        <p style="font-size: 1.2em; color: #7f8c8d;"><b>Управляйте системой. Верните производительность.</b></p>
-        <p><b>Автор:</b> Chai Chaimee</p>
-        <p><a href="https://github.com/chaichaimee/AbsoluteWindows">Открыть репозиторий на GitHub</a></p>
-    </div>
-
-    <div class="section">
-        <h2>Сила абсолютного контроля</h2>
-        <p><b>AbsoluteWindows</b> — это не просто дополнение, это личный командир вашей системы. Созданный для продвинутых пользователей, он объединяет сложные задачи администрирования в единый сверхбыстрый интерфейс. Больше не нужно копаться в настройках Windows — только чистый контроль в ваших руках.</p>
-    </div>
-
-    <div class="section">
-        <h2>Адаптивный интеллект</h2>
-        <p>Сердце AbsoluteWindows — <b>умный движок состояний</b>. Меню отслеживает параметры ПК и динамически меняет опции в зависимости от ситуации:</p>
+        <br>        
         
-        <div class="status-box">
-            <h3>🌐 Сетевое подключение</h3>
-            <p>• <b>Если в сети:</b> Показывает <b>"Отключить интернет"</b>. Одно нажатие мгновенно разрывает связь для приватности или обслуживания.<br>
-            • <b>Если не в сети:</b> Мгновенно меняется на <b>"Подключить интернет"</b> для быстрого восстановления связи.</p>
-        </div>
+        <p style="font-size: 1.2em; color: #7f8c8d;"><b>Управляйте своей ОС. Верните свою производительность.</b></p>
+        
+        <br>        
 
-        <div class="status-box" style="background: #fdf2f2; border-color: #f0d0d0;">
-            <h3>🛡️ Безопасность и UAC</h3>
-            <p>• <b>Если включен (Защита):</b> Показывает <b>"Отключить UAC"</b>. Снижает контроль до 0% для плавной работы без лишних уведомлений.<br>
-            • <b>Если отключен:</b> Показывает <b>"Включить UAC"</b>, мгновенно возвращая защитный уровень 40% (По умолчанию).</p>
-        </div>
+        <p><b>Авторы:</b> Chai Chaimee и Peera Pilarit</p>
+        <p><strong>URL:</strong> <a href="https://github.com/chaichaimee/AbsoluteWindows">github.com/chaichaimee/AbsoluteWindows</a></p>
     </div>
 
     <div class="section">
-        <h2>Элитный набор функций</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <b>Спасение и стабильность</b><br>
-                Завершайте зависшие приложения, перезапускайте Explorer или открывайте системный трей мгновенно.
-            </div>
-            <div class="feature-item">
-                <b>Диагностика системы</b><br>
-                Запуск DISM, SFC Scannow и Chkdsk с автоотчетом в Блокноте. Профи-результат без усилий.
-            </div>
-            <div class="feature-item">
-                <b>Очистка памяти</b><br>
-                Сброс кэша RAM и очистка Temp/Prefetch файлов для мгновенного отклика в тяжелых программах.
-            </div>
-            <div class="feature-item">
-                <b>Мастер безопасности</b><br>
-                Просмотр скрытых паролей Wi-Fi и управление автозагрузкой для быстрого старта системы.
-            </div>
-        </div>
+        <br>
+        
+        <h2>Сила абсолютного контроля</h2>
+        <p><b>AbsoluteWindows</b> — это не просто инструмент; это личный командир вашей системы. Разработанный для продвинутых пользователей, которым важна эффективность, он объединяет сложные административные задачи в единый, высокоскоростной и доступный интерфейс. От глубокой очистки системных файлов до управления переменными среды — AbsoluteWindows предоставляет чистый, прямой контроль, благодаря которому ваш ПК остается легким, безопасным и невероятно быстрым.</p>
     </div>
 
-    <div class="section" style="text-align: center;">
-        <h2>Как вызвать</h2>
-        <p>Откройте центр управления из любого места в Windows с помощью глобальной комбинации:</p>
-        <div class="hotkey">Alt + Windows + W</div>
+    <div class="section">
+        <br>
+
+        <h2>Что нового</h2>
+        <p>• <b>Мониторинг системы в реальном времени:</b> Мгновенно проверяйте процессор, оперативную память, скорость сети и высокоточный <b>Статус активации Windows</b> с помощью двойного нажатия.<br>
+        • <b>Улучшенная безопасность:</b> Интегрированный Защитник Windows и средство удаления вредоносных программ Microsoft (MSRT) для глубокого сканирования.<br>
+        • <b>Обслуживание в один клик:</b> Автоматизированная оптимизация дисков (TRIM/Дефрагментация) и очистка оперативной памяти профессионального уровня.<br>
+        • <b>Глубокая очистка:</b> Новые модули для очистки истории диалога "Выполнить", системных файлов и недавних журналов.</p>
+    </div>
+
+    <div class="section">
+        <br>
+
+        <h2>Главные горячие клавиши: Сила нажатия</h2>
+        <p>AbsoluteWindows использует интеллектуальную систему распознавания нажатий, встроенную в одну глобальную горячую клавишу. Больше не нужно запоминать десятки комбинаций.</p>
+        
+        <div class="code-wrapper">
+            <code class="hotkey" id="hotkey1">Alt + Windows + W (Одно нажатие)</code>
+            <button class="copy-btn" onclick="copyCode('hotkey1', this)">Копировать</button>
+        </div>
+        <p><b>Командный центр:</b> Нажмите один раз из любого места, чтобы открыть главный список административных инструментов. Мгновенно выполняйте задачи: от управления сетью до глубокой очистки системы.</p>
+        
+        <div class="code-wrapper">
+            <code class="hotkey" id="hotkey3">Alt + Windows + W (Двойное нажатие)</code>
+            <button class="copy-btn" onclick="copyCode('hotkey3', this)">Копировать</button>
+        </div>
+        <p><b>Панель мониторинга системы:</b> Нажмите дважды быстро, чтобы получить живой диагностический отчет о состоянии оборудования и ОС непосредственно через вашу программу экранного доступа.</p>
+
+        <div class="code-wrapper">
+            <code class="hotkey" id="hotkey2">Alt + Windows + Z</code>
+            <button class="copy-btn" onclick="copyCode('hotkey2', this)">Копировать</button>
+        </div>
+        <p><b>Переключатель аварийного спасения:</b> Откройте модуль «Завершить зависшие приложения», чтобы немедленно спасти полностью зависший рабочий стол.</p>
+        
+        <br>
         <div class="note">
-            <b>Совет:</b> AbsoluteWindows использует <b>звуковое подтверждение</b>. Высокий тон — успех, низкий тон — ошибка или отмена.
+            <b>Совет от профессионалов:</b> AbsoluteWindows использует <b>Звуковое подтверждение</b>. Высокий тон означает успех, а низкий тон — ошибку или отмену.
         </div>
     </div>
 
     <div class="section">
-        <h2>Полный список возможностей</h2>
-        <ul>
-            <li><b>Управление сетью:</b> Переключение адаптеров и получение ключей Wi-Fi.</li>
-            <li><b>Обслуживание системы:</b> Управление службами, автозагрузкой и оптимизация дисков (TRIM/Defrag).</li>
-            <li><b>Глубокая очистка:</b> Удаление системных файлов, Prefetch, истории и логов выполнения.</li>
-            <li><b>Мощные утилиты:</b> Сброс кэша RAM, очистка корзины и HTML-отчеты о состоянии батареи.</li>
-        </ul>
-    </div>
-<br><br>
-<h2>Поддержать проект</h2>
-    <p>Если AbsoluteWindows помог вам, поддержите его дальнейшее развитие.</p>
-    <br>
-    <p style="text-align:center; font-size:1.1em;">
-      <strong><a href="https://github.com/chaichaimee" style="color:#0f766e; text-decoration:none;">Пожертвовать через GitHub Sponsors</a></strong>
-    </p>
-  </div>
-  <div class="footer">
-<p>&copy; 2026 Chai Chaimee • AbsoluteWindows NVDA Add-on • Лицензия GNU GPL v2+</p>
-  </div>
-</div>
-</body>
-</html>
+        <h2>🛠️ Командный центр (Меню одного нажатия)</h2>
+        <p>Однократное нажатие горячей клавиши открывает организованное меню быстрого доступа для управления каждым скрытым уголком Windows. Больше не нужно копаться во вложенных настройках. Здесь весь ваш рабочий арсенал, отсортированный так, как он представлен в инструменте:</p>
+        
+        <div class="feature-grid">
+            
+            <div class="feature-section">
+                <h3>🌐 Рабочий стол, устройства и связь</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Системный трей</span>
+                    <p class="feature-desc">Мгновенно перемещайте фокус в системный трей, чтобы легко управлять фоновыми приложениями.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Отключить / Подключить Интернет</span>
+                    <p class="feature-desc">Интеллектуальный переключатель. Мгновенно разорвите веб-соединение для обеспечения конфиденциальности или восстановите его за долю секунды.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Включить/Выключить Bluetooth</span>
+                    <p class="feature-desc">Включайте или выключайте Bluetooth радио мгновенно без перехода в Центр уведомлений Windows.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Показать пароль Wi-Fi</span>
+                    <p class="feature-desc">Мгновенно извлекает и озвучивает ключ безопасности подключенной беспроводной сети.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Безопасное извлечение USB</span>
+                    <p class="feature-desc">Безопасно извлекает флэш-накопители и внешнее оборудование, устраняя риск повреждения данных.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Перезапустить службу Windows Audio</span>
+                    <p class="feature-desc">Ультимативное решение при сбоях звука. Мгновенно перезагружает аудио-подсистему Windows.</p>
+                </div>
+            </div>
+
+            <div class="feature-section">
+                <h3>🚨 Управление системой и аварийное спасение</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Отключить / Включить UAC</span>
+                    <p class="feature-desc">Переключает запросы контроля учетных записей. Отключите повторяющиеся запросы безопасности для непрерывной административной работы.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Перезагрузка в настройки BIOS/UEFI</span>
+                    <p class="feature-desc">Обойдите сложные меню Shift+Перезагрузка. Заставляет ПК перезагрузиться прямо на экран прошивки материнской платы.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Завершить зависшие приложения</span>
+                    <p class="feature-desc">Главный аварийный выход. Принудительно завершает замороженные программы, блокирующие вашу работу.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Перезапустить Проводник Windows</span>
+                    <p class="feature-desc">Обновляет рабочий стол, панель задач и файловую систему без полной перезагрузки ПК.</p>
+                </div>
+            </div>
+
+            <div class="feature-section">
+                <h3>⚙️ Расширенные инструменты администрирования</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Панель управления</span>
+                    <p class="feature-desc">Мгновенно запускает классическую, полностью доступную Панель управления Windows.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Программы и компоненты</span>
+                    <p class="feature-desc">Немедленно открывает диспетчер удаления программ для чистой деинсталляции ПО.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Настройки звука</span>
+                    <p class="feature-desc">Прямой маршрут для управления устройствами записи, уровнями воспроизведения и свойствами системного звука.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Параметры папок</span>
+                    <p class="feature-desc">Быстро настраивайте параметры просмотра файлов, видимость скрытых файлов и поведение проводника.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Менеджер автозагрузки</span>
+                    <p class="feature-desc">Управляйте тем, какие приложения могут загружаться вместе с ПК, чтобы оптимизировать время включения.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Открыть службы</span>
+                    <p class="feature-desc">Запускает стандартную консоль служб Windows (services.msc).</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Управление службами</span>
+                    <p class="feature-desc">Обеспечивает расширенный контроль над конфигурациями пользовательских служб.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Переменные среды</span>
+                    <p class="feature-desc">Напрямую настраивает системные пути без лишних кликов в свойствах системы.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Запустить командную строку</span>
+                    <p class="feature-desc">Запускает окно командной строки с полными правами администратора.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Редактор реестра</span>
+                    <p class="feature-desc">Быстро открывает Редактор реестра Windows для глубоких настроек конфигурации.</p>
+                </div>
+            </div>
+
+            <div class="feature-section">
+                <h3>🧹 Безопасность и глубокая оптимизация</h3>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Защитник Windows</span>
+                    <p class="feature-desc">Запускает панели безопасности для управления защитой от вредоносного ПО, брандмауэрами и защитой в реальном времени.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Средство удаления вредоносных программ (MSRT)</span>
+                    <p class="feature-desc">Активирует встроенный сканер угроз Microsoft для поиска и удаления глубоких инфекций.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Оптимизация и дефрагментация диска</span>
+                    <p class="feature-desc">Поддерживает аппаратное обеспечение на пиковой скорости с помощью интеллектуального запуска TRIM на SSD или дефрагментации HDD.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Очистка диска</span>
+                    <p class="feature-desc">Запускает встроенный диспетчер хранилища для безопасного удаления старых обновлений, данных кэша и ненужных файлов.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Очистить Prefetch и Недавние</span>
+                    <p class="feature-desc">Очищает скрытые системные кэши prefetch и недавно открытые ярлыки.</p>
+                </div>
+                
+                <div class="feature-item-detail">
+                    <span class="feature-title">Очистить системные файлы</span>
+                    <p class="feature-desc">Выполняет более глубокую административную очистку устаревших остатков ОС и мусора от обновлений.</p>
+                </div>
+                
+                <div class

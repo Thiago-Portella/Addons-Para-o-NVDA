@@ -1,21 +1,21 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: xPand AutoCorrect\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
 "POT-Creation-Date: 2025-10-25 00:00+0000\n"
-"PO-Revision-Date: 2025-10-25 14:17+0700\n"
-"Last-Translator: NVDA User <user@example.com>\n"
+"PO-Revision-Date: 2026-05-04 07:55+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: DevOn Addon\n"
 
 #: __init__.py:84
 msgid "xPand - AutoCorrect"
-msgstr "xPand - Autocorrección"
+msgstr "xPand - AutoCorrector"
 
 #: __init__.py:97 __init__.py:263
 msgid "Code:"
@@ -39,11 +39,11 @@ msgstr "No se puede copiar al portapapeles"
 
 #: __init__.py:208
 msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
-msgstr "No se puede pegar el texto. Por favor, intente el pegado manual (Ctrl+V)."
+msgstr "No se puede pegar texto. Intente pegar manualmente (Ctrl+V)."
 
 #: __init__.py:214
 msgid "Error pasting text"
-msgstr "Error al pegar el texto"
+msgstr "Error al pegar texto"
 
 #: __init__.py:225
 msgid "xPand Settings"
@@ -87,11 +87,11 @@ msgstr "{}"
 
 #: __init__.py:350
 msgid "No code starting with: {}"
-msgstr "No hay código que comience por: {}"
+msgstr "Ningún código comienza con: {}"
 
 #: __init__.py:353
 msgid "No matching code"
-msgstr "No hay código coincidente"
+msgstr "Ningún código coincide"
 
 #: __init__.py:368
 msgid "Please enter a code"
@@ -115,11 +115,11 @@ msgstr "Error al añadir código"
 
 #: __init__.py:392
 msgid "Edit mode. Modify code and word, then click Edit to save."
-msgstr "Modo de edición. Modifique el código y la palabra, y luego haga clic en Editar para guardar."
+msgstr "Modo edición. Modifique el código y la palabra, luego pulse Editar."
 
 #: __init__.py:401
 msgid "Are you sure you want to delete the code '{name}'?"
-msgstr "¿Está seguro de que quiere eliminar el código '{name}'?"
+msgstr "¿Está seguro de que desea eliminar el código '{name}'?"
 
 #: __init__.py:405
 msgid "Confirm deletion"
@@ -135,7 +135,7 @@ msgstr "Error al eliminar código"
 
 #: __init__.py:427
 msgid "Open xPand AutoCorrect"
-msgstr "Abrir xPand Autocorrección"
+msgstr "Abrir xPand AutoCorrector"
 
 #: __init__.py:481
 msgid "Error opening xPand"
@@ -147,4 +147,4 @@ msgstr "Error al abrir la configuración de xPand"
 
 #: __init__.py:515
 msgid "Open xPand Settings"
-msgstr "Abrir Configuración de xPand"
+msgstr "Abrir configuración de xPand"

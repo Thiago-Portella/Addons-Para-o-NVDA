@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Burmese\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - အလိုအလျောက်ပြင်ဆင်ခြင်း"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "ကုဒ်:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "အိုကေ"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "ပယ်ဖျက်ရန်"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "ကုဒ် ရှာမတွေ့ပါ"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Clipboard ထဲသို့ ကူးယူ၍မရပါ"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "စာသားကူးထည့်၍မရပါ။ ကိုယ်တိုင် (Ctrl+V) ဖြင့် စမ်းကြည့်ပါ။"
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "စာသားကူးထည့်ရာတွင် အမှားဖြစ်နေသည်"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand ဆက်တင်များ"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "ကုဒ်စာရင်း:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "ကုဒ်"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "စကားလုံး"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "စကားလုံး:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "ထည့်ရန်"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "ပြင်ရန်"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "ဖယ်ရှားရန်"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "ပိတ်ရန်"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "{} ဖြင့်စသော ကုဒ်မရှိပါ"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "ကိုက်ညီသော ကုဒ်မရှိပါ"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "ကုဒ်ရိုက်ထည့်ပါ"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "စကားလုံးရိုက်ထည့်ပါ"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "ကုဒ် ရှိနှင့်ပြီးသားဖြစ်သည်"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "ထည့်သွင်းခြင်း အောင်မြင်သည်"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "ကုဒ်ထည့်ရာတွင် အမှားဖြစ်နေသည်"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "တည်းဖြတ်မှုစနစ်။ ကုဒ်နှင့် စကားလုံးကို ပြင်ပြီး 'ပြင်ရန်' ကိုနှိပ်၍ သိမ်းပါ။"
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "ကုဒ် '{name}' ကို ဖျက်ရန် သေချာပါသလား?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "ဖျက်ရန် အတည်ပြုပါ"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "ကုဒ်ကို ဖယ်ရှားပြီးပါပြီ"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "ကုဒ်ဖယ်ရှားရာတွင် အမှားဖြစ်နေသည်"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand အလိုအလျောက်ပြင်ခြင်းကို ဖွင့်ရန်"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand ဖွင့်ရာတွင် အမှားဖြစ်နေသည်"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand ဆက်တင်ဖွင့်ရာတွင် အမှားဖြစ်နေသည်"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand ဆက်တင်များကို ဖွင့်ရန်"

@@ -4,8 +4,6 @@
 # This file is covered by the GNU General Public License.
 
 from __future__ import annotations
-from typing import TYPE_CHECKING
-
 import addonHandler
 import controlTypes
 import textInfos
@@ -27,9 +25,6 @@ from NVDAObjects.IAccessible import IA2TextTextInfo
 from .document import FastDocumentManager
 
 addonHandler.initTranslation()
-
-if TYPE_CHECKING:
-	pass
 
 
 class MarkdownEditorOverlay(ScriptableObject):
@@ -88,7 +83,6 @@ class MarkdownEditorOverlay(ScriptableObject):
 		"""Core navigation logic.
 
 		Uses FastDocumentManager for batch text processing to reduce IPC calls.
-		Falls back to legacy navigation if FastDocumentManager fails.
 
 		:param gesture: The gesture that triggered navigation.
 		:param regex: Compiled regex pattern to match.
@@ -100,14 +94,36 @@ class MarkdownEditorOverlay(ScriptableObject):
 		if not getattr(self, "markdownBrowseMode", False):
 			gesture.send()
 			return
-		try:
-			with FastDocumentManager(self) as fdm:
-				self._navigateFast(fdm, regex, direction, name, focus_element, notFoundMessage)
-		except (RuntimeError, NotImplementedError, LookupError, COMError) as e:
-			log.debugWarning(f"MarkdownNavigator: FastDocumentManager failed ({e}), falling back to legacy")
-			from .legacy import navigate_legacy
+		with FastDocumentManager(self) as fdm:
+			self._navigateFast(fdm, regex, direction, name, focus_element, notFoundMessage)
 
-			navigate_legacy(self, gesture, regex, direction, name, focus_element, notFoundMessage)
+	def _moveToCharacterRange(
+		self,
+		textInfo: textInfos.TextInfo,
+		text: str,
+		charOffset: int,
+		isWeb: bool,
+		charLength: int = 0,
+	) -> None:
+		"""Move the caret to a Python character offset, using IA2 UTF-16 offsets for web editors."""
+		from textUtils import WideStringOffsetConverter
+
+		if isWeb and isinstance(textInfo, IA2TextTextInfo):
+			targetUtf16Offset = WideStringOffsetConverter(text[:charOffset]).encodedStringLength
+			textInfo = textInfo.copy()
+			textInfo._startOffset += targetUtf16Offset
+			textInfo._endOffset = textInfo._startOffset
+			if charLength:
+				targetUtf16Length = WideStringOffsetConverter(
+					text[charOffset : charOffset + charLength],
+				).encodedStringLength
+				textInfo._endOffset += targetUtf16Length
+			textInfo.updateCaret()
+			return
+
+		textInfo.collapse()
+		textInfo.move(textInfos.UNIT_CHARACTER, charOffset)
+		textInfo.updateCaret()
 
 	def _navigateFast(
 		self,
@@ -118,8 +134,6 @@ class MarkdownEditorOverlay(ScriptableObject):
 		focus_element: bool,
 		notFoundMessage: str | None,
 	) -> None:
-		from textUtils import WideStringOffsetConverter
-
 		if focus_element:
 			currentLineText = fdm.getText()
 			lineStartOffset = fdm.getLineOffset()
@@ -151,31 +165,15 @@ class MarkdownEditorOverlay(ScriptableObject):
 
 			if target_match:
 				lineInfo = fdm.getTextInfo()
-
-				if isWeb and isinstance(lineInfo, IA2TextTextInfo):
-					# Web Optimization: Calculate Global UTF-16 Offset and Inject
-					prefix = currentLineText[: target_match.start()]
-					converter = WideStringOffsetConverter(prefix)
-					utf16_delta = converter.encodedStringLength
-
-					new_abs = lineInfo._startOffset + utf16_delta
-					match_len_utf16 = WideStringOffsetConverter(target_match.group()).encodedStringLength
-
-					lineInfo._startOffset = new_abs
-					lineInfo._endOffset = new_abs + match_len_utf16
-
-					# Update caret
-					lineInfo.updateCaret()
-					# Speak content
-					speech.speak([target_match.group()])
-					return
-				else:
-					# Fallback / Desktop
-					lineInfo.collapse()
-					lineInfo.move(textInfos.UNIT_CHARACTER, target_match.start())
-					lineInfo.updateCaret()
-					speech.speak([target_match.group()])
-					return
+				self._moveToCharacterRange(
+					lineInfo,
+					currentLineText,
+					target_match.start(),
+					isWeb,
+					len(target_match.group()),
+				)
+				speech.speak([target_match.group()])
+				return
 
 			found = False
 			while fdm.move(direction) != 0:
@@ -185,29 +183,9 @@ class MarkdownEditorOverlay(ScriptableObject):
 					found = True
 					m = matches[0] if direction == 1 else matches[-1]
 					lineInfo = fdm.getTextInfo()
-
-					if isWeb and isinstance(lineInfo, IA2TextTextInfo):
-						# Web Optimization: Offset Injection
-						prefix = text[: m.start()]
-						converter = WideStringOffsetConverter(prefix)
-						utf16_delta = converter.encodedStringLength
-
-						new_abs = lineInfo._startOffset + utf16_delta
-						match_len_utf16 = WideStringOffsetConverter(m.group()).encodedStringLength
-
-						lineInfo._startOffset = new_abs
-						lineInfo._endOffset = new_abs + match_len_utf16
-
-						lineInfo.updateCaret()
-						speech.speak([m.group()])
-						break
-					else:
-						# Fallback / Desktop
-						lineInfo.collapse()
-						lineInfo.move(textInfos.UNIT_CHARACTER, m.start())
-						lineInfo.updateCaret()
-						speech.speak([m.group()])
-						break
+					self._moveToCharacterRange(lineInfo, text, m.start(), isWeb, len(m.group()))
+					speech.speak([m.group()])
+					break
 
 			if not found:
 				msg = (
@@ -253,14 +231,8 @@ class MarkdownEditorOverlay(ScriptableObject):
 		if not getattr(self, "markdownBrowseMode", False):
 			gesture.send()
 			return
-		try:
-			with FastDocumentManager(self) as fdm:
-				self._navigateBlockFast(fdm, regex, direction, name, notFoundMessage)
-		except (RuntimeError, NotImplementedError, LookupError, COMError) as e:
-			log.debugWarning(f"MarkdownNavigator: FastDocumentManager failed for block nav ({e})")
-			from .legacy import navigate_block_legacy
-
-			navigate_block_legacy(self, gesture, regex, direction, name, notFoundMessage)
+		with FastDocumentManager(self) as fdm:
+			self._navigateBlockFast(fdm, regex, direction, name, notFoundMessage)
 
 	def _navigateBlockFast(
 		self,
@@ -323,21 +295,11 @@ class MarkdownEditorOverlay(ScriptableObject):
 		if not getattr(self, "markdownBrowseMode", False):
 			gesture.send()
 			return
-		try:
-			with FastDocumentManager(self) as fdm:
-				self._navigateCodeFast(fdm, direction, name, notFoundMessage)
-		except (RuntimeError, NotImplementedError, LookupError, COMError) as e:
-			log.debugWarning(
-				f"MarkdownNavigator: FastDocumentManager failed for code nav ({e}), falling back",
-			)
-			from .legacy import navigate_code_legacy
-
-			navigate_code_legacy(self, gesture, direction, name, notFoundMessage)
+		with FastDocumentManager(self) as fdm:
+			self._navigateCodeFast(fdm, direction, name, notFoundMessage)
 
 	def _navigateCodeFast(self, fdm, direction, name, notFoundMessage):
 		"""Implementing Code Block Navigation with FastDocumentManager"""
-		from textUtils import WideStringOffsetConverter
-
 		isWeb = getattr(self.appModule, "appName", "").lower() in ("chrome", "msedge")
 
 		currentLineText = fdm.getText()
@@ -389,24 +351,15 @@ class MarkdownEditorOverlay(ScriptableObject):
 			if target_match:
 				log.debug(f"MarkdownNavigator: Found Inline Code in current line at {target_match.start()}")
 				lineInfo = fdm.getTextInfo()
-
-				if isWeb and isinstance(lineInfo, IA2TextTextInfo):
-					prefix = currentLineText[: target_match.start()]
-					converter = WideStringOffsetConverter(prefix)
-					utf16_delta = converter.encodedStringLength
-					new_abs = lineInfo._startOffset + utf16_delta
-					match_len_utf16 = WideStringOffsetConverter(target_match.group()).encodedStringLength
-					lineInfo._startOffset = new_abs
-					lineInfo._endOffset = new_abs + match_len_utf16
-					lineInfo.updateCaret()
-					speech.speak([target_match.group()])
-					return
-				else:
-					lineInfo.collapse()
-					lineInfo.move(textInfos.UNIT_CHARACTER, target_match.start())
-					lineInfo.updateCaret()
-					speech.speak([target_match.group()])
-					return
+				self._moveToCharacterRange(
+					lineInfo,
+					currentLineText,
+					target_match.start(),
+					isWeb,
+					len(target_match.group()),
+				)
+				speech.speak([target_match.group()])
+				return
 
 		found = False
 
@@ -415,7 +368,6 @@ class MarkdownEditorOverlay(ScriptableObject):
 			log.debug("MarkdownNavigator: Skipping logic active.")
 			# Simple skip logic: Keep searching until the next RE_CODE_BLOCK is found.
 			# Note: This assumes it's paired.
-			pass  # Loop below handles it
 
 		while fdm.move(direction) != 0:
 			text = fdm.getText()
@@ -434,13 +386,12 @@ class MarkdownEditorOverlay(ScriptableObject):
 							prevText = fdm.getText(scanLine)
 							if patterns.RE_CODE_BLOCK.match(prevText) and len(prevText.strip()) > 3:
 								# Found start
-								fdm.updateCaret(scanLine)  # Move fdm there
+								fdm.lineIndex = scanLine
 								found = True
 								break
-						if found:
-							break
 						# If not found start, maybe just stop at this end tag?
-						found = True
+						if not found:
+							found = True
 				else:  # Next
 					found = True
 
@@ -463,21 +414,8 @@ class MarkdownEditorOverlay(ScriptableObject):
 					log.debug(f"MarkdownNavigator: Found Inline Code at {m.start()}")
 
 					lineInfo = fdm.getTextInfo()
-					if isWeb and isinstance(lineInfo, IA2TextTextInfo):
-						prefix = text[: m.start()]
-						converter = WideStringOffsetConverter(prefix)
-						utf16_delta = converter.encodedStringLength
-						new_abs = lineInfo._startOffset + utf16_delta
-						match_len_utf16 = WideStringOffsetConverter(m.group()).encodedStringLength
-						lineInfo._startOffset = new_abs
-						lineInfo._endOffset = new_abs + match_len_utf16
-						lineInfo.updateCaret()
-						speech.speak([m.group()])
-					else:
-						lineInfo.collapse()
-						lineInfo.move(textInfos.UNIT_CHARACTER, m.start())
-						lineInfo.updateCaret()
-						speech.speak([m.group()])
+					self._moveToCharacterRange(lineInfo, text, m.start(), isWeb, len(m.group()))
+					speech.speak([m.group()])
 					break
 
 		if not found:
@@ -488,53 +426,12 @@ class MarkdownEditorOverlay(ScriptableObject):
 			)
 			ui.message(msg)
 
-	def _parse_table_row(self, text):
-		"""
-		Parses a Markdown table row.
-		Returns a list of dicts: {'start': int, 'end': int, 'content_start': int, 'content_end': int, 'text': str}
-		Indices are relative to the start of the line.
-		"""
-		cells = []
-		# Split by pipe, but keep the delimiter to calculate offsets
-		# Regex looks for | not preceded by \
-		pattern = re.compile(r"(?<!\\)\|")
-		matches = list(pattern.finditer(text))
-		if not matches:
-			return []
-		for i in range(len(matches) - 1):
-			start_pipe = matches[i]
-			end_pipe = matches[i + 1]
-			cell_start = start_pipe.end()
-			cell_end = end_pipe.start()
-			cell_text = text[cell_start:cell_end]
-			stripped = cell_text.strip()
-			content_start = cell_start + cell_text.find(stripped) if stripped else cell_start
-			content_end = content_start + len(stripped)
-			cells.append(
-				{
-					"start": cell_start,
-					"end": cell_end,
-					"content_start": content_start,
-					"content_end": content_end,
-					"text": stripped,
-				},
-			)
-		return cells
-
 	def _navigateTable(self, gesture, row_dir, col_dir):
 		if not getattr(self, "markdownBrowseMode", False):
 			gesture.send()
 			return
-		try:
-			with FastDocumentManager(self) as fdm:
-				self._navigateTableFast(fdm, row_dir, col_dir)
-		except (RuntimeError, NotImplementedError, LookupError, COMError) as e:
-			log.debugWarning(
-				f"MarkdownNavigator: FastDocumentManager failed for table nav ({e}), falling back to legacy",
-			)
-			from .legacy import navigate_table_legacy
-
-			navigate_table_legacy(self, gesture, row_dir, col_dir)
+		with FastDocumentManager(self) as fdm:
+			self._navigateTableFast(fdm, row_dir, col_dir)
 
 	def _navigateTableFast(self, fdm, row_dir, col_dir):
 		isWeb = getattr(self.appModule, "appName", "").lower() in ("chrome", "msedge")
@@ -546,7 +443,7 @@ class MarkdownEditorOverlay(ScriptableObject):
 
 		# 1. Parse current row (Logical Line)
 		# FastDocumentManager returns the full logical line, ignoring soft wraps.
-		cells = self._parse_table_row(currentLineText)
+		cells = patterns.parseTableRow(currentLineText)
 		if not cells:
 			ui.message(_("Not inside a table"))
 			return
@@ -586,7 +483,7 @@ class MarkdownEditorOverlay(ScriptableObject):
 				if not patterns.RE_TABLE.match(text):
 					break
 
-				new_cells = self._parse_table_row(text)
+				new_cells = patterns.parseTableRow(text)
 				if not new_cells:
 					break
 
@@ -601,29 +498,10 @@ class MarkdownEditorOverlay(ScriptableObject):
 			return
 
 	def _moveToTableCell(self, fdm, target_cell, isWeb):
-		from textUtils import WideStringOffsetConverter
-
 		target_char_offset = target_cell["content_start"]
 		tiLine = fdm.getTextInfo()
 
-		if isWeb and isinstance(tiLine, IA2TextTextInfo):
-			# Convert to UTF-16 offset
-			# tiLine._startOffset is Global UTF-16 Start of Line
-			text = fdm.getText()
-			prefix = text[:target_char_offset]
-			converter = WideStringOffsetConverter(prefix)
-			target_utf16_offset = converter.encodedStringLength
-
-			new_abs = tiLine._startOffset + target_utf16_offset
-			tiNew = tiLine.copy()
-			tiNew._startOffset = new_abs
-			tiNew._endOffset = new_abs
-			tiNew.updateCaret()
-		else:
-			tiLine.collapse()
-			tiLine.move(textInfos.UNIT_CHARACTER, target_char_offset)
-			tiLine.updateCaret()
-
+		self._moveToCharacterRange(tiLine, fdm.getText(), target_char_offset, isWeb)
 		speech.speak([target_cell["text"]])
 
 	@script(gesture="kb:control+alt+leftArrow")
@@ -642,7 +520,7 @@ class MarkdownEditorOverlay(ScriptableObject):
 	def script_tableRowDown(self, gesture):
 		self._navigateTable(gesture, 1, 0)
 
-	def _find_block_boundary(self, direction, name_start, name_end):
+	def _find_block_boundary(self, direction):
 		if not getattr(self, "markdownBrowseMode", False):
 			return False
 
@@ -683,12 +561,12 @@ class MarkdownEditorOverlay(ScriptableObject):
 
 	@script(gesture="kb:,")
 	def script_endOfElement(self, gesture):
-		if not self._find_block_boundary(1, _("start"), _("end")):
+		if not self._find_block_boundary(1):
 			gesture.send()
 
 	@script(gesture="kb:shift+,")
 	def script_startOfElement(self, gesture):
-		if not self._find_block_boundary(-1, _("start"), _("end")):
+		if not self._find_block_boundary(-1):
 			gesture.send()
 
 	# Tables (Explicitly using _navigateBlock)

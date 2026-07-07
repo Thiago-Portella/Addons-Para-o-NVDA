@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:05+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - Koreksi Otomatis"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "Kode:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "OK"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "Batal"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "Kode tidak ditemukan"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "Tidak dapat menyalin ke papan klip"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "Tidak dapat menempelkan teks. Silakan coba tempel manual (Ctrl+V)."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "Kesalahan saat menempelkan teks"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "Pengaturan xPand"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "Daftar kode:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "Kode"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "Kata"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "Kata:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "Tambah"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "Ubah"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "Hapus"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "Tutup"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "Tidak ada kode yang berawalan: {}"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "Tidak ada kode yang cocok"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "Silakan masukkan kode"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "Silakan masukkan kata"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "Kode sudah ada"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "Penambahan Berhasil"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "Kesalahan saat menambah kode"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "Mode ubah. Ubah kode dan kata, lalu klik Ubah untuk menyimpan."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "Anda yakin ingin menghapus kode '{name}'?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "Konfirmasi penghapusan"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "Kode dihapus"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "Kesalahan saat menghapus kode"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "Buka xPand Koreksi Otomatis"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "Kesalahan saat membuka xPand"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "Kesalahan saat membuka pengaturan xPand"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "Buka Pengaturan xPand"

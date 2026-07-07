@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xPand 2026.5.1\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2025-10-25 00:00+0000\n"
+"PO-Revision-Date: 2026-05-04 08:15+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Sinhala\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: DevOn Addon\n"
+
+#: __init__.py:84
+msgid "xPand - AutoCorrect"
+msgstr "xPand - ස්වයංක්‍රීය නිවැරදි කිරීම"
+
+#: __init__.py:97 __init__.py:263
+msgid "Code:"
+msgstr "කේතය:"
+
+#: __init__.py:105
+msgid "OK"
+msgstr "හරි"
+
+#: __init__.py:109
+msgid "Cancel"
+msgstr "අවලංගු කරන්න"
+
+#: __init__.py:133
+msgid "Code not found"
+msgstr "කේතය හමු නොවීය"
+
+#: __init__.py:174
+msgid "Cannot copy to clipboard"
+msgstr "ක්ලිප්බෝඩ් එකට පිටපත් කළ නොහැක"
+
+#: __init__.py:208
+msgid "Cannot paste text. Please try manual paste (Ctrl+V)."
+msgstr "පෙළ ඇලවිය නොහැක. කරුණාකර අතින් (Ctrl+V) උත්සාහ කරන්න."
+
+#: __init__.py:214
+msgid "Error pasting text"
+msgstr "පෙළ ඇලවීමේ දෝෂයකි"
+
+#: __init__.py:225
+msgid "xPand Settings"
+msgstr "xPand සැකසුම්"
+
+#: __init__.py:246
+msgid "Code list:"
+msgstr "කේත ලැයිස්තුව:"
+
+#: __init__.py:253
+msgid "Code"
+msgstr "කේතය"
+
+#: __init__.py:254
+msgid "Word"
+msgstr "වචනය"
+
+#: __init__.py:269
+msgid "Word:"
+msgstr "වචනය:"
+
+#: __init__.py:275
+msgid "Add"
+msgstr "එක් කරන්න"
+
+#: __init__.py:279
+msgid "Edit"
+msgstr "සංස්කරණය"
+
+#: __init__.py:283
+msgid "Remove"
+msgstr "ඉවත් කරන්න"
+
+#: __init__.py:287
+msgid "Close"
+msgstr "වසා දමන්න"
+
+#: __init__.py:343
+msgid "{}"
+msgstr "{}"
+
+#: __init__.py:350
+msgid "No code starting with: {}"
+msgstr "{} ගෙන් ආරම්භ වන කේතයක් නැත"
+
+#: __init__.py:353
+msgid "No matching code"
+msgstr "ගැලපෙන කේතයක් නැත"
+
+#: __init__.py:368
+msgid "Please enter a code"
+msgstr "කරුණාකර කේතයක් ඇතුළත් කරන්න"
+
+#: __init__.py:372
+msgid "Please enter a word"
+msgstr "කරුණාකර වචනයක් ඇතුළත් කරන්න"
+
+#: __init__.py:376
+msgid "Code already exists"
+msgstr "කේතය දැනටමත් පවතී"
+
+#: __init__.py:380
+msgid "Add Succeeded"
+msgstr "එක් කිරීම සාර්ථකයි"
+
+#: __init__.py:382
+msgid "Error adding code"
+msgstr "කේතය එක් කිරීමේ දෝෂයකි"
+
+#: __init__.py:392
+msgid "Edit mode. Modify code and word, then click Edit to save."
+msgstr "සංස්කරණ මාදිලිය. කේතය සහ වචනය වෙනස් කර, සුරැකීමට සංස්කරණය ක්ලික් කරන්න."
+
+#: __init__.py:401
+msgid "Are you sure you want to delete the code '{name}'?"
+msgstr "'{name}' කේතය මැකීමට ඔබට විශ්වාසද?"
+
+#: __init__.py:405
+msgid "Confirm deletion"
+msgstr "මැකීම තහවුරු කරන්න"
+
+#: __init__.py:411
+msgid "Code removed"
+msgstr "කේතය ඉවත් කරන ලදී"
+
+#: __init__.py:413
+msgid "Error removing code"
+msgstr "කේතය ඉවත් කිරීමේ දෝෂයකි"
+
+#: __init__.py:427
+msgid "Open xPand AutoCorrect"
+msgstr "xPand ස්වයංක්‍රීය නිවැරදි කිරීම විවෘත කරන්න"
+
+#: __init__.py:481
+msgid "Error opening xPand"
+msgstr "xPand විවෘත කිරීමේ දෝෂයකි"
+
+#: __init__.py:506
+msgid "Error opening xPand settings"
+msgstr "xPand සැකසුම් විවෘත කිරීමේ දෝෂයකි"
+
+#: __init__.py:515
+msgid "Open xPand Settings"
+msgstr "xPand සැකසුම් විවෘත කරන්න"
